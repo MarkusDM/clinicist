@@ -1,0 +1,747 @@
+.zapis {
+  margin-bottom: 17.8rem;
+  & .procedures {
+    &__form {
+      margin-bottom: 23.8rem;
+      &-label {
+        & > div {
+          z-index: 200;
+        }
+      }
+      &-filter {
+        &-info {
+          display: block;
+          &-wrap {
+            &-left {
+              &-work {
+                margin-bottom: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__letters {
+      &-wrap {
+        display: block;
+        margin-top: 4.5rem;
+        margin-bottom: 0;
+      }
+    }
+    &__header {
+      margin-bottom: 3.1rem;
+    }
+  }
+  &__inner {
+  }
+  &__item {
+    position: relative;
+    &-title {
+      margin-bottom: 4rem;
+      font-family: "Montserrat";
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: rgba(51, 51, 51, 0.5);
+    }
+    &-items {
+      display: flex;
+      justify-content: space-between;
+      &-right {
+        width: 67.5%;
+        position: relative;
+        &-content {
+          margin-top: 8.5rem;
+          display: none;
+          &-item {
+            background: #eef3f7;
+            border-radius: 1rem;
+            padding: 4rem 4.3rem 4.5rem 4rem;
+            &:not(:last-child) {
+              margin-bottom: 2.8rem;
+            }
+          }
+          &-item2 {
+            padding: 5rem 5rem 2rem 5rem;
+            &.zapis__item-items-right-content-item {
+              & .zapis__item-items-right-content-times {
+                margin-left: 11rem;
+              }
+              & .zapis__item-items-right-content-time {
+                &:nth-child(6n + 6) {
+                  margin-right: 0;
+                }
+                &:nth-child(7n + 7) {
+                  margin-right: 1.15rem;
+                }
+              }
+            }
+          }
+          &-title {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 150%;
+            margin-bottom: 1.3rem;
+          }
+          &-cost {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 150%;
+            margin-bottom: 2.8rem;
+            & span {
+              color: $blue;
+            }
+          }
+          &-times {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+          }
+          &-time {
+            background: #ffffff;
+            border-radius: 1rem;
+            margin-right: 1.15rem;
+            padding: 0.5rem 3.6rem;
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: $blue;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            &:nth-child(7n + 7) {
+              margin-right: 0;
+            }
+            &.active {
+              background: $blue;
+              color: $white;
+            }
+          }
+          &-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3.2rem;
+            &-img {
+              width: 8.6rem;
+              height: 8.4rem;
+              background-color: $white;
+              border-radius: 50%;
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              margin-right: 2.4rem;
+              & img {
+                width: 7.6rem;
+                height: 8rem;
+                border-radius: 50%;
+                object-fit: contain;
+              }
+            }
+            &-info {
+              width: 80%;
+              &-name {
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 2.2rem;
+                line-height: 150%;
+                margin-bottom: 0.2rem;
+              }
+              &-work {
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 150%;
+                color: rgba(51, 51, 51, 0.5);
+                margin-bottom: 0.75rem;
+              }
+              &-cost {
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 150%;
+                & span {
+                  color: $blue;
+                }
+              }
+            }
+          }
+          &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-text {
+              font-family: "Montserrat";
+              font-weight: 500;
+              font-size: 1.6rem;
+              line-height: 150%;
+              color: rgba(51, 51, 51, 0.5);
+            }
+            &-btn {
+              padding: 1rem 5.8rem;
+            }
+          }
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    &-wrapper {
+      margin-bottom: 11.3rem;
+      display: none;
+      &.active {
+        display: block;
+      }
+      & .call.call-ceni .call__right {
+        width: 31.3%;
+        height: fit-content;
+        padding: 4rem 4rem 4rem 4rem;
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 4.2rem;
+          }
+          &-img {
+            margin-right: 2.4rem;
+          }
+          &-name {
+            & span {
+              font-family: "MyriadPro";
+              font-size: 1.7rem;
+              line-height: 141%;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      & .call__form {
+        width: 65.2%;
+        padding-top: 2rem;
+        height: fit-content;
+        &-name {
+          width: 100%;
+          margin-right: 0;
+        }
+        &-tel {
+          width: 100%;
+          margin-bottom: 2.8rem;
+        }
+        &-text {
+          font-family: "Montserrat";
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 150%;
+          margin-bottom: 3rem;
+          margin-top: 3rem;
+        }
+        &-way {
+          justify-content: flex-start;
+          margin-bottom: 4rem;
+          &-text {
+            margin-right: 3rem;
+          }
+          &-messangers {
+            width: 72.3%;
+            &-item {
+              width: 21.4%;
+            }
+          }
+        }
+        &-footer {
+          &-btn {
+            padding: 1rem 10.3rem;
+          }
+        }
+      }
+    }
+    &-wrapper2 {
+      margin-bottom: 12rem;
+    }
+    &-filter {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+    & .services__btns-link-btns {
+      margin-bottom: 0rem;
+      padding: 0.4rem;
+      width: 29.5%;
+      position: absolute;
+      left: 0;
+      top: 19.4rem;
+    }
+    & .services__btns-link-btn {
+      font-size: 1.4rem;
+      padding: 1.5rem 3.1rem;
+    }
+    & .services__btns-link-btns2 {
+      top: 0;
+      width: auto;
+    }
+    & .services__btns-link-btn2 {
+      padding: 1.5rem 3.7rem;
+    }
+    &-content {
+      & .disease__item {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+        &-header {
+          align-items: center;
+          margin-bottom: 4rem;
+          &-img {
+            margin-top: 0;
+            margin-right: 2rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            box-shadow: 0px 2rem 3rem rgba(64, 185, 244, 0.1);
+            border-radius: 0.8rem;
+          }
+          &-description {
+            &-title {
+              margin-bottom: 0;
+            }
+          }
+        }
+        &-lists {
+          & ul {
+            width: 32%;
+            & > span {
+              display: block;
+              margin-bottom: 1.5rem;
+              font-family: "Montserrat";
+              font-weight: 500;
+              font-size: 2rem;
+              line-height: 200%;
+              margin-top: -1.7rem;
+            }
+            & li {
+              & .call__form-footer-deal {
+                & .text2 {
+                  font-family: "Myriad Pro";
+                  font-weight: 400;
+                  font-size: 1.8rem;
+                  line-height: 135%;
+                  color: rgba(51, 51, 51, 0.5);
+                }
+              }
+              &:not(:last-child) {
+                margin-bottom: 1.8rem;
+              }
+            }
+            & ul {
+              width: 100%;
+              margin-top: 4.8rem;
+            }
+          }
+        }
+      }
+      &-left {
+        width: 29.5%;
+        position: relative;
+        margin-top: 8.5rem;
+        &-select {
+          position: relative;
+          width: 29.5%;
+          &::after {
+            position: absolute;
+            content: "";
+            left: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../img/icons/zapis-select.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          & .choices {
+            width: 100%;
+            font-size: 1.6rem;
+            margin-bottom: 0;
+            &__inner {
+              font-family: "MyriadPro";
+              font-size: 1.6rem;
+              line-height: 119%;
+              color: rgba(51, 51, 51, 0.5);
+              border: 1px solid #d8dde4;
+              border-radius: 1rem;
+              background-color: $white;
+              min-height: 5.5rem;
+              padding: 0;
+              display: flex;
+              align-items: center;
+            }
+          }
+          & .choices__list--dropdown,
+          .choices__list[aria-expanded] {
+            border: 1px solid #d8dde4;
+            border-radius: 1rem;
+            background-color: $white;
+          }
+          & .choices[data-type*="select-one"] .choices__inner {
+            padding-bottom: 1.25rem;
+            padding: 1rem;
+            padding-left: 2rem;
+            color: $fzAll;
+            padding-left: 6.8rem;
+          }
+          & .choices__list--single {
+            padding: 0;
+          }
+          & .choices__list--dropdown .choices__item--selectable.is-highlighted,
+          .choices__list[aria-expanded]
+            .choices__item--selectable.is-highlighted {
+            background-color: $white;
+            &::after {
+              content: none;
+            }
+          }
+          & .choices__list--dropdown .choices__item,
+          .choices__list[aria-expanded] .choices__item {
+            padding: 1rem 2rem;
+            font-family: "MyriadPro";
+            font-size: 1.6rem;
+            line-height: 119%;
+            color: rgba(51, 51, 51, 0.5);
+          }
+          & .choices[data-type*="select-one"]::after {
+            content: ">";
+            height: 0;
+            width: 0;
+            border-style: none;
+            border-color: transparent;
+            color: $blue;
+            border-width: unset;
+            position: absolute;
+            right: 2rem;
+            font-size: 2.2rem;
+            top: 45%;
+            transform: translateY(-50%) rotate(90deg);
+            margin-top: 0;
+            pointer-events: none;
+          }
+          & .choices[data-type*="select-one"].is-open::after {
+            transform: translateY(-50%) rotate(-90deg);
+            right: 4rem;
+            top: 55%;
+          }
+        }
+        &-select2 {
+          position: absolute;
+          top: 0rem;
+          right: 0rem;
+          width: 47%;
+        }
+        &-wrap {
+          background: #eef3f7;
+          border-radius: 1rem;
+          padding: 4rem 0rem 4rem 1rem;
+          &-btns {
+            height: 50.6rem;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 7rem;
+              background: linear-gradient(
+                360deg,
+                #eef3f7 0%,
+                rgba(238, 243, 247, 0) 160%
+              );
+            }
+            & .simplebar-track.simplebar-vertical {
+              right: unset;
+              left: -1.2rem;
+              top: -5rem;
+            }
+            & .simplebar-scrollbar:before {
+              background: $blue;
+              border-radius: 5rem;
+              left: 0;
+              right: 0;
+              opacity: 1;
+              width: 0.4rem;
+              height: 15.6rem;
+              transition: opacity 0.2s linear;
+            }
+            &-title {
+              font-family: "MyriadPro";
+              font-size: 1.6rem;
+              line-height: 122%;
+              color: #000000;
+              margin-bottom: 1.7rem;
+              margin-left: 3rem;
+            }
+          }
+          &-btn {
+            font-family: "MyriadPro";
+            font-size: 1.8rem;
+            line-height: 135%;
+            color: rgba(51, 51, 51, 0.5);
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 1.3rem 3rem;
+            &:not(:last-child) {
+              margin-bottom: -0.8rem;
+            }
+            &.active {
+              background: #ffffff;
+              border-radius: 2.45rem 0px 0px 2.45rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-header {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 182%;
+      padding: 1.4rem 2.5rem 1.5rem 2.5rem;
+      box-shadow: 0px 2rem 9rem rgba(119, 119, 119, 0.05);
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 3.8rem;
+      & span {
+        color: $blue;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        right: 3.4rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        width: 1.3rem;
+        height: 2.2rem;
+        background-image: url(../img/icons/arraw-blue.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      &.active::after {
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+  }
+
+  .calendar {
+    padding: 4rem;
+    width: 29.5%;
+    height: 40rem;
+    border: 1.14px solid #d8dde4;
+    filter: drop-shadow(0.57 1.14rem 3.4rem rgba(230, 230, 230, 0.6));
+    border-radius: 1rem;
+    & input {
+      width: 100%;
+    }
+  }
+
+  .month {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+  .date {
+    padding-right: 1.3rem;
+  }
+  .month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: $blue;
+    height: fit-content;
+  }
+
+  .month h1 {
+    font-family: "MyriadPro";
+    font-size: 2.28rem;
+    line-height: 118%;
+    text-align: center;
+    letter-spacing: -0.274468px;
+  }
+
+  .month p {
+    font-family: "MyriadPro";
+    font-size: 2.28rem;
+    line-height: 118%;
+    text-align: center;
+    letter-spacing: -0.274468px;
+  }
+
+  .weekdays {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 2.3rem;
+    margin-left: 0;
+  }
+
+  .weekdays div {
+    font-family: "MyriadPro";
+    font-size: 1.48rem;
+    line-height: 122%;
+    color: #d8dde4;
+  }
+
+  .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1rem;
+    width: 104%;
+    & div {
+      font-family: "MyriadPro";
+      font-size: 1.8rem;
+      line-height: 122%;
+      color: $fzAll;
+      width: 3.7rem;
+      height: 3.7rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      margin-right: 1rem;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+      &:nth-child(7n + 7) {
+        margin-right: 0;
+      }
+      &.active {
+        border: 0.23rem solid $blue;
+        padding-right: 0.2rem;
+      }
+    }
+    & .today {
+      background-color: $blue;
+      color: $white;
+      padding-right: 0.2rem;
+    }
+    & .prev-date,
+    & .next-date {
+      color: rgba(51, 51, 51, 0.5);
+    }
+  }
+  //  .days div:hover:not(.today) {
+  //    background-color: #262626;
+  //    border: 0.2rem solid #777;
+  //    cursor: pointer;
+  //  }
+  &__doc-det {
+    margin-bottom: 0;
+    .zapis {
+      &__item {
+        &-wrapper {
+          margin-bottom: 17.8rem;
+        }
+        &-header {
+          padding: 0;
+          box-shadow: none;
+          margin-left: 2.5rem;
+          margin-bottom: 5.5rem;
+          box-shadow: 0px 2rem 3rem rgba(124, 148, 159, 0.05);
+          &.active {
+            box-shadow: none;
+          }
+        }
+        &-items {
+          &-right {
+            &-content {
+              display: block;
+              margin: 0;
+              &-item {
+                padding: 5rem 4.3rem 4.5rem 10.5rem;
+              }
+              &-time {
+                margin-right: 1.15rem;
+                &:nth-child(6n + 6) {
+                  margin-right: 0;
+                }
+              }
+              &-bottom {
+                display: flex;
+                align-items: center;
+                &-btn {
+                  width: 44.1rem;
+                  margin-right: 5.2rem;
+                  border-radius: 0.8rem;
+                  text-align: center;
+                  line-height: 120%;
+                }
+                &-contact {
+                  &-phone {
+                    font-family: "Myriad Pro";
+                    line-height: 135%;
+                    color: #000000;
+                    position: relative;
+                    padding-left: 4rem;
+                    display: inline-block;
+                    margin-bottom: 1rem;
+                    &::after {
+                      position: absolute;
+                      content: "";
+                      left: 0;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      width: 2.4rem;
+                      height: 2.4rem;
+                      background-image: url(../img/icons/phone-blue.png);
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: contain;
+                    }
+                  }
+                  &-addresse {
+                    font-family: "Myriad Pro";
+                    line-height: 135%;
+                    color: #000000;
+                    position: relative;
+                    padding-left: 4rem;
+                    &::after {
+                      position: absolute;
+                      content: "";
+                      left: 0;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      width: 2.4rem;
+                      height: 2.4rem;
+                      background-image: url(../img/icons/map-blue.svg);
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: contain;
+                    }
+                  }
+                }
+              }
+              &-times {
+                margin-bottom: 2.2rem;
+              }
+            }
+          }
+        }
+        &-content {
+          &-left {
+            &-select {
+              width: 100%;
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

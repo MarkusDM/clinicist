@@ -1,0 +1,86 @@
+.selects {
+   margin-bottom: 18rem;
+   &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+      & .choices {
+         width: 45.4rem;
+         font-size: 1.8rem;
+         margin-bottom: 0;
+         &__inner {
+            font-family: "MyriadPro";
+            font-size: 1.8rem;
+            line-height: 133%;
+            color: rgba(51, 51, 51, 0.5);
+            border: 1px solid #D8DDE4;
+            border-radius: 1rem;
+            background-color: $white;
+            min-height: 5rem;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 2rem;
+         }
+      }
+      & .choices__list--dropdown, .choices__list[aria-expanded] {
+         border: 1px solid #D8DDE4;
+         border-radius: 1rem;
+         background-color: $white;
+      }
+      & .choices[data-type*=select-one] .choices__inner {
+         padding-bottom: 1.25rem;
+         padding: 1rem;
+         padding-left: 2rem;
+         color: $fzAll;
+      }
+      & .choices__list--single {
+         padding: 0;
+      }
+      & .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+         background-color: $white;
+         &::after {
+            content: none;
+         }
+      }
+      & .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+         padding: 1rem 2rem;
+         font-family: "MyriadPro";
+         font-size: 1.8rem;
+         line-height: 133%;
+         color: rgba(51, 51, 51, 0.5);
+      } 
+
+      & .choices[data-type*=select-one]::after {
+         content: ">";
+         height: 0;
+         width: 0;
+         border-style: none;
+         border-color: transparent;
+         color: rgba(51, 51, 51, 0.5);
+         border-width: unset;
+         position: absolute;
+         right: 2rem;
+         font-size: 2.2rem;
+         top: 45%;
+         transform: translateY(-50%) rotate(90deg);
+         margin-top: 0;
+         pointer-events: none;
+     }
+     & .choices[data-type*=select-one].is-open::after {
+         transform: translateY(-50%) rotate(-90deg);
+         right: 4rem;
+         top: 55%;
+     }
+   }
+   &__reviews {
+      margin-bottom: 6.5rem;
+   }
+   &.selects-komplex-program {
+      margin-bottom: 6rem;
+      .selects {
+         
+      }
+   }
+}

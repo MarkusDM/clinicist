@@ -1,0 +1,101 @@
+.comments {
+   margin-bottom: 11.1rem;
+   &__inner {
+      width: 65.8%;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+      &-title {
+         font-family: "Montserrat";
+         font-weight: 400;
+         font-size: 3.5rem;
+         line-height: 122%;
+         & span {
+            color: $blue;
+            font-weight: 500;
+         }
+      }
+      &-btn {
+
+      }
+   }
+  
+   &__items {
+      &-more {
+         margin-top: 2rem;
+         display: inline-block;
+         padding-right: 2.5rem;
+         &::after {
+            transform: translateY(-50%) rotate(90deg);
+         }
+      }
+   }
+   &__item {
+      background: $white;
+      box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+      padding: 5.3rem 5rem 5rem 5rem;
+      &:not(:last-child) {
+         margin-bottom: 2.9rem;
+      }
+      &-header {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 4.1rem;
+         &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-name {
+               font-family: "Montserrat";
+               font-weight: 500;
+               font-size: 1.6rem;
+               line-height: 110%;
+               color: $blue;
+               margin-right: 3.2rem;
+            }
+            &-data {
+               font-family: "Montserrat";
+               font-size: 1.6rem;
+               line-height: 110%;
+               color: #D8DDE4;
+               position: relative;
+               padding-left: 3.4rem;
+               &::after {
+                  position: absolute;
+                  content: '/';
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  font-family: "Montserrat";
+                  font-size: 1.6rem;
+                  line-height: 110%;
+                  color: #D8DDE4;
+               }
+            }
+         }
+         &-stars {
+            display: flex;
+            align-items: center;
+            margin-top: -0.2rem;
+         }
+      }
+      &-title {
+         font-family: "Montserrat";
+         font-weight: 500;
+         font-size: 2rem;
+         line-height: 110%;
+         margin-bottom: 2.4rem;
+      }
+      &-text {
+         font-family: "Montserrat";
+         font-size: 1.8rem;
+         line-height: 150%;
+         color: rgba(51, 51, 51, 0.5);
+         width: 95%;
+      }
+   }
+}

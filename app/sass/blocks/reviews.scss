@@ -1,0 +1,659 @@
+.reviews {
+   margin-bottom: 26rem;
+   &__inner {
+      position: relative;
+      padding-left: 2rem;
+   }
+   &__subtitle {
+
+   }
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 7rem;
+      &-title {
+
+      }
+      &-links {
+         width: 30%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-top: -2rem;
+      }
+      &-link {
+         padding: 1rem 8.2rem;
+      }
+   }
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      &-img {
+         width: 28%;
+         background-color: #EEF3F7;
+         position: relative;
+         &-photo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            & img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         &-info {
+            width: 73.5%;
+            position: absolute;
+            left: -0.1rem;
+            bottom: 3.2rem;
+            background-color: #fff;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // box-shadow: 0px 20px 90px rgba(124, 148, 159, 0.2);
+            &-data {
+               font-family: "Montserrat";
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 140%;
+               width: 80%;
+               & span {
+                  display: block;
+                  font-family: Montserrat;
+                  font-weight: 400;
+                  line-height: 171%;
+               }
+            }
+            &-reating {
+               &-number {
+                  font-family: "MyriadPro";
+                  font-size: 3rem;
+                  line-height: 80%;
+               }
+               &-star {
+                  width: 2.4rem;
+                  height: 2.4rem;
+                  margin: 0 auto;
+                  margin-bottom: 1.1rem;
+               }
+            }
+         }
+      }
+      &-info {
+         box-shadow: 0px 20px 90px rgba(124, 148, 159, 0.1);
+         width: 68%;
+         padding: 5.1rem 5rem 5rem 5rem;
+         &-data {
+            position: relative;
+            margin-bottom: 2.7rem;
+            display: flex;
+            align-items: flex-end;
+            &-name {
+               font-family: "Montserrat";
+               font-weight: 500;
+               font-size: 2rem;
+               line-height: 110%;
+               margin-right: 14.1rem;
+               & span {
+                  font-weight: 400;
+                  font-size: 1.6rem;
+                  color: rgba(51, 51, 51, 0.5);
+                  display: block;
+                  margin-top: 1rem;
+               }
+            }
+            &-pl {
+               display: flex;
+               align-items: center;
+               &-img {
+                  width: 3rem;
+                  height: 2.4rem;
+                  margin-right: 1rem;
+                  & img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: contain;
+                     mix-blend-mode: multiply;
+                  }
+               }
+               &-link {
+                  font-family: 'Montserrat';
+                  font-weight: 600;
+                  font-size: 1.6rem;
+                  line-height: 110%;
+                  color: $blue;
+                  position: relative;
+                  &::after {
+                     position: absolute;
+                     left: 0;
+                     bottom: -0.1rem;
+                     content: '';
+                     width: 100%;
+                     height: 1px;
+                     background-color: $blue;
+                  }
+               }
+            }
+            &-reating {
+               position: absolute;
+               right: 0rem;
+               top: 0rem;
+               text-align: right;
+               &-subtitle {
+                  font-family: "Montserrat";
+                  font-size: 1.6rem;
+                  line-height: 120%;
+                  color: rgba(51, 51, 51, 0.5);
+                  width: 50%;
+                  text-align: right;
+                  margin-left: auto;
+                  margin-bottom: 2.6rem;
+               }
+               &-number {
+                  font-family: "MyriadPro";
+                  font-size: 6rem;
+                  line-height: 40%;
+                  margin-bottom: 2.3rem;
+               }
+               &-stars {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-end;
+                  margin-bottom: 2.2rem;
+               }
+               &-link {
+                  font-family: "Montserrat";
+                  font-weight: 500;
+                  font-size: 1.6rem;
+                  line-height: 110%;
+                  text-align: right;
+                  color: rgba(51, 51, 51, 0.5);
+                  a {
+                     color: $blue;
+                     display: block;
+                  }
+               }
+            }
+         }
+         &-advantages {
+            margin-bottom: 3rem;
+            &-subtitle {
+               font-family: "Montserrat";
+               font-weight: 600;
+               font-size: 1.6rem;
+               line-height: 150%;
+               color: $blue;
+               margin-bottom: 0.5rem;
+            }
+            &-text {
+               font-family: "Montserrat";
+               font-size: 1.8rem;
+               line-height: 150%;
+            }
+         }
+         &-flaws {
+            margin-bottom: 3rem;
+            &-subtitle {
+               font-family: "Montserrat";
+               font-weight: 600;
+               font-size: 1.6rem;
+               line-height: 150%;
+               color: #FE7200;
+               margin-bottom: 0.5rem;
+            }
+            &-text {
+               font-family: "Montserrat";
+               font-size: 1.8rem;
+               line-height: 150%;
+            }
+         }
+         &-comments {
+            &-subtitle {
+               font-family: "Montserrat";
+               font-weight: 600;
+               font-size: 1.6rem;
+               line-height: 150%;
+               color: $blue;
+               margin-bottom: 0.5rem;
+            }
+            &-text {
+               font-family: "Montserrat";
+               font-size: 1.8rem;
+               line-height: 150%;
+               margin-bottom: 3rem;
+            }
+            &-more {
+
+            }
+         }
+      }
+   }
+   &-swiper-pagination {
+      left: 38.4%;
+      top: unset;
+      bottom: -5.5rem;
+   }
+   &-swiper-pagination.swiper-pagination .swiper-pagination-bullet-active {
+      background-color: $fzAll;
+      border: 1px solid $fzAll;
+   }
+   &-btn-next {
+      top: unset;
+      bottom: -11.4rem;
+   }
+   &-btn-prev {
+      top: unset;
+      bottom: -11.4rem;
+      right: 6.8rem;
+      left: unset;
+   }
+   &-otzivi {
+      margin-bottom: 18rem;
+      .reviews {
+         &__item {
+            padding: 4.8rem 4.95rem 5.6rem 6.05rem;
+            background-color: #EEF3F7;
+            &:not(:last-child) {
+               margin-bottom: 3.2rem;
+            }
+            &-data {
+               width: 35%;
+               &-name {
+                  font-family: "Montserrat";
+                  font-weight: 500;
+                  font-size: 3.5rem;
+                  line-height: 110%;
+                  margin-bottom: 0.7rem;
+               }
+               &-clinic {
+                  font-family: "Montserrat";
+                  font-weight: 500;
+                  font-size: 1.6rem;
+                  line-height: 150%;
+                  color: rgba(51, 51, 51, 0.5);
+                  position: relative;
+                  padding-left: 3.6rem;
+                  margin-bottom: 4.3rem;
+                  &::after {
+                     position: absolute;
+                     content: '';
+                     left: 0rem;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     width: 2.1rem;
+                     height: 2.1rem;
+                     background-image: url(../img/icons/map.png);
+                     background-position: center;
+                     background-size: contain;
+                     background-repeat: no-repeat;
+                  }
+               }
+               &-doctor {
+                  font-family: "Montserrat";
+                  font-size: 1.8rem;
+                  line-height: 129.5%;
+                  color: $fzAll;
+                  font-weight: 400;
+                  margin-bottom: 1.1rem;
+                  & span {
+                     font-weight: 600;
+                     font-size: 1.6rem;
+                     line-height: 150%;
+                     color: $blue;
+                     display: inline-block;
+                     width: 20%;
+                  }
+               }
+               &-services {
+                  font-family: "Montserrat";
+                  font-size: 1.8rem;
+                  line-height: 129.5%;
+                  color: $fzAll;
+                  font-weight: 400;
+                  & span {
+                     font-weight: 600;
+                     font-size: 1.6rem;
+                     line-height: 150%;
+                     color: $blue;
+                     display: inline-block;
+                     width: 20%;
+                  }
+               }
+            }
+            &-info {
+               box-shadow: none;
+               padding: 0;
+               width: 60.7%;
+               margin-top: 1rem;
+               &-data {
+                  margin-bottom: 0;
+                  &-reating {
+                     &-subtitle {
+                        margin-bottom: 2.9rem;
+                     }
+                     &-number {
+                        margin-bottom: 2rem;
+                     }
+                     &-stars {
+                        margin-bottom: 2.7rem;
+                     }
+                  }
+               }
+               &-advantages {
+                  margin-bottom: 2.5rem;
+               }
+               &-flaws {
+                  margin-bottom: 2.3rem;
+               }
+               &-comments {
+                  position: relative;
+                  &-text {
+                     margin-bottom: 2rem;
+                     padding-right: 20rem;
+                     position: relative;
+                  }
+                  &-number {
+                     position: absolute;
+                     right: 0rem;
+                     bottom: 2rem;
+                     font-family: "Montserrat";
+                     font-weight: 500;
+                     font-size: 1.6rem;
+                     line-height: 110%;
+                     color: rgba(51, 51, 51, 0.5);
+                  }
+                  &-more {
+                     &::after {
+                        transform: translateY(-50%) rotate(90deg);
+                     }
+                  }
+                  &-dropdown {
+                     &-btn {
+                        font-family: "MyriadPro";
+                        font-weight: 600;
+                        font-size: 1.8rem;
+                        line-height: 122%;
+                        color: $blue;
+                        position: absolute;
+                        left: 17rem;
+                        bottom: 0rem;
+                        cursor: pointer;
+                        &::after {
+                           transform: translateY(-50%) rotate(90deg);
+                        }
+                        &::before {
+                           content: 'Показать ответ';
+                           left: 0rem;
+                           white-space: nowrap;
+                        }
+                        &.active {
+                           position: relative;
+                           left: 0;
+                           bottom: 0;
+                        }
+                        &.active::after {
+                           transform: translateY(-50%) rotate(-90deg);
+                        }
+                        &.active::before {
+                           content:'Скрыть ответ';
+                        }
+                     }
+                     &-content {
+                        position: relative;
+                        display: none;
+                        margin-top: 5.2rem;
+                        margin-bottom: 2.3rem;
+                        &::after {
+                           top: -2.5rem;
+                           left: 0rem;
+                           position: absolute;
+                           content: '';
+                           width: 100%;
+                           height: 1px;
+                           background-color: #EEF3F7;
+                        }
+                        &-data {
+                           display: flex;
+                           align-items: center;
+                           margin-bottom: 4rem;
+                           &-img {
+                              width: 7.2rem;
+                              height: 7.2rem;
+                              border-radius: 50%;
+                              border: 0.2rem solid $blue;
+                              box-sizing: border-box;
+                              margin-right: 3rem;
+                              & img {
+                                 width: 100%;
+                                 height: 100%;
+                                 object-fit: contain;
+                                 border-radius: 50%;
+                              }
+                           }
+                           &-name {
+                              font-family: "Montserrat";
+                              font-weight: 500;
+                              font-size: 2.5rem;
+                              line-height: 110%;
+                              & span {
+                                 display: block;
+                                 margin-top: 0.5rem;
+                                 font-size: 1.6rem;
+                                 line-height: 150%;
+                                 color: rgba(51, 51, 51, 0.5);
+                              }
+                           }
+                        }
+                        &-text {
+                           font-family: "Montserrat";
+                           font-size: 1.8rem;
+                           line-height: 150%;
+                           padding-right: 15rem;
+                        }
+                        &-number {
+                           position: absolute;
+                           bottom: -5.3rem;
+                           right: 0rem;
+                           font-family: "Montserrat";
+                           font-weight: 500;
+                           font-size: 1.6rem;
+                           line-height: 110%;
+                           color: rgba(51, 51, 51, 0.5);
+                        }
+                        &.active {
+                           display: block;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   &-otzivi2 {
+      margin-bottom: 0;
+      .reviews {
+         &__item {
+            &:not(:last-child) {
+               margin-bottom: 6.2rem;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .reviews {
+      margin-bottom: 47rem;
+      &__inner {
+         position: relative;
+      }
+      &__subtitle {
+
+      }
+      &__header {
+         margin-bottom: 6.2rem;
+         &-title {
+
+         }
+         &-links {
+            position: absolute;
+            left: 0;
+            bottom: -27rem;
+            width: 100%;
+         }
+         &-link {
+            font-size: 3rem;
+            padding: 2.7rem 7.4rem;
+         }
+         &-link2 {
+
+         }
+      }
+      &__item {
+         display: block;
+         &-img {
+            width: 100%;
+            height: 80.5rem;
+            margin-left: 0rem;
+            &-photo {
+               & img {
+                  object-fit: contain;
+               }
+            }
+            &-info {
+               left: 0rem;
+               padding: 3rem 3.2rem 3rem 3.2rem;
+               width: 83%;
+               bottom: 4.2rem;
+               &-data {
+                  font-size: 2.8rem;
+                  & span {
+                     font-size: 2.4rem;
+                     margin-top: 0.5rem;
+                  }
+               }
+               &-reating {
+                  &-star {
+                     margin-left: 1.3rem;
+                     margin-bottom: 1.6rem;
+                     width: 3.5rem;
+                     height: 3.5rem;
+                  }
+                  &-number {
+                     font-size: 5rem;
+                  }
+               }
+            }
+         }
+         &-info {
+            width: 100%;
+            padding: 10rem 2rem 6rem 6rem;
+            box-shadow: 0px 4rem 18rem rgba(124, 148, 159, 0.1);
+            &-data {
+               margin-bottom: 8rem;
+               &-name {
+                  font-size: 3.6rem;
+                  margin-bottom: 6rem;
+                  & span {
+                     font-size: 3rem;
+                  }
+               }
+               &-reating {
+                  text-align: left;
+                  position: relative;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: baseline;
+                  &-link {
+                     display: none;
+                  }
+                  &-subtitle {
+                     width: auto;
+                     text-align: left;
+                     margin-left: unset;
+                     margin-bottom: 0;
+                     order: 1;
+                     font-size: 3rem;
+                     margin-right: 5rem;
+                  }
+                  &-number {
+                     margin-bottom: 0;
+                     order: 3;
+                     font-size: 8rem;
+                  }
+                  &-stars {
+                     margin-bottom: 0;
+                     order: 2;
+                     margin-top: 1.7rem;
+                     margin-right: 1.3rem;
+                  }
+               }
+            }
+            &-advantages {
+               margin-bottom: 5rem;
+               &-subtitle {
+                  font-size: 3.2rem;
+                  margin-bottom: 1.5rem;
+               }
+               &-text {
+                  font-size: 2.64rem;
+                  & span {
+                     display: none;
+                  }
+               }
+            }
+            &-flaws {
+               margin-bottom: 4.6rem;
+               &-subtitle {
+                  font-size: 3.2rem;
+                  margin-bottom: 1rem;
+               }
+               &-text {
+                  font-size: 2.64rem;
+               }
+            }
+            &-comments {
+               &-subtitle {
+                  font-size: 3.2rem;
+                  margin-bottom: 1.9rem;
+               }
+               &-text {
+                  font-size: 3.2rem;
+                  font-family: "MyriadPro";
+                  line-height: 156%;
+                  margin-bottom: 3.5rem;
+               }
+            }
+         }
+      }
+      &-swiper-pagination {
+         left: 52%;
+         transform: translateX(-50%);
+         bottom: -4.5rem;
+         & .swiper-pagination-bullet {
+            &:not(:last-child) {
+               margin-right: 2.8rem;
+            }
+         }
+      }
+      &-btn-next,
+      &-btn-prev {
+         width: 9.8rem;
+         height: 9.8rem;
+         bottom: -12.8rem;
+         &::before {
+            font-size: 7rem;
+         }
+      }
+      &-btn-prev {
+         right: unset;
+         left: 0rem;
+      }
+   }
+}

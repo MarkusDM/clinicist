@@ -1,0 +1,216 @@
+.define {
+   background-color: #EEF3F7;
+   padding: 4.5rem 0;
+   padding-bottom: 5rem;
+   margin-bottom: 18rem;
+   position: relative;
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 0.6rem;
+      height: 100%;
+      background-color: $white;
+      right: 47%;
+   }
+   &__inner {
+      position: relative;
+   }
+   &__subtitle {
+      margin-bottom: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: -20.4rem;
+   }
+   &__title {
+      margin-bottom: 6rem;
+      position: absolute;
+      left: 0;
+      top: -17rem;
+   }
+   &__items {
+      display: flex;
+   }
+   &__left {
+      width: 27.1%;
+      &-title {
+         font-family: "MyriadPro";
+         font-size: 2rem;
+         line-height: 120%;
+         margin-bottom: 3rem;
+      }
+      &-list {
+         height: 85%;
+         & .simplebar-track.simplebar-vertical {
+            right: -0.5rem;
+            width: 0.6rem;
+            overflow: visible;
+            &::after {
+               position: absolute;
+               content: '';
+               background-color: $white;
+               z-index: -1;
+               left: 0;
+               top: -10rem;
+               width: 0.6rem;
+               bottom: -10rem;
+            }
+            // top: -11rem;
+            // bottom: -10rem;
+         }
+         & .simplebar-scrollbar:before {
+            background: $blue;
+            border-radius: 5rem;
+            left: 50%;
+            right: 0;
+            transform: translateX(-50%);
+            opacity: 1;
+            width: 0.3rem;
+            height: 20rem;
+            transition: opacity 0.2s linear;
+            top: -6rem !important;
+        }
+         & li {
+            &:not(:last-child) {
+               margin-bottom: 1.95rem;
+            }
+            & .fake2 {
+               width: 2rem;
+               height: 2rem;
+               border-radius: 50%;
+               &::before {
+                  background-color: $blue;
+                  border-radius: 50%;
+                  background-size: 1.4rem;
+               }
+            }
+            & .text2 {
+               padding-left: 1.95rem;
+            } 
+            & input:checked + .text2 {
+               color: red !important;
+            }         
+         }
+      }
+   }
+   &__center {
+      width: 26.5%;
+      padding: 0 4.1rem;
+      &-title {
+         font-family: "MyriadPro";
+         font-size: 2rem;
+         line-height: 120%;
+         margin-bottom: 2.2rem;
+      }
+      &-list {
+         & li {
+            font-family: "MyriadPro";
+            font-size: 1.6rem;
+            line-height: 137%;
+            color: rgba(51, 51, 51, 0.5);
+            list-style: none;
+            cursor: pointer;
+            &:not(:last-child) {
+               margin-bottom: 1.9rem;
+            }
+            &.active {
+               color: $fzAll;
+            }
+         }
+      }
+   }
+   &__right {
+      width: 46.4%;
+      padding-left: 5.3rem;
+      margin-top: 0.5rem;
+      &-header {
+         display: flex;
+         align-items: center;
+         margin-bottom: 3.8rem;
+         &-img {
+            width: 11.7rem;
+            height: 11.7rem;
+            margin-right: 4rem;
+            & img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         &-title {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 166%;
+            width: 65%;
+         }
+      }
+      &-text {
+         margin-bottom: 4rem;
+         font-family: "MyriadPro";
+         font-size: 1.8rem;
+         line-height: 135%;
+         color: rgba(51, 51, 51, 0.5);
+         width: 95%;
+      }
+      &-title {
+         margin-bottom: 2rem;
+         font-family: "MyriadPro";
+         font-size: 2rem;
+         line-height: 120%;
+      }
+      &-items {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 9.1rem;
+      }
+      &-item {
+         font-family: "MyriadPro";
+         font-size: 1.8rem;
+         line-height: 122%;
+         color: $blue;
+         background: $white;
+         border-radius: 1rem;
+         padding: 1rem 2.5rem;
+         cursor: pointer;
+      }
+      &-btns {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 80%;
+      }
+      &-btn {
+         padding: 1rem 3.2rem;
+         display: inline-block;
+      }
+      &-link {
+
+      }
+   }
+   &.define-uslugi-napravlenia {
+      .define {
+         &__right {
+            &-header {
+               margin-bottom: 4.7rem;
+            }
+            &-title {
+               margin-bottom: 2.1rem;
+            }
+            &-items {
+               flex-wrap: wrap;
+               justify-content: flex-start;
+               margin-bottom: 10.3rem;
+            }
+            &-item {
+               margin-right: 1rem;
+               margin-bottom: 1rem;
+               &:nth-child(3n+3) {
+                  margin-right: 0;
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,221 @@
+.applicants {
+   margin-bottom: 17.8rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__subtitle {
+      margin-bottom: 1rem;
+   }
+   &__title {
+      margin-bottom: 6rem;
+   }
+   &__left {
+      height: fit-content;
+      width: 31.4%;
+      & .new-clinic {
+         margin-bottom: 0;
+         &__left {
+            margin-bottom: 0 !important;
+         }
+      }
+   }
+   &__imgs {
+      position: relative;
+      width: 100%;
+      background: linear-gradient(180deg, #5FCBFF 0%, #36B4F1 100%);
+      padding: 4rem;
+      padding-bottom: 0;
+      height: fit-content;
+      margin-bottom: 11.5rem;
+      &-subtitle {
+         font-family: "Montserrat";
+         font-weight: 500;
+         font-size: 1.8rem;
+         line-height: 150%;
+         color: $white;
+         margin-bottom: 1.5rem;
+      }
+      &-title {
+         font-family: "Montserrat";
+         font-weight: 700;
+         font-size: 2.3rem;
+         line-height: 150%;
+         color: $white;
+      }
+      &-img {
+         width: 37rem;
+         height: 39.4rem;
+         margin: 0 auto;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &-phone {
+         position: absolute;
+         left: 50%;
+         bottom: -2.4rem;
+         transform: translateX(-50%);
+         display: block;
+         font-family: "Montserrat";
+         font-weight: 600;
+         font-size: 1.8rem;
+         line-height: 150%;
+         color: $blue;
+         padding: 1.5rem 3rem;
+         background-color: $white;
+         margin: 0 auto;
+         box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+         border-radius: 3.5rem;
+         width: fit-content;
+         & span {
+            font-weight: 400;
+            color: rgba(51, 51, 51, 0.5); 
+         }
+      }
+   }
+   &__content {
+      width: 65.8%;
+      &-text {
+         margin-bottom: 4rem;
+         font-family: "Montserrat";
+         font-size: 1.8rem;
+         line-height: 150%;
+         color: rgba(51, 51, 51, 0.5);
+      }
+      &-item {
+         box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+         padding: 4rem 9.5rem 4rem 4rem;
+         &:not(:last-child) {
+            margin-bottom: 4.1rem;
+         }
+         &:nth-child(3) {
+            padding-bottom: 5.5rem;
+         }
+         &-title {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 220%;
+            margin-bottom: 3rem;
+         }
+         & ul {
+            & li {
+               position: relative;
+               padding-left: 4.1rem;
+               font-family: Montserrat;
+               font-weight: 300;
+               font-size: 1.8rem;
+               line-height: 150%;
+               &:not(:last-child) {
+                  margin-bottom: 2rem;
+               }
+               &::after {
+                  width: 0.5rem;
+                  height: 0.5rem;
+                  position: absolute;
+                  content: '';
+                  left: 0.3rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  border-radius: 50%;
+                  background-color: $blue;
+               }
+               &::before {
+                  position: absolute;
+                  content: '';
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  border-radius: 50%;
+                  width: 1.1rem;
+                  height: 1.1rem;
+                  background-color: #EEF3F7;
+               }
+            }
+         }
+      }
+   }
+   &.applicants-vakansii-detalna {
+      margin-bottom: 18rem;
+      .applicants {
+         &__add {
+            width: 100%;
+            background-color: #FAFAFA;
+            padding: 4rem;
+            position: relative;
+            &-subtitle {
+               font-family: 'Montserrat';
+               font-weight: 500;
+               line-height: 150%;
+               margin-bottom: 1.5rem;
+            }
+            &-name {
+               font-family: 'Montserrat';
+               font-weight: 700;
+               font-size: 2.3rem;
+               line-height: 150%;
+               margin-bottom: 4.9rem;
+            }
+            &>ul {
+               margin-bottom: 13rem;
+               &>li {
+                  position: relative;
+                  padding-left: 2rem;
+                  font-family: 'Montserrat';
+                  font-weight: 500;
+                  font-size: 1.5rem;
+                  line-height: 150%;
+                  color: rgba(51, 51, 51, 0.5);
+                  &:not(:last-child) {
+                     margin-bottom: 2rem;
+                  }
+                  &::after {
+                     position: absolute;
+                     content: '';
+                     left: 0;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     border-radius: 50%;
+                     width: 0.5rem;
+                     height: 0.5rem;
+                     background-color: $blue;
+                  }
+                  &::before {
+                     position: absolute;
+                     content: '';
+                     left: -0.3rem;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     border-radius: 50%;
+                     width: 1.1rem;
+                     height: 1.1rem;
+                     background-color: #EEF3F7;
+                  }
+               }
+            }
+            &-btn {
+               display: block;   
+               width: fit-content;
+               padding: 1rem 4rem;
+               z-index: 10;
+               position: relative;
+            }
+            &-img {
+               width: 94%;
+               height: 38.2rem;
+               position: absolute;
+               right: 0;
+               bottom: 0;
+               & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+               }
+            }
+         }
+      }
+   }
+}

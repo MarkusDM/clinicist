@@ -1,0 +1,56 @@
+.benifits {
+   margin-bottom: 18rem;
+   &__inner {
+      position: relative;
+   }
+   &__subtitle {
+      position: absolute;
+      left: 0rem;
+      top: -0.2rem;
+   }
+   &__title {
+      position: absolute;
+      left: 0rem;
+      top: 3.6rem;
+      width: 40%;
+   }
+   &__items {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__box {
+      width: 32%;
+      &:first-child {
+         margin-top: 23rem;
+      }
+      &:nth-child(2) {
+         margin-top: 6.7rem;
+      }
+   }
+   &__item {
+      background: $white;
+      box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.15);
+      padding: 7rem 6rem 6rem 6rem;
+      &:nth-child(1) {
+         margin-bottom: 3rem;
+      }
+      &-number {
+         font-family: "Montserrat";
+         font-weight: 700;
+         line-height: 122%;
+         font-size: 1.8rem;
+         margin-bottom: 2.8rem;
+         & span {
+            font-size: 4rem;
+         }
+      }
+      &-text {
+         font-family: "Montserrat";
+         font-size: 1.8rem;
+         line-height: 122%;
+      }
+   }
+   & .mb {
+      margin-bottom: 4.3rem;
+   }
+}

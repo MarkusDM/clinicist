@@ -1,0 +1,84 @@
+.advertising {
+   background: rgba(180, 146, 202, 0.08);
+   position: relative;
+   margin-bottom: 18rem;
+   margin-top: 21rem;
+   &__slider {
+      position: relative;
+      width: 87.5%;
+      margin-left: auto;
+      & .swiper-pagination-bullet {
+         border: 1px solid #2F2F2F;
+      }
+      & .swiper-pagination-bullet-active {
+         background-color: #A0387C;
+         border: none;
+      }
+      & .korzina-btn-prev {
+         left: -13.3rem;
+         top: 51.3%;
+         z-index: 10;
+      }
+      & .korzina-btn-next {
+         right: 12.3rem;
+         top: 51.3%;
+         z-index: 10;
+      }
+      & .korzina-swiper-pagination {
+         bottom: 3.3rem;
+         left: 43.6%;
+         z-index: 10;
+      }
+      &-item {
+         padding: 13rem 0 15.3rem 0;
+         &-img {
+            width: 105.7rem;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            & img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         &-content {
+            width: 35%;
+            &-subtitle {
+               font-family: 'Myriad Pro';
+               font-weight: 600;
+               line-height: 120%;
+               color: #A0387C;
+               margin-bottom: 1.7rem;
+            }
+            &-name {
+               margin-bottom: 3.4rem;
+            }
+            &-text {
+               padding-left: 2rem;
+               position: relative;
+               font-family: 'Myriad Pro';
+               line-height: 135%;
+               color: rgba(51, 51, 51, 0.5);
+               margin-bottom: 7.9rem;
+               &::after {
+                  position: absolute;
+                  content: '';
+                  left: 0;
+                  top: 0;
+                  height: 100%;
+                  width: 1px;
+                  background-color: rgba(51, 51, 51, 0.5);
+               }
+            }
+            &-btn {
+               padding: 1rem 4rem;
+               background: #A0387C;
+               display: block;
+               width: fit-content;
+            }
+         }
+      }
+   }
+}

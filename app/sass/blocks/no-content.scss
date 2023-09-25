@@ -1,0 +1,19 @@
+.no-content {
+   margin-bottom: 7rem;
+   &__title {
+      font-family: "Montserrat";
+      font-size: 3.5rem;
+      line-height: 122%;
+      margin-bottom: 3.1rem;
+      text-align: center;
+   }
+   &__text {
+      font-family: "Montserrat";
+      font-size: 1.8rem;
+      line-height: 150%;
+      text-align: center;
+      color: rgba(51, 51, 51, 0.5);
+      width: 58%;
+      margin: 0 auto;
+   }
+}

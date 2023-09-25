@@ -1,0 +1,607 @@
+.profile {
+  font-family: 'Montserrat';
+  .btn {
+    min-width: 29.4rem;
+    height: 5.6rem;
+     @media (max-width: 48.98em) {
+    padding: 1rem 8rem;
+    width: 100%;
+    height: 8.7rem;
+    border-radius: 20rem;
+    .btn__text {
+        font-size: 3rem;
+        line-height: 7rem;
+    }
+  }
+  }
+  // .profile__container
+
+  &__container {
+    @media (max-width: 48.98em) {
+      padding: 0;
+    }
+  }
+
+  // .profile__body
+
+  &__body {
+    padding-top: 10rem;
+    padding-bottom: 14.4rem;
+    display: grid;
+    @media (min-width: 48.98em) {
+      padding-top: 9.4rem;
+      padding-bottom: 20rem;
+      grid-template-columns: 1fr 45.3rem;
+      align-items: start;
+      column-gap: 4.4rem;
+    }
+  }
+
+  // .profile__content
+
+  &__content {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 20px 90px 0px rgba(124, 148, 159, 0.1);
+    @media (max-width: 48.98em) {
+      padding-top: 5.6rem 4rem;
+    }
+  }
+
+  // .profile__title
+
+  &__title {
+    margin-bottom: 3.5rem;
+    @media (max-width: 48.98em) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  // .profile__btn
+
+  &__btn {
+    align-self: flex-start;
+  }
+
+  // .profile__tabs
+
+  &__tabs {
+    @media (max-width: 48.98em) {
+      margin-bottom: 12.6rem;
+    }
+  }
+}
+
+// =============================================================================
+
+.profile-chapter {
+  // .profile-chapter__container
+
+  &__container {
+    @media (max-width: 48.98em) {
+      padding: 0 4rem;
+    }
+  }
+
+  // .profile-chapter__body
+
+  &__body {
+    padding-top: 6rem;
+    padding-bottom: 20rem;
+    @media (min-width: 48.98em) {
+      padding-top: 12.6rem;
+      padding-bottom: 20rem;
+    }
+  }
+
+  // .profile-chapter__auth-tabs
+
+  &__auth-tabs {
+    margin-bottom: 7.3rem;
+    @media (max-width: 48.98em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .profile-chapter__psw-link
+
+  &__psw-link {
+    font-family: 'MyriadPro';
+    font-weight: 600;
+    color: $orange;
+    text-decoration: underline;
+    @media (max-width: 48.98em) {
+      font-size: 2.4rem;
+    }
+  }
+
+  // .profile-chapter__link
+
+  &__link {
+    margin-bottom: 3.8rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    &::after {
+      content: '';
+      width: 0.6rem;
+      height: 1.2rem;
+      background-image: url(../img/icons/sm-arrow-blue.svg);
+      background-size: 0.6rem;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 48.98em) {
+      margin-bottom: 7rem;
+    }
+  }
+
+  // .profile-chapter__link-txt
+
+  &__link-txt {
+    font-family: 'MyriadPro';
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $blue;
+  }
+
+  // .profile-chapter__body-inner
+
+  &__body-inner {
+    display: grid;
+    @media (min-width: 48.98em) {
+      grid-template-columns: 1fr 44.5rem;
+      column-gap: 4.2rem;
+      &_login {
+        column-gap: 11.5rem;
+      }
+    }
+  }
+
+  // .profile-chapter__content
+
+  &__content {
+    @media (max-width: 48.98em) {
+      margin-bottom: 20rem;
+    }
+  }
+
+  // .profile-chapter__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .profile-chapter__title
+
+  &__title {
+    margin-bottom: 5rem;
+  }
+
+  // .profile-chapter__head
+
+  &__head {
+    margin-bottom: 5rem;
+  }
+
+  // .profile-chapter__options
+
+  &__options {
+    margin-bottom: 4.7rem;
+    display: flex;
+    column-gap: 6rem;
+    @media (max-width: 48.98em) {
+      margin-bottom: 6rem;
+      column-gap: 12rem;
+    }
+  }
+
+  // .profile-chapter__fields
+
+  &__fields {
+    margin-bottom: 6rem;
+    display: grid;
+    gap: 4rem;
+    @media (min-width: 48.98em) {
+      margin-bottom: 3rem;
+      &:not(&_one-col) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      gap: 3rem;
+    }
+  }
+
+  // .profile-chapter__input-wrap
+
+  &__input-wrap {
+  }
+
+  // .profile-chapter__actions
+
+  &__actions {
+    display: flex;
+    @media (min-width: 48.98em) {
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 3rem;
+    }
+    @media (max-width: 48.98em) {
+      flex-direction: column;
+      row-gap: 6rem;
+      &_reversed {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  // .profile-chapter__btn
+
+  &__btn {
+    align-self: flex-end;
+  }
+
+  // .profile-chapter__timer-txt
+
+  &__timer-txt {
+    color: rgba(51, 51, 51, 0.5);
+    font-family: 'MyriadPro';
+    line-height: 2.34rem;
+    @media (max-width: 48.98em) {
+      font-size: 2.4rem;
+      line-height: normal;
+    }
+  }
+
+  // .profile-chapter__txt-heading
+
+  &__txt-heading {
+    font-weight: 600;
+    color: $blue;
+    line-height: normal;
+    @media (max-width: 48.98em) {
+      font-size: 3rem;
+    }
+  }
+
+  // .profile-chapter__txt-content
+
+  &__txt-content {
+  }
+
+  // .profile-chapter__info
+
+  &__info {
+  }
+}
+
+// =============================================================================
+
+.auth-tabs {
+  margin-right: auto;
+  padding: 0.2rem;
+  display: inline-block;
+  &__inner,
+  &__button {
+    border-radius: 1rem;
+  }
+  @media (max-width: 48.98em) {
+    padding: 0.4rem;
+    height: 8rem;
+  }
+
+  // .profile-tabs__inner
+
+  &__inner {
+    padding: 0.2rem;
+    display: flex;
+    background-color: #d8dde4;
+  }
+
+  // .profile-tabs__button
+
+  &__button {
+    padding: 1.6rem 3.2rem;
+    font-family: 'MyriadPro';
+    font-weight: 600;
+    color: #ffffff;
+    &._active {
+      color: $fzAll;
+      background-color: #ffffff;
+    }
+    @media (max-width: 48.98em) {
+      font-size: 3rem;
+      padding: 2rem 4rem;
+    }
+  }
+}
+
+.tabs-profile {
+  background-color: #eef3f7;
+  @media (min-width: 48.98em) {
+    padding: 1rem;
+  }
+  @media (max-width: 48.98em) {
+    grid-row: 1/2;
+    background-color: $white;
+    overflow-x: scroll;
+    box-shadow: 0px 20px 60px 0px rgba(124, 148, 159, 0.1);
+  }
+
+  // .tabs-profile__group
+
+  &__group {
+    display: flex;
+    background-color: $white;
+    @media (min-width: 48.98em) {
+      padding: 0 3.1rem;
+      flex-direction: column;
+    }
+  }
+
+  // .tabs-profile__item
+
+  &__item {
+    &_history {
+      .tabs-profile__text-wrap::before {
+        background-image: url(../img/icons/reload-circle-grey.svg);
+      }
+      &._active {
+        .tabs-profile__text-wrap::before {
+          background-image: url(../img/icons/reload-circle-orange.svg);
+        }
+      }
+    }
+    &_entries {
+      .tabs-profile__text-wrap::before {
+        background-image: url(../img/icons/calendar-outline.svg);
+      }
+      &._active {
+        .tabs-profile__text-wrap::before {
+          background-image: url(../img/icons/calendar-outline-orange.svg);
+        }
+      }
+    }
+    &_info {
+      .tabs-profile__text-wrap::before {
+        background-image: url(../img/icons/info-list-grey.svg);
+      }
+      &._active {
+        .tabs-profile__text-wrap::before {
+          background-image: url(../img/icons/info-list-orange.svg);
+        }
+      }
+    }
+    &_family {
+      .tabs-profile__text-wrap::before {
+        background-image: url(../img/icons/user-outline-grey.svg);
+      }
+      &._active {
+        .tabs-profile__text-wrap::before {
+          background-image: url(../img/icons/user-outline-orange.svg);
+        }
+      }
+    }
+    &._active {
+      .tabs-profile__text {
+        color: $orange;
+      }
+    }
+    @media (max-width: 46.98em) {
+      padding-top: 4.8rem;
+      padding-bottom: 2.8rem;
+      display: flex;
+      flex: 1 0 28rem;
+      &:not(:last-child) {
+        .tabs-profile__text-wrap {
+          border-right: 1px solid rgba(216, 221, 228, 0.7);
+        }
+      }
+    }
+    @media (min-width: 46.98em) {
+      &:not(:last-child) {
+        .tabs-profile__text-wrap {
+          border-bottom: 1px solid rgba(216, 221, 228, 0.7);
+        }
+      }
+    }
+  }
+
+  // .tabs-profile__text-wrap
+
+  &__text-wrap {
+    padding-top: 3.6rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-size: 2.4rem;
+    }
+    @media (max-width: 48.98em) {
+      padding: 0 4rem;
+      flex-direction: column;
+      row-gap: 0.8rem;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      &::before {
+        width: 4.8rem;
+        height: 4.8rem;
+        background-size: 4.8rem;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    @media (min-width: 48.98em) {
+      &::after {
+        content: '';
+        background-repeat: no-repeat;
+        width: 0.6rem;
+        height: 1.2rem;
+        background-image: url(../img/icons/sm-arrow.svg);
+        background-size: 0.6rem 1.2rem;
+      }
+    }
+  }
+
+  // .tabs-profile__text
+
+  &__text {
+    font-family: 'MyriadPro';
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    @media (max-width: 48.98em) {
+      margin: auto 0;
+      max-width: 20.2rem;
+      font-size: 2.8rem;
+      line-height: 3.36rem;
+      color: #bdc1c8;
+    }
+    @media (min-width: 48.98em) {
+      margin-right: auto;
+    }
+  }
+}
+
+.group-profile-info {
+  margin-bottom: 3rem;
+  row-gap: 2.5rem;
+  display: grid;
+  @media (max-width: 48.98em) {
+    margin-bottom: 6rem;
+    row-gap: 4rem;
+  }
+  @media (min-width: 48.98em) {
+    grid-template-columns: repeat(2, auto);
+    column-gap: 12.4rem;
+  }
+
+  // .group-profile-info__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .group-profile-info__heading
+
+  &__heading {
+    margin-bottom: 1.2rem;
+    font-family: 'MyriadPro';
+    font-size: 1.6rem;
+    color: rgba(51, 51, 51, 0.5);
+    @media (max-width: 48.98) {
+      margin-bottom: 1.6rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  // .group-profile-info__text
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    @media (max-width: 48.98em) {
+      font-size: 3.2rem;
+      line-height: 3.52rem;
+    }
+  }
+}
+
+.table-profile-patients {
+  margin-bottom: 7.8rem;
+  display: grid;
+  @media (min-width: 48.98em) {
+    margin-bottom: 3rem;
+  }
+
+  // .table-profile-patients__row
+
+  &__row {
+    padding-bottom: 4rem;
+    display: grid;
+    border-bottom: 1px solid #d8dde4;
+    &:not(:first-child) {
+      padding-top: 4rem;
+    }
+    @media (min-width: 48.98em) {
+      padding-bottom: 3.5rem;
+      justify-content: space-between;
+      grid-auto-flow: column;
+      column-gap: 3rem;
+      &:not(:first-child) {
+        padding-top: 3.5rem;
+      }
+    }
+    @media (max-width: 48.98em) {
+      position: relative;
+      padding-right: 4rem;
+      row-gap: 4rem;
+    }
+  }
+
+  // .table-profile-patients__column
+
+  &__column {
+    display: grid;
+    row-gap: 1.2rem;
+    &_actions {
+      row-gap: 1.6rem;
+    }
+    @media (max-width: 48.98em) {
+      row-gap: 1.6rem;
+      &_actions {
+        position: absolute;
+        bottom: 4rem;
+        right: 0;
+        row-gap: 6rem;
+      }
+    }
+  }
+
+  // .table-profile-patients__heading
+
+  &__heading {
+    font-family: 'MyriadPro';
+    font-size: 1.6rem;
+    color: rgba(51, 51, 51, 0.5);
+    @media (max-width: 48.98em) {
+      font-size: 2rem;
+    }
+  }
+
+  // .table-profile-patients__text
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    @media (max-width: 48.98em) {
+      font-size: 2.8rem;
+      line-height: 3.52rem;
+    }
+  }
+
+  // .table-profile-patients__button
+
+  &__button {
+  }
+
+  // .table-profile-patients__icon
+
+  &__icon {
+    max-width: 1.8rem;
+    height: 1.8rem;
+    @media (max-width: 48.98em) {
+      max-width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+}

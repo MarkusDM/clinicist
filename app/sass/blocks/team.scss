@@ -1,0 +1,214 @@
+.team {
+   margin-bottom: 18rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__left {
+      width: 41.5%;
+      margin-top: 3.5rem;
+      padding-bottom: 7.5rem;
+      &-subtitle {
+         margin-bottom: 1.5rem;
+      }
+      &-title {
+         margin-bottom: 4.1rem;
+      }
+      &-text {
+         font-family: "MyriadPro";
+         font-size: 1.8rem;
+         line-height: 133%;
+         color: rgba(51, 51, 51, 0.5);
+         position: relative;
+         padding-left: 2rem;
+         margin-bottom: 9.6rem;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0rem;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 1px;
+            background-color: #D8DDE4;
+         }
+      }
+      &-slider {
+         position: relative;
+      }
+      &-item {
+         &-title {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 128%;
+            margin-bottom: 2.1rem;
+         }
+         &-text {
+            font-family: "MyriadPro";
+            font-size: 1.8rem;
+            line-height: 133%;
+            color: rgba(51, 51, 51, 0.5);
+            margin-bottom: 3.3rem;
+         }
+         &-link {
+
+         }
+      }
+   }
+   &-swiper {
+      width: 65%;
+      margin-left: auto;
+      margin-right: 0;
+   }
+   &-scrollbar {
+      position: absolute;
+      left: 0;
+      bottom: -7.6rem;
+      width: 96%;
+      height: 1px;
+      background: #D8DDE4;
+  }
+  &-scrollbar .swiper-scrollbar-drag {
+   height: 0.4rem;
+   position: absolute;
+   top: -0.2rem;
+   z-index: 1;
+   background-color: $blue;
+   }
+   &__imgs {
+      width: 45.2%;
+      position: relative;
+      &-item {
+         width: 18.1rem;
+         position: absolute;
+      }
+      &-item1 {
+         left: 0rem;
+         top: 13.4rem;
+      }
+      &-item2 {
+         right: 0;
+         top: 19rem;
+         &.team__imgs-item {
+            & .team__imgs-number {
+               margin-top: 3.5rem;
+               text-align: right;
+               & span {
+                  margin-right: 0.5rem;
+               }
+            }
+         }
+      }
+      &-item3 {
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+      &-item4 {
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      &-item5 {
+         bottom: 0rem;
+         left: 4rem;
+      }
+      &-item6 {
+         bottom: 0rem;
+         left: 56%;
+         transform: translateX(-50%);
+      }
+      &-number {
+         font-family: "MyriadPro";
+         font-size: 6rem;
+         line-height: 120%;
+         color: $blue;
+         margin-top: 2.5rem;
+         & span {
+            display: block;
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: rgba(51, 51, 51, 0.5);
+
+         }
+      }
+      &-pic {
+         width: 100%;
+         height: 18rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+   &-btn-prev {
+      right: unset;
+      bottom: unset;
+      top: 5.7rem;
+      left: 0rem;
+   }
+   &-btn-next {
+      right: unset;
+      bottom: unset;
+      top: 5.7rem;
+      left: 6.9rem;
+   }
+   &.team-doctors {
+      margin-bottom: 17.6rem;
+   }
+}
+
+@media (max-width: 48em) {
+   .team {
+      margin-bottom: 18vw;
+      &__inner {
+         display: block;
+      }
+      &__left {
+         width: 100%;
+         margin-top: 0;
+         padding-bottom: 0;
+         &-subtitle {
+            margin-bottom: 2.2vw;
+         }
+         &-title {
+            margin-bottom: 6.5vw;
+         }
+         &-text {
+            font-size: 4vw;
+            padding-left: 3vw;
+            margin-bottom: 4vw;
+            &::after {
+               position: absolute;
+               content: '';
+               left: 0rem;
+               top: 0.5rem;
+               bottom: 0.5rem;
+               width: 1px;
+               background-color: #D8DDE4;
+            }
+         }
+         &-text2 {
+            font-size: 4vw;
+            line-height: 135%;
+            color: rgba(51, 51, 51, 0.5);
+            margin-bottom: 8vw;
+         }
+      }
+      &__img {
+         width: 100%;
+         height: 40vw;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &.team-doctors {
+         margin-bottom: 17.6rem;
+      }
+   }
+}

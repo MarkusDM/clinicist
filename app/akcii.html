@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="another website" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__top">
+            <a href="#" class="header__top-logo">
+              <img src="./img/logo.png" alt="" />
+            </a>
+            <div class="header__top-simptom">
+              Симптомчекер
+              <span>Поиск симптома</span>
+            </div>
+            <div class="header__top-map">
+              Выберите клинику:
+              <span>Клиника на Калинина</span>
+            </div>
+            <form class="header__top-form">
+              <div class="header__top-form-search dropdown-click5">
+                Найти услугу...
+              </div>
+              <label class="header__top-form-drop dropdown__content5">
+                <input
+                  type="text"
+                  placeholder="Найти услугу..."
+                  class="dropdown-click2"
+                />
+                <div class="header__top-form-drop-content dropdown__content2">
+                  <div
+                    class="header__top-form-drop-content-btns toggle-class-parent"
+                  >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ active"
+                      >Все</a
+                    >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ"
+                      >Врачи</a
+                    >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ"
+                      >Специальности</a
+                    >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ"
+                      >Симптомы</a
+                    >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ"
+                      >Болезни</a
+                    >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ"
+                      >Статьи</a
+                    >
+                    <a
+                      href="#"
+                      class="header__top-form-drop-content-btn toggle-class-activ"
+                      >Программы</a
+                    >
+                  </div>
+                  <div class="header__top-form-drop-content-box">
+                    <a href="#"
+                      >Оперьютерная томография с внутривенным контрастным
+                      усилением</a
+                    >
+                    <a href="#"
+                      >Опернцефалография (РЭГ сосудов головного мозга)</a
+                    >
+                    <a href="#"
+                      >Оперчное мониторирование артериального давления (СМАД)</a
+                    >
+                    <a href="#">Оперецефалография (РЭГ)</a>
+                    <a href="#">Опериография аорты и ее ветвей</a>
+                    <a href="#">Оперецефалография (РЭГ)</a>
+                  </div>
+                </div>
+                <button>
+                  <img src="./img/icons/search-grey.png" alt="" />
+                </button>
+                <div class="header__top-form-drop-close close">
+                  <img src="./img/icons/close-grey.svg" alt="" />
+                </div>
+              </label>
+            </form>
+            <div class="header__top-btn btn dropdown">
+              Записаться на прием
+              <ul class="header__top-btn-drop dropdown-content">
+                <li>
+                  <a href="#">
+                    <img src="./img/icons/kalendar.png" alt="" />Записаться на
+                    прием
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/icons/whatsapp-blue.png" alt="" />Написать в
+                    WhatsApp
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/icons/telegram-blue.png" alt="" />Написать в
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/icons/phone-blue.png" alt="" />Обратный
+                    звонок
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/icons/chat-blue.png" alt="" />Онлайн-чат
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__top-phone">
+              <a href="tel:88612073374">8 (861) 207-33-74</a>
+              <span>Ежедневно c 7:30 до 20:00</span>
+            </div>
+            <div class="header__top-mess">
+              <a
+                href="#"
+                class="header__top-mess-img header__top-mess-telegram"
+              >
+                <img src="./img/icons/header-telegram.svg" alt="" />
+              </a>
+              <a href="#" class="header__top-mess-img header__top-mess-user">
+                <img src="./img/icons/header-user.svg" alt="" />
+              </a>
+              <a href="#" class="header__top-mess-img header__top-mess-box">
+                <img src="./img/icons/header-box.svg" alt="" />
+              </a>
+            </div>
+            <div class="header__top-burger">
+              <img src="./img/icons/menu.png" alt="" />
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="header__bottom-item header__bottom-item-blue dropdown">
+              <span>ПАЦИЕНТАМ</span>
+              <ul class="header__bottom-item-drop dropdown-content">
+                <li>
+                  <a href="#">ПАЦИЕНТАМ</a>
+                </li>
+                <li>
+                  <a href="#">СОТРУДНИКАМ</a>
+                </li>
+                <li>
+                  <a href="#">ПАРТНЕРАМ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__bottom-items">
+              <div class="header__bottom-item dropdown">
+                <span>о клинике</span>
+                <div class="header__bottom-item-drop dropdown-content">
+                  <div class="header__bottom-item-drop-page">
+                    <div class="header__bottom-item-drop-page-name">
+                      Страницы
+                    </div>
+                    <div class="header__bottom-item-drop-page-items">
+                      <a href="#">Первое знакомство</a>
+                      <a href="#">Лицензии и свидетельства</a>
+                      <a href="#">Контроль качества медицинских услуг</a>
+                      <a href="#">Как стать нашим пациентом</a>
+                      <a href="#">Вакансии и карьера в компании</a>
+                      <a href="#">Блог</a>
+                      <a href="#">Новости</a>
+                    </div>
+                  </div>
+                  <div class="header__bottom-item-drop-tema">
+                    <div class="header__bottom-item-drop-tema-name">
+                      Острые темы
+                    </div>
+                    <div class="header__bottom-item-drop-tema-items">
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__bottom-item dropdown">
+                <span>Услуги</span>
+                <div class="header__bottom-item-drop dropdown-content">
+                  <div class="header__bottom-item-drop-page">
+                    <div class="header__bottom-item-drop-page-name">
+                      Страницы
+                    </div>
+                    <div class="header__bottom-item-drop-page-items">
+                      <a href="#">Первое знакомство</a>
+                      <a href="#">Лицензии и свидетельства</a>
+                      <a href="#">Контроль качества медицинских услуг</a>
+                      <a href="#">Как стать нашим пациентом</a>
+                      <a href="#">Вакансии и карьера в компании</a>
+                      <a href="#">Блог</a>
+                      <a href="#">Новости</a>
+                    </div>
+                  </div>
+                  <div class="header__bottom-item-drop-tema">
+                    <div class="header__bottom-item-drop-tema-name">
+                      Острые темы
+                    </div>
+                    <div class="header__bottom-item-drop-tema-items">
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__bottom-item dropdown">
+                <span>врачи</span>
+                <div class="header__bottom-item-drop dropdown-content">
+                  <div class="header__bottom-item-drop-page">
+                    <div class="header__bottom-item-drop-page-name">
+                      Страницы
+                    </div>
+                    <div class="header__bottom-item-drop-page-items">
+                      <a href="#">Первое знакомство</a>
+                      <a href="#">Лицензии и свидетельства</a>
+                      <a href="#">Контроль качества медицинских услуг</a>
+                      <a href="#">Как стать нашим пациентом</a>
+                      <a href="#">Вакансии и карьера в компании</a>
+                      <a href="#">Блог</a>
+                      <a href="#">Новости</a>
+                    </div>
+                  </div>
+                  <div class="header__bottom-item-drop-tema">
+                    <div class="header__bottom-item-drop-tema-name">
+                      Острые темы
+                    </div>
+                    <div class="header__bottom-item-drop-tema-items">
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__bottom-item">
+                <a href="#">цены</a>
+              </div>
+              <div class="header__bottom-item">
+                <a href="#">Акции</a>
+              </div>
+              <div class="header__bottom-item">
+                <a href="#">отзывы</a>
+              </div>
+              <div class="header__bottom-item dropdown">
+                <span>симптомы</span>
+                <div class="header__bottom-item-drop dropdown-content">
+                  <div class="header__bottom-item-drop-page">
+                    <div class="header__bottom-item-drop-page-name">
+                      Страницы
+                    </div>
+                    <div class="header__bottom-item-drop-page-items">
+                      <a href="#">Первое знакомство</a>
+                      <a href="#">Лицензии и свидетельства</a>
+                      <a href="#">Контроль качества медицинских услуг</a>
+                      <a href="#">Как стать нашим пациентом</a>
+                      <a href="#">Вакансии и карьера в компании</a>
+                      <a href="#">Блог</a>
+                      <a href="#">Новости</a>
+                    </div>
+                  </div>
+                  <div class="header__bottom-item-drop-tema">
+                    <div class="header__bottom-item-drop-tema-name">
+                      Острые темы
+                    </div>
+                    <div class="header__bottom-item-drop-tema-items">
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__bottom-item dropdown">
+                <span>Пациентам</span>
+                <div class="header__bottom-item-drop dropdown-content">
+                  <div class="header__bottom-item-drop-page">
+                    <div class="header__bottom-item-drop-page-name">
+                      Страницы
+                    </div>
+                    <div class="header__bottom-item-drop-page-items">
+                      <a href="#">Первое знакомство</a>
+                      <a href="#">Лицензии и свидетельства</a>
+                      <a href="#">Контроль качества медицинских услуг</a>
+                      <a href="#">Как стать нашим пациентом</a>
+                      <a href="#">Вакансии и карьера в компании</a>
+                      <a href="#">Блог</a>
+                      <a href="#">Новости</a>
+                    </div>
+                  </div>
+                  <div class="header__bottom-item-drop-tema">
+                    <div class="header__bottom-item-drop-tema-name">
+                      Острые темы
+                    </div>
+                    <div class="header__bottom-item-drop-tema-items">
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Основные проблемы в лечении болезней сердца
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                      <a href="#"
+                        >Лечение маммологии в 2022
+                        <span>Автор статьи: Клименко Е. В.</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__bottom-item">
+                <a href="#">АДРЕСА И контакты</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <main class="main">
+      <section class="baner baner-akcii">
+        <div class="container">
+          <div class="baner__inner">
+            <div class="baner__content">
+              <div class="baner__content-links">
+                <a href="#" class="baner__content-links-link">Главная</a>
+                <a href="#" class="baner__content-links-link">Пациентам</a>
+                <div class="baner__content-links-link nolink">Акции</div>
+              </div>
+              <div class="baner__content-title title">Акции</div>
+              <div class="baner__content-text">
+                В нашей клинике вы получите только самое современное и
+                эффективное лечение
+              </div>
+            </div>
+            <div class="baner__picture">
+              <img
+                src="./img/baner-akcii.png"
+                alt="История клиники"
+                class="desctop" />
+              <img
+                src="./img/baner-history-mobile.png"
+                alt="История клиники"
+                class="mobile" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="all-news all-news-akcii">
+        <div class="container">
+          <div class="all-news__inner">
+            <div class="all-news__items">
+              <div class="all-news__item">
+                <div class="all-news__item-img">
+                  <img src="./img/all-news9.jpg" alt="" />
+                </div>
+                <div class="all-news__item-title">
+                  Скидка до 25% на годовые программы
+                </div>
+                <div class="all-news__item-text">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение В нашей клинике вы получите...
+                </div>
+                <a href="#" class="all-news__item-link link">Подробнее</a>
+              </div>
+
+              <div class="all-news__item">
+                <div class="all-news__item-img">
+                  <img src="./img/all-news10.jpg" alt="" />
+                </div>
+                <div class="all-news__item-title">
+                  Вакцинация от COVID: Гам&nbsp;-&nbsp;КОВИД-Вак (Cпутник V)
+                </div>
+                <div class="all-news__item-text">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение В нашей клинике вы получите...
+                </div>
+                <a href="#" class="all-news__item-link link">Подробнее</a>
+              </div>
+
+              <div class="all-news__item">
+                <div class="all-news__item-img">
+                  <img src="./img/all-news11.jpg" alt="" />
+                </div>
+                <div class="all-news__item-title">
+                  "Женское здоровье": программы обследования скидкой до 52%
+                </div>
+                <div class="all-news__item-text">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение В нашей клинике вы получите...
+                </div>
+                <a href="#" class="all-news__item-link link">Подробнее</a>
+              </div>
+
+              <div class="all-news__item">
+                <div class="all-news__item-img">
+                  <img src="./img/all-news9.jpg" alt="" />
+                </div>
+                <div class="all-news__item-title">
+                  Выявление вируса: ПЦР-диагностика COVID за
+                  <span> 2290 ₽</span>
+                </div>
+                <div class="all-news__item-text">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение В нашей клинике вы получите...
+                </div>
+                <a href="#" class="all-news__item-link link">Подробнее</a>
+              </div>
+
+              <div class="all-news__item">
+                <div class="all-news__item-img">
+                  <img src="./img/all-news12.jpg" alt="" />
+                </div>
+                <div class="all-news__item-title">
+                  На все услуги за визит в июле Дарим <span> 1000 ₽</span>
+                </div>
+                <div class="all-news__item-text">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение В нашей клинике вы получите...
+                </div>
+                <a href="#" class="all-news__item-link link">Подробнее</a>
+              </div>
+
+              <div class="all-news__item">
+                <div class="all-news__item-img">
+                  <img src="./img/all-news13.jpg" alt="" />
+                </div>
+                <div class="all-news__item-title">
+                  Для путешественников и въезжающих в РФ: ПЦР в течение 36 часов
+                </div>
+                <div class="all-news__item-text">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение В нашей клинике вы получите...
+                </div>
+                <a href="#" class="all-news__item-link link">Подробнее</a>
+              </div>
+              <a href="#" class="all-news__item-alls link">Показать еще</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-clinic new-clinic-akcii">
+        <div class="container">
+          <div class="new-clinic__subtitle subtitle">Полезные ссылки</div>
+          <div class="new-clinic__title title">Перечень ссылок</div>
+          <div class="new-clinic__inner">
+            <div class="new-clinic__left">
+              <a href="tel:84951897397" class="new-clinic__left-phone"
+                >Звоните <br />
+                8 (495) 189-73-97</a
+              >
+              <div class="new-clinic__left-text">
+                Или можете связаться с нами онлайн любым способом
+              </div>
+              <a href="#" class="new-clinic__left-whatsapp"
+                >Написать в WhatsApp</a
+              >
+              <div class="new-clinic__left-online desctop">
+                Записаться на сайте
+              </div>
+              <div class="new-clinic__left-online mobile">
+                Записаться на прием онлайн
+              </div>
+            </div>
+            <div class="new-clinic__right">
+              <div class="new-clinic__right-text">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+              <ul class="new-clinic__right-list">
+                <li>Восприятие, как справедливо считает Ф.Энгельс</li>
+                <li>Однако Э.Дюркгейм утверждал: гештальт осознаёт</li>
+                <li>
+                  Гендер заметно представляет собой социометрический гомеостаз
+                </li>
+              </ul>
+              <div class="new-clinic__right-img">
+                <img src="./img/new-clinic.png" alt="" />
+              </div>
+              <div class="new-clinic__right-text">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения. Восприятие, как справедливо считает Ф.Энгельс,
+                устойчиво отталкивает онтогенез речи. Однако Э.Дюркгейм
+                утверждал: гештальт осознаёт институциональный ассоцианизм, как
+                и предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular popular-akcii">
+        <div class="container">
+          <div class="popular__inner">
+            <div class="popular__title title">Популярные разделы сайта</div>
+            <div class="popular__items">
+              <div class="popular__item">
+                <div class="popular__item-name">Кардиология</div>
+                <ul>
+                  <li>Ишемические поражения</li>
+                  <li>Порок сердца</li>
+                  <li>Аритмия и фибрилляция</li>
+                  <li>Стенокардия</li>
+                </ul>
+                <a href="#" class="popular__item-link link">Все процедуры</a>
+              </div>
+              <div class="popular__item">
+                <div class="popular__item-name">Процедурный кабинет</div>
+                <ul>
+                  <li>Капельницы (капельное введение)</li>
+                  <li>Уколы (инъекции)</li>
+                </ul>
+                <a href="#" class="popular__item-link link">Все процедуры</a>
+              </div>
+              <div class="popular__item">
+                <div class="popular__item-name">Ревматология</div>
+                <ul>
+                  <li>Ишемические поражения</li>
+                  <li>Порок сердца</li>
+                  <li>Аритмия и фибрилляция</li>
+                  <li>Стенокардия</li>
+                </ul>
+                <a href="#" class="popular__item-link link">Все процедуры</a>
+              </div>
+              <div class="popular__item">
+                <div class="popular__item-name">Ревматология</div>
+                <ul>
+                  <li>Ишемические поражения</li>
+                  <li>Порок сердца</li>
+                  <li>Аритмия и фибрилляция</li>
+                  <li>Стенокардия</li>
+                </ul>
+                <a href="#" class="popular__item-link link">Все процедуры</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__left-logo">
+              <img src="./img/logo.png" alt="" />
+            </div>
+            <div class="footer__left-pay">
+              <div class="footer__left-pay-name">мы принимаем:</div>
+              <div class="footer__left-pay-imgs">
+                <div class="footer__left-pay-img footer__left-pay-img1">
+                  <img src="./img/footer-pay1.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img2">
+                  <img src="./img/footer-pay2.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img3">
+                  <img src="./img/footer-pay3.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img4">
+                  <img src="./img/footer-pay4.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img5">
+                  <img src="./img/footer-pay5.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img6">
+                  <img src="./img/footer-pay6.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="footer__lists">
+              <div class="footer__list">
+                <div class="footer__list-title">Услуги</div>
+                <ul>
+                  <li><a href="#">Диагностика</a></li>
+                  <li><a href="#">Лечение</a></li>
+                  <li><a href="#">Профилактика</a></li>
+                  <li><a href="#">Комплексные программы</a></li>
+                  <li><a href="#">Реабилитация</a></li>
+                  <li><a href="#">Прием</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <div class="footer__list-title">О клинике</div>
+                <ul>
+                  <li><a href="#">Вакансии</a></li>
+                  <li><a href="#">Программа лояльности</a></li>
+                  <li><a href="#">Для организаций</a></li>
+                  <li><a href="#">Страховым организациям</a></li>
+                  <li><a href="#">Правовая информация</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <div class="footer__list-title">пациентам</div>
+                <ul>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Заболевания</a></li>
+                  <li><a href="#">Вопрос-ответ</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Список терминов</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <div class="footer__list-title">программы</div>
+                <ul>
+                  <li><a href="#">Программы годового обслуживания</a></li>
+                  <li><a href="#">Реабилитация</a></li>
+                  <li><a href="#">Комплексное обследование</a></li>
+                  <li><a href="#">Программы ведения беременности</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__lists">
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">врачи</a>
+              </div>
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">Адреса и контакты</a>
+              </div>
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">отзывы</a>
+              </div>
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">цены</a>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-email">
+                E-mail:
+                <span>info@medicine.ru</span>
+              </div>
+              <div class="footer__contacts-phone">
+                Телефон:
+                <span>+7 (495) 189-73-97</span>
+              </div>
+              <div class="footer__contacts-address">
+                Адрес:
+                <span>109431, г. Москва, ул. Привольная, 70</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-info">
+            <div class="footer__bottom-info-text">
+              © Copyright 2021 Клиницист. Сеть медицинских центров. Все права
+              защищены
+            </div>
+            <a href="#" class="footer__bottom-info-pol"
+              >Политика конфиденциальности</a
+            >
+          </div>
+          <div class="footer__bottom-mess">
+            <a href="#" class="footer__bottom-mess-inst">
+              <img src="./img/icons/inst-white.png" alt="" />
+            </a>
+            <a href="#" class="footer__bottom-mess-fac">
+              <img src="./img/icons/facebook-white.png" alt="" />
+            </a>
+            <a href="#" class="footer__bottom-mess-vk">
+              <img src="./img/icons/vk-white.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/choices.min.js"></script>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script src="./js/jquery-ui_(1.13.2).min.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
+    <script src="./js/inputmask.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

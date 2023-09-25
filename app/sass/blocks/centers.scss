@@ -1,0 +1,674 @@
+.centers {
+  margin-bottom: 14.2rem;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12rem;
+    width: 80%;
+    height: 64.5rem;
+    background-color: #eef3f7;
+    z-index: -1;
+  }
+  &__subtitle {
+    font-family: "MyriadPro";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 122%;
+    color: $blue;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+  }
+  &__title {
+    font-family: "Montserrat";
+    font-size: 5rem;
+    line-height: 122%;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 59.2%;
+    position: relative;
+    padding: 0 1rem;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 0.3rem;
+      height: 100%;
+      background-color: $white;
+    }
+  }
+  &-filter {
+    width: 45%;
+    position: relative;
+    padding-top: 9.6rem;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 0.3rem;
+      height: 100%;
+      background-color: $white;
+    }
+    .select-dropdown {
+    }
+    &__item {
+      font-family: "Montserrat";
+      font-size: 1.8rem;
+      line-height: 222%;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-bottom: 1.1rem;
+      }
+      &.active {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 140%;
+        color: $blue;
+      }
+    }
+    &-list {
+
+      &__item {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8rem 2.9rem;
+        border: 1px solid #d8dde4;
+        border-radius: 100rem;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 4rem;
+        color: #2f2f2f;
+        margin-bottom: 2.2rem;
+
+        &-img{
+         margin-right: 1rem;
+         width: 3rem;
+         height: 3rem;
+         background-image: url('/Klinicist/img/icons/map-grey.svg');
+         background-repeat: no-repeat;
+         background-size: 3rem 3rem;
+        }
+
+        &:hover{
+         cursor: pointer;
+         color: #36B4F1;
+         background: #FFFFFF;
+        }
+
+        &:hover &-img{
+         background-image: url('/Klinicist/img/icons/map-blue.svg');
+      }
+      }
+
+      &__item__active{
+         color: #36B4F1;
+         background: #FFFFFF;
+
+         .centers-filter-list__item-img{
+            background-image: url('/Klinicist/img/icons/map-blue.svg');
+         }
+      }
+    }
+  }
+  &-info {
+    display: none;
+    &.active {
+      display: block;
+      width: 55%;
+      padding: 5rem 5rem 4.6rem 5rem; /* 5rem 5rem 9.6rem 5rem */
+    }
+    &-title {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 160%;
+      margin-bottom: 3.1rem;
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3.6rem;
+      &-route {
+        font-family: "MyriadPro";
+        font-size: 1.8rem;
+        line-height: 133%;
+        color: $blue;
+        position: relative;
+        padding-left: 3.6rem;
+        cursor: pointer;
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1.6rem;
+          height: 2rem;
+          background-image: url(../img/icons/route.png);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      &-taxi {
+        font-family: "MyriadPro";
+        font-size: 1.8rem;
+        line-height: 133%;
+        color: $blue;
+        position: relative;
+        padding-left: 3.8rem;
+        cursor: pointer;
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2.3rem;
+          height: 1rem;
+          background-image: url(../img/icons/taxi.png);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    &-address {
+      font-family: "Montserrat";
+      font-size: 1.8rem;
+      line-height: 133%;
+      position: relative;
+      padding-left: 4.3rem;
+      margin-bottom: 2.3rem;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0rem;
+        top: 0;
+        width: 2.9rem;
+        height: 2.9rem;
+        background-image: url(../img/icons/map.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &-phone {
+      font-family: "Montserrat";
+      font-size: 1.8rem;
+      line-height: 133%;
+      position: relative;
+      padding-left: 4rem;
+      margin-bottom: 2.2rem;
+      display: inline-block;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.7rem;
+        height: 2.7rem;
+        background-image: url(../img/icons/phone.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &-works {
+      font-family: "Montserrat";
+      font-size: 1.8rem;
+      line-height: 133%;
+      position: relative;
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.1rem;
+        height: 2.1rem;
+        background-image: url(../img/icons/time.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &-days {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin-bottom: 0.9rem;
+      &-day {
+        font-family: "Montserrat";
+        font-size: 1.2rem;
+        line-height: 200%;
+        position: relative;
+        &.black::after {
+          position: absolute;
+          content: "";
+          left: 50%;
+          top: -2rem;
+          transform: translateX(-50%);
+          width: 1.6rem;
+          height: 1.6rem;
+          background-color: #B8C1C6;
+          border-radius: 50%;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          left: 50%;
+          top: -2rem;
+          transform: translateX(-50%);
+          width: 1.6rem;
+          height: 1.6rem;
+          background-color: $blue;
+          border-radius: 50%;
+        }
+      }
+    }
+    &-times {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70.5%;
+      margin-bottom: 3rem;
+      &-time {
+        font-family: "Montserrat";
+        font-size: 1.2rem;
+        line-height: 200%;
+        position: relative;
+        padding-left: 2.5rem;
+        &.black::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1.6rem;
+          height: 1.6rem;
+          background-color: #B8C1C6;
+          border-radius: 50%;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1.6rem;
+          height: 1.6rem;
+          background-color: $blue;
+          border-radius: 50%;
+        }
+      }
+    }
+    &-btn {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+  &__map {
+    position: absolute;
+    right: 0;
+    top: 12rem;
+    width: 43%;
+    height: 64.5rem;
+    z-index: 33;
+    & #contloc {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.centers-kontacti-centri {
+    .centers {
+      &__subtitle {
+        margin-bottom: 0.7rem;
+      }
+      &__title {
+        font-family: "Montserrat";
+        font-size: 3.5rem;
+        line-height: 122%;
+        margin-bottom: 4rem;
+      }
+      &__content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &-info {
+        display: block;
+        background: #eef3f7;
+        width: 31.48%;
+        padding: 4rem 4rem 5.5rem 4rem;
+        margin-right: 4rem;
+        margin-bottom: 4rem;
+        &:nth-child(3n + 3) {
+          margin-right: 0;
+        }
+        &-title {
+          min-height: 8rem;
+          width: 90%;
+          font-size: 2.46rem;
+          line-height: 165%;
+        }
+        &-links {
+          &-taxi {
+            margin-right: 0.8rem;
+          }
+        }
+      }
+    }
+    &::after {
+      content: none;
+    }
+  }
+  &__det-ob-usl {
+    margin-top: 18.2rem;
+    margin-bottom: 14.5rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .centers {
+    margin-bottom: 25.2rem;
+    .centers-info-btn {
+    min-height: 6rem;
+    }
+    .centers-info,
+    .centers-info.active {
+    position: relative;
+    padding: 7rem 0;
+    &::after {
+      content: "";
+      position: absolute;z-index:-1;width: 100vw;height: 100%;top: 0;left: -5rem;
+      background-color: #eef3f7;
+     }
+    }
+    .centers-filter {
+      position: relative;
+      margin-bottom: 1.3rem;
+     padding: 3.5rem 0;
+     &::after {
+      content: "";
+      position: absolute;z-index:-1;width: 100vw;height: 100%;top: 0;left: -5rem;
+      background-color: #eef3f7;
+     }
+    }
+    &::after {
+      display: none;
+      width: 100%;
+      top: 17.5rem;
+      height: 80%;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 37.5rem;
+      width: 100%;
+      height: 1.2rem;
+      background-color: #fff;
+    }
+    &__subtitle {
+      font-size: 3rem;
+      margin-bottom: 1.3rem;
+    }
+    &__title {
+      margin-bottom: 5.3rem;
+      font-size: 5.43rem;
+    }
+    &__content {
+      width: 100%;
+      display: block;
+      &::after {
+        content: none;
+      }
+    }
+    &__map {
+      position: relative;
+      top: 0;
+      left: -4rem;
+      margin: 0;
+      width: 100vw;
+      height: 62rem;
+      .ymaps-2-1-79-map {
+        height: 100% !important;
+        width: 100vw !important;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0rem;
+        top: -1.2rem;
+        width: 100%;
+        height: 1.2rem;
+        background-color: #fff;
+      }
+    }
+    &-filter {
+      margin-bottom: 14.6rem;
+      width: 100%;
+      padding: 0;
+      .select {
+        position: relative;
+        &-text,
+        &-dropdown {
+          width: 100%;
+          border: 1px solid #d8dde4;
+          background: transparent;
+        }
+        &-text {
+          display: inline-block;
+          padding: 3.8rem 3.7rem;
+          border-radius: 120rem;
+          font-size: 2.83rem;
+          position: relative;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-right: 10rem;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 52%;
+            right: 3.3rem;
+            transform: translateY(-50%) rotate(90deg);
+            width: 3.4rem;
+            height: 2.5rem;
+            background: url(../img/icons/arraw-blue.svg) 50% no-repeat;
+            background-size: contain;
+          }
+        }
+        &-dropdown {
+          display: none;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: calc(100% + 3vw);
+          padding: 3.8rem 3.7rem;
+          border-radius: 6rem;
+          z-index: 3;
+          background-color: #eef3f7;
+        }
+      }
+      &::after {
+        content: none;
+      }
+      &__item {
+        font-size: 2.83rem;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+        & span {
+          font-size: 2.83rem;
+          line-height: 140%;
+        }
+        &.active {
+          color: $fzAll;
+          font-size: 2.83rem;
+        }
+      }
+    }
+    &-info {
+      width: 100%;
+      margin-bottom: 9.5rem;
+      padding: 6.9rem 0;
+      &-title {
+        font-size: 3.1rem;
+        margin-bottom: 4.7rem;
+      }
+      &-links {
+        display: block;
+        margin-bottom: 5.6rem;
+        &-route {
+          font-size: 2.8rem;
+          padding-left: 7.8rem;
+          margin-bottom: 3.5rem;
+          &::after {
+            width: 4rem;
+            height: 4.2rem;
+            left: -0.2rem;
+          }
+          &::before {
+            position: absolute;
+            left: 7.8rem;
+            bottom: 0.5rem;
+            width: 43%;
+            height: 0.2rem;
+            content: "";
+            background-color: $blue;
+          }
+        }
+        &-taxi {
+          font-size: 2.8rem;
+          padding-left: 7.8rem;
+          &::after {
+            left: -0.2rem;
+            width: 5rem;
+            height: 3.4rem;
+          }
+          &::before {
+            position: absolute;
+            left: 7.8rem;
+            bottom: 0.5rem;
+            width: 29%;
+            height: 0.2rem;
+            content: "";
+            background-color: $blue;
+          }
+        }
+      }
+      &-address {
+        font-size: 3.2rem;
+        padding-left: 0;
+        line-height: 145%;
+        margin-bottom: 4rem;
+        display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    column-gap: 4rem;
+        &::after {
+          position: static;
+          transform: none;
+          flex: 0 0 4rem;
+          width: 4rem;
+    height: 4rem;
+        }
+      }
+      &-phone {
+        font-size: 3.2rem;
+        padding-left: 0;
+        margin-bottom: 3.7rem;
+        display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    column-gap: 4rem;
+        &::after {
+          position: static;
+          transform: none;
+          flex: 0 0 4rem;
+          width: 4rem;
+    height: 4rem;
+        }
+      }
+      &-works {
+        font-size: 3.2rem;
+        padding-left: 0;
+        margin-bottom: 9.2rem;
+        display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    column-gap: 4rem;
+        &::after {
+          position: static;
+          transform: none;
+          flex: 0 0 4rem;
+          width: 4rem;
+    height: 4rem;
+        }
+      }
+      &-days {
+        margin-left: 0.4rem;
+        margin-bottom: 3.2rem;
+        width: 88%;
+            column-gap: 4rem;
+
+        &-day {
+          font-size: 2.5rem;
+          &::after {
+            width: 3.2rem;
+            height: 3.2rem;
+            top: -3rem;
+          }
+          &.black::after {
+            top: -3rem;
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
+      }
+      &-times {
+        width: 77.9%;
+        margin-bottom: 5.3rem;
+        &-time {
+          font-size: 2.4rem;
+          padding-left: 5rem;
+          &::after {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+          &.black::after {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
+      }
+      &-btn {
+        margin-bottom: 5.3rem;
+      }
+      &.active {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}
