@@ -1,133 +1,243 @@
 .progress {
-   margin-bottom: 18rem;
-   padding-top: 4.2rem;
-   &__inner {
-      padding: 0 1rem;
-   }
-   &__subtitle {
+  margin-bottom: 18rem;
 
-   }
-   &__header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 6.8rem;
-      &-btn {
-         height: 5.8rem;
-         margin-top: 0.5rem;
-         padding-left: 2.7rem;
-         padding-right: 2.7rem;
-      }
-   }
-   &__items {
-      display: flex;
-      justify-content: space-between;
-   }
-   &__item {
-      width: 20.8%;
-      /* box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.1); */
-      padding: 1rem;
-      padding-bottom: 1.2rem;
-      background: #EEF3F7;
-      &-number {
-         font-family: "MyriadPro";
-         font-weight: 600;
-         font-size: 1.6rem;
-         line-height: 119%;
-         color: rgba(51, 51, 51, 0.5);
-         margin-bottom: 1.4rem;
-      }
-      &-name {
-         font-family: "Montserrat";
-         font-size: 1.8rem;
-         line-height: 122%;
-         text-align: center;
-         padding: 0 2rem;
-         margin-bottom: 2.3rem;
-      }
-      &-name2 {
-         margin-bottom: 0.3rem;
-      }
-      &-num {
-         font-family: "Montserrat";
-         font-weight: 700;
-         font-size: 4rem;
-         line-height: 122%;
-         text-align: center;
-         padding: 0 4rem;
-         & span {
-            font-size: 2rem;
-            margin-left: 0.8rem;
-            & span {
-               color: #FE7200;
-               font-size: 4rem;
-            }
-         }
-      }
-      &-num2 {
-         line-height: 103%;
-      }
-   }
+  // .progress__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .progress__head
+
+  &__head {
+    margin-bottom: 6.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .progress__title-wrap
+
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .progress__subtitle
+
+  &__subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  // .progress__title
+
+  &__title {
+  }
+
+  // .progress__btn
+
+  &__btn {
+    align-self: flex-end;
+    min-width: 29.6rem;
+  }
+
+  // .progress__body
+
+  &__body {
+    display: grid;
+  }
+
+  // .progress__card
+
+  &__card {
+  }
 }
 
+.progress-card {
+  padding: 5.2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
+  background: #ffffff;
+
+  // .progress-card__icon-wrap
+
+  &__icon-wrap {
+    margin-bottom: 2.8rem;
+    width: 8.3rem;
+  }
+
+  // .progress-card__icon
+
+  &__icon {
+    object-fit: contain;
+  }
+
+  // .progress-card__heading
+
+  &__heading {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 120%;
+    color: #2f2f2f;
+  }
+
+  // .progress-card__text
+
+  &__text {
+    color: rgba(51, 51, 51, 0.5);
+  }
+}
 
 @media (max-width: 48em) {
-   .progress {
-      margin-bottom: 38.4rem;
-      &__inner {
-         position: relative;
-      }
-      &__subtitle {
+  .progress {
+    margin-bottom: 16rem;
 
-      }
-      &__header {
-         margin-bottom: 6.5rem;
-         &-title {
+    // .progress__container
 
-         }
-         &-btn {
-            position: absolute;
-            left: 0rem;
-            bottom: -18rem;
-            width: 100%;
-            height: 10rem;
-         }
+    &__container {
+    }
 
-      }
-      &__items {
-         display: block;
-      }
-      &__item {
-         width: 100%;
-         padding: 1.7rem 2rem 8.5rem 2rem;
-         box-shadow: 0px 4rem 18rem rgba(124, 148, 159, 0.1);
-         &:not(:last-child) {
-            margin-bottom: 4rem;
-         }
-         &-number {
-            font-size: 3.3rem;
-            margin-bottom: 3.4rem;
-         }
-         &-name {
-            font-size: 3.2rem;
-            padding:  0 8rem;
-            line-height: 140%;
-            margin-bottom: 4.4rem;
-         }
-         &-num {
-            font-size: 7rem;
-            padding: 0 10rem;
-            & span {
-               font-size: 4rem;
-               margin-left: 1.5rem;
-               & span {
-                  font-size: 7rem;
-               }
-            }
-         }
-         &-num2 {
-            line-height: 104%;
-            margin-top: -2rem;
-         }
-      }
-   }
+    // .progress__head
+
+    &__head {
+      margin-bottom: 6.4rem;
+    }
+
+    // .progress__title-wrap
+
+    &__title-wrap {
+    }
+
+    // .progress__subtitle
+
+    &__subtitle {
+      margin-bottom: 1.6rem;
+    }
+
+    // .progress__title
+
+    &__title {
+    }
+
+    // .progress__btn
+
+    &__btn {
+      display: none;
+    }
+
+    // .progress__body
+
+    &__body {
+      row-gap: 3.2rem;
+    }
+
+    // .progress__card
+
+    &__card {
+    }
+  }
+
+  .progress-card {
+    padding: 4rem 3.2rem;
+
+    // .progress-card__icon-wrap
+
+    &__icon-wrap {
+      margin-bottom: 3.2rem;
+      width: 6.6rem;
+    }
+
+    // .progress-card__icon
+
+    &__icon {
+    }
+
+    // .progress-card__heading
+
+    &__heading {
+      margin-bottom: 2.4rem;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    // .progress-card__text
+
+    &__text {
+    }
+  }
+}
+@media (min-width: 48em) {
+  .progress {
+    // .progress__container
+
+    &__container {
+    }
+
+    // .progress__head
+
+    &__head {
+    }
+
+    // .progress__title-wrap
+
+    &__title-wrap {
+    }
+
+    // .progress__subtitle
+
+    &__subtitle {
+    }
+
+    // .progress__title
+
+    &__title {
+    }
+
+    // .progress__btn
+
+    &__btn {
+    }
+
+    // .progress__body
+
+    &__body {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 4.1rem;
+    }
+
+    // .progress__card
+
+    &__card {
+    }
+  }
+
+  .progress-card {
+    align-items: center;
+    min-height: 35rem;
+    text-align: center;
+
+    // .progress-card__icon-wrap
+
+    &__icon-wrap {
+    }
+
+    // .progress-card__icon
+
+    &__icon {
+    }
+
+    // .progress-card__heading
+
+    &__heading {
+      flex: 1 1 auto;
+    }
+
+    // .progress-card__text
+
+    &__text {
+      max-width: 40.3rem;
+    }
+  }
 }

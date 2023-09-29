@@ -60,6 +60,8 @@
 @import './blocks/profile';
 @import './blocks/forms';
 @import './blocks/appointment';
+@import './blocks/superior';
+@import './blocks/awards';
 
 #ui-datepicker-div {
   display: block !important;
@@ -70,7 +72,6 @@
 .ui-datepicker-trigger {
   display: none;
 }
-
 
 #ui-datepicker-div {
   display: block !important;

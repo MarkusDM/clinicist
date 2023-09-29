@@ -1,13 +1,102 @@
 .baner {
-  background-color: #EEF3F7;
+  background-color: #eef3f7;
   position: relative;
   &-history {
     margin-bottom: 10rem;
   }
-  &-swiper {
-    margin-left: 12.7%;
-  }
-  &-slider {
+  &.baner-carousel {
+    margin-bottom: 18rem;
+    .container {
+      position: relative;
+    }
+    .swiper-container {
+      overflow: visible;
+    }
+    .baner-slide {
+      .baner__body {
+        display: grid;
+        grid-template-columns: 1fr 80.2rem;
+        .subtitle {
+          margin-bottom: 1.6rem;
+        }
+        .title {
+          margin-bottom: 2.8rem;
+          max-width: 55.9rem;
+        }
+      }
+      .baner__info {
+        padding-top: 7.8rem;
+        padding-bottom: 8.6rem;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        &-price {
+          font-weight: 600;
+          span {
+            font-size: 2rem;
+          }
+        }
+        &-link {
+          justify-self: end;
+        }
+        &-group {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          column-gap: 4rem;
+        }
+        &-btn {
+          min-width: 16rem;
+          min-height: 5.7rem;
+        }
+      }
+      .baner__img {
+        display: flex;
+        align-items: flex-end;
+        width: auto;
+        img {
+          width: 121.5rem;
+          height: auto;
+          object-fit: contain;
+          transform: translateX(-1%);
+        }
+      }
+    }
+    .baner-btn-next,
+    .baner-btn-prev {
+      display: none;
+    }
+    .baner__row {
+      position: absolute;
+      bottom: 5.5rem;
+      height: 3.1rem;
+      width: 100%;
+    }
+    .baner__scroll {
+      display: flex;
+      align-items: center;
+      column-gap: 1.3rem;
+      font-family: 'MyriadPro';
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.6rem;
+      text-transform: uppercase;
+      &::before {
+        content: '';
+        width: 1.9rem;
+        height: 3.1rem;
+        background-image: url(../img/icons/mouse.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    .baner-swiper-pagination {
+      top: 50%;
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
   }
   &__item {
     display: flex;
@@ -19,7 +108,7 @@
     width: 35%;
 
     &-subtitle {
-      font-family: "MyriadPro";
+      font-family: 'MyriadPro';
       font-weight: 600;
       font-size: 1.8rem;
       line-height: 122%;
@@ -27,7 +116,7 @@
       margin-bottom: 1.6rem;
     }
     &-title {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 5rem;
       line-height: 110%;
       margin-bottom: 3.7rem;
@@ -35,19 +124,18 @@
     &-list {
       margin-bottom: 3rem;
       & li {
-        font-family: "MyriadPro";
+        display: flex;
+        align-items: center;
+        column-gap: 1.2rem;
+        font-family: 'MyriadPro';
         font-size: 2rem;
         line-height: 180%;
         position: relative;
-        padding-left: 3rem;
-        &::after {
-          position: absolute;
-          content: "";
-          left: 0rem;
-          top: 50%;
-          transform: translateY(-50%);
+        &::before {
+          content: '';
+          flex: 0 0 2rem;
           width: 2rem;
-          height: 1.8rem;
+          height: 2rem;
           background-image: url(../img/icons/ok.svg);
           background-position: center;
           background-size: contain;
@@ -56,7 +144,7 @@
       }
     }
     &-price {
-      font-family: "MyriadPro";
+      font-family: 'MyriadPro';
       font-weight: 700;
       font-size: 4.5rem;
       line-height: 120%;
@@ -79,14 +167,14 @@
     }
     &-scrol {
       position: relative;
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-weight: 700;
       font-size: 12px;
       line-height: 125%;
       padding-left: 3rem;
       &::after {
         position: absolute;
-        content: "";
+        content: '';
         left: 0rem;
         top: 50%;
         transform: translateY(-50%);
@@ -135,7 +223,7 @@
       align-items: center;
       margin-bottom: 2.8rem;
       &-name {
-        font-family: "Montserrat";
+        font-family: 'Montserrat';
         font-size: 1.8rem;
         line-height: 150%;
         border-radius: 10rem;
@@ -144,7 +232,7 @@
         margin-right: 3rem;
       }
       &-number {
-        font-family: "MyriadPro";
+        font-family: 'MyriadPro';
         font-weight: 600;
         font-size: 1.6rem;
         line-height: 150%;
@@ -156,7 +244,7 @@
       align-items: center;
       margin-bottom: 12.4rem;
       &-link {
-        font-family: "MyriadPro";
+        font-family: 'MyriadPro';
         font-size: 1.5rem;
         line-height: 160%;
         color: rgba(51, 51, 51, 0.5);
@@ -168,7 +256,7 @@
         }
         &::after {
           position: absolute;
-          content: "";
+          content: '';
           right: 0;
           top: 0.5rem;
           bottom: 0.5rem;
@@ -191,7 +279,7 @@
       margin-bottom: 2.8rem;
     }
     &-text {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 1.8rem;
       line-height: 150%;
       color: rgba(51, 51, 51, 0.5);
@@ -199,7 +287,7 @@
       position: relative;
       &::after {
         position: absolute;
-        content: "";
+        content: '';
         left: 0rem;
         top: 0;
         width: 1px;
@@ -221,7 +309,7 @@
     }
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       top: -12rem;
       left: 49%;
       transform: translateX(-50%);
@@ -284,7 +372,7 @@
     &::after {
       right: 0rem;
       top: 0rem;
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: rem;
@@ -327,7 +415,7 @@
           padding-top: 8.2rem;
         }
         &-name {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-size: 1.8rem;
           line-height: 222%;
           margin-right: 4.8rem;
@@ -456,14 +544,14 @@
         }
         &-txt {
           position: relative;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-weight: 600;
           font-size: 1.8rem;
           line-height: 122%;
           color: $blue;
           padding-left: 5.3rem;
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             top: 50%;
@@ -508,26 +596,26 @@
         }
         &-number {
           padding-top: 1rem;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-weight: 600;
           font-size: 4.8rem;
           line-height: 121%;
         }
         &-text {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 1.8rem;
           line-height: 133%;
           color: rgba(51, 51, 51, 0.5);
         }
         &-subtitle {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 1.6rem;
           line-height: 119%;
           color: $blue;
           margin-top: -2rem;
         }
         &-name {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-weight: 500;
           font-size: 2rem;
           line-height: 130%;
@@ -593,7 +681,7 @@
           justify-content: space-between;
           width: 72%;
           &-item {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 3.5rem;
             line-height: 157%;
@@ -677,7 +765,7 @@
               }
             }
             &-number {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 3.5rem;
               line-height: 69%;
             }
@@ -686,13 +774,13 @@
             display: flex;
             align-items: center;
             &-info {
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-size: 1.6rem;
               line-height: 144%;
               margin-right: 6rem;
             }
             &-link {
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-weight: 600;
               font-size: 1.6rem;
               line-height: 144%;
@@ -730,7 +818,7 @@
             }
           }
           &-text {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 1.7rem;
             line-height: 150%;
             color: rgba(51, 51, 51, 0.5);
@@ -738,7 +826,7 @@
             margin-bottom: 0.5rem;
           }
           &-num {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 700;
             font-size: 2.3rem;
             line-height: 109%;
@@ -810,7 +898,7 @@
         }
         &-text {
           padding-left: 0;
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-size: 1.6rem;
           line-height: 150%;
           color: rgba(51, 51, 51, 0.5);
@@ -823,7 +911,7 @@
         &-data {
           margin-bottom: 0;
           &-name {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.6rem;
             border-radius: 5.4rem;
             padding: 0.3rem 2.4rem;
@@ -849,7 +937,7 @@
           }
         }
         &-text {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 2rem;
           line-height: 117%;
           margin-bottom: 10rem;
@@ -861,7 +949,7 @@
           width: 37.5rem;
           background-color: $blue;
           &-text {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 1.6rem;
             line-height: 150%;
@@ -876,14 +964,14 @@
           &-link {
             position: relative;
             padding-left: 3.7rem;
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 1.6rem;
             line-height: 150%;
             color: $white;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0rem;
               top: 50%;
               transform: translateY(-50%);
@@ -950,7 +1038,7 @@
         &-links {
           margin-bottom: 1.8rem;
           & .nolink {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
@@ -999,7 +1087,7 @@
     margin-bottom: 7.4rem;
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       left: 0;
       bottom: 37%;
       width: 41.7%;
@@ -1045,7 +1133,7 @@
             }
           }
           &-text {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 1.8rem;
             line-height: 150%;
             text-align: center;
@@ -1102,7 +1190,7 @@
           margin-bottom: 2.9rem;
         }
         &-text {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           margin-left: 17rem;
           width: 75%;
           line-height: 145%;
@@ -1128,7 +1216,7 @@
             position: relative;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0;
               bottom: -3rem;
               width: 100%;
@@ -1146,14 +1234,14 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-weight: 700;
               font-size: 2.8rem;
               line-height: 61%;
               color: $blue;
             }
             &-text {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.5rem;
               line-height: 113%;
               color: rgba(51, 51, 51, 0.5);
@@ -1165,11 +1253,11 @@
             align-items: flex-start;
             align-items: center;
             justify-content: center;
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 3rem;
             line-height: 80%;
             & span {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.3rem;
               line-height: 185%;
               display: inline-block;
@@ -1178,7 +1266,7 @@
             }
           }
           &-text {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.5rem;
             line-height: 113%;
             color: rgba(51, 51, 51, 0.5);
@@ -1228,7 +1316,7 @@
         &-data {
           margin-bottom: 1rem;
           &-number {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 1.6rem;
             line-height: 175%;
           }
@@ -1237,7 +1325,7 @@
           margin-bottom: 4rem;
         }
         &-text {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           line-height: 150%;
           width: 50%;
         }
@@ -1256,7 +1344,7 @@
     }
   }
   &-korporativnie {
-  margin-bottom: 12rem;
+    margin-bottom: 12rem;
     .baner {
       &__content {
         width: 50%;
@@ -1356,7 +1444,7 @@
         &-links {
           margin-bottom: 1.8rem;
           & .nolink {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
@@ -1367,7 +1455,7 @@
           margin-bottom: 6.8rem;
         }
         &-text {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 1.8rem;
           line-height: 135%;
           color: rgba(51, 51, 51, 0.5);
@@ -1378,7 +1466,7 @@
         &-btn {
           display: inline-block;
           padding: 1rem 4rem;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-weight: 400;
           font-size: 1.8rem;
           line-height: 200%;
@@ -1476,7 +1564,7 @@
           align-items: center;
           margin-left: 9.8rem;
           & div {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 700;
             font-size: 3rem;
             line-height: 142%;
@@ -1500,7 +1588,7 @@
           background: #ffffff;
           box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
           &-number {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.6rem;
             line-height: 150%;
             letter-spacing: -0.005em;
@@ -1508,7 +1596,7 @@
             & span {
               display: block;
               margin-top: 0.3rem;
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-weight: 700;
               font-size: 3rem;
               line-height: 100%;
@@ -1518,7 +1606,7 @@
         }
         &-procent {
           &::before {
-            content: "%";
+            content: '%';
             position: absolute;
             width: 5.1rem;
             height: 5.1rem;
@@ -1529,7 +1617,7 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 2.4rem;
             line-height: 200%;
             filter: drop-shadow(0px 2rem 5.5rem rgba(107, 152, 172, 0.6));
@@ -1574,14 +1662,14 @@
         border-radius: 8.4rem 0px 0px 8.4rem;
         padding: 2.7rem 22.8rem 2.7rem 10.3rem;
         & a {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-size: 3.5rem;
           line-height: 69%;
           color: $fzAll;
           position: relative;
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             left: -6rem;
             top: 47%;
             transform: translateY(-50%);
@@ -1612,14 +1700,14 @@
           padding: 4rem 4rem 4.5rem 4rem;
           box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.1);
           &-title {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 2.5rem;
             line-height: 140%;
             margin-bottom: 4rem;
           }
           & ul {
             & li {
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-size: 1.8rem;
               line-height: 136%;
               position: relative;
@@ -1627,7 +1715,7 @@
               cursor: pointer;
               &::after {
                 position: absolute;
-                content: "";
+                content: '';
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
@@ -1683,7 +1771,7 @@
         }
         &-data {
           display: block;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-weight: 600;
           font-size: 1.8rem;
           line-height: 122%;
@@ -1698,7 +1786,7 @@
           margin-bottom: 20rem;
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             left: 0rem;
             top: 0rem;
             width: 1px;
@@ -1706,7 +1794,7 @@
             background-color: #d8dde4;
           }
           &-text {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.8rem;
             line-height: 135%;
             color: rgba(51, 51, 51, 0.5);
@@ -1718,7 +1806,7 @@
             padding-right: 5rem;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0rem;
               bottom: 0rem;
               width: 100%;
@@ -1741,7 +1829,7 @@
                 height: 2.7rem;
               }
               &-num {
-                font-family: "MyriadPro";
+                font-family: 'MyriadPro';
                 font-size: 2.5rem;
                 line-height: 96%;
                 color: #ffffff;
@@ -1764,7 +1852,7 @@
                 }
                 &::after {
                   position: absolute;
-                  content: "";
+                  content: '';
                   left: 0rem;
                   top: 0;
                   width: 1.1rem;
@@ -1780,7 +1868,7 @@
               flex-direction: column;
             }
             &-text {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.8rem;
               line-height: 135%;
               color: rgba(51, 51, 51, 0.5);
@@ -1876,7 +1964,7 @@
           background-color: #f5fafd;
           margin-top: -9.4rem;
           &-title {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 135%;
@@ -1888,7 +1976,7 @@
             box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
           }
           &-address {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 2rem;
             line-height: 170%;
             padding: 0 7rem 4rem 5.4rem;
@@ -1896,7 +1984,7 @@
             margin-bottom: 4rem;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 5rem;
               right: 5rem;
               bottom: 0rem;
@@ -1905,7 +1993,7 @@
             }
             &::before {
               position: absolute;
-              content: "";
+              content: '';
               right: 5rem;
               top: 2rem;
               width: 2.9rem;
@@ -1917,7 +2005,7 @@
             }
           }
           &-phone {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 2rem;
             line-height: 170%;
             margin-bottom: 2rem;
@@ -1925,7 +2013,7 @@
             position: relative;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 5rem;
               right: 5rem;
               bottom: 0rem;
@@ -1934,7 +2022,7 @@
             }
             &::before {
               position: absolute;
-              content: "";
+              content: '';
               right: 5.2rem;
               top: 0.6rem;
               width: 2.7rem;
@@ -1967,18 +2055,18 @@
                   bottom: 0rem;
                   right: -0.7rem;
                   height: 1px;
-                  content: "";
+                  content: '';
                   background-color: #c4d1db;
                 }
 
                 & div {
-                  font-family: "Montserrat";
+                  font-family: 'Montserrat';
                   font-size: 2.5rem;
                   line-height: 96%;
                 }
               }
               &-time {
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-size: 1.8rem;
                 line-height: 135%;
                 & span {
@@ -1994,7 +2082,7 @@
               padding: 2.3rem 1.2rem 2.2rem 1.2rem;
               width: 14.5%;
               &-title {
-                font-family: "MyriadPro";
+                font-family: 'MyriadPro';
                 font-weight: 600;
                 font-size: 2.5rem;
                 line-height: 96%;
@@ -2005,7 +2093,7 @@
                 margin-bottom: 2.5rem;
                 &::after {
                   position: absolute;
-                  content: "";
+                  content: '';
                   left: 0rem;
                   bottom: 0rem;
                   width: 100%;
@@ -2014,7 +2102,7 @@
                 }
               }
               &-time {
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-weight: 400;
                 font-size: 1.8rem;
                 line-height: 135%;
@@ -2032,7 +2120,7 @@
               width: 14.5%;
               padding: 2.3rem 1.2rem 2.2rem 1.2rem;
               &-title {
-                font-family: "MyriadPro";
+                font-family: 'MyriadPro';
                 font-weight: 600;
                 font-size: 2.5rem;
                 line-height: 96%;
@@ -2043,7 +2131,7 @@
                 margin-bottom: 2.5rem;
                 &::after {
                   position: absolute;
-                  content: "";
+                  content: '';
                   left: 0rem;
                   bottom: 0rem;
                   width: 100%;
@@ -2052,7 +2140,7 @@
                 }
               }
               &-time {
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-weight: 400;
                 font-size: 1.8rem;
                 line-height: 135%;
@@ -2077,7 +2165,7 @@
           margin-top: -17.9rem;
           &-go {
             padding-left: 5rem;
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 2rem;
             line-height: 180%;
             color: $white;
@@ -2086,7 +2174,7 @@
             cursor: pointer;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0rem;
               top: 50%;
               transform: translateY(-50%);
@@ -2098,7 +2186,7 @@
               background-repeat: no-repeat;
             }
             &::before {
-              content: "";
+              content: '';
               position: absolute;
               right: 0rem;
               top: 50%;
@@ -2114,7 +2202,7 @@
           &-taxi {
             padding-left: 5rem;
             padding-left: 5rem;
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 2rem;
             line-height: 180%;
             color: $white;
@@ -2122,7 +2210,7 @@
             cursor: pointer;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0rem;
               top: 50%;
               transform: translateY(-50%);
@@ -2134,7 +2222,7 @@
               background-repeat: no-repeat;
             }
             &::before {
-              content: "";
+              content: '';
               position: absolute;
               right: 0rem;
               top: 50%;
@@ -2164,13 +2252,13 @@
         right: unset;
         bottom: 8.2rem;
         left: -3.4rem;
-        background-color: #F5FAFD;
+        background-color: #f5fafd;
       }
       &-centri-btn-prev {
         right: unset;
         bottom: 15rem;
         left: -3.4rem;
-        background-color: #F5FAFD;
+        background-color: #f5fafd;
       }
       &-centri-btn-prev.swiper-button-disabled,
       &-centri-btn-next.swiper-button-disabled {
@@ -2193,7 +2281,7 @@
         &-links {
           margin-bottom: 1.8rem;
           & .nolink {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
@@ -2212,7 +2300,7 @@
           width: 72rem;
           & ul {
             & li {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 2rem;
               line-height: 180%;
               color: fzAll;
@@ -2223,7 +2311,7 @@
               }
               &::after {
                 position: absolute;
-                content: "";
+                content: '';
                 left: 0;
                 top: 0.8rem;
                 width: 2rem;
@@ -2238,7 +2326,7 @@
         }
         &-text {
           margin-bottom: 7rem;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 1.8rem;
           line-height: 135%;
           color: rgba(51, 51, 51, 0.5);
@@ -2246,7 +2334,7 @@
         &-btn {
           display: inline-block;
           padding: 1rem 4rem;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 1.8rem;
           line-height: 200%;
         }
@@ -2288,14 +2376,14 @@
         &-links {
           margin-bottom: 1.3rem;
           & .nolink {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-weight: 600;
             font-size: 2.5rem;
             line-height: 120%;
           }
         }
         &-title {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-weight: 600;
           font-size: 5.5rem;
           line-height: 122%;
@@ -2347,13 +2435,13 @@
                 border: none;
                 width: 33.8rem;
                 border-radius: 7rem;
-                font-family: "MyriadPro";
+                font-family: 'MyriadPro';
                 font-size: 1.8rem;
                 line-height: 135%;
                 color: rgba(51, 51, 51, 0.5);
                 padding-left: 2.7rem;
                 &::placeholder {
-                  font-family: "MyriadPro";
+                  font-family: 'MyriadPro';
                   font-size: 1.8rem;
                   line-height: 135%;
                   color: rgba(51, 51, 51, 0.5);
@@ -2380,7 +2468,7 @@
             width: 20%;
             margin-top: 2rem;
             &-title {
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-style: normal;
               font-weight: 600;
               font-size: 1.8rem;
@@ -2388,7 +2476,7 @@
               margin-bottom: 1.5rem;
             }
             &-text {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.8rem;
               line-height: 135%;
               color: rgba(51, 51, 51, 0.5);
@@ -2413,7 +2501,7 @@
               border-radius: 0.94rem;
             }
             &-title {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.8rem;
               line-height: 144%;
               width: 63%;
@@ -2447,7 +2535,7 @@
     }
   }
   &-karta-site {
-  margin-bottom: 12rem;
+    margin-bottom: 12rem;
     .baner {
       &__picture {
         width: 77.7rem;
@@ -2474,7 +2562,7 @@
           margin-bottom: 5.5rem;
         }
         &-phone {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-size: 1.8rem;
           line-height: 122%;
           color: $blue;
@@ -2484,7 +2572,7 @@
           border-radius: 5.2rem;
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             left: 0.5rem;
             top: 50%;
             transform: translateY(-50%);
@@ -2569,7 +2657,7 @@
         bottom: -6.5rem;
         display: block;
         width: fit-content;
-        background: #FFFFFF;
+        background: #ffffff;
         box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
         border-radius: 0px 6.5rem 6.5rem 0px;
         font-family: 'Montserrat';
@@ -2644,7 +2732,7 @@
           position: absolute;
           top: -31rem;
           right: -14.5rem;
-          content: "";
+          content: '';
           width: 95.1rem;
           height: 95.1rem;
           border-radius: 50%;
@@ -2668,7 +2756,7 @@
           }
         }
         &-subtitle {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-size: 1.8rem;
           line-height: 150%;
           color: rgba(51, 51, 51, 0.5);
@@ -2676,7 +2764,7 @@
         }
         &-number {
           display: flex;
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-weight: 500;
           font-size: 3rem;
           line-height: 142%;
@@ -2689,14 +2777,14 @@
           }
         }
         &-text {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-size: 1.8rem;
           line-height: 150%;
           color: rgba(51, 51, 51, 0.5);
         }
         &-name {
           margin-top: 5.1rem;
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-weight: 500;
           font-size: 2.5rem;
           line-height: 130%;
@@ -2730,7 +2818,7 @@
             display: block;
             cursor: pointer;
             & .text {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.2rem;
               line-height: 167%;
               color: rgba(51, 51, 51, 0.5);
@@ -2748,7 +2836,7 @@
               position: relative;
               &::after {
                 position: absolute;
-                content: "";
+                content: '';
                 left: 2.8rem;
                 top: 50%;
                 transform: translateY(-50%);
@@ -2760,7 +2848,7 @@
                 background-repeat: no-repeat;
               }
               & input {
-                font-family: "MyriadPro";
+                font-family: 'MyriadPro';
                 font-size: 1.6rem;
                 line-height: 119%;
                 color: rgba(51, 51, 51, 0.5);
@@ -2772,7 +2860,7 @@
                 border-radius: 7.9rem;
                 width: 100%;
                 &::placeholder {
-                  font-family: "MyriadPro";
+                  font-family: 'MyriadPro';
                   font-size: 1.6rem;
                   line-height: 119%;
                   color: rgba(51, 51, 51, 0.5);
@@ -2785,7 +2873,7 @@
                 right: 0.4rem;
                 padding: 0.6rem 4rem;
                 background-color: $blue;
-                font-family: "MyriadPro";
+                font-family: 'MyriadPro';
                 font-size: 1.8rem;
                 line-height: 200%;
                 color: $white;
@@ -2818,7 +2906,7 @@
         & ul {
           margin-bottom: 4.5rem;
           li {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 1.6rem;
             line-height: 100%;
             color: rgba(51, 51, 51, 0.5);
@@ -2827,7 +2915,7 @@
             &::after {
               position: absolute;
               right: 0rem;
-              content: "";
+              content: '';
               top: 50%;
               transform: translateY(-50%);
               width: 0.5rem;
@@ -2875,7 +2963,7 @@
             }
           }
           &-text {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 1.4rem;
             line-height: 114%;
             color: rgba(51, 51, 51, 0.5);
@@ -2929,13 +3017,13 @@
           display: flex;
           &-number {
             margin-right: 3rem;
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 1.6rem;
             line-height: 175%;
           }
           &-name {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.6rem;
             line-height: 119%;
           }
@@ -2997,7 +3085,7 @@
           margin-bottom: 0.9rem;
           &-name {
             display: inline-block;
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.6rem;
             line-height: 119%;
             padding: 0.7rem 2.4rem;
@@ -3045,7 +3133,7 @@
           width: 28%;
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             width: 78.4rem;
             height: 100%;
             top: 50%;
@@ -3064,7 +3152,7 @@
             }
           }
           &-text {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-size: 1.6rem;
             line-height: 150%;
             color: rgba(51, 51, 51, 0.5);
@@ -3186,7 +3274,7 @@
         &-links {
           margin-bottom: 1.6rem;
           & .nolink {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
@@ -3198,7 +3286,7 @@
         &-text {
           margin-bottom: 6.5rem;
           padding-left: 4rem;
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           line-height: 135%;
         }
         &-btn {
@@ -3257,7 +3345,7 @@
           width: 50%;
         }
         &-cost {
-          font-family: "MyriadPro";
+          font-family: 'MyriadPro';
           font-weight: 300;
           font-size: 2.4rem;
           line-height: 150%;
@@ -3326,13 +3414,82 @@
   }
 }
 
-
-
-
-
 @media (max-width: 48em) {
   .baner {
     margin-bottom: 10rem;
+    &.baner-carousel {
+      margin-bottom: 16rem;
+      .swiper-container {
+        padding-top: 10rem;
+      }
+      .baner-slide {
+        .baner__body {
+          grid-template-columns: 1fr;
+          .title {
+            max-width: 60.9rem;
+          }
+          .baner__info {
+            margin-bottom: 24rem;
+            padding: 0;
+            &-btn {
+              grid-row: 2/3;
+              grid-column: span 2;
+              min-height: 10rem;
+            }
+            &-price {
+              margin: 0;
+              span {
+                margin-top: 0;
+                font-family: Montserrat;
+                font-size: 2.4rem;
+                font-weight: 700;
+              }
+            }
+            &-group {
+              align-items: center;
+              row-gap: 6.4rem;
+            }
+          }
+        }
+        .baner__img {
+          width: 100%;
+          img {
+            width: calc(100% + 4rem);
+            height: auto;
+            transform: translateX(4rem);
+          }
+        }
+      }
+      .baner__row {
+        bottom: 66.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 8rem);
+        height: auto;
+      }
+      .baner__scroll {
+        display: none;
+      }
+      .baner-swiper-pagination {
+        position: static;
+        transform: none;
+      }
+      .baner-btn-next,
+      .baner-btn-prev {
+        position: static;
+        margin: 0;
+        display: inline-block;
+        transform: none;
+        &::before {
+          position: static;
+          display: inline-block;
+          width: 4rem;
+          height: 4rem;
+          transform: none;
+        }
+      }
+    }
     &-history {
       margin-bottom: 14rem;
       overflow: hidden;
@@ -3355,13 +3512,15 @@
       }
       &-list {
         margin-bottom: 6rem;
+        column-gap: 2rem;
         & li {
           font-size: 3.2rem;
-          padding-left: 4.5rem;
           line-height: 160%;
-          &::after {
-            width: 3.2rem;
-            height: 2.1rem;
+          color: rgba(51, 51, 51, 0.5);
+          &::before {
+            flex: 0 0 2.2rem;
+            width: 2.2rem;
+            height: 2.2rem;
           }
         }
       }
@@ -3413,7 +3572,7 @@
       position: relative;
       &::after {
         position: absolute;
-        content: "";
+        content: '';
         width: 138rem;
         height: 138rem;
         top: 54rem;
@@ -3666,7 +3825,7 @@
               top: 0;
               width: 1px;
               height: 100%;
-              background-color: #D8DDE4;
+              background-color: #d8dde4;
             }
           }
           &-links {
@@ -3712,10 +3871,10 @@
           column-gap: 2rem;
           font-family: Montserrat;
           &::before {
-            content: "";
+            content: '';
             width: 1px;
             height: 100%;
-            background-color: #D8DDE4;
+            background-color: #d8dde4;
           }
         }
         &__inner {
@@ -3753,7 +3912,7 @@
           left: 50%;
           padding: 6.9rem 3.5rem 2.6rem 3.5rem;
           width: auto;
-          box-shadow: 0px 20px 60px 0px rgba(124, 148, 159, 0.10);
+          box-shadow: 0px 20px 60px 0px rgba(124, 148, 159, 0.1);
           transform: translate(-50%, -59%);
         }
         &__picture {
@@ -3763,8 +3922,8 @@
         }
         &__content-procent {
           &::before {
-            content: "";
-            top: 0; 
+            content: '';
+            top: 0;
             left: 50%;
             width: 7.1rem;
             height: 7.1rem;
@@ -3772,9 +3931,9 @@
             transform: translate(-50%, -50%);
           }
           &::after {
-            content: "%";
+            content: '%';
             position: absolute;
-            top: 0; 
+            top: 0;
             left: 50%;
             font-size: 3rem;
             transform: translate(-50%, -50%);
@@ -3784,9 +3943,9 @@
           font-size: 2.3rem;
         }
         &__content-procents-number {
-         span {
-          font-size: 3.9rem;
-         }
+          span {
+            font-size: 3.9rem;
+          }
         }
         &__bottom {
           padding-top: 0;
@@ -3802,7 +3961,7 @@
           position: relative;
           margin: 0;
           div {
-            color: #2F2F2F;
+            color: #2f2f2f;
             span {
               margin-left: 1.5rem;
               margin-top: 0;
@@ -3815,12 +3974,12 @@
             align-self: flex-start;
             width: 1px;
             height: 4rem;
-            background-color: #D8DDE4;
+            background-color: #d8dde4;
           }
         }
         &__bottom-text-wrap {
           padding: 11.4rem 4rem 5.2rem 4rem;
-          background-color:#EEF3F7;
+          background-color: #eef3f7;
         }
         &__bottom-wrap {
           padding-top: 3.5rem;
@@ -3845,6 +4004,17 @@
 }
 @media (min-width: 48em) {
   .baner {
+    &.baner-carousel {
+      padding-top: 3rem;
+      .baner__info {
+        &-price {
+          grid-column: span 2;
+        }
+        &-group {
+          margin-right: auto;
+        }
+      }
+    }
     &.baner-akcii-statia {
       .baner {
         &__bottom-text-wrap {
