@@ -14746,6 +14746,7 @@ input[type='search']::-webkit-search-results-decoration {
     margin-bottom: 6.4rem; }
   .price-list__services-group {
     margin-left: -4rem;
+    margin-bottom: 6.4rem;
     grid-auto-rows: auto;
     width: 100vw; }
   .price-list__form {
