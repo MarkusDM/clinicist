@@ -294,11 +294,13 @@
 
   &__heading {
     @extend .callback-appointment__heading;
+    align-items: flex-start;
     font-size: 3rem;
     line-height: 120%;
     color: #2f2f2f;
     &::before {
       background-image: url(../img/icons/note.svg);
+      transform: translateY(1rem);
     }
   }
 
@@ -432,8 +434,12 @@
   }
   .registration-appointment {
     &__heading {
+      align-items: center;
       max-width: 64rem;
       font-size: 3.6rem;
+      &::before {
+        transform: none;
+      }
     }
     &__btn {
       margin-bottom: 4rem;

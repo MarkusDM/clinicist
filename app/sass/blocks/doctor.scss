@@ -171,12 +171,18 @@
     padding-top: 3.4rem;
     display: flex;
     justify-content: space-between;
+    &.swiper-wrapper {
+      align-items: flex-start;
+    }
     &-item {
       position: relative;
       z-index: 2;
       width: 15.4rem;
       cursor: pointer;
       transition: all 0.4s ease;
+      &.swiper-slide {
+        height: auto;
+      }
       &.active {
         width: 20.2rem;
         transform: translateY(-7.5rem);

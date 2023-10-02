@@ -1,13 +1,15 @@
 .baner {
-  background-color: #eef3f7;
   position: relative;
-  &-history {
-    margin-bottom: 10rem;
-  }
-  &.baner-carousel {
-    margin-bottom: 18rem;
+  margin-bottom: 18rem;
+  height: 43rem;
+  background-color: #eef3f7;
+  overflow: hidden;
+  &-carousel {
+    height: auto;
+    overflow: visible;
     .container {
       position: relative;
+      display: block;
     }
     .swiper-container {
       overflow: visible;
@@ -97,6 +99,52 @@
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+  }
+  &-prices {
+  }
+  &-history {
+    margin-bottom: 10rem;
+  }
+  &__container {
+    display: grid;
+  }
+  &__text-wrap {
+    padding: 3.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__breadcrumbs {
+    margin-bottom: 9.4rem;
+  }
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+  &__image-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 85.5rem;
+      height: 85.5rem;
+      border-radius: 50%;
+      border: 1px solid #c4c4c4;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__image {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    object-fit: cover;
   }
   &__item {
     display: flex;
@@ -619,30 +667,6 @@
           font-weight: 500;
           font-size: 2rem;
           line-height: 130%;
-        }
-      }
-    }
-  }
-  &-ceni {
-    overflow: hidden;
-    margin-bottom: 16rem;
-    .baner {
-      &__content {
-        width: 40%;
-        &-text {
-          width: 90%;
-        }
-      }
-      &__inner {
-        overflow: visible;
-      }
-      &__picture {
-        margin-right: 1.3rem;
-        &::after {
-          width: 85.5rem;
-          height: 85.5rem;
-          top: -14.5rem;
-          left: 50%;
         }
       }
     }
@@ -3416,12 +3440,10 @@
 
 @media (max-width: 48em) {
   .baner {
-    margin-bottom: 10rem;
-    &.baner-carousel {
-      margin-bottom: 16rem;
-      .swiper-container {
-        padding-top: 10rem;
-      }
+    margin-bottom: 16rem;
+    height: auto;
+    &-carousel {
+      padding-top: 10rem;
       .baner-slide {
         .baner__body {
           grid-template-columns: 1fr;
@@ -3490,12 +3512,40 @@
         }
       }
     }
+    &-prices {
+    margin-bottom: 10rem;
+    }
     &-history {
       margin-bottom: 14rem;
       overflow: hidden;
     }
     &-swiper {
       margin-left: 0;
+    }
+    &__text-wrap {
+      padding: 3rem 0 0 0;
+      margin-bottom: 19rem;
+    }
+    &__image-wrap {
+      justify-self: center;
+      width: 69.4rem;
+      height: auto;
+      &::before {
+        top: -23%;
+        width: 77.8rem;
+        height: 77.8rem;
+        border: 1px solid #dfe4ea;
+        transform: translate(-50%, 0);
+      }
+    }
+    &__image {
+      object-fit: contain;
+    }
+    &__breadcrumbs {
+      margin-bottom: 7rem;
+    }
+    &__title {
+      margin-bottom: 4rem;
     }
     &__item {
       display: block;
@@ -4004,6 +4054,12 @@
 }
 @media (min-width: 48em) {
   .baner {
+    &__container {
+      grid-template-columns: minmax(auto, 56.3rem) 73.6rem;
+      justify-content: space-between;
+    }
+    &__image-wrap {
+    }
     &.baner-carousel {
       padding-top: 3rem;
       .baner__info {

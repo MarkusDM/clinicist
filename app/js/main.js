@@ -117,15 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: rem(1),
     speed: 1000,
     navigation: {
-      nextEl: '.reviews-btn-next',
-      prevEl: '.reviews-btn-prev',
+      nextEl: '.reviews__slider-control .btn-next',
+      prevEl: '.reviews__slider-control .btn-prev',
     },
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
     },
     pagination: {
-      el: '.reviews-swiper-pagination',
+      el: '.reviews__slider-control .swiper-pagination',
       clickable: true,
     },
   })
