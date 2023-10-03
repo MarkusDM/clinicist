@@ -8,7 +8,7 @@
    &__left {
       width: 14.8%;
       &-logo {
-         width: 100%;
+         width: 21.4rem;
          height: 7.4rem;
          margin-bottom: 3.9rem;
          & img {
@@ -191,10 +191,20 @@
          }
       }
       &-mess {
-         width: 11.3%;
+        
          display: flex;
          justify-content: space-between;
          align-items: center;
+
+         a {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 2rem;
+         }
+
+         a:last-child {
+            margin-right: 0;
+         }
          &-inst,
          &-fac,
          &-vk {
@@ -350,9 +360,10 @@
             right: 4rem;
             top: 17.5rem;
             width: auto;
-            &-inst {
-               width: 6rem;
-               height: 6rem;
+
+            a {
+               width: 8rem;
+               height: 8rem;
                & img {
                   width: 3.2rem;
                   height: 3.2rem;
@@ -381,6 +392,40 @@
             font-size: 2.8rem;
             line-height: 172%;
          }
+      }
+
+      &__left-pay-name {
+         display: none;
+      }
+
+      &__left-pay-img1 {
+         display: none;
+      }
+
+      &__left-pay-imgs {
+         display: none;
+      }
+
+      &__list-title {
+         position: relative;
+         &::before {
+            position: absolute;
+            content:'';
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../img/d-image/icon/footerarrow.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 0;
+         }
+      }
+
+      &__left-logo {
+         width: 37rem;
+         height: 12.7rem;
+         margin-bottom: 10rem;
       }
    }
 }
