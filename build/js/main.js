@@ -678,71 +678,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // DROPDOWN CLICK
 
-  $('.dropdown-click').on('click', function () {
-    $('.dropdown__content').fadeToggle(300)
-  })
-  let dropdownClick = $('.dropdown-click')
-  let dropdownContent = $('.dropdown__content')
 
-  $(document).mouseup(function (e) {
-    if (
-      !dropdownClick.is(e.target) &&
-      dropdownClick.has(e.target).length === 0 &&
-      !dropdownContent.is(e.target) &&
-      dropdownContent.has(e.target).length === 0
-    ) {
-      dropdownContent.fadeOut()
-    }
-  })
+  // $('.dropdown-click2').on('click', function () {
+  //   $('.dropdown__content2').fadeToggle(300)
+  // })
+  // let dropdownClick2 = $('.dropdown-click2')
+  // let dropdownContent2 = $('.dropdown__content2')
 
-  $('.dropdown-click2').on('click', function () {
-    $('.dropdown__content2').fadeToggle(300)
-  })
-  let dropdownClick2 = $('.dropdown-click2')
-  let dropdownContent2 = $('.dropdown__content2')
+  // $(document).mouseup(function (e) {
+  //   if (
+  //     !dropdownClick2.is(e.target) &&
+  //     dropdownClick2.has(e.target).length === 0 &&
+  //     !dropdownContent2.is(e.target) &&
+  //     dropdownContent2.has(e.target).length === 0
+  //   ) {
+  //     dropdownContent2.fadeOut()
+  //   }
+  // })
 
-  $(document).mouseup(function (e) {
-    if (
-      !dropdownClick2.is(e.target) &&
-      dropdownClick2.has(e.target).length === 0 &&
-      !dropdownContent2.is(e.target) &&
-      dropdownContent2.has(e.target).length === 0
-    ) {
-      dropdownContent2.fadeOut()
-    }
-  })
+  // $('.dropdown-click3').click(function (event) {
+  //   $(this).toggleClass('active').prev().slideToggle(300)
+  // })
 
-  $('.dropdown-click3').click(function (event) {
-    $(this).toggleClass('active').prev().slideToggle(300)
-  })
+  // $('.dropdown-click4').click(function (event) {
+  //   $(this).toggleClass('active').next().slideToggle(300)
+  // })
 
-  $('.dropdown-click4').click(function (event) {
-    $(this).toggleClass('active').next().slideToggle(300)
-  })
+  // $('.akkar').click(function (event) {
+  //   $(this).toggleClass('active').next().slideToggle(300)
+  // })
 
-  $('.akkar').click(function (event) {
-    $(this).toggleClass('active').next().slideToggle(300)
-  })
+  // $('.dropdown-click5').on('click', function () {
+  //   $('.dropdown__content5').fadeToggle(300)
+  // })
+ 
 
-  $('.dropdown-click5').on('click', function () {
-    $('.dropdown__content5').fadeToggle(300)
-  })
-  let dropdownClick5 = $('.dropdown-click5')
-  let dropdownContent5 = $('.dropdown__content5')
-
-  $(document).mouseup(function (e) {
-    if (
-      !dropdownClick5.is(e.target) &&
-      dropdownClick5.has(e.target).length === 0 &&
-      !dropdownContent5.is(e.target) &&
-      dropdownContent5.has(e.target).length === 0
-    ) {
-      dropdownContent5.fadeOut()
-    }
-  })
-  $('.close').click(function (e) {
-    dropdownContent5.fadeOut()
-  })
+  // $(document).mouseup(function (e) {
+  //   if (
+  //     !dropdownClick5.is(e.target) &&
+  //     dropdownClick5.has(e.target).length === 0 &&
+  //     !dropdownContent5.is(e.target) &&
+  //     dropdownContent5.has(e.target).length === 0
+  //   ) {
+  //     dropdownContent5.fadeOut()
+  //   }
+  // })
+  // $('.close').click(function (e) {
+  //   dropdownContent5.fadeOut()
+  // })
 
   // КОНЕЦ DROPDOWN CLICK
 
@@ -1607,3 +1590,26 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 }
 const da = new DynamicAdapt('max')
 da.init()
+
+
+// let text = document.querySelectorAll("header__top-form-down-block-data-item-link").textContent;
+// let modifiedText = text.replace(/(^[а-яa-z]{3})/i, "<span style='color:blue'>$1</span>");
+// document.querySelectorAll(".header__top-form-down-block-data-item-link").innerHTML = modifiedText;
+
+
+  // $(function() {
+  //   var text,
+  //       textBefore,
+  //       textAfter;
+    
+  //   $('.header__top-form-down-block-data-item-link').each(function() {
+  //     text = $(this).text();
+      
+  //     textAfter = text.substring(3);
+  //     textBefore = text.substring(0,3);
+      
+  //     $(this).empty().append('<span>' + textBefore + '</span>').append(textAfter);
+  //   });
+  // });
+
+

@@ -318,6 +318,8 @@
         color: $blue;
         position: relative;
         padding-right: 0;
+        pointer-events: none;
+            cursor: default;
         &::after {
           content: none;
         }
@@ -1066,6 +1068,7 @@
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
+           
           }
         }
         &-title {
@@ -1472,6 +1475,7 @@
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
+            
           }
         }
         &-title {
@@ -2309,6 +2313,7 @@
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
+            
           }
         }
         &-title {
@@ -2404,6 +2409,7 @@
             font-weight: 600;
             font-size: 2.5rem;
             line-height: 120%;
+            
           }
         }
         &-title {
@@ -3302,6 +3308,7 @@
             font-weight: 600;
             font-size: 1.8rem;
             line-height: 122%;
+            
           }
         }
         &-title {
@@ -3650,6 +3657,7 @@
         }
         & .nolink {
           font-size: 3rem;
+          
         }
       }
       &-text {
@@ -3769,6 +3777,7 @@
             flex-wrap: wrap;
             & .nolink {
               line-height: 150%;
+              
             }
           }
         }
@@ -4080,3 +4089,42 @@
     }
   }
 }
+
+
+@media  (max-width: 48em) {
+
+  .baner--search{
+    overflow: hidden;
+      .container {
+          padding: 0;
+      }
+
+      .baner__inner {
+        padding: 0;
+        &::after {
+          width: 89rem;
+          height: 84rem;
+          top: 40rem;
+          left: 49%;
+        }
+      }
+
+      .baner__content {
+        padding: 0 5rem;
+        padding-top: 4rem;
+        margin-bottom: 6.6rem;
+      }
+
+      .baner__picture {
+        width: 100%;
+        margin-left: 0;
+      }
+  }
+
+
+}
+
+
+
+
+
