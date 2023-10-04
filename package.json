@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "air-datepicker": "^3.3.3",
-    "gulp": "^4.0.2",
     "jquery-zoom": "^1.7.21"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-plumber": "^1.2.1",

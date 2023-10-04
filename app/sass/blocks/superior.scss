@@ -1,0 +1,221 @@
+.superior {
+  margin-bottom: 18rem;
+
+  // .superior__container
+
+  &__container {
+    position: relative;
+    display: grid;
+  }
+
+  // .superior__image-wrap
+
+  &__image-wrap {
+    position: relative;
+    padding-top: 4.9rem;
+    display: flex;
+    background: #f3fbff;
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10.5rem;
+      right: 0;
+      width: 70.4rem;
+      height: 70.4rem;
+      border-radius: 50%;
+      border: 0.1rem solid #fff;
+      background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.6) -5%,
+          rgba(255, 255, 255, 0) 50%
+        ),
+        rgba(255, 255, 255, 0.2);
+      transform: translateX(32%);
+    }
+  }
+
+  // .superior__image
+
+  &__image {
+    position: relative;
+    z-index: 2;
+    width: 53rem;
+    object-fit: contain;
+  }
+
+  // .superior__text-wrap
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .superior__subtitle
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  // .superior__title
+
+  &__title {
+    margin-bottom: 3.2rem;
+    max-width: 58.8rem;
+  }
+
+  // .superior__text
+
+  &__text {
+    margin-bottom: 4rem;
+    max-width: 58.8rem;
+    color: rgba(51, 51, 51, 0.5);
+  }
+
+  // .superior__services-box
+
+  &__services-box {
+  }
+
+  // .superior__btn
+
+  &__btn {
+    min-width: 11.3rem;
+    min-height: 5.7rem;
+  }
+
+  // .superior__info-box
+
+  &__info-box {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 62.3rem;
+    padding: 2.8rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
+    background: #ffffff;
+    transform: translate(-40%, -50%);
+  }
+
+  // .superior__info-box-item
+
+  &__info-box-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .superior__info-box-heading
+
+  &__info-box-heading {
+    font-family: 'MyriadPro';
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 6rem;
+    color: $blue;
+  }
+
+  // .superior__info-box-text
+
+  &__info-box-text {
+    font-size: 1.6rem;
+    color: rgba(51, 51, 51, 0.5);
+  }
+}
+
+@media (max-width: 48em) {
+  .superior {
+    margin-bottom: 16rem;
+    &__image-wrap,
+    &__text-wrap {
+      width: 100%;
+    }
+    &__text-wrap {
+      margin-bottom: 5.2rem;
+      order: -1;
+    }
+    &__image-wrap {
+      margin-bottom: 13.4rem;
+      height: 64.2rem;
+      &::after {
+        top: 5.4rem;
+        width: 72rem;
+        height: 72rem;
+      }
+    }
+    &__image {
+      position: absolute;
+      top: 2.4rem;
+      left: 0;
+      width: 60.6rem;
+      transform: none;
+    }
+    &__subtitle {
+      margin-bottom: 1.6rem;
+    }
+    &__title,
+    &__text {
+      max-width: 67rem;
+    }
+    &__title {
+      margin-bottom: 4rem;
+    }
+    &__text {
+      margin-bottom: 6.4rem;
+    }
+    &__btn {
+      margin: 0;
+      width: 100%;
+      min-height: 10rem;
+    }
+    &__services-box {
+      position: relative;
+    }
+    &__info-box {
+      padding: 2.4rem;
+      top: -13.4rem;
+      left: auto;
+      right: 0;
+      row-gap: 2.4rem;
+      width: 39.6rem;
+      border-radius: 3rem;
+      box-shadow: 0 4rem 12rem 0 rgba(124, 148, 159, 0.07);
+      transform: translate(0, -83%);
+    }
+    &__info-box-item {
+      row-gap: 1rem;
+    }
+    &__info-box-heading {
+      font-size: 5rem;
+    }
+    &__info-box-text {
+      font-size: 2.6rem;
+    }
+  }
+}
+@media (min-width: 48em) {
+  .superior {
+    &__container {
+      justify-content: space-between;
+      grid-template-columns: 62.3rem 1fr;
+    }
+    &__info-box {
+      width: 28.4rem;
+    }
+    &__text-wrap {
+      padding-left: 25rem;
+      justify-self: end;
+    }
+    &__image-wrap {
+      align-items: flex-end;
+    }
+    &__services-box {
+      margin-bottom: 4rem;
+      flex: 1 1 auto;
+    }
+  }
+}

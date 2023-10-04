@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: rem(1),
     observer: true,
     observeParents: true,
+    slidesPerView: 1,
+    loop: true,
+    autoHeight: true,
     navigation: {
       nextEl: '.baner-btn-next',
       prevEl: '.baner-btn-prev',
@@ -93,6 +96,11 @@ document.addEventListener('DOMContentLoaded', function () {
     pagination: {
       el: '.baner-swiper-pagination',
       clickable: true,
+    },
+    breakpoints: {
+      768: {
+        autoHeight: false,
+      },
     },
   })
 
@@ -109,11 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: rem(1),
     speed: 1000,
     navigation: {
-      nextEl: '.reviews-btn-next',
-      prevEl: '.reviews-btn-prev',
+      nextEl: '.reviews__slider-control .btn-next',
+      prevEl: '.reviews__slider-control .btn-prev',
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
     },
     pagination: {
-      el: '.reviews-swiper-pagination',
+      el: '.reviews__slider-control .swiper-pagination',
       clickable: true,
     },
   })
@@ -512,46 +524,42 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   })
 
- 
-
   //////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////
 
+  // keep track of swiper instances to destroy later
+  let slider25 = null
 
-    // keep track of swiper instances to destroy later
-    let slider25 = null
-    
-    if (document.querySelector('.all-news__slider')) {
-      if (window.innerWidth < 767.98 && !slider25) {
-        slider25 = new Swiper('.all-news__slider', {
-          navigation: {
-            nextEl: '.slider-control__button_next',
-            prevEl: '.slider-control__button_prev',
+  if (document.querySelector('.all-news__slider')) {
+    if (window.innerWidth < 767.98 && !slider25) {
+      slider25 = new Swiper('.all-news__slider', {
+        navigation: {
+          nextEl: '.slider-control__button_next',
+          prevEl: '.slider-control__button_prev',
+        },
+        pagination: {
+          el: '.slider-control__pagination',
+          type: 'bullets',
+        },
+        slidesPerView: 1,
+        spaceBetween: 50,
+        speed: 1000,
+        breakpoints: {
+          769: {
+            slidesPerView: 3,
+            spaceBetween: rem(4),
+            speed: 1000,
+            allowTouchMove: false,
           },
-          pagination: {
-            el: '.slider-control__pagination',
-            type: 'bullets',
-          },
-          slidesPerView: 1,
-          spaceBetween: 50,
-          speed: 1000,
-          breakpoints: {
-            769: {
-              slidesPerView: 3,
-              spaceBetween: rem(4),
-              speed: 1000,
-              allowTouchMove: false,
-            },
-          },
-        })
-
-      } else if (window.innerWidth > 767.98 && slider25) {
-        slider25.destroy()
-        slider25.navigation.destroy()
-        slider25 = null
-      }
+        },
+      })
+    } else if (window.innerWidth > 767.98 && slider25) {
+      slider25.destroy()
+      slider25.navigation.destroy()
+      slider25 = null
     }
+  }
   /* let curnum = document.querySelector(".procedures-pagination .current");
     slider24.on("slideChange", function () {
     let ind = slider5.realIndex + 1,
@@ -562,36 +570,94 @@ document.addEventListener('DOMContentLoaded', function () {
   // КОНЕЦ СЛАЙДЕРОВ
 
   //  ЯНДЕКС КАРТА
-  ymaps.ready(init);
+  ymaps.ready(init)
   function init() {
-    let breakpoint = window.matchMedia("(max-width: 48em)");
+    let breakpoint = window.matchMedia('(max-width: 48em)')
     let descOptions = {
-      iconLayout: "default#image",
-      iconImageHref: "img/icons/map-active.png",
-      iconImageSize: [30, 30],
-      iconImageOffset: [-15, -30],
-    };
+      iconLayout: 'default#image',
+      iconImageHref: 'img/icons/map-point-blue.png',
+      iconImageSize: [60, 82],
+      iconImageOffset: [-30, -41],
+    }
     if (breakpoint) {
-      descOptions.iconImageSize = [30, 30];
-      descOptions.iconImageOffset = [-15, -30];
+      descOptions.iconImageSize = [60, 82]
+      descOptions.iconImageOffset = [-30, -41]
     }
 
-    var myMap = new ymaps.Map("contloc", {
-        center: [59.931012, 30.437689],
-        zoom: 16,
-        controls: ["zoomControl"],
-        behaviors: ["drag"],
-      }),
-      myPlacemark = new ymaps.Placemark(
-        [59.931012, 30.437689],
-        {
-          hintContent: "пр. Энергетиков, д.3 лит. А бизнес-центр 'Лада', офис 210",
-          balloonContent: "NPVAppraise",
-        },
-        descOptions
-      );
+    var myMap = new ymaps.Map('contloc', {
+      center: [55.67828318763455, 37.85616280701611],
+      zoom: 14,
+    })
 
-    myMap.geoObjects.add(myPlacemark);
+    window.myObjects = ymaps
+      .geoQuery({
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [55.68322970927965, 37.85882355835888],
+            },
+            options: {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageSize: [60, 82],
+              iconImageOffset: [-30, -41],
+            },
+          },
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [55.68322970927965, 37.8477513995454],
+            },
+            options: {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageSize: [60, 82],
+              iconImageOffset: [-30, -41],
+            },
+          },
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [55.6758581926513, 37.84792306092235],
+            },
+            options: {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageSize: [60, 82],
+              iconImageOffset: [-30, -41],
+            },
+          },
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [55.67828318763455, 37.85616280701611],
+            },
+            options: {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/icons/map-point-orange.png',
+              iconImageSize: [60, 82],
+              iconImageOffset: [-30, -41],
+            },
+          },
+        ],
+      })
+      .addToMap(myMap)
+
+    myMap.behaviors.disable('scrollZoom')
+    myMap.behaviors.disable('dblClickZoom')
+    myMap.controls.remove('geolocationControl')
+    myMap.controls.remove('searchControl')
+    myMap.controls.remove('trafficControl')
+    myMap.controls.remove('typeSelector')
+    myMap.controls.remove('fullscreenControl')
+    myMap.controls.remove('zoomControl')
+    myMap.controls.remove('rulerControl')
   }
 
   // КОНЕЦ ЯНДЕКС КАРТЫ
@@ -1016,7 +1082,6 @@ document.addEventListener('DOMContentLoaded', function () {
   //   });
 
   // renderCalendar();
-  
 })
 
 // forms
@@ -1378,8 +1443,7 @@ const initTimer = remaining => {
   }
 }
 initTimer(120)
-
-'use strict'
+;('use strict')
 function DynamicAdapt(type) {
   this.type = type
 }
