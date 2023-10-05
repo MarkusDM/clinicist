@@ -4126,5 +4126,34 @@
 
 
 
+.baner--services {
+  .baner__content {
+    padding-top: 5rem;
+    width: 42%;
+  }
+
+  .baner__picture {
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .baner__picture::after {
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: 39%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 63.1rem;
+    height: 63.1rem;
+    border: 1px solid #d8dde4;
+    border-radius: 50%;
+}
+}
+
+
+
 
 

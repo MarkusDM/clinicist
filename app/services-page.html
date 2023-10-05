@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="another website" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    @@include('./template/header.html')
+
+    <main>
+        <section class="baner baner--services">
+            <div class="container">
+              <div class="baner__inner">
+                <div class="baner__content">
+                  <div class="baner__content-links">
+                    <a href="#" class="baner__content-links-link">Главная</a>
+                    <a href="#" class="baner__content-links-link nolink">Услуги</a>
+                    
+                  </div>
+                  <div class="baner__content-title title">Услуги нашей клиники</div>
+                  <div class="baner__content-text">
+                    В нашей клинике вы получите только самое современное и эффективное лечение
+                  </div>
+                </div>
+                <div class="baner__picture">
+                  <img
+                    src="./img/d-image/banner-services.webp"
+                    alt="История клиники"
+                    class="desctop" />
+                  <img src="./img/d-image/banner-services-mob.webp" alt="История клиники" class="mobile" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="services-p">
+                <div class="container">
+                    <form class="services-p__form">
+                        <button class="services-p__alphabet-btn">
+                            Найти по алфавиту
+                        </button>
+                        <div class="services-p__wrapper">
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-1" type="radio" name="radio" value="1" checked>
+                                <label for="discount-product__box-radio-1" class="services-p__letter-label">10%</label>
+                            </div>
+                        </div>
+                        <div class="services-p__form-inner">
+                            
+                        </div>
+                    </form>
+                    <div class="services-p__wrapper">
+
+                    </div>
+                </div>
+          </section>
+    </main>
+    @@include('./template/footer.html')
+
+   
+  </body>
+</html>
+
+
+
