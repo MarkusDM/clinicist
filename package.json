@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "air-datepicker": "^3.3.3",
-    "jquery-zoom": "^1.7.21"
+    "jquery-zoom": "^1.7.21",
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",

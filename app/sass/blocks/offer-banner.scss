@@ -1,0 +1,74 @@
+.offer-banner {
+    position: relative;
+    margin-bottom: 4rem;
+    &__swiper {
+        width: 100%;
+    }
+
+   
+
+    &__box-img-d {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        height: 12.3rem;
+    }
+
+    &__box-link {
+        color: #00B7F4;
+        font-family: 'Myriad Pro',sans-serif;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 0.65rem;
+        padding-left: 12rem;
+        padding-top: 2.5rem;
+        display: block;
+    }
+
+    &__box-text {
+        color:  #2F2F2F;
+        font-family: 'Montserrat',sans-serif;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        width: 58.8rem;
+        margin-left: 12rem;
+    }
+
+    &__arrows {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+        z-index: 3;
+        width: 100%;
+
+    }
+
+    &__prev,
+    &__next {
+        width: 0.8rem;
+        height: 1.4rem;
+        cursor: pointer;
+    }
+
+
+}
