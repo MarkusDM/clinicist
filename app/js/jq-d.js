@@ -186,6 +186,30 @@ $('.services-p__form-alphabet-wrapper').each(function () {
 });
 
 
+
+$('.services-p__search').each(function () {
+  let more = $(this).find('.services-p__search-filter');
+  let searchInput = $(this).find('.services-p__search-input');
+  let hide = $(this).find('.services-p__search-wrap');
+  hide.hide(0);
+  more.click(function () {
+    hide.slideToggle(300);
+    searchInput.toggleClass('active');
+  });
+});
+
+
+$('.services-p__search-wrap-select').each(function () {
+  let more = $(this).find('.services-p__search-wrap-select-head');
+  let hide = $(this).find('.services-p__search-wrap-select-down');
+  hide.hide(0);
+  more.click(function () {
+    hide.slideToggle(300);
+    more.toggleClass('active');
+  });
+});
+
+
   
 });
 

@@ -4207,6 +4207,49 @@
 }
 
 
+@media  (max-width: 48em) {
 
+  .baner--services {
+    margin-bottom: 10rem;
+    .baner__content {
+      width: 100%;
+      padding: 0 4rem;
+      padding-top: 4rem;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+
+    .baner__inner {
+      padding: 0;
+    }
+
+
+    .baner__picture {
+      width: 100%;
+      margin-left: 0;
+      height: 77rem;
+    }
+
+
+    .baner__inner::after {
+      display: none;
+    }
+
+
+    .baner__picture::after {
+      position: absolute;
+      content: '';
+      top: 5rem;
+      left: 39%;
+     
+      width: 85.1rem;
+      height: 85.1rem;
+      
+    }
+  }
+ }
 
 
