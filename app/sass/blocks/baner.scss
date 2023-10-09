@@ -96,7 +96,7 @@
         content: '';
         width: 1.9rem;
         height: 3.1rem;
-        background-image: url(../img/icons/mouse.png);
+        background-image: url(../img/a-image/icons/mouse.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -226,7 +226,7 @@
           flex: 0 0 2rem;
           width: 2rem;
           height: 2rem;
-          background-image: url(../img/icons/ok.svg);
+          background-image: url(../img/a-image/icons/ok.svg);
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
@@ -270,7 +270,7 @@
         transform: translateY(-50%);
         width: 1.9rem;
         height: 3.1rem;
-        background-image: url(../img/icons/mouse.png);
+        background-image: url(../img/a-image/icons/mouse.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -628,7 +628,7 @@
             top: 0rem;
             width: 2.4rem;
             height: 2.2rem;
-            background-image: url(../img/icons/kavichki.svg);
+            background-image: url(../img/a-image/icons/kavichki.svg);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -994,7 +994,7 @@
               transform: translateY(-50%);
               width: 2.5rem;
               height: 3.9rem;
-              background-image: url(../img/icons/mouse-white.png);
+              background-image: url(../img/a-image/icons/mouse-white.png);
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
@@ -1630,7 +1630,7 @@
             left: 50%;
             top: -2.4rem;
             transform: translateX(-50%);
-            background-image: url(../img/icons/Star2.svg);
+            background-image: url(../img/a-image/icons/Star2.svg);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -1692,7 +1692,7 @@
             transform: translateY(-50%);
             width: 3.6rem;
             height: 4.8rem;
-            background-image: url(../img/icons/phone-blue.svg);
+            background-image: url(../img/a-image/icons/phone-blue.svg);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -1749,7 +1749,7 @@
               }
               &.active::after {
                 background-color: $blue;
-                background-image: url(../img/icons/checked.svg);
+                background-image: url(../img/a-image/icons/checked.svg);
                 border: 1px solid $blue;
                 background-repeat: no-repeat;
                 background-size: 1.4rem;
@@ -1874,7 +1874,7 @@
                   top: 0;
                   width: 1.1rem;
                   height: 1.1rem;
-                  background-image: url(../img/icons/star-white.svg);
+                  background-image: url(../img/a-image/icons/star-white.svg);
                   background-position: center;
                   background-size: contain;
                   background-repeat: no-repeat;
@@ -2015,7 +2015,7 @@
               top: 2rem;
               width: 2.9rem;
               height: 2.9rem;
-              background-image: url(../img/icons/map-grey.svg);
+              background-image: url(../img/a-image/icons/map-grey.svg);
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
@@ -2044,7 +2044,7 @@
               top: 0.6rem;
               width: 2.7rem;
               height: 2.7rem;
-              background-image: url(../img/icons/phone-grey.svg);
+              background-image: url(../img/a-image/icons/phone-grey.svg);
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
@@ -2197,7 +2197,7 @@
               transform: translateY(-50%);
               width: 2rem;
               height: 2.5rem;
-              background-image: url(../img/icons/go-white.svg);
+              background-image: url(../img/a-image/icons/go-white.svg);
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
@@ -2207,7 +2207,7 @@
               position: absolute;
               right: 0rem;
               top: 50%;
-              background-image: url(../img/icons/arrow-white.svg);
+              background-image: url(../img/a-image/icons/arrow-white.svg);
               transform: translateY(-50%) rotate(-90deg);
               width: 1.6rem;
               height: 2.2rem;
@@ -2233,7 +2233,7 @@
               transform: translateY(-50%);
               width: 2.3rem;
               height: 1rem;
-              background-image: url(../img/icons/taxi-white.svg);
+              background-image: url(../img/a-image/icons/taxi-white.svg);
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
@@ -2243,7 +2243,7 @@
               position: absolute;
               right: 0rem;
               top: 50%;
-              background-image: url(../img/icons/arrow-white.svg);
+              background-image: url(../img/a-image/icons/arrow-white.svg);
               transform: translateY(-50%) rotate(-90deg);
               width: 1.6rem;
               height: 2.2rem;
@@ -2333,7 +2333,7 @@
                 top: 0.8rem;
                 width: 2rem;
                 height: 1.8rem;
-                background-image: url(../img/icons/ok.svg);
+                background-image: url(../img/a-image/icons/ok.svg);
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -2600,7 +2600,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url(../img/icons/phone-white.svg);
+            background-image: url(../img/a-image/icons/phone-white.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 2.4rem;
@@ -2701,7 +2701,7 @@
           background: $blue;
           box-shadow: 0px 2rem 3rem rgba(64, 185, 244, 0.1);
           border-radius: 1.38rem;
-          background-image: url(../img/icons/baner-chit.svg);
+          background-image: url(../img/a-image/icons/baner-chit.svg);
           background-repeat: no-repeat;
           background-position: center;
           background-size: 2.8rem;
@@ -2859,7 +2859,7 @@
                 transform: translateY(-50%);
                 width: 2rem;
                 height: 2rem;
-                background-image: url(../img/icons/mail-grey.svg);
+                background-image: url(../img/a-image/icons/mail-grey.svg);
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;

@@ -152,7 +152,7 @@ body::after {
       flex: 0 0 4.3rem;
       width: 4.3rem;
       height: 4.3rem;
-      background-image: url(../img/icons/phone-big.png);
+      background-image: url(../img/a-image/icons/phone-big.png);
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -406,12 +406,12 @@ body::after {
       margin-right: 1rem;
       width: 2.4rem;
       height: 2.4rem;
-      background-image: url(../img/icons/filter.svg);
+      background-image: url(../img/a-image/icons/filter.svg);
     }
     &::after {
       width: 1.2rem;
       height: 1.2rem;
-      background-image: url(../img/icons/select-arrow-grey.svg);
+      background-image: url(../img/a-image/icons/select-arrow-grey.svg);
       transition: transform 0.3s ease;
       ._sort-dropdown-open & {
         transform: rotate(-180deg);
@@ -428,7 +428,7 @@ body::after {
       content: '';
       width: 2.4rem;
       height: 2.4rem;
-      background-image: url(../img/icons/search.svg);
+      background-image: url(../img/a-image/icons/search.svg);
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -871,7 +871,7 @@ body::after {
         flex: 0 0 1.8rem;
         width: 1.8rem;
         height: 1.8rem;
-        background-image: url(../img/icons/select-arrow-blue.svg);
+        background-image: url(../img/a-image/icons/select-arrow-blue.svg);
       }
     }
   }
@@ -1700,7 +1700,7 @@ body::after {
         content: '';
         width: 5rem;
         height: 5rem;
-        background-image: url(../img/icons/search-white.svg);
+        background-image: url(../img/a-image/icons/search-white.svg);
         background-size: contain;
         background-repeat: no-repeat;
       }
@@ -1984,7 +1984,7 @@ body::after {
           flex: 0 0 2.5rem;
           width: 2.5rem;
           height: 2.5rem;
-          background-image: url(../img/icons/select-arrow-grey.svg);
+          background-image: url(../img/a-image/icons/select-arrow-grey.svg);
         }
       }
     }

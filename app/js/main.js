@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let breakpoint = window.matchMedia('(max-width: 48em)')
     let descOptions = {
       iconLayout: 'default#image',
-      iconImageHref: 'img/icons/map-point-blue.png',
+      iconImageHref: 'img/a-image/icons/map-point-blue.png',
       iconImageSize: [60, 82],
       iconImageOffset: [-30, -41],
     }
@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageHref: 'img/a-image/icons/map-point-blue.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageHref: 'img/a-image/icons/map-point-blue.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageHref: 'img/a-image/icons/map-point-blue.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -640,7 +640,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-orange.png',
+              iconImageHref: 'img/a-image/icons/map-point-orange.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -678,7 +678,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // DROPDOWN CLICK
 
-
   // $('.dropdown-click2').on('click', function () {
   //   $('.dropdown__content2').fadeToggle(300)
   // })
@@ -711,7 +710,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // $('.dropdown-click5').on('click', function () {
   //   $('.dropdown__content5').fadeToggle(300)
   // })
- 
 
   // $(document).mouseup(function (e) {
   //   if (
@@ -1435,25 +1433,21 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 const da = new DynamicAdapt('max')
 da.init()
 
-
 // let text = document.querySelectorAll("header__top-form-down-block-data-item-link").textContent;
 // let modifiedText = text.replace(/(^[а-яa-z]{3})/i, "<span style='color:blue'>$1</span>");
 // document.querySelectorAll(".header__top-form-down-block-data-item-link").innerHTML = modifiedText;
 
+// $(function() {
+//   var text,
+//       textBefore,
+//       textAfter;
 
-  // $(function() {
-  //   var text,
-  //       textBefore,
-  //       textAfter;
-    
-  //   $('.header__top-form-down-block-data-item-link').each(function() {
-  //     text = $(this).text();
-      
-  //     textAfter = text.substring(3);
-  //     textBefore = text.substring(0,3);
-      
-  //     $(this).empty().append('<span>' + textBefore + '</span>').append(textAfter);
-  //   });
-  // });
+//   $('.header__top-form-down-block-data-item-link').each(function() {
+//     text = $(this).text();
 
+//     textAfter = text.substring(3);
+//     textBefore = text.substring(0,3);
 
+//     $(this).empty().append('<span>' + textBefore + '</span>').append(textAfter);
+//   });
+// });
