@@ -1,336 +1,334 @@
 .phone {
-   margin-bottom: 17rem;
-   &__inner {
-      display: flex;
-      height: 29rem;
-      box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.1);
-      position: relative;
-   }
-   &__tel {
+  margin-bottom: 17rem;
+  &__inner {
+    display: flex;
+    height: 29rem;
+    box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.1);
+    position: relative;
+  }
+  &__tel {
+    position: absolute;
+    left: 48.4%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.4rem;
+    height: 12.4rem;
+    border-radius: 50%;
+    background: #fff;
+    & img {
+      width: 5.2rem;
+      height: 5.2rem;
+      object-fit: contain;
+    }
+    &::after {
+      content: '';
       position: absolute;
-      left: 48.4%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 12.4rem;
-      height: 12.4rem;
-      border-radius: 50%;
-      background: #fff;
-      & img {
-         width: 5.2rem;
-         height: 5.2rem;
-         object-fit: contain;
-      }
+      inset: 1rem;
+      z-index: -1;
+      border-radius: inherit;
+      background-color: $blue;
+    }
+  }
+  &__img {
+    width: 48.4%;
+    height: 100%;
+    background-color: #eef3f7;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    & img {
+      width: 55rem;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__info {
+    width: 51.6%;
+    height: 100%;
+    background-color: #fff;
+    padding: 5.4rem 8.7rem 6rem 11rem;
+    &-subtitle {
+      font-family: 'MyriadPro';
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 125%;
+      color: $blue;
+      margin-bottom: 0.4rem;
+    }
+    &-title {
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 180%;
+      margin-bottom: 0.3rem;
+    }
+    &-text {
+      font-family: 'MyriadPro';
+      font-size: 1.6rem;
+      line-height: 125%;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 2.7rem;
+    }
+    &-tel {
+      position: relative;
+      padding: 1.7rem 3.3rem 1.7rem 7.2rem;
+      display: inline-block;
+      border: 1px solid #d8dde4;
+      border-radius: 5.2rem;
+      font-family: 'MyriadPro';
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 122%;
+      color: $blue;
       &::after {
-         content: "";
-            position: absolute;
-            inset: 1rem;
-            z-index: -1;
-            border-radius: inherit;
-            background-color: $blue;
+        position: absolute;
+        content: '';
+        left: 0.3rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../img/a-image/icons/arrow-white.svg);
+        background-position: center;
+        background-size: 2.1rem;
+        background-repeat: no-repeat;
       }
-   }
-   &__img {
-      width: 48.4%;
-      height: 100%;
-      background-color: #EEF3F7;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      & img {
-         width: 55rem;
-         height: 100%;
-         object-fit: contain;
+    }
+  }
+  &.phone-uslugi {
+    .phone {
+      &__inner {
+        height: auto;
       }
-   }
-   &__info {
-      width: 51.6%;
-      height: 100%;
-      background-color: #fff;
-      padding: 5.4rem 8.7rem 6rem 11rem;
-      &-subtitle {
-         font-family: "MyriadPro";
-         font-weight: 600;
-         font-size: 1.6rem;
-         line-height: 125%;
-         color: $blue;
-         margin-bottom: 0.4rem;
+      &__tel {
+        left: 35.4%;
+        & img {
+          width: 4.3rem;
+          height: 3.9rem;
+        }
       }
-      &-title {
-         font-family: "Montserrat";
-         font-weight: 500;
-         font-size: 2.5rem;
-         line-height: 180%;
-         margin-bottom: 0.3rem;
+      &__img {
+        width: 35.3%;
+        height: auto;
+        & img {
+          width: 43rem;
+        }
       }
-      &-text {
-         font-family: "MyriadPro";
-         font-size: 1.6rem;
-         line-height: 125%;
-         color: rgba(51, 51, 51, 0.5);
-         margin-bottom: 2.7rem;
+      &__info {
+        width: 64.7%;
+        padding: 6.4rem 8.5rem 4rem 10.3rem;
+        &-title {
+          margin-bottom: 0;
+        }
+        &-text {
+          margin-bottom: 2.9rem;
+        }
+        &-form {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          & > label {
+            display: block;
+            width: 52.2%;
+            margin-bottom: 2rem;
+            &:first-child {
+              position: relative;
+              &::after {
+                position: absolute;
+                content: '';
+                left: 2.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2rem;
+                height: 2rem;
+                background-image: url(../img/a-image/icons/phone-grey.png);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+
+            & input {
+              outline: none;
+              background: $white;
+              border: 1px solid #d8dde4;
+              border-radius: 7.2rem;
+              padding: 1.5rem 3rem 1.6rem 6.5rem;
+              font-family: 'MyriadPro';
+              font-size: 1.6rem;
+              line-height: 119%;
+              color: rgba(51, 51, 51, 0.5);
+              width: 100%;
+              &::placeholder {
+                font-family: 'MyriadPro';
+                font-size: 1.6rem;
+                line-height: 119%;
+                color: rgba(51, 51, 51, 0.5);
+              }
+            }
+          }
+          & button {
+            width: 44%;
+            padding: 0.7rem;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+          }
+          & label {
+            &:last-child {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              & .text2 {
+                font-family: 'MyriadPro';
+                font-size: 1.6rem;
+                line-height: 125%;
+                color: rgba(51, 51, 51, 0.5);
+                padding-left: 1.5rem;
+              }
+              & input {
+                display: none;
+              }
+              & .fake2 {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: transparent;
+                &::before {
+                  border-radius: 50%;
+                  background-color: rgba(51, 51, 51, 0.5);
+                  background-size: 1.1rem;
+                }
+              }
+              & input:checked + .fake2::before {
+                opacity: 1;
+              }
+              & input:checked + .fake2 {
+                border: none;
+              }
+            }
+          }
+        }
       }
-      &-tel {
-         position: relative;
-         padding: 1.7rem 3.3rem 1.7rem 7.2rem;
-         display: inline-block;
-         border: 1px solid #D8DDE4;
-         border-radius: 5.2rem;
-         font-family: "MyriadPro";
-         font-weight: 600;
-         font-size: 1.8rem;
-         line-height: 122%;
-         color: $blue;
-         &::after {
+    }
+  }
+  &.phone-uslugi-bez-rezultat {
+    margin-top: -0.8rem;
+    .phone {
+      &__img {
+        display: block;
+        padding: 6.5rem 12rem 6.5rem 6rem;
+        background: linear-gradient(180deg, #5fcbff 0%, #36b4f1 100%);
+        height: fit-content;
+        &-tel {
+          position: relative;
+          font-family: 'Montserrat';
+          font-weight: 600;
+          font-size: 3rem;
+          line-height: 150%;
+          color: $white;
+          margin-bottom: 3.6rem;
+          padding-left: 7rem;
+          display: inline-block;
+          &::after {
             position: absolute;
             content: '';
-            left: 0.3rem;
+            left: 0rem;
             top: 50%;
-            transform: translateY(-50%) rotate(-90deg);
-            width: 4.8rem;
-            height: 4.8rem;
-            border-radius: 50%;
-            background-color: $blue;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url(../img/icons/arrow-white.svg);
+            transform: translateY(-50%);
+            width: 4.3rem;
+            height: 4.3rem;
+            background-image: url(../img/a-image/icons/phone-big.png);
             background-position: center;
-            background-size: 2.1rem;
+            background-size: contain;
             background-repeat: no-repeat;
-
-         }
+          }
+          &::before {
+            position: absolute;
+            left: 7rem;
+            bottom: 0.7rem;
+            content: '';
+            width: 78%;
+            height: 1px;
+            background-color: $white;
+          }
+        }
+        &-text {
+          font-family: 'Montserrat';
+          font-size: 1.8rem;
+          line-height: 150%;
+          color: $white;
+        }
       }
-   }
-   &.phone-uslugi {
-      .phone {
-         &__inner {
-            height: auto;
-         }
-         &__tel {
-            left: 35.4%;
-            & img {
-               width: 4.3rem;
-               height: 3.9rem;
-            }
-         }
-         &__img {
-            width: 35.3%;
-            height: auto;
-            & img {
-               width: 43rem;
-            }
-         }
-         &__info {
-            width: 64.7%;
-            padding: 6.4rem 8.5rem 4rem 10.3rem;
-            &-title {
-               margin-bottom: 0;
-            }
-            &-text {
-               margin-bottom: 2.9rem;
-            }
-            &-form {
-               display: flex;
-               flex-wrap: wrap;
-               justify-content: space-between;
-               align-items: center;
-               &>label {
-                  display: block;
-                  width: 52.2%;
-                  margin-bottom: 2rem;
-                  &:first-child {
-                     position: relative;
-                     &::after {
-                        position: absolute;
-                        content: '';
-                        left: 2.5rem;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        width: 2rem;
-                        height: 2rem;
-                        background-image: url(../img/icons/phone-grey.png);
-                        background-position: center;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                     }
-                  }
-
-                  & input {
-                     outline: none;
-                     background: $white;
-                     border: 1px solid #D8DDE4;
-                     border-radius: 7.2rem;
-                     padding: 1.5rem 3rem 1.6rem 6.5rem;
-                     font-family: "MyriadPro";
-                     font-size: 1.6rem;
-                     line-height: 119%;
-                     color: rgba(51, 51, 51, 0.5);
-                     width: 100%;
-                     &::placeholder {
-                        font-family: "MyriadPro";
-                        font-size: 1.6rem;
-                        line-height: 119%;
-                        color: rgba(51, 51, 51, 0.5);
-                     }
-                  }
-               }
-               & button {
-                  width: 44%;
-                  padding: 0.7rem;
-                  display: flex;
-                  justify-content: center;
-                  margin-bottom: 2rem;
-               }
-               & label {
-                  &:last-child {
-                     width: 100%;
-                     display: flex;
-                     align-items: center;
-                     cursor: pointer;
-                     & .text2 {
-                        font-family: "MyriadPro";
-                        font-size: 1.6rem;
-                        line-height: 125%;
-                        color: rgba(51, 51, 51, 0.5);
-                        padding-left: 1.5rem;
-                     }
-                     & input {
-                        display: none;
-                     }
-                     & .fake2 {
-                        width: 1.5rem;
-                        height: 1.5rem;
-                        border-radius: 50%;
-                        background-color: transparent;
-                        &::before {
-                           border-radius: 50%;
-                           background-color: rgba(51, 51, 51, 0.5);
-                           background-size: 1.1rem;
-                        }
-                     }
-                     & input:checked + .fake2::before {
-                        opacity: 1;
-                     }
-                     & input:checked + .fake2 {
-                        border: none;
-                     }
-                  }
-               }
-            }
-         }
+      &__tel {
       }
-   }
-   &.phone-uslugi-bez-rezultat {
-      margin-top: -0.8rem;
-      .phone {
-         &__img {
-            display: block;
-            padding: 6.5rem 12rem 6.5rem 6rem;
-            background: linear-gradient(180deg, #5FCBFF 0%, #36B4F1 100%);
-            height: fit-content;
-            &-tel {
-               position: relative;
-               font-family: "Montserrat";
-               font-weight: 600;
-               font-size: 3rem;
-               line-height: 150%;
-               color: $white;
-               margin-bottom: 3.6rem;
-               padding-left: 7rem;
-               display: inline-block;
-               &::after {
-                  position: absolute;
-                  content: '';
-                  left: 0rem;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  width: 4.3rem;
-                  height: 4.3rem;
-                  background-image: url(../img/icons/phone-big.png);
-                  background-position: center;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-               }
-               &::before {
-                  position: absolute;
-                  left: 7rem;
-                  bottom: 0.7rem;
-                  content: '';
-                  width: 78%;
-                  height: 1px;
-                  background-color: $white;
-               }
-            }
-            &-text {
-               font-family: "Montserrat";
-               font-size: 1.8rem;
-               line-height: 150%;
-               color: $white;
-            }
-         }
-         &__tel {
-         }
-         &__info {
-            padding: 6.6rem 6.5rem 4rem 8.8rem;
-            &-form {
-               width: 96%;
-            }
-         }
+      &__info {
+        padding: 6.6rem 6.5rem 4rem 8.8rem;
+        &-form {
+          width: 96%;
+        }
       }
-   }
-   &.phone-uslugi-napravlenia {
-      margin-bottom: 34rem;
-   }
-   &.phone-detalna-uslugi-ob-uslugah {
-      margin-bottom: 17.8rem;
-      .phone {
-         &__img {
-            justify-content: center;
-            & img {
-               margin-right: 6rem;
-            }
-         }
-         &__info {
-            &-text {
-               margin-bottom: 4.1rem;
-            }
-            &-btn {
-               padding: 0.7rem 8.35rem;
-               display: inline-block;
-            }
-         }
+    }
+  }
+  &.phone-uslugi-napravlenia {
+    margin-bottom: 34rem;
+  }
+  &.phone-detalna-uslugi-ob-uslugah {
+    margin-bottom: 17.8rem;
+    .phone {
+      &__img {
+        justify-content: center;
+        & img {
+          margin-right: 6rem;
+        }
       }
-   }
-   &.phone-uslugi-pusta-stranica {
-      margin-bottom: 16.8rem;
-   }
+      &__info {
+        &-text {
+          margin-bottom: 4.1rem;
+        }
+        &-btn {
+          padding: 0.7rem 8.35rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &.phone-uslugi-pusta-stranica {
+    margin-bottom: 16.8rem;
+  }
 
-   .recording__inner{
-      filter: drop-shadow(0px 20px 60px rgba(124, 148, 159, 0.1));
-      .recording__center{
-         text-align: center;
-         padding-bottom: 2rem;
-         padding-top: 3rem;
+  .recording__inner {
+    filter: drop-shadow(0px 20px 60px rgba(124, 148, 159, 0.1));
+    .recording__center {
+      text-align: center;
+      padding-bottom: 2rem;
+      padding-top: 3rem;
 
-         .recording__center-btn{
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-         }
-
-         .recording__center-text{
-            margin-bottom: 1rem;
-         }
+      .recording__center-btn {
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
       }
 
-      .recording__left{
-
+      .recording__center-text {
+        margin-bottom: 1rem;
       }
+    }
 
-      .recording__right{
-         text-align: center;
-      }
-   }
+    .recording__left {
+    }
+
+    .recording__right {
+      text-align: center;
+    }
+  }
 }

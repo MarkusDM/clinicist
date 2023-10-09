@@ -62,9 +62,34 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     })
   }
+  if (document.querySelector('.other-programs__slider')) {
+    new Swiper('.other-programs__slider', {
+      spaceBetween: 25,
+      slidesPerView: 1,
+      speed: 1000,
+      autoHeight: true,
+      navigation: {
+        nextEl: '.other-programs__slider-control .btn-next',
+        prevEl: '.other-programs__slider-control .btn-prev',
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      pagination: {
+        el: '.other-programs__slider-control .swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          autoHeight: false,
+        },
+      },
+    })
+  }
 
   // price list
-  const pricelistSearch = document.getElementById('price-list-search')
+  const pricelistSearch = document.getElementById('search-form')
   const alphabetIndex = document.getElementById('alphabet-index')
   if (pricelistSearch) {
     pricelistSearch.addEventListener('input', function () {
@@ -78,10 +103,101 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  // doctor card hours (set height)
+  const hoursItems = document.querySelectorAll('.doctor-card__hours')
+  const setHoursHeight = () => {
+    if (hoursItems.length) {
+      const gap = md ? 4 : 12
+      const rows = md ? 2 : 3
+      hoursItems.forEach(hoursItem => {
+        const parent = hoursItem.closest('[data-showmore-content]')
+        const height = hoursItem.offsetHeight - 1
+        hoursItem.style.marginBottom = `${gap}px`
+        parent.dataset.showmoreContent = `${(height + gap) * rows}`
+      })
+    }
+  }
+  setHoursHeight()
+
+  // sort dropdown
+  const sortDropdown = document.querySelector('.sort-dropdown')
+  if (sortDropdown) {
+    _slideUp(sortDropdown)
+  }
+
+  // datepicker
+  if (document.getElementById('datepicker')) {
+    const picker = datepicker('#datepicker', {
+      alwaysShow: true,
+      customMonths: [
+        'Январь',
+        'Февраль',
+        'Март',
+        'Апрель',
+        'Май',
+        'Июнь',
+        'Июль',
+        'Август',
+        'Сентябрь',
+        'Октябрь',
+        'Ноябрь',
+        'Декабрь',
+      ],
+      customDays: ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПН', 'СБ'],
+      showAllDates: true,
+      disableYearOverlay: true,
+      onSelect: function (string, element) {
+        // Change month on click on other days
+
+        var day = element.selectedDay
+        var mon = element.selectedMonth
+        var year = element.selectedYear
+
+        var target = jQuery(element.dpDiv)
+          .find('[data-year="' + year + '"][data-month="' + mon + '"]')
+          .filter(function () {
+            return jQuery(this).text().trim() == day
+          })
+
+        if (target.hasClass('ui-datepicker-other-month')) {
+          if (parseInt(target.text().trim()) > 15) {
+            jQuery(element.dpDiv).find('.ui-datepicker-prev').click()
+          } else {
+            jQuery(element.dpDiv).find('.ui-datepicker-next').click()
+          }
+        }
+      },
+    })
+  }
+
+  // other programs card (move image)
+  const programCards = document.querySelectorAll('.other-programs-card')
+  const moveImage = () => {
+    if (programCards.length) {
+      programCards.forEach(programCard => {
+        const image = programCard.querySelector(
+          '.other-programs-card__image-wrap'
+        )
+        const container = programCard.querySelector(
+          '.other-programs-card__text-wrap'
+        )
+
+        if (image && container) {
+          if (md) {
+            container.appendChild(image)
+          } else {
+            programCard.prepend(image)
+          }
+        }
+      })
+    }
+  }
+  moveImage()
+
   // ===========================================================================
 
   // smooth behaviour
-  const _slideUp = (target, duration = 500, showmore = 0) => {
+  function _slideUp(target, duration = 500, showmore = 0) {
     if (!target.classList.contains('_slide')) {
       target.classList.add('_slide')
       target.style.transitionProperty = 'height, margin, padding'
@@ -116,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, duration)
     }
   }
-  const _slideDown = (target, duration = 500, showmore = 0) => {
+  function _slideDown(target, duration = 500, showmore = 0) {
     if (!target.classList.contains('_slide')) {
       target.classList.add('_slide')
       target.hidden = target.hidden ? false : null
@@ -153,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, duration)
     }
   }
-  const _slideToggle = (target, duration = 500) => {
+  function _slideToggle(target, duration = 500) {
     if (target.hidden) {
       return _slideDown(target, duration)
     } else {
@@ -684,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function () {
           selectOptions = selectOptions.filter(option => option.value)
         }
         selectOptionsHTML += selectOptionsScroll
-          ? `<div ${selectOptionsScroll} ${selectOptionsScrollHeight} class="${this.selectClasses.classSelectOptionsScroll}">`
+          ? `<div ${selectOptionsScroll} ${selectOptionsScrollHeight} data-simplebar-auto-hide="false" class="${this.selectClasses.classSelectOptionsScroll}">`
           : ''
         selectOptions.forEach(selectOption => {
           selectOptionsHTML += this.getOption(selectOption, originalSelect)
@@ -847,6 +963,706 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   new SelectConstructor({})
 
+  // tabs
+  function tabs() {
+    const tabs = document.querySelectorAll('[data-tabs]')
+    let tabsActiveHash = []
+
+    if (tabs.length > 0) {
+      const hash = getHash()
+      if (hash && hash.startsWith('tab-')) {
+        tabsActiveHash = hash.replace('tab-', '').split('-')
+      }
+      tabs.forEach((tabsBlock, index) => {
+        tabsBlock.classList.add('_tab-init')
+        tabsBlock.setAttribute('data-tabs-index', index)
+        tabsBlock.addEventListener('click', setTabsAction)
+        initTabs(tabsBlock)
+      })
+
+      let mdQueriesArray = dataMediaQueries(tabs, 'tabs')
+      if (mdQueriesArray && mdQueriesArray.length) {
+        mdQueriesArray.forEach(mdQueriesItem => {
+          mdQueriesItem.matchMedia.addEventListener('change', function () {
+            setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+          })
+          setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+        })
+      }
+    }
+    function setTitlePosition(tabsMediaArray, matchMedia) {
+      tabsMediaArray.forEach(tabsMediaItem => {
+        tabsMediaItem = tabsMediaItem.item
+        let tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]')
+        let tabsTitleItems = tabsMediaItem.querySelectorAll('[data-tabs-title]')
+        let tabsContent = tabsMediaItem.querySelector('[data-tabs-body]')
+        let tabsContentItems =
+          tabsMediaItem.querySelectorAll('[data-tabs-item]')
+        tabsTitleItems = Array.from(tabsTitleItems).filter(
+          item => item.closest('[data-tabs]') === tabsMediaItem
+        )
+        tabsContentItems = Array.from(tabsContentItems).filter(
+          item => item.closest('[data-tabs]') === tabsMediaItem
+        )
+        tabsContentItems.forEach((tabsContentItem, index) => {
+          if (matchMedia.matches) {
+            tabsContent.append(tabsTitleItems[index])
+            tabsContent.append(tabsContentItem)
+            tabsMediaItem.classList.add('_tab-spoller')
+          } else {
+            tabsTitles.append(tabsTitleItems[index])
+            tabsMediaItem.classList.remove('_tab-spoller')
+          }
+        })
+      })
+    }
+    function initTabs(tabsBlock) {
+      let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*')
+      let tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*')
+      const tabsBlockIndex = tabsBlock.dataset.tabsIndex
+      const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex
+
+      if (tabsActiveHashBlock) {
+        const tabsActiveTitle = tabsBlock.querySelector(
+          '[data-tabs-titles]>._tab-active'
+        )
+        tabsActiveTitle ? tabsActiveTitle.classList.remove('_tab-active') : null
+      }
+      if (tabsContent.length) {
+        tabsContent = Array.from(tabsContent).filter(
+          item => item.closest('[data-tabs]') === tabsBlock
+        )
+        tabsTitles = Array.from(tabsTitles).filter(
+          item => item.closest('[data-tabs]') === tabsBlock
+        )
+        tabsContent.forEach((tabsContentItem, index) => {
+          tabsTitles[index].setAttribute('data-tabs-title', '')
+          tabsContentItem.setAttribute('data-tabs-item', '')
+
+          if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
+            tabsTitles[index].classList.add('_tab-active')
+          }
+          tabsContentItem.hidden =
+            !tabsTitles[index].classList.contains('_tab-active')
+        })
+      }
+    }
+    function setTabsStatus(tabsBlock) {
+      let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]')
+      let tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]')
+      const tabsBlockIndex = tabsBlock.dataset.tabsIndex
+      function isTabsAnamate(tabsBlock) {
+        if (tabsBlock.hasAttribute('data-tabs-animate')) {
+          return tabsBlock.dataset.tabsAnimate > 0
+            ? Number(tabsBlock.dataset.tabsAnimate)
+            : 500
+        }
+      }
+      const tabsBlockAnimate = isTabsAnamate(tabsBlock)
+      if (tabsContent.length > 0) {
+        const isHash = tabsBlock.hasAttribute('data-tabs-hash')
+        tabsContent = Array.from(tabsContent).filter(
+          item => item.closest('[data-tabs]') === tabsBlock
+        )
+        tabsTitles = Array.from(tabsTitles).filter(
+          item => item.closest('[data-tabs]') === tabsBlock
+        )
+        tabsContent.forEach((tabsContentItem, index) => {
+          if (tabsTitles[index].classList.contains('_tab-active')) {
+            if (tabsBlockAnimate) {
+              _slideDown(tabsContentItem, tabsBlockAnimate)
+            } else {
+              tabsContentItem.hidden = false
+            }
+            if (isHash && !tabsContentItem.closest('.popup')) {
+              setHash(`tab-${tabsBlockIndex}-${index}`)
+            }
+          } else {
+            if (tabsBlockAnimate) {
+              _slideUp(tabsContentItem, tabsBlockAnimate)
+            } else {
+              tabsContentItem.hidden = true
+            }
+          }
+        })
+      }
+    }
+    function setTabsAction(e) {
+      const el = e.target
+      if (el.closest('[data-tabs-title]')) {
+        const tabTitle = el.closest('[data-tabs-title]')
+        const tabsBlock = tabTitle.closest('[data-tabs]')
+        if (
+          !tabTitle.classList.contains('_tab-active') &&
+          !tabsBlock.querySelector('._slide')
+        ) {
+          let tabActiveTitle = tabsBlock.querySelectorAll(
+            '[data-tabs-title]._tab-active'
+          )
+          tabActiveTitle.length
+            ? (tabActiveTitle = Array.from(tabActiveTitle).filter(
+                item => item.closest('[data-tabs]') === tabsBlock
+              ))
+            : null
+          tabActiveTitle.length
+            ? tabActiveTitle[0].classList.remove('_tab-active')
+            : null
+          tabTitle.classList.add('_tab-active')
+          setTabsStatus(tabsBlock)
+        }
+        e.preventDefault()
+      }
+    }
+  }
+  tabs()
+
+  // popups
+  class Popup {
+    constructor(options) {
+      let config = {
+        logging: false,
+        init: true,
+        attributeOpenButton: 'data-popup',
+        attributeCloseButton: 'data-close',
+        fixElementSelector: '[data-lp]',
+        youtubeAttribute: 'data-popup-youtube',
+        youtubePlaceAttribute: 'data-popup-youtube-place',
+        setAutoplayYoutube: true,
+        classes: {
+          popup: 'popup',
+          // popupWrapper: 'popup__wrapper',
+          popupContent: 'popup__content',
+          popupActive: 'popup_show',
+          bodyActive: 'popup-show',
+        },
+        focusCatch: true,
+        closeEsc: true,
+        bodyLock: true,
+        hashSettings: {
+          location: true,
+          goHash: true,
+        },
+        on: {
+          beforeOpen: function () {},
+          afterOpen: function () {},
+          beforeClose: function () {},
+          afterClose: function () {},
+        },
+      }
+      this.youTubeCode
+      this.isOpen = false
+      this.targetOpen = {
+        selector: false,
+        element: false,
+      }
+      this.previousOpen = {
+        selector: false,
+        element: false,
+      }
+      this.lastClosed = {
+        selector: false,
+        element: false,
+      }
+      this._dataValue = false
+      this.hash = false
+
+      this._reopen = false
+      this._selectorOpen = false
+
+      this.lastFocusEl = false
+      this._focusEl = [
+        'a[href]',
+        'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
+        'button:not([disabled]):not([aria-hidden])',
+        'select:not([disabled]):not([aria-hidden])',
+        'textarea:not([disabled]):not([aria-hidden])',
+        'area[href]',
+        'iframe',
+        'object',
+        'embed',
+        '[contenteditable]',
+        '[tabindex]:not([tabindex^="-"])',
+      ]
+      //this.options = Object.assign(config, options);
+      this.options = {
+        ...config,
+        ...options,
+        classes: {
+          ...config.classes,
+          ...options?.classes,
+        },
+        hashSettings: {
+          ...config.hashSettings,
+          ...options?.hashSettings,
+        },
+        on: {
+          ...config.on,
+          ...options?.on,
+        },
+      }
+      this.bodyLock = false
+      this.options.init ? this.initPopups() : null
+    }
+    initPopups() {
+      this.eventsPopup()
+    }
+    eventsPopup() {
+      document.addEventListener(
+        'click',
+        function (e) {
+          const buttonOpen = e.target.closest(
+            `[${this.options.attributeOpenButton}]`
+          )
+          if (buttonOpen) {
+            e.preventDefault()
+            this._dataValue = buttonOpen.getAttribute(
+              this.options.attributeOpenButton
+            )
+              ? buttonOpen.getAttribute(this.options.attributeOpenButton)
+              : 'error'
+            this.youTubeCode = buttonOpen.getAttribute(
+              this.options.youtubeAttribute
+            )
+              ? buttonOpen.getAttribute(this.options.youtubeAttribute)
+              : null
+            if (this._dataValue !== 'error') {
+              if (!this.isOpen) this.lastFocusEl = buttonOpen
+              this.targetOpen.selector = `${this._dataValue}`
+              this._selectorOpen = true
+              this.open()
+              return
+            } else return
+          }
+          const buttonClose = e.target.closest(
+            `[${this.options.attributeCloseButton}]`
+          )
+          if (
+            buttonClose ||
+            (!e.target.closest(`.${this.options.classes.popupContent}`) &&
+              !e.target.closest('.qs-outside-current-month') &&
+              !e.target.closest('.qs-controls') &&
+              this.isOpen)
+          ) {
+            e.preventDefault()
+            this.close()
+            return
+          }
+        }.bind(this)
+      )
+      document.addEventListener(
+        'keydown',
+        function (e) {
+          if (
+            this.options.closeEsc &&
+            e.which == 27 &&
+            e.code === 'Escape' &&
+            this.isOpen
+          ) {
+            e.preventDefault()
+            this.close()
+            return
+          }
+          if (this.options.focusCatch && e.which == 9 && this.isOpen) {
+            this._focusCatch(e)
+            return
+          }
+        }.bind(this)
+      )
+
+      if (this.options.hashSettings.goHash) {
+        window.addEventListener(
+          'hashchange',
+          function () {
+            if (window.location.hash) {
+              this._openToHash()
+            } else {
+              this.close(this.targetOpen.selector)
+            }
+          }.bind(this)
+        )
+
+        window.addEventListener(
+          'load',
+          function () {
+            if (window.location.hash) {
+              this._openToHash()
+            }
+          }.bind(this)
+        )
+      }
+    }
+    open(selectorValue) {
+      if (bodyLockStatus) {
+        this.bodyLock =
+          document.documentElement.classList.contains('lock') && !this.isOpen
+            ? true
+            : false
+
+        if (
+          selectorValue &&
+          typeof selectorValue === 'string' &&
+          selectorValue.trim() !== ''
+        ) {
+          this.targetOpen.selector = selectorValue
+          this._selectorOpen = true
+        }
+        if (this.isOpen) {
+          this._reopen = true
+          this.close()
+        }
+        if (!this._selectorOpen)
+          this.targetOpen.selector = this.lastClosed.selector
+        if (!this._reopen) this.previousActiveElement = document.activeElement
+
+        this.targetOpen.element = document.querySelector(
+          this.targetOpen.selector
+        )
+
+        if (this.targetOpen.element) {
+          if (this.youTubeCode) {
+            const codeVideo = this.youTubeCode
+            const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`
+            const iframe = document.createElement('iframe')
+            iframe.setAttribute('allowfullscreen', '')
+
+            const autoplay = this.options.setAutoplayYoutube ? 'autoplay;' : ''
+            iframe.setAttribute('allow', `${autoplay}; encrypted-media`)
+
+            iframe.setAttribute('src', urlVideo)
+
+            if (
+              !this.targetOpen.element.querySelector(
+                `[${this.options.youtubePlaceAttribute}]`
+              )
+            ) {
+              const youtubePlace = this.targetOpen.element
+                .querySelector('.popup__text')
+                .setAttribute(`${this.options.youtubePlaceAttribute}`, '')
+            }
+            this.targetOpen.element
+              .querySelector(`[${this.options.youtubePlaceAttribute}]`)
+              .appendChild(iframe)
+          }
+          if (this.options.hashSettings.location) {
+            this._getHash()
+            this._setHash()
+          }
+
+          this.options.on.beforeOpen(this)
+          document.dispatchEvent(
+            new CustomEvent('beforePopupOpen', {
+              detail: {
+                popup: this,
+              },
+            })
+          )
+
+          this.targetOpen.element.classList.add(
+            this.options.classes.popupActive
+          )
+          document.documentElement.classList.add(
+            this.options.classes.bodyActive
+          )
+
+          if (!this._reopen) {
+            !this.bodyLock ? bodyLock() : null
+          } else this._reopen = false
+
+          this.targetOpen.element.setAttribute('aria-hidden', 'false')
+
+          this.previousOpen.selector = this.targetOpen.selector
+          this.previousOpen.element = this.targetOpen.element
+
+          this._selectorOpen = false
+
+          this.isOpen = true
+
+          setTimeout(() => {
+            this._focusTrap()
+          }, 50)
+
+          this.options.on.afterOpen(this)
+          document.dispatchEvent(
+            new CustomEvent('afterPopupOpen', {
+              detail: {
+                popup: this,
+              },
+            })
+          )
+        }
+      }
+    }
+    close(selectorValue) {
+      if (
+        selectorValue &&
+        typeof selectorValue === 'string' &&
+        selectorValue.trim() !== ''
+      ) {
+        this.previousOpen.selector = selectorValue
+      }
+      if (!this.isOpen || !bodyLockStatus) {
+        return
+      }
+      this.options.on.beforeClose(this)
+      document.dispatchEvent(
+        new CustomEvent('beforePopupClose', {
+          detail: {
+            popup: this,
+          },
+        })
+      )
+
+      if (this.youTubeCode) {
+        if (
+          this.targetOpen.element.querySelector(
+            `[${this.options.youtubePlaceAttribute}]`
+          )
+        )
+          this.targetOpen.element.querySelector(
+            `[${this.options.youtubePlaceAttribute}]`
+          ).innerHTML = ''
+      }
+      this.previousOpen.element.classList.remove(
+        this.options.classes.popupActive
+      )
+      // aria-hidden
+      this.previousOpen.element.setAttribute('aria-hidden', 'true')
+      if (!this._reopen) {
+        document.documentElement.classList.remove(
+          this.options.classes.bodyActive
+        )
+        !this.bodyLock ? bodyUnlock() : null
+        this.isOpen = false
+      }
+      this._removeHash()
+      if (this._selectorOpen) {
+        this.lastClosed.selector = this.previousOpen.selector
+        this.lastClosed.element = this.previousOpen.element
+      }
+      this.options.on.afterClose(this)
+      document.dispatchEvent(
+        new CustomEvent('afterPopupClose', {
+          detail: {
+            popup: this,
+          },
+        })
+      )
+
+      setTimeout(() => {
+        this._focusTrap()
+      }, 50)
+    }
+    _getHash() {
+      if (this.options.hashSettings.location) {
+        this.hash = this.targetOpen.selector.includes('#')
+          ? this.targetOpen.selector
+          : this.targetOpen.selector.replace('.', '#')
+      }
+    }
+    _openToHash() {
+      let classInHash = document.querySelector(
+        `.${window.location.hash.replace('#', '')}`
+      )
+        ? `.${window.location.hash.replace('#', '')}`
+        : document.querySelector(`${window.location.hash}`)
+        ? `${window.location.hash}`
+        : null
+
+      const buttons = document.querySelector(
+        `[${this.options.attributeOpenButton} = "${classInHash}"]`
+      )
+        ? document.querySelector(
+            `[${this.options.attributeOpenButton} = "${classInHash}"]`
+          )
+        : document.querySelector(
+            `[${this.options.attributeOpenButton} = "${classInHash.replace(
+              '.',
+              '#'
+            )}"]`
+          )
+      if (buttons && classInHash) this.open(classInHash)
+    }
+    _setHash() {
+      history.pushState('', '', this.hash)
+    }
+    _removeHash() {
+      history.pushState('', '', window.location.href.split('#')[0])
+    }
+    _focusCatch(e) {
+      const focusable = this.targetOpen.element.querySelectorAll(this._focusEl)
+      const focusArray = Array.prototype.slice.call(focusable)
+      const focusedIndex = focusArray.indexOf(document.activeElement)
+
+      if (e.shiftKey && focusedIndex === 0) {
+        focusArray[focusArray.length - 1].focus()
+        e.preventDefault()
+      }
+      if (!e.shiftKey && focusedIndex === focusArray.length - 1) {
+        focusArray[0].focus()
+        e.preventDefault()
+      }
+    }
+    _focusTrap() {
+      const focusable = this.previousOpen.element.querySelectorAll(
+        this._focusEl
+      )
+      if (!this.isOpen && this.lastFocusEl) {
+        this.lastFocusEl.focus()
+      } else {
+        focusable[0].focus()
+      }
+    }
+  }
+  new Popup({})
+
+  // showmore
+  function showMore() {
+    window.addEventListener('load', function (e) {
+      const showMoreBlocks = document.querySelectorAll('[data-showmore]')
+      let showMoreBlocksRegular
+      let mdQueriesArray
+      if (showMoreBlocks.length) {
+        // get regular objects
+        showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (
+          item,
+          index,
+          self
+        ) {
+          return !item.dataset.showmoreMedia
+        })
+        // regular objects initialization
+        showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null
+
+        document.addEventListener('click', showMoreActions)
+        window.addEventListener('resize', showMoreActions)
+
+        // get objects with media queries
+        mdQueriesArray = dataMediaQueries(showMoreBlocks, 'showmoreMedia')
+        if (mdQueriesArray && mdQueriesArray.length) {
+          mdQueriesArray.forEach(mdQueriesItem => {
+            // event
+            mdQueriesItem.matchMedia.addEventListener('change', function () {
+              initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+            })
+          })
+          initItemsMedia(mdQueriesArray)
+        }
+      }
+      function initItemsMedia(mdQueriesArray) {
+        mdQueriesArray.forEach(mdQueriesItem => {
+          initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+        })
+      }
+      function initItems(showMoreBlocks, matchMedia) {
+        showMoreBlocks.forEach(showMoreBlock => {
+          initItem(showMoreBlock, matchMedia)
+        })
+      }
+      function initItem(showMoreBlock, matchMedia = false) {
+        showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock
+        let showMoreContent = showMoreBlock.querySelectorAll(
+          '[data-showmore-content]'
+        )
+        let showMoreButton = showMoreBlock.querySelectorAll(
+          '[data-showmore-button]'
+        )
+        showMoreContent = Array.from(showMoreContent).filter(
+          item => item.closest('[data-showmore]') === showMoreBlock
+        )[0]
+        showMoreButton = Array.from(showMoreButton).filter(
+          item => item.closest('[data-showmore]') === showMoreBlock
+        )[0]
+        const hiddenHeight = getHeight(showMoreBlock, showMoreContent)
+        if (matchMedia.matches || !matchMedia) {
+          if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+            _slideUp(showMoreContent, 0, hiddenHeight)
+            showMoreButton.hidden = false
+          } else {
+            _slideDown(showMoreContent, 0, hiddenHeight)
+            showMoreButton.hidden = true
+          }
+        } else {
+          _slideDown(showMoreContent, 0, hiddenHeight)
+          showMoreButton.hidden = true
+        }
+      }
+      function getHeight(showMoreBlock, showMoreContent) {
+        let hiddenHeight = 0
+        const showMoreType = showMoreBlock.dataset.showmore
+          ? showMoreBlock.dataset.showmore
+          : 'size'
+        if (showMoreType === 'items') {
+          const showMoreTypeValue = showMoreContent.dataset.showmoreContent
+            ? showMoreContent.dataset.showmoreContent
+            : 3
+          const showMoreItems = showMoreContent.children
+          for (let index = 1; index < showMoreItems.length; index++) {
+            const showMoreItem = showMoreItems[index - 1]
+            hiddenHeight += showMoreItem.offsetHeight
+            if (index == showMoreTypeValue) break
+          }
+        } else {
+          const showMoreTypeValue = showMoreContent.dataset.showmoreContent
+            ? showMoreContent.dataset.showmoreContent
+            : 150
+          hiddenHeight = showMoreTypeValue
+        }
+        return hiddenHeight
+      }
+      function getOriginalHeight(showMoreContent) {
+        let parentHidden
+        let hiddenHeight = showMoreContent.offsetHeight
+        showMoreContent.style.removeProperty('height')
+        if (showMoreContent.closest(`[hidden]`)) {
+          parentHidden = showMoreContent.closest(`[hidden]`)
+          parentHidden.hidden = false
+        }
+        let originalHeight = showMoreContent.offsetHeight
+        parentHidden ? (parentHidden.hidden = true) : null
+        showMoreContent.style.height = `${hiddenHeight}px`
+        return originalHeight
+      }
+      function showMoreActions(e) {
+        const targetEvent = e.target
+        const targetType = e.type
+        if (targetType === 'click') {
+          if (targetEvent.closest('[data-showmore-button]')) {
+            const showMoreButton = targetEvent.closest('[data-showmore-button]')
+            const showMoreBlock = showMoreButton.closest('[data-showmore]')
+            const showMoreContent = showMoreBlock.querySelector(
+              '[data-showmore-content]'
+            )
+            const showMoreSpeed = showMoreBlock.dataset.showmoreButton
+              ? showMoreBlock.dataset.showmoreButton
+              : '500'
+            const hiddenHeight = getHeight(showMoreBlock, showMoreContent)
+            if (!showMoreContent.classList.contains('_slide')) {
+              showMoreBlock.classList.contains('_showmore-active')
+                ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight)
+                : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight)
+              showMoreBlock.classList.toggle('_showmore-active')
+            }
+          }
+        } else if (targetType === 'resize') {
+          showMoreBlocksRegular && showMoreBlocksRegular.length
+            ? initItems(showMoreBlocksRegular)
+            : null
+          mdQueriesArray && mdQueriesArray.length
+            ? initItemsMedia(mdQueriesArray)
+            : null
+        }
+      }
+    })
+  }
+  showMore()
+
+  // get hash
+  function getHash() {
+    if (location.hash) {
+      return location.hash.replace('#', '')
+    }
+  }
+
   // processing media requests from attributes
   function dataMediaQueries(array, dataSetValue) {
     // get objects with media queries
@@ -913,6 +1729,59 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // body lock
+  let bodyLockStatus = true
+  function bodyLockToggle(delay = 500) {
+    if (document.documentElement.classList.contains('lock')) {
+      bodyUnlock(delay)
+    } else {
+      bodyLock(delay)
+    }
+  }
+  function bodyUnlock(delay = 500) {
+    let body = document.querySelector('body')
+    if (bodyLockStatus) {
+      let lock_padding = document.querySelectorAll('[data-lp]')
+      setTimeout(() => {
+        for (let index = 0; index < lock_padding.length; index++) {
+          const el = lock_padding[index]
+          el.style.paddingRight = '0px'
+        }
+        body.style.paddingRight = '0px'
+        document.documentElement.classList.remove('lock')
+      }, delay)
+      bodyLockStatus = false
+      setTimeout(function () {
+        bodyLockStatus = true
+      }, delay)
+    }
+  }
+  function bodyLock(delay = 500) {
+    let body = document.querySelector('body')
+    if (bodyLockStatus) {
+      let lock_padding = document.querySelectorAll('[data-lp]')
+      for (let index = 0; index < lock_padding.length; index++) {
+        const el = lock_padding[index]
+        el.style.paddingRight =
+          window.innerWidth - document.body.offsetWidth + 'px'
+      }
+      body.style.paddingRight =
+        window.innerWidth - document.body.offsetWidth + 'px'
+      document.documentElement.classList.add('lock')
+
+      bodyLockStatus = false
+      setTimeout(function () {
+        bodyLockStatus = true
+      }, delay)
+    }
+  }
+
+  // set active class
+  function setActiveClass(target, array, className) {
+    removeClasses(array, className)
+    target.classList.add(className)
+  }
+
   // ===========================================================================
 
   const onClickHandler = e => {
@@ -949,11 +1818,11 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.style.overflow = 'auto'
     }
     if (target.closest('.alphabet-filter__button')) {
-      removeClasses(
+      setActiveClass(
+        target.closest('.alphabet-filter__button'),
         document.querySelectorAll('.alphabet-filter__button'),
         '_active'
       )
-      target.closest('.alphabet-filter__button').classList.add('_active')
     }
     if (target.closest('.spoiler-price-list__list-item')) {
       const currentItem = target.closest('.spoiler-price-list__list-item')
@@ -963,16 +1832,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const currentLetter = currentItemParent.querySelector(
         '.spoiler-price-list__letter'
       )
-      removeClasses(
+      setActiveClass(
+        currentItem,
         document.querySelectorAll('.spoiler-price-list__list-item'),
         '_active'
       )
-      removeClasses(
+      setActiveClass(
+        currentItemParent,
         document.querySelectorAll('.spoiler-price-list__group-item'),
         '_active'
       )
-      currentItem.classList.add('_active')
-      currentItemParent.classList.add('_active')
+
       alphabetIndex.innerHTML = currentLetter.innerHTML
       document.getElementById('service-name').innerHTML = currentItem.innerHTML
     }
@@ -980,27 +1850,71 @@ document.addEventListener('DOMContentLoaded', function () {
       const currentItem = target.closest('.spoiler-price-list__letters button')
       const letterIndex = currentItem.dataset.letterIndex
       const servicesGroup = document.querySelector('.spoiler-price-list__group')
-      removeClasses(
+
+      setActiveClass(
+        currentItem,
         document.querySelectorAll('.spoiler-price-list__letters button'),
         '_active'
       )
-      removeClasses(
+      setActiveClass(
+        servicesGroup.querySelector(`[data-letter-index="${letterIndex}"]`),
         document.querySelectorAll('.spoiler-price-list__group-item'),
         '_active'
       )
+
       removeClasses(
         document.querySelectorAll('.spoiler-price-list__list-item'),
         '_active'
       )
-      currentItem.classList.add('_active')
-      servicesGroup
-        .querySelector(`[data-letter-index="${letterIndex}"]`)
-        .classList.add('_active')
+
       alphabetIndex.innerHTML = currentItem.innerHTML
+    }
+    if (
+      target.closest('#open-sort-dropdown') &&
+      !sortDropdown.classList.contains('_slide')
+    ) {
+      if (!document.documentElement.classList.contains('_sort-dropdown-open')) {
+        document.documentElement.classList.add('_sort-dropdown-open')
+        _slideDown(sortDropdown)
+      } else if (
+        document.documentElement.classList.contains('_sort-dropdown-open')
+      ) {
+        document.documentElement.classList.remove('_sort-dropdown-open')
+        _slideUp(sortDropdown)
+      }
+    }
+    if (
+      target.closest('#slose-sort-dropdown') &&
+      !sortDropdown.classList.contains('_slide')
+    ) {
+      _slideUp(sortDropdown)
+      document.documentElement.classList.remove('_sort-dropdown-open')
+    }
+    if (target.closest('.doctor-card__date-item')) {
+      const targetParent = target.closest(
+        '.doctor-card__date-item'
+      ).parentElement
+      setActiveClass(
+        target.closest('.doctor-card__date-item'),
+        targetParent.querySelectorAll('.doctor-card__date-item'),
+        '_active'
+      )
+    }
+    if (target.closest('.doctor-card__hours')) {
+      const targetParent = target.closest('.doctor-card__hours').parentElement
+      setActiveClass(
+        target.closest('.doctor-card__hours'),
+        targetParent.querySelectorAll('.doctor-card__hours'),
+        '_active'
+      )
     }
   }
 
   // ===========================================================================
 
   document.addEventListener('click', onClickHandler)
+  window.addEventListener('resize', function () {
+    setHoursHeight()
+    moveImage()
+  })
 })
