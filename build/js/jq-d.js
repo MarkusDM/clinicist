@@ -1,3 +1,5 @@
+"use strict";
+
 $( document ).ready(function() {
     $('.header__top-form-down-block-data-item-link').each(function() {
         var text = $(this).text();
@@ -138,7 +140,7 @@ $( document ).ready(function() {
 			hide.slideToggle(300);
 			
 		});
-	});
+	  });
 
 
 
@@ -174,6 +176,93 @@ $('.search-page__search-down-lists-item').each(function() {
 });
 
 
+$('.services-p__form-alphabet-wrapper').each(function () {
+  let more = $(this).find('.services-p__alphabet-btn');
+  let hide = $(this).find('.services-p__form-alphabet-inner');
+  hide.hide(0);
+  more.click(function () {
+    hide.slideToggle(300);
+  });
+});
+
+
+
+$('.services-p__search').each(function () {
+  let more = $(this).find('.services-p__search-filter');
+  let searchInput = $(this).find('.services-p__search-input');
+  let hide = $(this).find('.services-p__search-wrap');
+  hide.hide(0);
+  more.click(function () {
+    hide.slideToggle(300);
+    searchInput.toggleClass('active');
+  });
+});
+
+
+$('.services-p__search-wrap-select').each(function () {
+  let more = $(this).find('.services-p__search-wrap-select-head');
+  let hide = $(this).find('.services-p__search-wrap-select-down');
+  hide.hide(0);
+  more.click(function () {
+    hide.slideToggle(300);
+    more.toggleClass('active');
+  });
+});
+
+
   
 });
+
+
+
+
+
+
+//  JS
+
+
+const rem = function (rem) {
+  if ($(window).width() > 768) {
+    return 0.005208335 * $(window).width() * rem
+  } else {
+    // где 375 это ширина моб версии макета
+    return (100 / 375) * (0.05 * $(window).width()) * rem
+  }
+}
+
+
+const offerBannerSwiper = new Swiper('.offer-banner__swiper', {
+  spaceBetween: rem(1),
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+  },
+  speed: 1000,
+  navigation: {
+    nextEl: '.offer-banner__next',
+    prevEl: '.offer-banner__prev',
+  },
+  
+});
+
+
+
+const blueBannerSwiper = new Swiper('.blue-banner__swiper', {
+  spaceBetween: rem(1),
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+  },
+  speed: 1000,
+  on: {
+    slideChange: function (blueBannerSwiper) {
+        $('.swiper-pagination-bullet').removeClass('swiper-pagination-bullet-active');
+        $('.swiper-pagination-bullet:nth-child('+ (blueBannerSwiper.realIndex % 4 + 1) +')').addClass('swiper-pagination-bullet-active');
+    }
+  },
+  
+});
+
 
