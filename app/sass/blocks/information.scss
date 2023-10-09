@@ -1,402 +1,400 @@
 .information {
-   margin-bottom: 17.9rem;
-   &__inner{
-      padding: 0 1rem;
-   }
-   &__subtitle {
-      margin-bottom: 1.5rem;
-   }
-   &__title {
-      margin-bottom: 6rem;
-   }
-   &__items {
-
-   }
-   &__one {
-      background: #EEF3F7;
-      display: flex;
-      justify-content: space-between;
-      min-height: 35rem;
-      &-img {
-         width: 51.6%rem;
-         height: 35rem;
-         & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-         }
+  margin-bottom: 17.9rem;
+  &__inner {
+    padding: 0 1rem;
+  }
+  &__subtitle {
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    margin-bottom: 6rem;
+  }
+  &__items {
+  }
+  &__one {
+    background: #eef3f7;
+    display: flex;
+    justify-content: space-between;
+    min-height: 35rem;
+    &-img {
+      width: 51.6%rem;
+      height: 35rem;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
-      &-content {
-         padding: 6rem 16rem 6rem 0rem;
-         position: relative;
-         width: 47.2%;
-         &-title {
-            font-family: "Montserrat";
-            font-size: 3.5rem;
-            line-height: 123%;
-            margin-bottom: 3rem;
-         }
-         &-text {
-            font-family: "MyriadPro";
-            font-size: 1.8rem;
-            line-height: 135%;
-            color: rgba(51, 51, 51, 0.5);
-         }
-         &-link {
-            position: absolute;
-            bottom: 6.2rem;
-            left: 0rem;
-         }
+    }
+    &-content {
+      padding: 6rem 16rem 6rem 0rem;
+      position: relative;
+      width: 47.2%;
+      &-title {
+        font-family: 'Montserrat';
+        font-size: 3.5rem;
+        line-height: 123%;
+        margin-bottom: 3rem;
       }
-   }
-   &__two {
-      min-height: 35.3rem;
-      display: flex;
-      &-licenzia {
-         padding: 4rem 37rem 4rem 4rem;
-         position: relative;
-         background-color: $blue;
-         width: 50%;
-         &-title {
-            font-family: "Montserrat";
-            font-weight: 500;
-            font-size: 3.5rem;
-            line-height: 123%;
-            color: $white;
-            margin-bottom: 2rem;
-         }
-         &-text {
-            font-family: "Montserrat";
-            font-size: 1.8rem;
-            line-height: 145%;
-            color: $white;
-         }
-         &-link {
-            font-family: "MyriadPro";
-            font-weight: 600;
-            font-size: 1.8rem;
-            line-height: 139%;
-            color: $white;
-            position: absolute;
-            left: 4rem;
-            bottom: 4rem;
-            padding-right: 2.6rem;
-            &::after {
-               background-image: url(../img/icons/arrow-white.svg);
-               transform: translateY(-50%) rotate(-90deg);
-               width: 1.6rem;
-               height: 2.2rem;
-            }
-         }
-         &-img {
-            position: absolute;
-            right: 0rem;
-            top: 0;
-            width: 38rem;
-            height: 35rem;
-            & img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
-         }
+      &-text {
+        font-family: 'MyriadPro';
+        font-size: 1.8rem;
+        line-height: 135%;
+        color: rgba(51, 51, 51, 0.5);
       }
-      &-content {
-         background: #FAFAFA;
-         position: relative;
-         width: 50%;
-         padding: 4rem 26rem 4rem 4rem;
-         &-title {
-            font-family: "Montserrat";
-            font-size: 3.5rem;
-            line-height: 123%;
-            margin-bottom: 2.2rem;
-            position: relative;
-            z-index: 2;
-         }
-         &-text {
-            font-family: "Montserrat";
-            font-size: 1.8rem;
-            line-height: 144%;
-            color: rgba(51, 51, 51, 0.5);
-            position: relative;
-            z-index: 2;
-         }
-         &-link {
-            position: absolute;
-            left: 4rem;
-            bottom: 4.2rem;
-         }
-         &-img {
-            position: absolute;
-            right: 0rem;
-            top: 0;
-            width: 39rem;
-            height: 35.6rem;
-            & img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
-         }
+      &-link {
+        position: absolute;
+        bottom: 6.2rem;
+        left: 0rem;
       }
-   }
-   &__three {
-      min-height: 35.3rem;
-      display: flex;
-      &-licenzia {
-         padding: 4rem 32rem 4rem 4rem;
-         width: 50%;
-         background: #FAFAFA;
-         position: relative;
-         &-title {
-            font-family: "Montserrat";
-            font-size: 3.5rem;
-            line-height: 123%;
-            margin-bottom: 2.3rem;
-         }
-         &-text {
-            font-family: "Montserrat";
-            font-size: 1.8rem;
-            line-height: 144%;
-            color: rgba(51, 51, 51, 0.5);
-         }
-         &-link {
-            position: absolute;
-            left: 4rem;
-            bottom: 4.2rem;
-         }
-         &-img {
-            position: absolute;
-            right: 0.5rem;
-            bottom: 0rem;
-            width: 32rem;
-            height: 34.3rem;
-            & img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
-         }
-      }
-      &-content {
-         padding: 4rem 37rem 4rem 4rem;
-         width: 50%;
-         background: #EEF3F7;
-         position: relative;
-         &-title {
-            font-family: "Montserrat";
-            font-size: 3.5rem;
-            line-height: 123%;
-            margin-bottom: 2.1rem;
-         }
-         &-text {
-            font-family: "Montserrat";
-            font-size: 1.8rem;
-            line-height: 145%;
-            color: rgba(51, 51, 51, 0.5);
-         }
-         &-link {
-            position: absolute;
-            left: 4rem;
-            bottom: 4.2rem;
-         }
-         &-img {
-            position: absolute;
-            right: 0rem;
-            bottom: 0;
-            width: 40rem;
-            height: 33.7rem;
-            & img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
-         }
-      }
-   }
-   &__four {
-      min-height: 35rem;
-      display: flex;
-      justify-content: space-between;
+    }
+  }
+  &__two {
+    min-height: 35.3rem;
+    display: flex;
+    &-licenzia {
+      padding: 4rem 37rem 4rem 4rem;
+      position: relative;
       background-color: $blue;
+      width: 50%;
+      &-title {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 3.5rem;
+        line-height: 123%;
+        color: $white;
+        margin-bottom: 2rem;
+      }
+      &-text {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        line-height: 145%;
+        color: $white;
+      }
+      &-link {
+        font-family: 'MyriadPro';
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 139%;
+        color: $white;
+        position: absolute;
+        left: 4rem;
+        bottom: 4rem;
+        padding-right: 2.6rem;
+        &::after {
+          background-image: url(../img/a-image/icons/arrow-white.svg);
+          transform: translateY(-50%) rotate(-90deg);
+          width: 1.6rem;
+          height: 2.2rem;
+        }
+      }
       &-img {
-         width: 53%;
-         height: 35rem;
-         & img {
+        position: absolute;
+        right: 0rem;
+        top: 0;
+        width: 38rem;
+        height: 35rem;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-content {
+      background: #fafafa;
+      position: relative;
+      width: 50%;
+      padding: 4rem 26rem 4rem 4rem;
+      &-title {
+        font-family: 'Montserrat';
+        font-size: 3.5rem;
+        line-height: 123%;
+        margin-bottom: 2.2rem;
+        position: relative;
+        z-index: 2;
+      }
+      &-text {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        line-height: 144%;
+        color: rgba(51, 51, 51, 0.5);
+        position: relative;
+        z-index: 2;
+      }
+      &-link {
+        position: absolute;
+        left: 4rem;
+        bottom: 4.2rem;
+      }
+      &-img {
+        position: absolute;
+        right: 0rem;
+        top: 0;
+        width: 39rem;
+        height: 35.6rem;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__three {
+    min-height: 35.3rem;
+    display: flex;
+    &-licenzia {
+      padding: 4rem 32rem 4rem 4rem;
+      width: 50%;
+      background: #fafafa;
+      position: relative;
+      &-title {
+        font-family: 'Montserrat';
+        font-size: 3.5rem;
+        line-height: 123%;
+        margin-bottom: 2.3rem;
+      }
+      &-text {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        line-height: 144%;
+        color: rgba(51, 51, 51, 0.5);
+      }
+      &-link {
+        position: absolute;
+        left: 4rem;
+        bottom: 4.2rem;
+      }
+      &-img {
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0rem;
+        width: 32rem;
+        height: 34.3rem;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-content {
+      padding: 4rem 37rem 4rem 4rem;
+      width: 50%;
+      background: #eef3f7;
+      position: relative;
+      &-title {
+        font-family: 'Montserrat';
+        font-size: 3.5rem;
+        line-height: 123%;
+        margin-bottom: 2.1rem;
+      }
+      &-text {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        line-height: 145%;
+        color: rgba(51, 51, 51, 0.5);
+      }
+      &-link {
+        position: absolute;
+        left: 4rem;
+        bottom: 4.2rem;
+      }
+      &-img {
+        position: absolute;
+        right: 0rem;
+        bottom: 0;
+        width: 40rem;
+        height: 33.7rem;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__four {
+    min-height: 35rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: $blue;
+    &-img {
+      width: 53%;
+      height: 35rem;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      padding: 6rem 18rem 6rem 0rem;
+      width: 47.4%;
+      position: relative;
+      &-title {
+        font-family: 'Montserrat';
+        font-size: 3.5rem;
+        line-height: 123%;
+        color: $white;
+        margin-bottom: 3rem;
+      }
+      &-text {
+        font-family: 'MyriadPro';
+        font-size: 1.8rem;
+        line-height: 135%;
+        color: $white;
+      }
+      &-link {
+        font-family: 'MyriadPro';
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 139%;
+        color: $white;
+        position: absolute;
+        left: 0rem;
+        bottom: 6rem;
+        padding-right: 2.6rem;
+        &::after {
+          background-image: url(../img/a-image/icons/arrow-white.svg);
+          transform: translateY(-50%) rotate(-90deg);
+          width: 1.6rem;
+          height: 2.2rem;
+        }
+      }
+    }
+  }
+  &.information-pacientam {
+    .information {
+      &__subtitle {
+        margin-bottom: 1.8rem;
+      }
+      &__one {
+        &-content {
+          width: 45.8%;
+        }
+      }
+      &__two {
+        &-licenzia {
+          padding-right: 30rem;
+          &-title {
+            margin-bottom: 3rem;
+          }
+          &-text {
+            width: 80%;
+          }
+          &-link {
+            bottom: 5rem;
+          }
+          &-img {
+            top: unset;
+            width: 38.8rem;
+            height: 34rem;
+            bottom: 0;
+          }
+        }
+        &-content {
+          padding-left: 6rem;
+          &-title {
+            margin-bottom: 3.2rem;
+          }
+          &-link {
+            left: 6rem;
+            bottom: 5rem;
+          }
+          &-img {
+            right: 3rem;
+            width: 26rem;
+            height: 35.6rem;
+          }
+        }
+      }
+      &__three {
+        &-licenzia {
+          &-title {
+            margin-bottom: 3.1rem;
+          }
+          &-link {
+            bottom: 5.2rem;
+          }
+        }
+        &-content {
+          padding: 4rem 33rem 4rem 6rem;
+          &-title {
+            margin-bottom: 3.1rem;
+          }
+          &-text {
+            width: 90%;
+          }
+          &-link {
+            left: 6rem;
+            bottom: 5.2rem;
+          }
+        }
+      }
+    }
+  }
+  &.information-vse-stati {
+    .information {
+      &__items {
+      }
+      &__three {
+        height: 35.2rem;
+        &-licenzia {
+          padding: 0;
+          height: 100%;
+          & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-         }
-      }
-      &-content {
-         padding: 6rem 18rem 6rem 0rem;
-         width: 47.4%;
-         position: relative;
-         &-title {
-            font-family: "Montserrat";
-            font-size: 3.5rem;
-            line-height: 123%;
-            color: $white;
-            margin-bottom: 3rem;
-         }
-         &-text {
-            font-family: "MyriadPro";
-            font-size: 1.8rem;
+          }
+        }
+        &-content {
+          padding: 5rem 22rem 4rem 6rem;
+          &-title {
+            line-height: 140%;
+          }
+          &-text {
+            font-family: 'MyriadPro';
             line-height: 135%;
-            color: $white;
-         }
-         &-link {
-            font-family: "MyriadPro";
-            font-weight: 600;
-            font-size: 1.8rem;
-            line-height: 139%;
-            color: $white;
-            position: absolute;
-            left: 0rem;
-            bottom: 6rem;
-            padding-right: 2.6rem;
-            &::after {
-               background-image: url(../img/icons/arrow-white.svg);
-               transform: translateY(-50%) rotate(-90deg);
-               width: 1.6rem;
-               height: 2.2rem;
-            }
-         }
+          }
+          &-link {
+            left: 6rem;
+            bottom: 6.2rem;
+          }
+        }
       }
-   }
-   &.information-pacientam {
-      .information {
-         &__subtitle {
-            margin-bottom: 1.8rem;
-         }
-         &__one {
-            &-content {
-               width: 45.8%;
-            }
-         }
-         &__two {
-            &-licenzia {
-               padding-right: 30rem;
-               &-title {
-                  margin-bottom: 3rem;
-               }
-               &-text {
-                  width: 80%;
-               }
-               &-link {
-                  bottom: 5rem;
-               }
-               &-img {
-                  top: unset;
-                  width: 38.8rem;
-                  height: 34rem;
-                  bottom: 0;
-               }
-            }
-            &-content {
-               padding-left: 6rem;
-               &-title {
-                  margin-bottom: 3.2rem;
-               }
-               &-link {
-                  left: 6rem;
-                  bottom: 5rem;
-               }
-               &-img {
-                  right: 3rem;
-                  width: 26rem;
-                  height: 35.6rem;
-               }
-            }
-         }
-         &__three {
-            &-licenzia {
-               &-title {
-                  margin-bottom: 3.1rem;
-               }
-               &-link {
-                  bottom: 5.2rem;
-               }
-            }
-            &-content {
-               padding: 4rem 33rem 4rem 6rem;
-               &-title {
-                  margin-bottom: 3.1rem;
-               }
-               &-text {
-                  width: 90%;
-               }
-               &-link {
-                  left: 6rem;
-                  bottom: 5.2rem;
-               }
-            }
-         }
+      &__two {
+        height: 35.2rem;
+        &-licenzia {
+          padding: 3.9rem 37rem 4rem 4rem;
+          &-link {
+            bottom: 5rem;
+          }
+          &-img {
+            top: unset;
+            bottom: 0;
+            width: 34rem;
+            height: 34rem;
+          }
+        }
+        &-content {
+          padding: 3.5rem 37rem 4rem 6rem;
+          &-title {
+            line-height: 128%;
+          }
+          &-link {
+            left: 6rem;
+            bottom: 5.2rem;
+          }
+          &-img {
+            width: 31rem;
+            height: 31.5rem;
+            top: unset;
+            bottom: 0;
+          }
+        }
       }
-   }
-   &.information-vse-stati {
-      .information {
-         &__items {
-
-         }
-         &__three {
-            height: 35.2rem;
-            &-licenzia {
-               padding: 0;
-               height: 100%;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
-            }
-            &-content {
-               padding: 5rem 22rem 4rem 6rem;
-               &-title {
-                  line-height: 140%;
-               }
-               &-text {
-                  font-family: "MyriadPro";
-                  line-height: 135%;
-               }
-               &-link {
-                  left: 6rem;
-                  bottom: 6.2rem;
-               }
-            }
-         }
-         &__two {
-            height: 35.2rem;
-            &-licenzia {
-               padding: 3.9rem 37rem 4rem 4rem;
-               &-link {
-                  bottom: 5rem;
-               }
-               &-img {
-                  top: unset;
-                  bottom: 0;
-                  width: 34rem;
-                  height: 34rem;
-               }
-            }
-            &-content {
-               padding: 3.5rem 37rem 4rem 6rem;
-               &-title {
-                  line-height: 128%;
-               }
-               &-link {
-                  left: 6rem;
-                  bottom: 5.2rem;
-               }
-               &-img {
-                  width: 31rem;
-                  height: 31.5rem;
-                  top: unset;
-                  bottom: 0;
-               }
-            }
-         }
-      }
-   }
+    }
+  }
 }

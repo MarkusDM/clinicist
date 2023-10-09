@@ -59,44 +59,23 @@
 }
 
 .callback-appointment {
+  @extend %ellipses;
   position: relative;
   color: #ffffff;
   background: linear-gradient(180deg, #5fcbff 0%, #36b4f1 100%);
   overflow: hidden;
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(-5%, rgba(255, 255, 255, 0.2)),
-        color-stop(50%, rgba(255, 255, 255, 0))
-      ),
-      rgba(255, 255, 255, 0.04);
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.2) -5%,
-        rgba(255, 255, 255, 0) 50%
-      ),
-      rgba(255, 255, 255, 0.04);
-  }
   &::before {
+    bottom: -12.5rem;
+    left: 50%;
     width: 23.1rem;
     height: 23.1rem;
-    opacity: 0.4;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    left: 12rem;
-    bottom: -10.9rem;
+    transform: translateX(-50%);
   }
   &::after {
+    bottom: -16rem;
+    left: 25rem;
     width: 41.7rem;
     height: 41.7rem;
-    opacity: 0.4;
-    right: -18rem;
-    bottom: -14rem;
   }
 
   // .callback-appointment__heading
@@ -126,7 +105,7 @@
       flex: 0 0 4.3rem;
       width: 4.3rem;
       height: 4.3rem;
-      background-image: url(../img/icons/phone-big.png);
+      background-image: url(../img/a-image/icons/phone-big.png);
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -165,7 +144,7 @@
       flex: 0 0 2rem;
       width: 2rem;
       height: 2rem;
-      background-image: url(../img/icons/callback.svg);
+      background-image: url(../img/a-image/icons/callback.svg);
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -265,12 +244,12 @@
     background: #ffffff;
     &_whatsapp {
       &::before {
-        background-image: url(../img/icons/whatsapp.svg);
+        background-image: url(../img/a-image/icons/whatsapp.svg);
       }
     }
     &_telegram {
       &::before {
-        background-image: url(../img/icons/telegram.svg);
+        background-image: url(../img/a-image/icons/telegram.svg);
       }
     }
     &::before {
@@ -299,7 +278,7 @@
     line-height: 120%;
     color: #2f2f2f;
     &::before {
-      background-image: url(../img/icons/note.svg);
+      background-image: url(../img/a-image/icons/note.svg);
       transform: translateY(1rem);
     }
   }

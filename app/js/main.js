@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let breakpoint = window.matchMedia('(max-width: 48em)')
     let descOptions = {
       iconLayout: 'default#image',
-      iconImageHref: 'img/icons/map-point-blue.png',
+      iconImageHref: 'img/a-image/icons/map-point-blue.png',
       iconImageSize: [60, 82],
       iconImageOffset: [-30, -41],
     }
@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageHref: 'img/a-image/icons/map-point-blue.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageHref: 'img/a-image/icons/map-point-blue.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-blue.png',
+              iconImageHref: 'img/a-image/icons/map-point-blue.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -640,7 +640,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             options: {
               iconLayout: 'default#image',
-              iconImageHref: 'img/icons/map-point-orange.png',
+              iconImageHref: 'img/a-image/icons/map-point-orange.png',
               iconImageSize: [60, 82],
               iconImageOffset: [-30, -41],
             },
@@ -678,7 +678,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // DROPDOWN CLICK
 
-
   // $('.dropdown-click2').on('click', function () {
   //   $('.dropdown__content2').fadeToggle(300)
   // })
@@ -711,7 +710,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // $('.dropdown-click5').on('click', function () {
   //   $('.dropdown__content5').fadeToggle(300)
   // })
- 
 
   // $(document).mouseup(function (e) {
   //   if (
@@ -926,162 +924,6 @@ document.addEventListener('DOMContentLoaded', function () {
   defaultSelect()
 
   // КОНЕЦ SELECT
-
-  // Календарь
-  $(function () {
-    $.datepicker.regional['ru'] = {
-      showOn: 'both',
-      closeText: 'Закрыть',
-      prevText: '&#x3C;Пред',
-      nextText: 'След&#x3E;',
-      currentText: 'Сегодня',
-      monthNames: [
-        'Январь',
-        'Февраль',
-        'Март',
-        'Апрель',
-        'Май',
-        'Июнь',
-        'Июль',
-        'Август',
-        'Сентябрь',
-        'Октябрь',
-        'Ноябрь',
-        'Декабрь',
-      ],
-      monthNamesShort: [
-        'Янв',
-        'Фев',
-        'Мар',
-        'Апр',
-        'Май',
-        'Июн',
-        'Июл',
-        'Авг',
-        'Сен',
-        'Окт',
-        'Ноя',
-        'Дек',
-      ],
-      dayNames: [
-        'воскресенье',
-        'понедельник',
-        'вторник',
-        'среда',
-        'четверг',
-        'пятница',
-        'суббота',
-      ],
-      dayNamesShort: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
-      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-      weekHeader: 'Нед',
-      dateFormat: 'dd.mm.yy',
-      firstDay: 1,
-      isRTL: false,
-      showMonthAfterYear: false,
-      yearSuffix: '',
-    }
-    $.datepicker.setDefaults($.datepicker.regional['ru'])
-
-    $('#calendar').datepicker({
-      beforeShow: function (input, inst) {
-        inst.dpDiv.css({
-          position: 'static',
-          // top: $(input).offset().top + $(input).outerHeight(),
-          // left: $(input).offset().left
-        })
-      },
-    })
-    $('#calendar').datepicker('show')
-  })
-
-  // const date = new Date();
-
-  // const renderCalendar = () => {
-  //   date.setDate(1);
-
-  //   const monthDays = document.querySelector(".days");
-
-  //   const lastDay = new Date(
-  //     date.getFullYear(),
-  //     date.getMonth() + 1,
-  //     0
-  //   ).getDate();
-
-  //   const prevLastDay = new Date(
-  //     date.getFullYear(),
-  //     date.getMonth(),
-  //     0
-  //   ).getDate();
-
-  //   const firstDayIndex = date.getDay();
-
-  //   const lastDayIndex = new Date(
-  //     date.getFullYear(),
-  //     date.getMonth() + 1,
-  //     0
-  //   ).getDay();
-
-  //   const nextDays = 7 - lastDayIndex - 1;
-
-  //   const months = [
-  //     "Январь",
-  //     "Февраль",
-  //     "Март",
-  //     "Апрель",
-  //     "Май",
-  //     "Июнь",
-  //     "Июль",
-  //     "Август",
-  //     "Сентябрь",
-  //     "Октябрь",
-  //     "Ноябрь",
-  //     "Декабрь",
-  //   ];
-
-  //   if (document.querySelector(".date h1"))
-  //     document.querySelector(".date h1").innerHTML = months[date.getMonth()];
-
-  //   // document.querySelector(".date p").innerHTML = new Date().toDateString();
-
-  //   let days = "";
-
-  //   for (let x = firstDayIndex; x > 0; x--) {
-  //     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
-  //   }
-
-  //   for (let i = 1; i <= lastDay; i++) {
-  //     if (
-  //       i === new Date().getDate() &&
-  //       date.getMonth() === new Date().getMonth()
-  //     ) {
-  //       days += `<div class="today">${i}</div>`;
-  //     } else {
-  //       days += `<div class="toggle-class-activ">${i}</div>`;
-  //     }
-  //   }
-
-  //   for (let j = 1; j <= nextDays; j++) {
-  //     days += `<div class="next-date">${j}</div>`;
-  //   }
-
-  //   if (monthDays)
-  //     monthDays.innerHTML = days;
-  // };
-
-  // if (document.querySelector(".prev"))
-  //   document.querySelector(".prev").addEventListener("click", () => {
-  //     date.setMonth(date.getMonth() - 1);
-  //     renderCalendar();
-  //   });
-
-  // if (document.querySelector(".next"))
-  //   document.querySelector(".next").addEventListener("click", () => {
-  //     date.setMonth(date.getMonth() + 1);
-  //     renderCalendar();
-  //   });
-
-  // renderCalendar();
 })
 
 // forms
@@ -1591,25 +1433,21 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 const da = new DynamicAdapt('max')
 da.init()
 
-
 // let text = document.querySelectorAll("header__top-form-down-block-data-item-link").textContent;
 // let modifiedText = text.replace(/(^[а-яa-z]{3})/i, "<span style='color:blue'>$1</span>");
 // document.querySelectorAll(".header__top-form-down-block-data-item-link").innerHTML = modifiedText;
 
+// $(function() {
+//   var text,
+//       textBefore,
+//       textAfter;
 
-  // $(function() {
-  //   var text,
-  //       textBefore,
-  //       textAfter;
-    
-  //   $('.header__top-form-down-block-data-item-link').each(function() {
-  //     text = $(this).text();
-      
-  //     textAfter = text.substring(3);
-  //     textBefore = text.substring(0,3);
-      
-  //     $(this).empty().append('<span>' + textBefore + '</span>').append(textAfter);
-  //   });
-  // });
+//   $('.header__top-form-down-block-data-item-link').each(function() {
+//     text = $(this).text();
 
+//     textAfter = text.substring(3);
+//     textBefore = text.substring(0,3);
 
+//     $(this).empty().append('<span>' + textBefore + '</span>').append(textAfter);
+//   });
+// });
