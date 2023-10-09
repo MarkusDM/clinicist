@@ -72,3 +72,55 @@
 
 
 }
+
+
+
+@media (max-width: 48em) { 
+    .offer-banner {
+        padding-left: 4rem;
+       
+        &__arrows {
+            display: none;
+        }
+
+        &__box {
+            height: auto;
+        }
+    
+        &__box-img-d {
+            display: none;
+        }
+
+        &__box-img-m {
+            display: block;
+            width: 100%;
+            height: 13.6rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__box-link {
+            padding-left: 0;
+            padding-top: 0;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 186.667%;
+        }
+
+        &__box-text {
+            max-width: auto;
+            width: auto;
+            margin-left: 0;
+            margin-bottom: 2rem;
+            line-height: normal;
+            font-size: 3.2rem;
+        }
+    }
+
+   
+    
+}

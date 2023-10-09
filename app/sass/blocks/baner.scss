@@ -4196,7 +4196,7 @@
       left: 31%;
       width: 65.1rem;
       height: 65.1rem;
-     
+      
   }
 
     img {
@@ -4248,6 +4248,48 @@
       width: 85.1rem;
       height: 85.1rem;
       
+    }
+  }
+
+
+  .baner--price-s {
+    .container {
+      padding: 0;
+    }
+
+    .baner__content {
+      padding-top: 12rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      width: 100%;
+    }
+
+   
+
+    .baner__blue-word {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+
+    .baner__picture {
+      position: relative;
+      width: 100%;
+      margin-left: 0;
+      &::after {
+        width: 85.1rem;
+        height: 72.1rem;
+      }
+
+
+    }
+
+    .btn {
+      width: 96%;
+    }
+
+    .baner__inner::after {
+      display: none;
     }
   }
  }
