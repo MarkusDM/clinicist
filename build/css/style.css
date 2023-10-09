@@ -3008,7 +3008,8 @@ input[type='search']::-webkit-search-results-decoration {
       .baner-podgotovka-detalna .baner__content-text {
         width: 55%; }
   .baner-o_klinike {
-    margin-bottom: 23.6rem; }
+    margin-bottom: 23.6rem;
+    height: auto; }
     .baner-o_klinike .baner__inner {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
@@ -13900,7 +13901,8 @@ input[type='search']::-webkit-search-results-decoration {
     height: -moz-fit-content;
     height: fit-content; }
     .values__left-subtitle {
-      margin-bottom: 1.2rem; }
+      margin-bottom: 1.2rem;
+      color: #36b4f1; }
     .values__left-title {
       margin-bottom: 3.6rem; }
     .values__left-info {
