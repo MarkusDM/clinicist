@@ -1,6 +1,13 @@
 .centers {
   position: relative;
   margin-bottom: 18rem;
+  &-prices-detailed {
+    .centers {
+      &__subtitle {
+        text-transform: none;
+      }
+    }
+  }
   &__subtitle {
     margin-bottom: 0.8rem;
     text-transform: uppercase;

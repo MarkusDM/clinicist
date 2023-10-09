@@ -1,0 +1,245 @@
+.program-prices {
+  margin-bottom: 18rem;
+  padding: 8rem 0;
+  background-color: #eef3f7;
+
+  // .program-prices__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .program-prices__head
+
+  &__head {
+    margin-bottom: 6.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .program-prices__subtitle
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  // .program-prices__title
+
+  &__title {
+  }
+
+  // .program-prices__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+
+  // .program-prices__row
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .program-prices__items
+
+  &__items {
+    margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+  }
+
+  // .program-prices__item
+
+  &__item {
+  }
+
+  // .program-prices__total
+
+  &__total {
+    padding: 4rem 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.1);
+  }
+
+  // .program-prices__total-icon-wrap
+
+  &__total-icon-wrap {
+    margin-right: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 7.2rem;
+    width: 7.2rem;
+    height: 7.2rem;
+    border-radius: 50%;
+    background-color: #eef3f7;
+  }
+
+  // .program-prices__total-icon
+
+  &__total-icon {
+    flex: 0 0 3.4rem;
+    width: 3.4rem;
+    height: 3.4rem;
+    object-fit: contain;
+  }
+
+  // .program-prices__total-text-wrap
+
+  &__total-text-wrap {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .program-prices__total-cost
+
+  &__total-cost {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  // .program-prices__total-cost-heading
+
+  &__total-cost-heading {
+    font-family: Montserrat;
+    font-size: 2, 4rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  // .program-prices__total-prices
+
+  &__total-prices {
+    display: flex;
+    column-gap: 1.4rem;
+    font-family: Montserrat;
+  }
+
+  // .program-prices__total-price-current
+
+  &__total-price-current {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 101.5%;
+  }
+
+  // .program-prices__total-price-old
+
+  &__total-price-old {
+    align-self: flex-end;
+    color: rgba(51, 51, 51, 0.5);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 106.5%;
+    text-decoration: line-through;
+  }
+
+  // .program-prices__total-text
+
+  &__total-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  // .program-prices__total-btn
+
+  &__total-btn {
+    min-width: 29rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .program-prices {
+    margin-bottom: 20rem;
+    &__head {
+      align-items: flex-start;
+      text-align: left;
+    }
+    &__items {
+      margin-bottom: 6.4rem;
+      row-gap: 3.2rem;
+    }
+    &__subtitle {
+      margin-bottom: 2rem;
+    }
+    &__title {
+      margin-bottom: 6rem;
+    }
+    &__total {
+      padding: 6rem 4rem;
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      column-gap: 2rem;
+      row-gap: 6.2rem;
+    }
+    &__total-icon-wrap {
+      flex: 0 0 8rem;
+      width: 8rem;
+      height: 8rem;
+    }
+    &__total-cost {
+      margin: 0;
+    }
+    &__total-cost-heading {
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+    &__total-text {
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+    &__total-prices {
+      grid-column: span 2;
+    }
+    &__total-btn {
+      grid-column: span 2;
+    }
+    &__total-icon {
+      flex: 0 0 4rem;
+      width: 4rem;
+      height: 4rem;
+    }
+    &__total-prices {
+      column-gap: 2rem;
+    }
+    &__total-price-current {
+      font-size: 4rem;
+    }
+    &__total-price-old {
+      display: flex;
+      font-size: 3.2rem;
+      font-weight: 400;
+      text-decoration: none;
+      span {
+        &:first-child {
+          text-decoration: line-through;
+        }
+        &:last-child {
+          align-self: flex-start;
+          transform: translate(0.3rem, -0.6rem);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 48em) {
+  .program-prices {
+    .pricelist-item {
+      &__prices {
+        flex: 0 0 24rem;
+      }
+    }
+  }
+}

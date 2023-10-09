@@ -1,0 +1,155 @@
+.text-image {
+  margin-bottom: 18rem;
+
+  // .text-image__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 68.2rem;
+    column-gap: 9.4rem;
+  }
+
+  // .text-image__text-wrap
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .text-image__subtitle
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  // .text-image__title
+
+  &__title {
+    margin-bottom: 3.2rem;
+    max-width: 66.3rem;
+  }
+
+  // .text-image__text
+
+  &__text {
+    margin-bottom: 4.8rem;
+  }
+
+  // .text-image__group
+
+  &__group {
+    margin-bottom: 4rem;
+    display: flex;
+    column-gap: 8.8rem;
+  }
+
+  // .text-image__group-item
+
+  &__group-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .text-image__group-item-heading
+
+  &__group-item-heading {
+    color: $blue;
+    font-family: MyriadPro;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  // .text-image__group-item-subtext
+
+  &__group-item-subtext {
+  }
+
+  // .text-image__btn
+
+  &__btn {
+    min-width: 26.7rem;
+  }
+
+  // .text-image__link
+
+  &__link {
+    display: none;
+  }
+
+  // .text-image__image-group
+
+  &__image-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+
+  // .text-image__col
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    &:last-child {
+      transform: translateY(-6.4rem);
+    }
+  }
+
+  // .text-image__image-wrapper
+
+  &__image-wrapper {
+    width: 100%;
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .text-image {
+    margin-bottom: 16rem;
+    &__container {
+      grid-template-columns: 1fr;
+    }
+    &__subtitle {
+      margin-bottom: 1.6rem;
+    }
+    &__title {
+      margin-bottom: 4rem;
+    }
+    &__col {
+      &:last-child {
+        transform: translateY(-6.8rem);
+      }
+    }
+    &__group {
+      justify-content: space-between;
+      column-gap: normal;
+      width: 100%;
+    }
+    &__group-item-heading {
+      font-size: 5rem;
+    }
+    &__group {
+      margin-bottom: 8rem;
+    }
+    &__btn {
+      display: none;
+    }
+    &__link {
+      display: inline-flex;
+    }
+    &__text-wrap {
+      margin-bottom: 13.2rem;
+    }
+  }
+}
+@media (min-width: 48em) {
+  .text-image {
+    &__text-wrap {
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.doctors {
+  margin-bottom: 24.8rem;
+
+  // .doctors__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .doctors__spoiler
+
+  &__spoiler {
+    margin-bottom: 4.3rem;
+    display: flex;
+    flex-direction: column;
+    .alphabet-filter__title {
+      align-self: flex-end;
+    }
+  }
+
+  // .doctors__form
+
+  &__form {
+    margin-bottom: 4rem;
+  }
+
+  // .doctors__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  // .doctors__card
+
+  &__card {
+  }
+
+  // .doctors__page-navigation
+
+  &__page-navigation {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 48em) {
+  .doctors {
+    margin-bottom: 16rem;
+    &__group {
+      row-gap: 3.6rem;
+    }
+    &__page-navigation {
+      &.page-navigation {
+        justify-content: space-between;
+        column-gap: 2.2rem;
+        width: 100%;
+        &__group {
+          column-gap: 2.2rem;
+        }
+      }
+    }
+    &__spoiler {
+      .alphabet-filter__title {
+        align-self: flex-start;
+      }
+    }
+    .search-form__sort-button {
+      padding: 0 3rem;
+    }
+  }
+}
