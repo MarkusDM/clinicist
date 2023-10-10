@@ -24,7 +24,6 @@
     height: fit-content;
     &-subtitle {
       margin-bottom: 1.2rem;
-      color: $blue;
     }
     &-title {
       margin-bottom: 3.6rem;
@@ -84,80 +83,13 @@
         }
       }
     }
-    &-btn-prev {
-      position: absolute;
-      left: unset;
-      top: unset;
-      right: 7rem;
-      bottom: -7rem;
-      width: 6.9rem;
-      height: 6.9rem;
-      transform: translateY(0);
-      &::before{
-        position: absolute;
-        content: '';
-        width: 1.2rem;
-        height: 2.5rem;
-        transform: rotate(-180deg);
-        background-image: url(../img/icons/sl-arrow-active.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      &-disabled {
-        background: #fafafa;
-        &::before{
-          position: absolute;
-          content: '';
-          width: 1.2rem;
-          height: 2.5rem;
-          transform: rotate(-180deg);
-          background-image: url(../img/icons/sl-arrow-inactive.png);
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-    }
-    &-btn-next {
-      position: absolute;
-      top: unset;
-      right: 0rem;
-      bottom: -7rem;
-      width: 6.9rem;
-      height: 6.9rem;
-      transform: translateY(0);
-      &::before {
-        position: absolute;
-        content: '';
-        width: 1.2rem;
-        height: 2.5rem;
-        background-image: url(../img/icons/sl-arrow-active.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      &-disabled {
-        background: #fafafa;
-        &::before {
-          position: absolute;
-          content: '';
-          width: 1.2rem;
-          height: 2.5rem;
-          background-image: url(../img/icons/sl-arrow-inactive.png);
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-    }
   }
   &__right {
     width: 55.4%;
     &-slide {
       display: flex;
       &-disabled {
-        opacity: 0;
+        display: none;
       }
       &-content {
         /*  margin-right: 2.5rem; */
@@ -246,5 +178,20 @@
         }
       }
     }
+  }
+  &-btn-prev {
+    position: absolute;
+    left: unset;
+    top: unset;
+    right: 7rem;
+    bottom: -7rem;
+    transform: translateY(0);
+  }
+  &-btn-next {
+    position: absolute;
+    top: unset;
+    right: 0rem;
+    bottom: -7rem;
+    transform: translateY(0);
   }
 }
