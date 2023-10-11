@@ -13962,8 +13962,6 @@ input[type='search']::-webkit-search-results-decoration {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .values__right-slide-disabled {
-        display: none; }
       .values__right-slide-content {
         /*  margin-right: 2.5rem; */
         width: 73.4%; }
@@ -30893,7 +30891,12 @@ textarea {
         z-index: 2;
         margin: 4rem; }
       .pages__item-small-text {
-        width: 33.6rem; }
+        width: 33.6rem;
+        font-family: "Montserrat";
+        line-height: 2.6rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: rgba(51, 51, 51, 0.5); }
       .pages__item-small-img {
         position: absolute;
         z-index: 0;
@@ -30924,17 +30927,18 @@ textarea {
           background-repeat: no-repeat; }
       .pages__item:nth-child(4n+2) .pages__item-title {
         color: #fff; }
-      .pages__item:nth-child(4n+2) .pages__item-text {
+      .pages__item:nth-child(4n+2) .pages__item-text,
+      .pages__item:nth-child(4n+2) .pages__item-small-text {
         color: #fff; }
     .pages__item-title {
-      font-family: Montserrat;
+      font-family: "Montserrat";
       font-size: 3.5rem;
       font-weight: 400;
       line-height: normal;
       color: #2F2F2F;
       margin-bottom: 3rem; }
     .pages__item-text {
-      font-family: Myriad Pro;
+      font-family: "MyriadPro";
       font-size: 1.8rem;
       font-weight: 400;
       line-height: 2.4rem;
