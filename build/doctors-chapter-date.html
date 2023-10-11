@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="another website" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/js-datepicker/dist/datepicker.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Врачи (детальная)</title>
+    <noscript>
+      <style>
+        /**
+        * Reinstate scrolling for non-JS clients
+        */
+        .simplebar-content-wrapper {
+          scrollbar-width: auto;
+          -ms-overflow-style: auto;
+        }
+
+        .simplebar-content-wrapper::-webkit-scrollbar,
+        .simplebar-hide-scrollbar::-webkit-scrollbar {
+          display: initial;
+          width: initial;
+          height: initial;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    
+    <main class="main">
+      <section class="doctors-hero">
+        <div class="doctors-hero__container container">
+          <div class="doctors-hero__text-wrap">
+            <nav class="doctors-hero__breadcrumbs breadcrumbs txt">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+              <a href="#" class="breadcrumbs__link">Врачи</a>
+              <span class="breadcrumbs__text"
+                >Мишустин Александр Васильевич</span
+              >
+            </nav>
+            <div class="doctors-hero__application">
+              <span class="doctors-hero__title title"
+                >Мишустина Александра Васильевна</span
+              >
+              <form
+                data-da=".doctors-hero__container,768,last"
+                action="#"
+                class="doctors-hero__form">
+                <div class="doctors-hero__input-wrap">
+                  <input
+                    autocomplete="off"
+                    type="tel"
+                    name="form[]"
+                    data-error
+                    placeholder=""
+                    class="doctors-hero__input tel-mask" />
+                </div>
+                <button type="submit" class="doctors-hero__btn btn">
+                  Оставить заявку
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="doctors-hero__info">
+            <div class="doctors-hero__image-wrap">
+              <img
+                src="./img/a-image/doctor-card-img.webp"
+                alt=""
+                class="doctors-hero__image" />
+              <div
+                data-da=".doctors-hero__rating-wrap,768,1"
+                class="doctors-hero__price">
+                <span class="doctors-hero__price-text txt">Прием от </span>
+                <span class="doctors-hero__price-value"
+                  >1200 <span>₽</span></span
+                >
+              </div>
+            </div>
+            <div class="doctors-hero__group">
+              <div class="doctors-hero__labels">
+                <div class="doctors-hero__label">Гениколог</div>
+                <div class="doctors-hero__label">Акушер-гениколог</div>
+                <div class="doctors-hero__label">Хирург-уролог</div>
+                <div class="doctors-hero__label">Репродуктолог</div>
+              </div>
+              <div class="doctors-hero__rating-wrap">
+                <span class="doctors-hero__rating-text txt"
+                  >Высшая категория • Стаж 21 год</span
+                >
+                <div class="doctors-hero__rating-row">
+                  <span class="doctors-hero__rating-value">4.8</span>
+                  <div class="doctors-hero__rating-stars rating">
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_half"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="doctors-hero__row">
+                <span class="doctors-hero__text txt">1094 отзывов</span>
+                <a href="#" class="doctors-hero__link link"
+                  >Читать все отзывы</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="steps">
+        <div data-spoilers class="steps__container container">
+          <div class="steps__spoiler">
+            <button
+              type="button"
+              data-spoiler
+              class="steps__heading _spoiler-active title">
+              Записаться к врачу
+            </button>
+            <div class="steps__body">
+              <div class="steps__inner">
+                <div data-tabs class="steps__tabs">
+                  <nav data-tabs-titles class="steps__navigation">
+                    <button type="button" class="steps__title _tab-active">
+                      <span class="steps__num">1</span>
+                      <span class="steps__title-text"
+                        >Выбор даты и времени</span
+                      >
+                    </button>
+                    <button type="button" class="steps__title">
+                      <span class="steps__num">2</span>
+                      <span class="steps__title-text">Выбор услуги</span>
+                    </button>
+                    <button type="button" class="steps__title">
+                      <span class="steps__num">3</span>
+                      <span class="steps__title-text">Запись на прием</span>
+                    </button>
+                  </nav>
+                  <div data-tabs-body class="steps__content">
+                    <div class="steps__body">
+                      <div class="steps__head">
+                        <button type="button" class="steps__head-back link">
+                          Вернуться назад
+                        </button>
+                        <span class="steps__subtitle"
+                          ><span>Шаг 1.</span> Выберите дату и время
+                          приема</span
+                        >
+                      </div>
+                      <div class="steps__wrapper">
+                        <div id="datepicker"></div>
+                        <div class="steps__options">
+                          <div class="steps__select-wrap centers-select">
+                            <select data-show-selected name="form[]">
+                              <option
+                                data-asset="г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК Замок)"
+                                value="1"
+                                selected>
+                                Центр планирования семьи «Клиницист»
+                              </option>
+                              <option
+                                data-asset="г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева)"
+                                value="2">
+                                Центр «Клиницист»
+                              </option>
+                            </select>
+                          </div>
+                          <div class="steps__date date">
+                            <button type="button" class="date__item txt">
+                              <span class="_desktop-only">Понедельник</span>
+                              <span class="_mobile-only">Пн</span>
+                              <span class="date__day">22 апр.</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="date__item _active txt">
+                              <span class="_desktop-only">Воскресенье</span>
+                              <span class="_mobile-only">Вс</span>
+                              <span class="date__day">22 апр.</span>
+                            </button>
+                            <button type="button" class="date__item txt">
+                              <span class="_desktop-only">Среда</span>
+                              <span class="_mobile-only">Ср</span>
+                              <span class="date__day">22 апр.</span>
+                            </button>
+                            <button
+                              data-popup="#datepicker-modal"
+                              type="button"
+                              class="date__calendar">
+                              <img
+                                src="./img/a-image/icons/calendar.svg"
+                                aria-hidden="true"
+                                alt="" />
+                            </button>
+                          </div>
+                          <div class="steps__hours-group">
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                            <button
+                              type="button"
+                              class="steps__hours hours-item _desktop-only">
+                              9:00 - 9:15
+                            </button>
+                          </div>
+                          <div class="steps__actions">
+                            <button
+                              data-popup="#appointment-modal"
+                              type="button"
+                              class="steps__btn btn btn_white">
+                              Записаться к врачу
+                            </button>
+                            <a href="tel:88612073374" class="steps__call link"
+                              >8 (861) 207-33-74</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="steps__body steps__body_services">
+                      <div class="steps__head">
+                        <button type="button" class="steps__head-back link">
+                          Вернуться назад
+                        </button>
+                        <div class="steps__subtitle">
+                          <span>Шаг 2.</span> Выберите услугу для записи
+
+                          <div class="steps__info-icon">
+                            <img src="./img/a-image/icons/info.svg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="steps__wrapper">
+                        <div class="steps__services-labels swiper">
+                          <div
+                            class="steps__services-labels-wrap swiper-wrapper">
+                            <div
+                              class="steps__service-label service-label swiper-slide">
+                              <div class="service-label__icon-wrap">
+                                <img
+                                  src="./img/a-image/icons/hospital.svg"
+                                  alt=""
+                                  aria-hidden="true"
+                                  class="service-label__icon" />
+                              </div>
+                              <span class="service-label__text">Гематолог</span>
+                            </div>
+                            <div
+                              class="steps__service-label service-label swiper-slide">
+                              <div class="service-label__icon-wrap">
+                                <img
+                                  src="./img/a-image/icons/pin.svg"
+                                  alt=""
+                                  aria-hidden="true"
+                                  class="service-label__icon" />
+                              </div>
+                              <span class="service-label__text">Просвет</span>
+                            </div>
+                            <div
+                              class="steps__service-label service-label_img service-label swiper-slide">
+                              <div
+                                class="service-label__icon-wrap">
+                                <img
+                                  src="./img/a-image/doctor-ginecolog.webp"
+                                  alt=""
+                                  class="service-label__icon" />
+                              </div>
+                              <span
+                                class="service-label__text service-label__text_bold"
+                                >Мишустина Александра</span
+                              >
+                            </div>
+                            <div
+                              class="steps__service-label service-label swiper-slide">
+                              <div class="service-label__icon-wrap">
+                                <img
+                                  src="./img/a-image/icons/calendar-outline-black.svg"
+                                  alt=""
+                                  aria-hidden="true"
+                                  class="service-label__icon" />
+                              </div>
+                              <span class="service-label__text"
+                                >24.04.23, 10:00-11:00</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="steps__body">Содержимое третьего таба</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-clinic new-clinic-doctors-detailed">
+        <div class="container">
+          <div class="new-clinic__inner">
+            <div class="new-clinic__aside">
+              <div class="new-clinic__navigation-block navigation-block">
+                <div class="navigation-block__head">
+                  <span class="navigation-block__heading heading"
+                    >Больше информации</span
+                  >
+                  <p class="navigation-block__text txt">
+                    Подробная информация о враче
+                  </p>
+                </div>
+                <div class="navigation-block__tabs swiper">
+                  <div class="navigation-block__wrapper swiper-wrapper">
+                    <button
+                      data-type="doctor-info"
+                      type="button"
+                      class="navigation-block__tab swiper-slide _active">
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="19"
+                          height="24"
+                          viewBox="0 0 19 24"
+                          fill="none">
+                          <path
+                            d="M17.035 3.12202L15.379 1.46402C14.9157 0.998332 14.3646 0.629159 13.7576 0.377864C13.1507 0.126569 12.4999 -0.00185599 11.843 2.02654e-05H5.5C4.17441 0.00160812 2.90356 0.528902 1.96622 1.46624C1.02888 2.40358 0.501588 3.67443 0.5 5.00002V19C0.501588 20.3256 1.02888 21.5965 1.96622 22.5338C2.90356 23.4711 4.17441 23.9984 5.5 24H13.5C14.8256 23.9984 16.0964 23.4711 17.0338 22.5338C17.9711 21.5965 18.4984 20.3256 18.5 19V6.65702C18.5016 6.0002 18.373 5.34959 18.1215 4.74281C17.87 4.13604 17.5007 3.58515 17.035 3.12202ZM15.621 4.53602C15.7628 4.67734 15.8898 4.83282 16 5.00002H13.5V2.50002C13.6669 2.61134 13.8227 2.7386 13.965 2.88002L15.621 4.53602ZM16.5 19C16.5 19.7957 16.1839 20.5587 15.6213 21.1213C15.0587 21.684 14.2956 22 13.5 22H5.5C4.70435 22 3.94129 21.684 3.37868 21.1213C2.81607 20.5587 2.5 19.7957 2.5 19V5.00002C2.5 4.20437 2.81607 3.44131 3.37868 2.8787C3.94129 2.31609 4.70435 2.00002 5.5 2.00002H11.5V5.00002C11.5 5.53045 11.7107 6.03916 12.0858 6.41423C12.4609 6.78931 12.9696 7.00002 13.5 7.00002H16.5V19ZM13.5 9.00002C13.7652 9.00002 14.0196 9.10538 14.2071 9.29291C14.3946 9.48045 14.5 9.7348 14.5 10C14.5 10.2652 14.3946 10.5196 14.2071 10.7071C14.0196 10.8947 13.7652 11 13.5 11H5.5C5.23478 11 4.98043 10.8947 4.79289 10.7071C4.60536 10.5196 4.5 10.2652 4.5 10C4.5 9.7348 4.60536 9.48045 4.79289 9.29291C4.98043 9.10538 5.23478 9.00002 5.5 9.00002H13.5ZM14.5 14C14.5 14.2652 14.3946 14.5196 14.2071 14.7071C14.0196 14.8947 13.7652 15 13.5 15H5.5C5.23478 15 4.98043 14.8947 4.79289 14.7071C4.60536 14.5196 4.5 14.2652 4.5 14C4.5 13.7348 4.60536 13.4804 4.79289 13.2929C4.98043 13.1054 5.23478 13 5.5 13H13.5C13.7652 13 14.0196 13.1054 14.2071 13.2929C14.3946 13.4804 14.5 13.7348 14.5 14ZM14.308 17.413C14.4634 17.6269 14.5279 17.8936 14.4872 18.1548C14.4466 18.416 14.3041 18.6505 14.091 18.807C13.0778 19.529 11.8778 19.9432 10.635 20C9.90888 19.9965 9.20482 19.7501 8.635 19.3C8.307 19.075 8.182 19 7.935 19C7.26643 19.1035 6.63562 19.3769 6.103 19.794C5.89175 19.9446 5.63024 20.0072 5.37369 19.9686C5.11715 19.93 4.88565 19.7932 4.72808 19.5871C4.57052 19.381 4.49922 19.1217 4.52925 18.864C4.55927 18.6063 4.68827 18.3704 4.889 18.206C5.77018 17.522 6.82828 17.1036 7.939 17C8.60513 17.0107 9.24912 17.2409 9.771 17.655C10.0089 17.869 10.3152 17.9913 10.635 18C11.4527 17.9388 12.239 17.6594 12.912 17.191C13.1266 17.0355 13.3942 16.9715 13.6559 17.0131C13.9177 17.0547 14.1522 17.1986 14.308 17.413Z"
+                            fill="#D8DDE4" /></svg
+                        ><span>Информация о враче</span>
+                      </span>
+                    </button>
+                    <button
+                      data-type="doctor-career"
+                      type="button"
+                      class="navigation-block__tab swiper-slide">
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="24"
+                          viewBox="0 0 25 24"
+                          fill="none">
+                          <g clip-path="url(#clip0_3745_41732)">
+                            <path
+                              d="M24.5 9C24.5023 8.44948 24.353 7.90895 24.0686 7.4376C23.7842 6.96625 23.3755 6.58225 22.8874 6.32766C22.3993 6.07306 21.8505 5.95769 21.3012 5.99418C20.7519 6.03066 20.2232 6.21759 19.7731 6.5345C19.3229 6.85142 18.9686 7.28609 18.749 7.79091C18.5294 8.29574 18.453 8.85126 18.528 9.39664C18.6031 9.94202 18.8268 10.4562 19.1746 10.883C19.5224 11.3097 19.981 11.6325 20.5 11.816V16C20.5 17.5913 19.8679 19.1174 18.7426 20.2426C17.6174 21.3679 16.0913 22 14.5 22C12.9087 22 11.3826 21.3679 10.2574 20.2426C9.13214 19.1174 8.5 17.5913 8.5 16V15.92C10.1641 15.6786 11.6858 14.8467 12.7874 13.5762C13.8889 12.3058 14.4968 10.6815 14.5 9V5C14.4984 3.67441 13.9711 2.40356 13.0338 1.46622C12.0964 0.528882 10.8256 0.00158786 9.5 0C9.23478 0 8.98043 0.105357 8.79289 0.292893C8.60536 0.48043 8.5 0.734784 8.5 1C8.5 1.26522 8.60536 1.51957 8.79289 1.70711C8.98043 1.89464 9.23478 2 9.5 2C10.2956 2 11.0587 2.31607 11.6213 2.87868C12.1839 3.44129 12.5 4.20435 12.5 5V9C12.5 10.3261 11.9732 11.5979 11.0355 12.5355C10.0979 13.4732 8.82608 14 7.5 14C6.17392 14 4.90215 13.4732 3.96447 12.5355C3.02678 11.5979 2.5 10.3261 2.5 9V5C2.5 4.20435 2.81607 3.44129 3.37868 2.87868C3.94129 2.31607 4.70435 2 5.5 2C5.76522 2 6.01957 1.89464 6.20711 1.70711C6.39464 1.51957 6.5 1.26522 6.5 1C6.5 0.734784 6.39464 0.48043 6.20711 0.292893C6.01957 0.105357 5.76522 0 5.5 0C4.17441 0.00158786 2.90356 0.528882 1.96622 1.46622C1.02888 2.40356 0.501588 3.67441 0.5 5L0.5 9C0.503216 10.6815 1.11109 12.3058 2.21264 13.5762C3.31419 14.8467 4.83592 15.6786 6.5 15.92V16C6.5 18.1217 7.34285 20.1566 8.84315 21.6569C10.3434 23.1571 12.3783 24 14.5 24C16.6217 24 18.6566 23.1571 20.1569 21.6569C21.6571 20.1566 22.5 18.1217 22.5 16V11.816C23.0829 11.6099 23.5879 11.2288 23.9459 10.7247C24.3039 10.2206 24.4974 9.61826 24.5 9ZM21.5 10C21.3022 10 21.1089 9.94135 20.9444 9.83147C20.78 9.72159 20.6518 9.56541 20.5761 9.38268C20.5004 9.19996 20.4806 8.99889 20.5192 8.80491C20.5578 8.61093 20.653 8.43275 20.7929 8.29289C20.9327 8.15304 21.1109 8.0578 21.3049 8.01921C21.4989 7.98063 21.7 8.00043 21.8827 8.07612C22.0654 8.15181 22.2216 8.27998 22.3315 8.44443C22.4414 8.60888 22.5 8.80222 22.5 9C22.5 9.26522 22.3946 9.51957 22.2071 9.70711C22.0196 9.89464 21.7652 10 21.5 10Z"
+                              fill="#D8DDE4" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_3745_41732">
+                              <rect
+                                width="24"
+                                height="24"
+                                fill="white"
+                                transform="translate(0.5)" />
+                            </clipPath>
+                          </defs></svg
+                        ><span>Специализация врача</span></span
+                      >
+                    </button>
+                    <button
+                      data-type="doctor-methods"
+                      type="button"
+                      class="navigation-block__tab swiper-slide">
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="24"
+                          viewBox="0 0 25 24"
+                          fill="none">
+                          <g clip-path="url(#clip0_3745_41736)">
+                            <path
+                              d="M22.985 10.9745L12.5 17.2665L2.015 10.9745C1.78758 10.8381 1.51526 10.7976 1.25796 10.8619C1.00066 10.9262 0.779453 11.0901 0.643 11.3175C0.506546 11.545 0.466024 11.8173 0.530349 12.0746C0.594674 12.3319 0.758576 12.5531 0.986 12.6895L11.986 19.2895C12.1415 19.383 12.3196 19.4324 12.501 19.4324C12.6824 19.4324 12.8605 19.383 13.016 19.2895L24.016 12.6895C24.2434 12.5531 24.4073 12.3319 24.4717 12.0746C24.536 11.8173 24.4955 11.545 24.359 11.3175C24.2225 11.0901 24.0013 10.9262 23.744 10.8619C23.4867 10.7976 23.2144 10.8381 22.987 10.9745H22.985Z"
+                              fill="#D8DDE4" />
+                            <path
+                              d="M22.985 15.5429L12.5 21.8339L2.015 15.5429C1.90239 15.4753 1.77757 15.4306 1.64768 15.4113C1.51779 15.392 1.38536 15.3984 1.25796 15.4303C1.13056 15.4621 1.01068 15.5187 0.90516 15.5969C0.799645 15.6751 0.710562 15.7733 0.642997 15.8859C0.575431 15.9985 0.530708 16.1233 0.511379 16.2532C0.492051 16.3831 0.498496 16.5155 0.530346 16.6429C0.594671 16.9002 0.758573 17.1214 0.985997 17.2579L11.986 23.8579C12.1415 23.9513 12.3196 24.0007 12.501 24.0007C12.6824 24.0007 12.8605 23.9513 13.016 23.8579L24.016 17.2579C24.2434 17.1214 24.4073 16.9002 24.4716 16.6429C24.536 16.3856 24.4954 16.1133 24.359 15.8859C24.2225 15.6585 24.0013 15.4946 23.744 15.4303C23.4867 15.3659 23.2144 15.4064 22.987 15.5429H22.985Z"
+                              fill="#D8DDE4" />
+                            <path
+                              d="M12.5002 14.7721C11.9608 14.7718 11.4316 14.6249 10.9692 14.3471L0.985172 8.35608C0.83732 8.26717 0.714983 8.14153 0.630053 7.99136C0.545123 7.84119 0.500488 7.6716 0.500488 7.49908C0.500488 7.32656 0.545123 7.15697 0.630053 7.0068C0.714983 6.85663 0.83732 6.73098 0.985172 6.64208L10.9692 0.651079C11.4315 0.373308 11.9608 0.226563 12.5002 0.226562C13.0396 0.226562 13.5688 0.373308 14.0312 0.651079L24.0152 6.64208C24.163 6.73098 24.2854 6.85663 24.3703 7.0068C24.4552 7.15697 24.4999 7.32656 24.4999 7.49908C24.4999 7.6716 24.4552 7.84119 24.3703 7.99136C24.2854 8.14153 24.163 8.26717 24.0152 8.35608L14.0312 14.3471C13.5688 14.6249 13.0396 14.7718 12.5002 14.7721ZM3.44417 7.49908L12.0002 12.6321C12.1513 12.7225 12.3241 12.7702 12.5002 12.7702C12.6763 12.7702 12.8491 12.7225 13.0002 12.6321L21.5562 7.49908L13.0002 2.36608C12.8491 2.27568 12.6763 2.22795 12.5002 2.22795C12.3241 2.22795 12.1513 2.27568 12.0002 2.36608L3.44417 7.49908Z"
+                              fill="#D8DDE4" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_3745_41736">
+                              <rect
+                                width="24"
+                                height="24"
+                                fill="white"
+                                transform="translate(0.5)" />
+                            </clipPath>
+                          </defs></svg
+                        ><span>Методики</span></span
+                      >
+                    </button>
+                    <button
+                      data-type="doctor-articles"
+                      type="button"
+                      class="navigation-block__tab swiper-slide">
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="18"
+                          viewBox="0 0 25 18"
+                          fill="none">
+                          <g clip-path="url(#clip0_3745_54371)">
+                            <path
+                              d="M1.20312 6.33594H23.2031C23.4683 6.33594 23.7227 6.23058 23.9102 6.04304C24.0978 5.85551 24.2031 5.60115 24.2031 5.33594C24.2031 5.07072 24.0978 4.81637 23.9102 4.62883C23.7227 4.44129 23.4683 4.33594 23.2031 4.33594H1.20312C0.937909 4.33594 0.683555 4.44129 0.496018 4.62883C0.308482 4.81637 0.203125 5.07072 0.203125 5.33594C0.203125 5.60115 0.308482 5.85551 0.496018 6.04304C0.683555 6.23058 0.937909 6.33594 1.20312 6.33594Z"
+                              fill="#D8DDE4" />
+                            <path
+                              d="M23.2031 9.33594H9.20312C8.93791 9.33594 8.68355 9.44129 8.49602 9.62883C8.30848 9.81637 8.20312 10.0707 8.20312 10.3359C8.20312 10.6012 8.30848 10.8555 8.49602 11.043C8.68355 11.2306 8.93791 11.3359 9.20312 11.3359H23.2031C23.4683 11.3359 23.7227 11.2306 23.9102 11.043C24.0978 10.8555 24.2031 10.6012 24.2031 10.3359C24.2031 10.0707 24.0978 9.81637 23.9102 9.62883C23.7227 9.44129 23.4683 9.33594 23.2031 9.33594Z"
+                              fill="#D8DDE4" />
+                            <path
+                              d="M23.2031 14.3359H9.20312C8.93791 14.3359 8.68355 14.4413 8.49602 14.6288C8.30848 14.8164 8.20312 15.0707 8.20312 15.3359C8.20312 15.6012 8.30848 15.8555 8.49602 16.043C8.68355 16.2306 8.93791 16.3359 9.20312 16.3359H23.2031C23.4683 16.3359 23.7227 16.2306 23.9102 16.043C24.0978 15.8555 24.2031 15.6012 24.2031 15.3359C24.2031 15.0707 24.0978 14.8164 23.9102 14.6288C23.7227 14.4413 23.4683 14.3359 23.2031 14.3359Z"
+                              fill="#D8DDE4" />
+                            <path
+                              d="M1.91013 16.5816L4.88413 13.6076C5.08821 13.4029 5.20281 13.1257 5.20281 12.8366C5.20281 12.5476 5.08821 12.2703 4.88413 12.0656L1.91013 9.09162C1.77021 8.95175 1.59196 8.85652 1.39791 8.81798C1.20387 8.77945 1.00275 8.79933 0.820009 8.87513C0.637268 8.95092 0.481115 9.07922 0.371307 9.24378C0.261499 9.40834 0.20297 9.60178 0.203125 9.79962V15.8736C0.20297 16.0715 0.261499 16.2649 0.371307 16.4294C0.481115 16.594 0.637268 16.7223 0.820009 16.7981C1.00275 16.8739 1.20387 16.8938 1.39791 16.8552C1.59196 16.8167 1.77021 16.7215 1.91013 16.5816Z"
+                              fill="#D8DDE4" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_3745_54371">
+                              <rect
+                                width="24"
+                                height="24"
+                                fill="white"
+                                transform="translate(0.203125 0.335938)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>Статьи специалиста</span></span
+                      >
+                    </button>
+                    <button
+                      data-type="doctor-reviews"
+                      type="button"
+                      class="navigation-block__tab swiper-slide">
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          width="22"
+                          height="21"
+                          viewBox="0 0 22 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M11.2031 1.42452L13.8615 6.29894C14.1332 6.7971 14.6144 7.14673 15.1721 7.25117L20.6294 8.27314L16.8151 12.3077L17.5417 12.9947L16.8151 12.3077C16.4253 12.72 16.2414 13.2857 16.3145 13.8484L17.0289 19.3544L12.0131 16.9735C11.5005 16.7302 10.9057 16.7302 10.3931 16.9735L10.8219 17.8769L10.3931 16.9735L5.37734 19.3544L6.0918 13.8484C6.16481 13.2857 5.981 12.72 5.59118 12.3077L1.7768 8.27314L7.23414 7.25117C7.79186 7.14673 8.27309 6.7971 8.54477 6.29894L11.2031 1.42452ZM17.213 19.4418L17.2127 19.4417L17.213 19.4418Z"
+                            stroke="#D8DDE4"
+                            stroke-width="2" />
+                        </svg>
+
+                        <span>Отзывы</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-content-type="doctor-info"
+              class="new-clinic__content _active">
+              <div class="new-clinic__subtitle subtitle">О враче</div>
+              <div class="new-clinic__title title">Информация о враче</div>
+              <div class="new-clinic__text txt">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+              <ul class="new-clinic__list txt">
+                <li>Восприятие, как справедливо считает Ф.Энгельс</li>
+                <li>Однако Э.Дюркгейм утверждал: гештальт осознаёт</li>
+                <li>
+                  Гендер заметно представляет собой социометрический гомеостаз
+                </li>
+              </ul>
+              <div class="new-clinic__img">
+                <img src="./img/a-image/new-clinic.webp" alt="" />
+              </div>
+              <div class="new-clinic__text txt">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения. Восприятие, как справедливо считает Ф.Энгельс,
+                устойчиво отталкивает онтогенез речи. Однако Э.Дюркгейм
+                утверждал: гештальт осознаёт институциональный ассоцианизм, как
+                и предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+            </div>
+            <div data-content-type="doctor-career" class="new-clinic__content">
+              <div class="new-clinic__subtitle subtitle">О враче</div>
+              <div class="new-clinic__title title">Специализация врача</div>
+              <div class="new-clinic__career">
+                <div class="new-clinic__career-card career-card">
+                  <div class="career-card__image-wrap">
+                    <img
+                      src="./img/a-image/career-card-01.webp"
+                      alt=""
+                      class="career-card__image" />
+                  </div>
+                  <div class="career-card__text-wrap">
+                    <span class="career-card__heading heading">Ортопедия</span>
+                    <p class="career-card__text txt">
+                      В нашей клинике вы получите только самое современное и
+                      эффективное лечение В нашей клинике вы получите только
+                      самое современное и эффективное лечение
+                    </p>
+                    <a href="#" class="career-card__link link">Подробнее</a>
+                  </div>
+                </div>
+                <div class="new-clinic__career-card career-card">
+                  <div class="career-card__image-wrap">
+                    <img
+                      src="./img/a-image/career-card-02.webp"
+                      alt=""
+                      class="career-card__image" />
+                  </div>
+                  <div class="career-card__text-wrap">
+                    <span class="career-card__heading heading">Хирургия</span>
+                    <p class="career-card__text txt">
+                      В нашей клинике вы получите только самое современное и
+                      эффективное лечение В нашей клинике вы получите только
+                      самое современное и эффективное лечение
+                    </p>
+                    <a href="#" class="career-card__link link">Подробнее</a>
+                  </div>
+                </div>
+                <div class="new-clinic__career-card career-card">
+                  <div class="career-card__image-wrap">
+                    <img
+                      src="./img/a-image/career-card-01.webp"
+                      alt=""
+                      class="career-card__image" />
+                  </div>
+                  <div class="career-card__text-wrap">
+                    <span class="career-card__heading heading">Ортопедия</span>
+                    <p class="career-card__text txt">
+                      В нашей клинике вы получите только самое современное и
+                      эффективное лечение В нашей клинике вы получите только
+                      самое современное и эффективное лечение
+                    </p>
+                    <a href="#" class="career-card__link link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-content-type="doctor-methods"
+              class="new-clinic__content new-clinic__content_methods">
+              <div class="new-clinic__subtitle subtitle">Полезные ссылки</div>
+              <div class="new-clinic__title title">Перечень методик</div>
+              <ul class="new-clinic__links-list">
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >Ангиография отделов аорты и её ветвей</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >Ангиография сосудов головного мозга и шеи</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >Болюсное контрастное усиление</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >Внутривенное контрастное усиление</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >Денситометрия КТ (МСКТ) брюшной полости и забрюшинного
+                    пространства</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >КТ (МСКТ) височно-нижнечелюстного сустава</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >КТ (МСКТ) височных костей</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >КТ (МСКТ) головного мозга и костей черепа</a
+                  >
+                </li>
+                <li class="new-clinic__link-item link-item">
+                  <a href="#" class="link-item__text"
+                    >КТ (МСКТ) гортани Компьютерная томография грудной клетки
+                    (легких)</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              data-content-type="doctor-articles"
+              class="new-clinic__content">
+              <div class="new-clinic__subtitle subtitle">О враче</div>
+              <div class="new-clinic__title title">Статьи специалиста</div>
+              <div class="new-clinic__articles">
+                <div class="new-clinic__articles-row">
+                  <div class="new-clinic__article-card article-card">
+                    <div class="article-card__image-wrap">
+                      <img
+                        src="./img/a-image/article-card-01.webp"
+                        alt=""
+                        class="article-card__image" />
+                      <a href="#" class="article-card__label">Режим работы</a>
+                    </div>
+                    <div class="article-card__text-wrap">
+                      <span class="article-card__date _mobile-only"
+                        >10.10.2021</span
+                      >
+                      <span class="article-card__heading heading"
+                        >Мы предлагаем кузбассовцам пройти ЭКГ</span
+                      >
+                      <p class="article-card__text txt">
+                        В нашей клинике вы получите только самое современное и
+                        эффективное лечение В нашей клинике вы получите...
+                      </p>
+                      <a href="#" class="article-card__link link"
+                        >Читать новость</a
+                      >
+                    </div>
+                  </div>
+                  <div class="new-clinic__article-card article-card">
+                    <div class="article-card__image-wrap">
+                      <img
+                        src="./img/a-image/article-card-02.webp"
+                        alt=""
+                        class="article-card__image" />
+                      <a href="#" class="article-card__label">Режим работы</a>
+                    </div>
+                    <div class="article-card__text-wrap">
+                      <span class="article-card__date _mobile-only"
+                        >10.10.2021</span
+                      >
+                      <span class="article-card__heading heading"
+                        >Мы предлагаем кузбассовцам пройти ЭКГ</span
+                      >
+                      <p class="article-card__text txt">
+                        В нашей клинике вы получите только самое современное и
+                        эффективное лечение В нашей клинике вы получите...
+                      </p>
+                      <a href="#" class="article-card__link link"
+                        >Читать новость</a
+                      >
+                    </div>
+                  </div>
+                  <div class="new-clinic__article-card article-card">
+                    <div class="article-card__image-wrap">
+                      <img
+                        src="./img/a-image/article-card-03.webp"
+                        alt=""
+                        class="article-card__image" />
+                      <a href="#" class="article-card__label">Режим работы</a>
+                    </div>
+                    <div class="article-card__text-wrap">
+                      <span class="article-card__date _mobile-only"
+                        >10.10.2021</span
+                      >
+                      <span class="article-card__heading heading"
+                        >УЗИ и любых врачей на дому</span
+                      >
+                      <p class="article-card__text txt">
+                        В нашей клинике вы получите только самое современное и
+                        эффективное лечение В нашей клинике вы получите...
+                      </p>
+                      <a href="#" class="article-card__link link"
+                        >Читать новость</a
+                      >
+                    </div>
+                  </div>
+                  <div class="new-clinic__article-card article-card">
+                    <div class="article-card__image-wrap">
+                      <img
+                        src="./img/a-image/article-card-01.webp"
+                        alt=""
+                        class="article-card__image" />
+                      <a href="#" class="article-card__label">Режим работы</a>
+                    </div>
+                    <div class="article-card__text-wrap">
+                      <span class="article-card__date _mobile-only"
+                        >10.10.2021</span
+                      >
+                      <span class="article-card__heading heading"
+                        >Мы предлагаем кузбассовцам пройти ЭКГ</span
+                      >
+                      <p class="article-card__text txt">
+                        В нашей клинике вы получите только самое современное и
+                        эффективное лечение В нашей клинике вы получите...
+                      </p>
+                      <a href="#" class="article-card__link link"
+                        >Читать новость</a
+                      >
+                    </div>
+                  </div>
+                  <div class="new-clinic__article-card article-card">
+                    <div class="article-card__image-wrap">
+                      <img
+                        src="./img/a-image/article-card-01.webp"
+                        alt=""
+                        class="article-card__image" />
+                      <a href="#" class="article-card__label">Режим работы</a>
+                    </div>
+                    <div class="article-card__text-wrap">
+                      <span class="article-card__date _mobile-only"
+                        >10.10.2021</span
+                      >
+                      <span class="article-card__heading heading"
+                        >Мы предлагаем кузбассовцам пройти ЭКГ</span
+                      >
+                      <p class="article-card__text txt">
+                        В нашей клинике вы получите только самое современное и
+                        эффективное лечение В нашей клинике вы получите...
+                      </p>
+                      <a href="#" class="article-card__link link"
+                        >Читать новость</a
+                      >
+                    </div>
+                  </div>
+                  <div class="new-clinic__article-card article-card">
+                    <div class="article-card__image-wrap">
+                      <img
+                        src="./img/a-image/article-card-04.webp"
+                        alt=""
+                        class="article-card__image" />
+                      <a href="#" class="article-card__label">Режим работы</a>
+                    </div>
+                    <div class="article-card__text-wrap">
+                      <span class="article-card__date _mobile-only"
+                        >10.10.2021</span
+                      >
+                      <span class="article-card__heading heading"
+                        >Мы предлагаем пройти ЭКГ</span
+                      >
+                      <p class="article-card__text txt">
+                        В нашей клинике вы получите только самое современное и
+                        эффективное лечение В нашей клинике вы получите...
+                      </p>
+                      <a href="#" class="article-card__link link"
+                        >Читать новость</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="new-clinic__articles-link link"
+                  >Загрузить еще</a
+                >
+              </div>
+            </div>
+            <div data-content-type="doctor-reviews" class="new-clinic__content">
+              <div class="new-clinic__title title">Отзывы о специалисте</div>
+              <div class="new-clinic__rating">
+                <div class="new-clinic__rating-group rating-group">
+                  <span class="rating-group__subtitle txt">Рейтинг</span>
+                  <div class="rating-group__row">
+                    <span class="rating-group__value">5.0</span>
+                    <div class="rating-group__stars rating">
+                      <div class="rating__item rating__item_full"></div>
+                      <div class="rating__item rating__item_full"></div>
+                      <div class="rating__item rating__item_full"></div>
+                      <div class="rating__item rating__item_full"></div>
+                      <div class="rating__item rating__item_full"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="new-clinic__reviews">
+                  <div class="new-clinic__reviews-row">
+                    <span class="txt">5 отзывов</span>
+                    <span class="txt">10 оценок</span>
+                  </div>
+                  <p
+                    data-da=".new-clinic__rating,768,first"
+                    class="new-clinic__reviews-text txt">
+                    Актуально на 21.03.2022
+                  </p>
+                </div>
+                <div class="new-clinic__rating-set">
+                  <span class="new-clinic__rating-set-subtitle txt"
+                    >Оцените врача</span
+                  >
+                  <div class="new-clinic__stars-set rating">
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                  </div>
+                </div>
+                <button type="button" class="new-clinic__rating-btn btn">
+                  Написать отзыв
+                </button>
+              </div>
+              <div class="new-clinic__reviews-group">
+                <div class="new-clinic__review-card review-card">
+                  <div class="review-card__head">
+                    <div class="review-card__heading-wrap">
+                      <span class="review-card__heading heading"
+                        >Николай Тареченков</span
+                      >
+                      <span class="review-card__date txt">04.06.2020</span>
+                    </div>
+                    <div class="review-card__info _mobile-only">
+                      <div class="review-card__info-item">
+                        <span class="review-card__info-heading">Врач</span>
+                        <p class="review-card__info-text txt">
+                          Мишустина Александра Васильевна
+                        </p>
+                      </div>
+                      <div class="review-card__info-item">
+                        <span class="review-card__info-heading">Услуга</span>
+                        <p class="review-card__info-text txt">Кардиология</p>
+                      </div>
+                    </div>
+                    <div class="review-card__rating-group rating-group">
+                      <span class="rating-group__subtitle txt"
+                        >Оценка врача:</span
+                      >
+                      <div class="rating-group__row rating-group__row_reversed">
+                        <span class="rating-group__value">5</span>
+                        <div class="rating-group__stars rating">
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-card__text-wrap">
+                    <div class="review-card__text-item">
+                      <span class="review-card__text-heading">Достоинства</span>
+                      <p class="review-card__text-content txt">
+                        Понравилось отношение врача во время приема
+                      </p>
+                    </div>
+                    <div class="review-card__text-item">
+                      <span
+                        class="review-card__text-heading review-card__text-heading_orange"
+                        >Недостатки</span
+                      >
+                      <p class="review-card__text-content txt">
+                        Не понравилось отношение врача во время приема
+                      </p>
+                    </div>
+                    <div class="review-card__text-item">
+                      <span class="review-card__text-heading">Комментарий</span>
+                      <p class="review-card__text-content txt">
+                        Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                        отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                        гештальт осознаёт институциональный ассоцианизм, как и
+                        предсказывает теория о бесполезном знании. Комплекс
+                        текстологически интегрирует психоз. Гендер заметно
+                        представляет собой социом...
+                      </p>
+                    </div>
+                  </div>
+                  <a href="#" class="review-card__link link">Весь отзыв</a>
+                </div>
+                <div class="new-clinic__review-card review-card">
+                  <div class="review-card__head">
+                    <div class="review-card__heading-wrap">
+                      <span class="review-card__heading heading"
+                        >Николай Тареченков</span
+                      >
+                      <span class="review-card__date txt">04.06.2020</span>
+                    </div>
+                    <div class="review-card__info _mobile-only">
+                      <div class="review-card__info-item">
+                        <span class="review-card__info-heading">Врач</span>
+                        <p class="review-card__info-text txt">
+                          Мишустина Александра Васильевна
+                        </p>
+                      </div>
+                      <div class="review-card__info-item">
+                        <span class="review-card__info-heading">Услуга</span>
+                        <p class="review-card__info-text txt">Кардиология</p>
+                      </div>
+                    </div>
+                    <div class="review-card__rating-group rating-group">
+                      <span class="rating-group__subtitle txt"
+                        >Оценка врача:</span
+                      >
+                      <div class="rating-group__row rating-group__row_reversed">
+                        <span class="rating-group__value">5</span>
+                        <div class="rating-group__stars rating">
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                          <div class="rating__item rating__item_full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-card__text-wrap">
+                    <div class="review-card__text-item">
+                      <span class="review-card__text-heading">Достоинства</span>
+                      <p class="review-card__text-content txt">
+                        Понравилось отношение врача во время приема
+                      </p>
+                    </div>
+                    <div class="review-card__text-item">
+                      <span
+                        class="review-card__text-heading review-card__text-heading_orange"
+                        >Недостатки</span
+                      >
+                      <p class="review-card__text-content txt">
+                        Не понравилось отношение врача во время приема
+                      </p>
+                    </div>
+                    <div class="review-card__text-item">
+                      <span class="review-card__text-heading">Комментарий</span>
+                      <p class="review-card__text-content txt">
+                        Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                        отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                        гештальт осознаёт институциональный ассоцианизм, как и
+                        предсказывает теория о бесполезном знании. Комплекс
+                        текстологически интегрирует психоз. Гендер заметно
+                        представляет собой социом...
+                      </p>
+                    </div>
+                  </div>
+                  <a href="#" class="review-card__link link">Весь отзыв</a>
+                </div>
+              </div>
+              <div class="new-clinic__reviews-footer">
+                <a href="#" class="new-clinic__reviews-footer-link link"
+                  >Показать еще 3</a
+                >
+                <p class="new-clinic__reviews-footer-text txt">
+                  1087 отзывов всего о враче
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-doctors">
+        <div class="our-doctors__container container">
+          <div class="our-doctors__head">
+            <div class="our-doctors__title-wrap">
+              <span class="our-doctors__subtitle subtitle"
+                >Наша команда специалистов</span
+              >
+              <span class="our-doctors__title title">Наши врачи</span>
+            </div>
+            <div
+              data-da=".our-doctors__container,768,last"
+              class="our-doctors__slider-control slider-control">
+              <div class="our-doctors__slider-fraction"></div>
+              <div class="our-doctors__slider-navigation">
+                <button
+                  type="button"
+                  class="swiper-button-prev btn-prev"></button>
+                <div
+                  class="our-doctors__slider-pagination swiper-pagination pagination"></div>
+                <button
+                  type="button"
+                  class="swiper-button-next btn-next"></button>
+              </div>
+            </div>
+          </div>
+          <div class="our-doctors__body">
+            <div class="our-doctors__slider swiper">
+              <div class="our-doctors__wrapper swiper-wrapper">
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn">
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/doctor-card-img.webp"
+                      alt=""
+                      class="our-doctors-card__image" />
+                  </div>
+                </div>
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn">
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/our-doctors-card-02.webp"
+                      alt=""
+                      class="our-doctors-card__image" />
+                  </div>
+                </div>
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn">
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/doctor-ginecolog.webp"
+                      alt=""
+                      class="our-doctors-card__image" />
+                  </div>
+                </div>
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon" />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn">
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/doctor-card-img.webp"
+                      alt=""
+                      class="our-doctors-card__image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="appointment">
+        <div class="appointment__container container">
+          <div class="appointment__head">
+            <span class="appointment__subtitle subtitle"
+              >Присоединяйтесь к 600 000 наших пациентов и получите
+              действительно качественные медицинские услуги!</span
+            >
+            <span class="appointment__title title">Запись на прием</span>
+          </div>
+          <div class="appointment__body">
+            <div class="appointment__callback callback-appointment">
+              <div class="callback-appointment__heading">
+                <span
+                  >Позвоните
+                  <a href="tel:84951897397">8 (495) 189-73-97</a></span
+                >
+              </div>
+              <p class="callback-appointment__text txt">
+                Или оставьте заявку на обратный звонок
+              </p>
+              <form action="#" class="callback-appointment__form">
+                <div class="callback-appointment__input-wrap">
+                  <input
+                    autocomplete="off"
+                    type="tel"
+                    name="form[]"
+                    placeholder=""
+                    class="callback-appointment__input tel-mask" />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn_white callback-appointment__btn">
+                  Заказать обратный звонок
+                </button>
+              </form>
+              <p class="callback-appointment__hint txt">
+                *Заказывая обратный звонок, вы соглашаетесь с
+                <a href="#">политикой обработки своих персональных данных</a>
+              </p>
+            </div>
+            <div class="appointment__contacts contacts-appointment">
+              <span class="contacts-appointment__heading">Напишите нам</span>
+              <div class="contacts-appointment__text-wrap txt">
+                <span class="contacts-appointment__text-heading"
+                  >Мы ответим на все ваши вопросы в ближайшее.
+                </span>
+                <p class="contacts-appointment__text">
+                  Будьте уверены, что наша команда сделает все возможное и
+                  предоставим вам полную информацию, которую вы ищете.
+                </p>
+              </div>
+              <div class="contacts-appointment__links">
+                <a
+                  href="#"
+                  class="contacts-appointment__item contacts-appointment__item_whatsapp">
+                  <span>Написать в WhatsApp</span>
+                </a>
+                <a
+                  href="#"
+                  class="contacts-appointment__item contacts-appointment__item_telegram">
+                  <span>Написать в Telegram</span>
+                </a>
+              </div>
+            </div>
+            <div class="appointment__registration registration-appointment">
+              <span class="registration-appointment__heading"
+                >Вы можете записаться онлайн на нашем сайте</span
+              >
+              <p class="registration-appointment__text txt">
+                Онлайн запись к врачу позволяет быстро выбрать удобное время и
+                день для посещения, а также записаться на прием
+              </p>
+              <a href="#" class="registration-appointment__btn btn"
+                >Выбрать врача и время записи</a
+              >
+              <p class="registration-appointment__hint txt">
+                *Ознакомьтесь с
+                <a href="#">Согласием на обработку персональных данных</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__left-logo">
+              <img src="./img/logo.png" alt="" />
+            </div>
+            <div class="footer__left-pay">
+              <div class="footer__left-pay-name">мы принимаем:</div>
+              <div class="footer__left-pay-imgs">
+                <div class="footer__left-pay-img footer__left-pay-img1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 67 20"
+                    fill="none">
+                    <g clip-path="url(#clip0_3533_9497)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.3743 0.742188V0.750351C18.3662 0.750351 15.7947 0.742188 15.109 3.19937C14.4804 5.45246 12.7089 11.673 12.6599 11.8444H12.1701C12.1701 11.8444 10.3579 5.48512 9.72112 3.1912C9.0354 0.734024 6.45577 0.742188 6.45577 0.742188H0.578125V19.4363H6.45577V8.33414H6.70067H6.94557L10.3742 19.4363H14.4559L17.8845 8.3423H18.3743V19.4363H24.252V0.742188H18.3743Z"
+                        fill="#2F2F2F"
+                        fill-opacity="0.35" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M39.8505 0.742188C39.8505 0.742188 38.128 0.897292 37.3198 2.7014L33.1565 11.8444H32.6667V0.742188H26.7891V19.4363H32.3402C32.3402 19.4363 34.1443 19.2731 34.9525 17.4771L39.0341 8.33414H39.524V19.4363H45.4016V0.742188H39.8505Z"
+                        fill="#2F2F2F"
+                        fill-opacity="0.35" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M48.0078 9.23438V19.4386H53.8855V13.4793H60.2529C63.0285 13.4793 65.3795 11.7079 66.253 9.23438H48.0078Z"
+                        fill="#2F2F2F"
+                        fill-opacity="0.35" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M60.261 0.742188H47.1914C47.8445 4.30143 50.5139 7.15861 53.967 8.08924C54.7507 8.30149 55.5752 8.41577 56.4242 8.41577H66.4978C66.5876 7.99128 66.6284 7.55862 66.6284 7.10963C66.6284 3.59121 63.7794 0.742188 60.261 0.742188Z"
+                        fill="#D2D2D2"
+                        fill-opacity="0.5" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3533_9497">
+                        <rect
+                          width="66.0418"
+                          height="18.6942"
+                          fill="white"
+                          transform="translate(0.585938 0.742188)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img2">
+                  <img src="./img/footer-pay2.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img3">
+                  <img src="./img/footer-pay3.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img4">
+                  <img src="./img/footer-pay4.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img5">
+                  <img src="./img/footer-pay5.png" alt="" />
+                </div>
+                <div class="footer__left-pay-img footer__left-pay-img6">
+                  <img src="./img/footer-pay6.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="footer__lists">
+              <div class="footer__list">
+                <div class="footer__list-title">Услуги</div>
+                <ul>
+                  <li><a href="#">Диагностика</a></li>
+                  <li><a href="#">Лечение</a></li>
+                  <li><a href="#">Профилактика</a></li>
+                  <li><a href="#">Комплексные программы</a></li>
+                  <li><a href="#">Реабилитация</a></li>
+                  <li><a href="#">Прием</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <div class="footer__list-title">О клинике</div>
+                <ul>
+                  <li><a href="#">Вакансии</a></li>
+                  <li><a href="#">Программа лояльности</a></li>
+                  <li><a href="#">Для организаций</a></li>
+                  <li><a href="#">Страховым организациям</a></li>
+                  <li><a href="#">Правовая информация</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <div class="footer__list-title">пациентам</div>
+                <ul>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Заболевания</a></li>
+                  <li><a href="#">Вопрос-ответ</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Список терминов</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <div class="footer__list-title">программы</div>
+                <ul>
+                  <li><a href="#">Программы годового обслуживания</a></li>
+                  <li><a href="#">Реабилитация</a></li>
+                  <li><a href="#">Комплексное обследование</a></li>
+                  <li><a href="#">Программы ведения беременности</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__lists">
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">врачи</a>
+              </div>
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">Адреса и контакты</a>
+              </div>
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">отзывы</a>
+              </div>
+              <div class="footer__list footer__list2">
+                <a href="#" class="footer__list-title">цены</a>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-email">
+                E-mail:
+                <span>info@medicine.ru</span>
+              </div>
+              <div class="footer__contacts-phone">
+                Телефон:
+                <span>+7 (495) 189-73-97</span>
+              </div>
+              <div class="footer__contacts-address">
+                Адрес:
+                <span>109431, г. Москва, ул. Привольная, 70</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-info">
+            <div class="footer__bottom-info-text">
+              © Copyright 2021 Клиницист. Сеть медицинских центров. Все права
+              защищены
+            </div>
+            <a href="#" class="footer__bottom-info-pol"
+              >Политика конфиденциальности</a
+            >
+          </div>
+          <div class="footer__bottom-mess">
+            <a href="#">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#36B4F1" />
+                <g clip-path="url(#clip0_3533_9438)">
+                  <path
+                    d="M8 32L9.69627 25.8403C8.64756 24.0323 8.09742 21.9848 8.10315 19.8916C8.10315 13.3327 13.467 8 20.0516 8C23.2493 8 26.2521 9.23764 28.5043 11.4848C30.7622 13.7319 32.0057 16.7205 32 19.8973C32 26.4563 26.6361 31.789 20.0458 31.789H20.0401C18.0401 31.789 16.0745 31.2871 14.3266 30.3403L8 32ZM14.6304 28.1901L14.9914 28.4068C16.5158 29.308 18.2636 29.7814 20.0458 29.7871H20.0516C25.5243 29.7871 29.9828 25.3555 29.9828 19.903C29.9828 17.2624 28.9513 14.7814 27.0773 12.9106C25.2034 11.0399 22.7049 10.0133 20.0516 10.0133C14.5788 10.0076 10.1203 14.4392 10.1203 19.8916C10.1203 21.7567 10.6418 23.576 11.639 25.1502L11.8739 25.5266L10.8711 29.1711L14.6304 28.1901Z"
+                    fill="white" />
+                  <path
+                    d="M8 32L9.69627 25.8403C8.64756 24.0323 8.09742 21.9848 8.10315 19.8916C8.10315 13.3327 13.467 8 20.0516 8C23.2493 8 26.2521 9.23764 28.5043 11.4848C30.7622 13.7319 32.0057 16.7205 32 19.8973C32 26.4563 26.6361 31.789 20.0458 31.789H20.0401C18.0401 31.789 16.0745 31.2871 14.3266 30.3403L8 32ZM14.6304 28.1901L14.9914 28.4068C16.5158 29.308 18.2636 29.7814 20.0458 29.7871H20.0516C25.5243 29.7871 29.9828 25.3555 29.9828 19.903C29.9828 17.2624 28.9513 14.7814 27.0773 12.9106C25.2034 11.0399 22.7049 10.0133 20.0516 10.0133C14.5788 10.0076 10.1203 14.4392 10.1203 19.8916C10.1203 21.7567 10.6418 23.576 11.639 25.1502L11.8739 25.5266L10.8711 29.1711L14.6304 28.1901Z"
+                    fill="white" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.0655 14.9174C16.842 14.4213 16.6071 14.4098 16.395 14.4041C16.2231 14.3984 16.0225 14.3984 15.822 14.3984C15.6214 14.3984 15.3005 14.4726 15.0254 14.7692C14.7503 15.0657 13.9824 15.7844 13.9824 17.2501C13.9824 18.7102 15.0541 20.1247 15.2031 20.3243C15.352 20.5239 17.2718 23.6209 20.3033 24.8129C22.8248 25.8053 23.3406 25.6057 23.885 25.5543C24.4294 25.503 25.65 24.8357 25.9022 24.1399C26.1486 23.4441 26.1486 22.8509 26.0741 22.7254C25.9996 22.6 25.799 22.5258 25.501 22.3775C25.203 22.2292 23.736 21.5106 23.4609 21.4079C23.1859 21.311 22.9853 21.2597 22.7904 21.5562C22.5899 21.8528 22.0168 22.5201 21.8449 22.7197C21.673 22.9194 21.4953 22.9422 21.1973 22.7939C20.8993 22.6456 19.9366 22.3319 18.7962 21.3167C17.9079 20.5296 17.3062 19.5543 17.1343 19.2578C16.9624 18.9612 17.1171 18.8015 17.2661 18.6532C17.3979 18.522 17.5641 18.3053 17.7131 18.1342C17.8621 17.9631 17.9137 17.8376 18.0111 17.638C18.1085 17.4384 18.0626 17.2673 17.9881 17.119C17.9137 16.9764 17.3291 15.5049 17.0655 14.9174Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_3533_9438">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(8 8)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#36B4F1" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0374 19.2889C16.2389 16.587 20.3742 14.8058 22.4433 13.9452C28.351 11.488 29.5786 11.0611 30.3787 11.047C30.5546 11.0439 30.9481 11.0875 31.203 11.2944C31.4182 11.469 31.4774 11.7049 31.5058 11.8704C31.5341 12.036 31.5694 12.4132 31.5413 12.7079C31.2212 16.0716 29.8359 24.2346 29.1312 28.002C28.833 29.5962 28.2458 30.1307 27.6774 30.183C26.442 30.2967 25.504 29.3666 24.3075 28.5822C22.4352 27.3549 21.3774 26.5909 19.5601 25.3933C17.4598 24.0092 18.8213 23.2485 20.0183 22.0053C20.3315 21.68 25.7745 16.7291 25.8799 16.28C25.893 16.2238 25.9053 16.0145 25.7809 15.9039C25.6565 15.7934 25.4729 15.8312 25.3404 15.8612C25.1527 15.9039 22.1616 17.8808 16.3674 21.7921C15.5184 22.375 14.7494 22.6591 14.0604 22.6442C13.3009 22.6278 11.8398 22.2147 10.7537 21.8617C9.42144 21.4286 8.36262 21.1997 8.45482 20.4642C8.50284 20.0811 9.03036 19.6894 10.0374 19.2889Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="datepicker-modal" aria-hidden="true" class="datepicker-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <form action="#" class="datepicker-modal__form">
+        <span class="datepicker-modal__title">Выберите время и дату</span>
+        <div id="datepicker"></div>
+        <div class="datepicker-modal__field">
+          <label for="pick-time-field" class="datepicker-modal__label"
+            >Выберите время записи</label
+          >
+          <div class="datepicker-modal__input-wrap">
+            <input
+              id="pick-time-field"
+              type="number"
+              placeholder="09:11"
+              class="datepicker-modal__input" />
+          </div>
+        </div>
+        <div class="datepicker-modal__actions">
+          <button type="button" class="datepicker-modal__head-back link">
+            Назад
+          </button>
+          <button type="submit" class="datepicker-modal__btn btn">
+            Готово
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="appointment-modal" aria-hidden="true" class="appointment-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="appointment-modal__body">
+        <span class="appointment-modal__title title">Запишитесь к врачу</span>
+        <span class="appointment-modal__subtitle subtitle"
+          >Присоединяйтесь к 600 000 нашихпациентов и получите действительно
+          качественные медицинские услуги</span
+        >
+        <form data-dev action="#" class="appointment-modal__form">
+          <div class="appointment-modal__input-wrap">
+            <input
+              autocomplete="off"
+              type="tel"
+              name="form[]"
+              data-error
+              placeholder
+              class="appointment-modal__input tel-mask" />
+          </div>
+          <div class="appointment-modal__contacts">
+            <span class="appointment-modal__contacts-heading txt"
+              >Выберите способ связи:</span
+            >
+            <div class="appointment-modal__contacts-group">
+              <button type="button" class="appointment-modal__contact _active">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/tel-outline-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt">Телефон</span>
+              </button>
+              <button type="button" class="appointment-modal__contact">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/whatsapp-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt"
+                  >WhatsApp</span
+                >
+              </button>
+              <button type="button" class="appointment-modal__contact">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/telegram-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt"
+                  >Telegram</span
+                >
+              </button>
+              <button
+                type="button"
+                class="appointment-modal__contact _mobile-only">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/viber-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt">Viber</span>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="appointment-modal__btn btn">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/choices.min.js"></script>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script src="./js/jquery-ui_(1.13.2).min.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-datepicker@5.18.2/dist/datepicker.min.js"></script>
+    <script src="./js/jquery.star-rating-svg.min.js"></script>
+    <script src="./js/simplebar.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/main-a.js"></script>
+  </body>
+</html>

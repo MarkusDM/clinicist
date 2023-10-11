@@ -1039,6 +1039,12 @@ input[type='search']::-webkit-search-results-decoration {
     visibility: visible;
   }
 }
+.popup__close {
+  width: 2rem;
+  img {
+    object-fit: contain;
+  }
+}
 
 .select-checkbox .select__option::before {
   content: '';
@@ -1343,6 +1349,18 @@ input[type='search']::-webkit-search-results-decoration {
   }
   ._desktop-only {
     display: none;
+  }
+  .popup {
+    &__wrapper {
+      padding: 0 4rem;
+    }
+    &__content {
+      width: 100%;
+      max-width: none;
+    }
+    &__close {
+      width: 4rem;
+    }
   }
 }
 @media (min-width: 48em) {
