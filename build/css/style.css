@@ -6454,25 +6454,25 @@ input[type='search']::-webkit-search-results-decoration {
       width: 100%;
       margin-left: 0; } }
 
-.baner--services .baner__content {
-  padding-top: 5rem;
-  width: 42%; }
-
-.baner--services .baner__picture img {
-  position: relative;
-  z-index: 2; }
-
-.baner--services .baner__picture::after {
-  position: absolute;
-  content: '';
-  top: 1rem;
-  left: 39%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 63.1rem;
-  height: 63.1rem;
-  border: 1px solid #d8dde4;
-  border-radius: 50%; }
+.baner--services {
+  margin-bottom: 4rem; }
+  .baner--services .baner__content {
+    padding-top: 5rem;
+    width: 42%; }
+  .baner--services .baner__picture img {
+    position: relative;
+    z-index: 2; }
+  .baner--services .baner__picture::after {
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: 39%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 63.1rem;
+    height: 63.1rem;
+    border: 1px solid #d8dde4;
+    border-radius: 50%; }
 
 .baner--price-s {
   height: auto; }
@@ -6548,6 +6548,9 @@ input[type='search']::-webkit-search-results-decoration {
     width: 96%; }
   .baner--price-s .baner__inner::after {
     display: none; } }
+
+.baner--s-direction {
+  margin-bottom: 4rem; }
 
 .solution {
   margin-top: 20rem;
@@ -33224,6 +33227,9 @@ body::after {
   .services-p__box-down-title {
     font-size: 3.2rem; } }
 
+.services-p--s-direction {
+  margin-bottom: 6rem; }
+
 .offer-banner {
   position: relative;
   margin-bottom: 4rem; }
@@ -33751,6 +33757,15 @@ body::after {
     .recording-site__image {
       width: 57.3rem;
       height: 71.7rem; } }
+
+.s-direction__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem; }
 
 #ui-datepicker-div {
   display: block !important;

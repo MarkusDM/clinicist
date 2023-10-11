@@ -4408,6 +4408,7 @@
 }
 
 .baner--services {
+  margin-bottom: 4rem;
   .baner__content {
     padding-top: 5rem;
     width: 42%;
@@ -4418,7 +4419,7 @@
       position: relative;
       z-index: 2;
     }
-  }
+}
 
   .baner__picture::after {
     position: absolute;
@@ -4477,6 +4478,10 @@
       z-index: 2;
     }
   }
+
+
+
+
 
 
 @media (max-width: 48em) {
@@ -4561,6 +4566,16 @@
   }
  }
 
+
+
+ .baner--s-direction {
+   margin-bottom: 4rem;
+
+
+   .baner__content-title {
+    
+   }
+ }
 
 
 

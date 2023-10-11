@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="another website" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    @@include('./template/header.html')
+
+    <main>
+        <section class="baner baner--s-direction">
+            <div class="container">
+                <div class="baner__inner">
+                    <div class="baner__content">
+                        <div class="baner__content-links">
+                            <a href="#" class="baner__content-links-link">Главная</a>
+                            <a href="#" class="baner__content-links-link">Услуги</a>
+                            <a href="#" class="baner__content-links-link nolink">Диагностика</a>
+                        </div>
+                        <div class="baner__content-title title">Диагностика</div>
+                        <div class="baner__content-text">
+                            В нашей клинике вы получите только самое современное и эффективное лечение
+                        </div>
+                    </div>
+                    <div class="baner__picture">
+                        <img src="./img/d-image/banner-services.webp" alt="История клиники" class="desctop" />
+                        <img src="./img/d-image/banner-services-mob.webp" alt="История клиники" class="mobile" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services-p services-p--s-direction">
+            <div class="container">
+                <form class="services-p__form">
+                    <div class="services-p__form-alphabet-wrapper">
+                        <button type="button" class="services-p__alphabet-btn">
+                            Найти по алфавиту
+                        </button>
+                        <div class="services-p__form-alphabet-inner">
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-1" type="radio" name="radio" value="1" checked>
+                                <label for="services-p__letter-radio-1" class="services-p__letter-label">Все</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-2" type="radio" name="radio" value="2">
+                                <label for="services-p__letter-radio-2" class="services-p__letter-label">а</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-3" type="radio" name="radio" value="3">
+                                <label for="services-p__letter-radio-3" class="services-p__letter-label">б</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-4" type="radio" name="radio" value="4">
+                                <label for="services-p__letter-radio-4" class="services-p__letter-label">в</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-5" type="radio" name="radio" value="5">
+                                <label for="services-p__letter-radio-5" class="services-p__letter-label">г</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-6" type="radio" name="radio" value="6">
+                                <label for="services-p__letter-radio-6" class="services-p__letter-label">д</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-7" type="radio" name="radio" value="7">
+                                <label for="services-p__letter-radio-7" class="services-p__letter-label">е</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-8" type="radio" name="radio" value="8">
+                                <label for="services-p__letter-radio-8" class="services-p__letter-label">ж</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-9" type="radio" name="radio" value="9">
+                                <label for="services-p__letter-radio-9" class="services-p__letter-label">з</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-10" type="radio" name="radio" value="10">
+                                <label for="services-p__letter-radio-10" class="services-p__letter-label">и</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-11" type="radio" name="radio" value="11">
+                                <label for="services-p__letter-radio-11" class="services-p__letter-label">к</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-12" type="radio" name="radio" value="12">
+                                <label for="dservices-p__letter-radio-12" class="services-p__letter-label">л</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-13" type="radio" name="radio" value="13">
+                                <label for="services-p__letter-radio-13" class="services-p__letter-label">м</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-14" type="radio" name="radio" value="14">
+                                <label for="services-p__letter-radio-14" class="services-p__letter-label">н</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-15" type="radio" name="radio" value="15">
+                                <label for="services-p__letter-radio-15" class="services-p__letter-label">о</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-16" type="radio" name="radio" value="16">
+                                <label for="services-p__letter-radio-16" class="services-p__letter-label">п</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-17" type="radio" name="radio" value="17">
+                                <label for="services-p__letter-radio-17" class="services-p__letter-label">р</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-18" type="radio" name="radio" value="18">
+                                <label for="services-p__letter-radio-18" class="services-p__letter-label">с</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-19" type="radio" name="radio" value="19">
+                                <label for="services-p__letter-radio-19" class="services-p__letter-label">т</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-20" type="radio" name="radio" value="20">
+                                <label for="services-p__letter-radio-20" class="services-p__letter-label">ц</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-21" type="radio" name="radio" value="21">
+                                <label for="services-p__letter-radio-21" class="services-p__letter-label">ш</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-22" type="radio" name="radio" value="22">
+                                <label for="services-p__letter-radio-22" class="services-p__letter-label">щ</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-23" type="radio" name="radio" value="23">
+                                <label for="services-p__letter-radio-23" class="services-p__letter-label">э</label>
+                            </div>
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-24" type="radio" name="radio" value="24">
+                                <label for="services-p__letter-radio-24" class="services-p__letter-label">ю</label>
+                            </div>
+
+                            <div class="services-p__letter">
+                                <input id="services-p__letter-radio-25" type="radio" name="radio" value="25">
+                                <label for="services-p__letter-radio-25" class="services-p__letter-label">я</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="services-p__search">
+                        <div class="services-p__search-block">
+                            <div class="services-p__search-icon"></div>
+                            <input class="services-p__search-input" type="text" placeholder="Поиск среди услуг">
+                            <div class="services-p__search-inner">
+                                <button class="services-p__search-filter" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_3593_17888)">
+                                            <path
+                                                d="M3.88075 4.71092L3.85067 4.60026H3.736H1C0.774566 4.60026 0.558365 4.51071 0.398959 4.3513C0.239553 4.19189 0.15 3.97569 0.15 3.75026C0.15 3.52482 0.239553 3.30862 0.398959 3.14922C0.558365 2.98981 0.774566 2.90026 1 2.90026H3.736H3.85067L3.88075 2.7896C4.08675 2.03164 4.53643 1.36253 5.16043 0.885494C5.78442 0.408456 6.54805 0.15 7.3335 0.15C8.11895 0.15 8.88258 0.408456 9.50657 0.885494C10.1306 1.36253 10.5803 2.03164 10.7863 2.7896L10.8163 2.90026H10.931H23C23.2254 2.90026 23.4416 2.98981 23.601 3.14922C23.7604 3.30862 23.85 3.52482 23.85 3.75026C23.85 3.97569 23.7604 4.19189 23.601 4.3513C23.4416 4.51071 23.2254 4.60026 23 4.60026H10.931H10.8163L10.7863 4.71092C10.5803 5.46887 10.1306 6.13799 9.50657 6.61502C8.88258 7.09206 8.11895 7.35052 7.3335 7.35052C6.54805 7.35052 5.78442 7.09206 5.16043 6.61502C4.53643 6.13799 4.08675 5.46887 3.88075 4.71092ZM7.333 1.85026L7.33283 1.85026C6.82914 1.85083 6.34624 2.05118 5.99008 2.40734C5.63392 2.7635 5.43357 3.2464 5.433 3.75009V3.75026C5.433 4.12604 5.54443 4.49339 5.75321 4.80584C5.96198 5.1183 6.25872 5.36182 6.6059 5.50563C6.95308 5.64944 7.33511 5.68706 7.70367 5.61375C8.07224 5.54044 8.41078 5.35948 8.6765 5.09376C8.94222 4.82804 9.12318 4.48949 9.19649 4.12093C9.2698 3.75237 9.23218 3.37034 9.08837 3.02316C8.94456 2.67598 8.70104 2.37924 8.38858 2.17047C8.07613 1.96169 7.70879 1.85026 7.333 1.85026Z"
+                                                fill="#2F2F2F" stroke="white" stroke-width="0.3" />
+                                            <path
+                                                d="M20.1192 11.0405L20.1493 11.1512H20.264H23C23.2254 11.1512 23.4416 11.2408 23.601 11.4002C23.7604 11.5596 23.85 11.7758 23.85 12.0012C23.85 12.2267 23.7604 12.4429 23.601 12.6023C23.4416 12.7617 23.2254 12.8512 23 12.8512H20.264H20.1493L20.1192 12.962C19.9136 13.7201 19.4641 14.3894 18.8401 14.8667C18.2162 15.3439 17.4525 15.6025 16.667 15.6025C15.8815 15.6025 15.1178 15.3439 14.4939 14.8667C13.8699 14.3894 13.4204 13.7201 13.2148 12.962L13.1847 12.8512H13.07H1C0.774566 12.8512 0.558365 12.7617 0.398959 12.6023C0.239553 12.4429 0.15 12.2267 0.15 12.0012C0.15 11.7758 0.239553 11.5596 0.398959 11.4002C0.558365 11.2408 0.774566 11.1512 1 11.1512H13.07H13.1847L13.2148 11.0405C13.4204 10.2824 13.8699 9.61304 14.4939 9.13581C15.1178 8.65858 15.8815 8.4 16.667 8.4C17.4525 8.4 18.2162 8.65858 18.8401 9.13581C19.4641 9.61304 19.9136 10.2824 20.1192 11.0405ZM16.667 13.9012H16.6672C17.1709 13.9007 17.6538 13.7003 18.0099 13.3442C18.3661 12.988 18.5664 12.5051 18.567 12.0014V12.0012C18.567 11.6254 18.4556 11.2581 18.2468 10.9457C18.038 10.6332 17.7413 10.3897 17.3941 10.2459C17.0469 10.1021 16.6649 10.0644 16.2963 10.1377C15.9278 10.2111 15.5892 10.392 15.3235 10.6577C15.0578 10.9235 14.8768 11.262 14.8035 11.6306C14.7302 11.9991 14.7678 12.3812 14.9116 12.7283C15.0554 13.0755 15.299 13.3723 15.6114 13.581C15.9239 13.7898 16.2912 13.9012 16.667 13.9012Z"
+                                                fill="#2F2F2F" stroke="white" stroke-width="0.3" />
+                                            <path
+                                                d="M10.7863 19.2896L10.8163 19.4003H10.931H23C23.2254 19.4003 23.4416 19.4898 23.601 19.6492C23.7604 19.8086 23.85 20.0248 23.85 20.2503C23.85 20.4757 23.7604 20.6919 23.601 20.8513C23.4416 21.0107 23.2254 21.1003 23 21.1003H10.931H10.8163L10.7863 21.2109C10.5803 21.9689 10.1306 22.638 9.50657 23.115C8.88258 23.5921 8.11895 23.8505 7.3335 23.8505C6.54805 23.8505 5.78442 23.5921 5.16043 23.115C4.53643 22.638 4.08675 21.9689 3.88075 21.2109L3.85067 21.1003H3.736H1C0.774566 21.1003 0.558365 21.0107 0.398959 20.8513C0.239553 20.6919 0.15 20.4757 0.15 20.2503C0.15 20.0248 0.239553 19.8086 0.398959 19.6492C0.558365 19.4898 0.774566 19.4003 1 19.4003H3.736H3.85067L3.88075 19.2896C4.08675 18.5316 4.53643 17.8625 5.16043 17.3855C5.78442 16.9085 6.54805 16.65 7.3335 16.65C8.11895 16.65 8.88258 16.9085 9.50657 17.3855C10.1306 17.8625 10.5803 18.5316 10.7863 19.2896ZM7.333 22.1503L7.33326 22.1503C7.83684 22.1494 8.31954 21.949 8.67563 21.5929C9.03171 21.2368 9.23214 20.7541 9.233 20.2505V20.2503C9.233 19.8745 9.12157 19.5071 8.91279 19.1947C8.70402 18.8822 8.40728 18.6387 8.0601 18.4949C7.71292 18.3511 7.33089 18.3135 6.96233 18.3868C6.59376 18.4601 6.25522 18.641 5.9895 18.9068C5.72378 19.1725 5.54282 19.511 5.46951 19.8796C5.3962 20.2482 5.43382 20.6302 5.57763 20.9774C5.72144 21.3245 5.96496 21.6213 6.27742 21.8301C6.58987 22.0388 6.95722 22.1503 7.333 22.1503Z"
+                                                fill="#2F2F2F" stroke="white" stroke-width="0.3" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_3593_17888">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>Уточнить поиск</span>
+                                </button>
+                                <button class="services-p__search-btn" type="button">Начать поиск</button>
+                            </div>
+                        </div>
+
+                        <div class="services-p__search-wrap">
+                            <div class="services-p__search-wrap-inner">
+                                <div class="services-p__search-wrap-title">Выбрать направление:</div>
+                                <div class="services-p__search-wrap-select">
+                                    <div class="services-p__search-wrap-select-head">Все направления</div>
+                                    <div class="services-p__search-wrap-select-down">
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Уролог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гинеколог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гематолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гастроэнтеролог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Дерматолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гинеколог-эндокринолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Аритмолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Уролог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гинеколог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гематолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гастроэнтеролог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Дерматолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Гинеколог-эндокринолог</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Аритмолог</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-p__search-wrap-inner">
+                                <div class="services-p__search-wrap-title">Выбрать клинику:</div>
+                                <div class="services-p__search-wrap-select">
+                                    <div class="services-p__search-wrap-select-head">Все клиники</div>
+                                    <div class="services-p__search-wrap-select-down">
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Клиника на Калинина</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Клиника на Гидростроителей</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Клиника на Ставропольской</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Клиника на ТЭЦ</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Клиника на Фестивальном</span>
+                                        </label>
+
+                                        <label class="check-box">
+                                            <input type="checkbox">
+                                            <span>Центр планирования семьи «Клиницист»</span>
+                                        </label>
+
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+              
+            </div>
+        </section>
+        <section class="s-direction">
+            <div class="container">
+                <div class="s-direction__inner">
+                    <div class="s-direction__title">
+                        Ультрозвуковая диагностика (УЗИ)
+                    </div>
+                    <div class="s-direction__price">
+                        <span>Цены от</span>
+                        <strong>900</strong>
+                    </div>
+                </div>
+                <div class="s-direction__wrapper">
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="appointment">
+            <div class="appointment__container container">
+                <div class="appointment__head">
+                    <span class="appointment__subtitle subtitle">Присоединяйтесь к 600 000 наших пациентов и получите
+                        действительно качественные медицинские услуги!</span>
+                    <span class="appointment__title title">Запись на прием</span>
+                </div>
+                <div class="appointment__body">
+                    <div class="appointment__callback callback-appointment">
+                        <div class="callback-appointment__heading">
+                            <span>Позвоните
+                                <a href="tel:84951897397">8 (495) 189-73-97</a></span>
+                        </div>
+                        <p class="callback-appointment__text txt">
+                            Или оставьте заявку на обратный звонок
+                        </p>
+                        <form action="#" class="callback-appointment__form">
+                            <div class="callback-appointment__input-wrap">
+                                <input autocomplete="off" type="tel" name="form[]" placeholder=""
+                                    class="callback-appointment__input tel-mask" />
+                            </div>
+                            <button type="submit" class="btn btn_white callback-appointment__btn">
+                                Заказать обратный звонок
+                            </button>
+                        </form>
+                        <p class="callback-appointment__hint txt">
+                            *Заказывая обратный звонок, вы соглашаетесь с
+                            <a href="#">политикой обработки своих персональных данных</a>
+                        </p>
+                    </div>
+                    <div class="appointment__contacts contacts-appointment">
+                        <span class="contacts-appointment__heading">Напишите нам</span>
+                        <div class="contacts-appointment__text-wrap txt">
+                            <span class="contacts-appointment__text-heading">Мы ответим на все ваши вопросы в ближайшее.
+                            </span>
+                            <p class="contacts-appointment__text">
+                                Будьте уверены, что наша команда сделает все возможное и
+                                предоставим вам полную информацию, которую вы ищете.
+                            </p>
+                        </div>
+                        <div class="contacts-appointment__links">
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_whatsapp">
+                                <span>Написать в WhatsApp</span>
+                            </a>
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_telegram">
+                                <span>Написать в Telegram</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="appointment__registration registration-appointment">
+                        <span class="registration-appointment__heading">Вы можете записаться онлайн на нашем
+                            сайте</span>
+                        <p class="registration-appointment__text txt">
+                            Онлайн запись к врачу позволяет быстро выбрать удобное время и
+                            день для посещения, а также записаться на прием
+                        </p>
+                        <a href="#" class="registration-appointment__btn btn">Выбрать врача и время записи</a>
+                        <p class="registration-appointment__hint txt">
+                            *Ознакомьтесь с
+                            <a href="#">Согласием на обработку персональных данных</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        @@include('./template/recording-site.html')
+
+
+
+        <section class="new-clinic new-clinic-akcii">
+            <div class="container">
+                <div class="new-clinic__subtitle subtitle">Полезные ссылки</div>
+                <div class="new-clinic__title title">Перечень ссылок</div>
+                <div class="new-clinic__inner">
+                    <div class="new-clinic__left">
+                        <a href="tel:84951897397" class="new-clinic__left-phone">Звоните <br />
+                            8 (495) 189-73-97</a>
+                        <div class="new-clinic__left-text">
+                            Или можете связаться с нами онлайн любым способом
+                        </div>
+                        <a href="#" class="new-clinic__left-whatsapp">Написать в WhatsApp</a>
+                        <div class="new-clinic__left-online desctop">
+                            Записаться на сайте
+                        </div>
+                        <div class="new-clinic__left-online mobile">
+                            Записаться на прием онлайн
+                        </div>
+                    </div>
+                    <div class="new-clinic__right">
+                        <div class="new-clinic__right-text">
+                            Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                            отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                            гештальт осознаёт институциональный ассоцианизм, как и
+                            предсказывает теория о бесполезном знании. Комплекс
+                            текстологически интегрирует психоз. Гендер заметно представляет
+                            собой социометрический гомеостаз, таким образом, стратегия
+                            поведения.
+                        </div>
+                        <ul class="new-clinic__right-list">
+                            <li>Восприятие, как справедливо считает Ф.Энгельс</li>
+                            <li>Однако Э.Дюркгейм утверждал: гештальт осознаёт</li>
+                            <li>
+                                Гендер заметно представляет собой социометрический гомеостаз
+                            </li>
+                        </ul>
+                        <div class="new-clinic__right-img">
+                            <img src="./img/new-clinic.png" alt="" />
+                        </div>
+                        <div class="new-clinic__right-text">
+                            Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                            отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                            гештальт осознаёт институциональный ассоцианизм, как и
+                            предсказывает теория о бесполезном знании. Комплекс
+                            текстологически интегрирует психоз. Гендер заметно представляет
+                            собой социометрический гомеостаз, таким образом, стратегия
+                            поведения. Восприятие, как справедливо считает Ф.Энгельс,
+                            устойчиво отталкивает онтогенез речи. Однако Э.Дюркгейм
+                            утверждал: гештальт осознаёт институциональный ассоцианизм, как
+                            и предсказывает теория о бесполезном знании. Комплекс
+                            текстологически интегрирует психоз. Гендер заметно представляет
+                            собой социометрический гомеостаз, таким образом, стратегия
+                            поведения.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="baner baner--price-s">
+            <div class="container">
+                <div class="baner__inner">
+                    <div class="baner__content">
+                        <div class="baner__blue-word">
+                            Актуальные цены
+                        </div>
+                        <div class="baner__content-title title">Цены на наши услуги</div>
+                        <div class="baner__content-text">
+                            Про цены. Как и многие другие направления медицины, хирургия делится на широкий спектр
+                            различных отраслей, каждая из которых по своему Виды хирургов.
+                        </div>
+                        <button class="btn"><span>Смотреть все цены</span></button>
+                    </div>
+                    <div class="baner__picture">
+                        <img src="./img/d-image/meds.webp" alt="История клиники" class="desctop" />
+                        <img src="./img/d-image/meds-mob.webp" alt="История клиники" class="mobile" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment">
+            <div class="appointment__container container">
+                <div class="appointment__head">
+                    <span class="appointment__subtitle subtitle">Присоединяйтесь к 600 000 наших пациентов и получите
+                        действительно качественные медицинские услуги!</span>
+                    <span class="appointment__title title">Запись на прием</span>
+                </div>
+                <div class="appointment__body">
+                    <div class="appointment__callback callback-appointment">
+                        <div class="callback-appointment__heading">
+                            <span>Позвоните
+                                <a href="tel:84951897397">8 (495) 189-73-97</a></span>
+                        </div>
+                        <p class="callback-appointment__text txt">
+                            Или оставьте заявку на обратный звонок
+                        </p>
+                        <form action="#" class="callback-appointment__form">
+                            <div class="callback-appointment__input-wrap">
+                                <input autocomplete="off" type="tel" name="form[]" placeholder=""
+                                    class="callback-appointment__input tel-mask" />
+                            </div>
+                            <button type="submit" class="btn btn_white callback-appointment__btn">
+                                Заказать обратный звонок
+                            </button>
+                        </form>
+                        <p class="callback-appointment__hint txt">
+                            *Заказывая обратный звонок, вы соглашаетесь с
+                            <a href="#">политикой обработки своих персональных данных</a>
+                        </p>
+                    </div>
+                    <div class="appointment__contacts contacts-appointment">
+                        <span class="contacts-appointment__heading">Напишите нам</span>
+                        <div class="contacts-appointment__text-wrap txt">
+                            <span class="contacts-appointment__text-heading">Мы ответим на все ваши вопросы в ближайшее.
+                            </span>
+                            <p class="contacts-appointment__text">
+                                Будьте уверены, что наша команда сделает все возможное и
+                                предоставим вам полную информацию, которую вы ищете.
+                            </p>
+                        </div>
+                        <div class="contacts-appointment__links">
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_whatsapp">
+                                <span>Написать в WhatsApp</span>
+                            </a>
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_telegram">
+                                <span>Написать в Telegram</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="appointment__registration registration-appointment">
+                        <span class="registration-appointment__heading">Вы можете записаться онлайн на нашем
+                            сайте</span>
+                        <p class="registration-appointment__text txt">
+                            Онлайн запись к врачу позволяет быстро выбрать удобное время и
+                            день для посещения, а также записаться на прием
+                        </p>
+                        <a href="#" class="registration-appointment__btn btn">Выбрать врача и время записи</a>
+                        <p class="registration-appointment__hint txt">
+                            *Ознакомьтесь с
+                            <a href="#">Согласием на обработку персональных данных</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./template/footer.html')
+
+
+</body>
+
+</html>
