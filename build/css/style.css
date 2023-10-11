@@ -30741,6 +30741,89 @@ textarea {
     position: absolute;
     top: 10.2rem; }
 
+.part-team {
+  position: relative;
+  margin-bottom: 18rem; }
+  .part-team::after {
+    position: absolute;
+    content: '';
+    left: 0rem;
+    bottom: 0;
+    width: 100%;
+    height: 5.3rem;
+    background: #FFF;
+    -webkit-box-shadow: 0px 17px 76px 0px rgba(0, 0, 0, 0.04) inset;
+            box-shadow: 0px 17px 76px 0px rgba(0, 0, 0, 0.04) inset; }
+  .part-team__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 3.4rem 0 4rem; }
+  .part-team__content {
+    width: 52.4rem; }
+    .part-team__content-subtitle {
+      margin-bottom: 1.6rem; }
+    .part-team__content-title {
+      margin-bottom: 4rem; }
+    .part-team__content-aside {
+      font-family: "MyriadPro";
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 2.5rem;
+      margin-left: 2.1rem; }
+    .part-team__content-txt {
+      font-family: "MyriadPro";
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 6rem; }
+  .part-team__image {
+    width: 31rem;
+    height: 49.5rem;
+    margin-top: 10.2rem; }
+    .part-team__image > img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .part-team__insert {
+    position: relative;
+    width: 46rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 3rem 2rem 3rem 16.3rem;
+    background: #EEF3F7;
+    margin-top: 25.8rem; }
+    .part-team__insert-img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 16.5rem;
+      height: 27.2rem; }
+      .part-team__insert-img > img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+           object-fit: contain; }
+    .part-team__insert-title {
+      font-family: Montserrat;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.8rem;
+      color: #2F2F2F;
+      margin-bottom: 1.5rem; }
+    .part-team__insert-text {
+      font-family: Montserrat;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 2.6rem;
+      color: #2F2F2F; }
+
 #ui-datepicker-div {
   display: block !important;
   width: 43rem;
