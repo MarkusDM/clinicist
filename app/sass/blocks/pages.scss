@@ -1,0 +1,113 @@
+.pages {
+  margin-bottom: 18rem;
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+  &__title {
+    margin-bottom: 6rem;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    background: $white;
+    height: fit-content;
+    &-big {
+      width: 100%;
+      height: 35rem;
+      &-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 49.3rem;
+        margin: 6rem 18.7rem 6rem 0;
+      }
+      &-img {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 35rem;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-small {
+      width: 50%;
+      height: 35.3rem;
+      &-content {
+        width: 43rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2;
+        margin: 4rem;
+      }
+      &-text {
+        width: 33.6rem;
+      }
+      &-img {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        right: 0;
+        height: 35.3rem;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &:nth-child(4n+1) {
+      background: #EEF3F7;
+    }
+    &:nth-child(4n+2) {
+      background: $blue;
+      & .link {
+        color: #fff;
+        &::after {
+          content: '';
+          flex: 0 0 1rem;
+          width: 1rem;
+          height: 2.2rem;
+          background-image: url(../../img/ans_image/icon/white_arr.svg);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      & .pages__item-title {
+        color: #fff;
+      }
+      & .pages__item-text {
+        color: #fff;
+      }
+    }
+    &-title {
+      font-family: Montserrat;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: normal;
+      color: #2F2F2F;
+      margin-bottom: 3rem;
+    }
+    &-text {
+      font-family: Myriad Pro;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      color: rgba(51, 51, 51, 0.5);
+    }
+  }
+
+  &__item-image {
+  }
+}
