@@ -618,18 +618,40 @@ body::after {
   // .rating__item
 
   &__item {
+    display: flex;
+    flex: 0 0 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    &::before {
+      content: '';
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
     &.starall {
       &::before {
         background-image: url('../img/a-image/icons/star-all.svg');
       }
+    }
+    &_half {
+      flex: 0 0 2.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
       &::before {
-        content: '';
-        flex: 0 0 1.6rem;
-        width: 1.6rem;
-        height: 1.6rem;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-image: url('../img/a-image/icons/star-half.svg');
+      }
+    }
+    &_full {
+      &::before {
+        background-image: url('../img/a-image/icons/star-full.svg');
+      }
+    }
+    &_empty {
+      &::before {
+        background-image: url('../img/a-image/icons/star-empty.svg');
       }
     }
   }
@@ -819,113 +841,11 @@ body::after {
   // .doctor-card__select-wrap
 
   &__select-wrap {
-    ._select-open {
-      .select__value {
-        padding-bottom: 1.2rem;
-        border-bottom: 1px solid #eef3f7;
-      }
-    }
-    .select__value {
-      transition: padding-bottom 0.3s ease;
-    }
-    .select__title {
-      @extend .txt;
-      padding: 1.2rem 1.6rem;
-      border-radius: 1rem;
-      background-color: #ffffff;
-    }
-    .select__text {
-      font-weight: 600;
-      color: $blue;
-    }
-    .select__option {
-      padding: 0.8rem 1.6rem;
-      border-radius: 1.2rem;
-      font-size: 1.3rem;
-      font-family: MyriadPro;
-      transition: background-color 0.3s ease;
-      .select__asset {
-        color: rgba(51, 51, 51, 0.5);
-      }
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: #f3fbff;
-        }
-      }
-    }
-    .select__asset {
-      font-size: 1.3rem;
-    }
-    .select__row {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      row-gap: 0.4rem;
-    }
-    .select__options {
-      top: calc(100% - 1rem);
-      padding: 1.2rem 1.6rem 1.6rem 1.6rem;
-      border-radius: 0 0 1rem 1rem;
-    }
-    .select__value {
-      &::after {
-        flex: 0 0 1.8rem;
-        width: 1.8rem;
-        height: 1.8rem;
-        background-image: url(../img/a-image/icons/select-arrow-blue.svg);
-      }
-    }
   }
 
   // .doctor-card__date
 
   &__date {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(auto, 15.2rem)) 4.4rem;
-    column-gap: 1.5rem;
-  }
-
-  // .doctor-card__date-item
-
-  &__date-item {
-    padding: 1.2rem 1.6rem;
-    flex: 0 0 14.1rem;
-    width: 14.1rem;
-    border-radius: 1rem;
-    color: rgba(47, 47, 47, 0.35);
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    &._active {
-      color: #ffffff;
-      background-color: $blue;
-    }
-  }
-
-  // .doctor-card__date-day
-
-  &__date-day {
-    display: block;
-    font-weight: 600;
-  }
-
-  // .doctor-card__calendar
-
-  &__calendar {
-    margin-left: auto;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    flex: 0 0 4.4rem;
-    width: 4.4rem;
-    height: 4.4rem;
-    border-radius: 50%;
-    background-color: #ffffff;
-    img {
-      flex: 0 0 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      object-fit: contain;
-    }
   }
 
   // .doctor-card__hours-group
@@ -950,22 +870,6 @@ body::after {
   // .doctor-card__hours
 
   &__hours {
-    padding: 0.7rem 1.1rem 0.5rem 1.1rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    border: 1px solid $blue;
-    color: $blue;
-    font-family: MyriadPro;
-    font-size: 1.6rem;
-    white-space: nowrap;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    &._active {
-      color: #ffffff;
-      background-color: $blue;
-    }
   }
 
   // .doctor-card__hours-more
@@ -980,6 +884,26 @@ body::after {
         }
       }
     }
+  }
+}
+
+// hours item
+.hours-item {
+  padding: 0.7rem 1.1rem 0.5rem 1.1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: 1px solid $blue;
+  color: $blue;
+  font-family: MyriadPro;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  &._active {
+    color: #ffffff;
+    background-color: $blue;
   }
 }
 
@@ -1147,7 +1071,6 @@ body::after {
       grid-column: 2/3;
       justify-self: end;
       img {
-        width: 2rem;
         object-fit: contain;
       }
     }
@@ -1373,7 +1296,1418 @@ body::after {
   }
 }
 
+// centers select
+.centers-select {
+  ._select-open {
+    .select__value {
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #eef3f7;
+    }
+  }
+  .select__value {
+    transition: padding-bottom 0.3s ease;
+  }
+  .select__title {
+    @extend .txt;
+    padding: 1.2rem 1.6rem;
+    border-radius: 1rem;
+    background-color: #ffffff;
+  }
+  .select__text {
+    font-weight: 600;
+    color: $blue;
+  }
+  .select__option {
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.2rem;
+    font-size: 1.3rem;
+    font-family: MyriadPro;
+    transition: background-color 0.3s ease;
+    .select__asset {
+      color: rgba(51, 51, 51, 0.5);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #f3fbff;
+      }
+    }
+  }
+  .select__asset {
+    font-size: 1.3rem;
+  }
+  .select__row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 0.4rem;
+  }
+  .select__options {
+    top: calc(100% - 1rem);
+    padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .select__value {
+    &::after {
+      flex: 0 0 1.8rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      background-image: url(../img/a-image/icons/select-arrow-blue.svg);
+    }
+  }
+}
+
+// date
+.date {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 15.2rem)) 4.4rem;
+  column-gap: 1.5rem;
+
+  // .date__item
+
+  &__item {
+    padding: 1.2rem 1.6rem;
+    flex: 0 0 14.1rem;
+    width: 14.1rem;
+    border-radius: 1rem;
+    color: rgba(47, 47, 47, 0.35);
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    &._active {
+      color: #ffffff;
+      background-color: $blue;
+    }
+  }
+
+  // .date__day
+
+  &__day {
+    display: block;
+    font-weight: 600;
+  }
+
+  // .date__calendar
+
+  &__calendar {
+    margin-left: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex: 0 0 4.4rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    img {
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      object-fit: contain;
+    }
+  }
+}
+
+// navigation block
+.navigation-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #eef3f7;
+
+  // .navigation-block__head
+
+  &__head {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .navigation-block__heading
+
+  &__heading {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.4rem;
+    &::before {
+      content: '';
+      flex: 0 0 2.2rem;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-image: url(../img/a-image/icons/hint-grey.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .navigation-block__text
+
+  &__text {
+    color: rgba(51, 51, 51, 0.5);
+  }
+
+  // .navigation-block__tabs
+
+  &__tabs {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  // .navigation-block__wrapper
+
+  &__wrapper {
+    background-color: #ffffff;
+  }
+
+  // .navigation-block__tab
+
+  &__tab {
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 1px;
+      width: calc(100% - 6rem);
+      background-color: #d8dde4;
+      transform: translateX(-50%);
+    }
+    &::after {
+      content: '';
+      flex: 0 0 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-image: url(../img/a-image/icons/select-arrow-grey.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(-90deg);
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+    path {
+      transition: fill 0.3s ease;
+    }
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &._active {
+      .navigation-block__tab-title {
+        color: $orange;
+      }
+      &::after {
+        background-image: url(../img/a-image/icons/select-arrow-orange.svg);
+        transform: none;
+      }
+      path {
+        fill: #fe7200;
+        stroke: #fe7200;
+      }
+    }
+  }
+
+  // .navigation-block__tab-title
+
+  &__tab-title {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    align-items: center;
+    column-gap: 2rem;
+    color: #2f2f2f;
+    transition: color 0.3s ease;
+  }
+}
+
+// career card
+.career-card {
+  display: grid;
+  grid-template-columns: 24.2rem 1fr;
+  column-gap: 4rem;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.1);
+  background-color: #ffffff;
+
+  // .career-card__image-wrap
+
+  &__image-wrap {
+    height: 100%;
+  }
+
+  // .career-card__image
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .career-card__text-wrap
+
+  &__text-wrap {
+    padding: 4.5rem 4rem 4.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .career-card__heading
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  // .career-card__text
+
+  &__text {
+    margin-bottom: 3.2rem;
+    max-width: 62.5rem;
+  }
+
+  // .career-card__link
+
+  &__link {
+  }
+}
+
+// link item
+.link-item {
+  display: grid;
+  grid-template-columns: 1.1rem 1fr;
+  align-items: start;
+  column-gap: 3.4rem;
+  &::before {
+    content: '';
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: $orange;
+    transform: translateY(0.8rem);
+  }
+
+  // .link-item__text
+
+  &__text {
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration: underline;
+  }
+}
+
+// article card
+.article-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.1);
+  background-color: #ffffff;
+
+  // .article-card__image-wrap
+
+  &__image-wrap {
+    position: relative;
+    width: 100%;
+    height: 30.1rem;
+  }
+
+  // .article-card__image
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .article-card__label
+
+  &__label {
+    position: absolute;
+    z-index: 1;
+    left: 3rem;
+    bottom: 3rem;
+    padding: 0.7rem 2.4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-family: MyriadPro;
+    font-size: 1.6rem;
+    background-color: #ffffff;
+  }
+
+  // .article-card__text-wrap
+
+  &__text-wrap {
+    padding: 4rem 3.2rem 3.2rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .article-card__heading
+
+  &__heading {
+    margin-bottom: 3.2rem;
+    max-width: 38.9rem;
+  }
+
+  // .article-card__text
+
+  &__text {
+    margin-bottom: 4rem;
+    max-width: 38.9rem;
+  }
+
+  // .article-card__link
+
+  &__link {
+  }
+}
+
+// rating group
+.rating-group {
+  display: flex;
+  flex-direction: column;
+
+  // .rating-group__subtitle
+
+  &__subtitle {
+    margin-bottom: 0.5rem;
+    color: #2f2f2f;
+  }
+
+  // .rating-group__row
+
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+    &_reversed {
+      flex-direction: row-reverse;
+    }
+  }
+
+  // .rating-group__value
+
+  &__value {
+    font-family: MyriadPro;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  // .rating-group__stars
+
+  &__stars {
+  }
+}
+
+// review card
+.review-card {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #eef3f7;
+
+  // .review-card__head
+
+  &__head {
+    margin-bottom: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    .rating-group {
+      &__subtitle {
+        margin-bottom: 1.3rem;
+        align-self: flex-end;
+        color: rgba(51, 51, 51, 0.5);
+      }
+      &__row {
+        column-gap: 2rem;
+        .rating__item {
+          flex: 0 0 2.8rem;
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+      }
+    }
+  }
+
+  // .review-card__heading-wrap
+
+  &__heading-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .review-card__heading
+
+  &__heading {
+    margin-bottom: 0.8rem;
+  }
+
+  // .review-card__date
+
+  &__date {
+  }
+
+  // .review-card__rating-group
+
+  &__rating-group {
+  }
+
+  // .review-card__text-wrap
+
+  &__text-wrap {
+    margin-bottom: 3.7rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.3rem;
+  }
+
+  // .review-card__text-item
+
+  &__text-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .review-card__text-heading
+
+  &__text-heading {
+    margin-bottom: 0.8rem;
+    color: $blue;
+    font-family: MyriadPro;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    // .review-card__text-heading_orange
+
+    &_orange {
+      color: $orange;
+    }
+  }
+
+  // .review-card__text-content
+
+  &__text-content {
+  }
+
+  // .review-card__link
+
+  &__link {
+    align-self: flex-start;
+  }
+}
+
+// appointment modal
+.appointment-modal {
+  .popup__content {
+    padding: 4rem 4rem 7rem 7rem;
+    max-width: 87rem;
+  }
+  .popup__head {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  // .appointment-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .appointment-modal__title
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  // .appointment-modal__subtitle
+
+  &__subtitle {
+    margin-bottom: 4rem;
+    max-width: 70.5rem;
+  }
+
+  // .appointment-modal__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  // .appointment-modal__input-wrap
+
+  &__input-wrap {
+    margin-bottom: 2.5rem;
+    padding-left: 3rem;
+    display: flex;
+    width: 100%;
+    border-radius: 7.2rem;
+    border: 1px solid #d8dde4;
+    background-color: #ffffff;
+    &::before {
+      content: '';
+      align-self: center;
+      flex: 0 0 2rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(../img/a-image/icons/phone-grey.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .appointment-modal__input
+
+  &__input {
+    @extend .txt;
+    padding: 2rem;
+    border: none;
+    font-size: 1.6rem;
+    background: none;
+  }
+
+  // .appointment-modal__contacts
+
+  &__contacts {
+    margin-bottom: 4.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .appointment-modal__contacts-heading
+
+  &__contacts-heading {
+    font-size: 1.6rem;
+  }
+
+  // .appointment-modal__contacts-group
+
+  &__contacts-group {
+    display: flex;
+    column-gap: 2.4rem;
+  }
+
+  // .appointment-modal__contact
+
+  &__contact {
+    padding: 0.7rem 3rem 0.7rem 0.8rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    border: 1px solid #d8dde4;
+    border-radius: 72rem;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    &._active {
+      border: 1px solid $blue;
+      background-color: #f3fbff;
+    }
+    &._mobile-only {
+      display: none;
+    }
+  }
+
+  // .appointment-modal__contact-icon-wrap
+
+  &__contact-icon-wrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $blue;
+  }
+
+  // .appointment-modal__contact-icon
+
+  &__contact-icon {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  // .appointment-modal__contact-text
+
+  &__contact-text {
+    font-size: 1.6rem;
+  }
+
+  // .appointment-modal__btn
+
+  &__btn {
+    align-self: flex-start;
+    min-width: 29.3rem;
+  }
+}
+
+// our doctors card
+.our-doctors-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 4rem 4rem;
+  background-color: #eef3f7;
+
+  // .our-doctors-card__head
+
+  &__head {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 4rem 2.7rem 4rem;
+    justify-content: space-between;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 4rem;
+      width: calc(100% - 8rem);
+      height: 1px;
+      background-color: #d8dde4;
+    }
+  }
+
+  // .our-doctors-card__body
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 4rem 3.6rem 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .our-doctors-card__heading
+
+  &__heading {
+    margin-bottom: 1rem;
+    max-width: 37.3rem;
+    font-size: 2.2rem;
+    line-height: 127.273%;
+  }
+
+  // .our-doctors-card__text
+
+  &__text {
+    margin-bottom: 7rem;
+    max-width: 37.3rem;
+    line-height: 133.333%;
+  }
+
+  // .our-doctors-card__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4rem;
+  }
+
+  // .our-doctors-card__group-item
+
+  &__group-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .our-doctors-card__group-text
+
+  &__group-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    line-height: 150%;
+    span {
+      color: $blue;
+      font-family: Montserrat;
+      font-size: 2.3rem;
+      font-weight: 700;
+      line-height: 109.091%;
+    }
+  }
+
+  // .our-doctors-card__group-icon-wrap
+
+  &__group-icon-wrap {
+    margin-bottom: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    box-shadow: 0 2.5rem 6rem rgba(124, 148, 159, 0.2);
+    background-color: #ffffff;
+  }
+
+  // .our-doctors-card__group-icon
+
+  &__group-icon {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    object-fit: contain;
+  }
+
+  // .our-doctors-card__rating
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  // .our-doctors-card__rating-stars
+
+  &__rating-stars {
+  }
+
+  // .our-doctors-card__rating-value
+
+  &__rating-value {
+    font-family: Montserrat;
+    font-size: 2.3rem;
+    line-height: 109.091%;
+  }
+
+  // .our-doctors-card__btn
+
+  &__btn {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  // .our-doctors-card__image-wrap
+
+  &__image-wrap {
+    position: absolute;
+    bottom: 5.7rem;
+    right: 0;
+    width: 26.6rem;
+  }
+
+  // .our-doctors-card__image
+
+  &__image {
+    object-fit: contain;
+  }
+}
+
+// service label
+.service-label {
+  padding: 1.6rem 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  &_img {
+    padding: 0.4rem 2rem 0.4rem 0.4rem;
+    .service-label__icon-wrap {
+      flex: 0 0 4.8rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eef3f7;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .service-label__icon {
+      flex: 0 0 4.7rem;
+      width: 4.7rem;
+      height: 4.7rem;
+    }
+  }
+
+  // .service-label__icon-wrap
+
+  &__icon-wrap {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  // .service-label__icon
+
+  &__icon {
+    object-fit: contain;
+  }
+
+  // .service-label__text
+
+  &__text {
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    line-height: 150%;
+    &_bold {
+      font-weight: 600;
+    }
+  }
+}
+
+// service card
+.service-card {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  background-color:  #FFFfff;
+box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
+&._active {
+  .service-card__ellipse::before {
+    transform: scale(1);
+  }
+}
+
+  // .service-card__ellipse
+
+  &__ellipse {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid rgba(47, 47, 47, 0.35);
+    border-radius: 50%;
+    &::before {
+      content: "";
+      flex: 0 0 1.1rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      background-color: $orange;
+      transform: scale(0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // .service-card__image-wrap
+
+  &__image-wrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 12.5rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    border: 1px solid $blue;
+    border-radius: 50%;
+  }
+
+  // .service-card__image
+
+  &__image {
+    flex: 0 0 10.4rem;
+    width: 10.4rem;
+    height: 10.4rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  // .service-card__heading
+
+  &__heading {
+    max-width: 21.6rem;
+font-family: MyriadPro;
+font-size: 2.2rem;
+line-height: 127.273%; 
+  }
+}
+
+
 @media (max-width: 48em) {
+  .service-card {
+    padding: 2.3rem;
+    column-gap: 3rem;
+    &__ellipse {
+      flex: 0 0 4rem;
+      width: 4rem;
+      height: 4rem;
+      border: 1px solid #999999;
+      &::before {
+        flex: 0 0 2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    &__image-wrap {
+      flex: 0 0 17rem;
+      width: 17rem;
+      height: 17rem;
+    }
+    &__image {
+      flex: 0 0 14rem;
+      width: 14rem;
+      height: 14rem;
+    }
+    &__heading {
+      max-width: 34rem;
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  }
+  .service-label {
+    padding: 2.4rem;
+    column-gap: 1.6rem;
+    height: 9.6rem;
+    border-radius: 2rem;
+    &_img {
+      padding: 2.4rem;
+      .service-label__icon-wrap {
+        flex: 0 0 6rem;
+        width: 6rem;
+        height: 6rem;
+      }
+      .service-label__icon {
+        flex: 0 0 5rem;
+        width: 5rem;
+        height: 5rem;
+
+      }
+    }
+    &__icon-wrap {
+      flex: 0 0 5rem;
+      width: 5rem;
+      height: 5rem;
+      }
+    &__text {
+      max-width: 16rem;
+      font-size: 2.4rem;
+      &_bold {
+        font-weight: 400;
+      }
+    }
+  }
+  .our-doctors-card {
+    border-radius: 2rem;
+    &__head {
+      padding: 4rem;
+      &::before {
+        background-color: #ffffff;
+      }
+    }
+    &__body {
+      padding: 3rem 4rem;
+    }
+    &__heading {
+      margin-bottom: 1.6rem;
+      font-size: 3.6rem;
+    }
+    &__text {
+      margin-bottom: 2.8rem;
+      max-width: 58.3rem;
+      font-size: 3.2rem;
+    }
+    &__group {
+      row-gap: 4.2rem;
+    }
+    &__group-icon-wrap {
+      margin-bottom: 2rem;
+      width: 9.2rem;
+      height: 9.2rem;
+    }
+    &__group-icon {
+      flex: 0 0 4.8rem;
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+    &__title {
+      font-size: 3.6rem;
+    }
+    &__group-text {
+      row-gap: normal;
+      font-size: 2.6rem;
+      span {
+        font-size: 3.6rem;
+        font-weight: 600;
+      }
+    }
+    &__rating-value {
+      font-family: MyriadPro;
+      font-size: 3.2rem;
+    }
+    &__image-wrap {
+      bottom: 8.8rem;
+      width: 34.2rem;
+    }
+    &__btn {
+      height: 8.8rem;
+      border-radius: 0 0 2rem 2rem;
+    }
+  }
+  .appointment-modal {
+    .popup__content {
+      padding: 6rem 4rem 16rem 4rem;
+    }
+    .popup__head {
+      margin-bottom: 6rem;
+    }
+    &__title {
+      margin-bottom: 1.6rem;
+    }
+    &__subtitle {
+      margin-bottom: 3rem;
+      max-width: 72rem;
+      font-size: 2.4rem;
+    }
+    &__input-wrap {
+      margin-bottom: 6rem;
+      padding-left: 4rem;
+      border-radius: 14.4rem;
+      &::before {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    &__input {
+      padding: 3.6rem 6rem;
+      font-size: 3.2rem;
+      color: #999999;
+    }
+    &__contacts {
+      margin-bottom: 6rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__contacts-heading {
+      margin-bottom: 3.6rem;
+      font-size: 3.2rem;
+    }
+    &__contacts-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      column-gap: 1.4rem;
+      row-gap: 3rem;
+    }
+    &__contact {
+      padding: 1.6rem 4rem 1.6rem 1.6rem;
+      column-gap: 3rem;
+      border-radius: 14.4rem;
+      &._mobile-only {
+        display: flex;
+      }
+    }
+    &__contact-icon-wrap {
+      flex: 0 0 8rem;
+      width: 8rem;
+      height: 8rem;
+    }
+    &__contact-icon {
+      flex: 0 0 4.4rem;
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+    &__contact-text {
+      font-size: 3.2rem;
+    }
+    &__btn {
+      width: 100%;
+      height: 10rem;
+    }
+  }
+  .review-card {
+    &__head {
+      margin-bottom: 4rem;
+      flex-direction: column;
+      .rating-group {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2rem;
+        .rating__item {
+          flex: 0 0 3.6rem;
+          width: 3.6rem;
+          height: 3.6rem;
+        }
+        &__row {
+          flex-direction: row;
+          column-gap: 2.6rem;
+        }
+        &__subtitle {
+          font-size: 2.6rem;
+        }
+      }
+    }
+    &__heading-wrap {
+      margin-bottom: 4rem;
+    }
+    &__heading {
+      margin-bottom: 0;
+    }
+    &__info {
+      margin-bottom: 3.6rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.3rem;
+    }
+    &__info-item {
+      display: flex;
+      align-items: center;
+      column-gap: 4rem;
+    }
+    &__info-heading {
+      color: $blue;
+      font-family: MyriadPro;
+      font-size: 2.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &__info-text {
+      color: #2f2f2f;
+    }
+    &__text-wrap {
+      margin-bottom: 6.4rem;
+      row-gap: 2.6rem;
+    }
+    &__text-heading {
+      margin-bottom: 0;
+      font-size: 2.6rem;
+      line-height: 150%;
+    }
+    &__text-content {
+      max-width: 59rem;
+    }
+  }
+  .rating-group {
+    .rating {
+      &__item {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    &__subtitle {
+      margin: 0;
+      font-size: 3.2rem;
+    }
+    &__row {
+      column-gap: 1.6rem;
+    }
+    &__value {
+      font-size: 5rem;
+    }
+  }
+  .article-card {
+    &__image-wrap {
+      margin-bottom: 4rem;
+      height: 44rem;
+    }
+    &__label {
+      padding: 0.8rem 3rem;
+      left: 6rem;
+      bottom: 3.4rem;
+      border-radius: 1rem;
+      font-size: 2.6rem;
+    }
+    &__date {
+      margin-bottom: 2.4rem;
+    }
+    &__heading {
+      margin-bottom: 1.6rem;
+    }
+    &__text {
+      margin-bottom: 6.4rem;
+      font-size: 2.4rem;
+    }
+  }
+  .link-item {
+    grid-template-columns: 1.4rem 1fr;
+    column-gap: 1.6rem;
+    &::before {
+      width: 1.4rem;
+      height: 1.4rem;
+      transform: translateY(1.4rem);
+    }
+    &__text {
+      max-width: 64rem;
+      font-size: 3rem;
+    }
+  }
+  .career-card {
+    padding: 4rem;
+    grid-template-columns: 1fr;
+    &__image-wrap {
+      margin-bottom: 4rem;
+      height: 45rem;
+    }
+    &__text-wrap {
+      padding: 0;
+    }
+    &__heading {
+      margin-bottom: 2rem;
+    }
+    &__text {
+      margin-bottom: 6.4rem;
+      color: #999999;
+    }
+  }
+  .navigation-block {
+    position: relative;
+    min-width: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: -4rem;
+      background-color: #ffffff;
+    }
+    &__head {
+      display: none;
+    }
+    &__tabs {
+      padding: 0;
+      flex-direction: row;
+      box-shadow: 0 4rem 12rem 0 rgba(124, 148, 159, 0.1);
+      background-color: #ffffff;
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    &__tab {
+      padding: 5rem 1.6rem 3rem 1.6rem;
+      width: auto;
+      height: 20rem;
+      &:first-child {
+        &::after {
+          display: inline-block;
+        }
+      }
+      &:last-child {
+        &::before {
+          display: inline-block;
+        }
+      }
+      &::before,
+      &::after {
+        top: 3rem;
+        left: auto;
+        right: 0;
+        width: 1px;
+        height: 14.2rem;
+        background-color: #d8dde4;
+        transform: none;
+      }
+      &::after {
+        position: absolute;
+        right: auto;
+        left: 0;
+        display: none;
+        background-image: none;
+      }
+    }
+    &__tab-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      row-gap: 0.8rem;
+      height: 100%;
+      text-align: center;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: #bec2c9;
+      span {
+        max-width: 18.8rem;
+      }
+    }
+  }
+  .date {
+    grid-template-columns: repeat(3, 1fr) 8rem;
+    justify-content: space-between;
+    column-gap: auto;
+    &__item {
+      padding: 1.6rem 3.5rem;
+      flex: 1 1 auto;
+      width: auto;
+      border-radius: 2rem;
+    }
+    &__calendar {
+      flex: 0 0 8rem;
+      width: 8rem;
+      height: 8rem;
+      img {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+  .hours-item {
+    padding: 2.5rem 3rem;
+    border-radius: 2rem;
+    font-size: 2.6rem;
+  }
+  .centers-select {
+    ._select-open {
+      .select__value {
+        padding-bottom: 2.5rem;
+      }
+    }
+    .select {
+      &__value {
+        &::after {
+          flex: 0 0 2.6rem;
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+      &__options {
+        padding: 2.5rem 2.5rem 3rem 2.5rem;
+        border-radius: 2rem;
+      }
+      &__option {
+        padding: 0;
+        &:not(:last-child) {
+          margin-bottom: 2.5rem;
+        }
+      }
+      &__title {
+        padding: 2.5rem;
+        border-radius: 2rem;
+      }
+      &__row {
+        row-gap: normal;
+      }
+      &__asset {
+        font-size: 2.6rem;
+        line-height: 120%;
+      }
+      &__text {
+        margin-bottom: 0.5rem;
+        font-size: 2.6rem;
+      }
+      &__options {
+        top: calc(100% - 2rem);
+      }
+    }
+  }
   .card-services {
     margin-bottom: 4.4rem;
     display: flex;
@@ -1853,71 +3187,6 @@ body::after {
         }
       }
     }
-    &__select-wrap {
-      ._select-open {
-        .select__value {
-          padding-bottom: 2.5rem;
-        }
-      }
-      .select {
-        &__value {
-          &::after {
-            flex: 0 0 2.6rem;
-            width: 2.6rem;
-            height: 2.6rem;
-          }
-        }
-        &__options {
-          padding: 2.5rem 2.5rem 3rem 2.5rem;
-          border-radius: 2rem;
-        }
-        &__option {
-          padding: 0;
-          &:not(:last-child) {
-            margin-bottom: 2.5rem;
-          }
-        }
-        &__title {
-          padding: 2.5rem;
-          border-radius: 2rem;
-        }
-        &__row {
-          row-gap: normal;
-        }
-        &__asset {
-          font-size: 2.6rem;
-          line-height: 120%;
-        }
-        &__text {
-          margin-bottom: 0.5rem;
-          font-size: 2.6rem;
-        }
-        &__options {
-          top: calc(100% - 2rem);
-        }
-      }
-    }
-    &__date {
-      grid-template-columns: repeat(3, 1fr) 8rem;
-      justify-content: space-between;
-      column-gap: auto;
-    }
-    &__date-item {
-      padding: 1.6rem 3.5rem;
-      flex: 1 1 auto;
-      width: auto;
-      border-radius: 2rem;
-    }
-    &__calendar {
-      flex: 0 0 8rem;
-      width: 8rem;
-      height: 8rem;
-      img {
-        flex: 0 0 4rem;
-        width: 4rem;
-        height: 4rem;
-      }
-    }
     &__appointment {
       row-gap: 1.6rem;
     }
@@ -1929,11 +3198,6 @@ body::after {
       padding: 0 2.5rem;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 0.8rem;
-    }
-    &__hours {
-      padding: 2.5rem 3rem;
-      border-radius: 2rem;
-      font-size: 2.6rem;
     }
     &__hours-more {
       margin-top: 5rem;
@@ -2035,13 +3299,9 @@ body::after {
   .datepicker-modal {
     .popup__content {
       padding: 6rem 6rem 7.2rem 6rem;
-      max-width: 67rem;
     }
     .popup__head {
       margin-bottom: 7rem;
-    }
-    .datepicker-modal .popup__head .popup__close img {
-      width: 3rem;
     }
     .qs-datepicker-container {
       margin-bottom: 5.5rem;
@@ -2079,6 +3339,7 @@ body::after {
       margin-bottom: 6rem;
       font-size: 5.2rem;
       line-height: 107%;
+      max-width: 63rem;
     }
     &__field {
       margin-bottom: 6rem;
@@ -2105,6 +3366,12 @@ body::after {
   }
 }
 @media (min-width: 48em) {
+  .navigation-block {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   .search-form {
     border: 1px solid #d8dde4;
     border-radius: 1rem;

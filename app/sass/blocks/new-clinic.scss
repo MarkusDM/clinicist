@@ -145,6 +145,9 @@
         line-height: 125%;
         color: rgba(51, 51, 51, 0.5);
         margin-top: 2.4rem;
+        &:first-child {
+          margin-bottom: 1.6rem;
+        }
       }
     }
   }
@@ -1672,6 +1675,154 @@
   &__history {
     margin-bottom: 10.8rem;
   }
+  &__career {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+  &.new-clinic-doctors-detailed {
+    .new-clinic {
+      &__content {
+        display: none;
+        &_methods {
+          .new-clinic__title {
+            margin-bottom: 4rem;
+          }
+        }
+        &._active {
+          display: flex;
+        }
+      }
+      &__links-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2.7rem;
+      }
+      &__text {
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+      &__articles {
+        display: flex;
+        flex-direction: column;
+      }
+      &__articles-row {
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        row-gap: 3.6rem;
+      }
+      &__articles-link {
+        align-self: flex-start;
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+
+      // .new-clinic__rating
+
+      &__rating {
+        margin-bottom: 5.4rem;
+        padding: 3.2rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 6rem;
+        border: 1px solid #d8dde4;
+        background-color: #ffffff;
+        .rating__item {
+          flex: 0 0 2rem;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      // .new-clinic__rating-group
+
+      &__rating-group {
+        .rating-group__row {
+          column-gap: 1.3rem;
+        }
+      }
+
+      // .new-clinic__reviews
+
+      &__reviews {
+        display: flex;
+        flex-direction: column;
+      }
+
+      // .new-clinic__reviews-row
+
+      &__reviews-row {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        span {
+          white-space: nowrap;
+          color: #2f2f2f;
+          &:first-child {
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              top: 50%;
+              right: -1rem;
+              background-color: #d8dde4;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+
+      // .new-clinic__reviews-text
+
+      &__reviews-text {
+        font-size: 1.6rem;
+      }
+
+      // .new-clinic__rating-set
+
+      &__rating-set {
+        display: flex;
+        flex-direction: column;
+      }
+
+      // .new-clinic__rating-set-subtitle
+
+      &__rating-set-subtitle {
+        margin-bottom: 1.6rem;
+        color: #2f2f2f;
+        white-space: nowrap;
+      }
+
+      // .new-clinic__btn
+
+      &__rating-btn {
+        align-self: center;
+        min-width: 21.9rem;
+        white-space: nowrap;
+      }
+
+      &__reviews-group {
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+      }
+
+      &__reviews-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -1735,6 +1886,109 @@
     &__socials-icon {
       width: 6rem;
       height: 6rem;
+    }
+    &__career {
+      row-gap: 3.2rem;
+    }
+    &.new-clinic-doctors-detailed {
+      .new-clinic {
+        &__content {
+          &_methods {
+            .new-clinic__title {
+              margin-bottom: 6.4rem;
+            }
+          }
+        }
+        &__reviews-group {
+          margin-bottom: 6.4rem;
+          row-gap: 3.6rem;
+        }
+        &__rating {
+          margin-bottom: 8rem;
+          flex-direction: column;
+          .rating__item {
+            flex: 0 0 4rem;
+            width: 4rem;
+            height: 4rem;
+          }
+          .rating-group {
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            column-gap: 6.6rem;
+          }
+        }
+        &__rating-set,
+        &__reviews {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 6.6rem;
+        }
+        &__rating-set-subtitle {
+          margin: 0;
+          font-size: 3.2rem;
+        }
+        &__reviews {
+          margin-bottom: 5rem;
+        }
+        &__reviews-text {
+          margin-bottom: 3rem;
+          font-size: 2.6rem;
+        }
+        &__reviews-row {
+          margin: 0;
+          grid-column: 2/3;
+          column-gap: 5rem;
+          span {
+            &:first-child {
+              &::after {
+                right: -2.5rem;
+              }
+            }
+          }
+        }
+        &__rating-btn {
+          width: 100%;
+          height: 10rem;
+        }
+        &__rating-set {
+          margin-bottom: 6rem;
+          align-items: center;
+        }
+        &__articles-row {
+          margin-bottom: 6.4rem;
+          grid-template-columns: 1fr;
+          row-gap: 3.6rem;
+        }
+        &__articles-link {
+          align-self: center;
+        }
+        &__text {
+          color: rgba(51, 51, 51, 0.5);
+          &:not(:last-child) {
+            margin-bottom: 3.6rem;
+          }
+        }
+        &__links-list {
+          row-gap: 4.4rem;
+        }
+        &__title {
+          max-width: 67rem;
+        }
+        &__aside {
+          grid-row: 1/2;
+          min-width: 0;
+        }
+        &__list {
+          li {
+            color: rgba(51, 51, 51, 0.5);
+          }
+        }
+        &__navigation-block {
+          margin-bottom: 6.4rem;
+        }
+      }
     }
     &.new-clinic-licenzia {
       margin-bottom: 20rem;
