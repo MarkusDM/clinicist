@@ -60,14 +60,20 @@
       top: unset;
       left: unset;
       right: 58rem;
-      bottom: 0rem;
+      bottom: -3.5rem;
+      &-btm {
+         bottom: 0rem;
+      }
    }
    &-btn-next {
       position: absolute;
       top: unset;
       left: unset;
       right: 51rem;
-      bottom: 0rem;
+      bottom: -3.5rem;
+      &-btm {
+         bottom: 0rem;
+      }
    }
    &-swiper-pagination {
       right: unset;

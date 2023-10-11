@@ -14130,13 +14130,17 @@ input[type='search']::-webkit-search-results-decoration {
     top: unset;
     left: unset;
     right: 58rem;
-    bottom: 0rem; }
+    bottom: -3.5rem; }
+    .about-btn-prev-btm {
+      bottom: 0rem; }
   .about-btn-next {
     position: absolute;
     top: unset;
     left: unset;
     right: 51rem;
-    bottom: 0rem; }
+    bottom: -3.5rem; }
+    .about-btn-next-btm {
+      bottom: 0rem; }
   .about-swiper-pagination {
     right: unset;
     left: 5rem;
