@@ -1,0 +1,465 @@
+.steps {
+  position: relative;
+  margin-bottom: 15rem;
+  .popup-show & {
+    z-index: -1;
+  }
+
+  // .steps__text-block
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  // .steps__text-block-heading
+
+  &__text-block-heading {
+    margin-bottom: 1.2rem;
+  }
+
+  // .steps__container
+
+  &__container {
+  }
+
+  // .steps__spoiler
+
+  &__spoiler {
+  }
+
+  // .steps__heading
+
+  &__heading {
+    padding: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #eef3f7;
+    &._spoiler-active {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+    &::after {
+      content: '';
+      flex: 0 0 2.3rem;
+      width: 2.3rem;
+      height: 2.3rem;
+      background-image: url(../img/a-image/icons/select-arrow-blue.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // .steps__body
+
+  &__body {
+  }
+
+  // .steps__inner
+
+  &__inner {
+    margin-top: 0.3rem;
+  }
+
+  // .steps__tabs
+
+  &__tabs {
+  }
+
+  // .steps__navigation
+
+  &__navigation {
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 27rem);
+    justify-content: space-between;
+    background-color: #eef3f7;
+  }
+
+  // .steps__title
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    text-align: center;
+    color: #383742;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    &:not(:last-child) {
+      .steps__num {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 51rem;
+          height: 2px;
+          top: 50%;
+          right: 0;
+          background-color: #d8dde4;
+          transform: translate(100%, -50%);
+        }
+      }
+    }
+  }
+
+  // .steps__num
+
+  &__num {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.4rem;
+    height: 3.7rem;
+    border-radius: 1rem;
+    color: rgba(47, 47, 47, 0.35);
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 150%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    ._tab-active & {
+      color: #ffffff;
+      background-color: $blue;
+    }
+  }
+
+  // .steps__content
+
+  &__content {
+  }
+
+  // .steps__head
+
+  &__head {
+    margin-top: 0.3rem;
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: 20rem 1fr 20rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef3f7;
+  }
+
+  // .steps__head-back
+
+  &__head-back {
+  }
+
+  // .steps__subtitle
+
+  &__subtitle {
+    display: flex;
+    column-gap: 2.8rem;
+    justify-self: center;
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 4.1rem;
+    span {
+      color: $blue;
+    }
+  }
+
+  // .steps__wrapper
+
+  &__wrapper {
+    margin-top: 0.3rem;
+    display: grid;
+    grid-template-columns: 51rem 1fr;
+    background-color: #eef3f7;
+    .qs-datepicker-container {
+      margin: 4rem;
+      padding: 3rem 4rem 4rem 4rem;
+      grid-row: 1/2;
+      width: 43rem;
+      height: 40rem;
+      border: 1px solid $blue;
+      border-radius: 1rem;
+    }
+  }
+
+  // .steps__options
+
+  &__options {
+    padding: 4rem 4rem 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    border-left: 0.3rem solid #ffffff;
+  }
+
+  // .steps__select-wrap
+
+  &__select-wrap {
+    margin-bottom: 1.2rem;
+  }
+
+  // .steps__hours-group
+
+  &__hours-group {
+    margin-bottom: 4.5rem;
+    padding: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.2rem;
+    border-radius: 0.8rem;
+    background-color: #ffffff;
+  }
+
+  // .steps__hours
+
+  &__hours {
+  }
+
+  // .steps__actions
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .steps__btn
+
+  &__btn {
+    min-width: 49.8rem;
+    background-color: transparent;
+  }
+
+  // .steps__call
+
+  &__call {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    grid-column: 2/3;
+    column-gap: 1.4rem;
+    color: $blue;
+    &::after {
+      display: none;
+    }
+    &::before {
+      content: '';
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url(../img/a-image/icons/call-phone.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .steps__info-icon
+
+  &__info-icon {
+    align-self: center;
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  // .steps__services-labels
+
+  &__services-labels {
+    padding: 3rem;
+  }
+
+  // .steps__services-labels-wrap
+
+  &__services-labels-wrap {
+    .swiper-slide {
+      width: auto;
+      height: 9.8rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .steps {
+    &.steps-date-busy {
+      .steps__select-wrap {
+        margin-bottom: 6.4rem;
+      }
+      .steps__text-block {
+        margin-bottom: 6.4rem;
+      }
+      .steps__text-block-heading {
+        margin-bottom: 0.8rem;
+        font-size: 3.6rem;
+      }
+      .steps__text-block-text {
+        max-width: 64rem;
+      }
+      .steps__call {
+        margin: 0;
+      }
+    }
+    &__body {
+      &_services {
+        .steps__subtitle {
+          flex-direction: row;
+        }
+        .steps__info-icon {
+          margin-left: auto;
+        }
+      }
+    }
+    &__services-labels {
+      padding: 0;
+    }
+    &__info-icon {
+      flex: 0 0 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+    &__container {
+      padding: 0;
+    }
+    &__inner {
+      margin-top: 0.6rem;
+    }
+    &__heading {
+      padding: 4rem;
+      &::after {
+        flex: 0 0 4.3rem;
+        width: 4.3rem;
+        height: 4.3rem;
+      }
+    }
+    &__date {
+      margin-bottom: 2.3rem;
+    }
+    &__navigation {
+      padding: 5rem 4rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+    &__title {
+      margin-right: 0.8rem;
+      flex-direction: row;
+      column-gap: 1.6rem;
+      font-size: 3rem;
+      letter-spacing: 0.06rem;
+      .steps__title-text {
+        display: none;
+      }
+      &._tab-active {
+        margin-right: auto;
+        .steps__title-text {
+          display: inline-block;
+        }
+        .steps__num {
+          border: 1px solid $blue;
+        }
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &__num {
+      flex: 0 0 7rem;
+      width: 7rem;
+      height: 7rem;
+      border: 1px solid #b6b6b6;
+      border-radius: 1.6rem;
+      font-size: 3rem;
+      color: #b6b6b6;
+      &::after {
+        display: none;
+      }
+    }
+    &__head {
+      margin-top: 0.6rem;
+      padding: 4rem;
+      display: block;
+    }
+    &__head-back {
+      display: none;
+    }
+    &__subtitle {
+      display: flex;
+      flex-direction: column;
+      font-size: 3rem;
+      line-height: 150%;
+    }
+    &__wrapper {
+      margin-top: 0.6rem;
+      padding: 4rem 4rem 5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      .qs-datepicker-container {
+        display: none;
+      }
+    }
+    &__options {
+      padding: 0;
+      border-left: none;
+    }
+    &__hours-group {
+      margin-bottom: 6.3rem;
+      padding: 2.3rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      border-radius: 2rem;
+    }
+    &__actions {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    &__call {
+      margin-bottom: 6.4rem;
+      justify-self: center;
+      grid-row: 1/2;
+      grid-column: 1/2;
+      column-gap: 2.3rem;
+      font-weight: 400;
+      &::before {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    &__btn {
+      width: 100%;
+    }
+    &__select-wrap {
+      margin-bottom: 2.3rem;
+    }
+    &__hours {
+      &._desktop-only {
+        display: none;
+      }
+    }
+  }
+}
+@media (min-width: 48em) {
+  .steps {
+    &__date {
+      display: none;
+    }
+    &__services-labels-wrap {
+      display: flex;
+      column-gap: 2rem;
+      .swiper-slide {
+        height: 5.5rem;
+      }
+    }
+  }
+}

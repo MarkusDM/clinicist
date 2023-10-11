@@ -1,92 +1,185 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // input mask
   $('.tel-mask').inputmask('+7 (999) 999-99-99', {
     clearMaskOnLostFocus: false,
   })
 
+  // rating set
+  // $('.my-rating').starRating({
+  //   starSize: 40,
+  //   initialRating: 5,
+  //   emptyColor: '#ffffff',
+  //   hoverColor: '#fe7200',
+  //   activeColor: '#fe7200',
+  //   ratedColor: '#fe7200',
+  //   useGradient: false,
+  //   strokeWidth: 20,
+  //   strokeColor: '#fe7200',
+  //   starShape: 'straight',
+  // })
+
   const md = window.matchMedia('(max-width: 768px)').matches
 
   // sliders
-  let awardsSlider = null
-  let imgsSlider = null
+  const initSliders = () => {
+    let awardsSlider = null
+    let imgsSlider = null
+    let navigationTabsSlider = null
+    let ourDoctorsSlider = null
+    let servicesLabelsSlider = null
 
-  if (document.querySelector('.awards__slider')) {
-    if (md && !awardsSlider) {
-      awardsSlider = new Swiper('.awards__slider', {
-        spaceBetween: 16,
-        slidesPerView: 1.7,
-        autoplay: {
-          delay: 7000,
-          disableOnInteraction: false,
-        },
-        speed: 1000,
-      })
-    } else if (!md && awardsSlider) {
-      awardsSlider.destroy()
-      awardsSlider = null
+    if (document.querySelector('.awards__slider')) {
+      if (md && !awardsSlider) {
+        awardsSlider = new Swiper('.awards__slider', {
+          spaceBetween: 16,
+          slidesPerView: 1.7,
+          autoplay: {
+            delay: 7000,
+            disableOnInteraction: false,
+          },
+          speed: 1000,
+        })
+      } else if (!md && awardsSlider) {
+        awardsSlider.destroy()
+        awardsSlider = null
+      }
     }
-  }
-  if (document.querySelector('.doctor__imgs-wrap')) {
-    if (md && !imgsSlider) {
-      imgsSlider = new Swiper('.doctor__imgs-wrap', {
+    if (document.querySelector('.doctor__imgs-wrap')) {
+      if (md && !imgsSlider) {
+        imgsSlider = new Swiper('.doctor__imgs-wrap', {
+          spaceBetween: 25,
+          slidesPerView: 'auto',
+          speed: 1000,
+        })
+      } else if (!md && imgsSlider) {
+        imgsSlider.destroy()
+        imgsSlider = null
+      }
+    }
+    if (document.querySelector('.steps__services-labels')) {
+      if (md && !servicesLabelsSlider) {
+        servicesLabelsSlider = new Swiper('.steps__services-labels', {
+          spaceBetween: 12,
+          slidesPerView: 'auto',
+          speed: 1000,
+          slideToClickedSlide: false,
+
+        })
+      } else if (!md && servicesLabelsSlider) {
+        servicesLabelsSlider.destroy()
+        servicesLabelsSlider = null
+      }
+    }
+    if (document.querySelector('.offers__slider')) {
+      new Swiper('.offers__slider', {
         spaceBetween: 25,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         speed: 1000,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.offers__slider-control .btn-next',
+          prevEl: '.offers__slider-control .btn-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: '.offers__slider-control .swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            autoHeight: false,
+          },
+        },
       })
-    } else if (!md && imgsSlider) {
-      imgsSlider.destroy()
-      imgsSlider = null
+    }
+    if (document.querySelector('.other-programs__slider')) {
+      new Swiper('.other-programs__slider', {
+        spaceBetween: 25,
+        slidesPerView: 1,
+        speed: 1000,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.other-programs__slider-control .btn-next',
+          prevEl: '.other-programs__slider-control .btn-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: '.other-programs__slider-control .swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            autoHeight: false,
+          },
+        },
+      })
+    }
+    if (document.querySelector('.our-doctors__slider')) {
+      if (md) {
+        ourDoctorsSlider = new Swiper('.our-doctors__slider', {
+          spaceBetween: 40,
+          slidesPerView: 1,
+          speed: 1000,
+          autoHeight: true,
+          navigation: {
+            nextEl: '.our-doctors__slider-control .btn-next',
+            prevEl: '.our-doctors__slider-control .btn-prev',
+          },
+          pagination: {
+            el: '.our-doctors__slider-pagination',
+            clickable: true,
+          },
+        })
+      } else if (!md) {
+        ourDoctorsSlider = new Swiper('.our-doctors__slider', {
+          spaceBetween: 40,
+          slidesPerView: 3,
+          speed: 1000,
+          autoHeight: false,
+          navigation: {
+            nextEl: '.our-doctors__slider-control .btn-next',
+            prevEl: '.our-doctors__slider-control .btn-prev',
+          },
+          pagination: {
+            el: '.our-doctors__slider-fraction',
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+              return (
+                '<span>0' +
+                current +
+                '</span>' +
+                '<span>/</span>' +
+                '<span>' +
+                total +
+                '</span>'
+              )
+            },
+          },
+        })
+      }
+    }
+    if (document.querySelector('.navigation-block__tabs')) {
+      if (md && !navigationTabsSlider) {
+        navigationTabsSlider = new Swiper('.navigation-block__tabs', {
+          slidesPerView: 'auto',
+          speed: 1000,
+          slideToClickedSlide: true,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
+        })
+      } else if (!md && navigationTabsSlider) {
+        navigationTabsSlider.destroy()
+        navigationTabsSlider = null
+      }
     }
   }
-  if (document.querySelector('.offers__slider')) {
-    new Swiper('.offers__slider', {
-      spaceBetween: 25,
-      slidesPerView: 1,
-      speed: 1000,
-      autoHeight: true,
-      navigation: {
-        nextEl: '.offers__slider-control .btn-next',
-        prevEl: '.offers__slider-control .btn-prev',
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
-      pagination: {
-        el: '.offers__slider-control .swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          autoHeight: false,
-        },
-      },
-    })
-  }
-  if (document.querySelector('.other-programs__slider')) {
-    new Swiper('.other-programs__slider', {
-      spaceBetween: 25,
-      slidesPerView: 1,
-      speed: 1000,
-      autoHeight: true,
-      navigation: {
-        nextEl: '.other-programs__slider-control .btn-next',
-        prevEl: '.other-programs__slider-control .btn-prev',
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
-      pagination: {
-        el: '.other-programs__slider-control .swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          autoHeight: false,
-        },
-      },
-    })
-  }
+  initSliders()
 
   // price list
   const pricelistSearch = document.getElementById('search-form')
@@ -168,6 +261,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
     })
+  }
+
+  // steps datepicker
+  if (document.querySelector('.steps #datepicker') && md) {
+    document.querySelector('.datepicker-modal__form #datepicker').remove()
+    document
+      .querySelector('.datepicker-modal__form')
+      .appendChild(document.querySelector('.steps #datepicker'))
+    document
+      .querySelector('.datepicker-modal__form')
+      .appendChild(document.querySelector('.steps .qs-datepicker-container'))
   }
 
   // other programs card (move image)
@@ -1890,21 +1994,51 @@ document.addEventListener('DOMContentLoaded', function () {
       _slideUp(sortDropdown)
       document.documentElement.classList.remove('_sort-dropdown-open')
     }
-    if (target.closest('.doctor-card__date-item')) {
-      const targetParent = target.closest(
-        '.doctor-card__date-item'
-      ).parentElement
+    if (target.closest('.date__item')) {
+      const targetParent = target.closest('.date__item').parentElement
       setActiveClass(
-        target.closest('.doctor-card__date-item'),
-        targetParent.querySelectorAll('.doctor-card__date-item'),
+        target.closest('.date__item'),
+        targetParent.querySelectorAll('.date__item'),
         '_active'
       )
     }
-    if (target.closest('.doctor-card__hours')) {
-      const targetParent = target.closest('.doctor-card__hours').parentElement
+    if (target.closest('.all-services__service-card')) {
+      const targetParent = target.closest('.all-services__service-card').parentElement
       setActiveClass(
-        target.closest('.doctor-card__hours'),
-        targetParent.querySelectorAll('.doctor-card__hours'),
+        target.closest('.all-services__service-card'),
+        targetParent.querySelectorAll('.all-services__service-card'),
+        '_active'
+      )
+    }
+    if (target.closest('.hours-item')) {
+      const targetParent = target.closest('.hours-item').parentElement
+      setActiveClass(
+        target.closest('.hours-item'),
+        targetParent.querySelectorAll('.hours-item'),
+        '_active'
+      )
+    }
+    if (target.closest('.appointment-modal__contact')) {
+      setActiveClass(
+        target.closest('.appointment-modal__contact'),
+        document.querySelectorAll('.appointment-modal__contact'),
+        '_active'
+      )
+    }
+    if (target.closest('.navigation-block__tab')) {
+      const targetElement = target.closest('.navigation-block__tab')
+      const currentContentBlock = document.querySelector(
+        `[data-content-type=${targetElement.dataset.type}]`
+      )
+
+      setActiveClass(
+        targetElement,
+        document.querySelectorAll('.navigation-block__tab'),
+        '_active'
+      )
+      setActiveClass(
+        currentContentBlock,
+        document.querySelectorAll('.new-clinic__content'),
         '_active'
       )
     }
@@ -1914,6 +2048,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', onClickHandler)
   window.addEventListener('resize', function () {
+    initSliders()
     setHoursHeight()
     moveImage()
   })
