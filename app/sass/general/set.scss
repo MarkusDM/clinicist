@@ -116,7 +116,7 @@ input[type='number'] {
   html {
     font-size: 5px;
     font-size: 1.5625vw;
-    font-size: calc((100/428) * 5vw); // где 320 это ширина моб версии макета
+    font-size: calc((100/375) * 5vw); // где 320 это ширина моб версии макета
    
     -webkit-text-size-adjust: none;
   }

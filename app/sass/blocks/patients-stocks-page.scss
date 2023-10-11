@@ -1,0 +1,36 @@
+.patients-stocks {
+  margin-bottom: 18rem;
+  .stocks {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 43.3rem);
+      gap: 5.9rem;
+    }
+    &__btn {
+      margin-top: 4rem;
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .patients-stocks {
+    margin-bottom: 16rem;
+    .stocks {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(1, 67rem);
+        gap: 3.2rem;
+      }
+      &__btn-box {
+        display: flex;
+        justify-content: center;
+      }
+      &__btn {
+        margin-top: 6.4rem;
+      }
+    }
+  }
+}

@@ -18,7 +18,6 @@
 @import './blocks/story';
 @import './blocks/new-clinic';
 @import './blocks/licenzia';
-@import './blocks/all-news';
 @import './blocks/podgotovka';
 @import './blocks/benifits';
 @import './blocks/values';
@@ -72,6 +71,8 @@
 @import './blocks/program-prices';
 @import './blocks/other-programs';
 @import './general/a-elements';
+@import './general/t-elements';
+
 @import './blocks/services-page';
 @import './blocks/offer-banner';
 @import './blocks/blue-banner';
@@ -82,6 +83,9 @@
 @import './blocks/all-services';
 @import './blocks/application-form';
 @import './blocks/s-direction';
+
+@import './blocks/patients-stocks-page';
+@import './blocks/patients-information-page';
 
 #ui-datepicker-div {
   display: block !important;
