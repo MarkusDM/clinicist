@@ -4465,19 +4465,14 @@
       left: 31%;
       width: 65.1rem;
       height: 65.1rem;
-
-      
-  }
-
-    }
-
-
-    img {
-      position: relative;
-      z-index: 2;
     }
   }
 
+  img {
+    position: relative;
+    z-index: 2;
+  }
+}
 
 @media (max-width: 48em) {
   .baner--services {
@@ -4517,8 +4512,6 @@
     }
   }
 
-
-
   .baner--price-s {
     .container {
       padding: 0;
@@ -4531,13 +4524,10 @@
       width: 100%;
     }
 
-   
-
     .baner__blue-word {
       font-size: 3rem;
       margin-bottom: 2rem;
     }
-
 
     .baner__picture {
       position: relative;
@@ -4547,8 +4537,6 @@
         width: 85.1rem;
         height: 72.1rem;
       }
-
-
     }
 
     .btn {
@@ -4559,9 +4547,247 @@
       display: none;
     }
   }
- }
+}
 
+/////////////////////////////////// t-styles ///////////////////////////////////////
 
+.baner {
+  &-diseases {
+    .baner {
+      &__image-wrap {
+        &::before {
+          top: 80%;
+          border-color: #d8dde4;
+        }
+      }
+      &__image {
+        &.img-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  &-patients {
+    .baner {
+      &__image-wrap {
+        width: 62.2rem;
+        &::before {
+          width: 78.4rem;
+          height: 78.4rem;
+          border-color: #d8dde4;
+          top: 70%;
+        }
+      }
+    }
+  }
+  &-patients-questions {
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 54.6rem;
+      }
+      &__image-wrap {
+        width: 31.7rem;
+        &::before {
+          width: 64.9rem;
+          height: 64.9rem;
+          border-color: #d8dde4;
+          top: 65%;
+        }
+      }
+    }
+  }
+  &-patients-cards {
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 60.6rem;
+      }
+      &__image-wrap {
+        width: 47.7rem;
+        &::before {
+          border-color: #d8dde4;
+        }
+      }
+    }
+  }
+  &-patients-stocks {
+    margin-bottom: 13rem;
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 62rem;
+      }
+      &__image-wrap {
+        width: 61.2rem;
+        &::before {
+          width: 78.4rem;
+          height: 78.4rem;
+          border-color: #d8dde4;
+          top: 70%;
+        }
+      }
+    }
+  }
+  &-patients-preparation {
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 63rem;
+      }
+      &__image-wrap {
+        width: 62rem;
+        &::before {
+          width: 78.4rem;
+          height: 78.4rem;
+          border-color: #d8dde4;
+          top: 70%;
+        }
+      }
+    }
+  }
+}
 
+@media (max-width: 48em) {
+  .baner {
+    &-diseases {
+      .baner {
+        &__breadcrumbs {
+          margin-bottom: 13.4rem;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 3.9rem;
+        }
+        &__image-wrap {
+          &::before {
+            top: 8%;
+            width: 120vw;
+            height: 115vw;
+            transform: translate(-45%, 0);
+          }
+        }
+        &__image {
+          object-fit: cover;
+          &.img-desctop {
+            display: none;
+          }
+          &.img-mobile {
+            display: block;
+            width: 86rem;
+            height: 72rem;
+          }
+        }
+      }
+    }
+    &-patients {
+      .baner {
+        &__text-wrap {
+          margin-bottom: 15rem;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__image-wrap {
+          width: 74rem;
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -18%;
+            transform: translate(-51%, 0);
+          }
+        }
+      }
+    }
+    &-patients-questions {
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 8.6rem;
+        }
+        &__image-wrap {
+          width: 43.4rem;
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -5%;
+            transform: translate(-49%, 0);
+          }
+        }
+      }
+    }
+    &-patients-cards {
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 12.6rem;
+        }
+        &__image-wrap {
+          width: 70.6rem;
+          transform: translateX(-1rem);
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: 0%;
+          }
+        }
+      }
+    }
+    &-patients-stocks {
+      margin-bottom: 16rem;
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 15.8rem;
+        }
+        &__image-wrap {
+          width: 80.4rem;
+          transform: translateX(-6rem);
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -15%;
+          }
+        }
+      }
+    }
+    &-patients-preparation {
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 17.4rem;
+        }
+        &__image-wrap {
+          width: 88.8rem;
+          transform: translateX(-12rem);
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -10%;
+            transform: translate(-47%, 0);
+          }
+        }
+      }
+    }
+  }
+}
 
-
+/////////////////////////////////// t-styles ///////////////////////////////////////
