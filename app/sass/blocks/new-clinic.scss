@@ -39,6 +39,16 @@
   &__content {
     display: flex;
     flex-direction: column;
+    &-title {
+      margin-bottom: 4rem;
+    }
+    &-text {
+      font-family: 'Montserrat';
+      font-size: 1.8rem;
+      line-height: 150%;
+      margin-bottom: 4rem;
+      color: #2f2f2f;
+    }
   }
   &__text {
     font-size: 1.8rem;

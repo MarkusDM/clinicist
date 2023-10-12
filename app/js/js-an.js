@@ -4,17 +4,29 @@ const proceduresSwiper = new Swiper('.procedures__item-swiper', {
     prevEl: '.procedures__item-btn-prev',
   },
   slidesPerView: 1,
-  spaceBetween: rem(2.5),
+  spaceBetween: rem(3),
   speed: 1000,
 })
 
 const valuesSwiper = new Swiper('.value-swiper', {
+  direction: 'vertical',
   loop: true,
   navigation: {
     nextEl: '.values-btn-next',
     prevEl: '.values-btn-prev',
   },
   slidesPerView: 1,
+  spaceBetween: rem(1),
+  speed: 1000,
+})
+
+const clinicSwiper = new Swiper('.new-clinic-korporativnie-swiper', {
+  loop: true,
+  navigation: {
+    nextEl: '.values-btn-next',
+    prevEl: '.values-btn-prev',
+  },
+  slidesPerView: 3,
   spaceBetween: rem(1),
   speed: 1000,
 })
