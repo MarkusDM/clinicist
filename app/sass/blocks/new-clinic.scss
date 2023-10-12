@@ -1,2202 +1,2308 @@
 .new-clinic {
-   margin-bottom: 13.8rem;
-   &__inner {
-      padding: 0 1rem;
-      display: flex;
-      justify-content: space-between;
-   }
-   &__left {
-      width: 31.6%;
-      padding: 5rem;
+  margin-bottom: 13.8rem;
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+  &__title {
+    margin-bottom: 6.8rem;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 45.3rem 1fr;
+    justify-content: space-between;
+    column-gap: 4rem;
+  }
+  &__call-block {
+    margin-bottom: 11.3rem;
+  }
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__socials-heading {
+    margin-bottom: 2.8rem;
+  }
+  &__socials-list {
+    display: flex;
+    column-gap: 2.8rem;
+  }
+  &__socials-icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    font-size: 1.8rem;
+    &:first-child {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__list {
+    margin-bottom: 3.7rem;
+    & li {
       position: relative;
-      background: linear-gradient(180deg, #5FCBFF 0%, #36B4F1 100%);
-      padding-bottom: 6rem;
-      height: fit-content;
+      padding-left: 3.6rem;
+      font-size: 1.8rem;
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
       &::after {
-         position: absolute;
-         content: '';
-         width: 41.7rem;
-         height: 41.7rem;
-         border-radius: 50%;
-         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -5%, rgba(255, 255, 255, 0) 50%), rgba(255, 255, 255, 0.04);
-         opacity: 0.4;
-         right: -12rem;
-         bottom: -11rem;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0.4rem;
+        width: 2rem;
+        height: 1.8rem;
+        background-image: url(../img/a-image/icons/ok.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
-      &::before {
-         position: absolute;
-         content: '';
-         width: 23.1rem;
-         height: 23.1rem;
-         border-radius: 50%;
-         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -5%, rgba(255, 255, 255, 0) 50%), rgba(255, 255, 255, 0.04);
-         opacity: 0.4;
-         border: 1px solid rgba(255, 255, 255, 0.4);
-         left: 12rem;
-         bottom: -7rem;
+    }
+  }
+  &__img {
+    margin-bottom: 4rem;
+    width: 100%;
+    height: 46.8rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.4rem 4rem;
+    border: 1px solid #d8dde4;
+    border-radius: 1rem;
+    &-btn {
+      border-radius: 0.8rem;
+      height: fit-content;
+      padding: 1rem 2.4rem;
+      line-height: 100%;
+      margin-top: 1.3rem;
+    }
+    &__item {
+      &-name {
+        font-family: 'Montserrat';
+        line-height: 130%;
+        margin-bottom: 2rem;
+        & span {
+          color: #d8dde4;
+        }
       }
-      &-phone {
-         font-family: "Montserrat";
-         font-weight: 600;
-         font-size: 2.8rem;
-         line-height: 140%;
-         color: $white;
-         position: relative;
-         padding-left: 7.3rem;
-         display: block;
-         margin-bottom: 8.8rem;
-         z-index: 2;
-         &::after {
-            position: absolute;
-            content: '';
-            left: 0;
-            background-image: url(../img/icons/phone-big.png);
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4.3rem;
-            height: 4.3rem;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-         }
-         &::before {
-            position: absolute;
-            content: '';
-            left: 7rem;
-            bottom: 0.5rem;
-            width: 68%;
-            height: 1px;
-            background-color: $white;
-         }
-      }
-      &-text {
-         color: $white;
-         font-family: "Montserrat";
-         font-size: 1.8rem;
-         line-height: 150%;
-         margin-bottom: 4rem;
-         position: relative;
-         &::before {
-            position: absolute;
-            content: '';
-            left: 0rem;
-            top: -4.8rem;
-            width: 100%;
-            height: 1px;
-            border: 1px solid rgba(238, 243, 247, 0.5);
-         }
-      }
-      &-whatsapp {
-         color: $white;
-         font-family: "Montserrat";
-         font-size: 1.8rem;
-         line-height: 150%;
-         font-weight: 700;
-         margin-bottom: 3rem;
-         display: inline-block;
-         padding-left: 7.4rem;
-         position: relative;
-         z-index: 2;
-         &::after {
-            position: absolute;
-            content: '';
-            left: 0;
-            background-image: url(../img/icons/whatsapp-white-big.png);
-            top: 50%;
-            transform: translateY(-50%);
-            width: 2.8rem;
-            height: 2.8rem;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-         }
-      }
-      &-online {
-         color: $white;
-         font-weight: 700;
-         font-family: "Montserrat";
-         font-size: 1.8rem;
-         line-height: 150%;
-         padding-left: 7.4rem;
-         position: relative;
-         cursor: pointer;
-         z-index: 2;
-         &::after {
-            position: absolute;
-            content: '';
-            left: 0;
-            background-image: url(../img/icons/sms-big.png);
-            top: 50%;
-            transform: translateY(-50%);
-            width: 2.8rem;
-            height: 2.6rem;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-         }
-      }
-   }
-   &__right {
-      width: 65.7%;
-      &-subtitle {
-         margin-bottom: 1.7rem;
-      }
-      &-title {
-         margin-bottom: 4rem;
-      }
-      &-text {
-         font-family: "Montserrat";
-         font-size: 1.8rem;
-         line-height: 150%;
-         margin-bottom: 4.1rem;
-      }
-      &-list {
-         font-family: "Montserrat";
-         font-size: 1.8rem;
-         line-height: 150%;
-         margin-bottom: 4rem;
-         & li {
-            font-family: "Montserrat";
-            font-size: 1.8rem;
-            line-height: 150%;
-            padding-left: 4.5rem;
+      &__rating {
+        display: flex;
+        align-items: flex-end;
+        &-num {
+          font-family: 'Myriad Pro';
+          font-size: 3.5rem;
+          line-height: 70%;
+          margin-left: 1.4rem;
+        }
+        &-stars {
+          display: flex;
+        }
+        &-stars2 {
+          display: flex;
+          margin-top: -0.3rem;
+          & > div {
             position: relative;
+            width: 2.6rem;
+            height: 2.6rem;
+            cursor: pointer;
             &:not(:last-child) {
-               margin-bottom: 2rem;
+              margin-right: 0.7rem;
             }
             &::after {
-               position: absolute;
-               content: '';
-               left: 0;
-               top: 0.4rem;
-               width: 2rem;
-               height: 1.8rem;
-               background-image: url(../img/icons/ok.svg);
-               background-position: center;
-               background-size: contain;
-               background-repeat: no-repeat;
+              position: absolute;
+              content: '';
+              left: 0;
+              top: 0;
+              width: 2.6rem;
+              height: 2.6rem;
+              background-image: url(../img/a-image/icons/star-drey.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
             }
-         }
+          }
+        }
       }
-      &-img {
-         width: 94.7rem;
-         height: 46.8rem;
-         margin-bottom: 4rem;
-         & img {
+      &__text {
+        font-family: 'Montserrat';
+        font-size: 1.6rem;
+        line-height: 125%;
+        color: rgba(51, 51, 51, 0.5);
+        margin-top: 2.4rem;
+        &:first-child {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+  &.new-clinic-licenzia {
+    margin-bottom: 16.2rem;
+    .new-clinic {
+      &__right {
+        width: 65.8%;
+        &-subtitle {
+          margin-bottom: 1rem;
+        }
+        &-title {
+          margin-bottom: 5.1rem;
+        }
+        &-text {
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.8rem;
+        padding-bottom: 5rem;
+        &-phone {
+          padding-left: 7rem;
+          margin-bottom: 7.2rem;
+        }
+        &-whatsapp {
+          padding-left: 7rem;
+        }
+        &-online {
+          padding-left: 7rem;
+        }
+        &-text {
+          &::before {
+            top: -4rem;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-new {
+    margin-bottom: 18rem;
+    .new-clinic {
+      &__inner {
+        margin-bottom: 5.8rem;
+        & .all-news__right-distribution {
+          width: 31.4%;
+          height: fit-content;
+        }
+      }
+      &__right {
+        position: relative;
+        padding-bottom: 3rem;
+        &::after {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #d8dde4;
+        }
+        &-title {
+          font-family: 'Montserrat';
+          font-size: 3.5rem;
+          line-height: 123%;
+          margin-bottom: 3rem;
+        }
+        &-list {
+          margin-bottom: 6rem;
+        }
+        &-img {
+          margin-bottom: 6rem;
+        }
+        &-text {
+          margin-bottom: 3rem;
+          &.semibold {
+            font-weight: 600;
+            width: 101%;
+            margin-bottom: 3rem;
+          }
+          &.mb {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      &__slider {
+        position: relative;
+        margin-top: -2rem;
+        margin-bottom: 13rem;
+        &-img {
+          width: 94.7rem;
+          height: 46.8rem;
+          & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-         }
+          }
+        }
       }
-      &-header {
-         display: flex;
-         justify-content: space-between;
-         padding: 4.4rem 4rem;
-         border: 1px solid #D8DDE4;
-         border-radius: 1rem;
-         &-btn {
-            border-radius: 0.8rem;
-            height: fit-content;
-            padding: 1rem 2.4rem;
-            line-height: 100%;
-            margin-top: 1.3rem;
-         }
-         &-item {
-            &-name {
-               font-family: 'Montserrat';
-               line-height: 130%;
-               margin-bottom: 2rem;
-               & span {
-                  color: #D8DDE4;
-               }
-            }
-            &-rating {
-               display: flex;
-               align-items: flex-end;
-               &-num {
-                  font-family: 'Myriad Pro';
-                  font-size: 3.5rem;
-                  line-height: 70%;
-                  margin-left: 1.4rem;
-               }
-               &-stars {
-                  display: flex;
-               }
-               &-stars2 {
-                  display: flex;
-                  margin-top: -0.3rem;
-                  &>div {
-                     position: relative;
-                     width: 2.6rem;
-                     height: 2.6rem;
-                     cursor: pointer;
-                     &:not(:last-child) {
-                        margin-right: 0.7rem;
-                     }
-                     &::after {
-                        position: absolute;
-                        content: '';
-                        left: 0;
-                        top: 0;
-                        width: 2.6rem;
-                        height: 2.6rem;
-                        background-image: url(../img/icons/star-drey.svg);
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: contain;
-                     }
-                  }
-               }
+      &-statia-swiper {
+        margin-left: 0;
+      }
+      &-statia-btn-prev {
+        right: unset;
+        left: 0;
+        bottom: -12rem;
+      }
+      &-statia-btn-next {
+        bottom: -12rem;
+      }
+      &-statia-swiper-pagination {
+        left: 51.5%;
+        bottom: -6.5rem;
+      }
+    }
+    & .baner {
+      background-color: transparent;
+      margin: 0;
+      &__bottom-wrap {
+        margin-left: 0;
+        padding-top: 0;
+      }
+      &__bottom-name {
+        font-family: 'Montserrat';
+        font-size: 2.5rem;
+        line-height: 160%;
+        margin-right: 5rem;
+      }
+    }
+  }
+  &.new-clinic-podgotovka {
+    margin-bottom: 14.5rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 1rem;
+      }
+      &__title {
+        margin-bottom: 5.2rem;
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.9rem;
+        padding-bottom: 5rem;
+        &::after {
+          right: -18rem;
+          bottom: -18rem;
+        }
+        &::before {
+          left: 12rem;
+          bottom: -14rem;
+        }
+        &-phone {
+          padding-left: 7rem;
+          margin-bottom: 7.2rem;
+        }
+        &-text {
+          &::before {
+            top: -4rem;
+          }
+        }
+        &-whatsapp,
+        &-online {
+          padding-left: 7rem;
+        }
+      }
+      &__right {
+        width: 65.9%;
+        &-text {
+          margin-bottom: 3.1rem;
+        }
+      }
+    }
+  }
+  &.new-clinic-podgotovka-detalna {
+    margin-bottom: 18rem;
+    .new-clinic {
+      &__right {
+        width: 65.8%;
+        &-title {
+          font-family: 'Montserrat';
+          font-size: 3.5rem;
+          line-height: 157%;
+        }
+        &-text {
+          line-height: 165%;
+          margin-bottom: 3.1rem;
+        }
+        & .mt {
+          margin-top: -1rem;
+          margin-bottom: 4rem;
+        }
+        &-img {
+          height: 39.8rem;
+          margin-bottom: 3rem;
+        }
+        &-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #eef3f7;
+          padding: 3.4rem 4.3rem;
+          padding-right: 5rem;
+          &-info {
+            display: flex;
+            align-items: center;
+            width: 51%;
+            &-icon {
+              margin-right: 3.2rem;
+              width: 3.7rem;
+              height: 3.7rem;
+              border-radius: 50%;
+              border: 0.2rem solid #36b4f1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $blue;
+              font-size: 3rem;
             }
             &-text {
-               font-family: 'Montserrat';
-               font-size: 1.6rem;
-               line-height: 125%;
-               color: rgba(51, 51, 51, 0.5);
-               margin-top: 2.4rem;
+              font-family: 'Montserrat';
+              font-size: 1.8rem;
+              line-height: 150%;
+              width: 90%;
             }
-         }
-      }
-   }
-   &.new-clinic-licenzia {
-      margin-bottom: 16.2rem;
-      .new-clinic {
-         &__right {
-            width: 65.8%;
-            &-subtitle {
-               margin-bottom: 1rem;
-            }
-            &-title {
-               margin-bottom: 5.1rem;
-            }
-            &-text {
-               &:not(:last-child) {
-                  margin-bottom: 2rem;
-               }
-            }
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.8rem;
-            padding-bottom: 5rem;
-            &-phone {
-               padding-left: 7rem;
-               margin-bottom: 7.2rem;
-            }
-            &-whatsapp {
-               padding-left: 7rem;
-            }
-            &-online {
-               padding-left: 7rem;
-            }
-            &-text {
-               &::before {
-                  top: -4rem;
-               }
-            }
-         }
-      }
-   }
-   &.new-clinic-new {
-      margin-bottom: 18rem;
-      .new-clinic {
-         &__inner {
-            margin-bottom: 5.8rem;
-            & .all-news__right-distribution {
-               width: 31.4%;
-               height: fit-content;
-            }
-         }
-         &__right {
+          }
+          &-print {
             position: relative;
-            padding-bottom: 3rem;
+            font-family: 'Golos';
+            font-weight: 500;
+            font-size: 1.3rem;
+            line-height: 123%;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            padding-left: 3rem;
             &::after {
-               position: absolute;
-               content: '';
-               left: 0;
-               bottom: 0;
-               width: 100%;
-               height: 1px;
-               background-color: #D8DDE4;
+              position: absolute;
+              content: '';
+              left: 0rem;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 1.8rem;
+              height: 2.4rem;
+              background-image: url(../img/a-image/icons/print.png);
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
             }
-            &-title {
-               font-family: "Montserrat";
-               font-size: 3.5rem;
-               line-height: 123%;
-               margin-bottom: 3rem;
-            }
-            &-list {
-               margin-bottom: 6rem;
-            }
-            &-img {
-               margin-bottom: 6rem;
-            }
-            &-text {
-               margin-bottom: 3rem;
-               &.semibold {
-                  font-weight: 600;
-                  width: 101%;
-                  margin-bottom: 3rem;
-               }
-               &.mb {
-                  margin-bottom: 2rem;
-               }
-            }
-         }
-         &__slider {
+          }
+        }
+      }
+      &__left {
+        width: 100%;
+        margin-bottom: 9rem;
+        &-wr {
+          width: 31.6%;
+        }
+        padding-bottom: 5rem;
+        &-phone {
+          padding-left: 7rem;
+          margin-bottom: 7.2rem;
+        }
+        &-whatsapp,
+        &-online {
+          padding-left: 7rem;
+        }
+        &-text {
+          &::before {
+            top: -4rem;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-komplex-program {
+    margin-bottom: 16rem;
+    .new-clinic {
+      &__right {
+        &-subtitle {
+          margin-bottom: 1.2rem;
+        }
+        &-title {
+          margin-bottom: 5rem;
+        }
+        &-text {
+          &:not(:last-child) {
+            margin-bottom: 2.1rem;
+          }
+        }
+      }
+      &__left {
+        padding-bottom: 5rem;
+        &-phone {
+          padding-left: 7rem;
+          margin-bottom: 7.3rem;
+        }
+        &-whatsapp {
+          padding-left: 7rem;
+        }
+        &-online {
+          padding-left: 7rem;
+        }
+      }
+    }
+  }
+  &.new-clinic-komplex-program-detalna {
+    margin-bottom: 15rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 1rem;
+      }
+      &__title {
+        margin-bottom: 7rem;
+      }
+      &__right {
+        margin-top: 0.3rem;
+        &-text {
+          margin-bottom: 3rem;
+        }
+      }
+      &__left {
+        width: 100%;
+        margin-bottom: 6.3rem;
+        &-wrap {
+          width: 31.6%;
+        }
+      }
+      &__bottom {
+        &-wrap {
+        }
+        &-name {
+          font-family: 'Montserrat';
+          font-size: 2.5rem;
+          line-height: 160%;
+          margin-bottom: 2rem;
+        }
+        &-mess {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 48%;
+          &-whatsapp,
+          &-telegram,
+          &-facebook,
+          &-vk {
+            width: 4rem;
+            height: 4rem;
+            background-color: $blue;
             position: relative;
-            margin-top: -2rem;
-            margin-bottom: 13rem;
-            &-img {
-               width: 94.7rem;
-               height: 46.8rem;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
+            border-radius: 50%;
+            margin-right: 2rem;
+            & img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
             }
-         }
-         &-statia-swiper {
-            margin-left: 0;
-         }
-         &-statia-btn-prev {
-            right: unset;
-            left: 0;
-            bottom: -12rem;
-         }
-         &-statia-btn-next {
-            bottom: -12rem;
-         }
-         &-statia-swiper-pagination {
-            left: 51.5%;
-            bottom: -6.5rem;
-         }
+          }
+          &-whatsapp {
+            & img {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+          &-telegram {
+            & img {
+              width: 2.2rem;
+              height: 1.9rem;
+            }
+          }
+          &-facebook {
+            & img {
+              width: 2.1rem;
+              height: 2.1rem;
+            }
+          }
+          &-vk {
+            margin-right: 0;
+            & img {
+              width: 2.4rem;
+              height: 1.4rem;
+            }
+          }
+        }
       }
-      & .baner {
-         background-color: transparent;
-         margin: 0;
-         &__bottom-wrap {
-            margin-left: 0;
-            padding-top: 0;
-         }
-         &__bottom-name {
-            font-family: "Montserrat";
-            font-size: 2.5rem;
-            line-height: 160%;
-            margin-right: 5rem;
-         }
+    }
+  }
+  &.new-clinic-specialnosti-napravlenia {
+    margin-bottom: 13.5rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 1rem;
       }
-   }
-   &.new-clinic-podgotovka {
-      margin-bottom: 14.5rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 1rem;
-         }
-         &__title {
-            margin-bottom: 5.2rem;
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.9rem;
-            padding-bottom: 5rem;
-            &::after {
-               right: -18rem;
-               bottom: -18rem;
-            }
-            &::before {
-               left: 12rem;
-               bottom: -14rem;
-            }
-            &-phone {
-               padding-left: 7rem;
-               margin-bottom: 7.2rem;
-            }
-            &-text {
-               &::before {
-                  top: -4rem;
-               }
-            }
-            &-whatsapp,
-            &-online {
-               padding-left: 7rem;
-            }
-         }
-         &__right {
-            width: 65.9%;
-            &-text {
-               margin-bottom: 3.1rem;
-            }
-         }
+      &__title {
+        margin-bottom: 5rem;
       }
-   }
-   &.new-clinic-podgotovka-detalna {
-      margin-bottom: 18rem;
-      .new-clinic {
-         &__right {
-            width: 65.8%;
-            &-title {
-               font-family: "Montserrat";
-               font-size: 3.5rem;
-               line-height: 157%;
-            }
-            &-text {
-               line-height: 165%;
-               margin-bottom: 3.1rem;
-
-            }
-            & .mt {
-               margin-top: -1rem;
-               margin-bottom: 4rem;
-            }
-            &-img {
-               height: 39.8rem;
-               margin-bottom: 3rem;
-            }
-            &-bottom {
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               background: #EEF3F7;
-               padding: 3.4rem 4.3rem;
-               padding-right: 5rem;
-               &-info {
-                  display: flex;
-                  align-items: center;
-                  width: 51%;
-                  &-icon {
-                     margin-right: 3.2rem;
-                     width: 3.7rem;
-                     height: 3.7rem;
-                     border-radius: 50%;
-                     border: 0.2rem solid #36B4F1;
-                     display: flex;
-                     align-items: center;
-                     justify-content: center;
-                     color: $blue;
-                     font-size: 3rem;
-                  }
-                  &-text {
-                     font-family: "Montserrat";
-                     font-size: 1.8rem;
-                     line-height: 150%;
-                     width: 90%;
-                  }
-               }
-               &-print {
-                  position: relative;
-                  font-family: "Golos";
-                  font-weight: 500;
-                  font-size: 1.3rem;
-                  line-height: 123%;
-                  text-decoration-line: underline;
-                  text-transform: uppercase;
-                  padding-left: 3rem;
-                  &::after {
-                     position: absolute;
-                     content: '';
-                     left: 0rem;
-                     top: 50%;
-                     transform: translateY(-50%);
-                     width: 1.8rem;
-                     height: 2.4rem;
-                     background-image: url(../img/icons/print.png);
-                     background-position: center;
-                     background-size: contain;
-                     background-repeat: no-repeat;
-                  }
-               }
-            }
-         }
-         &__left {
+      &__right {
+        margin-top: 0.3rem;
+        &-text {
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 5rem;
+        &-phone {
+          padding-left: 7rem;
+          margin-bottom: 7.6rem;
+        }
+        &-whatsapp {
+          padding-left: 7rem;
+        }
+        &-online {
+          padding-left: 7rem;
+        }
+        &-text {
+          &::before {
+            top: -4.3rem;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-korporativnie {
+    margin-bottom: 17.9rem;
+    .new-clinic {
+      &__right {
+        width: 65.8%;
+        & .info__item {
+          width: 100%;
+          display: block;
+          &-text {
             width: 100%;
-            margin-bottom: 9rem;
-            &-wr {
-               width: 31.6%;
-            }
-            padding-bottom: 5rem;
-            &-phone {
-               padding-left: 7rem;
-               margin-bottom: 7.2rem;
-            }
-            &-whatsapp,
-            &-online {
-               padding-left: 7rem;
-            }
-            &-text {
-               &::before {
-                  top: -4rem;
-               }
-            }
-         }
-      }
-   }
-   &.new-clinic-komplex-program {
-      margin-bottom: 16rem;
-      .new-clinic {
-         &__right {
-            &-subtitle {
-               margin-bottom: 1.2rem;
-            }
             &-title {
-               margin-bottom: 5rem;
+              font-size: 2.8rem;
+              line-height: 140%;
+              margin-bottom: 2rem;
             }
-            &-text {
-               &:not(:last-child) {
-                  margin-bottom: 2.1rem;
-               }
+            &-description {
+              line-height: 135%;
             }
-         }
-         &__left {
-            padding-bottom: 5rem;
-            &-phone {
-               padding-left: 7rem;
-               margin-bottom: 7.3rem;
+          }
+          &-sqr {
+            width: 5.6rem;
+            height: 5.6rem;
+            margin-bottom: 2.4rem;
+          }
+        }
+        &-subtitle {
+          margin-bottom: 1.2rem;
+        }
+        &-text {
+          margin-bottom: 6.1rem;
+          &:nth-child(5) {
+            margin-bottom: 3rem;
+          }
+        }
+        &-about {
+          margin-top: -0.4rem;
+          position: relative;
+          &-subtitle {
+            margin-bottom: 1.5rem;
+          }
+          &-title {
+            margin-bottom: 2.8rem;
+          }
+          &-text {
+            font-family: 'MyriadPro';
+            font-size: 1.8rem;
+            line-height: 135%;
+            color: rgba(51, 51, 51, 0.5);
+            position: relative;
+            padding-right: 35rem;
+            margin-bottom: 8.8rem;
+            &::after {
+              position: absolute;
+              content: '';
+              left: 0;
+              bottom: -3.8rem;
+              width: 100%;
+              height: 0.2rem;
+              background-color: #d8dde4;
             }
-            &-whatsapp {
-               padding-left: 7rem;
-            }
-            &-online {
-               padding-left: 7rem;
-            }
-         }
+          }
+        }
       }
-   }
-   &.new-clinic-komplex-program-detalna {
-      margin-bottom: 15rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 1rem;
-         }
-         &__title {
-            margin-bottom: 7rem;
-         }
-         &__right {
-            margin-top: 0.3rem;
-            &-text {
-               margin-bottom: 3rem;
+      &__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 5rem;
+        &-phone,
+        &-whatsapp,
+        &-online {
+          padding-left: 7rem;
+        }
+        &-phone {
+          margin-bottom: 7.4rem;
+        }
+        &-text {
+          &::before {
+            top: -4.3rem;
+          }
+        }
+      }
+      &-korporativnie-swiper-pagination {
+        bottom: unset;
+        top: 15.5rem;
+        transform: translateX(0);
+        left: unset;
+        right: -2.5rem;
+      }
+    }
+  }
+  &.new-clinic-uslovia-sotrudnichestva {
+    margin-bottom: 14.7rem;
+    .new-clinic {
+      &__right {
+        width: 65.8%;
+        &-subtitle {
+          margin-bottom: 1rem;
+        }
+        &-text {
+          margin-bottom: 3rem;
+        }
+        &-title {
+          margin-bottom: 5.3rem;
+        }
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 5rem;
+        &-phone,
+        &-whatsapp,
+        &-online {
+          padding-left: 7rem;
+        }
+        &-phone {
+          margin-bottom: 7.4rem;
+        }
+        &-text {
+          &::before {
+            top: -4.3rem;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-kontrol-kachestva {
+    margin-bottom: 14.8rem;
+    .new-clinic {
+      &__right {
+        width: 65.8%;
+        &-subtitle {
+          margin-bottom: 1rem;
+        }
+        &-text {
+          margin-bottom: 3rem;
+        }
+        &-title {
+          margin-bottom: 5.3rem;
+        }
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 7rem;
+        &::after {
+          width: 45.6rem;
+          height: 45.6rem;
+          right: -26rem;
+          bottom: -13rem;
+        }
+        &::before {
+          left: 22rem;
+          bottom: -15rem;
+        }
+        &-phone,
+        &-whatsapp,
+        &-online {
+          padding-left: 6rem;
+        }
+        &-whatsapp {
+          margin-bottom: 4.2rem;
+        }
+        &-phone {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 150%;
+          margin-bottom: 3.6rem;
+          &::after {
+            width: 3rem;
+            height: 3rem;
+          }
+          &::before {
+            content: none;
+          }
+        }
+        &-text {
+          margin-bottom: 5.5rem;
+          &::before {
+            content: none;
+          }
+        }
+        &-title {
+          font-family: 'Montserrat';
+          font-weight: 600;
+          font-size: 2.5rem;
+          line-height: 160%;
+          color: $white;
+          margin-bottom: 3.2rem;
+        }
+      }
+    }
+  }
+  &.new-clinic-pacientam {
+    margin-bottom: 14rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 1rem;
+      }
+      &__title {
+        margin-bottom: 5rem;
+      }
+      &__right {
+        width: 65.9%;
+        margin-top: 0.2rem;
+        &-text {
+          margin-bottom: 3rem;
+        }
+        &-list {
+          margin-bottom: 3rem;
+        }
+        &-img {
+          margin-bottom: 3rem;
+        }
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 5.8rem;
+        &::before {
+          bottom: -14rem;
+        }
+        &::after {
+          right: -20rem;
+          bottom: -17rem;
+        }
+        &-phone {
+          margin-bottom: 8rem;
+          & span {
+            display: block;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $white;
+            margin-bottom: 0.5rem;
+          }
+        }
+        &-phone,
+        &-whatsapp,
+        &-online {
+          padding-left: 6.8rem;
+        }
+        &-text {
+          margin-bottom: 3.8rem;
+          &::before {
+            top: -4rem;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-akcii {
+    margin-bottom: 14.7rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 1.2rem;
+      }
+      &__title {
+        margin-bottom: 6rem;
+      }
+      &__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 5rem;
+        &::after {
+          right: -18rem;
+          bottom: -18rem;
+        }
+        &::before {
+          bottom: -14.5rem;
+        }
+        &-phone,
+        &-whatsapp,
+        &-online {
+          padding-left: 7rem;
+        }
+        &-phone {
+          margin-bottom: 7.3rem;
+        }
+        &-text {
+          &::before {
+            top: -4.3rem;
+          }
+        }
+      }
+      &__right {
+        margin-top: -0.9rem;
+        &-text {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+  &.new-clinic-akcii-statia {
+    margin-bottom: 15rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 1.7rem;
+      }
+      &__add {
+        width: 100%;
+        background-color: #fafafa;
+        padding: 4rem;
+        position: relative;
+        &-subtitle {
+          font-family: 'Montserrat';
+          font-weight: 500;
+          line-height: 150%;
+          margin-bottom: 1.5rem;
+        }
+        &-name {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 2.3rem;
+          line-height: 150%;
+          margin-bottom: 4.9rem;
+        }
+        & > ul {
+          margin-bottom: 13rem;
+          & > li {
+            position: relative;
+            padding-left: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 150%;
+            color: rgba(51, 51, 51, 0.5);
+            &:not(:last-child) {
+              margin-bottom: 2rem;
             }
-         }
-         &__left {
+            &::after {
+              position: absolute;
+              content: '';
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              border-radius: 50%;
+              width: 0.5rem;
+              height: 0.5rem;
+              background-color: $blue;
+            }
+            &::before {
+              position: absolute;
+              content: '';
+              left: -0.3rem;
+              top: 50%;
+              transform: translateY(-50%);
+              border-radius: 50%;
+              width: 1.1rem;
+              height: 1.1rem;
+              background-color: #eef3f7;
+            }
+          }
+        }
+        &-btn {
+          display: block;
+          width: fit-content;
+          padding: 1rem 4rem;
+          z-index: 10;
+          position: relative;
+        }
+        &-img {
+          width: 94%;
+          height: 38.2rem;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          & img {
             width: 100%;
-            margin-bottom: 6.3rem;
-            &-wrap {
-               width: 31.6%;
-            }
-         }
-         &__bottom {
-            &-wrap {
-            }
-            &-name {
-               font-family: "Montserrat";
-               font-size: 2.5rem;
-               line-height: 160%;
-               margin-bottom: 2rem;
-            }
-            &-mess {
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               width: 48%;
-               &-whatsapp,
-               &-telegram,
-               &-facebook,
-               &-vk {
-                  width: 4rem;
-                  height: 4rem;
-                  background-color: $blue;
-                  position: relative;
-                  border-radius: 50%;
-                  margin-right: 2rem;
-                  & img {
-                     position: absolute;
-                     left: 50%;
-                     top: 50%;
-                     transform: translate(-50%, -50%);
-                  }
-               }
-               &-whatsapp {
-                  & img {
-                     width: 2rem;
-                     height: 2rem;
-                  }
-               }
-               &-telegram {
-                  & img {
-                     width: 2.2rem;
-                     height: 1.9rem;
-                  }
-               }
-               &-facebook {
-                  & img {
-                     width: 2.1rem;
-                     height: 2.1rem;
-                  }
-               }
-               &-vk {
-                  margin-right: 0;
-                  & img {
-                     width: 2.4rem;
-                     height: 1.4rem;
-                  }
-               }
-            }
-         }
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
-   }
-   &.new-clinic-specialnosti-napravlenia {
-      margin-bottom: 13.5rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 1rem;
-         }
-         &__title {
-            margin-bottom: 5rem;
-         }
-         &__right {
-            margin-top: 0.3rem;
-            &-text {
-               &:not(:last-child) {
-                  margin-bottom: 2rem;
-               }
-            }
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.7rem;
-            padding-bottom: 5rem;
-            &-phone {
-               padding-left: 7rem;
-               margin-bottom: 7.6rem;
-            }
-            &-whatsapp {
-               padding-left: 7rem;
-            }
-            &-online {
-               padding-left: 7rem;
-            }
-            &-text {
-               &::before {
-                  top: -4.3rem;
-               }
-            }
-         }
+      &__left {
+        width: 100%;
+        margin-bottom: 9rem;
+        &-wr {
+          width: 31.6%;
+        }
       }
-   }
-   &.new-clinic-korporativnie {
-      margin-bottom: 17.9rem;
-      .new-clinic {
-         &__right {
-            width: 65.8%;
-            & .info__item {
-               width: 100%;
-               display: block;
-               &-text {
-                  width: 100%;
-                  &-title {
-                     font-size: 2.8rem;
-                     line-height: 140%;
-                     margin-bottom: 2rem;
-                  }
-                  &-description {
-                     line-height: 135%;
-                  }
-               }
-               &-sqr {
-                  width: 5.6rem;
-                  height: 5.6rem;
-                  margin-bottom: 2.4rem;
-               }
-            }
-            &-subtitle {
-               margin-bottom: 1.2rem;
-            }
-            &-text {
-               margin-bottom: 6.1rem;
-               &:nth-child(5) {
-                  margin-bottom: 3rem;
-               }
-            }
-            &-about {
-               margin-top: -0.4rem;
-               position: relative;
-               &-subtitle {
-                  margin-bottom: 1.5rem;
-               }
-               &-title {
-                  margin-bottom: 2.8rem;
-               }
-               &-text {
-                  font-family: "MyriadPro";
-                  font-size: 1.8rem;
-                  line-height: 135%;
-                  color: rgba(51, 51, 51, 0.5);
-                  position: relative;
-                  padding-right: 35rem;
-                  margin-bottom: 8.8rem;
-                  &::after {
-                     position: absolute;
-                     content: '';
-                     left: 0;
-                     bottom: -3.8rem;
-                     width: 100%;
-                     height: 0.2rem;
-                     background-color: #D8DDE4;
-                  }
-               }
-            }
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.7rem;
-            padding-bottom: 5rem;
-            &-phone,
-            &-whatsapp,
-            &-online {
-               padding-left: 7rem;
-            }
-            &-phone {
-               margin-bottom: 7.4rem;
-            }
-            &-text {
-               &::before {
-                  top: -4.3rem;
-               }
-            }
-         }
-         &-korporativnie-swiper-pagination {
-            bottom: unset;
-            top: 15.5rem;
-            transform: translateX(0);
-            left: unset;
-            right: -2.5rem;
-         }
+      &__right {
+        margin-top: 0.2rem;
+        &-text {
+          line-height: 165%;
+          margin-bottom: 2.8rem;
+          &:nth-child(4) {
+            margin-bottom: 2rem;
+          }
+        }
+        &-img {
+          height: 39.8rem;
+          margin-bottom: 3.2rem;
+        }
       }
-   }
-   &.new-clinic-uslovia-sotrudnichestva {
-      margin-bottom: 14.7rem;
-      .new-clinic {
-         &__right {
-            width: 65.8%;
-            &-subtitle {
-               margin-bottom: 1rem;
-            }
-            &-text {
-               margin-bottom: 3rem;
-            }
-            &-title {
-               margin-bottom: 5.3rem;
-            }
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.7rem;
-            padding-bottom: 5rem;
-            &-phone,
-            &-whatsapp,
-            &-online {
-               padding-left: 7rem;
-            }
-            &-phone {
-               margin-bottom: 7.4rem;
-            }
-            &-text {
-               &::before {
-                  top: -4.3rem;
-               }
-            }
-         }
-      }
-   }
-   &.new-clinic-kontrol-kachestva {
-      margin-bottom: 14.8rem;
-      .new-clinic {
-         &__right {
-            width: 65.8%;
-            &-subtitle {
-               margin-bottom: 1rem;
-            }
-            &-text {
-               margin-bottom: 3rem;
-            }
-            &-title {
-               margin-bottom: 5.3rem;
-            }
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.7rem;
-            padding-bottom: 7rem;
-            &::after {
-               width: 45.6rem;
-               height: 45.6rem;
-               right: -26rem;
-               bottom: -13rem;
-            }
-            &::before {
-               left: 22rem;
-               bottom: -15rem;
-            }
-            &-phone,
-            &-whatsapp,
-            &-online {
-               padding-left: 6rem;
-            }
-            &-whatsapp {
-               margin-bottom: 4.2rem;
-            }
-            &-phone {
-               font-family: "Montserrat";
-               font-weight: 700;
-               font-size: 1.8rem;
-               line-height: 150%;
-               margin-bottom: 3.6rem;
-               &::after {
-                  width: 3rem;
-                  height: 3rem;
-               }
-               &::before {
-                  content: none;
-               }
-            }
-            &-text {
-               margin-bottom: 5.5rem;
-               &::before {
-                  content: none;
-               }
-            }
-            &-title {
-               font-family: "Montserrat";
-               font-weight: 600;
-               font-size: 2.5rem;
-               line-height: 160%;
-               color: $white;
-               margin-bottom: 3.2rem;
-            }
-         }
-      }
-   }
-   &.new-clinic-pacientam {
-      margin-bottom: 14rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 1rem;
-         }
-         &__title {
-            margin-bottom: 5rem;
-         }
-         &__right {
-            width: 65.9%;
-            margin-top: 0.2rem;
-            &-text {
-               margin-bottom: 3rem;
-            }
-            &-list {
-               margin-bottom: 3rem;
-            }
-            &-img {
-               margin-bottom: 3rem;
-            }
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.7rem;
-            padding-bottom: 5.8rem;
-            &::before {
-               bottom: -14rem;
+    }
+  }
+  &.new-clinic-info-potrebitelei {
+    margin-bottom: 11.5rem;
+    .new-clinic {
+      &__right {
+        height: fit-content;
+        &-subtitle {
+          margin-bottom: 0.8rem;
+        }
+        &-links {
+          margin-bottom: 8rem;
+          & li {
+            position: relative;
+            padding-left: 4.6rem;
+            &:not(:last-child) {
+              margin-bottom: 2rem;
             }
             &::after {
-               right: -20rem;
-               bottom: -17rem;
+              position: absolute;
+              content: '';
+              left: 0;
+              top: 1rem;
+              width: 0.7rem;
+              height: 0.7rem;
+              border-radius: 50%;
+              background-color: #fe7200;
             }
-            &-phone {
-               margin-bottom: 8rem;
-               & span {
-                  display: block;
-                  font-family: "Montserrat";
-                  font-weight: 600;
-                  font-size: 1.8rem;
-                  line-height: 140%;
-                  color: $white;
-                  margin-bottom: 0.5rem;
-               }
+            & a {
+              font-family: 'Montserrat';
+              font-weight: 500;
+              font-size: 1.8rem;
+              line-height: 150%;
+              text-decoration-line: underline;
+              color: $fzAll;
             }
-            &-phone,
-            &-whatsapp,
-            &-online {
-               padding-left: 6.8rem;
-            }
-            &-text {
-               margin-bottom: 3.8rem;
-               &::before {
-                  top: -4rem;
-               }
-            }
-         }
+          }
+        }
+        &-title {
+          margin-bottom: 4.1rem;
+        }
       }
-   }
-   &.new-clinic-akcii {
-      margin-bottom: 14.7rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 1.2rem;
-         }
-         &__title {
-            margin-bottom: 6rem;
-         }
-         &__left {
-            width: 31.4%;
-            padding-right: 4.7rem;
-            padding-bottom: 5rem;
-            &::after {
-               right: -18rem;
-               bottom: -18rem;
-            }
-            &::before {
-               bottom: -14.5rem;
-            }
-            &-phone,
-            &-whatsapp,
-            &-online {
-               padding-left: 7rem;
-            }
-            &-phone {
-               margin-bottom: 7.3rem;
-            }
-            &-text {
-               &::before {
-                  top: -4.3rem;
-               }
-            }
-         }
-         &__right {
-            margin-top: -0.9rem;
-            &-text {
-               margin-bottom: 3rem;
-            }
-         }
-      }
-   }
-   &.new-clinic-akcii-statia {
-      margin-bottom: 15rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 1.7rem;
-         }
-         &__add {
+      &__left {
+        width: 100%;
+        margin-bottom: 9rem;
+        &-wr {
+          width: 31.6%;
+          height: fit-content;
+          & .applicants__add {
             width: 100%;
-            background-color: #FAFAFA;
+            background-color: #fafafa;
             padding: 4rem;
             position: relative;
             &-subtitle {
-               font-family: 'Montserrat';
-               font-weight: 500;
-               line-height: 150%;
-               margin-bottom: 1.5rem;
+              font-family: 'Montserrat';
+              font-weight: 500;
+              line-height: 150%;
+              margin-bottom: 1.5rem;
             }
             &-name {
-               font-family: 'Montserrat';
-               font-weight: 700;
-               font-size: 2.3rem;
-               line-height: 150%;
-               margin-bottom: 4.9rem;
+              font-family: 'Montserrat';
+              font-weight: 700;
+              font-size: 2.3rem;
+              line-height: 150%;
+              margin-bottom: 4.9rem;
             }
-            &>ul {
-               margin-bottom: 13rem;
-               &>li {
-                  position: relative;
-                  padding-left: 2rem;
-                  font-family: 'Montserrat';
-                  font-weight: 500;
-                  font-size: 1.5rem;
-                  line-height: 150%;
-                  color: rgba(51, 51, 51, 0.5);
-                  &:not(:last-child) {
-                     margin-bottom: 2rem;
-                  }
-                  &::after {
-                     position: absolute;
-                     content: '';
-                     left: 0;
-                     top: 50%;
-                     transform: translateY(-50%);
-                     border-radius: 50%;
-                     width: 0.5rem;
-                     height: 0.5rem;
-                     background-color: $blue;
-                  }
-                  &::before {
-                     position: absolute;
-                     content: '';
-                     left: -0.3rem;
-                     top: 50%;
-                     transform: translateY(-50%);
-                     border-radius: 50%;
-                     width: 1.1rem;
-                     height: 1.1rem;
-                     background-color: #EEF3F7;
-                  }
-               }
-            }
-            &-btn {
-               display: block;
-               width: fit-content;
-               padding: 1rem 4rem;
-               z-index: 10;
-               position: relative;
-            }
-            &-img {
-               width: 94%;
-               height: 38.2rem;
-               position: absolute;
-               right: 0;
-               bottom: 0;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
-            }
-         }
-         &__left {
-            width: 100%;
-            margin-bottom: 9rem;
-            &-wr {
-               width: 31.6%;
-            }
-         }
-         &__right {
-            margin-top: 0.2rem;
-            &-text {
-               line-height: 165%;
-               margin-bottom: 2.8rem;
-               &:nth-child(4) {
+            & > ul {
+              margin-bottom: 13rem;
+              & > li {
+                position: relative;
+                padding-left: 2rem;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 1.5rem;
+                line-height: 150%;
+                color: rgba(51, 51, 51, 0.5);
+                &:not(:last-child) {
                   margin-bottom: 2rem;
-               }
-            }
-            &-img {
-               height: 39.8rem;
-               margin-bottom: 3.2rem;
-            }
-         }
-      }
-   }
-   &.new-clinic-info-potrebitelei {
-      margin-bottom: 11.5rem;
-      .new-clinic {
-         &__right {
-            height: fit-content;
-            &-subtitle {
-               margin-bottom: 0.8rem;
-            }
-            &-links {
-               margin-bottom: 8rem;
-               & li {
-                  position: relative;
-                  padding-left: 4.6rem;
-                  &:not(:last-child) {
-                     margin-bottom: 2rem;
-                  }
-                  &::after {
-                     position: absolute;
-                     content: '';
-                     left: 0;
-                     top: 1rem;
-                     width: 0.7rem;
-                     height: 0.7rem;
-                     border-radius: 50%;
-                     background-color: #FE7200;
-                  }
-                  & a {
-                     font-family: "Montserrat";
-                     font-weight: 500;
-                     font-size: 1.8rem;
-                     line-height: 150%;
-                     text-decoration-line: underline;
-                     color: $fzAll;
-                  }
-               }
-            }
-            &-title {
-               margin-bottom: 4.1rem;
-            }
-         }
-         &__left {
-            width: 100%;
-            margin-bottom: 9rem;
-            &-wr {
-               width: 31.6%;
-               height: fit-content;
-               & .applicants__add {
-                  width: 100%;
-                     background-color: #FAFAFA;
-                     padding: 4rem;
-                     position: relative;
-                     &-subtitle {
-                        font-family: 'Montserrat';
-                        font-weight: 500;
-                        line-height: 150%;
-                        margin-bottom: 1.5rem;
-                     }
-                     &-name {
-                        font-family: 'Montserrat';
-                        font-weight: 700;
-                        font-size: 2.3rem;
-                        line-height: 150%;
-                        margin-bottom: 4.9rem;
-                     }
-                     &>ul {
-                        margin-bottom: 13rem;
-                        &>li {
-                           position: relative;
-                           padding-left: 2rem;
-                           font-family: 'Montserrat';
-                           font-weight: 500;
-                           font-size: 1.5rem;
-                           line-height: 150%;
-                           color: rgba(51, 51, 51, 0.5);
-                           &:not(:last-child) {
-                              margin-bottom: 2rem;
-                           }
-                           &::after {
-                              position: absolute;
-                              content: '';
-                              left: 0;
-                              top: 50%;
-                              transform: translateY(-50%);
-                              border-radius: 50%;
-                              width: 0.5rem;
-                              height: 0.5rem;
-                              background-color: $blue;
-                           }
-                           &::before {
-                              position: absolute;
-                              content: '';
-                              left: -0.3rem;
-                              top: 50%;
-                              transform: translateY(-50%);
-                              border-radius: 50%;
-                              width: 1.1rem;
-                              height: 1.1rem;
-                              background-color: #EEF3F7;
-                           }
-                        }
-                     }
-                     &-btn {
-                        display: block;
-                        width: fit-content;
-                        padding: 1rem 4rem;
-                        z-index: 10;
-                        position: relative;
-                     }
-                     &-img {
-                        width: 94%;
-                        height: 38.2rem;
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        & img {
-                           width: 100%;
-                           height: 100%;
-                           object-fit: cover;
-                        }
-                     }
-               }
-            }
-         }
-         &__order {
-            padding: 4rem 2.5rem 0 2.2rem;
-            width: 100%;
-            background-color: #EDF1F2;
-            margin-bottom: 8.7rem;
-            &-name {
-               font-family: 'Montserrat';
-               font-weight: 700;
-               font-size: 2.3rem;
-               line-height: 145%;
-               margin-bottom: 1.5rem;
-            }
-            &-text {
-               font-family: 'Montserrat';
-               font-weight: 500;
-               font-size: 1.7rem;
-               line-height: 155%;
-               margin-bottom: 4.1rem;
-               width: 90%;
-            }
-            &-btn {
-               display: block;
-               width: fit-content;
-               padding: 1rem 4rem;
-               margin-bottom: 4.3rem;
-            }
-            &-img {
-               width: 37.7rem;
-               height: 33.5rem;
-               margin-left: auto;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
-            }
-         }
-      }
-   }
-   &.new-clinic-vakansii {
-      margin-bottom: 15rem;
-      .new-clinic {
-         &__left {
-            width: 100%;
-            padding-bottom: 6.6rem;
-            margin-bottom: 9rem;
-            &::before,
-            &::after {
-               content: none;
-            }
-            &-wr {
-               width: 31.4%;
-            }
-            &-title {
-               font-family: "Montserrat";
-               font-weight: 600;
-               font-size: 2.5rem;
-               line-height: 160%;
-               color: $white;
-               margin-bottom: 2.6rem;
-            }
-            &-text {
-               margin-bottom: 5rem;
-               &::before {
-                  content: none;
-               }
-            }
-            &-phone {
-               font-weight: 700;
-               font-size: 1.8rem;
-               line-height: 150%;
-               margin-bottom: 3.5rem;
-               padding-left: 5.4rem;
-               &::before {
-                  content: none;
-               }
-               &::after {
-                  width: 3rem;
-                  height: 3rem;
-               }
-            }
-            &-mail {
-               font-family: "Montserrat";
-               font-weight: 700;
-               font-size: 1.8rem;
-               line-height: 150%;
-               color: $white;
-               padding-left: 5.4rem;
-               position: relative;
-               &::after {
+                }
+                &::after {
                   position: absolute;
                   content: '';
                   left: 0;
-                  background-image: url(../img/icons/mail-white.svg);
                   top: 50%;
                   transform: translateY(-50%);
-                  width: 2.5rem;
-                  height: 2.3rem;
-                  background-position: center;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-               }
-            }
-         }
-         &__order {
-            padding: 4rem 2.5rem 0 2.2rem;
-            width: 100%;
-            background-color: #EDF1F2;
-            &-name {
-               font-family: 'Montserrat';
-               font-weight: 700;
-               font-size: 2.3rem;
-               line-height: 145%;
-               margin-bottom: 1.5rem;
-            }
-            &-text {
-               font-family: 'Montserrat';
-               font-weight: 500;
-               font-size: 1.7rem;
-               line-height: 155%;
-               margin-bottom: 4.1rem;
-               width: 90%;
-            }
-            &-btn {
-               display: block;
-               width: fit-content;
-               padding: 1rem 4rem;
-               margin-bottom: 4.3rem;
-            }
-            &-img {
-               width: 37.7rem;
-               height: 33.5rem;
-               margin-left: auto;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
-            }
-         }
-         &__right {
-            padding: 0;
-            &::after {
-               content: none;
-            }
-            &-subtitle {
-               margin-bottom: 1.1rem;
-            }
-            &-title {
-               margin-bottom: 4rem;
-               font-size: 5rem;
-               line-height: 122%;
-            }
-         }
-         &__slider {
-            margin-bottom: 12rem;
-         }
-         &-statia-swiper-pagination {
-            bottom: -6.6rem;
-            left: 51.3%;
-         }
-         &-statia-btn-next {
-            bottom: -12.4rem;
-         }
-         &-statia-btn-prev {
-            right: unset;
-            left: 0;
-            bottom: -12.4rem;
-         }
-      }
-   }
-   &.new-clinic-statia {
-      margin-bottom: 13rem;
-      .new-clinic {
-         &__inner {
-            margin-bottom: 0;
-         }
-         &__right {
-            padding-bottom: 4.5rem;
-            margin-bottom: 6rem;
-            & ol {
-               counter-reset: list 0;
-               padding: 0;
-               margin: 0;
-               margin-bottom: 8rem;
-               margin-top: -1.3rem;
-               & li {
-                  padding-left: 4.5rem;
-                  font-family: "Montserrat";
-                  font-size: 1.8rem;
-                  line-height: 150%;
-                  position: relative;
-                  list-style-type: none;
-                  &:not(:last-child) {
-                     margin-bottom: 2rem;
-                  }
-                  &::before {
-                     counter-increment: list;
-                     content: counter(list);
-                     position: absolute;
-                     font-family: "Montserrat";
-                     font-weight: 600;
-                     font-size: 18px;
-                     line-height: 150%;
-                     color: $blue;
-                     left: 0;
-                     top: 50%;
-                     transform: translateY(-50%);
-                     margin-right: 2rem;
-                     min-width: 4rem;
-                  }
-                  &:nth-child(-n+9)::before {
-                     content: counter(list)".";
-                  }
-               }
-            }
-            &-title {
-               margin-bottom: 4.5rem;
-            }
-            & .semibold {
-               font-size: 2rem;
-               padding-left: 6.9rem;
-               position: relative;
-               margin-bottom: 4rem;
-               &::after {
+                  border-radius: 50%;
+                  width: 0.5rem;
+                  height: 0.5rem;
+                  background-color: $blue;
+                }
+                &::before {
                   position: absolute;
                   content: '';
-                  left: 0rem;
-                  top: 0rem;
-                  width: 4rem;
-                  height: 3.3rem;
-                  background-image: url(../img/icons/apost-blue.svg);
-                  background-position: center;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-               }
-            }
-            &-text {
-               margin-bottom: 4rem;
-               &:nth-child(9) {
-                  margin-bottom: 2rem;
-               }
-            }
-            &-list {
-               margin-bottom: 5rem;
-               & li {
-                  padding-left: 3.6rem;
-               }
-            }
-            & .all-news__right-options-btns {
-               margin-top: 4.7rem;
-
-               &-btn {
-                  margin-right: 1.9rem;
-                  margin-bottom: 1.3rem;
-                  padding: 1.2rem 2.5rem 0.9rem 2.4rem;
-                  &:nth-child(2) {
-                     margin-right: 1.9rem;
-                  }
-                  &:nth-child(5) {
-                     margin-right: 0;
-                  }
-               }
-            }
-         }
-         &__slider {
-            margin-top: 0;
-            margin-bottom: 14rem;
-         }
-         &__lefts {
-            width: 30%;
-            height: fit-content;
-            & .all-news__right-distribution {
-               width: 100%;
-               padding: 4.1rem 4.7rem 4rem 3.6rem;
-               &::after {
-                  right: -16rem;
-                  bottom: -13rem;
-               }
-               &::before {
-                  right: 6.5rem;
-                  bottom: -17.5rem;
-               }
-               &-text {
-                  margin-bottom: 3rem;
-               }
-               &-form {
-                  &-label2 {
-                     & .fake3 {
-                        width: 2rem;
-                        height: 2rem;
-                        margin-top: -1.2rem;
-                     }
-                     & .text3 {
-                        padding-left: 1rem;
-                     }
-                  }
-                  & bottom {
-                     margin-bottom: 2.4rem;
-                  }
-               }
-            }
-            &-doctor {
-               height: fit-content;
-               margin-bottom: 4rem;
-               &-img {
-                  width: 100%;
-                  height: 40.7rem;
-                  background-color: #EEF3F7;
-                  display: flex;
-                  align-items: flex-end;
-                  justify-content: center;
-                  & img {
-                     width: 100%;
-                     height: 95%;
-                     object-fit: contain;
-                  }
-               }
-               &-wrap {
-                  background: $white;
-                  box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
-                  padding: 3rem 3rem 3rem 3rem;
-               }
-               &-name {
-                  font-family: "Montserrat";
-                  font-weight: 600;
-                  font-size: 2.4rem;
-                  line-height: 150%;
-                  margin-bottom: 1rem;
-               }
-               &-info {
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 2rem;
-                  &-author {
-                     font-family: "Montserrat";
-                     font-weight: 500;
-                     font-size: 1.8rem;
-                     line-height: 150%;
-                     color: rgba(51, 51, 51, 0.5);
-                     margin-right: 6rem;
-                  }
-                  &-work {
-                     color: $blue;
-                     font-family: "Montserrat";
-                     font-weight: 600;
-                     font-size: 1.8rem;
-                     line-height: 150%;
-                  }
-               }
-               &-text {
-                  font-family: "Montserrat";
-                  font-size: 1.8rem;
-                  line-height: 150%;
-                  margin-bottom: 3rem;
-               }
-               &-link {
-                  display: inline-block;
-               }
-            }
-         }
-         &-statia-swiper-pagination {
-            bottom: -6.6rem;
-            left: 51.3%;
-         }
-         &-statia-btn-next {
-            bottom: -12.4rem;
-         }
-         &-statia-btn-prev {
-            right: unset;
-            left: 0;
-            bottom: -12.4rem;
-         }
-      }
-      & .baner__bottom-mess {
-         &-facebook {
-            background-color: #4E6297;
-            margin-right: 1.5rem;
-         }
-         &-vk {
-            background-color: #7294C7;
-            margin-right: 1.5rem;
-         }
-         &-whatsapp {
-            background-color: #48C95F;
-            margin-right: 1.5rem;
-         }
-         &-viber {
-            width: 4rem;
-            height: 4rem;
-            background-color: #7C509A;
-            position: relative;
-            border-radius: 50%;
-            position: relative;
-            margin-right: 1.5rem;
-            & img {
-               position: absolute;
-               left: 50%;
-               top: 50%;
-               transform: translate(-50%, -50%);
-               width: 2.1rem;
-               height: 2.3rem;
-            }
-         }
-         &-telegram {
-            background-color: #2F89CE;
-            margin-right: 1.5rem;
-         }
-      }
-   }
-   &.new-clinic-simptomi-detalna {
-      margin-bottom: 11.9rem;
-      .new-clinic {
-         &__subtitle {
-            margin-bottom: 2rem;
-         }
-         &__title {
-            margin-bottom: 6rem;
-         }
-         &__right {
-            &-text {
-               margin-bottom: 4rem;
-            }
-         }
-         &__left {
-            width: 100%;
-            margin-bottom: 9rem;
-            &-wr {
-               width: 31.6%;
-            }
-         }
-         &__pr {
-            padding: 4.1rem 0 4rem 0;
-            box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
-            &-text {
-               font-family: 'Montserrat';
-               font-weight: 500;
-               line-height: 150%;
-               margin-bottom: 1.5rem;
-               margin-left: 4rem;
-               margin-right: 4rem;
-            }
-            &-name {
-               font-family: 'Montserrat';
-               font-weight: 700;
-               font-size: 2.3rem;
-               line-height: 150%;
-               margin-left: 4rem;
-               margin-right: 4rem;
+                  left: -0.3rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  border-radius: 50%;
+                  width: 1.1rem;
+                  height: 1.1rem;
+                  background-color: #eef3f7;
+                }
+              }
             }
             &-btn {
-               display: block;
-               width: fit-content;
-               padding: 1rem 2.75rem;
-               margin-left: 4rem;
-               margin-right: 4rem;
-               margin-top: -4.2rem;
-            }
-            &-imgs {
-               display: flex;
-               justify-content: space-between;
-            }
-            &-img1 {
-               width: 19rem;
-               height: 13.55rem;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
-            }
-            &-img2 {
-               width: 36.3rem;
-               height: 24.7rem;
-               margin-left: -3.5rem;
-               margin-top: -1.5rem;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
-            }
-         }
-      }
-   }
-   &.new-clinic-uslugi {
-      margin-bottom: 15rem;
-      .new-clinic {
-         &__subtitle {
-            padding: 0 1rem;
-            margin-bottom: 1rem;
-         }
-         &__title {
-            padding: 0 1rem;
-            margin-bottom: 6rem;
-         }
-         &__right {
-            &-text {
-               margin-bottom: 3rem;
+              display: block;
+              width: fit-content;
+              padding: 1rem 4rem;
+              z-index: 10;
+              position: relative;
             }
             &-img {
-               position: relative;
-               &-video {
-                  position: absolute;
-                  left: 50%;
-                  top: 50%;
-                  transform: translate(-50%, -50%);
-                  width: 6.6rem;
-                  height: 6.6rem;
-                  border-radius: 50%;
-                  background-color: #fff;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  & img {
-                     width: 0.9rem;
-                     height: 1.8rem;
-                  }
-               }
+              width: 94%;
+              height: 38.2rem;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
             }
-         }
-         &__left {
-            padding: 4rem;
-            &::after,
+          }
+        }
+      }
+      &__order {
+        padding: 4rem 2.5rem 0 2.2rem;
+        width: 100%;
+        background-color: #edf1f2;
+        margin-bottom: 8.7rem;
+        &-name {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 2.3rem;
+          line-height: 145%;
+          margin-bottom: 1.5rem;
+        }
+        &-text {
+          font-family: 'Montserrat';
+          font-weight: 500;
+          font-size: 1.7rem;
+          line-height: 155%;
+          margin-bottom: 4.1rem;
+          width: 90%;
+        }
+        &-btn {
+          display: block;
+          width: fit-content;
+          padding: 1rem 4rem;
+          margin-bottom: 4.3rem;
+        }
+        &-img {
+          width: 37.7rem;
+          height: 33.5rem;
+          margin-left: auto;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-vakansii {
+    margin-bottom: 15rem;
+    .new-clinic {
+      &__left {
+        width: 100%;
+        padding-bottom: 6.6rem;
+        margin-bottom: 9rem;
+        &::before,
+        &::after {
+          content: none;
+        }
+        &-wr {
+          width: 31.4%;
+        }
+        &-title {
+          font-family: 'Montserrat';
+          font-weight: 600;
+          font-size: 2.5rem;
+          line-height: 160%;
+          color: $white;
+          margin-bottom: 2.6rem;
+        }
+        &-text {
+          margin-bottom: 5rem;
+          &::before {
+            content: none;
+          }
+        }
+        &-phone {
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 150%;
+          margin-bottom: 3.5rem;
+          padding-left: 5.4rem;
+          &::before {
+            content: none;
+          }
+          &::after {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+        &-mail {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 150%;
+          color: $white;
+          padding-left: 5.4rem;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            background-image: url(../img/a-image/icons/mail-white.svg);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.5rem;
+            height: 2.3rem;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      &__order {
+        padding: 4rem 2.5rem 0 2.2rem;
+        width: 100%;
+        background-color: #edf1f2;
+        &-name {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 2.3rem;
+          line-height: 145%;
+          margin-bottom: 1.5rem;
+        }
+        &-text {
+          font-family: 'Montserrat';
+          font-weight: 500;
+          font-size: 1.7rem;
+          line-height: 155%;
+          margin-bottom: 4.1rem;
+          width: 90%;
+        }
+        &-btn {
+          display: block;
+          width: fit-content;
+          padding: 1rem 4rem;
+          margin-bottom: 4.3rem;
+        }
+        &-img {
+          width: 37.7rem;
+          height: 33.5rem;
+          margin-left: auto;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      &__right {
+        padding: 0;
+        &::after {
+          content: none;
+        }
+        &-subtitle {
+          margin-bottom: 1.1rem;
+        }
+        &-title {
+          margin-bottom: 4rem;
+          font-size: 5rem;
+          line-height: 122%;
+        }
+      }
+      &__slider {
+        margin-bottom: 12rem;
+      }
+      &-statia-swiper-pagination {
+        bottom: -6.6rem;
+        left: 51.3%;
+      }
+      &-statia-btn-next {
+        bottom: -12.4rem;
+      }
+      &-statia-btn-prev {
+        right: unset;
+        left: 0;
+        bottom: -12.4rem;
+      }
+    }
+  }
+  &.new-clinic-statia {
+    margin-bottom: 13rem;
+    .new-clinic {
+      &__inner {
+        margin-bottom: 0;
+      }
+      &__right {
+        padding-bottom: 4.5rem;
+        margin-bottom: 6rem;
+        & ol {
+          counter-reset: list 0;
+          padding: 0;
+          margin: 0;
+          margin-bottom: 8rem;
+          margin-top: -1.3rem;
+          & li {
+            padding-left: 4.5rem;
+            font-family: 'Montserrat';
+            font-size: 1.8rem;
+            line-height: 150%;
+            position: relative;
+            list-style-type: none;
+            &:not(:last-child) {
+              margin-bottom: 2rem;
+            }
             &::before {
-               content: none;
+              counter-increment: list;
+              content: counter(list);
+              position: absolute;
+              font-family: 'Montserrat';
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 150%;
+              color: $blue;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              margin-right: 2rem;
+              min-width: 4rem;
             }
-            &-phone {
-               padding: 0;
-               text-align: center;
-               margin-bottom: 2rem;
-               &::after {
-                  content: none;
-               }
-               &::before {
-                  width: 63%;
-               }
+            &:nth-child(-n + 9)::before {
+              content: counter(list) '.';
             }
-            &-text {
-               font-family: "MyriadPro";
-               line-height: 135%;
-               margin-bottom: 1.2rem;
-               text-align: center;
-               &::before {
-                  content: none;
-               }
+          }
+        }
+        &-title {
+          margin-bottom: 4.5rem;
+        }
+        & .semibold {
+          font-size: 2rem;
+          padding-left: 6.9rem;
+          position: relative;
+          margin-bottom: 4rem;
+          &::after {
+            position: absolute;
+            content: '';
+            left: 0rem;
+            top: 0rem;
+            width: 4rem;
+            height: 3.3rem;
+            background-image: url(../img/a-image/icons/apost-blue.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+        &-text {
+          margin-bottom: 4rem;
+          &:nth-child(9) {
+            margin-bottom: 2rem;
+          }
+        }
+        &-list {
+          margin-bottom: 5rem;
+          & li {
+            padding-left: 3.6rem;
+          }
+        }
+        & .all-news__right-options-btns {
+          margin-top: 4.7rem;
+
+          &-btn {
+            margin-right: 1.9rem;
+            margin-bottom: 1.3rem;
+            padding: 1.2rem 2.5rem 0.9rem 2.4rem;
+            &:nth-child(2) {
+              margin-right: 1.9rem;
             }
-            &-img {
-               width: 28.1rem;
-               height: 28.9rem;
-               margin: 0 auto;
-               margin-bottom: 1.5rem;
-               & img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-               }
+            &:nth-child(5) {
+              margin-right: 0;
             }
-            &-online {
-               padding: 1rem;
-               display: flex;
-               justify-content: center;
-               color: $blue;
-               background-color: #fff;
-               font-family: "MyriadPro";
-               font-weight: 400;
-               font-size: 1.8rem;
-               line-height: 200%;
-               &::after {
-                  content: none;
-               }
-            }
-         }
+          }
+        }
       }
-   }
-   &__history {
-      margin-bottom: 10.8rem;
-   }
+      &__slider {
+        margin-top: 0;
+        margin-bottom: 14rem;
+      }
+      &__lefts {
+        width: 30%;
+        height: fit-content;
+        & .all-news__right-distribution {
+          width: 100%;
+          padding: 4.1rem 4.7rem 4rem 3.6rem;
+          &::after {
+            right: -16rem;
+            bottom: -13rem;
+          }
+          &::before {
+            right: 6.5rem;
+            bottom: -17.5rem;
+          }
+          &-text {
+            margin-bottom: 3rem;
+          }
+          &-form {
+            &-label2 {
+              & .fake3 {
+                width: 2rem;
+                height: 2rem;
+                margin-top: -1.2rem;
+              }
+              & .text3 {
+                padding-left: 1rem;
+              }
+            }
+            & bottom {
+              margin-bottom: 2.4rem;
+            }
+          }
+        }
+        &-doctor {
+          height: fit-content;
+          margin-bottom: 4rem;
+          &-img {
+            width: 100%;
+            height: 40.7rem;
+            background-color: #eef3f7;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            & img {
+              width: 100%;
+              height: 95%;
+              object-fit: contain;
+            }
+          }
+          &-wrap {
+            background: $white;
+            box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+            padding: 3rem 3rem 3rem 3rem;
+          }
+          &-name {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 150%;
+            margin-bottom: 1rem;
+          }
+          &-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            &-author {
+              font-family: 'Montserrat';
+              font-weight: 500;
+              font-size: 1.8rem;
+              line-height: 150%;
+              color: rgba(51, 51, 51, 0.5);
+              margin-right: 6rem;
+            }
+            &-work {
+              color: $blue;
+              font-family: 'Montserrat';
+              font-weight: 600;
+              font-size: 1.8rem;
+              line-height: 150%;
+            }
+          }
+          &-text {
+            font-family: 'Montserrat';
+            font-size: 1.8rem;
+            line-height: 150%;
+            margin-bottom: 3rem;
+          }
+          &-link {
+            display: inline-block;
+          }
+        }
+      }
+      &-statia-swiper-pagination {
+        bottom: -6.6rem;
+        left: 51.3%;
+      }
+      &-statia-btn-next {
+        bottom: -12.4rem;
+      }
+      &-statia-btn-prev {
+        right: unset;
+        left: 0;
+        bottom: -12.4rem;
+      }
+    }
+    & .baner__bottom-mess {
+      &-facebook {
+        background-color: #4e6297;
+        margin-right: 1.5rem;
+      }
+      &-vk {
+        background-color: #7294c7;
+        margin-right: 1.5rem;
+      }
+      &-whatsapp {
+        background-color: #48c95f;
+        margin-right: 1.5rem;
+      }
+      &-viber {
+        width: 4rem;
+        height: 4rem;
+        background-color: #7c509a;
+        position: relative;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 1.5rem;
+        & img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 2.1rem;
+          height: 2.3rem;
+        }
+      }
+      &-telegram {
+        background-color: #2f89ce;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+  &.new-clinic-simptomi-detalna {
+    margin-bottom: 11.9rem;
+    .new-clinic {
+      &__subtitle {
+        margin-bottom: 2rem;
+      }
+      &__title {
+        margin-bottom: 6rem;
+      }
+      &__right {
+        &-text {
+          margin-bottom: 4rem;
+        }
+      }
+      &__left {
+        width: 100%;
+        margin-bottom: 9rem;
+        &-wr {
+          width: 31.6%;
+        }
+      }
+      &__pr {
+        padding: 4.1rem 0 4rem 0;
+        box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+        &-text {
+          font-family: 'Montserrat';
+          font-weight: 500;
+          line-height: 150%;
+          margin-bottom: 1.5rem;
+          margin-left: 4rem;
+          margin-right: 4rem;
+        }
+        &-name {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 2.3rem;
+          line-height: 150%;
+          margin-left: 4rem;
+          margin-right: 4rem;
+        }
+        &-btn {
+          display: block;
+          width: fit-content;
+          padding: 1rem 2.75rem;
+          margin-left: 4rem;
+          margin-right: 4rem;
+          margin-top: -4.2rem;
+        }
+        &-imgs {
+          display: flex;
+          justify-content: space-between;
+        }
+        &-img1 {
+          width: 19rem;
+          height: 13.55rem;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &-img2 {
+          width: 36.3rem;
+          height: 24.7rem;
+          margin-left: -3.5rem;
+          margin-top: -1.5rem;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  &.new-clinic-uslugi {
+    margin-bottom: 15rem;
+    .new-clinic {
+      &__subtitle {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+      }
+      &__title {
+        padding: 0 1rem;
+        margin-bottom: 6rem;
+      }
+      &__right {
+        &-text {
+          margin-bottom: 3rem;
+        }
+        &-img {
+          position: relative;
+          &-video {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 6.6rem;
+            height: 6.6rem;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img {
+              width: 0.9rem;
+              height: 1.8rem;
+            }
+          }
+        }
+      }
+      &__left {
+        padding: 4rem;
+        &::after,
+        &::before {
+          content: none;
+        }
+        &-phone {
+          padding: 0;
+          text-align: center;
+          margin-bottom: 2rem;
+          &::after {
+            content: none;
+          }
+          &::before {
+            width: 63%;
+          }
+        }
+        &-text {
+          font-family: 'MyriadPro';
+          line-height: 135%;
+          margin-bottom: 1.2rem;
+          text-align: center;
+          &::before {
+            content: none;
+          }
+        }
+        &-img {
+          width: 28.1rem;
+          height: 28.9rem;
+          margin: 0 auto;
+          margin-bottom: 1.5rem;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &-online {
+          padding: 1rem;
+          display: flex;
+          justify-content: center;
+          color: $blue;
+          background-color: #fff;
+          font-family: 'MyriadPro';
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 200%;
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  &__history {
+    margin-bottom: 10.8rem;
+  }
+  &__career {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+  &.new-clinic-doctors-detailed {
+    .new-clinic {
+      &__content {
+        display: none;
+        &_methods {
+          .new-clinic__title {
+            margin-bottom: 4rem;
+          }
+        }
+        &._active {
+          display: flex;
+        }
+      }
+      &__links-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2.7rem;
+      }
+      &__text {
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+      &__articles {
+        display: flex;
+        flex-direction: column;
+      }
+      &__articles-row {
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        row-gap: 3.6rem;
+      }
+      &__articles-link {
+        align-self: flex-start;
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+
+      // .new-clinic__rating
+
+      &__rating {
+        margin-bottom: 5.4rem;
+        padding: 3.2rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 6rem;
+        border: 1px solid #d8dde4;
+        background-color: #ffffff;
+        .rating__item {
+          flex: 0 0 2rem;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      // .new-clinic__rating-group
+
+      &__rating-group {
+        .rating-group__row {
+          column-gap: 1.3rem;
+        }
+      }
+
+      // .new-clinic__reviews
+
+      &__reviews {
+        display: flex;
+        flex-direction: column;
+      }
+
+      // .new-clinic__reviews-row
+
+      &__reviews-row {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        span {
+          white-space: nowrap;
+          color: #2f2f2f;
+          &:first-child {
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              top: 50%;
+              right: -1rem;
+              background-color: #d8dde4;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+
+      // .new-clinic__reviews-text
+
+      &__reviews-text {
+        font-size: 1.6rem;
+      }
+
+      // .new-clinic__rating-set
+
+      &__rating-set {
+        display: flex;
+        flex-direction: column;
+      }
+
+      // .new-clinic__rating-set-subtitle
+
+      &__rating-set-subtitle {
+        margin-bottom: 1.6rem;
+        color: #2f2f2f;
+        white-space: nowrap;
+      }
+
+      // .new-clinic__btn
+
+      &__rating-btn {
+        align-self: center;
+        min-width: 21.9rem;
+        white-space: nowrap;
+      }
+
+      &__reviews-group {
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+      }
+
+      &__reviews-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
-   .new-clinic {
-      overflow: hidden;
+  .new-clinic {
+    overflow: hidden;
+    margin-bottom: 16rem;
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+    &__aside {
+      grid-row: 2/3;
+    }
+    &__title {
+      margin-bottom: 6rem;
+      max-width: 55rem;
+    }
+    &__text {
+      color: #2f2f2f;
+      font-size: 3.2rem;
+      line-height: 150%;
+      &:first-child {
+        margin-bottom: 3.2rem;
+      }
+    }
+    &__list {
+      margin-bottom: 3.2rem;
+      & li {
+        padding-left: 5.5rem;
+        max-width: 55rem;
+        color: #2f2f2f;
+        font-size: 3rem;
+        &:not(:last-child) {
+          margin-bottom: 4.3rem;
+        }
+        &::after {
+          top: 0;
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+    }
+    &__img {
+      margin-bottom: 6rem;
+      width: 100%;
+      height: 33rem;
+    }
+    &__socials-heading {
+      margin-bottom: 2rem;
+      font-size: 4rem;
+      font-weight: 400;
+    }
+    &__content {
+      margin-bottom: 6.4rem;
+    }
+    &__call-block {
+      margin-bottom: 4rem;
+    }
+    &__socials-list {
+      column-gap: 3rem;
+    }
+    &__socials-icon {
+      width: 6rem;
+      height: 6rem;
+    }
+    &__career {
+      row-gap: 3.2rem;
+    }
+    &.new-clinic-doctors-detailed {
+      .new-clinic {
+        &__content {
+          &_methods {
+            .new-clinic__title {
+              margin-bottom: 6.4rem;
+            }
+          }
+        }
+        &__reviews-group {
+          margin-bottom: 6.4rem;
+          row-gap: 3.6rem;
+        }
+        &__rating {
+          margin-bottom: 8rem;
+          flex-direction: column;
+          .rating__item {
+            flex: 0 0 4rem;
+            width: 4rem;
+            height: 4rem;
+          }
+          .rating-group {
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            column-gap: 6.6rem;
+          }
+        }
+        &__rating-set,
+        &__reviews {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 6.6rem;
+        }
+        &__rating-set-subtitle {
+          margin: 0;
+          font-size: 3.2rem;
+        }
+        &__reviews {
+          margin-bottom: 5rem;
+        }
+        &__reviews-text {
+          margin-bottom: 3rem;
+          font-size: 2.6rem;
+        }
+        &__reviews-row {
+          margin: 0;
+          grid-column: 2/3;
+          column-gap: 5rem;
+          span {
+            &:first-child {
+              &::after {
+                right: -2.5rem;
+              }
+            }
+          }
+        }
+        &__rating-btn {
+          width: 100%;
+          height: 10rem;
+        }
+        &__rating-set {
+          margin-bottom: 6rem;
+          align-items: center;
+        }
+        &__articles-row {
+          margin-bottom: 6.4rem;
+          grid-template-columns: 1fr;
+          row-gap: 3.6rem;
+        }
+        &__articles-link {
+          align-self: center;
+        }
+        &__text {
+          color: rgba(51, 51, 51, 0.5);
+          &:not(:last-child) {
+            margin-bottom: 3.6rem;
+          }
+        }
+        &__links-list {
+          row-gap: 4.4rem;
+        }
+        &__title {
+          max-width: 67rem;
+        }
+        &__aside {
+          grid-row: 1/2;
+          min-width: 0;
+        }
+        &__list {
+          li {
+            color: rgba(51, 51, 51, 0.5);
+          }
+        }
+        &__navigation-block {
+          margin-bottom: 6.4rem;
+        }
+      }
+    }
+    &.new-clinic-licenzia {
       margin-bottom: 20rem;
-      &__inner {
-         padding: 0;
-         flex-direction: column-reverse;
-      }
-      &__left {
-         width: 100%;
-         padding: 6.5rem 6rem 5.6rem 6rem;
-         &::after {
-            width: 82rem;
-            height: 82rem;
-            right: -41rem;
-            bottom: -36rem;
-         }
-         &::before {
-            width: 46.2rem;
-            height: 46.2rem;
-            left: 6rem;
-            bottom: -30rem;
-         }
-         &-phone {
-            font-size: 4rem;
-            padding-left: 10rem;
-            line-height: 170%;
-            margin-bottom: 10rem;
-            &::after {
-               width: 6.6rem;
-               height: 6.6rem;
-            }
-            &::before {
-               left: 10rem;
-               bottom: 1.2rem;
-               width: 63%;
-            }
-         }
-         &-text {
-            font-size: 2.62rem;
-            line-height: 190%;
-            margin-bottom: 4.5rem;
-            &::before {
-               top: -5.8rem;
-            }
-         }
-         &-whatsapp {
-            font-size: 3.15rem;
-            padding-left: 8.8rem;
-            margin-bottom: 3.7rem;
-            &::after {
-               width: 5rem;
-               height: 5rem;
-            }
-         }
-         &-online {
-            font-size: 3.15rem;
-            padding-left: 9rem;
-            &::after {
-               width: 5rem;
-               height: 5rem;
-               top: 3rem;
-            }
-         }
-      }
-      &__right {
-         width: 100%;
-         margin-bottom: 6rem;
-         &-title {
-            width: 75%;
-            margin-bottom: 6.3rem;
-         }
-         &-text {
-            font-size: 3rem;
-            line-height: 155%;
-            margin-bottom: 6.1rem;
-         }
-         &-list {
-            margin-bottom: 6rem;
-            & li {
-               padding-left: 9.2rem;
-               font-size: 3rem;
-               &:not(:last-child) {
-                  margin-bottom: 4.3rem;
-               }
-               &::after {
-                  top: 2.4rem;
-                  width: 4.5rem;
-                  height: 3.6rem;
-               }
-            }
-         }
-         &-img {
+      .new-clinic {
+        &__right {
+          width: 100%;
+          &-subtitle {
+            margin-bottom: 4rem;
+          }
+          &-title {
+            margin-bottom: 2.5rem;
             width: 100%;
-            height: 33rem;
-            margin-bottom: 6rem;
-         }
+          }
+          &-text {
+            margin-bottom: 4.1rem;
+            &:not(:last-child) {
+              margin-bottom: 5rem;
+            }
+          }
+        }
+        &__left {
+          width: 100%;
+          padding-right: 4.8rem;
+          padding-bottom: 6rem;
+          &-phone {
+            padding-left: 10rem;
+            margin-bottom: 9.7rem;
+          }
+          &-whatsapp {
+            padding-left: 8.8rem;
+          }
+          &-online {
+            padding-left: 9.2rem;
+          }
+          &-text {
+            &::before {
+              top: -6rem;
+            }
+          }
+        }
       }
-      &.new-clinic-licenzia {
-         margin-bottom: 20rem;
-         .new-clinic {
-            &__right {
-               width: 100%;
-               &-subtitle {
-                  margin-bottom: 4rem;
-               }
-               &-title {
-                  margin-bottom: 2.5rem;
-                  width: 100%;
-               }
-               &-text {
-                  margin-bottom: 4.1rem;
-                  &:not(:last-child) {
-                     margin-bottom: 5rem;
-                  }
-               }
+    }
+    &.new-clinic-new {
+      margin-bottom: 20.5rem;
+      .new-clinic {
+        &__inner {
+          margin-bottom: 7.5rem;
+        }
+        &__right {
+          position: relative;
+          padding-bottom: 1.5rem;
+          margin-bottom: 0;
+          &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #d8dde4;
+          }
+          &-title {
+            font-size: 5.4rem;
+            margin-bottom: 5.6rem;
+            width: 100%;
+          }
+          &-list {
+            margin-bottom: 6.2rem;
+            & li {
+              padding-left: 7rem;
+              &:not(:last-child) {
+                margin-bottom: 2.4rem;
+              }
             }
-            &__left {
-               width: 100%;
-               padding-right: 4.8rem;
-               padding-bottom: 6rem;
-               &-phone {
-                  padding-left: 10rem;
-                  margin-bottom: 9.7rem;
-               }
-               &-whatsapp {
-                  padding-left: 8.8rem;
-               }
-               &-online {
-                  padding-left: 9.2rem;
-               }
-               &-text {
-                  &::before {
-                     top: -6rem;
-                  }
-               }
+          }
+          &-img {
+            margin-bottom: 12rem;
+          }
+          &-text {
+            margin-bottom: 6.5rem;
+            &.semibold {
+              font-weight: 600;
+              width: 101%;
+              margin-bottom: 6rem;
+              margin-top: -1rem;
             }
-         }
+            &.mb {
+              margin-bottom: 0rem;
+            }
+          }
+        }
+        &__slider {
+          margin-top: 0rem;
+          margin-bottom: 22rem;
+          &-img {
+            width: 100%;
+            height: 32.8rem;
+          }
+          & .baner-swiper {
+            margin-left: 0;
+          }
+          & .reviews-btn-prev {
+            right: unset;
+            left: 0;
+            bottom: -21rem;
+          }
+          & .reviews-btn-next {
+            bottom: -21rem;
+          }
+          & .baner-swiper-pagination {
+            left: 54%;
+            bottom: -12rem;
+            display: flex;
+            &.swiper-pagination .swiper-pagination-bullet {
+              margin-right: 5.6rem;
+            }
+          }
+        }
       }
-      &.new-clinic-new {
-         margin-bottom: 20.5rem;
-         .new-clinic {
-            &__inner {
-               margin-bottom: 7.5rem;
-            }
-            &__right {
-               position: relative;
-               padding-bottom: 1.5rem;
-               margin-bottom: 0;
-               &::after {
-                  position: absolute;
-                  content: '';
-                  left: 0;
-                  bottom: 0;
-                  width: 100%;
-                  height: 1px;
-                  background-color: #D8DDE4;
-               }
-               &-title {
-                  font-size: 5.4rem;
-                  margin-bottom: 5.6rem;
-                  width: 100%;
-               }
-               &-list {
-                  margin-bottom: 6.2rem;
-                  & li {
-                     padding-left: 7rem;
-                     &:not(:last-child) {
-                        margin-bottom: 2.4rem;
-                     }
-                  }
-               }
-               &-img {
-                  margin-bottom: 12rem;
-               }
-               &-text {
-                  margin-bottom: 6.5rem;
-                  &.semibold {
-                     font-weight: 600;
-                     width: 101%;
-                     margin-bottom: 6rem;
-                     margin-top: -1rem;
-                  }
-                  &.mb {
-                     margin-bottom: 0rem;
-                  }
-               }
-            }
-            &__slider {
-               margin-top: 0rem;
-               margin-bottom: 22rem;
-               &-img {
-                  width: 100%;
-                  height: 32.8rem;
-
-               }
-               & .baner-swiper {
-                  margin-left: 0;
-               }
-               & .reviews-btn-prev {
-                  right: unset;
-                  left: 0;
-                  bottom: -21rem;
-               }
-               & .reviews-btn-next {
-                  bottom: -21rem;
-               }
-               & .baner-swiper-pagination {
-                  left: 54%;
-                  bottom: -12rem;
-                  display: flex;
-                  &.swiper-pagination .swiper-pagination-bullet {
-                     margin-right: 5.6rem;
-                  }
-               }
-            }
-         }
-         & .baner {
-            background-color: transparent;
-            margin: 0;
-            &__bottom-wrap {
-               margin-left: -4rem;
-               padding-top: 0;
-            }
-            &__bottom-name {
-               font-family: "Montserrat";
-               font-size: 3rem;
-               line-height: 160%;
-               margin-right: 0;
-               margin-bottom: 1.6rem;
-            }
-            &__bottom-mess {
-               width: 61%;
-            }
-         }
+      & .baner {
+        background-color: transparent;
+        margin: 0;
+        &__bottom-wrap {
+          margin-left: -4rem;
+          padding-top: 0;
+        }
+        &__bottom-name {
+          font-family: 'Montserrat';
+          font-size: 3rem;
+          line-height: 160%;
+          margin-right: 0;
+          margin-bottom: 1.6rem;
+        }
+        &__bottom-mess {
+          width: 61%;
+        }
       }
-      &.new-clinic-akcii {
-         margin-bottom: 17.1rem;
-         .new-clinic {
-            &__left {
-               padding: 5.6rem 4.7rem 5.6rem 4.7rem;
-               width: 100%;
-               &::before {
-                  left: 6rem;
-                  bottom: 0;
-                  width: 39.5rem;
-                  height: 39.5rem;
-                  transform: translateY(58%);
-               }
-               &::after {
-                   right: 0;
-                  bottom: 0;
-                  width: 71rem;
-                  height: 71rem;
-                  transform: translate(50%, 40%);
-               }
+    }
+    &.new-clinic-akcii {
+      margin-bottom: 17.1rem;
+      .new-clinic {
+        &__left {
+          padding: 5.6rem 4.7rem 5.6rem 4.7rem;
+          width: 100%;
+          &::before {
+            left: 6rem;
+            bottom: 0;
+            width: 39.5rem;
+            height: 39.5rem;
+            transform: translateY(58%);
+          }
+          &::after {
+            right: 0;
+            bottom: 0;
+            width: 71rem;
+            height: 71rem;
+            transform: translate(50%, 40%);
+          }
+        }
+        &__left-whatsapp,
+        &__left-online {
+          padding-left: 7rem;
+          font-weight: 600;
+        }
+        &__left-whatsapp,
+        &__left-online {
+          padding-left: 7rem;
+        }
+        &__left-whatsapp {
+          font-size: 3rem;
+        }
+        &__left-text {
+          font-size: 2.3rem;
+          line-height: 150%;
+          font-family: MyriadPro;
+        }
+        &__left-phone {
+          margin-bottom: 8rem;
+          font-size: 3.5rem;
+          &::after {
+            width: 5.7rem;
+            height: 5.7rem;
+          }
+          &::before {
+            left: 9rem;
+            bottom: 1.2rem;
+            width: 65%;
+          }
+        }
+        &__left-whatsapp::after,
+        &__left-online::after {
+          width: 4rem;
+          height: 4rem;
+        }
+        &__subtitle {
+          font-family: Montserrat;
+          font-weight: 400;
+        }
+        &__right {
+          margin-bottom: 17.1rem;
+        }
+        &__right-text {
+          margin-bottom: 4.5rem;
+          font-weight: 300;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        &__right-list {
+          margin-bottom: 3.5rem;
+          li {
+            padding: 0;
+            display: flex;
+            flex-direction: row-reverse;
+            column-gap: 2rem;
+            &::after {
+              position: static;
+              margin-top: 1.2rem;
+              flex: 0 0 2rem;
+              width: auto;
+              height: auto;
+              background-size: 2rem 1.5rem;
+              background-position: top left;
             }
-            &__left-whatsapp,
-            &__left-online {
-               padding-left: 7rem;
-               font-weight: 600;
+            &:not(:last-child) {
+              margin-bottom: 1.8rem;
             }
-            &__left-whatsapp,
-            &__left-online {
-               padding-left: 7rem;
-            }
-            &__left-whatsapp {
-               font-size: 3rem;
-            }
-            &__left-text {
-               font-size: 2.3rem;
-               line-height: 150%;
-               font-family: MyriadPro;
-            }
-            &__left-phone {
-               margin-bottom: 8rem;
-               font-size: 3.5rem;
-               &::after {
-                  width: 5.7rem;
-                  height: 5.7rem;
-               }
-               &::before {
-                  left: 9rem;
-                  bottom: 1.2rem;
-                  width: 65%;
-               }
-            }
-            &__left-whatsapp::after,
-            &__left-online::after {
-               width: 4rem;
-               height: 4rem;
-            }
-            &__subtitle {
-               font-family: Montserrat;
-               font-weight: 400;
-            }
-            &__right {
-               margin-bottom: 17.1rem;
-            }
-            &__right-text {
-               margin-bottom: 4.5rem;
-               font-weight: 300;
-               &:last-child {
-                  margin-bottom: 0;
-               }
-            }
-            &__right-list {
-               margin-bottom: 3.5rem;
-               li {
-                  padding: 0;
-                  display: flex;
-                  flex-direction: row-reverse;
-                  column-gap: 2rem;
-                  &::after {
-                     position: static;
-                     margin-top: 1.2rem;
-                     flex: 0 0 2rem;
-                     width: auto;
-                     height: auto;
-                     background-size: 2rem 1.5rem;
-                     background-position: top left;
-                  }
-                  &:not(:last-child) {
-                     margin-bottom: 1.8rem;
-                  }
-               }
-            }
-            &__right-img {
-               margin-bottom: 3.5rem;
-               height: 28rem;
-            }
-            &__left-phone {
-               padding-left: 9rem;
-            }
-         }
+          }
+        }
+        &__right-img {
+          margin-bottom: 3.5rem;
+          height: 28rem;
+        }
+        &__left-phone {
+          padding-left: 9rem;
+        }
       }
-      &.new-clinic-akcii-statia {
-         .new-clinic {
-            .appointment {
-               margin-bottom: 1.6rem;
+    }
+    &.new-clinic-akcii-statia {
+      .new-clinic {
+        .appointment {
+          margin-bottom: 1.6rem;
+        }
+        &__subtitle {
+          margin-bottom: 0.9rem;
+        }
+        &__title {
+          margin-bottom: 5.1rem;
+        }
+        &__right-text {
+          font-weight: 400;
+        }
+        &__right-img {
+          grid-row: 3/4;
+        }
+        &__right {
+          display: grid;
+        }
+        &__right-text {
+          margin-bottom: 3.5rem;
+        }
+        &__left-wr {
+          width: 100%;
+        }
+        &__left {
+          margin-bottom: 3.5rem;
+        }
+        &__add-img {
+          width: 122%;
+          height: auto;
+          transform: translate(16%, 18%);
+          img {
+            object-fit: contain;
+          }
+        }
+        &__add-subtitle {
+          position: relative;
+          z-index: 2;
+          margin-bottom: 0.6rem;
+          font-size: 2.6rem;
+        }
+        &__add-name {
+          position: relative;
+          z-index: 2;
+          margin-bottom: 3.5rem;
+          font-size: 3.4rem;
+        }
+        &__add {
+          padding: 3.5rem 3.5rem 5.2rem 3.5rem;
+          overflow: hidden;
+          ul {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 3.5rem;
+            li {
+              padding-left: 3rem;
+              font-size: 2.6rem;
+              &:not(:last-child) {
+                margin-bottom: 2.1rem;
+              }
+              &::before,
+              &::after {
+                width: 0.8rem;
+                height: 0.8rem;
+              }
             }
-            &__subtitle {
-               margin-bottom: 0.9rem;
-            }
-            &__title {
-               margin-bottom: 5.1rem;
-            }
-            &__right-text {
-               font-weight: 400;
-            }
-            &__right-img {
-               grid-row: 3/4;
-            }
-            &__right {
-               display: grid;
-            }
-            &__right-text {
-               margin-bottom: 3.5rem;
-            }
-            &__left-wr {
-               width: 100%;
-            }
-            &__left {
-               margin-bottom: 3.5rem;
-            }
-            &__add-img {
-               width: 122%;
-               height: auto;
-               transform: translate(16%, 18%);
-               img {
-                  object-fit: contain;
-               }
-            }
-            &__add-subtitle {
-               position: relative;
-               z-index: 2;
-               margin-bottom: 0.6rem;
-               font-size: 2.6rem;
-            }
-            &__add-name {
-               position: relative;
-               z-index: 2;
-               margin-bottom: 3.5rem;
-               font-size: 3.4rem;
-            }
-            &__add {
-               padding: 3.5rem 3.5rem 5.2rem 3.5rem;
-               overflow: hidden;
-               ul {
-                  position: relative;
-                  z-index: 2;
-                  margin-bottom: 3.5rem;
-                  li {
-                     padding-left: 3rem;
-                     font-size: 2.6rem;
-                     &:not(:last-child) {
-                        margin-bottom: 2.1rem;
-                     }
-                     &::before,
-                     &::after {
-                        width: 0.8rem;
-                        height: 0.8rem;
-                     }
-                  }
-               }
-            }
-            &__add-btn {
-               padding: 0;
-               display: flex;
-               width: 100%;
-            }
-         }
+          }
+        }
+        &__add-btn {
+          padding: 0;
+          display: flex;
+          width: 100%;
+        }
       }
-   }
+    }
+  }
 }

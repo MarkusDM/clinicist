@@ -144,7 +144,7 @@ $( document ).ready(function() {
 
 
 
-    var initFooter = false;
+var initFooter = false;
 
 function footerAccord() {
   if (window.innerWidth <= 768) {
@@ -214,7 +214,29 @@ $('.services-p__search-wrap-select').each(function () {
 });
 
 
+var initBox = false;
 
+function initBoxDown() {
+  if (window.innerWidth <= 768) {
+    if (!initBox) {
+      initBox = true;
+      $('.services-p__wrapper').each(function () {
+        let more = $(this).find('.services-p__box-inner');
+        let hide = $(this).find('.services-p__box-down');
+        hide.hide(0);
+        more.click(function () {
+          hide.slideToggle(300);
+          more.toggleClass('active');
+        });
+      });
+    }
+  } else if (initBox) {
+    
+    initBox = false;
+  }
+}
+initBoxDown();
+window.addEventListener("resize", initBoxDown);
 
 
 
@@ -233,12 +255,19 @@ const rem = function (rem) {
 
 const offerBannerSwiper = new Swiper('.offer-banner__swiper', {
   spaceBetween: rem(1),
-  slidesPerView: 1,
+  slidesPerView: 1.4,
   loop: true,
   autoplay: {
     delay: 4000,
   },
   speed: 1000,
+
+  breakpoints: {
+		769: {
+			slidesPerView: 1,
+		},
+		
+	},
   navigation: {
     nextEl: '.offer-banner__next',
     prevEl: '.offer-banner__prev',

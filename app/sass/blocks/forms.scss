@@ -62,7 +62,7 @@ textarea {
   &::after {
     right: 2.5rem;
     opacity: 0;
-    background-image: url(../img/icons/warning.svg);
+    background-image: url(../img/a-image/icons/warning.svg);
     @media (max-width: 48.98em) {
       right: 3rem;
     }
@@ -75,19 +75,19 @@ textarea {
   }
   &_tel {
     &::before {
-      background-image: url(../img/icons/phone-grey.svg);
+      background-image: url(../img/a-image/icons/phone-grey.svg);
     }
   }
   &_user {
     &::before {
-      background-image: url(../img/icons/user-grey.svg);
+      background-image: url(../img/a-image/icons/user-grey.svg);
     }
   }
   &_password {
     &::before {
       width: 2.6rem;
       height: 2.6rem;
-      background-image: url(../img/icons/key-grey.svg);
+      background-image: url(../img/a-image/icons/key-grey.svg);
       @media (max-width: 48.98em) {
         width: 4.5rem;
         height: 4.5rem;
@@ -96,12 +96,12 @@ textarea {
   }
   &_date {
     &::before {
-      background-image: url(../img/icons/calendar-grey.svg);
+      background-image: url(../img/a-image/icons/calendar-grey.svg);
     }
   }
   &_verify {
     &::before {
-      background-image: url(../img/icons/comment-grey.svg);
+      background-image: url(../img/a-image/icons/comment-grey.svg);
     }
   }
   &._filled {
@@ -140,7 +140,7 @@ textarea {
         font-size: 3rem;
       }
     }
- 
+
     @media (max-width: 48.98em) {
       padding: 3rem 7.5rem 3rem 12rem;
       height: 8.7rem;
@@ -169,7 +169,7 @@ textarea {
       background-color: $orange;
     }
     &:checked + .checkbox__label::after {
-      background: url('../img/icons/check.svg') center no-repeat;
+      background: url('../img/a-image/icons/check.svg') center no-repeat;
       background-size: 1.3rem;
       @media (max-width: 48.98em) {
         background-size: 3rem;
@@ -239,7 +239,7 @@ textarea {
       background-color: $orange;
     }
     &:checked + .options__label::after {
-      background: url('../img/icons/check.svg') center no-repeat;
+      background: url('../img/a-image/icons/check.svg') center no-repeat;
       background-size: 1.3rem;
       @media (max-width: 48.98em) {
         background-size: 3rem;

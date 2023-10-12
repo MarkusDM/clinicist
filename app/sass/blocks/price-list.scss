@@ -76,8 +76,8 @@
 
   &__title {
     padding: 0.5rem 2.5rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -92,7 +92,7 @@
       content: '';
       width: 2rem;
       height: 2rem;
-      background-image: url('../img/icons/select-arrow-blue.svg');
+      background-image: url('../img/a-image/icons/select-arrow-blue.svg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -124,13 +124,14 @@
   // .spoiler-price-list__service
 
   &__service {
-    margin-right: auto;
+    margin-right: 20rem;
     padding: 0.6rem 2.8rem;
+    max-width: 47rem;
     border-radius: 0.8rem;
     font-weight: 600;
     color: $blue;
     text-align: center;
-    background: linear-gradient(0deg, #ffffff 0%, #fff 100%), #36b4f1;
+    background-color: #ffffff;
   }
 
   // .spoiler-price-list__body
@@ -204,114 +205,17 @@
   }
 }
 
-.form-price-list {
-  position: relative;
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 1rem;
-  border: 1px solid #d8dde4;
-  background-color: #ffffff;
-  transition: all 0.3s ease;
-
-  // .form-price-list__search-box
-
-  &__search-box {
-  }
-
-  // .form-price-list__input-wrap
-
-  &__input-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    &::before {
-      content: '';
-      width: 2.4rem;
-      height: 2.4rem;
-      background-image: url(../img/icons/search.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: calc(100% - 1.5rem);
-      top: 50%;
-      right: 0;
-      background-color: #d8dde4;
-      transform: translateY(-50%);
-    }
-  }
-
-  // .form-price-list__input
-
-  &__input {
-    padding: 0.5rem 1.5rem;
-    height: 100%;
-    border: none;
-    color: #2f2f2f;
-    background-color: transparent;
-    &::placeholder {
-      color: rgba(51, 51, 51, 0.5);
-    }
-  }
-
-  // .form-price-list__select
-
-  &__select {
-    padding: 0.5rem 4.5rem;
-    min-height: 100%;
-    .select {
-      height: 100%;
-    }
-    .select__title {
-      display: flex;
-      align-items: center;
-      column-gap: 2rem;
-      &::before {
-        content: '';
-        width: 2.4rem;
-        height: 2.4rem;
-        background-image: url(../img/icons/filter.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-    }
-    .select__content {
-      display: none;
-    }
-    .select__options {
-      top: calc(100% + 1.3rem);
-      padding: 0.5rem;
-      border: 1px solid #d8dde4;
-      border-radius: 0.8rem;
-    }
-    .select__option {
-      @extend .txt;
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      color: #2f2f2f;
-    }
-  }
-
-  // .form-price-list__btn
-
-  &__btn {
-    min-width: 17.2rem;
-    height: 4rem;
-    border-radius: 0.8rem;
-  }
-}
-
 .services-price-list {
   padding: 3.2rem 3rem;
   display: flex;
   flex-direction: column;
   background-color: #f8fafd;
+
+  // .services-price-list__item
+
+  &__item {
+    height: 7.5rem;
+  }
 
   // .services-price-list__heading
 
@@ -327,81 +231,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 0.4rem;
-  }
-
-  // .services-price-list__item
-
-  &__item {
-    padding: 1.7rem 4rem;
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.05);
-  }
-
-  // .services-price-list__service
-
-  &__service {
-    flex: 1 1 auto;
-    font-weight: 500;
-    color: #2f2f2f;
-  }
-
-  // .services-price-list__prices
-
-  &__prices {
-    position: relative;
-    padding: 0 3rem;
-    display: grid;
-    grid-template-columns: 1fr 11.1rem;
-    align-items: center;
-    column-gap: 1rem;
-    height: 100%;
-    &::before {
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: #d8dde4;
-    }
-  }
-
-  // .services-price-list__price-current
-
-  &__price-current {
-    font-weight: 600;
-  }
-
-  // .services-price-list__price-old
-
-  &__price-old {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.4rem;
-    font-family: MyriadPro;
-    font-size: 1.6rem;
-    span:first-child {
-      color: #d8dde4;
-      text-decoration: line-through;
-    }
-    span:last-child {
-      color: #fe7200;
-    }
-  }
-
-  // .services-price-list__btn
-
-  &__btn {
-    min-width: 18.7rem;
-    height: 4.2rem;
-  }
-
-  // .services-price-list__btn-link
-
-  &__btn-link {
-    display: none;
   }
 
   // .services-price-list__link
@@ -429,7 +258,7 @@
       margin-bottom: 6.4rem;
     }
     &__title {
-      max-width: 67rem;
+      max-width: 50rem;
     }
     &__spoilers {
       margin-bottom: 2rem;
@@ -463,11 +292,13 @@
         }
       }
       &__alphabet-index {
+        margin-right: 0;
         span:first-child {
           display: none;
         }
       }
       &__service {
+        margin-right: 0;
         padding: 1.2rem 2rem;
         max-width: 39rem;
         border-radius: 1.6rem;
@@ -479,67 +310,6 @@
       &__list-item {
         max-width: 39.4rem;
         font-size: 3.2rem;
-      }
-    }
-    .form-price-list {
-      padding: 0;
-      height: 7.6rem;
-      &__select {
-        padding: 0;
-      }
-      .select {
-        position: static;
-      }
-      .select__body {
-        position: static;
-      }
-      .select__options {
-        top: 104%;
-      }
-      .select__title {
-        padding: 0;
-        margin-right: 1rem;
-        &::before {
-          width: 4rem;
-          height: 4rem;
-        }
-      }
-      .select__value {
-        &::before,
-        &::after {
-          display: none;
-        }
-      }
-      &__input-wrap {
-        padding: 0;
-        &::before,
-        &::after {
-          display: none;
-        }
-      }
-      &__input {
-        padding: 2.4rem 3.2rem;
-        font-size: 3rem;
-      }
-      &__btn {
-        position: relative;
-        min-width: auto;
-        width: 10.8rem;
-        height: 100%;
-        span {
-          display: none;
-        }
-        &::before {
-          content: '';
-          width: 5rem;
-          height: 5rem;
-          background-image: url(../img/icons/search-white.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-      &__search-box {
-        border-top: 1px solid #d8dde4;
       }
     }
     .services-price-list {
@@ -556,38 +326,8 @@
       &__services {
         padding: 8rem 4rem;
       }
-      &__service {
-        margin-bottom: 1.6rem;
-        grid-column: span 2;
-        font-size: 3.2rem;
-      }
-      &__prices {
-        padding: 0;
-        grid-template-columns: 1fr;
-        &::before {
-          display: none;
-        }
-      }
-      &__price-old {
-        flex-direction: row;
-        column-gap: 1.6rem;
-        font-size: 2.6rem;
-        span:first-child {
-          color: rgba(51, 51, 51, 0.5);
-        }
-      }
       &__item {
-        padding: 4rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      &__btn {
-        display: none;
-      }
-      &__btn-link {
-        display: flex;
-        justify-self: end;
-        align-self: end;
+        height: auto;
       }
       &__link {
         &.link {
@@ -613,20 +353,18 @@
       display: none;
     }
     .spoiler-price-list {
+      &__title {
+        &._spoiler-active {
+          .spoiler-price-list__service,
+          .spoiler-price-list__alphabet-index span:last-child {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
       &__service,
       &__alphabet-index span:last-child {
         transition: all 0.3s ease;
-        ._spoiler-active & {
-          opacity: 0;
-          visibility: hidden;
-        }
-      }
-    }
-    .form-price-list {
-      ._search-box-open & {
-        border-radius: 1rem 1rem 0 0;
-        border: 1px solid #d8dde4;
-        border-bottom: none;
       }
     }
   }

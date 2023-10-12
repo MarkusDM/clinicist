@@ -1,0 +1,121 @@
+<div id="datepicker-modal" aria-hidden="true" class="datepicker-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <form action="#" class="datepicker-modal__form">
+        <span class="datepicker-modal__title">Выберите время и дату</span>
+        <div id="datepicker"></div>
+        <div class="datepicker-modal__field">
+          <label for="pick-time-field" class="datepicker-modal__label"
+            >Выберите время записи</label
+          >
+          <div class="datepicker-modal__input-wrap">
+            <input
+              id="pick-time-field"
+              type="number"
+              placeholder="09:11"
+              class="datepicker-modal__input" />
+          </div>
+        </div>
+        <div class="datepicker-modal__actions">
+          <button type="button" class="datepicker-modal__head-back link">
+            Назад
+          </button>
+          <button type="submit" class="datepicker-modal__btn btn">
+            Готово
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="appointment-modal" aria-hidden="true" class="appointment-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="appointment-modal__body">
+        <span class="appointment-modal__title title">Запишитесь к врачу</span>
+        <span class="appointment-modal__subtitle subtitle"
+          >Присоединяйтесь к 600 000 нашихпациентов и получите действительно
+          качественные медицинские услуги</span
+        >
+        <form data-dev action="#" class="appointment-modal__form">
+          <div class="appointment-modal__input-wrap">
+            <input
+              autocomplete="off"
+              type="tel"
+              name="form[]"
+              data-error
+              placeholder
+              class="appointment-modal__input tel-mask" />
+          </div>
+          <div class="appointment-modal__contacts">
+            <span class="appointment-modal__contacts-heading txt"
+              >Выберите способ связи:</span
+            >
+            <div class="appointment-modal__contacts-group">
+              <button type="button" class="appointment-modal__contact _active">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/tel-outline-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt">Телефон</span>
+              </button>
+              <button type="button" class="appointment-modal__contact">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/whatsapp-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt"
+                  >WhatsApp</span
+                >
+              </button>
+              <button type="button" class="appointment-modal__contact">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/telegram-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt"
+                  >Telegram</span
+                >
+              </button>
+              <button
+                type="button"
+                class="appointment-modal__contact _mobile-only">
+                <div class="appointment-modal__contact-icon-wrap">
+                  <img
+                    src="./img/a-image/icons/viber-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="appointment-modal__contact-icon" />
+                </div>
+                <span class="appointment-modal__contact-text txt">Viber</span>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="appointment-modal__btn btn">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

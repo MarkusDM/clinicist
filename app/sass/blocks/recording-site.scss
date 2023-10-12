@@ -14,6 +14,10 @@
         max-width: 76rem;
     }
 
+    .container--mob {
+        display: none;
+    }
+
     &__inner {
         display: flex;
         align-items:center;
@@ -156,4 +160,149 @@
         }
 
     }
+}
+
+
+
+@media (max-width: 48em) { 
+
+
+    .recording-site {
+        overflow: hidden;
+        max-height: 185.6rem;
+        .container--d {
+            display: none;
+        }
+        .container--mob {
+            display: block;
+            padding: 0;
+        }
+
+        &__title {
+            font-size: 5.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125.926%;
+            margin-bottom: 4.8rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+           
+        }
+
+        &__service {
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 8rem;
+            padding-right: 9.6rem;
+            border-radius: 0px 7rem 7rem 0px;
+            background: #F8FAFD;
+            color:  #36B4F1;
+            font-family: 'Montserrat',sans-serif;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 186.667%;
+            margin-bottom: 4.8rem;
+            max-width: fit-content;
+
+        }
+
+        &__lists {
+            padding-left: 4rem;
+            padding-right: 4rem;
+            margin-bottom: 4.8rem;
+            li {
+                font-size: 2.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 2.4rem;
+                padding-left: 4.4rem;
+                &::before {
+                    position: absolute;
+                    content:'';
+                    width: 2.4rem;
+                    height: 2.2rem;
+                }
+            }
+        }
+
+        &__inner {
+            padding-left: 4rem;
+            align-items:center;
+        }
+
+        &__price-g {
+            font-size: 3.2rem;
+            line-height: 225%;
+            margin-right: 2rem;
+            padding-right: 2rem;
+            margin-top: 0;
+        }
+
+        &__price {
+            font-size: 5.4rem;
+            line-height: 133.333%;
+            padding-right: 5rem;
+        }
+
+        &__sale {
+            padding: 0.8rem 3rem 0.8rem 0.8rem;
+            width: 33rem;
+            height: 9.2rem;
+            border-radius: 8rem;
+
+        }
+
+        &__sale-price {
+            font-size: 3.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 200% ; 
+
+            &::before {
+                width: 19rem;
+                height: 19rem;
+                left: -7rem;
+                top: -3.4rem;
+            }
+        }
+
+        &__time {
+            padding-left: 4rem;
+            margin-bottom: 4.8rem;
+            color:  rgba(51, 51, 51, 0.50);
+          
+            font-family: 'Myriad Pro',sans-serif;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150% ; 
+        }
+
+        .btn {
+            width: 96%;
+            margin: 0 auto;
+           
+        }
+
+        &__block-image {
+            position: relative;
+            width: 80rem;
+            height: 67rem;
+            right: initial;
+            transform: initial;
+            top: 18rem;
+            right: -3rem;
+            margin-top: -10rem;
+        }
+
+
+        &__image {
+            width: 57.3rem;
+    height: 71.7rem;
+        }
+    }
+  
+
 }

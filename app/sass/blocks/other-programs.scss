@@ -1,0 +1,251 @@
+.other-programs {
+  margin-bottom: 18rem;
+
+  // .other-programs__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .other-programs__head
+
+  &__head {
+    margin-bottom: 6.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .other-programs__title-wrap
+
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .other-programs__subtitle
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  // .other-programs__title
+
+  &__title {
+  }
+
+  // .other-programs__link
+
+  &__link {
+    align-self: flex-end;
+  }
+
+  // .other-programs__carousel
+
+  &__carousel {
+  }
+
+  // .other-programs__slider
+
+  &__slider {
+    margin-bottom: 4rem;
+  }
+
+  // .other-programs__wrapper
+
+  &__wrapper {
+  }
+
+  // .other-programs__slide
+
+  &__slide {
+  }
+
+  // .other-programs__slider-control
+
+  &__slider-control {
+  }
+}
+
+.other-programs-card {
+  padding: 2rem 4.1rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: 42.8rem 1fr;
+  column-gap: 2.4rem;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.1);
+  background-color: #ffffff;
+
+  // .other-programs-card__image-wrap
+
+  &__image-wrap {
+    width: 100%;
+    height: 34.3rem;
+  }
+
+  // .other-programs-card__image
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .other-programs-card__text-wrap
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  // .other-programs-card__labels
+
+  &__labels {
+    margin-bottom: 3rem;
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  // .other-programs-card__label
+
+  &__label {
+  }
+
+  // .other-programs-card__heading
+
+  &__heading {
+    margin-bottom: 3.1rem;
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    line-height: 128.571%;
+  }
+
+  // .other-programs-card__text
+
+  &__text {
+    margin-bottom: 4rem;
+    max-width: 94rem;
+  }
+
+  // .other-programs-card__group
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .other-programs-card__prices
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    font-family: Montserrat;
+  }
+
+  // .other-programs-card__price-current
+
+  &__price-current {
+    @extend .programs-card__price-current;
+    display: flex;
+  }
+
+  // .other-programs-card__price-old
+
+  &__price-old {
+    @extend .programs-card__price-old;
+    display: flex;
+  }
+
+  // .other-programs-card__actions
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 3.3rem;
+  }
+
+  // .other-programs-card__btn
+
+  &__btn {
+    min-width: 26rem;
+  }
+
+  // .other-programs-card__link
+
+  &__link {
+  }
+}
+
+@media (max-width: 48em) {
+  .other-programs {
+    margin-bottom: 20rem;
+    &__subtitle {
+      margin-bottom: 2rem;
+    }
+    &__head {
+      margin-bottom: 6.4rem;
+    }
+    &__slider {
+      margin-bottom: 6.4rem;
+    }
+    &__carousel {
+      margin-bottom: 6.4rem;
+    }
+    &__link {
+      align-self: flex-end;
+    }
+  }
+}
+@media (max-width: 48em) {
+  .other-programs-card {
+    padding: 6.4rem 4rem;
+    grid-template-columns: 1fr;
+    &__image-wrap {
+      margin-bottom: 4rem;
+      order: -1;
+      height: 43rem;
+    }
+    &__labels {
+      margin-bottom: 4rem;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 1.4rem;
+      order: -1;
+    }
+    &__heading {
+      margin-bottom: 1.6rem;
+      font-family: MyriadPro;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    &__services {
+      margin-bottom: 4.4rem;
+    }
+    &__text {
+      margin-bottom: 3.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      max-width: 65rem;
+      color: #999999;
+      overflow: hidden;
+    }
+    &__group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    &__prices {
+      margin-bottom: 8rem;
+      column-gap: 4rem;
+    }
+    &__actions {
+      justify-content: space-between;
+      column-gap: 5rem;
+      width: 100%;
+    }
+    &__btn {
+      min-width: 35.4rem;
+    }
+  }
+}

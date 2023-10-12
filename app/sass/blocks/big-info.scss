@@ -1,83 +1,392 @@
 .big-info {
-   margin-bottom: 8.2rem;
-   &__inner {
+  margin-bottom: 8.2rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    background: #eef3f7;
+    padding: 1rem;
+    width: 31.4%;
+    height: fit-content;
+    &-title {
+      position: relative;
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 120%;
+      padding-left: 3.7rem;
+      margin: 0 auto;
+      width: 86%;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      &::after {
+        content: '!';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        border: 1.5px solid rgba(51, 51, 51, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: rgba(51, 51, 51, 0.5);
+      }
+    }
+    &-subtitle {
+      font-family: 'Montserrat';
+      font-size: 1.6rem;
+      line-height: 144%;
+      color: rgba(51, 51, 51, 0.5);
+      margin: 0 auto;
+      margin-bottom: 3.5rem;
+      width: 86%;
+    }
+    &-btns {
+      background-color: $white;
+      padding: 0.6rem 3.1rem 0rem 3.1rem;
+    }
+    &-btn {
+      font-family: 'MyriadPro';
+      font-size: 2.2rem;
+      line-height: 145%;
+      position: relative;
+      padding: 3rem 1rem 3rem 4.4rem;
+      cursor: pointer;
+      display: block;
+      &:not(:last-child) {
+        border-bottom: 1px solid #d8dde4;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        right: -0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.4rem;
+        height: 1.6rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../img/a-image/icons/arrow-right-black.svg);
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      &.active {
+        color: #fe7200;
+        font-weight: 600;
+      }
+      &.active::after {
+        background-image: url(../img/a-image/icons/arraw-orange.svg);
+      }
+    }
+    &-btn1 {
+      &::before {
+        background-image: url(../img/a-image/icons/big-info-btn1.svg);
+      }
+      &.active::before {
+        background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+      }
+    }
+    &-btn2 {
+      &::before {
+        background-image: url(../img/a-image/icons/big-info-btn2.svg);
+      }
+      &.active::before {
+        background-image: url(../img/a-image/icons/big-info-orange-btn2.svg);
+      }
+    }
+    &-btn3 {
+      &::before {
+        background-image: url(../img/a-image/icons/big-info-btn3.svg);
+      }
+      &.active::before {
+        background-image: url(../img/a-image/icons/big-info-orange-btn3.svg);
+      }
+    }
+    &-btn4 {
+      &::before {
+        background-image: url(../img/a-image/icons/big-info-btn4.svg);
+      }
+      &.active::before {
+        background-image: url(../img/a-image/icons/big-info-orange-btn4.svg);
+      }
+    }
+    &-btn5 {
+      &::before {
+        background-image: url(../img/a-image/icons/big-info-btn5.svg);
+      }
+      &.active::before {
+        background-image: url(../img/a-image/icons/big-info-orange-btn5.svg);
+      }
+    }
+    &-btn6 {
+      &::before {
+        background-image: url(../img/a-image/icons/big-info-btn6.svg);
+      }
+      &.active::before {
+        background-image: url(../img/a-image/icons/big-info-orange-btn6.svg);
+      }
+    }
+  }
+  &__contents {
+    width: 65.8%;
+  }
+  &__content {
+    position: relative;
+    display: none;
+    &-list {
+      & li {
+        padding-left: 4.5rem;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0.7rem;
+          height: 0.7rem;
+          border-radius: 50%;
+          background-color: #fe7200;
+        }
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+        & a {
+          font-family: 'Montserrat';
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 150%;
+          text-decoration-line: underline;
+        }
+      }
+    }
+    &.active {
+      display: block;
+    }
+    &-btn {
+      position: absolute;
+      right: 0rem;
+      top: 4.2rem;
+      padding: 1rem 5.4rem;
+    }
+  }
+  & .new-clinic__right {
+    width: 100%;
+  }
+  & .reviews__item-wrapper {
+    margin-top: 2.8rem;
+    &-bottom {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-   }
-   &__button {
-      background: #EEF3F7;
-      padding: 1rem;
-      width: 31.4%;
-      height: fit-content;
-      &-title {
-         position: relative;
-         font-family: "Montserrat";
-         font-weight: 500;
-         font-size: 2.5rem;
-         line-height: 120%;
-         padding-left: 3.7rem;
-         margin: 0 auto;
-         width: 86%;
-         margin-top: 3rem;
-         margin-bottom: 1.5rem;
-         &::after {
-            content: '!';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 2.2rem;
-            height: 2.2rem;
-            border-radius: 50%;
-            border: 1.5px solid rgba(51, 51, 51, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: rgba(51, 51, 51, 0.5);
-         }
+      margin-top: 4.5rem;
+      margin-bottom: 4.2rem;
+      &-link {
       }
-      &-subtitle {
-         font-family: "Montserrat";
-         font-size: 1.6rem;
-         line-height: 144%;
-         color: rgba(51, 51, 51, 0.5);
-         margin: 0 auto;
-         margin-bottom: 3.5rem;
-         width: 86%;
+      &-all {
+        font-family: 'MyriadPro';
+        font-size: 1.8rem;
+        line-height: 122%;
+        color: rgba(51, 51, 51, 0.5);
       }
-      &-btns {
-         background-color: $white;
-         padding: 0.6rem 3.1rem 0rem 3.1rem;
+    }
+  }
+  & .reviews__item-info {
+    width: 100%;
+    margin-top: 0rem;
+    padding-left: 6rem;
+    padding-right: 5.2rem;
+    background-color: #eef3f7;
+    box-shadow: none;
+    &:not(:last-child) {
+      margin-bottom: 2.7rem;
+    }
+    &-advantages {
+      width: 43.2%;
+      display: inline-block;
+      margin-bottom: 3.2rem;
+    }
+    &-flaws {
+      width: 42%;
+      display: inline-block;
+    }
+  }
+  & .all-news__items {
+    width: 100%;
+    margin-top: 6rem;
+  }
+  & .all-news__item-alls {
+    margin-top: 1rem;
+    padding-right: 2.5rem;
+    margin-bottom: 4.5rem;
+  }
+  & .procedures-doctors-detal {
+    margin-top: 6rem;
+    margin-bottom: 0;
+    .procedures {
+      &__items {
+        display: block;
       }
-      &-btn {
-         font-family: "MyriadPro";
-         font-size: 2.2rem;
-         line-height: 145%;
-         position: relative;
-         padding: 3rem 1rem 3rem 4.4rem;
-         cursor: pointer;
-         display: block;
-         &:not(:last-child) {
-            border-bottom: 1px solid #D8DDE4;
-         }
-         &::after {
+      &__item {
+        width: 100%;
+        justify-content: flex-start;
+        padding-right: 0;
+        &-img {
+          margin-right: 4rem;
+          height: 26rem;
+        }
+        &-content {
+          width: 63%;
+          &-text {
+            margin-bottom: 2.7rem;
+          }
+        }
+      }
+    }
+  }
+  & .consultation-doctors-detalna {
+    padding: 0;
+    margin-bottom: 11.5rem;
+    background-color: transparent;
+    margin-top: 6rem;
+    .consultation {
+      &__wrapper {
+        display: block;
+      }
+      &__contents {
+        width: 100%;
+      }
+      &-content {
+        display: block;
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 4rem;
+          }
+        }
+        &-alles {
+          font-family: 'MyriadPro';
+          font-size: 1.8rem;
+          line-height: 122%;
+          color: rgba(51, 51, 51, 0.5);
+          position: absolute;
+          right: 0.2rem;
+          bottom: -6.5rem;
+        }
+      }
+    }
+  }
+
+  &.big-info-bolezni-detalna {
+    margin-bottom: 18.1rem;
+    .big-info {
+      &__button {
+        &-btn {
+          &::after {
+            content: none;
+          }
+        }
+      }
+      &__item {
+        box-shadow: none;
+      }
+      &-diagnostika {
+        width: 62%;
+        margin-left: auto;
+        position: relative;
+        padding-bottom: 10rem;
+        margin-bottom: 11.8rem;
+        &-subtitle {
+          font-family: 'MyriadPro';
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 122%;
+          color: $blue;
+          margin-bottom: 1.5rem;
+        }
+        &-title {
+          font-family: 'Montserrat';
+          font-size: 3.5rem;
+          line-height: 122%;
+          margin-bottom: 4.5rem;
+        }
+        &-btn {
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          bottom: 0.2rem;
+          padding: 1rem 4.3rem;
+        }
+      }
+      &-method {
+        width: 66%;
+        margin-left: auto;
+        margin-bottom: 12rem;
+        &-title {
+          font-family: 'Montserrat';
+          font-size: 3.5rem;
+          line-height: 157%;
+          margin-bottom: 4rem;
+        }
+        &-text {
+          font-family: 'Montserrat';
+          font-size: 1.8rem;
+          line-height: 160%;
+          &:not(:last-child) {
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+      &-specialist {
+        width: 65.9%;
+        margin-left: auto;
+        height: 51rem;
+        margin-bottom: 11.6rem;
+        position: relative;
+        &-subtitle {
+          font-family: 'MyriadPro';
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 122%;
+          color: $blue;
+          margin-bottom: 0.8rem;
+        }
+        &-title {
+          font-family: 'Montserrat';
+          font-size: 3.5rem;
+          line-height: 122%;
+          margin-bottom: 4.5rem;
+        }
+        &-link {
+          position: absolute;
+          right: 0rem;
+          top: 4.9rem;
+          padding-right: 2.5rem;
+        }
+      }
+
+      &__button {
+        &-title {
+          width: 87%;
+          &::after {
             position: absolute;
             content: '';
             right: -0.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1.4rem;
-            height: 1.6rem;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-image: url(../img/icons/arrow-right-black.svg);
-         }
-         &::before {
-            position: absolute;
-            content: '';
-            left: 0rem;
             top: 50%;
             transform: translateY(-50%);
             width: 2.4rem;
@@ -85,1133 +394,822 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
-         }
-         &.active {
-            color: #FE7200;
+            background-image: url(../img/a-image/icons/menu.png);
+            border-radius: unset;
+            border: none;
+          }
+        }
+        &-subtitle {
+          width: 87%;
+        }
+        &-btns {
+          padding-left: 2.8rem;
+          padding-top: 1.3rem;
+        }
+        &-btn {
+          padding-top: 2.8rem;
+          padding-bottom: 2.8rem;
+        }
+        &-btn2 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn7.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
+        &-btn4 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn8.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
+        &-btn5 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn9.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
+        &-btn6 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn10.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
+      }
+      &__contents {
+        width: 66%;
+      }
+      &-swiper {
+        margin-bottom: 0.8rem;
+        box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+      }
+      &-btn-next {
+        bottom: -3.2rem;
+        right: 24.3rem;
+      }
+      &-btn-prev {
+        bottom: -3.2rem;
+        right: 31.2rem;
+      }
+      &-btn-prev2,
+      &-btn-next2 {
+        bottom: unset;
+        top: 9.5rem;
+      }
+      &-pagination2 {
+        transform: translateX(0);
+        left: unset;
+        right: 18rem;
+        top: 6.5rem;
+      }
+      &__content {
+        display: block;
+        &-simptoms {
+          margin-bottom: 20.8rem;
+          overflow: hidden;
+          &-subtitle {
+            font-family: 'MyriadPro';
             font-weight: 600;
-         }
-         &.active::after {
-            background-image: url(../img/icons/arraw-orange.svg);
-         }
-      }
-      &-btn1 {
-         &::before {
-            background-image: url(../img/icons/big-info-btn1.svg);;
-         }
-         &.active::before {
-            background-image: url(../img/icons/big-info-orange-btn1.svg);
-         }
-      }
-      &-btn2 {
-         &::before {
-            background-image: url(../img/icons/big-info-btn2.svg);;
-         }
-         &.active::before {
-            background-image: url(../img/icons/big-info-orange-btn2.svg);
-         }
-      }
-      &-btn3 {
-         &::before {
-            background-image: url(../img/icons/big-info-btn3.svg);;
-         }
-         &.active::before {
-            background-image: url(../img/icons/big-info-orange-btn3.svg);
-         }
-      }
-      &-btn4 {
-         &::before {
-            background-image: url(../img/icons/big-info-btn4.svg);;
-         }
-         &.active::before {
-            background-image: url(../img/icons/big-info-orange-btn4.svg);
-         }
-      }
-      &-btn5 {
-         &::before {
-            background-image: url(../img/icons/big-info-btn5.svg);;
-         }
-         &.active::before {
-            background-image: url(../img/icons/big-info-orange-btn5.svg);
-         }
-      }
-      &-btn6 {
-         &::before {
-            background-image: url(../img/icons/big-info-btn6.svg);;
-         }
-         &.active::before {
-            background-image: url(../img/icons/big-info-orange-btn6.svg);
-         }
-      }
-   }
-   &__contents {
-      width: 65.8%;
-   }
-   &__content {
-      position: relative;
-      display: none;
-      &-list {
-         & li {
-            padding-left: 4.5rem;
-            position: relative;
-            &::after {
-               position: absolute;
-               content: '';
-               left: 0;
-               top: 50%;
-               transform: translateY(-50%);
-               width: 0.7rem;
-               height: 0.7rem;
-               border-radius: 50%;
-               background-color: #FE7200;
-            }
-            &:not(:last-child) {
-               margin-bottom: 2rem;
-            }
-            & a {
-               font-family: "Montserrat";
-               font-weight: 500;
-               font-size: 1.8rem;
-               line-height: 150%;
-               text-decoration-line: underline;
-            }
-         }
-      }
-      &.active {
-         display: block;
-      }
-      &-btn {
-         position: absolute;
-         right: 0rem;
-         top: 4.2rem;
-         padding: 1rem 5.4rem;
-      }
-   }
-   & .new-clinic__right {
-      width: 100%;
-   }
-   & .reviews__item-wrapper {
-      margin-top: 2.8rem;
-      &-bottom {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         margin-top: 4.5rem;
-         margin-bottom: 4.2rem;
-         &-link {
-
-         }
-         &-all {
-            font-family: "MyriadPro";
             font-size: 1.8rem;
             line-height: 122%;
-            color: rgba(51, 51, 51, 0.5);
-         }
+            color: $blue;
+            margin-bottom: 0.5rem;
+          }
+          &-title {
+            font-family: 'Montserrat';
+            font-size: 3.5rem;
+            line-height: 122%;
+            margin-bottom: 12.6rem;
+          }
+          &-btn {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            bottom: -8rem;
+            padding: 1rem 9.5rem;
+          }
+          & .simptomi-btn-next,
+          & .simptomi-btn-prev {
+            bottom: -12rem;
+          }
+          & .simptomi-swiper {
+            overflow: visible;
+          }
+        }
+        &-doctors {
+          &-subtitle {
+            font-family: 'MyriadPro';
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 122%;
+            color: $blue;
+            margin-bottom: 2.2rem;
+          }
+          &-title {
+            font-family: 'Montserrat';
+            font-size: 3.5rem;
+            line-height: 122%;
+            margin-bottom: 6.2rem;
+          }
+        }
+
+        & .new-clinic__right {
+          margin-bottom: 11rem;
+          &-title {
+            font-family: 'Montserrat';
+            font-size: 3.5rem;
+            line-height: 157%;
+            margin-top: 0.2rem;
+          }
+          &-title2 {
+            font-family: 'Montserrat';
+            font-size: 2.5rem;
+            line-height: 220%;
+            margin-top: 6.4rem;
+            margin-bottom: 2.2rem;
+          }
+          &-text {
+            line-height: 165%;
+            width: 99%;
+            margin-bottom: 4.3rem;
+          }
+          &-list {
+            & li {
+              &:first-child {
+                margin-top: 2rem;
+              }
+            }
+          }
+          &-list2 {
+            margin-top: -2.2rem;
+          }
+          &-list3 {
+            width: 99%;
+            & li {
+              line-height: 160%;
+              &:first-child {
+                margin-top: 1.6rem;
+              }
+              &:not(:last-child) {
+                margin-bottom: 2.35rem;
+              }
+            }
+          }
+          &-img {
+            height: 40rem;
+            margin-bottom: 4.5rem;
+          }
+          &-texts {
+            margin-top: 8.8rem;
+            &-txt {
+              font-family: 'Montserrat';
+              font-size: 1.8rem;
+              line-height: 160%;
+              // margin-bottom: 2.2rem;
+            }
+            &-list {
+              width: 94.9%;
+              & li {
+                font-family: 'Montserrat';
+                font-size: 1.8rem;
+                line-height: 165%;
+                padding: 2rem 0;
+                &:not(:last-child) {
+                  border-bottom: 1px solid rgba(207, 215, 226, 0.5);
+                }
+              }
+            }
+          }
+        }
+        & .podgotovka__item {
+          width: 100%;
+          margin-bottom: 0;
+        }
       }
-   }
-   & .reviews__item-info {
+    }
+    & .info__item {
       width: 100%;
-      margin-top: 0rem;
-      padding-left: 6rem;
-      padding-right: 5.2rem;
-      background-color: #EEF3F7;
-      box-shadow: none;
-      &:not(:last-child) {
-         margin-bottom: 2.7rem;
+      display: block;
+      padding: 3rem;
+      padding-bottom: 10rem;
+      box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+      &-text {
+        width: 100%;
+        &-title {
+          font-family: 'MyriadPro';
+          font-size: 2.5rem;
+          line-height: 128%;
+          margin-bottom: 1.8rem;
+        }
+        &-description {
+          font-family: 'MyriadPro';
+          font-size: 1.8rem;
+          line-height: 133%;
+          color: rgba(51, 51, 51, 0.5);
+        }
       }
-      &-advantages {
-         width: 43.2%;
-         display: inline-block;
-         margin-bottom: 3.2rem;
+      &-sqr {
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 1.4rem;
+        margin-bottom: 2.8rem;
       }
-      &-flaws {
-         width: 42%;
-         display: inline-block;
-      }
-   }
-   & .all-news__items {
-      width: 100%;
-      margin-top: 6rem;
-   }
-   & .all-news__item-alls {
-      margin-top: 1rem;
-      padding-right: 2.5rem;
-      margin-bottom: 4.5rem;
-   }
-   & .procedures-doctors-detal {
-      margin-top: 6rem;
+    }
+    & .procedures.procedures-doctors {
+      width: 66%;
+      margin-left: auto;
+      position: relative;
       margin-bottom: 0;
       .procedures {
-         &__items {
-            display: block;
-         }
-         &__item {
-            width: 100%;
-            justify-content: flex-start;
-            padding-right: 0;
-            &-img {
-               margin-right: 4rem;
-               height: 26rem;
-            }
-            &-content {
-               width: 63%;
-               &-text {
-                  margin-bottom: 2.7rem;
-               }
-            }
-         }
+        &__btns {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 8rem;
+          &-btn {
+            font-family: 'Montserrat';
+            font-size: 1.8rem;
+            line-height: 150%;
+            padding: 1rem 2.5rem;
+            border: 1px solid #d8dde4;
+            border-radius: 1rem;
+            margin-right: 1.9rem;
+            margin-bottom: 1.4rem;
+            cursor: pointer;
+          }
+        }
       }
-   }
-   & .consultation-doctors-detalna {
-         padding: 0;
-         margin-bottom: 11.5rem;
-         background-color: transparent;
-         margin-top: 6rem;
-      .consultation {
-         &__wrapper {
-            display: block;
-         }
-         &__contents {
-            width: 100%;
-         }
-         &-content {
-            display: block;
-            &-item {
-               &:not(:last-child) {
-                  margin-bottom: 4rem;
-               }
-            }
-            &-alles {
-               font-family: "MyriadPro";
-               font-size: 1.8rem;
-               line-height: 122%;
-               color: rgba(51, 51, 51, 0.5);
-               position: absolute;
-               right: 0.2rem;
-               bottom: -6.5rem;
-            }
-         }
+      & .licenzia-pagination {
+        top: 6rem;
+        right: 19rem;
       }
-   }
-
-
-
-   &.big-info-bolezni-detalna {
-      margin-bottom: 18.1rem;
-      .big-info {
-         &__button {
-            &-btn {
-               &::after {
-                  content: none;
-               }
-            }
-         }
-         &__item {
-            box-shadow: none;
-         }
-         &-diagnostika {
-            width: 62%;
-            margin-left: auto;
-            position: relative;
-            padding-bottom: 10rem;
-            margin-bottom: 11.8rem;
-            &-subtitle {
-               font-family: "MyriadPro";
-               font-weight: 600;
-               font-size: 1.8rem;
-               line-height: 122%;
-               color: $blue;
-               margin-bottom: 1.5rem;
-            }
-            &-title {
-               font-family: "Montserrat";
-               font-size: 3.5rem;
-               line-height: 122%;
-               margin-bottom: 4.5rem;
+      & .baner.baner-new {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+        margin-top: 2.2rem;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0rem;
+          top: 2.2rem;
+          width: 100%;
+          height: 1px;
+          background-color: #d8dde4;
+        }
+      }
+      & .baner.baner-new .baner__bottom-wrap {
+        margin-left: 0;
+        width: 100%;
+      }
+      & .baner.baner-new .baner__bottom-name {
+        font-family: 'Montserrat';
+        font-size: 2.5rem;
+        line-height: 160%;
+      }
+    }
+    & .procedures.procedures-doctors .procedures__item {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    &
+      .procedures.procedures-doctors
+      .procedures__item-info-category-icon::after {
+      background-image: url(../img/a-image/icons/baner-docrors-detalna1.svg);
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    & .procedures-bolezni-detal {
+      margin-top: -0.5rem;
+      margin-bottom: 0;
+      .procedures {
+        &__items {
+          display: block;
+          margin-bottom: 0;
+        }
+        &__item {
+          width: 100%;
+          padding-right: 0;
+          justify-content: flex-start;
+          &-img {
+            height: auto;
+            width: 34rem;
+            margin-right: 3.9rem;
+          }
+          &-content {
+            width: 40%;
+            &-info {
+              margin-bottom: 4.6rem;
             }
             &-btn {
-               display: inline-block;
-               position: absolute;
-               left: 0;
-               bottom: 0.2rem;
-               padding: 1rem 4.3rem;
+              display: inline-block;
+              padding: 1rem 4rem;
+              margin-bottom: 4.9rem;
             }
-         }
-         &-method {
-            width: 66%;
-            margin-left: auto;
-            margin-bottom: 12rem;
-            &-title {
-               font-family: "Montserrat";
-               font-size: 3.5rem;
-               line-height: 157%;
-               margin-bottom: 4rem;
-            }
-            &-text {
-               font-family: "Montserrat";
-               font-size: 1.8rem;
-               line-height: 160%;
-               &:not(:last-child) {
-                  margin-bottom: 2.5rem;
-               }
-            }
-         }
-         &-specialist {
-            width: 65.9%;
-            margin-left: auto;
-            height: 51rem;
-            margin-bottom: 11.6rem;
-            position: relative;
-            &-subtitle {
-               font-family: "MyriadPro";
-               font-weight: 600;
-               font-size: 1.8rem;
-               line-height: 122%;
-               color: $blue;
-               margin-bottom: 0.8rem;
-            }
-            &-title {
-               font-family: "Montserrat";
-               font-size: 3.5rem;
-               line-height: 122%;
-               margin-bottom: 4.5rem;
-            }
-            &-link {
-               position: absolute;
-               right: 0rem;
-               top: 4.9rem;
-               padding-right: 2.5rem;
-            }
-         }
-         
-         &__button {
-            &-title {
-               width: 87%;
-               &::after {
-                  position: absolute;
-                  content: '';
-                  right: -0.5rem;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  width: 2.4rem;
-                  height: 2.4rem;
-                  background-position: center;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-image: url(../img/icons/menu.png);
-                  border-radius: unset;
-                  border: none;
-               }
-            }
-            &-subtitle {
-               width: 87%;
-            }
-            &-btns {
-               padding-left: 2.8rem;
-               padding-top: 1.3rem;
-            }
-            &-btn {
-               padding-top: 2.8rem;
-               padding-bottom: 2.8rem;
-            }
-            &-btn2 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn7.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-            &-btn4 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn8.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-            &-btn5 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn9.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-            &-btn6 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn10.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-         }
-         &__contents {
-            width: 66%;
-         }
-         &-swiper {
-            margin-bottom: 0.8rem;
-            box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
-         }
-         &-btn-next {
-            bottom: -3.2rem;
-            right: 24.3rem;
-         }
-         &-btn-prev {
-            bottom: -3.2rem;
-            right: 31.2rem;
-         }
-         &-btn-prev2,
-         &-btn-next2 {
-            bottom: unset;
-            top: 9.5rem;
-         }
-         &-pagination2 {
-            transform: translateX(0);
-            left: unset;
-            right: 18rem;
-            top: 6.5rem;
-         }
-         &__content {
-            display: block;
-            &-simptoms {
-               margin-bottom: 20.8rem;
-               overflow: hidden;
-               &-subtitle {
-                  font-family: "MyriadPro";
-                  font-weight: 600;
-                  font-size: 1.8rem;
-                  line-height: 122%;
-                  color: $blue;
-                  margin-bottom: 0.5rem;
-               }
-               &-title {
-                  font-family: "Montserrat";
-                  font-size: 3.5rem;
-                  line-height: 122%;
-                  margin-bottom: 12.6rem;
-               }
-               &-btn {
-                  display: inline-block;
-                  position: absolute;
-                  left: 0;
-                  bottom: -8rem;
-                  padding: 1rem 9.5rem;
-               }
-               & .simptomi-btn-next,
-               & .simptomi-btn-prev {
-                  bottom: -12rem;
-               }
-               & .simptomi-swiper {
-                  overflow: visible;
-               }
-            }
-            &-doctors {
-               &-subtitle {
-                  font-family: "MyriadPro";
-                  font-weight: 600;
-                  font-size: 1.8rem;
-                  line-height: 122%;
-                  color: $blue;
-                  margin-bottom: 2.2rem;
-               }
-               &-title {
-                  font-family: "Montserrat";
-                  font-size: 3.5rem;
-                  line-height: 122%;
-                  margin-bottom: 6.2rem;
-               }
-            }
-            
-            & .new-clinic__right {
-               margin-bottom: 11rem;
-               &-title {
-                  font-family: "Montserrat";
-                  font-size: 3.5rem;
-                  line-height: 157%;
-                  margin-top: 0.2rem;
-               }
-               &-title2 {
-                  font-family: "Montserrat";
-                  font-size: 2.5rem;
-                  line-height: 220%;
-                  margin-top: 6.4rem;
-                  margin-bottom: 2.2rem;
-               }
-               &-text {
-                  line-height: 165%;
-                  width: 99%;
-                  margin-bottom: 4.3rem;  
-               }
-               &-list {
-                  & li {
-                     &:first-child {
-                        margin-top: 2rem;
-                     }
-                  }
-               }
-               &-list2 {
-                  margin-top: -2.2rem;
-               }
-               &-list3 {
-                  width: 99%;
-                  & li {
-                     line-height: 160%;
-                     &:first-child {
-                        margin-top: 1.6rem;
-                     }
-                     &:not(:last-child) {
-                        margin-bottom: 2.35rem;
-                     }
-                  }
-               }
-               &-img {
-                  height: 40rem;
-                  margin-bottom: 4.5rem;
-               }
-               &-texts {
-                  margin-top: 8.8rem;
-                  &-txt {
-                     font-family: "Montserrat";
-                        font-size: 1.8rem;
-                        line-height: 160%;
-                        // margin-bottom: 2.2rem;
-                  }
-                  &-list {
-                     width: 94.9%;
-                     & li {
-                        font-family: "Montserrat";
-                        font-size: 1.8rem;
-                        line-height: 165%;
-                        padding: 2rem 0;
-                        &:not(:last-child) {
-                           border-bottom: 1px solid rgba(207, 215, 226, 0.5);
-                        }
-                     }
-                  }
-               }
-            }
-            & .podgotovka__item {
-               width: 100%;
-               margin-bottom: 0;
-            }
-            
-         }
+          }
+        }
       }
-      & .info__item {
-         width: 100%;
-         display: block;
-         padding: 3rem;
-         padding-bottom: 10rem;
-         box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
-         &-text {
-            width: 100%;
-            &-title {
-               font-family: "MyriadPro";
-               font-size: 2.5rem;
-               line-height: 128%;
-               margin-bottom: 1.8rem;
-            }
-            &-description {
-               font-family: "MyriadPro";
-               font-size: 1.8rem;
-               line-height: 133%;
-               color: rgba(51, 51, 51, 0.5);
-            }
-         }
-         &-sqr {
-            width: 5.6rem;
-            height: 5.6rem;
-            border-radius: 1.4rem;
-            margin-bottom: 2.8rem;
-         }
+    }
+  }
+  &.big-info-specialnosti-napravlenia-detalna {
+    margin-bottom: 14rem;
+    .big-info {
+      &__button {
+        &-btns {
+          padding: 1rem 4rem 2.2rem 2.6rem;
+        }
+        &-btn2 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn11.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
       }
-      & .procedures.procedures-doctors {
-         width: 66%;
-         margin-left: auto;
-         position: relative;
-         margin-bottom: 0;
-         .procedures {
-            &__btns {
-               display: flex;
-               flex-wrap: wrap;
-               margin-top: 8rem;
-               &-btn {
-                  font-family: "Montserrat";
-                  font-size: 1.8rem;
-                  line-height: 150%;
-                  padding: 1rem 2.5rem;
-                  border: 1px solid #D8DDE4;
-                  border-radius: 1rem;
-                  margin-right: 1.9rem;
-                  margin-bottom: 1.4rem;
-                  cursor: pointer;
-               }
-            }
-         }
-         & .licenzia-pagination {
-            top: 6rem;
-            right: 19rem;
-         }
-         & .baner.baner-new {
+    }
+  }
+  &.big-info-podarochnie-carti {
+    margin-bottom: 14.5rem;
+    .big-info {
+      &__content {
+        & .new-clinic__right {
+          &-subtitle {
+            margin-bottom: 1rem;
+          }
+          &-title {
+            margin-bottom: 5.2rem;
+          }
+          &-text {
+            margin-bottom: 3.1rem;
+          }
+        }
+      }
+      &__button {
+        width: 100%;
+        margin-bottom: 3rem;
+        &-wrap {
+          width: 31.4%;
+          & .call__right {
             width: 100%;
-            position: relative;
-            margin-bottom: 0;
-            margin-top: 2.2rem;
+            padding-right: 4.7rem;
             &::after {
-               content: '';
-               position: absolute;
-               left: 0rem;
-               top: 2.2rem;
-               width: 100%;
-               height: 1px;
-               background-color: #D8DDE4;
+              right: -18rem;
+              bottom: -18rem;
             }
-         }
-         & .baner.baner-new .baner__bottom-wrap {
-            margin-left: 0;
-            width: 100%;
-         }
-         & .baner.baner-new .baner__bottom-name {
-            font-family: "Montserrat";
-            font-size: 2.5rem;
-            line-height: 160%;
-         }
-      }
-      & .procedures.procedures-doctors .procedures__item {
-         width: 100%;
-         border-radius: 1rem;
-      }
-      & .procedures.procedures-doctors .procedures__item-info-category-icon::after {
-         background-image: url(../img/icons/baner-docrors-detalna1.svg);
-         width: 2.4rem;
-         height: 2.4rem;
-      }
-      & .procedures-bolezni-detal {
-         margin-top: -0.5rem;
-         margin-bottom: 0;
-         .procedures {
-            &__items {
-               display: block;
-               margin-bottom: 0;
+            &::before {
+              bottom: -14rem;
             }
-            &__item {
-               width: 100%;
-               padding-right: 0;
-               justify-content: flex-start;
-               &-img {
-                  height: auto;
-                  width: 34rem;
-                  margin-right: 3.9rem;
-               }
-               &-content {
-                  width: 40%;
-                  &-info {
-                     margin-bottom: 4.6rem;
-                  }
-                  &-btn {
-                     display: inline-block;
-                     padding: 1rem 4rem;
-                     margin-bottom: 4.9rem;
-                  }
-               }
-            }
-         }
-      }
-   }
-   &.big-info-specialnosti-napravlenia-detalna {
-      margin-bottom: 14rem;
-      .big-info {
-         &__button {
-            &-btns {
-               padding: 1rem 4rem 2.2rem 2.6rem;
-            }
-            &-btn2 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn11.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-         }
-      }
-   }
-   &.big-info-podarochnie-carti {
-      margin-bottom: 14.5rem;
-      .big-info {
-         &__content {
-            & .new-clinic__right {
-               &-subtitle {
-                  margin-bottom: 1rem;
-               }
-               &-title {
-                  margin-bottom: 5.2rem;
-               }
-               &-text {
-                  margin-bottom: 3.1rem;
-               }
-            }
-         }
-         &__button {
-            width: 100%;
-            margin-bottom: 3rem;
-            &-wrap {
-               width: 31.4%;
-               & .call__right {
-                  width: 100%;
-                  padding-right: 4.7rem;
-                  &::after {
-                     right: -18rem;
-                     bottom: -18rem;
-                  }
-                  &::before {
-                     bottom: -14rem;
-                  }
-                  &-phone {
-                     font-size: 2.8rem;
-                     line-height: 140%;
-                     margin-bottom: 7.5rem;
-                     &::before {
-                        bottom: 0.5rem;
-                        width: 68%;
-                     }
-                  }
-                  &-text {
-                     margin-bottom: 4rem;
-                  }
-                  &-whatsapp {
-                     margin-bottom: 3rem;
-                  }
-               }
-            }
-            &-btns {
-               padding: 0.8rem 3.9rem 2rem 2.7rem;
-            }
-            &-btn2 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn12.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-         }
-      }
-   }
-   &.big-info-uslugi-napravlenia {
-      margin-bottom: 13.7rem;
-      .big-info {
-         &__inner {
-            & .new-clinic__right {
-               &-title {
-                  margin-bottom: 3rem;
-                  font-family: "Montserrat";
-                  font-size: 3.5rem;
-                  line-height: 157%;
-               }
-               &-title2 {
-                  margin-top: 8rem;
-               }
-               &-text {
-                  margin-bottom: 2.2rem;
-                  line-height: 165%;
-               }
-               &-list {
-                  margin-bottom: 3rem;
-                  margin-top: 3.1rem;
-               }
-               &-img {
-                  height: 40rem;
-               }
-            }
-            & .reviews__item-wrapper {
-               margin-top: -1rem;
-               position: relative;
-               padding-bottom: 6.1rem;
-               margin-bottom: 9rem;
-               & .reviews-un-swiper {
-                  margin-left: 0;
-               }
-               & .reviews-un-swiper-pagination {
-                  bottom: 0;
-                  left: 0;
-                  transform: translateX(0%);
-               }
-               & .swiper-pagination-bullet {
-                  border: 1px solid rgba(51, 51, 51, 0.5);
-               }
-               & .swiper-pagination-bullet-active {
-                  border: 0px solid rgba(51, 51, 51, 0.5);
-                  background-color: $fzAll;
-               }
-               & .reviews-un-btn-next,
-               & .reviews-un-btn-prev {
-                  bottom: -6rem;
-               }
-            }
-            & .reviews__item-info {
-               box-shadow: 0px 0px 50px -5px rgba(124, 148, 159, 0.1) inset;
-            }
-         }
-         &__content {
-            &-btn {
-               top: -0.3rem;
-               padding: 1rem 6.6rem;
-            }
-         }
-         &__button {
-            &-title {
-               margin-top: 3.2rem;
-               &::after {
-                  left: 0.3rem;
-               }
-            }
-            &-subtitle {
-               width: 85%;
-               margin-bottom: 2.5rem;
-            }
-            &-btns {
-               padding: 0.8rem 3.5rem 1rem 3.4rem;
-            }
-            &-btn {
-               padding: 3.1rem 1rem 3rem 4.4rem;
-            }
-            &-btn2 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn13.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-            &-btn3 {
-               &::before {
-                  background-image: url(../img/icons/big-info-btn14.svg);;
-               }
-               &.active::before {
-                  background-image: url(../img/icons/big-info-orange-btn1.svg);
-               }
-            }
-         }
-      }
-   }
-   &.big-info-napravlenia-detalna {
-      .big-info {
-         &__left {
-            width: 31.4%;
-         }
-         &__button {
-            width: 100%;
-            margin-bottom: 4.3rem;
-         }
-         &__costs {
-            padding: 4rem;
-            box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
-            &-title {
-               font-family: "Montserrat";
-               font-weight: 500;
-               font-size: 2.5rem;
-               line-height: 120%;
-               padding-bottom: 2rem;
-               margin-bottom: 3rem;
-               position: relative;
-               padding-left: 4.5rem;
-               &::after {
-                  content: '';
-                  position: absolute;
-                  left: 0;
-                  bottom: 0;
-                  width: 100%;
-                  height: 1px;
-                  background-color: #D8DDE4;
-               }
-               &::before {
-                  position: absolute;
-                  content: '';
-                  left: 0.4rem;
-                  top: 0.5rem;
-                  width: 2.4rem;
-                  height: 2.4rem;
-                  background-image: url(../img/icons/baner-docrors-detalna1.svg);
-                  background-position: center;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-               }
+            &-phone {
+              font-size: 2.8rem;
+              line-height: 140%;
+              margin-bottom: 7.5rem;
+              &::before {
+                bottom: 0.5rem;
+                width: 68%;
+              }
             }
             &-text {
-               font-family: "Montserrat";
-               font-size: 1.8rem;
-               line-height: 156%;
-               margin-bottom: 2rem;
+              margin-bottom: 4rem;
             }
-            &-cost {
-               font-family: "Montserrat";
-               font-weight: 700;
-               font-size: 2.2rem;
-               line-height: 173%;
-               color: $blue;
-               margin-bottom: 3rem;
+            &-whatsapp {
+              margin-bottom: 3rem;
             }
-            &-btn {
-               display: block;
-               display: flex;
-               justify-content: center;
-            }
-         }
+          }
+        }
+        &-btns {
+          padding: 0.8rem 3.9rem 2rem 2.7rem;
+        }
+        &-btn2 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn12.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
       }
-   }
-   &.big-info-detalna-uslugi-ob-uslugah {
-      margin-bottom: 14.2rem;
-      .big-info {
-         &__costs {
-            &-number {
-               display: flex;
-               align-items: center;
-               justify-content: space-between;
-               margin-bottom: 3rem;
+    }
+  }
+  &.big-info-uslugi-napravlenia {
+    margin-bottom: 13.7rem;
+    .big-info {
+      &__inner {
+        & .new-clinic__right {
+          &-title {
+            margin-bottom: 3rem;
+            font-family: 'Montserrat';
+            font-size: 3.5rem;
+            line-height: 157%;
+          }
+          &-title2 {
+            margin-top: 8rem;
+          }
+          &-text {
+            margin-bottom: 2.2rem;
+            line-height: 165%;
+          }
+          &-list {
+            margin-bottom: 3rem;
+            margin-top: 3.1rem;
+          }
+          &-img {
+            height: 40rem;
+          }
+        }
+        & .reviews__item-wrapper {
+          margin-top: -1rem;
+          position: relative;
+          padding-bottom: 6.1rem;
+          margin-bottom: 9rem;
+          & .reviews-un-swiper {
+            margin-left: 0;
+          }
+          & .reviews-un-swiper-pagination {
+            bottom: 0;
+            left: 0;
+            transform: translateX(0%);
+          }
+          & .swiper-pagination-bullet {
+            border: 1px solid rgba(51, 51, 51, 0.5);
+          }
+          & .swiper-pagination-bullet-active {
+            border: 0px solid rgba(51, 51, 51, 0.5);
+            background-color: $fzAll;
+          }
+          & .reviews-un-btn-next,
+          & .reviews-un-btn-prev {
+            bottom: -6rem;
+          }
+        }
+        & .reviews__item-info {
+          box-shadow: 0px 0px 50px -5px rgba(124, 148, 159, 0.1) inset;
+        }
+      }
+      &__content {
+        &-btn {
+          top: -0.3rem;
+          padding: 1rem 6.6rem;
+        }
+      }
+      &__button {
+        &-title {
+          margin-top: 3.2rem;
+          &::after {
+            left: 0.3rem;
+          }
+        }
+        &-subtitle {
+          width: 85%;
+          margin-bottom: 2.5rem;
+        }
+        &-btns {
+          padding: 0.8rem 3.5rem 1rem 3.4rem;
+        }
+        &-btn {
+          padding: 3.1rem 1rem 3rem 4.4rem;
+        }
+        &-btn2 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn13.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
+        &-btn3 {
+          &::before {
+            background-image: url(../img/a-image/icons/big-info-btn14.svg);
+          }
+          &.active::before {
+            background-image: url(../img/a-image/icons/big-info-orange-btn1.svg);
+          }
+        }
+      }
+    }
+  }
+  &.big-info-napravlenia-detalna {
+    .big-info {
+      &__left {
+        width: 31.4%;
+      }
+      &__button {
+        width: 100%;
+        margin-bottom: 4.3rem;
+      }
+      &__costs {
+        padding: 4rem;
+        box-shadow: 0px 2rem 6rem rgba(124, 148, 159, 0.1);
+        &-title {
+          font-family: 'Montserrat';
+          font-weight: 500;
+          font-size: 2.5rem;
+          line-height: 120%;
+          padding-bottom: 2rem;
+          margin-bottom: 3rem;
+          position: relative;
+          padding-left: 4.5rem;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #d8dde4;
+          }
+          &::before {
+            position: absolute;
+            content: '';
+            left: 0.4rem;
+            top: 0.5rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-image: url(../img/a-image/icons/baner-docrors-detalna1.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+        &-text {
+          font-family: 'Montserrat';
+          font-size: 1.8rem;
+          line-height: 156%;
+          margin-bottom: 2rem;
+        }
+        &-cost {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 2.2rem;
+          line-height: 173%;
+          color: $blue;
+          margin-bottom: 3rem;
+        }
+        &-btn {
+          display: block;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  &.big-info-detalna-uslugi-ob-uslugah {
+    margin-bottom: 14.2rem;
+    .big-info {
+      &__costs {
+        &-number {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 3rem;
+        }
+        &-cost {
+          margin-bottom: 0;
+          display: flex;
+          align-items: center;
+          & span {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 253%;
+            text-decoration-line: line-through;
+            color: rgba(51, 51, 51, 0.5);
+            display: inline-block;
+            margin-left: 1rem;
+          }
+        }
+        &-procent {
+          position: relative;
+          font-family: 'MyriadPro';
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 170%;
+          color: #fe7200;
+          padding: 0.48rem 1.32rem 0.31rem 5.2rem;
+          background: #eef3f7;
+          border-radius: 3.4rem;
+          &::after {
+            position: absolute;
+            content: '%';
+            left: 0.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3.2rem;
+            height: 3.2rem;
+            background-image: url(../img/a-image/icons/procedures-procent.svg);
+            background-position: center;
+            background-size: 3.5rem;
+            background-repeat: no-repeat;
+            font-family: 'MyriadPro';
+            font-size: 1.52rem;
+            line-height: 200%;
+            color: #2f2f2f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0rem 1.27rem 3.4rem rgba(107, 152, 172, 0.25));
+          }
+        }
+      }
+      &__button {
+        margin-bottom: 4rem;
+        &-title {
+          margin-top: 2.8rem;
+          padding-left: 3.3rem;
+          &::after {
+            left: -0.2rem;
+          }
+        }
+        &-subtitle {
+          width: 87%;
+          margin-bottom: 3.5rem;
+        }
+        &-btns {
+          padding: 1.2rem 3rem 1.5rem 2.8rem;
+        }
+        &-btn {
+          padding-bottom: 2.9rem;
+        }
+      }
+      &__content {
+        & .new-clinic__right {
+          & .reviews__item-info {
+            background-color: #fff;
+            box-shadow: none;
+          }
+          & .reviews__item-wrapper {
+            box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.1);
+            padding-bottom: 0;
+            margin-bottom: 16rem;
+            & .reviews-un-swiper-pagination {
+              bottom: -6rem;
             }
-            &-cost {
-               margin-bottom: 0;
-               display: flex;
-               align-items: center;
-               & span {
-                  font-family: "Montserrat";
-                  font-weight: 400;
-                  font-size: 1.5rem;
-                  line-height: 253%;
-                  text-decoration-line: line-through;
-                  color: rgba(51, 51, 51, 0.5);
-                  display: inline-block;
-                  margin-left: 1rem;
-               }
+            & .reviews-un-btn-next {
+              bottom: -12rem;
             }
-            &-procent {
-               position: relative;
-               font-family: "MyriadPro";
-               font-weight: 600;
-               font-size: 1.8rem;
-               line-height: 170%;
-               color: #FE7200;
-               padding: 0.48rem 1.32rem 0.31rem 5.2rem;
-               background: #EEF3F7;
-               border-radius: 3.4rem;
-               &::after {
-                  position: absolute;
-                  content: '%';
-                  left: 0.6rem;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  width: 3.2rem ;
-                  height: 3.2rem;
-                  background-image: url(../img/icons/procedures-procent.svg);
-                  background-position: center;
-                  background-size: 3.5rem;
-                  background-repeat: no-repeat;
-                  font-family: "MyriadPro";
-                  font-size: 1.52rem;
-                  line-height: 200%;
-                  color: #2F2F2F;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  filter: drop-shadow(0rem 1.27rem 3.4rem rgba(107, 152, 172, 0.25));
-               }
+            & .reviews-un-btn-prev {
+              bottom: -12rem;
             }
-         }
-         &__button {
+          }
+          &-baner {
+            background-color: #eef3f7;
+            margin-top: 4rem;
+            margin-bottom: 6.5rem;
+            padding: 4rem;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            &-info {
+              width: 40%;
+              &-title {
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 2.5rem;
+                line-height: 180%;
+              }
+              &-text {
+                font-family: 'MyriadPro';
+                font-size: 1.8rem;
+                line-height: 135%;
+                color: rgba(51, 51, 51, 0.5);
+                margin-bottom: 3rem;
+              }
+              &-btn {
+                display: inline-block;
+                padding: 0.7rem 6.5rem;
+              }
+            }
+            &-img {
+              position: absolute;
+              right: 8.3rem;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 37.6rem;
+              height: 21.8rem;
+              & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          &-title {
+            margin-bottom: 3.2rem;
+          }
+          &-title2 {
+            margin-top: 6.5rem;
+          }
+          &-text {
+            &:nth-child(2) {
+              margin-bottom: 2rem;
+            }
+          }
+          &-list {
+            margin-top: 4rem;
+            margin-bottom: 3.8rem;
+          }
+          &-items {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          &-item {
+            margin-right: 4.7rem;
+            min-width: 30%;
+            display: flex;
+            align-items: center;
             margin-bottom: 4rem;
+
+            &-icon {
+              margin-right: 3rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              & img {
+                width: 2.6rem;
+                height: 2.8rem;
+                object-fit: contain;
+              }
+            }
             &-title {
-               margin-top: 2.8rem;
-               padding-left: 3.3rem;
-               &::after {
-                  left: -0.2rem;
-               }
+              font-family: 'Montserrat';
+              font-size: 1.8rem;
+              line-height: 156%;
+              & span {
+                font-family: 'MyriadPro';
+                font-size: 1.8rem;
+                line-height: 135%;
+                color: rgba(51, 51, 51, 0.5);
+                display: block;
+              }
+              & a {
+                font-family: 'MyriadPro';
+                font-size: 1.8rem;
+                line-height: 135%;
+                text-decoration-line: underline;
+                color: #fe7200;
+                display: block;
+              }
             }
-            &-subtitle {
-               width: 87%;
-               margin-bottom: 3.5rem;
+            &:nth-child(3n + 3) {
+              margin-right: 0;
             }
-            &-btns {
-               padding: 1.2rem 3rem 1.5rem 2.8rem;
+          }
+          &-printout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3.4rem 4.9rem 3.4rem 4.5rem;
+            background-color: #eef3f7;
+            &-text {
+              font-family: 'Montserrat';
+              font-size: 1.8rem;
+              line-height: 150%;
+              width: 40%;
             }
-            &-btn {
-               padding-bottom: 2.9rem;
+            &-download {
+              font-family: 'Golos';
+              font-weight: 500;
+              font-size: 1.3rem;
+              line-height: 123%;
+              text-decoration-line: underline;
+              text-transform: uppercase;
             }
-         }
-         &__content {
-            & .new-clinic__right {
-               & .reviews__item-info {
-                  background-color: #fff;
-                  box-shadow: none;
-               }
-               & .reviews__item-wrapper {
-                  box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.1);
-                  padding-bottom: 0;
-                  margin-bottom: 16rem;
-                  & .reviews-un-swiper-pagination {
-                     bottom: -6rem;
-                  }
-                  & .reviews-un-btn-next {
-                     bottom: -12rem;
-                  }
-                  & .reviews-un-btn-prev {
-                     bottom: -12rem;
-                  }
-               }
-               &-baner {
-                  background-color: #EEF3F7;
-                  margin-top: 4rem;
-                  margin-bottom: 6.5rem;
-                  padding: 4rem;
-                  display: flex;
-                  justify-content: space-between;
-                  position: relative;
-                  &-info {
-                     width: 40%;
-                     &-title {
-                        font-family: "Montserrat";
-                        font-weight: 500;
-                        font-size: 2.5rem;
-                        line-height: 180%;
-                     }
-                     &-text {
-                        font-family: "MyriadPro";
-                        font-size: 1.8rem;
-                        line-height: 135%;
-                        color: rgba(51, 51, 51, 0.5);
-                        margin-bottom: 3rem;
-                     }
-                     &-btn {
-                        display: inline-block;
-                        padding: 0.7rem 6.5rem;
-                     }
-                  }
-                  &-img {
-                     position: absolute;
-                     right: 8.3rem;
-                     top: 50%;
-                     transform: translateY(-50%);
-                     width: 37.6rem;
-                     height: 21.8rem;
-                     & img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                     }
-                  }
-               }
-               &-title {
-                  margin-bottom: 3.2rem;
-               }
-               &-title2 {
-                  margin-top: 6.5rem;
-               }
-               &-text {
-                  &:nth-child(2) {
-                     margin-bottom: 2rem;
-                  }
-               }
-               &-list {
-                  margin-top: 4rem;
-                  margin-bottom: 3.8rem;
-               }
-               &-items {
-                  display: flex;
-                  flex-wrap: wrap;
-               }
-               &-item {
-                  margin-right: 4.7rem;
-                  min-width: 30%;
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 4rem;
-                  
-                  &-icon {
-                     margin-right: 3rem;
-                     display: flex;
-                     align-items: center;
-                     justify-content: center;
-                     & img {
-                        width: 2.6rem;
-                        height: 2.8rem;
-                        object-fit: contain;
-                     }
-                  }
-                  &-title {
-                     font-family: "Montserrat";
-                     font-size: 1.8rem;
-                     line-height: 156%;
-                     & span {
-                        font-family: "MyriadPro";
-                        font-size: 1.8rem;
-                        line-height: 135%;
-                        color: rgba(51, 51, 51, 0.5);
-                        display: block;
-                     }
-                     & a {
-                        font-family: "MyriadPro";
-                        font-size: 1.8rem;
-                        line-height: 135%;
-                        text-decoration-line: underline;
-                        color: #FE7200;
-                        display: block;
-                     }
-                  }
-                  &:nth-child(3n+3) {
-                     margin-right: 0;
-                  }
-               }
-               &-printout {
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  padding: 3.4rem 4.9rem 3.4rem 4.5rem;
-                  background-color: #EEF3F7;
-                  &-text {
-                     font-family: "Montserrat";
-                     font-size: 1.8rem;
-                     line-height: 150%;
-                     width: 40%;
-                  }
-                  &-download {
-                     font-family: "Golos";
-                     font-weight: 500;
-                     font-size: 1.3rem;
-                     line-height: 123%;
-                     text-decoration-line: underline;
-                     text-transform: uppercase;
-                  }
-               }
-            }
-            &-simptoms {
-               overflow: hidden;
-               padding-bottom: 3.7rem;
-               margin-top: 6.8rem;
-               & .podgotovka__item {
-                  width: 100%;
-                  margin-bottom: 0;
-               }
-               &-title {
-                  font-family: "Montserrat";
-                  font-size: 3.5rem;
-                  line-height: 157%;
-                  margin-bottom: 12.5rem;
-               }
-               & .simptomi-swiper {
-                  overflow: visible;
-                  margin-bottom: 2.4rem;
-               }
-               & .simptomi-btn-next,
-               & .simptomi-btn-prev {
-                  bottom: -0.3rem;
-               }
-               &-btn {
-                  display: inline-block;
-                  padding: 1rem 9.3rem;
-               }
-            }
-         }
+          }
+        }
+        &-simptoms {
+          overflow: hidden;
+          padding-bottom: 3.7rem;
+          margin-top: 6.8rem;
+          & .podgotovka__item {
+            width: 100%;
+            margin-bottom: 0;
+          }
+          &-title {
+            font-family: 'Montserrat';
+            font-size: 3.5rem;
+            line-height: 157%;
+            margin-bottom: 12.5rem;
+          }
+          & .simptomi-swiper {
+            overflow: visible;
+            margin-bottom: 2.4rem;
+          }
+          & .simptomi-btn-next,
+          & .simptomi-btn-prev {
+            bottom: -0.3rem;
+          }
+          &-btn {
+            display: inline-block;
+            padding: 1rem 9.3rem;
+          }
+        }
       }
-   }
+    }
+  }
 }

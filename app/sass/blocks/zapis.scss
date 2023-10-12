@@ -38,7 +38,7 @@
     position: relative;
     &-title {
       margin-bottom: 4rem;
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 1.6rem;
       line-height: 150%;
       color: rgba(51, 51, 51, 0.5);
@@ -77,14 +77,14 @@
             }
           }
           &-title {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 1.6rem;
             line-height: 150%;
             margin-bottom: 1.3rem;
           }
           &-cost {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 1.6rem;
             line-height: 150%;
@@ -103,7 +103,7 @@
             border-radius: 1rem;
             margin-right: 1.15rem;
             padding: 0.5rem 3.6rem;
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 1.8rem;
             line-height: 150%;
@@ -141,14 +141,14 @@
             &-info {
               width: 80%;
               &-name {
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-weight: 500;
                 font-size: 2.2rem;
                 line-height: 150%;
                 margin-bottom: 0.2rem;
               }
               &-work {
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-weight: 500;
                 font-size: 1.6rem;
                 line-height: 150%;
@@ -156,7 +156,7 @@
                 margin-bottom: 0.75rem;
               }
               &-cost {
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-weight: 500;
                 font-size: 1.6rem;
                 line-height: 150%;
@@ -171,7 +171,7 @@
             justify-content: space-between;
             align-items: center;
             &-text {
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-weight: 500;
               font-size: 1.6rem;
               line-height: 150%;
@@ -209,7 +209,7 @@
           }
           &-name {
             & span {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.7rem;
               line-height: 141%;
               font-weight: 400;
@@ -230,7 +230,7 @@
           margin-bottom: 2.8rem;
         }
         &-text {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-weight: 500;
           font-size: 1.6rem;
           line-height: 150%;
@@ -312,7 +312,7 @@
             & > span {
               display: block;
               margin-bottom: 1.5rem;
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-weight: 500;
               font-size: 2rem;
               line-height: 200%;
@@ -321,7 +321,7 @@
             & li {
               & .call__form-footer-deal {
                 & .text2 {
-                  font-family: "Myriad Pro";
+                  font-family: 'Myriad Pro';
                   font-weight: 400;
                   font-size: 1.8rem;
                   line-height: 135%;
@@ -348,13 +348,13 @@
           width: 29.5%;
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             left: 3rem;
             top: 50%;
             transform: translateY(-50%);
             width: 2rem;
             height: 2rem;
-            background-image: url(../img/icons/zapis-select.svg);
+            background-image: url(../img/a-image/icons/zapis-select.svg);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
@@ -364,7 +364,7 @@
             font-size: 1.6rem;
             margin-bottom: 0;
             &__inner {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.6rem;
               line-height: 119%;
               color: rgba(51, 51, 51, 0.5);
@@ -383,7 +383,7 @@
             border-radius: 1rem;
             background-color: $white;
           }
-          & .choices[data-type*="select-one"] .choices__inner {
+          & .choices[data-type*='select-one'] .choices__inner {
             padding-bottom: 1.25rem;
             padding: 1rem;
             padding-left: 2rem;
@@ -404,13 +404,13 @@
           & .choices__list--dropdown .choices__item,
           .choices__list[aria-expanded] .choices__item {
             padding: 1rem 2rem;
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.6rem;
             line-height: 119%;
             color: rgba(51, 51, 51, 0.5);
           }
-          & .choices[data-type*="select-one"]::after {
-            content: ">";
+          & .choices[data-type*='select-one']::after {
+            content: '>';
             height: 0;
             width: 0;
             border-style: none;
@@ -425,7 +425,7 @@
             margin-top: 0;
             pointer-events: none;
           }
-          & .choices[data-type*="select-one"].is-open::after {
+          & .choices[data-type*='select-one'].is-open::after {
             transform: translateY(-50%) rotate(-90deg);
             right: 4rem;
             top: 55%;
@@ -445,7 +445,7 @@
             height: 50.6rem;
             position: relative;
             &::after {
-              content: "";
+              content: '';
               position: absolute;
               left: 0;
               bottom: 0;
@@ -473,7 +473,7 @@
               transition: opacity 0.2s linear;
             }
             &-title {
-              font-family: "MyriadPro";
+              font-family: 'MyriadPro';
               font-size: 1.6rem;
               line-height: 122%;
               color: #000000;
@@ -482,7 +482,7 @@
             }
           }
           &-btn {
-            font-family: "MyriadPro";
+            font-family: 'MyriadPro';
             font-size: 1.8rem;
             line-height: 135%;
             color: rgba(51, 51, 51, 0.5);
@@ -503,7 +503,7 @@
     }
 
     &-header {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-weight: 500;
       font-size: 2.2rem;
       line-height: 182%;
@@ -517,13 +517,13 @@
       }
       &::after {
         position: absolute;
-        content: "";
+        content: '';
         right: 3.4rem;
         top: 50%;
         transform: translateY(-50%) rotate(90deg);
         width: 1.3rem;
         height: 2.2rem;
-        background-image: url(../img/icons/arraw-blue.svg);
+        background-image: url(../img/a-image/icons/arraw-blue.svg);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -564,7 +564,7 @@
   }
 
   .month h1 {
-    font-family: "MyriadPro";
+    font-family: 'MyriadPro';
     font-size: 2.28rem;
     line-height: 118%;
     text-align: center;
@@ -572,7 +572,7 @@
   }
 
   .month p {
-    font-family: "MyriadPro";
+    font-family: 'MyriadPro';
     font-size: 2.28rem;
     line-height: 118%;
     text-align: center;
@@ -590,7 +590,7 @@
   }
 
   .weekdays div {
-    font-family: "MyriadPro";
+    font-family: 'MyriadPro';
     font-size: 1.48rem;
     line-height: 122%;
     color: #d8dde4;
@@ -604,7 +604,7 @@
     margin-left: -1rem;
     width: 104%;
     & div {
-      font-family: "MyriadPro";
+      font-family: 'MyriadPro';
       font-size: 1.8rem;
       line-height: 122%;
       color: $fzAll;
@@ -684,7 +684,7 @@
                 }
                 &-contact {
                   &-phone {
-                    font-family: "Myriad Pro";
+                    font-family: 'Myriad Pro';
                     line-height: 135%;
                     color: #000000;
                     position: relative;
@@ -693,33 +693,33 @@
                     margin-bottom: 1rem;
                     &::after {
                       position: absolute;
-                      content: "";
+                      content: '';
                       left: 0;
                       top: 50%;
                       transform: translateY(-50%);
                       width: 2.4rem;
                       height: 2.4rem;
-                      background-image: url(../img/icons/phone-blue.png);
+                      background-image: url(../img/a-image/icons/phone-blue.png);
                       background-position: center;
                       background-repeat: no-repeat;
                       background-size: contain;
                     }
                   }
                   &-addresse {
-                    font-family: "Myriad Pro";
+                    font-family: 'Myriad Pro';
                     line-height: 135%;
                     color: #000000;
                     position: relative;
                     padding-left: 4rem;
                     &::after {
                       position: absolute;
-                      content: "";
+                      content: '';
                       left: 0;
                       top: 50%;
                       transform: translateY(-50%);
                       width: 2.4rem;
                       height: 2.4rem;
-                      background-image: url(../img/icons/map-blue.svg);
+                      background-image: url(../img/a-image/icons/map-blue.svg);
                       background-position: center;
                       background-repeat: no-repeat;
                       background-size: contain;
