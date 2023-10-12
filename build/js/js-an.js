@@ -20,13 +20,12 @@ const valuesSwiper = new Swiper('.value-swiper', {
   speed: 1000,
 })
 
-const clinicSwiper = new Swiper('.new-clinic-korporativnie-swiper', {
-  loop: true,
+const clinicSwiper = new Swiper('.licenzia-swiper', {
   navigation: {
-    nextEl: '.values-btn-next',
-    prevEl: '.values-btn-prev',
+    nextEl: '.licenzia-btn-next',
+    prevEl: '.licenzia-btn-prev',
   },
-  slidesPerView: 3,
+  slidesPerView: 4,
   spaceBetween: rem(1),
   speed: 1000,
 })
