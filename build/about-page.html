@@ -549,7 +549,7 @@
     </section>
     <section class="values">
       <div class="container">
-        <div class="values__inner value-swiper swiper">
+        <div class="values__inner value-swiper swiper-container">
           <div class="values__left">
             <div class="values__left-subtitle">Преимущества клиники</div>
             <div class="values__left-title title">Ценности и достижения нашей клиники</div>
@@ -567,7 +567,7 @@
               <button class="values-btn-next btn-next swiper-button-next" type="button"></button>
           </div>
           <div class="values__right">
-            <div class="swiper-container swiper-wrapper">
+            <div class="swiper-wrapper">
               <div class="values__right-slide swiper-slide">
                 <div class="values__right-slide-content">
                   <div class="values__right-slide-content-top">
@@ -668,7 +668,7 @@
             <div class="about__container-text">Немного о клинике. Как и многие другие направления медицины, хирургия делится на широкий спектр различных отраслей, каждая из которых по своему Виды хирургов.</div>
           </div>
           <button class="about-btn-prev about-btn-prev-btm btn-prev swiper-button-prev swiper-button-disabled" type="button"></button>
-            <button class="about-btn-next about-btn-next-btm btn-next swiper-button-next" type="button"></button>
+          <button class="about-btn-next about-btn-next-btm btn-next swiper-button-next" type="button"></button>
         </div>
       </div>
     </section>
@@ -681,19 +681,19 @@
             <div class="quote__inner-left-content-name">Мишустин Александ Михайлович</div>
             <div class="quote__inner-left-content-clinic">Основатель клиник “Клиницист”</div>
           </div>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="quote__inner-left-slider">
-                <div class="quote__inner-left-swiper image">
+          <div class="quote-swiper swiper-container">
+            <div class="quote-swiper__wrapper">
+              <div class="quote__inner-left-slider swiper-wrapper">
+                <div class="quote__inner-left-swiper image swiper-slider">
                   <img src="./img/ans_image/srtificate.webp" alt="">
                 </div>
-                <div class="quote__inner-left-swiper image-active">
+                <div class="quote__inner-left-swiper image-active swiper-slider">
                   <img src="./img/ans_image/srtificate.webp" alt="">
                 </div>
-                <div class="quote__inner-left-swiper image">
+                <div class="quote__inner-left-swiper image swiper-slider">
                   <img src="./img/ans_image/srtificate.webp" alt="">
                 </div>
-                <div class="quote__inner-left-swiper image">
+                <div class="quote__inner-left-swiper image swiper-slider">
                   <img src="./img/ans_image/srtificate.webp" alt="">
                 </div>
               </div>
@@ -709,20 +709,19 @@
         </div>
       </div>
     </section>
-    <section class="team">
+    <section class="procedures">
         <div class="container">
-          <div class="team__inner">
+          <div class="procedures__inner procedures__wrapper">
             <div>
               <div class="procedures__subtitle subtitle">
                 Наша команда специалистов
               </div>
-              <div class="procedures__title title">
+              <div class="procedures__wrapper-title title">
                 Наши врачи
               </div>
             </div>
             <a href="#" class="link">Все врачи</a>
           </div>
-          
             <div class="procedures-doctors procedures-doctors-detalna">
               <div class="procedures__items">
                 <div class="procedures__item">
@@ -734,7 +733,7 @@
                     Главный хирург, доктор медицинских наук, врач высшей
                     категории
                   </div>
-                  <a href="#" class="link">Записаться</a>
+                  <a href="#" class="procedures__item-position__link link">Записаться</a>
                   <div class="procedures__item-info">
                     <div class="procedures__item-info-category">
                       <div class="procedures__item-info-category-icon"></div>
@@ -745,46 +744,202 @@
                     </div>
                     <div class="procedures__item-info-reating">
                       <div class="procedures__item-info-reating-icon"></div>
-                      <div class="procedures__item-info-reating-stars">
-                        <div
-                          class="procedures__item-info-reating-stars-star starall"
-                        ></div>
-                        <div
-                          class="procedures__item-info-reating-stars-star starall"
-                        ></div>
-                        <div
-                          class="procedures__item-info-reating-stars-star starall"
-                        ></div>
-                        <div
-                          class="procedures__item-info-reating-stars-star starall"
-                        ></div>
-                        <div
-                          class="procedures__item-info-reating-stars-star star"
-                        ></div>
-                      </div>
-                      <div class="procedures__item-info-reating-number-review">
-                        10
-                      </div>
-                      <div class="procedures__item-info-reating-number">
-                        4.8
+                      <div>
+                        <div class="procedures__item-info-reating-stars">
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star star"
+                          ></div>
+                        </div>
+                        <div class="procedures__item-info-reating-number-container">
+                          <div class="procedures__item-info-reating-number-review">
+                            10
+                          </div>
+                          <div class="procedures__item-info-reating-number">
+                            4.8
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper">
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="">Статьи врача:</div>
-                    <div class="swiper-container swiper-wrapper">
+                  <div class="procedures__item-swiper swiper-container">
+                    <button class="procedures__item-btn-prev btn-prev swiper-button-prev swiper-button-disabled" type="button"></button>
+                    <button class="procedures__item-btn-next swiper-button-next" type="button"></button>
+                    <div class="procedures__item-swiper-title">Статьи врача:</div>
+                    <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <ul class="list">
-                          <li>Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
-                          <li>Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
+                        </ul>
+                      </div>
+                      <div class="swiper-slide">
+                        <ul class="list">
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="procedures__item-img">
-                    <img src="./img/procedur-doctor2.png" alt="" />
+                  <div class="procedures__item-img procedures__item-img-btm">
+                    <img src="./img/ans_image/procedures_doctor.webp" alt="" />
+                  </div>
+                </div>
+
+                <div class="procedures__item">
+                  <a href="" # class="procedures__item-link link">Главный хирург</a>
+                  <div class="procedures__item-name">
+                    Мишустина Александра Ивановна
+                  </div>
+                  <div class="procedures__item-position">
+                    Главный хирург, доктор медицинских наук, врач высшей
+                    категории
+                  </div>
+                  <a href="#" class="procedures__item-position__link link">Записаться</a>
+                  <div class="procedures__item-info">
+                    <div class="procedures__item-info-category">
+                      <div class="procedures__item-info-category-icon"></div>
+                      <div class="procedures__item-info-category-text">
+                        Прием от
+                        <span>1200 ₽ </span>
+                      </div>
+                    </div>
+                    <div class="procedures__item-info-reating">
+                      <div class="procedures__item-info-reating-icon"></div>
+                      <div>
+                        <div class="procedures__item-info-reating-stars">
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star star"
+                          ></div>
+                        </div>
+                        <div class="procedures__item-info-reating-number-container">
+                          <div class="procedures__item-info-reating-number-review">
+                            10
+                          </div>
+                          <div class="procedures__item-info-reating-number">
+                            4.8
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="procedures__item-swiper swiper-container">
+                    <button class="procedures__item-btn-prev btn-prev swiper-button-prev swiper-button-disabled" type="button"></button>
+                    <button class="procedures__item-btn-next swiper-button-next" type="button"></button>
+                    <div class="procedures__item-swiper-title">Статьи врача:</div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <ul class="list">
+                            <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
+                            <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
+                          </ul>
+                        </div>
+                        <div class="swiper-slide">
+                          <ul class="list">
+                            <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
+                            <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="procedures__item-img procedures__item-img-btm">
+                    <img src="./img/ans_image/procedures_doctor.webp" alt="" />
+                  </div>
+                </div>
+
+                <div class="procedures__item">
+                  <a href="" # class="procedures__item-link link">Главный хирург</a>
+                  <div class="procedures__item-name">
+                    Мишустина Александра Ивановна
+                  </div>
+                  <div class="procedures__item-position">
+                    Главный хирург, доктор медицинских наук, врач высшей
+                    категории
+                  </div>
+                  <a href="#" class="procedures__item-position__link link">Записаться</a>
+                  <div class="procedures__item-info">
+                    <div class="procedures__item-info-category">
+                      <div class="procedures__item-info-category-icon"></div>
+                      <div class="procedures__item-info-category-text">
+                        Прием от
+                        <span>1200 ₽ </span>
+                      </div>
+                    </div>
+                    <div class="procedures__item-info-reating">
+                      <div class="procedures__item-info-reating-icon"></div>
+                      <div>
+                        <div class="procedures__item-info-reating-stars">
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star starall"
+                          ></div>
+                          <div
+                            class="procedures__item-info-reating-stars-star star"
+                          ></div>
+                        </div>
+                        <div class="procedures__item-info-reating-number-container">
+                          <div class="procedures__item-info-reating-number-review">
+                            10
+                          </div>
+                          <div class="procedures__item-info-reating-number">
+                            4.8
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="procedures__item-swiper swiper-container">
+                    <button class="procedures__item-btn-prev btn-prev swiper-button-prev swiper-button-disabled" type="button"></button>
+                    <button class="procedures__item-btn-next swiper-button-next" type="button"></button>
+                    <div class="procedures__item-swiper-title">Статьи врача:</div>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <ul class="list">
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
+                        </ul>
+                      </div>
+                      <div class="swiper-slide">
+                        <ul class="list">
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ и любых врачей на дому...</li>
+                          <li class="list-item">Мы предлагаем кузбассовцам пройти ЭКГ, УЗИ...</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="procedures__item-img procedures__item-img-btm">
+                    <img src="./img/ans_image/procedures_doctor.webp" alt="" />
                   </div>
                 </div>
               </div>
@@ -1375,5 +1530,6 @@
   <script src="./js/jquery.maskedinput.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/main-a.js"></script>
+  <script src="./js/js-an.js"></script>
 </body>
 </html>

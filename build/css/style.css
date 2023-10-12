@@ -15951,6 +15951,15 @@ input[type='search']::-webkit-search-results-decoration {
       .procedures__box-more::after {
         -webkit-transform: translateY(-50%) rotate(90deg);
                 transform: translateY(-50%) rotate(90deg); }
+  .procedures__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .procedures__wrapper-title {
+      margin-bottom: 6.4rem; }
   .procedures__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16883,6 +16892,104 @@ input[type='search']::-webkit-search-results-decoration {
           height: 100%;
           -o-object-fit: cover;
              object-fit: cover; }
+        .procedures-doctors .procedures__item-img-btm {
+          top: unset; }
+      .procedures-doctors .procedures__item-swiper {
+        position: relative;
+        z-index: 2;
+        margin-bottom: -2rem;
+        margin-left: -4rem;
+        width: 23.8rem;
+        padding: 2.5rem 2.5rem 2.5rem 2.8rem;
+        background: #FFF;
+        -webkit-box-shadow: 0rem 1.1rem 5.1rem 0rem rgba(124, 148, 159, 0.1);
+                box-shadow: 0rem 1.1rem 5.1rem 0rem rgba(124, 148, 159, 0.1); }
+        .procedures-doctors .procedures__item-swiper-title {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 1.59rem;
+          color: #2F2F2F;
+          margin-bottom: 1.8rem; }
+        .procedures-doctors .procedures__item-swiper .list-item {
+          position: relative;
+          font-family: "Montserrat";
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 400;
+          color: rgba(51, 51, 51, 0.5);
+          margin-bottom: 1rem;
+          padding-left: 1.7rem; }
+          .procedures-doctors .procedures__item-swiper .list-item::before {
+            content: '';
+            position: absolute;
+            top: 0.7rem;
+            left: 0;
+            width: 0.56rem;
+            height: 0.56rem;
+            border-radius: 50%;
+            background: #36b4f1; }
+      .procedures-doctors .procedures__item-btn-prev {
+        position: absolute;
+        left: unset;
+        top: 0;
+        right: 3.9rem;
+        margin: 0;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 3.9rem;
+        height: 3.9rem;
+        background-color: #eef3f7;
+        -webkit-transform: none;
+                transform: none; }
+        .procedures-doctors .procedures__item-btn-prev::before {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 3rem;
+                  flex: 0 0 3rem;
+          width: 1.7rem;
+          height: 1.7rem;
+          background-image: url(../img/icons/sl-arrow-active.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          -webkit-transform: rotate(-180deg);
+                  transform: rotate(-180deg); }
+      .procedures-doctors .procedures__item-btn-next {
+        position: absolute;
+        left: unset;
+        top: 0;
+        right: 0;
+        margin: 0;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 3.9rem;
+        height: 3.9rem;
+        background-color: #eef3f7;
+        -webkit-transform: none;
+                transform: none; }
+        .procedures-doctors .procedures__item-btn-next::before {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 3rem;
+                  flex: 0 0 3rem;
+          width: 1.7rem;
+          height: 1.7rem;
+          background-image: url(../img/icons/sl-arrow-active.svg);
+          background-size: contain;
+          background-repeat: no-repeat; }
     .procedures-doctors .procedures__bottom {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -30695,7 +30802,8 @@ textarea {
             -ms-flex-pack: justify;
                 justify-content: space-between;
         padding: 0 2.2rem 0 1.5rem;
-        height: 24.1rem; }
+        height: 24.1rem;
+        width: 66.5rem; }
         .quote__inner-left-slider .image {
           width: 14.9rem;
           height: -webkit-fit-content;
