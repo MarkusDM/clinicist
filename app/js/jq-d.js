@@ -238,7 +238,16 @@ function initBoxDown() {
 initBoxDown();
 window.addEventListener("resize", initBoxDown);
 
+$('.updates__item').click(function () {
+	var id = $(this).attr('data-tab'),
+		content = $('.updates__wrap[data-tab="' + id + '"]');
 
+	$('.updates__item.active').removeClass('active'); // 1
+	$(this).addClass('active'); // 2
+
+	$('.updates__wrap.active').removeClass('active'); // 3
+	content.addClass('active'); // 4
+});
 
 //  JS
 

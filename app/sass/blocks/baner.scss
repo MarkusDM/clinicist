@@ -3603,12 +3603,92 @@
       }
     }
   }
+  &-doctors-chapter-zapis {
+    .baner {
+      &__image-wrap {
+        &::before {
+          border: 1px solid #d8dde4;
+        }
+      }
+      &__call-link {
+        padding: 0.4rem 3.7rem 0.4rem 0.4rem;
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        column-gap: 2rem;
+        border-radius: 5.2rem;
+        background-color: #ffffff;
+      }
+      &__call-link-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 4.8rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        background-color: $blue;
+        img {
+          flex: 0 0 2.4rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          object-fit: contain;
+        }
+      }
+      &__call-link-text {
+        color: $blue;
+      }
+      &__text {
+        margin-bottom: 4rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
   .baner {
     margin-bottom: 16rem;
     height: auto;
+    &-doctors-chapter-zapis {
+      .baner {
+        &__text {
+          margin-bottom: 10.8rem;
+          font-size: 3.2rem;
+        }
+        &__call-link {
+          padding: 0.8rem 4rem 0.8rem 0.8rem;
+          column-gap: 1.6rem;
+          border-radius: 10.4rem;
+        }
+        &__call-link-icon {
+          flex: 0 0 7rem;
+          width: 7rem;
+          height: 7rem;
+          img {
+            flex: 0 0 3.6rem;
+            width: 3.6rem;
+            height: 3.6rem;
+          }
+        }
+        &__call-link-text {
+          font-size: 3rem;
+        }
+        &__text-wrap {
+          position: relative;
+          z-index: 2;
+        }
+        &__image-wrap {
+          width: 89.6rem;
+          &::before {
+            top: -51%;
+            left: 0;
+            width: 78rem;
+            height: 78rem;
+            transform: translate(-10%, 0);
+          }
+        }
+      }
+    }
     &-carousel {
       padding-top: 10rem;
       .baner-slide {
@@ -4466,18 +4546,14 @@
       left: 31%;
       width: 65.1rem;
       height: 65.1rem;
-
-      
-  }
-
-    }
-
-
-    img {
-      position: relative;
-      z-index: 2;
     }
   }
+
+  img {
+    position: relative;
+    z-index: 2;
+  }
+}
 
 
 
@@ -4522,8 +4598,6 @@
     }
   }
 
-
-
   .baner--price-s {
     .container {
       padding: 0;
@@ -4536,13 +4610,10 @@
       width: 100%;
     }
 
-   
-
     .baner__blue-word {
       font-size: 3rem;
       margin-bottom: 2rem;
     }
-
 
     .baner__picture {
       position: relative;
@@ -4552,8 +4623,6 @@
         width: 85.1rem;
         height: 72.1rem;
       }
-
-
     }
 
     .btn {
@@ -4564,9 +4633,102 @@
       display: none;
     }
   }
- }
+}
 
+/////////////////////////////////// t-styles ///////////////////////////////////////
 
+.baner {
+  &-diseases {
+    .baner {
+      &__image-wrap {
+        &::before {
+          top: 80%;
+          border-color: #d8dde4;
+        }
+      }
+      &__image {
+        &.img-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  &-patients {
+    .baner {
+      &__image-wrap {
+        width: 62.2rem;
+        &::before {
+          width: 78.4rem;
+          height: 78.4rem;
+          border-color: #d8dde4;
+          top: 70%;
+        }
+      }
+    }
+  }
+  &-patients-questions {
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 54.6rem;
+      }
+      &__image-wrap {
+        width: 31.7rem;
+        &::before {
+          width: 64.9rem;
+          height: 64.9rem;
+          border-color: #d8dde4;
+          top: 65%;
+        }
+      }
+    }
+  }
+  &-patients-cards {
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 60.6rem;
+      }
+      &__image-wrap {
+        width: 47.7rem;
+        &::before {
+          border-color: #d8dde4;
+        }
+      }
+    }
+  }
+  &-patients-stocks {
+    margin-bottom: 13rem;
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 62rem;
+      }
+      &__image-wrap {
+        width: 61.2rem;
+        &::before {
+          width: 78.4rem;
+          height: 78.4rem;
+          border-color: #d8dde4;
+          top: 70%;
+        }
+      }
+    }
+  }
+  &-patients-preparation {
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 56.3rem) 63rem;
+      }
+      &__image-wrap {
+        width: 62rem;
+        &::before {
+          width: 78.4rem;
+          height: 78.4rem;
+          border-color: #d8dde4;
+          top: 70%;
+        }
+      }
+    }
+  }
+}
 
  .baner--s-direction {
    margin-bottom: 4rem;
@@ -4578,5 +4740,150 @@
  }
 
 
+@media (max-width: 48em) {
+  .baner {
+    &-diseases {
+      .baner {
+        &__breadcrumbs {
+          margin-bottom: 13.4rem;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 3.9rem;
+        }
+        &__image-wrap {
+          &::before {
+            top: 8%;
+            width: 120vw;
+            height: 115vw;
+            transform: translate(-45%, 0);
+          }
+        }
+        &__image {
+          object-fit: cover;
+          &.img-desctop {
+            display: none;
+          }
+          &.img-mobile {
+            display: block;
+            width: 86rem;
+            height: 72rem;
+          }
+        }
+      }
+    }
+    &-patients {
+      .baner {
+        &__text-wrap {
+          margin-bottom: 15rem;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__image-wrap {
+          width: 74rem;
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -18%;
+            transform: translate(-51%, 0);
+          }
+        }
+      }
+    }
+    &-patients-questions {
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 8.6rem;
+        }
+        &__image-wrap {
+          width: 43.4rem;
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -5%;
+            transform: translate(-49%, 0);
+          }
+        }
+      }
+    }
+    &-patients-cards {
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 12.6rem;
+        }
+        &__image-wrap {
+          width: 70.6rem;
+          transform: translateX(-1rem);
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: 0%;
+          }
+        }
+      }
+    }
+    &-patients-stocks {
+      margin-bottom: 16rem;
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 15.8rem;
+        }
+        &__image-wrap {
+          width: 80.4rem;
+          transform: translateX(-6rem);
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -15%;
+          }
+        }
+      }
+    }
+    &-patients-preparation {
+      .baner {
+        &__container {
+          grid-template-columns: none;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__text-wrap {
+          margin-bottom: 17.4rem;
+        }
+        &__image-wrap {
+          width: 88.8rem;
+          transform: translateX(-12rem);
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -10%;
+            transform: translate(-47%, 0);
+          }
+        }
+      }
+    }
+  }
+}
 
-
+/////////////////////////////////// t-styles ///////////////////////////////////////
