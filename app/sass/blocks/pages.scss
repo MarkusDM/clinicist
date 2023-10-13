@@ -10,6 +10,40 @@
     display: flex;
     flex-wrap: wrap;
   }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    &-item {
+      justify-content: flex-start;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      background: $white;
+      height: 28.2rem;
+      width: 45.3rem;
+      padding: 5.5rem 5.5rem 3rem;
+      box-shadow: 0rem 2rem 6rem 0rem rgba(124, 148, 159, 0.10);
+      &-title {
+        text-align: center;
+        width: 29.4rem;
+        font-family: "MyriadPro";
+        color: #2F2F2F;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 3.8rem;
+      }
+      &-icon {
+        margin-bottom: 3rem;
+        & > img {
+          width: 3.3rem;
+          height: 3.3rem;
+          object-fit: contain;
+        }
+      }
+    }
+  }
   &__item {
     position: relative;
     justify-content: space-between;
@@ -83,7 +117,7 @@
           flex: 0 0 1rem;
           width: 1rem;
           height: 2.2rem;
-          background-image: url(../../img/ans_image/icon/white_arr.svg);
+          background-image: url(../../img/ans_image/icons/white_arr.svg);
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
