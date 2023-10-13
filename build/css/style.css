@@ -14353,6 +14353,23 @@ input[type='search']::-webkit-search-results-decoration {
     bottom: -7rem;
     -webkit-transform: translateY(0);
             transform: translateY(0); }
+  .values.about__values .values-btn-prev {
+    position: absolute;
+    left: -14rem;
+    top: unset;
+    bottom: 7rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .values.about__values .values-btn-next {
+    position: absolute;
+    top: unset;
+    right: unset;
+    left: -7rem;
+    bottom: 7rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .values.about__values .swiper-wrapper {
+    overflow: hidden; }
 
 .about {
   margin-bottom: 19.9rem; }
@@ -36476,9 +36493,11 @@ body::after {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        padding: 0 2.2rem 0 1.5rem;
+        padding: 0 1.5rem 0 2.2rem;
         height: 24.1rem;
         width: 66.5rem; }
+        .quote__inner-left-slider-wrapper {
+          width: 70.2rem; }
         .quote__inner-left-slider .image {
           width: 14.9rem;
           height: -webkit-fit-content;
@@ -36521,10 +36540,12 @@ body::after {
              object-fit: contain; }
   .quote-btn-prev {
     position: absolute;
-    top: 10.2rem; }
+    top: 10.2rem;
+    left: 0; }
   .quote-btn-next {
     position: absolute;
-    top: 10.2rem; }
+    top: 10.2rem;
+    right: 3rem; }
 
 .part-team {
   position: relative;

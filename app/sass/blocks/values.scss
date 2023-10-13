@@ -191,4 +191,26 @@
     bottom: -7rem;
     transform: translateY(0);
   }
+  &.about__values {
+    .values{
+      &-btn-prev {
+        position: absolute;
+        left: -14rem;
+        top: unset;
+        bottom: 7rem;
+        transform: translateY(0);
+      }
+      &-btn-next {
+        position: absolute;
+        top: unset;
+        right: unset;
+        left: -7rem;
+        bottom: 7rem;
+        transform: translateY(0);
+      }
+    }
+    .swiper-wrapper {
+      overflow: hidden;
+    }
+  }
 }

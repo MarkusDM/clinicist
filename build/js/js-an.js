@@ -9,7 +9,9 @@ const proceduresSwiper = new Swiper('.procedures__item-swiper', {
 })
 
 const valueslider = new Swiper('.values-swiper', {
-  direction: 'vertical',
+  //direction: 'vertical',
+  wrapperClass: '.values__wrapper',
+  slideClass: '.values__right-slide',
   navigation: {
     nextEl: '.values-btn-next',
     prevEl: '.values-btn-prev',
