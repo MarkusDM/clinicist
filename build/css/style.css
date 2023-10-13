@@ -36326,7 +36326,6 @@ body::after {
         height: 4rem;
         border: 1px solid #999999; } }
 
-<<<<<<< HEAD
 .s-direction {
   margin-bottom: 16rem; }
   .s-direction__inner {
@@ -36693,61 +36692,6 @@ body::after {
     margin-bottom: 2rem; }
   .about-the-s__content p:last-child {
     margin-bottom: 0; }
-
-.patients-stocks {
-  margin-bottom: 18rem; }
-  .patients-stocks .stocks__list {
-    display: grid;
-    grid-template-columns: repeat(3, 43.3rem);
-    gap: 5.9rem; }
-  .patients-stocks .stocks__btn {
-    margin-top: 4rem; }
-    .patients-stocks .stocks__btn::after {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
-
-@media (max-width: 48em) {
-  .patients-stocks {
-    margin-bottom: 16rem; }
-    .patients-stocks .stocks__list {
-      display: grid;
-      grid-template-columns: repeat(1, 67rem);
-      gap: 3.2rem; }
-    .patients-stocks .stocks__btn-box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    .patients-stocks .stocks__btn {
-      margin-top: 6.4rem; } }
-
-.new-clinic__title {
-  color: #2f2f2f;
-  font-family: Montserrat;
-  font-size: 5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 6.8rem; }
-
-@media (max-width: 48em) {
-  .new-clinic__text {
-    margin-bottom: 3.2rem; }
-  .new-clinic__title {
-    font-size: 5.4rem;
-    margin-bottom: 6.4rem; } }
-=======
-.s-direction__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 4rem; }
->>>>>>> 298f915d7fddf031910145585e5f239dda94cd2c
 
 .patients-stocks {
   margin-bottom: 18rem; }
@@ -37170,6 +37114,51 @@ body::after {
       font-weight: 400;
       line-height: 2.4rem;
       color: rgba(51, 51, 51, 0.5); }
+
+.patients-stocks {
+  margin-bottom: 18rem; }
+  .patients-stocks .stocks__list {
+    display: grid;
+    grid-template-columns: repeat(3, 43.3rem);
+    gap: 5.9rem; }
+  .patients-stocks .stocks__btn {
+    margin-top: 4rem; }
+    .patients-stocks .stocks__btn::after {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg); }
+
+@media (max-width: 48em) {
+  .patients-stocks {
+    margin-bottom: 16rem; }
+    .patients-stocks .stocks__list {
+      display: grid;
+      grid-template-columns: repeat(1, 67rem);
+      gap: 3.2rem; }
+    .patients-stocks .stocks__btn-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .patients-stocks .stocks__btn {
+      margin-top: 6.4rem; } }
+
+.new-clinic__title {
+  color: #2f2f2f;
+  font-family: Montserrat;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 6.8rem; }
+
+@media (max-width: 48em) {
+  .new-clinic__text {
+    margin-bottom: 3.2rem; }
+  .new-clinic__title {
+    font-size: 5.4rem;
+    margin-bottom: 6.4rem; } }
 
 #ui-datepicker-div {
   display: block !important;
