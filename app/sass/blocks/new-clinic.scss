@@ -716,6 +716,9 @@
     .new-clinic {
       &__right {
         width: 65.8%;
+        &-wr {
+          width: 100%;
+        }
         &-subtitle {
           margin-bottom: 1rem;
         }
@@ -740,13 +743,20 @@
           left: 22rem;
           bottom: -15rem;
         }
+        &-wr {
+          width: 100%;
+        }
         &-phone,
         &-whatsapp,
         &-online {
-          padding-left: 6rem;
+          //padding-left: 6rem;
+          & > a.call-block__list-text {
+            column-gap: 3rem;
+            -webkit-column-gap: 3rem;
+          }
         }
         &-whatsapp {
-          margin-bottom: 4.2rem;
+          //margin-bottom: 4.2rem;
         }
         &-phone {
           font-family: 'Montserrat';
@@ -760,6 +770,22 @@
           }
           &::before {
             content: none;
+          }
+          &-call {
+            padding: 0;
+            margin-bottom: 0;
+            & > a::before {
+              content: '';
+              width: 3rem;
+              height: 3rem;
+              background-image: url(../../img/ans_image/icons/call-phone.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            &::before {
+              content: none;
+            }
           }
         }
         &-text {

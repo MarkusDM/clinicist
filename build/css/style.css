@@ -12496,6 +12496,8 @@ input[type='search']::-webkit-search-results-decoration {
     margin-bottom: 14.8rem; }
     .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right {
       width: 65.8%; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-wr {
+        width: 100%; }
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-subtitle {
         margin-bottom: 1rem; }
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-text {
@@ -12514,10 +12516,12 @@ input[type='search']::-webkit-search-results-decoration {
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left::before {
         left: 22rem;
         bottom: -15rem; }
-      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-whatsapp, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-online {
-        padding-left: 6rem; }
-      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-whatsapp {
-        margin-bottom: 4.2rem; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr {
+        width: 100%; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone > a.call-block__list-text, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-whatsapp > a.call-block__list-text, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-online > a.call-block__list-text {
+        -moz-column-gap: 3rem;
+             column-gap: 3rem;
+        -webkit-column-gap: 3rem; }
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone {
         font-family: 'Montserrat';
         font-weight: 700;
@@ -12529,6 +12533,19 @@ input[type='search']::-webkit-search-results-decoration {
           height: 3rem; }
         .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone::before {
           content: none; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone-call {
+          padding: 0;
+          margin-bottom: 0; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone-call > a::before {
+            content: '';
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../../img/ans_image/icons/call-phone.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone-call::before {
+            content: none; }
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-text {
         margin-bottom: 5.5rem; }
         .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-text::before {
