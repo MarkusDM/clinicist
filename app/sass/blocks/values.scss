@@ -177,6 +177,7 @@
     }
   }
   &-btn-prev {
+    position: absolute;
     left: unset;
     top: unset;
     right: 7rem;
@@ -184,6 +185,7 @@
     transform: translateY(0);
   }
   &-btn-next {
+    position: absolute;
     top: unset;
     right: 0rem;
     bottom: -7rem;
