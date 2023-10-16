@@ -68,14 +68,14 @@
       &-slider {
         position: relative;
         display: flex;
-        align-items: flex-end;
-        gap: 1.5rem;
-        justify-content: space-between;
-        padding: 0 1.5rem 0 2.2rem;
-        height: 24.1rem;
+        //justify-content: space-between;
         width: 66.5rem;
-        &-wrapper {
-          width: 70.2rem;
+        &-wrap{
+          height: 24.1rem;
+          align-items: flex-end;
+          .swiper-slide-active {
+            width: 17.3rem;
+          }
         }
         .image {
           width: 14.9rem;
@@ -84,15 +84,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-          }
-          &-active {
-            width: 17.3rem;
-            height: fit-content;
-            & > img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
           }
         }
       }
@@ -118,12 +109,14 @@
   }
   &-btn-prev {
     position: absolute;
-    top: 10.2rem;
+    top: unset;
+    bottom: 7rem;
     left: 0;
   }
   &-btn-next {
     position: absolute;
-    top: 10.2rem;
-    right: 3rem;
+    top: unset;
+    bottom: 7rem;
+    right: 2rem;
   }
 }

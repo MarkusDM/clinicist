@@ -606,7 +606,7 @@
     }
   }
   &-o_klinike {
-    margin-bottom: 23.6rem;
+    margin-bottom: 18rem;
     height: auto;
     .baner {
       &__inner {
@@ -4885,6 +4885,117 @@
       }
     }
   }
+}
+
+@media (max-width: 48em) {
+  .baner {
+    &-o_klinike {
+      margin-bottom: 20rem;
+      .breadcrumbs{
+        margin-bottom: 7rem;
+        &__link {
+        color: rgba(51, 51, 51, 0.5);
+      }
+      .baner {
+        &__inner::after {
+          content: none;
+        }
+        &__content {
+          &-text {
+            font-size: 2.2rem;
+            &::after {
+              background-color: transparent;
+              left: 1rem;
+              top: 0rem;
+              width: 2.4rem;
+              height: 2.2rem;
+              background-image: url(../img/ans-image/icons/kavichki.svg);
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+          &-txt {
+            position: relative;
+            font-family: 'MyriadPro';
+            font-weight: 600;
+            font-size: 3rem;
+            line-height: 150%;
+            color: $blue;
+            padding-left: 5.3rem;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 0.2rem;
+              width: 3.3rem;
+              background-color: $blue;
+            }
+          }
+        }
+        &__picture {
+          width: 42.6rem;
+          height: 100%;
+          margin-top: 6.5rem;
+          & img {
+            object-fit: contain;
+          }
+          &::after {
+            content: none;
+          }
+        }
+        &__inserts {
+          position: absolute;
+          right: 1rem;
+          top: unset;
+          bottom: 3rem;
+          transform: translateY(-50%);
+        }
+        &__insert {
+          padding: 3rem;
+          box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
+          background-color: $white;
+          width: 46rem;
+          min-height: 19.2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &:not(:last-child) {
+            margin-bottom: 3rem;
+          }
+          &-number {
+            padding-top: 1rem;
+            font-family: 'MyriadPro';
+            font-weight: 600;
+            font-size: 4.8rem;
+            line-height: 121%;
+          }
+          &-text {
+            font-family: 'MyriadPro';
+            font-size: 1.8rem;
+            line-height: 133%;
+            color: rgba(51, 51, 51, 0.5);
+          }
+          &-subtitle {
+            font-family: 'MyriadPro';
+            font-size: 1.6rem;
+            line-height: 119%;
+            color: $blue;
+            margin-top: -2rem;
+          }
+          &-name {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 130%;
+          }
+        }
+      }
+    }
+  }
+}
 }
 
 /////////////////////////////////// t-styles ///////////////////////////////////////
