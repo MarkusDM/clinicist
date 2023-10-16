@@ -204,7 +204,7 @@
 
 @media (max-width: 48em) {
    .licenzia {
-      margin-bottom: 36rem;
+      margin-bottom: 20rem;
       &__subtitle {
          margin-bottom: 3.7rem;
       }
@@ -269,6 +269,86 @@
             & span {
                font-size: 3.1rem;
             }
+         }
+      }
+   }
+   .about-licenzia {
+      .licenzia {
+         &__title {
+            margin-bottom: 8rem;
+         }
+         &__info {
+            padding-top: 0;
+            &::after {
+               content: none;
+            }
+         }
+         &__slider {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding-top: 0;
+            margin: 0;
+            overflow: visible;
+         }
+         &-swiper {
+            box-sizing: content-box;
+            position: relative;
+            width: 100%;
+            height: 94.9rem;
+            padding: 0 0 13rem;
+            overflow: hidden;
+         }
+         &__item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 31.4rem !important;
+            height: 43.2rem;
+            background: #EEF3F7;
+            box-shadow: 0rem 1rem 3rem 0rem rgba(30, 135, 250, 0.07);
+            &-img {
+               width: 26.6rem;
+               height: 38.4rem;
+            }
+            &-btn {
+               position: absolute;
+               right: 0;
+               bottom: -1.3rem;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 10.2rem;
+               height: 10.2rem;
+               background: $blue;
+               border-radius: 1.3rem;
+               box-shadow: 0rem 2rem 3rem 0rem rgba(64, 185, 244, 0.10);
+               & img {
+                  width: 4.8rem;
+                  height: 4.8rem;
+               }
+            }
+         }
+         &-btn-prev,
+         &-btn-next {
+            position: absolute;
+            top: unset;
+            bottom: 0;
+         }
+         &-btn-prev {
+            left: unset;
+         }
+         &-btn-next {
+            right: 0;
+            left: unset;
+         }
+         &-pagination {
+            left: 0;
+            transform: translateX(0%);
+            right: unset;
+            top: unset;
+            bottom: 2.8rem;
          }
       }
    }

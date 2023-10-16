@@ -9,6 +9,15 @@ storyItems.forEach( e => {
   })
 })
 
+function updatePaginationType() {
+  let newPaginationType = window.innerWidth < 768 ? 'bullets' : 'fraction';
+
+  mySwiper.pagination.destroy();
+  mySwiper.pagination.init();
+  mySwiper.pagination.render();
+  mySwiper.pagination.update({ type: newPaginationType });
+}
+
 const proceduresSwiper = new Swiper('.procedures__item-swiper', {
   navigation: {
     nextEl: '.procedures__item-btn-next',
@@ -55,6 +64,17 @@ const quoteSlider = new Swiper('.licenzia-swiper', {
   slidesPerView: 4,
   spaceBetween: rem(2.1),
   speed: 1000,
+  breakpoints: {
+    375: {
+      spaceBetween: rem(4.2),
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      // grid: {
+      //   fill: "row",
+      //   rows: 2,
+      // },
+    },
+  }
 })
 
 const aboutSlider = new Swiper('.about-swiper', {
@@ -74,3 +94,9 @@ const aboutSlider = new Swiper('.about-swiper', {
   spaceBetween: rem(1),
   speed: 1000,
 })
+
+window.addEventListener('resize', function () {
+  updatePaginationType();
+});
+
+updatePaginationTypeForSlider();
