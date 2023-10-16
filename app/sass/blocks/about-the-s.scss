@@ -55,15 +55,17 @@
     &__item.active {
         border-radius: 0px 1rem 1rem 0px;
         background: #EEF3F7;
-        border-bottom: 0.1rem solid none;
+        border-bottom: none;
         transition:  0.3s ease;
+        color:#36B4F1;
+        font-weight: 600;
     }
 
-    &__block {
+    &__content {
         display: none;
     }
 
-    &__block.active {
+    &__content.active {
         display: block;
     }
 
@@ -90,6 +92,39 @@
 
         p:last-child {
             margin-bottom: 0;
+        }
+
+        ul {
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul:last-child {
+            margin-bottom: 0;
+        }
+
+        li {
+            color: rgba(51, 51, 51, 0.50);
+            margin-bottom: 2rem;
+            font-family: 'Myriad Pro',sans-serif;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: block;
+            position: relative;
+            padding-left: 3.6rem;
+            &::before {
+                position: absolute;
+                content:'';
+                left: 0;
+                width: 2rem;
+                height: 1.7rem;
+                background-image: url(../img/d-image/icon/galkagrey.svg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
         }
     }
 }
