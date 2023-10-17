@@ -89,15 +89,17 @@
          right: unset;
          left: 5rem;
          top: 0rem;
-         .total {
-            font-weight: 400;
-            font-size: 2rem;
-            color: rgba(51, 51, 51, 0.5);
-         }
-         .current {
-            font-weight: 700;
-            font-size: 3rem;
-            color: $blue;
+         .swiper-pagination {
+            &-total {
+               font-weight: 400;
+               font-size: 2rem;
+               color: rgba(51, 51, 51, 0.5);
+            }
+            &-current {
+               font-weight: 700;
+               font-size: 3rem;
+               color: $blue;
+            }
          }
       }
       &-slide {

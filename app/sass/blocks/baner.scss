@@ -4964,24 +4964,25 @@
         margin-bottom: 7rem;
         &__link {
         color: rgba(51, 51, 51, 0.5);
+        }
       }
       .baner {
-        &__inner::after {
-          content: none;
+        &__inner{
+          padding: 0;
+          &::after {
+            content: none;
+          }
         }
         &__content {
+          padding-top: 3rem;
           &-text {
-            font-size: 2.2rem;
+            padding-left: 5.6rem;
             &::after {
-              background-color: transparent;
-              left: 1rem;
+              content: '';
+              left: 0rem;
               top: 0rem;
-              width: 2.4rem;
-              height: 2.2rem;
-              background-image: url(../img/ans-image/icons/kavichki.svg);
-              background-position: center;
-              background-size: contain;
-              background-repeat: no-repeat;
+              width: 3.4rem;
+              height: 3.2rem;
             }
           }
           &-txt {
@@ -5005,9 +5006,10 @@
           }
         }
         &__picture {
-          width: 42.6rem;
+          width: 47.4rem;
           height: 100%;
-          margin-top: 6.5rem;
+          left: 4rem;
+          margin-top: 5rem;
           & img {
             object-fit: contain;
           }
@@ -5017,48 +5019,45 @@
         }
         &__inserts {
           position: absolute;
+          z-index: 5;
           right: 1rem;
           top: unset;
-          bottom: 3rem;
-          transform: translateY(-50%);
+          bottom: 6rem;
+          transform: translateY(0);
         }
         &__insert {
           padding: 3rem;
           box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
           background-color: $white;
-          width: 46rem;
-          min-height: 19.2rem;
+          width: 31.4rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           &:not(:last-child) {
-            margin-bottom: 3rem;
+            margin-bottom: 6rem;
           }
           &-number {
-            padding-top: 1rem;
+            padding-top: 0;
             font-family: 'MyriadPro';
             font-weight: 600;
-            font-size: 4.8rem;
-            line-height: 121%;
+            font-size: 6rem;
+            line-height: normal;
           }
           &-text {
             font-family: 'MyriadPro';
-            font-size: 1.8rem;
-            line-height: 133%;
+            font-size: 2.4rem;
+            line-height: normal;
             color: rgba(51, 51, 51, 0.5);
           }
           &-subtitle {
-            font-family: 'MyriadPro';
-            font-size: 1.6rem;
-            line-height: 119%;
-            color: $blue;
-            margin-top: -2rem;
+            display: none;
           }
           &-name {
             font-family: 'Montserrat';
             font-weight: 500;
-            font-size: 2rem;
-            line-height: 130%;
+            font-size: 3.8rem;
+            padding-bottom: 0.8rem;
+            line-height: normal;
           }
         }
       }

@@ -9,24 +9,15 @@ storyItems.forEach( e => {
   })
 })
 
-function updatePaginationType() {
-  let newPaginationType = window.innerWidth < 768 ? 'bullets' : 'fraction';
-
-  mySwiper.pagination.destroy();
-  mySwiper.pagination.init();
-  mySwiper.pagination.render();
-  mySwiper.pagination.update({ type: newPaginationType });
-}
-
-const proceduresSwiper = new Swiper('.procedures__item-swiper', {
-  navigation: {
-    nextEl: '.procedures__item-btn-next',
-    prevEl: '.procedures__item-btn-prev',
-  },
-  slidesPerView: 1,
-  spaceBetween: rem(3),
-  speed: 1000,
-})
+// const proceduresSwiper = new Swiper('.procedures__item-swiper', {
+//   navigation: {
+//     nextEl: '.procedures__item-btn-next',
+//     prevEl: '.procedures__item-btn-prev',
+//   },
+//   slidesPerView: 1,
+//   spaceBetween: rem(3),
+//   speed: 1000,
+// })
 
 const valueThumbs = new Swiper('.thumbs-swiper', {
   slideToClickedSlide: true,
@@ -35,25 +26,31 @@ const valueThumbs = new Swiper('.thumbs-swiper', {
 })
 
 const valueslider = new Swiper('.values-swiper', {
-
   slidesPerView: 1,
   spaceBetween: rem(1),
   effect: 'fade',
   fadeEffect: {
     crossFade: true
   },
-  // thumbs: {
-  //   swiper: valueThumbs
-  // },
   speed: 1000,
 })
 
 valueslider.controller.control = valueThumbs;
 valueThumbs.controller.control = valueslider;
 
+const licBtn = document.querySelectorAll('.licenzia__item-btn');
+const closeBtn = document.querySelector('.modal-licenzia__slider-close');
+const licSlides = document.querySelectorAll('.licenzia__item');
+let slider = document.querySelector('.modal-licenzia__slider')
+let index;
+closeBtn.addEventListener('click', () => {
+  slider.classList.remove('active');
+})
 
 const quoteSlider = new Swiper('.licenzia-swiper', {
   //loop: true,
+  slidesPerView: 4,
+
   navigation: {
     nextEl: '.licenzia-btn-next',
     prevEl: '.licenzia-btn-prev',
@@ -62,21 +59,48 @@ const quoteSlider = new Swiper('.licenzia-swiper', {
     el: '.swiper-pagination',
     type: 'bullets',
   },
-  slidesPerView: 4,
   spaceBetween: rem(2.1),
   speed: 1000,
   breakpoints: {
-    375: {
+    768: {
+      spaceBetween: rem(2.1),
+      slidesPerView: 4,
+      slidesPerColumn: 1,
+    },
+    120: {
       spaceBetween: rem(4.2),
       slidesPerView: 2,
       slidesPerColumn: 2,
-      // grid: {
-      //   fill: "row",
-      //   rows: 2,
-      // },
     },
-  }
+  },
+  on: {
+    click: function (e) {
+      console.log(e)
+      if(e.clickedSlide !== undefined) {
+        slider.classList.add('active');
+        index = e.clickedIndex;
+        llSlider.update();
+      }
+    }
+  },
 })
+
+const llSlider = new Swiper('.modal-licenzia__swiper', {
+  //loop: true,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  initialSlide: index,
+
+  navigation: {
+    nextEl: '.modal-licenzia-btn-next',
+    prevEl: '.modal-licenzia-btn-prev',
+  },
+  spaceBetween: rem(52),
+  speed: 1000,
+})
+
+quoteSlider.controller.control = llSlider;
+
 
 const aboutSlider = new Swiper('.about-swiper', {
   navigation: {
@@ -88,16 +112,24 @@ const aboutSlider = new Swiper('.about-swiper', {
     crossFade: true
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.about-swiper-pagination',
     type: 'fraction',
   },
   slidesPerView: 1,
   spaceBetween: rem(1),
   speed: 1000,
+  breakpoints: {
+    768: {
+      pagination: {
+        el: '.about-swiper-pagination',
+        type: 'fraction',
+      },
+    },
+    375: {
+      pagination: {
+        el: '.about-swiper-pagination',
+        type: 'bullets',
+      }
+    }
+  }
 })
-
-window.addEventListener('resize', function () {
-  updatePaginationType();
-});
-
-updatePaginationTypeForSlider();

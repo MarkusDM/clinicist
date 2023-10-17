@@ -6815,104 +6815,6 @@ input[type='search']::-webkit-search-results-decoration {
       -webkit-transform: translate(-47%, 0);
               transform: translate(-47%, 0); } }
 
-<<<<<<< HEAD
-@media (max-width: 48em) {
-  .baner-o_klinike {
-    margin-bottom: 20rem; }
-    .baner-o_klinike .breadcrumbs {
-      margin-bottom: 7rem; }
-      .baner-o_klinike .breadcrumbs__link {
-        color: rgba(51, 51, 51, 0.5); }
-      .baner-o_klinike .breadcrumbs .baner__inner::after {
-        content: none; }
-      .baner-o_klinike .breadcrumbs .baner__content-text {
-        font-size: 2.2rem; }
-        .baner-o_klinike .breadcrumbs .baner__content-text::after {
-          background-color: transparent;
-          left: 1rem;
-          top: 0rem;
-          width: 2.4rem;
-          height: 2.2rem;
-          background-image: url(../img/ans-image/icons/kavichki.svg);
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat; }
-      .baner-o_klinike .breadcrumbs .baner__content-txt {
-        position: relative;
-        font-family: 'MyriadPro';
-        font-weight: 600;
-        font-size: 3rem;
-        line-height: 150%;
-        color: #36b4f1;
-        padding-left: 5.3rem; }
-        .baner-o_klinike .breadcrumbs .baner__content-txt::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-                  transform: translateY(-50%);
-          height: 0.2rem;
-          width: 3.3rem;
-          background-color: #36b4f1; }
-      .baner-o_klinike .breadcrumbs .baner__picture {
-        width: 42.6rem;
-        height: 100%;
-        margin-top: 6.5rem; }
-        .baner-o_klinike .breadcrumbs .baner__picture img {
-          -o-object-fit: contain;
-             object-fit: contain; }
-        .baner-o_klinike .breadcrumbs .baner__picture::after {
-          content: none; }
-      .baner-o_klinike .breadcrumbs .baner__inserts {
-        position: absolute;
-        right: 1rem;
-        top: unset;
-        bottom: 3rem;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%); }
-      .baner-o_klinike .breadcrumbs .baner__insert {
-        padding: 3rem;
-        -webkit-box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
-                box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
-        background-color: #ffffff;
-        width: 46rem;
-        min-height: 19.2rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .baner-o_klinike .breadcrumbs .baner__insert:not(:last-child) {
-          margin-bottom: 3rem; }
-        .baner-o_klinike .breadcrumbs .baner__insert-number {
-          padding-top: 1rem;
-          font-family: 'MyriadPro';
-          font-weight: 600;
-          font-size: 4.8rem;
-          line-height: 121%; }
-        .baner-o_klinike .breadcrumbs .baner__insert-text {
-          font-family: 'MyriadPro';
-          font-size: 1.8rem;
-          line-height: 133%;
-          color: rgba(51, 51, 51, 0.5); }
-        .baner-o_klinike .breadcrumbs .baner__insert-subtitle {
-          font-family: 'MyriadPro';
-          font-size: 1.6rem;
-          line-height: 119%;
-          color: #36b4f1;
-          margin-top: -2rem; }
-        .baner-o_klinike .breadcrumbs .baner__insert-name {
-          font-family: 'Montserrat';
-          font-weight: 500;
-          font-size: 2rem;
-          line-height: 130%; } }
-=======
 .baner--s-parent {
   height: 48.7rem;
   margin-bottom: 4rem; }
@@ -6962,7 +6864,101 @@ input[type='search']::-webkit-search-results-decoration {
     width: 55.7rem;
     height: 55.7rem;
     border: 1px solid #d8dde4; }
->>>>>>> upstream/main
+
+@media (max-width: 48em) {
+  .baner-o_klinike {
+    margin-bottom: 20rem; }
+    .baner-o_klinike .breadcrumbs {
+      margin-bottom: 7rem; }
+      .baner-o_klinike .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+    .baner-o_klinike .baner__inner {
+      padding: 0; }
+      .baner-o_klinike .baner__inner::after {
+        content: none; }
+    .baner-o_klinike .baner__content {
+      padding-top: 3rem; }
+      .baner-o_klinike .baner__content-text {
+        padding-left: 5.6rem; }
+        .baner-o_klinike .baner__content-text::after {
+          content: '';
+          left: 0rem;
+          top: 0rem;
+          width: 3.4rem;
+          height: 3.2rem; }
+      .baner-o_klinike .baner__content-txt {
+        position: relative;
+        font-family: 'MyriadPro';
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 150%;
+        color: #36b4f1;
+        padding-left: 5.3rem; }
+        .baner-o_klinike .baner__content-txt::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          height: 0.2rem;
+          width: 3.3rem;
+          background-color: #36b4f1; }
+    .baner-o_klinike .baner__picture {
+      width: 47.4rem;
+      height: 100%;
+      left: 4rem;
+      margin-top: 5rem; }
+      .baner-o_klinike .baner__picture img {
+        -o-object-fit: contain;
+           object-fit: contain; }
+      .baner-o_klinike .baner__picture::after {
+        content: none; }
+    .baner-o_klinike .baner__inserts {
+      position: absolute;
+      z-index: 5;
+      right: 1rem;
+      top: unset;
+      bottom: 6rem;
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }
+    .baner-o_klinike .baner__insert {
+      padding: 3rem;
+      -webkit-box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
+              box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
+      background-color: #ffffff;
+      width: 31.4rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .baner-o_klinike .baner__insert:not(:last-child) {
+        margin-bottom: 6rem; }
+      .baner-o_klinike .baner__insert-number {
+        padding-top: 0;
+        font-family: 'MyriadPro';
+        font-weight: 600;
+        font-size: 6rem;
+        line-height: normal; }
+      .baner-o_klinike .baner__insert-text {
+        font-family: 'MyriadPro';
+        font-size: 2.4rem;
+        line-height: normal;
+        color: rgba(51, 51, 51, 0.5); }
+      .baner-o_klinike .baner__insert-subtitle {
+        display: none; }
+      .baner-o_klinike .baner__insert-name {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 3.8rem;
+        padding-bottom: 0.8rem;
+        line-height: normal; } }
 
 .solution {
   margin-top: 20rem;
@@ -9597,7 +9593,38 @@ input[type='search']::-webkit-search-results-decoration {
         min-height: 10rem; }
       .centers-info.active {
         width: 100%;
-        padding: 0; } }
+        padding: 0; }
+    .centers.centers-about {
+      margin-bottom: 20rem; }
+      .centers.centers-about .centers-info {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        width: 100%;
+        padding: 8rem 0rem; }
+        .centers.centers-about .centers-info .black::after {
+          background-color: #2f2f2f; }
+      .centers.centers-about .centers__map {
+        position: relative;
+        right: 0;
+        width: 100vw;
+        height: 80.4rem; }
+        .centers.centers-about .centers__map #contloc {
+          width: 100%;
+          height: 100%; }
+          .centers.centers-about .centers__map #contloc .ymaps-2-1-79-map {
+            height: 100% !important; } }
 
 .progress {
   margin-bottom: 18rem; }
@@ -14220,6 +14247,85 @@ input[type='search']::-webkit-search-results-decoration {
   top: unset;
   bottom: 2.8rem; }
 
+.about-licenzia .modal-licenzia__swiper {
+  overflow: hidden; }
+
+.about-licenzia .modal-licenzia__wrapper {
+  position: relative;
+  padding: 9.1rem 0 11.8rem; }
+
+.about-licenzia .modal-licenzia__slider {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+  .about-licenzia .modal-licenzia__slider::after {
+    content: '';
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(27, 66, 85, 0.2); }
+  .about-licenzia .modal-licenzia__slider-close {
+    position: absolute;
+    z-index: 155;
+    right: 0;
+    top: 0; }
+  .about-licenzia .modal-licenzia__slider .swiper-slide-active {
+    position: relative;
+    z-index: 55;
+    top: 50%;
+    left: 50%;
+    width: 45.3rem;
+    height: auto; }
+  .about-licenzia .modal-licenzia__slider .modal-licenzia__item {
+    position: relative;
+    z-index: 55;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 45.3rem !important;
+    height: 67.7rem; }
+    .about-licenzia .modal-licenzia__slider .modal-licenzia__item-img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .about-licenzia .modal-licenzia__slider.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.about-licenzia .modal-licenzia__wr {
+  z-index: 105; }
+
+.about-licenzia .modal-licenzia-btn-prev, .about-licenzia .modal-licenzia-btn-next {
+  position: absolute;
+  z-index: 155;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
+
+.about-licenzia .modal-licenzia-btn-prev {
+  left: 0; }
+
+.about-licenzia .modal-licenzia-btn-next {
+  left: unset;
+  right: 0; }
+
 @media (max-width: 48em) {
   .licenzia {
     margin-bottom: 20rem; }
@@ -14329,7 +14435,8 @@ input[type='search']::-webkit-search-results-decoration {
       background: #36b4f1;
       border-radius: 1.3rem;
       -webkit-box-shadow: 0rem 2rem 3rem 0rem rgba(64, 185, 244, 0.1);
-              box-shadow: 0rem 2rem 3rem 0rem rgba(64, 185, 244, 0.1); }
+              box-shadow: 0rem 2rem 3rem 0rem rgba(64, 185, 244, 0.1);
+      cursor: pointer; }
       .about-licenzia .licenzia__item-btn img {
         width: 4.8rem;
         height: 4.8rem; }
@@ -14348,7 +14455,74 @@ input[type='search']::-webkit-search-results-decoration {
             transform: translateX(0%);
     right: unset;
     top: unset;
-    bottom: 2.8rem; } }
+    bottom: 2.8rem; }
+  .about-licenzia .modal-licenzia__swiper {
+    overflow: hidden; }
+  .about-licenzia .modal-licenzia__wrapper {
+    position: relative;
+    padding: 0 4rem; }
+  .about-licenzia .modal-licenzia__slider {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+    .about-licenzia .modal-licenzia__slider::after {
+      content: '';
+      position: absolute;
+      z-index: 15;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(27, 66, 85, 0.2); }
+    .about-licenzia .modal-licenzia__slider-close {
+      display: none; }
+    .about-licenzia .modal-licenzia__slider .swiper-slide-active {
+      position: relative;
+      z-index: 55;
+      top: 50%;
+      left: 50%;
+      width: 38.2rem;
+      height: auto; }
+    .about-licenzia .modal-licenzia__slider .modal-licenzia__item {
+      position: relative;
+      z-index: 55;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+      width: 38.2rem !important;
+      height: 57rem; }
+      .about-licenzia .modal-licenzia__slider .modal-licenzia__item-img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+           object-fit: contain; }
+    .about-licenzia .modal-licenzia__slider.active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .about-licenzia .modal-licenzia-btn-prev, .about-licenzia .modal-licenzia-btn-next {
+    position: absolute;
+    z-index: 155;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%); }
+  .about-licenzia .modal-licenzia-btn-prev {
+    left: 4rem; }
+  .about-licenzia .modal-licenzia-btn-next {
+    left: unset;
+    right: 4rem; } }
 
 .podgotovka {
   margin-bottom: 9.7rem; }
@@ -14995,11 +15169,11 @@ input[type='search']::-webkit-search-results-decoration {
     right: unset;
     left: 5rem;
     top: 0rem; }
-    .about-swiper-pagination .total {
+    .about-swiper-pagination .swiper-pagination-total {
       font-weight: 400;
       font-size: 2rem;
       color: rgba(51, 51, 51, 0.5); }
-    .about-swiper-pagination .current {
+    .about-swiper-pagination .swiper-pagination-current {
       font-weight: 700;
       font-size: 3rem;
       color: #36b4f1; }
@@ -37739,8 +37913,8 @@ body::after {
         position: relative;
         top: 0;
         left: 0;
-        height: 35rem; }
-        .pages__item-big-img > img {
+        height: 100%; }
+        .pages__item-big-img picture > img {
           width: 100%;
           height: 100%;
           -o-object-fit: cover;
@@ -37817,7 +37991,6 @@ body::after {
       line-height: 2.4rem;
       color: rgba(51, 51, 51, 0.5); }
 
-<<<<<<< HEAD
 @media (max-width: 48em) {
   .pages {
     margin-bottom: 20rem; }
@@ -37852,9 +38025,9 @@ body::after {
         padding: 6rem; }
         .pages__content-item-title {
           width: 61.6rem;
-          font-size: 4rem;
+          font-size: 4.4rem;
           font-weight: 400;
-          line-height: 3.8rem; }
+          line-height: 157%; }
         .pages__content-item-icon {
           margin-bottom: 4rem;
           width: 13.2rem;
@@ -37872,13 +38045,15 @@ body::after {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
       background: #ffffff;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content; }
+      height: 100.6rem; }
       .pages__item-big {
         width: 100%;
-        height: 35rem; }
+        height: 100%; }
         .pages__item-big-content {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -37890,23 +38065,27 @@ body::after {
           -webkit-box-direction: normal;
               -ms-flex-direction: column;
                   flex-direction: column;
-          width: 49.3rem;
-          margin: 6rem 18.7rem 6rem 0; }
+          width: 57rem;
+          margin: 6rem 5rem -2rem 5rem; }
         .pages__item-big-img {
           position: relative;
           top: 0;
           left: 0;
-          height: 35rem; }
+          height: 61.2rem;
+          overflow: hidden; }
           .pages__item-big-img > img {
             width: 100%;
             height: 100%;
             -o-object-fit: cover;
                object-fit: cover; }
       .pages__item-small {
-        width: 50%;
-        height: 35.3rem; }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%; }
         .pages__item-small-content {
-          width: 43rem;
+          width: 56rem;
           position: relative;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -37919,25 +38098,29 @@ body::after {
               -ms-flex-pack: justify;
                   justify-content: space-between;
           z-index: 2;
-          margin: 4rem; }
+          margin: 4rem 4rem 0; }
         .pages__item-small-text {
-          width: 33.6rem;
+          width: 100%;
           font-family: "Montserrat";
-          line-height: 2.6rem;
-          font-size: 1.8rem;
+          line-height: 133%;
+          font-size: 3rem;
           font-weight: 400;
-          color: rgba(51, 51, 51, 0.5); }
+          color: rgba(51, 51, 51, 0.5);
+          margin-bottom: 5rem; }
         .pages__item-small-img {
-          position: absolute;
+          position: relative;
           z-index: 0;
           bottom: 0;
           right: 0;
-          height: 35.3rem; }
+          height: 60rem; }
+          .pages__item-small-img.licenz {
+            right: -2.2rem;
+            height: 58rem; }
           .pages__item-small-img > img {
             width: 100%;
             height: 100%;
-            -o-object-fit: cover;
-               object-fit: cover; }
+            -o-object-fit: contain;
+               object-fit: contain; }
       .pages__item:nth-child(4n+1) {
         background: #EEF3F7; }
       .pages__item:nth-child(4n+2) {
@@ -37962,18 +38145,19 @@ body::after {
           color: #fff; }
       .pages__item-title {
         font-family: "Montserrat";
-        font-size: 3.5rem;
+        font-size: 4.4rem;
         font-weight: 400;
-        line-height: normal;
+        line-height: 157%;
         color: #2F2F2F;
-        margin-bottom: 3rem; }
+        margin-bottom: 4.1rem; }
       .pages__item-text {
         font-family: "MyriadPro";
-        font-size: 1.8rem;
+        font-size: 3rem;
         font-weight: 400;
-        line-height: 2.4rem;
+        line-height: 133%;
+        margin-bottom: 5rem;
         color: rgba(51, 51, 51, 0.5); } }
-=======
+
 .patients-stocks {
   margin-bottom: 18rem; }
   .patients-stocks .stocks__list {
@@ -38288,7 +38472,6 @@ body::after {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
->>>>>>> upstream/main
 
 #ui-datepicker-div {
   display: block !important;

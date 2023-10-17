@@ -258,8 +258,56 @@
               </div>
             </div>
             <button class="licenzia-btn-prev btn-prev swiper-button-prev swiper-button-disabled" type="button"></button>
-              <button class="licenzia-btn-next btn-next swiper-button-next" type="button"></button>
-              <div class="licenzia-pagination swiper-pagination pagination"></div>
+            <button class="licenzia-btn-next btn-next swiper-button-next" type="button"></button>
+            <div class="licenzia-pagination swiper-pagination pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-licenzia__slider">
+        <div class="modal-licenzia__wrapper container">
+          <div class="modal-licenzia__slider-close">
+            <img src="./img/ans_image/icons/close.svg" alt="">
+          </div>
+          <div class="modal-licenzia__swiper swiper">
+            <div class="modal-licenzia__wr swiper-wrapper">
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+              <div class="modal-licenzia__item swiper-slide">
+                <div class="modal-licenzia__item-img">
+                  <img src="./img/ans_image/srtificate.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <button class="modal-licenzia-btn-prev btn-prev swiper-button-prev swiper-button-disabled" type="button"></button>
+            <button class="modal-licenzia-btn-next btn-next swiper-button-next" type="button"></button>
           </div>
         </div>
       </div>
@@ -510,9 +558,7 @@
       <div class="text-image__container container">
         <div class="text-image__text-wrap">
           <span class="text-image__subtitle subtitle">Актуальные цены</span>
-          <span class="text-image__title title"
-            >Станьте частью нашей команды</span
-          >
+          <span class="text-image__title title">Станьте частью нашей команды</span>
           <p class="text-image__text txt">
             Про цены. Как и многие другие направления медицины, хирургия
             делится на широкий спектр различных отраслей, каждая из которых по
@@ -569,7 +615,11 @@
         <div class="pages__items">
           <div class="pages__item pages__item-big">
             <div class="pages__item-big-img">
-              <img src="./img/ans_image/pages_history.webp" alt="">
+              <picture>
+                <source media="(max-width: 769px)" srcset="./img/ans_image/pages-history-mob.webp" />
+                <source media="(min-width: 768px)" srcset="./img/ans_image/pages_history.webp" />
+                <img src="./img/ans_image/pages_history.webp" alt="" />
+              </picture>
             </div>
             <div class="pages__item-big-content">
               <div>
@@ -587,7 +637,7 @@
               </div>
               <a href="#" class="pages__item-link link">Перейти в раздел</a>
             </div>
-            <div class="pages__item-small-img">
+            <div class="pages__item-small-img licenz">
               <img src="./img/ans_image/pages_license.webp" alt="">
             </div>
           </div>
@@ -629,7 +679,11 @@
           </div>
           <div class="pages__item pages__item-big">
             <div class="pages__item-big-img">
-              <img src="./img/ans_image/pages_news.webp" alt="">
+              <picture>
+                <source media="(max-width: 769px)" srcset="./img/ans_image/pages-news-mob.webp" />
+                <source media="(min-width: 768px)" srcset="./img/ans_image/pages_news.webp" />
+                <img src="./img/ans_image/pages_news.webp" alt="" />
+              </picture>
             </div>
             <div class="pages__item-big-content">
               <div>
@@ -645,15 +699,6 @@
   </main>
   @@include('./template/footer.html')
   <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/choices.min.js"></script>
-  <script src="./js/jquery-3.7.0.min.js"></script>
-  <script src="./js/jquery-ui_(1.13.2).min.js"></script>
-  <script src="./js/jquery.maskedinput.js"></script>
-  <script src="./js/inputmask.js"></script>
-  <script src="./js/main.js"></script>
   <script src="./js/js-an.js"></script>
-  <script src="./js/main-a.js"></script>
 </body>
 </html>
