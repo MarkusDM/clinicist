@@ -411,6 +411,22 @@
       border-radius: 50%;
     }
   }
+ &-news {
+  margin-bottom: 12rem;
+  .baner {
+    &__content-title {
+      margin-top: 12.7rem;
+    }
+    &__content-text {
+      font-family: Myriad Pro, sans-serif;
+      line-height: 130%;
+    }
+    &__picture {
+      margin-right: 2.7rem;
+      width: 82rem;
+    }
+  }
+ } 
   &-licenzia {
     margin-bottom: 12rem;
     .baner {

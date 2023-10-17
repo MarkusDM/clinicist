@@ -64,6 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.tabs__content6[data-question=' + data + ']').toggleClass('active')
   })
 
+  $('.tabs-news__btn').click(function () {
+    $('.tabs-news__btn').removeClass('active')
+    $(this).toggleClass('active')
+  })
+
   // КОНЕЦ ТАБОВ
 
   // СЛАЙДЕРЫ

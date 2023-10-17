@@ -1643,10 +1643,11 @@ body::after {
   // .article-card__text-wrap
 
   &__text-wrap {
-    padding: 4rem 3.2rem 3.2rem 3.2rem;
+    padding: 4rem 3.2rem 4rem 3.2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    // height: 35.8rem;
   }
 
   // .article-card__heading
@@ -1661,6 +1662,7 @@ body::after {
   &__text {
     margin-bottom: 4rem;
     max-width: 38.9rem;
+    // flex: 1 1;
   }
 
   // .article-card__link
