@@ -928,7 +928,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // forms
 
-function formFieldsInit(options = { viewPass: false }) {
+function formFieldsInit(options = { viewPass: true }) {
   const formFields = document.querySelectorAll(
     'input[placeholder],textarea[placeholder]'
   )
@@ -989,7 +989,7 @@ function formFieldsInit(options = { viewPass: false }) {
         let inputType = targetElement.classList.contains('_viewpass-active')
           ? 'password'
           : 'text'
-        targetElement.parentElement
+        targetElement.parentElement.parentElement
           .querySelector('input')
           .setAttribute('type', inputType)
         targetElement.classList.toggle('_viewpass-active')

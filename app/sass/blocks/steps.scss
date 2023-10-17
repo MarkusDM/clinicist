@@ -169,9 +169,13 @@
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 4.1rem;
-    span {
-      color: $blue;
-    }
+  }
+
+  // .steps__subtitle-txt
+
+  &__subtitle-txt {
+
+    color: $blue;
   }
 
   // .steps__wrapper
@@ -266,15 +270,6 @@
     }
   }
 
-  // .steps__info-icon
-
-  &__info-icon {
-    align-self: center;
-    flex: 0 0 3rem;
-    width: 3rem;
-    height: 3rem;
-  }
-
   // .steps__services-labels
 
   &__services-labels {
@@ -289,6 +284,21 @@
       height: 9.8rem;
     }
   }
+
+  // .steps__form-wrap
+
+  &__form-wrap {
+    border-left: 0.3rem solid #ffffff;
+  }
+
+    // .steps__details
+
+    &__details {
+      margin: 4rem 4rem auto 4rem;
+      &_mb {
+        margin: 4rem;
+      }
+    }
 }
 
 @media (max-width: 48em) {
@@ -311,23 +321,52 @@
         margin: 0;
       }
     }
+    &__details {
+      margin: 0;
+    }
+    &__form-wrap {
+      border: none;
+    }
+    &__spoiler-title {
+      padding: 4rem 4.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;    
+      width: 100%;
+      font-family: Montserrat;
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: -0.0548rem;
+      background-color: #ffffff;
+      &._spoiler-active {
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+      &::after {
+        content: "";
+        flex: 0 0 3.2rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url(../img/a-image/icons/select-arrow-blue.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+      }
+    }
+    &__spoiler-body {
+      background-color: #ffffff;
+    }
     &__body {
       &_services {
-        .steps__subtitle {
-          flex-direction: row;
-        }
-        .steps__info-icon {
+        .hint {
           margin-left: auto;
         }
       }
     }
     &__services-labels {
       padding: 0;
-    }
-    &__info-icon {
-      flex: 0 0 3.6rem;
-      width: 3.6rem;
-      height: 3.6rem;
     }
     &__container {
       padding: 0;
@@ -395,15 +434,23 @@
     }
     &__subtitle {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       font-size: 3rem;
       line-height: 150%;
+    }
+    &__subtitle-txt {
+      margin-right: auto;
+      display: block;
+      width: 100%;
     }
     &__wrapper {
       margin-top: 0.6rem;
       padding: 4rem 4rem 5rem 4rem;
       display: flex;
       flex-direction: column;
+      &_no-padding {
+        padding: 0;
+      }
       .qs-datepicker-container {
         display: none;
       }
