@@ -41,9 +41,6 @@ const valueslider = new Swiper('.values-swiper', {
   fadeEffect: {
     crossFade: true
   },
-  // thumbs: {
-  //   swiper: valueThumbs
-  // },
   speed: 1000,
 })
 
@@ -69,10 +66,6 @@ const quoteSlider = new Swiper('.licenzia-swiper', {
       spaceBetween: rem(4.2),
       slidesPerView: 2,
       slidesPerColumn: 2,
-      // grid: {
-      //   fill: "row",
-      //   rows: 2,
-      // },
     },
   }
 })

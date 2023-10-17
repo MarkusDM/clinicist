@@ -35,6 +35,7 @@ const valueThumbs = new Swiper('.thumbs-swiper', {
 })
 
 const valueslider = new Swiper('.values-swiper', {
+
   slidesPerView: 1,
   spaceBetween: rem(1),
   effect: 'fade',

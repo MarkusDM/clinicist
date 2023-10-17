@@ -1368,3 +1368,16 @@ input[type='search']::-webkit-search-results-decoration {
     display: none;
   }
 }
+
+
+.testing-block {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .btn {
+    margin-bottom: 3rem;
+  }
+}

@@ -83,6 +83,8 @@
 @import './blocks/all-services';
 @import './blocks/application-form';
 @import './blocks/s-direction';
+@import './blocks/leave-contacts';
+@import './blocks/about-the-s';
 
 @import './blocks/patients-stocks-page';
 @import './blocks/patients-information-page';
@@ -91,6 +93,13 @@
 @import './blocks/part-team';
 @import './blocks/pages';
 
+
+@import './blocks/patients-stocks-page';
+@import './blocks/patients-information-page';
+
+@import './blocks/sl-reviews';
+@import './blocks/services-parent';
+@import './blocks/similar-services';
 
 #ui-datepicker-div {
   display: block !important;

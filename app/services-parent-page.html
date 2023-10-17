@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="another website" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/js-datepicker/dist/datepicker.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+      <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    @@include('./template/header.html')
+
+    <main>
+        <section class="baner baner--s-parent">
+            <div class="container">
+                <div class="baner__inner">
+                    <div class="baner__content">
+                        <div class="baner__content-links">
+                            <a href="#" class="baner__content-links-link">Главная</a>
+                            <a href="#" class="baner__content-links-link">Услуги</a>
+                            <a href="#" class="baner__content-links-link nolink">Ультразвуковая диагностика (УЗИ)</a>
+                        </div>
+                        <div class="baner__content-title title">Ультразвуковая диагностика (УЗИ)</div>
+                        <div class="baner__price-d">
+                            <span>Цены от</span>
+                            <strong>900</strong>
+                        </div>
+                        <div class="baner__content-text">
+                            В нашей клинике вы получите только самое современное и эффективное лечение
+                        </div>
+                    </div>
+                    <div class="baner__picture">
+                        <img src="./img/d-image/ban-p.webp" alt="История клиники" class="desctop" />
+                        <img src="./img/d-image/ban-p-m.webp" alt="История клиники" class="mobile" />
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <section class="s-direction">
+            <div class="container">
+                <div class="doctors__spoiler alphabet-filter">
+                    <button data-spoiler type="button" class="alphabet-filter__title">
+                      Найти по алфавиту
+                    </button>
+                    <div class="alphabet-filter__body">
+                      <div class="alphabet-filter__group">
+                        <button type="button" class="alphabet-filter__button">
+                          Все
+                        </button>
+                        <button type="button" class="alphabet-filter__button">А</button>
+                        <button type="button" class="alphabet-filter__button">Б</button>
+                        <button type="button" class="alphabet-filter__button">В</button>
+                        <button type="button" class="alphabet-filter__button">Г</button>
+                        <button type="button" class="alphabet-filter__button">Д</button>
+                        <button type="button" class="alphabet-filter__button">Е</button>
+                        <button type="button" class="alphabet-filter__button">Ж</button>
+                        <button type="button" class="alphabet-filter__button">З</button>
+                        <button type="button" class="alphabet-filter__button">И</button>
+                        <button type="button" class="alphabet-filter__button">К</button>
+                        <button type="button" class="alphabet-filter__button">Л</button>
+                        <button type="button" class="alphabet-filter__button _active">
+                          М
+                        </button>
+                        <button type="button" class="alphabet-filter__button">Н</button>
+                        <button type="button" class="alphabet-filter__button">О</button>
+                        <button type="button" class="alphabet-filter__button">П</button>
+                        <button type="button" class="alphabet-filter__button">Р</button>
+                        <button type="button" class="alphabet-filter__button">С</button>
+                        <button type="button" class="alphabet-filter__button">Т</button>
+                        <button type="button" class="alphabet-filter__button">Ц</button>
+                        <button type="button" class="alphabet-filter__button">Ш</button>
+                        <button type="button" class="alphabet-filter__button">Щ</button>
+                        <button type="button" class="alphabet-filter__button">Э</button>
+                        <button type="button" class="alphabet-filter__button">Ю</button>
+                        <button type="button" class="alphabet-filter__button">Я</button>
+                      </div>
+                    </div>
+                  </div>
+                  <form id="search-form" action="#" class="doctors__form search-form">
+                    <div class="search-form__wrap">
+                      <div class="search-form__input-wrap">
+                        <input
+                          autocomplete="off"
+                          type="search"
+                          name="form[]"
+                          placeholder="Поиск среди услуг"
+                          class="search-form__input txt" />
+                      </div>
+                      <button
+                        id="open-sort-dropdown"
+                        type="button"
+                        class="search-form__sort-button">
+                        <span class="_desktop-only">Уточнить поиск</span>
+                      </button>
+                      <button type="submit" class="search-form__btn btn">
+                        <span>Начать поиск</span>
+                      </button>
+                    </div>
+                    <div class="search-form__sort sort-dropdown">
+                      <div class="sort-dropdown__inner">
+                        <div data-tabs class="sort-dropdown__tabs">
+                          <div
+                            data-tabs-titles
+                            class="sort-dropdown__navigation tabs tabs_blue">
+                            <button type="button" class="tabs__btn">Все</button>
+                            <button type="button" class="tabs__btn active _tab-active">
+                              Мужчины
+                            </button>
+                            <button type="button" class="tabs__btn">Женщины</button>
+                            <button type="button" class="tabs__btn">Дети</button>
+                          </div>
+                          <div
+                            data-tabs-body
+                            data-one-select
+                            class="sort-dropdown__content">
+                            <div class="sort-dropdown__body">
+                              <div class="sort-dropdown__row">
+                                <div class="sort-dropdown__item">
+                                  <span class="sort-dropdown__subheading txt">
+                                    Выбрать направление:
+                                  </span>
+                                  <select
+                                    data-scroll="270"
+                                    data-checkbox
+                                    multiple
+                                    data-pseudo-label="Все направления"
+                                    name="form[]"
+                                    class="sort-dropdown__select-wrap select-checkbox">
+                                    <option value="1" selected>Уролог</option>
+                                    <option value="2">Гинеколог</option>
+                                    <option value="3">Гематолог</option>
+                                    <option value="4">Гастроэнтеролог</option>
+                                    <option value="5">Дерматолог</option>
+                                    <option value="6">Гинеколог-эндокринолог</option>
+                                    <option value="7">Аритмолог</option>
+                                    <option value="8">Уролог</option>
+                                    <option value="9">Гинеколог</option>
+                                    <option value="10">Гематолог</option>
+                                    <option value="11">Гастроэнтеролог</option>
+                                    <option value="12">Дерматолог</option>
+                                    <option value="13">Гинеколог-эндокринолог</option>
+                                    <option value="14">Аритмолог</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="sort-dropdown__body">
+                              <div class="sort-dropdown__row">
+                                <div class="sort-dropdown__item">
+                                  <span class="sort-dropdown__subheading txt">
+                                    Выбрать направление:
+                                  </span>
+                                  <select
+                                    data-scroll="270"
+                                    data-checkbox
+                                    multiple
+                                    data-pseudo-label="Все направления"
+                                    name="form[]"
+                                    class="sort-dropdown__select-wrap select-checkbox">
+                                    <option value="1" selected>Уролог</option>
+                                    <option value="2">Гинеколог</option>
+                                    <option value="3">Гематолог</option>
+                                    <option value="4">Гастроэнтеролог</option>
+                                    <option value="5">Дерматолог</option>
+                                    <option value="6">Гинеколог-эндокринолог</option>
+                                    <option value="7">Аритмолог</option>
+                                    <option value="8">Уролог</option>
+                                    <option value="9">Гинеколог</option>
+                                    <option value="10">Гематолог</option>
+                                    <option value="11">Гастроэнтеролог</option>
+                                    <option value="12">Дерматолог</option>
+                                    <option value="13">Гинеколог-эндокринолог</option>
+                                    <option value="14">Аритмолог</option>
+                                  </select>
+                                </div>
+                                <div class="sort-dropdown__item">
+                                  <span class="sort-dropdown__subheading txt">
+                                    Выбрать клинику:
+                                  </span>
+                                  <select
+                                    data-scroll="270"
+                                    data-checkbox
+                                    multiple
+                                    data-pseudo-label="Все клиники"
+                                    name="form[]"
+                                    class="sort-dropdown__select-wrap select-checkbox">
+                                    <option value="1" selected>Уролог</option>
+                                    <option value="2">Гинеколог</option>
+                                    <option value="3">Гематолог</option>
+                                    <option value="4">Гастроэнтеролог</option>
+                                    <option value="5">Дерматолог</option>
+                                    <option value="6">Гинеколог-эндокринолог</option>
+                                    <option value="7">Аритмолог</option>
+                                    <option value="8">Уролог</option>
+                                    <option value="9">Гинеколог</option>
+                                    <option value="10">Гематолог</option>
+                                    <option value="11">Гастроэнтеролог</option>
+                                    <option value="12">Дерматолог</option>
+                                    <option value="13">Гинеколог-эндокринолог</option>
+                                    <option value="14">Аритмолог</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="sort-dropdown__body">
+                              <div class="sort-dropdown__row">
+                                <div class="sort-dropdown__item">
+                                  <span class="sort-dropdown__subheading txt">
+                                    Выбрать клинику:
+                                  </span>
+                                  <select
+                                    data-scroll="270"
+                                    data-checkbox
+                                    multiple
+                                    data-pseudo-label="Все клиники"
+                                    name="form[]"
+                                    class="sort-dropdown__select-wrap select-checkbox">
+                                    <option value="1" selected>Уролог</option>
+                                    <option value="2">Гинеколог</option>
+                                    <option value="3">Гематолог</option>
+                                    <option value="4">Гастроэнтеролог</option>
+                                    <option value="5">Дерматолог</option>
+                                    <option value="6">Гинеколог-эндокринолог</option>
+                                    <option value="7">Аритмолог</option>
+                                    <option value="8">Уролог</option>
+                                    <option value="9">Гинеколог</option>
+                                    <option value="10">Гематолог</option>
+                                    <option value="11">Гастроэнтеролог</option>
+                                    <option value="12">Дерматолог</option>
+                                    <option value="13">Гинеколог-эндокринолог</option>
+                                    <option value="14">Аритмолог</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="sort-dropdown__body">
+                              <div class="sort-dropdown__row">
+                                <div class="sort-dropdown__item">
+                                  <span class="sort-dropdown__subheading txt">
+                                    Выбрать направление:
+                                  </span>
+                                  <select
+                                    data-scroll="270"
+                                    data-checkbox
+                                    multiple
+                                    data-pseudo-label="Все направления"
+                                    name="form[]"
+                                    class="sort-dropdown__select-wrap select-checkbox">
+                                    <option value="1" selected>Уролог</option>
+                                    <option value="2">Гинеколог</option>
+                                    <option value="3">Гематолог</option>
+                                    <option value="4">Гастроэнтеролог</option>
+                                    <option value="5">Дерматолог</option>
+                                    <option value="6">Гинеколог-эндокринолог</option>
+                                    <option value="7">Аритмолог</option>
+                                    <option value="8">Уролог</option>
+                                    <option value="9">Гинеколог</option>
+                                    <option value="10">Гематолог</option>
+                                    <option value="11">Гастроэнтеролог</option>
+                                    <option value="12">Дерматолог</option>
+                                    <option value="13">Гинеколог-эндокринолог</option>
+                                    <option value="14">Аритмолог</option>
+                                  </select>
+                                </div>
+                                <div class="sort-dropdown__item">
+                                  <span class="sort-dropdown__subheading txt">
+                                    Выбрать клинику:
+                                  </span>
+                                  <select
+                                    data-scroll="270"
+                                    data-checkbox
+                                    multiple
+                                    data-pseudo-label="Все клиники"
+                                    name="form[]"
+                                    class="sort-dropdown__select-wrap select-checkbox">
+                                    <option value="1" selected>Уролог</option>
+                                    <option value="2">Гинеколог</option>
+                                    <option value="3">Гематолог</option>
+                                    <option value="4">Гастроэнтеролог</option>
+                                    <option value="5">Дерматолог</option>
+                                    <option value="6">Гинеколог-эндокринолог</option>
+                                    <option value="7">Аритмолог</option>
+                                    <option value="8">Уролог</option>
+                                    <option value="9">Гинеколог</option>
+                                    <option value="10">Гематолог</option>
+                                    <option value="11">Гастроэнтеролог</option>
+                                    <option value="12">Дерматолог</option>
+                                    <option value="13">Гинеколог-эндокринолог</option>
+                                    <option value="14">Аритмолог</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          id="slose-sort-dropdown"
+                          type="button"
+                          class="sort-dropdown__close-btn link">
+                          Свернуть
+                        </button>
+                      </div>
+                    </div>
+                    <div class="search-form__search-box search-box">
+                      <ul class="search-box__list txt">
+                        <li class="search-box__item">
+                          Гастроэнтеролог <span>Специализация</span>
+                        </li>
+                        <li class="search-box__item">
+                          Гастропольский Виктор Владимирович <span>Врач</span>
+                        </li>
+                        <li class="search-box__item">
+                          Гастроэнтероло <span>Специализация</span>
+                        </li>
+                        <li class="search-box__item">
+                          Гастропольский Виктор Владимирович <span>Врач</span>
+                        </li>
+                      </ul>
+                    </div>
+                </form>
+              
+                <div class="s-direction__wrapper">
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Фолликулометрия (УЗ-мониторинг созревания фолликула)
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ сердца (эхокардиография)
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ плевральной полости
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ мошонки
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ органов мочеполовой системы
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img6.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ слюнных желез
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img7.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Эхогистеросальпингография (Эхо-ГСГ)
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ, ТРУЗИ предстательной железы (простаты)
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img9.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ органов мочеполовой системы
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img10.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Цервикометрия
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img11.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Фолликулометрия (УЗ-мониторинг созревания фолликула)
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img12.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ почек и надпочечников
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img13.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Эхогистеросальпингография (Эхо-ГСГ)
+
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img14.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ, ТРУЗИ предстательной железы (простаты)
+
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img15.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ почек и надпочечников
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img16.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Цервикометрия
+
+
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img17.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                Фолликулометрия (УЗ-мониторинг созревания фолликула)
+
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="s-direction__box">
+                        <div class="s-direction__box-block-image">
+                            <div class="s-direction__box-image">
+                                <img src="./img/d-image/parent/img18.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s-direction__box-content">
+                            <div class="s-direction__box-title">
+                                УЗИ почек и надпочечников
+
+                            </div>
+                        </div>
+                    </a>
+                   
+                </div>
+                <div class="g-pagination">
+                    <button class="g-pagination__prev">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 8 14" fill="none">
+                            <path d="M7 13L1 7L7 1" stroke="#333333" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="g-pagination__numbers">
+                        <a class="active" href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                    </div>
+                    <button class="g-pagination__next">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 8 14" fill="none">
+                            <path d="M1 1L7 7L1 13" stroke="#333333" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+              
+            </div>
+        </section>
+        @@include('./template/recording-site.html')
+        <section class="about-the-s">
+            <div class="container">
+                <div class="about-the-s__wrapper">
+                    <div class="about-the-s__left">
+                        <div class="about-the-s__title">Подробная информация об услуге</div>
+                        <ul class="about-the-s__sidebar">
+                            <li class="about-the-s__item active" data-tab="1">
+                                Об услуге
+                            </li>
+                            <li class="about-the-s__item" data-tab="2">
+                                Диагностика
+                            </li>
+                            <li class="about-the-s__item" data-tab="3">
+                                Кто назначает
+                            </li>
+
+                            <li class="about-the-s__item " data-tab="4">
+                                Показания
+                            </li>
+                            <li class="about-the-s__item" data-tab="5">
+                                Как проводится, этапы процедуры
+                            </li>
+                            <li class="about-the-s__item" data-tab="6">
+                                Оборудование
+                            </li>
+
+                            <li class="about-the-s__item" data-tab="7">
+                                Что показывает
+                            </li>
+                            <li class="about-the-s__item" data-tab="8">
+                                Противопоказания
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-the-s__right">
+                        <div class="about-the-s__content active" data-tab="1">
+                                <h3>Об услуге</h3>
+                                <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.
+                                    Сдать кровь на биохимический и другие анализы крови в Москве вы всегда можете в медицинской клинике НАКФФ (лаборатория нашей клиники выполняет более 1200 видов исследований). Располагая современным лабораторным оборудованием и значительным опытом диагностики, мы обеспечиваем быстрые сроки изучения биоматериала, точность результатов и полную безопасность для пациента.Чтобы создать максимально комфортные условия для своих клиентов, мы предоставляем возможность сделать забор крови и вне клиники. По вашему желанию, выездная бригада подъедет по указанному вами адресу, а узнать результат исследования вы сможете через онлайн-сервис. Стоимость услуги зависит от типа исследования.</p>
+                               <br>
+                               <br>
+                               <h3>Преимущества направления</h3>
+                               <p>Восприятие, как справедливо считает Ф.Энгельс, устойчиво отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал: гештальт осознаёт институциональный ассоцианизм, как и предсказывает теория о бесполезном знании. Комплекс текстологически интегрирует психоз. Гендер заметно представляет собой социометрический гомеостаз, таким образом, стратегия поведения</p>
+
+                               <ul>
+                                    <li>Восприятие, как справедливо считает Ф.Энгельс, устойчиво отталкивает онтогенез речи. </li>
+                                    <li>Однако Э.Дюркгейм утверждал: гештальт осознаёт институциональный ассоцианизм</li>
+                                    <li>Гендер заметно представляет собой социометрический гомеостаз, таким образом, стратегия поведения, выгодная отдельному человеку</li>
+                               </ul>
+                        </div>
+                        <div class="about-the-s__content" data-tab="2">
+                           
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                            <p>Сдать кровь на биохимический и другие анализы крови в Москве вы всегда можете в медицинской клинике НАКФФ (лаборатория нашей клиники выполняет более 1200 видов исследований). Располагая современным лабораторным оборудованием и значительным опытом диагностики, мы обеспечиваем быстрые сроки изучения биоматериала, точность результатов и полную безопасность для пациента.Чтобы создать максимально комфортные условия для своих клиентов, мы предоставляем возможность сделать забор крови и вне клиники. По вашему желанию, выездная бригада подъедет по указанному вами адресу, а узнать результат исследования вы сможете через онлайн-сервис. Стоимость услуги зависит от типа исследования.</p>
+                        </div>
+        
+                        <div class="about-the-s__content" data-tab="3">
+                            <h3>О направлении</h3>
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                        </div>
+
+                        <div class="about-the-s__content" data-tab="4">
+                            <h3>О направлении</h3>
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                        </div>
+
+                        <div class="about-the-s__content" data-tab="5">
+                            <h3>О направлении</h3>
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                        </div>
+
+                        <div class="about-the-s__content" data-tab="6">
+                            <h3>О направлении</h3>
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                        </div>
+
+                        <div class="about-the-s__content" data-tab="7">
+                            <h3>О направлении</h3>
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                        </div>
+
+                        <div class="about-the-s__content" data-tab="8">
+                            <h3>О направлении</h3>
+                            <p>Одним из самых информативных и достоверных способов лабораторной диагностики является биохимический анализ крови. Результаты такого исследования, цена которого доступна для любого пациента, используют практически во всех областях медицины, включая кардиологию, гастроэнтерологию, гинекологию, урологию, онкологию и т.д. Врач может порекомендовать пройти обследование и в профилактических целях.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-doctors">
+            <div class="our-doctors__container container">
+              <div class="our-doctors__head">
+                <div class="our-doctors__title-wrap">
+                  <span class="our-doctors__subtitle subtitle"
+                    >Наша команда специалистов</span
+                  >
+                  <span class="our-doctors__title title">Наши врачи</span>
+                </div>
+                <div
+                  data-da=".our-doctors__container,768,last"
+                  class="our-doctors__slider-control slider-control">
+                  <div class="our-doctors__slider-fraction"></div>
+                  <div class="our-doctors__slider-navigation">
+                    <button
+                      type="button"
+                      class="swiper-button-prev btn-prev"></button>
+                    <div
+                      class="our-doctors__slider-pagination swiper-pagination pagination"></div>
+                    <button
+                      type="button"
+                      class="swiper-button-next btn-next"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="our-doctors__body">
+                <div class="our-doctors__slider swiper">
+                  <div class="our-doctors__wrapper swiper-wrapper">
+                    <div class="our-doctors__slide our-doctors-card swiper-slide">
+                      <a href="#" class="our-doctors-card__head link">
+                        Главный хирург
+                      </a>
+                      <div class="our-doctors-card__body">
+                        <span class="our-doctors-card__heading heading"
+                          >Мишустина Александра Ивановна</span
+                        >
+                        <p class="our-doctors-card__text txt">
+                          Главный хирург, доктор медицинских наук, врач высшей
+                          категории
+                        </p>
+                        <div class="our-doctors-card__group">
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/coins.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <span class="our-doctors-card__group-text txt"
+                              >Прием от <span>1200 ₽ </span></span
+                            >
+                          </div>
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/thumb-up.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <div class="our-doctors-card__rating">
+                              <div class="our-doctors-card__stars rating">
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_empty"></div>
+                              </div>
+                              <span class="our-doctors-card__rating-value"
+                                >4.8</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        data-popup="#appointment-modal"
+                        type="button"
+                        class="our-doctors-card__btn btn">
+                        Записаться
+                      </button>
+                      <div class="our-doctors-card__image-wrap">
+                        <img
+                          src="./img/a-image/doctor-card-img.webp"
+                          alt=""
+                          class="our-doctors-card__image" />
+                      </div>
+                    </div>
+                    <div class="our-doctors__slide our-doctors-card swiper-slide">
+                      <a href="#" class="our-doctors-card__head link">
+                        Главный хирург
+                      </a>
+                      <div class="our-doctors-card__body">
+                        <span class="our-doctors-card__heading heading"
+                          >Мишустина Александра Ивановна</span
+                        >
+                        <p class="our-doctors-card__text txt">
+                          Главный хирург, доктор медицинских наук, врач высшей
+                          категории
+                        </p>
+                        <div class="our-doctors-card__group">
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/coins.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <span class="our-doctors-card__group-text txt"
+                              >Прием от <span>1200 ₽ </span></span
+                            >
+                          </div>
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/thumb-up.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <div class="our-doctors-card__rating">
+                              <div class="our-doctors-card__stars rating">
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_empty"></div>
+                              </div>
+                              <span class="our-doctors-card__rating-value"
+                                >4.8</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        data-popup="#appointment-modal"
+                        type="button"
+                        class="our-doctors-card__btn btn">
+                        Записаться
+                      </button>
+                      <div class="our-doctors-card__image-wrap">
+                        <img
+                          src="./img/a-image/our-doctors-card-02.webp"
+                          alt=""
+                          class="our-doctors-card__image" />
+                      </div>
+                    </div>
+                    <div class="our-doctors__slide our-doctors-card swiper-slide">
+                      <a href="#" class="our-doctors-card__head link">
+                        Главный хирург
+                      </a>
+                      <div class="our-doctors-card__body">
+                        <span class="our-doctors-card__heading heading"
+                          >Мишустина Александра Ивановна</span
+                        >
+                        <p class="our-doctors-card__text txt">
+                          Главный хирург, доктор медицинских наук, врач высшей
+                          категории
+                        </p>
+                        <div class="our-doctors-card__group">
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/coins.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <span class="our-doctors-card__group-text txt"
+                              >Прием от <span>1200 ₽ </span></span
+                            >
+                          </div>
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/thumb-up.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <div class="our-doctors-card__rating">
+                              <div class="our-doctors-card__stars rating">
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_empty"></div>
+                              </div>
+                              <span class="our-doctors-card__rating-value"
+                                >4.8</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        data-popup="#appointment-modal"
+                        type="button"
+                        class="our-doctors-card__btn btn">
+                        Записаться
+                      </button>
+                      <div class="our-doctors-card__image-wrap">
+                        <img
+                          src="./img/a-image/doctor-ginecolog.webp"
+                          alt=""
+                          class="our-doctors-card__image" />
+                      </div>
+                    </div>
+                    <div class="our-doctors__slide our-doctors-card swiper-slide">
+                      <a href="#" class="our-doctors-card__head link">
+                        Главный хирург
+                      </a>
+                      <div class="our-doctors-card__body">
+                        <span class="our-doctors-card__heading heading"
+                          >Мишустина Александра Ивановна</span
+                        >
+                        <p class="our-doctors-card__text txt">
+                          Главный хирург, доктор медицинских наук, врач высшей
+                          категории
+                        </p>
+                        <div class="our-doctors-card__group">
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/coins.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <span class="our-doctors-card__group-text txt"
+                              >Прием от <span>1200 ₽ </span></span
+                            >
+                          </div>
+                          <div class="our-doctors-card__group-item">
+                            <div class="our-doctors-card__group-icon-wrap">
+                              <img
+                                src="./img/a-image/icons/thumb-up.svg"
+                                alt=""
+                                class="our-doctors-card__group-icon" />
+                            </div>
+                            <div class="our-doctors-card__rating">
+                              <div class="our-doctors-card__stars rating">
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_full"></div>
+                                <div class="rating__item rating__item_empty"></div>
+                              </div>
+                              <span class="our-doctors-card__rating-value"
+                                >4.8</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        data-popup="#appointment-modal"
+                        type="button"
+                        class="our-doctors-card__btn btn">
+                        Записаться
+                      </button>
+                      <div class="our-doctors-card__image-wrap">
+                        <img
+                          src="./img/a-image/doctor-card-img.webp"
+                          alt=""
+                          class="our-doctors-card__image" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        @@include('./template/sl-reviews.html')
+        @@include('./template/similar-services.html')
+        <section class="appointment">
+            <div class="appointment__container container">
+                <div class="appointment__head">
+                    <span class="appointment__subtitle subtitle">Присоединяйтесь к 600 000 наших пациентов и получите
+                        действительно качественные медицинские услуги!</span>
+                    <span class="appointment__title title">Запись на прием</span>
+                </div>
+                <div class="appointment__body">
+                    <div class="appointment__callback callback-appointment">
+                        <div class="callback-appointment__heading">
+                            <span>Позвоните
+                                <a href="tel:84951897397">8 (495) 189-73-97</a></span>
+                        </div>
+                        <p class="callback-appointment__text txt">
+                            Или оставьте заявку на обратный звонок
+                        </p>
+                        <form action="#" class="callback-appointment__form">
+                            <div class="callback-appointment__input-wrap">
+                                <input autocomplete="off" type="tel" name="form[]" placeholder=""
+                                    class="callback-appointment__input tel-mask" />
+                            </div>
+                            <button type="submit" class="btn btn_white callback-appointment__btn">
+                                Заказать обратный звонок
+                            </button>
+                        </form>
+                        <p class="callback-appointment__hint txt">
+                            *Заказывая обратный звонок, вы соглашаетесь с
+                            <a href="#">политикой обработки своих персональных данных</a>
+                        </p>
+                    </div>
+                    <div class="appointment__contacts contacts-appointment">
+                        <span class="contacts-appointment__heading">Напишите нам</span>
+                        <div class="contacts-appointment__text-wrap txt">
+                            <span class="contacts-appointment__text-heading">Мы ответим на все ваши вопросы в ближайшее.
+                            </span>
+                            <p class="contacts-appointment__text">
+                                Будьте уверены, что наша команда сделает все возможное и
+                                предоставим вам полную информацию, которую вы ищете.
+                            </p>
+                        </div>
+                        <div class="contacts-appointment__links">
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_whatsapp">
+                                <span>Написать в WhatsApp</span>
+                            </a>
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_telegram">
+                                <span>Написать в Telegram</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="appointment__registration registration-appointment">
+                        <span class="registration-appointment__heading">Вы можете записаться онлайн на нашем
+                            сайте</span>
+                        <p class="registration-appointment__text txt">
+                            Онлайн запись к врачу позволяет быстро выбрать удобное время и
+                            день для посещения, а также записаться на прием
+                        </p>
+                        <a href="#" class="registration-appointment__btn btn">Выбрать врача и время записи</a>
+                        <p class="registration-appointment__hint txt">
+                            *Ознакомьтесь с
+                            <a href="#">Согласием на обработку персональных данных</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+     
+    </main>
+    @@include('./template/footer.html')
+
+
+</body>
+
+</html>
