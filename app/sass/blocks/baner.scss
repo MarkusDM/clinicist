@@ -3715,6 +3715,35 @@
     margin-bottom: 16rem;
     height: auto;
 
+     &-news {
+      margin-bottom: 20rem;
+      .baner {
+        &__content-title {
+          margin-top: 10rem;
+          margin-bottom: 2.6rem;
+        }
+        &__inner {
+          padding: 0;
+          &::after {
+            top: 48rem;
+          }
+        }
+        &__content-text {
+          line-height: 150%;
+          font-size: 3.2rem;
+        }
+        &__content {
+          padding-top: 12rem;
+          margin-bottom: 8.4rem;
+        }
+        &__picture {
+          margin-right: 0;
+          width: 76rem;
+          height: 67rem;
+        }
+      }
+    } 
+
     &-news-article {
       height: auto;
       margin-bottom: 12rem;

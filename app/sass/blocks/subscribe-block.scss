@@ -66,6 +66,10 @@
       height: 2.4rem;
     }
 
+    input {
+      padding: 1rem 3rem 1rem 0;
+    }
+
     input,
     input::placeholder {
       border: 0;
@@ -88,6 +92,7 @@
     column-gap: 1.5rem;
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     input {
       position: absolute;

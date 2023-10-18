@@ -101,12 +101,13 @@
 @import './blocks/services-parent';
 @import './blocks/similar-services';
 
+@import './blocks/subscribe-block.scss';
 @import './blocks/news.scss';
 @import './blocks/news-article.scss';
 @import './blocks/news-other.scss';
 @import './blocks/socials.scss';
-@import './blocks/subscribe-block.scss';
 @import './blocks/news-descs.scss';
+
 
 #ui-datepicker-div {
   display: block !important;

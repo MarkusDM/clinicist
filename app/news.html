@@ -25,15 +25,30 @@
             <div class="baner__content-text">В нашей клинике вы получите только самое современное и эффективное лечение</div>
           </div>
           <div class="baner__picture">
-            <img src="./img/dim-image/baner-news.webp" alt="">
+            <picture>
+              <source media="(max-width: 769px)" srcset="./img/dim-image/baner-news-mob.webp" />
+              <source media="(min-width: 768px)" srcset="./img/dim-image/baner-news.webp" />
+              <img src="./img/dim-image/baner-news.webp" alt="" />
+            </picture>
           </div>
         </div>
       </div>
     </section>
-
     <section class="news">
       <div class="container">
         <div class="news__container">
+          <div class="news__asides-navigation navigation-news _mobile-only">
+            <div class="navigation-news__title">
+              В новостях
+            </div>
+            <div class="navigation-news__tabs tabs-news">
+              <button type="button" class="tabs-news__btn">Режим работы</button>
+              <button type="button" class="tabs-news__btn active">Новые статьи</button>
+              <button type="button" class="tabs-news__btn">Последние новости о здоровье</button>
+              <button type="button" class="tabs-news__btn">Новая клиника</button>
+              <button type="button" class="tabs-news__btn">Все статьи</button>
+            </div>
+          </div>
           <div class="news__cards">
             <div class="news__cards-row">
               <div class="news__cards-card article-card">
@@ -155,90 +170,119 @@
                 </li>
               </ul>
             </div>
+            <div class="news__asides-subscribe subscribe-block _mobile-only">
+              <div class="subscribe-block__head">
+                <div class="subscribe-block__title">
+                  Подписаться на рассылку
+                </div>
+                <div class="subscribe-block__subtitle">
+                  Вы можете подписаться и получать самые свежие новости клиники
+                </div>
+              </div>
+              <form action="" class="subscribe-block__form">
+                <div class="subscribe-block__input">
+                  <img src="./img/dim-image/icons/email.svg" alt="">
+                  <input type="email" placeholder="Ваша почта">
+                </div>
+                <button type="submit" class="btn btn_white subscribe-block__btn">
+                  Подписаться
+                </button>
+                <label class="subscribe-block__radio">
+                  <input type="checkbox">
+                  <span>Оставляя свои данные, вы соглашаетесь на обработку персональных данных.</span>
+                </label>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="pages">
       <div class="container">
-        <div class="pages__subtitle subtitle">Все о компании</div>
-        <div class="pages__title title">Другие страницы этого раздела</div>
-        <div class="pages__items">
-          <div class="pages__item pages__item-big">
-            <div class="pages__item-big-img">
-              <img src="./img/ans_image/pages_history.webp" alt="">
-            </div>
-            <div class="pages__item-big-content">
-              <div>
-                <div class="pages__item-title">История клиники</div>
-                <div class="pages__item-text">Подробнее об акции. Как и многие другие направления медицины, хирургия делится
-                  на широкий спектр различных отраслей направления медицины, хирургия делится</div>
+          <div class="pages__subtitle subtitle">Для пациентов</div>
+          <div class="pages__title title">Другие страницы этого раздела</div>
+          <div class="pages__items">
+            <div class="pages__item pages__item-big">
+              <div class="pages__item-big-img">
+                <picture>
+                  <source media="(max-width: 769px)" srcset="./img/ans_image/pages-history-mob.webp" />
+                  <source media="(min-width: 768px)" srcset="./img/ans_image/pages_history.webp" />
+                  <img src="./img/ans_image/pages_history.webp" alt="" />
+                </picture>
               </div>
-              <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              <div class="pages__item-big-content">
+                <div>
+                  <div class="pages__item-title">История клиники</div>
+                  <div class="pages__item-text">Подробнее об акции. Как и многие другие направления медицины, хирургия делится на широкий спектр различных отраслей направления медицины, хирургия делится</div>
+                </div>
+                <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              </div>
+            </div>
+            <div class="pages__item pages__item-small">
+              <div class="pages__item-small-content">
+                <div>
+                  <div class="pages__item-title">Лицензии и свидетельства</div>
+                  <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших пациентов</div>
+                </div>
+                <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              </div>
+              <div class="pages__item-small-img licenz">
+                <img src="./img/ans_image/pages_license.webp" alt="">
+              </div>
+            </div>
+            <div class="pages__item pages__item-small">
+              <div class="pages__item-small-content">
+                <div>
+                  <div class="pages__item-title">Корпоративным клиентам и<br>страховым компаниям</div>
+                  <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших</div>
+                </div>
+                <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              </div>
+              <div class="pages__item-small-img">
+                <img src="./img/ans_image/pages_clients.webp" alt="">
+              </div>
+            </div>
+            <div class="pages__item pages__item-small">
+              <div class="pages__item-small-content">
+                <div>
+                  <div class="pages__item-title">Контроль качества медицинских услуг</div>
+                  <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших пациентов</div>
+                </div>
+                <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              </div>
+              <div class="pages__item-small-img">
+                <img src="./img/ans_image/pages_control.webp" alt="">
+              </div>
+            </div>
+            <div class="pages__item pages__item-small">
+              <div class="pages__item-small-content">
+                <div>
+                  <div class="pages__item-title">Условия сотрудничества</div>
+                  <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших пациентов</div>
+                </div>
+                <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              </div>
+              <div class="pages__item-small-img">
+                <img src="./img/ans_image/pages_coop.webp" alt="">
+              </div>
+            </div>
+            <div class="pages__item pages__item-big">
+              <div class="pages__item-big-img">
+                <picture>
+                  <source media="(max-width: 769px)" srcset="./img/ans_image/pages-news-mob.webp" />
+                  <source media="(min-width: 768px)" srcset="./img/ans_image/pages_news.webp" />
+                  <img src="./img/ans_image/pages_news.webp" alt="" />
+                </picture>
+              </div>
+              <div class="pages__item-big-content">
+                <div>
+                  <div class="pages__item-title">Новости клиники</div>
+                  <div class="pages__item-text">Подробнее об акции. Как и многие другие направления медицины, хирургия делится на широкий спектр различных отраслей направления медицины, хирургия делится</div>
+                </div>
+                <a href="#" class="pages__item-link link">Перейти в раздел</a>
+              </div>
             </div>
           </div>
-          <div class="pages__item pages__item-small">
-            <div class="pages__item-small-content">
-              <div>
-                <div class="pages__item-title">Лицензии и свидетельства</div>
-                <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших пациентов</div>
-              </div>
-              <a href="#" class="pages__item-link link">Перейти в раздел</a>
-            </div>
-            <div class="pages__item-small-img">
-              <img src="./img/ans_image/pages_license.webp" alt="">
-            </div>
-          </div>
-          <div class="pages__item pages__item-small">
-            <div class="pages__item-small-content">
-              <div>
-                <div class="pages__item-title">Корпоративным клиентам и<br>страховым компаниям</div>
-                <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших</div>
-              </div>
-              <a href="#" class="pages__item-link link">Перейти в раздел</a>
-            </div>
-            <div class="pages__item-small-img">
-              <img src="./img/ans_image/pages_clients.webp" alt="">
-            </div>
-          </div>
-          <div class="pages__item pages__item-small">
-            <div class="pages__item-small-content">
-              <div>
-                <div class="pages__item-title">Контроль качества медицинских услуг</div>
-                <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших пациентов</div>
-              </div>
-              <a href="#" class="pages__item-link link">Перейти в раздел</a>
-            </div>
-            <div class="pages__item-small-img">
-              <img src="./img/ans_image/pages_control.webp" alt="">
-            </div>
-          </div>
-          <div class="pages__item pages__item-small">
-            <div class="pages__item-small-content">
-              <div>
-                <div class="pages__item-title">Условия сотрудничества</div>
-                <div class="pages__item-small-text">Подробные ответы на самые частозадоваемые вопросы наших пациентов</div>
-              </div>
-              <a href="#" class="pages__item-link link">Перейти в раздел</a>
-            </div>
-            <div class="pages__item-small-img">
-              <img src="./img/ans_image/pages_coop.webp" alt="">
-            </div>
-          </div>
-          <div class="pages__item pages__item-big">
-            <div class="pages__item-big-img">
-              <img src="./img/ans_image/pages_news.webp" alt="">
-            </div>
-            <div class="pages__item-big-content">
-              <div>
-                <div class="pages__item-title">Новости клиники</div>
-                <div class="pages__item-text">Подробнее об акции. Как и многие другие направления медицины, хирургия делится
-                  на широкий спектр различных отраслей направления медицины, хирургия делится</div>
-              </div>
-              <a href="#" class="pages__item-link link">Перейти в раздел</a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   </main>
@@ -250,8 +294,8 @@
     <script src="./js/jquery-ui_(1.13.2).min.js"></script>
     <script src="./js/jquery.maskedinput.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/main-a.js"></script>
+    <script src="./js/js-dim.js"></script>
 </body>
   
 </html>

@@ -2,7 +2,7 @@
 
 $( document ).ready(function() {
 
-    $('.tabs-news__btn').click(function () {
+    $('.tabs-news__btn').on('click', function () {
       $('.tabs-news__btn').removeClass('active')
       $(this).toggleClass('active')
     })
