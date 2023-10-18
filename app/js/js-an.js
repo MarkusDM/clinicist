@@ -9,15 +9,42 @@ storyItems.forEach( e => {
   })
 })
 
-// const proceduresSwiper = new Swiper('.procedures__item-swiper', {
-//   navigation: {
-//     nextEl: '.procedures__item-btn-next',
-//     prevEl: '.procedures__item-btn-prev',
-//   },
-//   slidesPerView: 1,
-//   spaceBetween: rem(3),
-//   speed: 1000,
-// })
+
+const historySlider = new Swiper('.story-swiper', {
+  freeMode: false,
+  slidesPerView: 5,
+  spaceBetween: rem(4),
+  speed: 1000,
+  breakpoints: {
+    768: {
+      slidesPerView: 5,
+      spaceBetween: rem(4),
+    },
+    200: {
+      slidesPerView: 2,
+      spaceBetween: rem(8.8),
+    }
+  }
+})
+
+const doctorsSlider = new Swiper('.our-doctors__slider', {
+  slidesPerView: 3,
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  const width = window.innerWidth;
+  let slidesHistory = historySlider.slides;
+  //let slidesDoctors = doctorsSlider.slides();
+  if (width < 768){
+    historySlider.init(historySlider);
+    doctorsSlider.init();
+  }
+  if (slidesHistory.length > 5) {
+    historySlider.init(historySlider);
+  }
+  historySlider.destroy(false, false);
+  doctorsSlider.destroy(false, false);
+})
 
 const valueThumbs = new Swiper('.thumbs-swiper', {
   slideToClickedSlide: true,

@@ -2363,11 +2363,21 @@
         }
       }
     }
-    &.new-clinic-korporativnie{
+    &.new-clinic-korporativnie, 
+    &.new-clinic-history {
       & .new-clinic__list li{
         color: rgba(51, 51, 51, 0.5);
         padding-left: 9.2rem;
         max-width: 66.8rem;
+      }
+    }
+    &.new-clinic-history {
+      .new-clinic {
+        &__content {
+          &-text {
+            margin-bottom: 6rem;
+          }
+        }
       }
     }
     &.new-clinic-kontrol-kachestva {

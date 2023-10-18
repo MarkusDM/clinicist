@@ -112,6 +112,10 @@
   }
   &-history {
     margin-bottom: 10rem;
+    & .baner__picture {
+      height: auto;
+      margin-top: -2rem;
+    }
   }
   &__container {
     display: grid;
@@ -5175,6 +5179,18 @@
             left: 52%;
           }
         }
+      }
+    }
+    &-history {
+      margin-bottom: 20rem;
+      & .baner__inner::after {
+        top: 44rem;
+      }
+      & .baner__picture {
+        height: 57rem;
+        width: 82.8rem;
+        margin-top: 0rem;
+        margin-left: -5rem;
       }
     }
   }
