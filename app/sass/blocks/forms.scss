@@ -265,6 +265,7 @@ textarea {
   resize: none;
 }
 .input {
+  position: relative;
   padding-left: 3rem;
   display: grid;
   grid-template-columns: 2rem 1fr;
@@ -272,6 +273,9 @@ textarea {
   border-radius: 7.2rem;
   background-color: #ffffff;
   transition: all 0.3s ease;
+  &._form-error {
+    border: 1px solid #E81919;
+  }
   &._form-focus {
     border: 1px solid $blue;
   }

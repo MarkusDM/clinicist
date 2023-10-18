@@ -27724,6 +27724,7 @@ textarea {
   resize: none; }
 
 .input {
+  position: relative;
   padding-left: 3rem;
   display: grid;
   grid-template-columns: 2rem 1fr;
@@ -27732,6 +27733,8 @@ textarea {
   background-color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
+  .input._form-error {
+    border: 1px solid #E81919; }
   .input._form-focus {
     border: 1px solid #36b4f1; }
   .input._filled {

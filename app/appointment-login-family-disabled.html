@@ -256,11 +256,11 @@
                           </div>
                         </div>
                         <div class="steps__form-wrap">
-                          <form action="#" class="steps__form application">
+                          <form data-dev action="#" class="steps__form application">
                             <span class="application__title heading">Контактные данные</span>
                             <div class="application__fields">
-                              <div class="application__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Ваше имя" class="input__field"></div>
-                              <div class="application__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder class="input__field tel-mask"></div>
+                              <div class="application__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Ваше имя" class="input__field"></div>
+                              <div class="application__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder class="input__field tel-mask"></div>
                             </div>
                             <div class="application__contacts">
                               <span class="application__contacts-subtitle txt">Выберите способ связи:</span>

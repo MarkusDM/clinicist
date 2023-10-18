@@ -499,7 +499,7 @@
                           </div>
                         </div>
                         <div class="steps__form-wrap">
-                         <form action="#" class="steps__login-form login-form">
+                         <form data-dev action="#" class="steps__login-form login-form">
                             <div class="login-form__head">
                                 <span class="login-form__subtitle subtitle">Для продолжения,  вам необходимо зарегистрироваться</span>
                                 <span class="login-form__title heading">Регистрация</span>
@@ -516,15 +516,15 @@
                                     </div>
                                 </div>
                                 <div class="login-form__fields">
-                                    <div class="login-form__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-                                    <div class="login-form__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-                                    <div class="login-form__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-                                    <div class="login-form__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-                                    <div class="login-form__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
+                                    <div class="login-form__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+                                    <div class="login-form__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+                                    <div class="login-form__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+                                    <div class="login-form__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+                                    <div class="login-form__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
                                 </div>
                                 <div class="login-form__password">
-                                    <div class="login-form__input input input_pass"><input autocomplete="off" type="password" name="form[]" data-error placeholder="Введите пароль" class="input__field"><button class="input__viewpass" type="button"><img src="./img/a-image/icons/eye-grey.svg" alt=""></button></div>
-                                    <div class="login-form__input input input_pass"><input autocomplete="off" type="password" name="form[]" data-error placeholder="Повторите пароль" class="input__field"><button class="input__viewpass" type="button"><img src="./img/a-image/icons/eye-grey.svg" alt=""></button></div>
+                                    <div class="login-form__input input input_pass"><input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Введите пароль" class="input__field"><button class="input__viewpass" type="button"><img src="./img/a-image/icons/eye-grey.svg" alt=""></button></div>
+                                    <div class="login-form__input input input_pass"><input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Повторите пароль" class="input__field"><button class="input__viewpass" type="button"><img src="./img/a-image/icons/eye-grey.svg" alt=""></button></div>
                                 </div>
                                 <div class="login-form__checkbox checkbox _mobile-only">
                                   <input id="c_1" data-error class="checkbox__input" type="checkbox" value="1" name="form[]">
@@ -798,10 +798,7 @@
         <form data-dev action="#" class="appointment-modal__form">
           <div class="appointment-modal__input-wrap">
             <input
-              autocomplete="off"
-              type="tel"
-              name="form[]"
-              data-error
+            data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле"
               placeholder
               class="appointment-modal__input tel-mask" />
           </div>
@@ -912,10 +909,10 @@
             </div>
           </div>
           <div class="add-patient-modal__fields">
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="add-patient-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="add-patient-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
           </div>
           <button type="submit" class="add-patient-modal__btn btn">Сохранить</button>
         </form>
@@ -949,10 +946,10 @@
             </div>
           </div>
           <div class="add-patient-modal__fields">
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="add-patient-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="add-patient-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
           </div>
           <div class="add-patient-modal__warning warning">
             <div class="warning__icon-wrap"><img aria-hidden="true" src="./img/a-image/icons/warning-red.svg" alt="" class="warning__icon"></div>
@@ -1054,11 +1051,11 @@
             </div>
         </div>
           <div class="registration-modal__fields">
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="registration-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-            <div class="registration-modal__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="registration-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+            <div class="registration-modal__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
           </div>
           <div class="registration-modal__actions">
             <div class="registration-modal__checkbox checkbox">
@@ -1102,13 +1099,13 @@
             </div>
         </div>
           <div class="registration-modal__fields">
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="registration-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-            <div class="registration-modal__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
-            <div class="registration-modal__input registration-modal__input_fc input input_password"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Введите пароль" class="input__field"></div>
-            <div class="registration-modal__input input input_password"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Повторите пароль" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="registration-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+            <div class="registration-modal__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
+            <div class="registration-modal__input registration-modal__input_fc input input_password"><input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Введите пароль" class="input__field"></div>
+            <div class="registration-modal__input input input_password"><input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Повторите пароль" class="input__field"></div>
           </div>
           <div class="registration-modal__actions">
             <div class="registration-modal__checkbox checkbox">
@@ -1152,12 +1149,12 @@
             </div>
         </div>
           <div class="registration-modal__fields registration-modal__fields_m20">
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="registration-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-            <div class="registration-modal__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
-            <div class="registration-modal__input input input_code"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Код подтверждения" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="registration-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+            <div class="registration-modal__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
+            <div class="registration-modal__input input input_code"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Код подтверждения" class="input__field"></div>
           </div>
           <div class="registration-modal__verify verify txt">
             <div class="verify__group">
@@ -1195,7 +1192,7 @@
           <span class="registration-confirm-modal__title title">Регистрация</span>
         </div>
         <form data-dev action="#" class="registration-confirm-modal__form">
-          <div class="registration-confirm-modal__input input input_code"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Код подтверждения" class="input__field"></div>
+          <div class="registration-confirm-modal__input input input_code"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Код подтверждения" class="input__field"></div>
           <p class="registration-confirm-modal__text txt">Через несколько секунд вам придеть SMS-сообщение с кодом подтверждения.</p>
           <div class="registration-confirm-modal__checkbox checkbox">
             <input id="c_1" data-error class="checkbox__input" type="checkbox" value="1" name="form[]">
