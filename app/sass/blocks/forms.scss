@@ -20,6 +20,14 @@
   padding: 6.8rem 6.8rem 6rem 6.8rem;
   display: flex;
   flex-direction: column;
+  &_person {
+    .application__contacts {
+      margin-bottom: 4rem;
+    }
+    .application__checkbox {
+      margin-bottom: 4rem;
+    }
+  }
   .contact-item {
     min-width: 14.7rem;
   }
@@ -164,6 +172,7 @@
   &__text {
     font-family: 'MyriadPro';
     font-size: 1.6rem;
+    line-height: 160%;
     color: rgba(51, 51, 51, 0.5);
     @media (max-width: 48.98em) {
       font-size: 2.6rem;
@@ -204,7 +213,7 @@
   // .options__text
 
   &__text {
-    @extend .checkbox__text;    
+    @extend .checkbox__text;
     line-height: 150%;
   }
 }
@@ -262,6 +271,14 @@ textarea {
   border: 1px solid #D8DDE4;
   border-radius: 7.2rem;
   background-color: #ffffff;
+  transition: all 0.3s ease;
+  &._form-focus {
+    border: 1px solid $blue;
+  }
+  &._filled {
+    border: 1px solid $blue;
+    background-color: #F3FBFF;
+  }
   &::placeholder {
     font-weight: 400;
   }
@@ -315,6 +332,14 @@ textarea {
     }
   }
 
+  // .input_password
+
+  &_password {
+    &::before {
+      background-image: url(../img/a-image/icons/key-grey.svg);
+    }
+  }
+
   // .input__field
 
   &__field {
@@ -322,10 +347,21 @@ textarea {
     padding: 1.8rem 2rem;
     border: none;
     border-radius: 7.2rem;
-    font-size: 1.6rem;    
+    font-size: 1.6rem;
     line-height: 140%;
+    background-color: transparent;
+    transition: color 0.3s ease;
+    &._form-focus {
+    color: #2f2f2f;
+    }
+    ._filled & {
+      color: #2f2f2f;
+    }
+    &::placeholder {
+      color: rgba(51, 51, 51, 0.50);
+    }
   }
-  
+
 }
 
 // login form
@@ -428,6 +464,18 @@ textarea {
     margin-bottom: 3.8rem;
   }
 
+  // .personal-data__fields
+
+  &__fields {
+    margin-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    .personal-data__input {
+      margin: 0;
+    }
+  }
+
   // .personal-data__input
 
   &__input {
@@ -472,6 +520,13 @@ textarea {
 @media (max-width: 48em){
   .personal-data {
     padding: 5rem 4rem 8rem 4rem;
+    &__fields {
+      margin-bottom: 4rem;
+      row-gap: 4rem;
+      &_family {
+        margin-bottom: 8rem;
+      }
+    }
     &__family-heading {
       margin-bottom: 6rem;
       font-weight: 500;
@@ -542,11 +597,24 @@ textarea {
   }
   .application {
     padding: 5rem 4rem 8rem 4rem;
-    .patients {
-      display: none;
+    &_person {
+      .application__contacts {
+        margin-bottom: 6rem;
+      }
+      .application__checkbox {
+        margin-bottom: 6.4rem;
+      }
     }
     .contact-item {
       min-width: none;
+    }
+    &__patients {
+      &_mobile {
+        margin-bottom: 4rem;
+      }
+      &:not(&_mobile) {
+        display: none;
+      }
     }
     &__warning {
       display: none;
@@ -580,6 +648,10 @@ textarea {
     &__checkbox {
       margin-bottom: 4rem;
     }
+    &__heading {
+      margin-bottom: 6.4rem;
+      font-weight: 500;
+    }
   }
    .input {
     padding-left: 4rem;
@@ -605,12 +677,12 @@ textarea {
       font-size: 3.2rem;
       line-height: 150%;
     }
-   } 
+   }
 }
 @media (min-width: 48em){
    .login-form {
       .input__viewpass {
           display: none;
     }
-   } 
+   }
 }

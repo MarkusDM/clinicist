@@ -1886,6 +1886,117 @@ document.addEventListener('DOMContentLoaded', function () {
     target.classList.add(className)
   }
 
+  // control window scroll event
+  let addWindowScrollEvent = false
+
+  // sticky block
+  function stickyBlock() {
+    addWindowScrollEvent = true
+    function stickyBlockInit() {
+      const stickyParents = document.querySelectorAll('[data-sticky]')
+      if (stickyParents.length) {
+        stickyParents.forEach(stickyParent => {
+          let stickyConfig = {
+            media: stickyParent.dataset.sticky
+              ? parseInt(stickyParent.dataset.sticky)
+              : null,
+            top: stickyParent.dataset.stickyTop
+              ? parseInt(stickyParent.dataset.stickyTop)
+              : 0,
+            bottom: stickyParent.dataset.stickyBottom
+              ? parseInt(stickyParent.dataset.stickyBottom)
+              : 0,
+            header: stickyParent.hasAttribute('data-sticky-header')
+              ? document.querySelector('header.header').offsetHeight
+              : 0,
+          }
+          stickyBlockItem(stickyParent, stickyConfig)
+        })
+      }
+    }
+    function stickyBlockItem(stickyParent, stickyConfig) {
+      const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]')
+      const headerHeight = stickyConfig.header
+      const offsetTop = headerHeight + stickyConfig.top
+      const startPoint =
+        stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop
+
+      document.addEventListener('windowScroll', stickyBlockActions)
+      //window.addEventListener("resize", stickyBlockActions);
+
+      function stickyBlockActions(e) {
+        const endPoint =
+          stickyParent.offsetHeight +
+          stickyParent.getBoundingClientRect().top +
+          scrollY -
+          (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom)
+        let stickyItemValues = {
+          position: 'relative',
+          top: '0',
+          left: '0',
+          width: 'auto',
+        }
+        if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
+          if (
+            offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight <
+            window.innerHeight
+          ) {
+            if (scrollY >= startPoint && scrollY <= endPoint) {
+              stickyItemValues.position = `relative`
+              stickyItemValues.zIndex = `1`
+              stickyItemValues.top = `0`
+              stickyItemValues.left = `0`
+              stickyItemValues.width = `auto`
+            } else if (scrollY >= endPoint) {
+              stickyItemValues.position = `fixed`
+              stickyItemValues.zIndex = `200`
+              stickyItemValues.top = `0`
+              stickyItemValues.left = `calc((100vw - 100%) / -2)`
+              stickyItemValues.width = `100vw`
+            }
+          }
+        }
+        stickyBlockType(stickyBlockItem, stickyItemValues)
+      }
+    }
+    function stickyBlockType(stickyBlockItem, stickyItemValues) {
+      stickyBlockItem.style.cssText = `position:${stickyItemValues.position};z-index:${stickyItemValues.zIndex};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`
+    }
+    stickyBlockInit()
+  }
+  stickyBlock()
+
+  setTimeout(() => {
+    if (addWindowScrollEvent) {
+      let windowScroll = new Event('windowScroll')
+      window.addEventListener('scroll', function (e) {
+        document.dispatchEvent(windowScroll)
+      })
+    }
+  }, 0)
+
+  // timer
+  function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        if (seconds === 0 && minutes === 0) {
+          display.textContent =  "00:00";
+          return
+        }
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+  }
+
   // ===========================================================================
 
   const onClickHandler = e => {
@@ -2003,10 +2114,9 @@ document.addEventListener('DOMContentLoaded', function () {
       )
     }
     if (target.closest('.all-services__service-card')) {
-      const targetParent = target.closest('.all-services__service-card').parentElement
       setActiveClass(
         target.closest('.all-services__service-card'),
-        targetParent.querySelectorAll('.all-services__service-card'),
+        document.querySelectorAll('.all-services__service-card'),
         '_active'
       )
     }
@@ -2065,5 +2175,9 @@ document.addEventListener('DOMContentLoaded', function () {
     initSliders()
     setHoursHeight()
     moveImage()
+  })
+  window.addEventListener('load', function() {
+    const display = document.querySelector('#time');
+    startTimer(72, display);
   })
 })

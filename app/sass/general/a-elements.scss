@@ -583,6 +583,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3.6rem;
+      row-gap: 3.3rem;
+      .select {
+        flex: 0 0 auto;
+        width: auto;
+      }
+      .sort-dropdown__item {
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 1.2rem;
+      }
+    }
   }
   &__item {
     display: inline-flex;
@@ -1904,16 +1919,16 @@ box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 2.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
     border: 1px solid rgba(47, 47, 47, 0.35);
     border-radius: 50%;
     &::before {
       content: "";
-      flex: 0 0 1.1rem;
-      width: 1.1rem;
-      height: 1.1rem;
+      flex: 0 0 1rem;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
       background-color: $orange;
       transform: scale(0);
@@ -1950,7 +1965,7 @@ box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
     max-width: 21.6rem;
 font-family: MyriadPro;
 font-size: 2.2rem;
-line-height: 127.273%; 
+line-height: 127.273%;
   }
 }
 
@@ -1979,7 +1994,7 @@ line-height: 127.273%;
     height: 100%;
     object-fit: contain;
     }
-  
+
   }
 
   // .hint__body
@@ -2064,7 +2079,7 @@ line-height: 127.273%;
   }
 }
 
-// patients 
+// patients
 .patients {
   display: flex;
   flex-direction: column;
@@ -2228,6 +2243,16 @@ line-height: 127.273%;
       object-fit: contain;
     }
   }
+
+
+  // .details-steps__item-cost
+
+  &__item-cost {
+    color: $blue;
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-weight: 600;
+  }
 }
 
 // warning
@@ -2249,24 +2274,131 @@ line-height: 127.273%;
   // .warning__text
 
   &__text {
-    font-size: 1.6rem;    
+    font-size: 1.6rem;
     line-height: 150%;
     color: #2f2f2f;
   }
 }
 
+// all-doctors card
+.all-doctors-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.6rem;
+  font-family: MyriadPro;
+  text-align: center;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
+  background-color: #ffffff;
+
+  // .all-doctors-card__image-wrap
+
+  &__image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 14rem;
+    border: 2px solid $blue;
+    border-radius: 50%;
+  }
+
+  // .all-doctors-card__image
+
+  &__image {
+    flex: 0 0 12rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  // .all-doctors-card__heading
+
+  &__heading {
+    position: relative;
+    flex: 1 1 auto;
+    font-size: 2.2rem;
+    line-height: 145.455%;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6.6rem;
+      height: 1px;
+      bottom: -0.8rem;
+      left: 50%;
+      background-color: $blue;
+      transform: translateX(-50%);
+    }
+  }
+
+  // .all-doctors-card__text
+
+  &__text {
+    font-size: 1.3rem;
+    line-height: 246.154%;
+  }
+}
+
+// verify
+.verify {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+
+  // .verify__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .verify__heading
+
+  &__heading {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: $blue;
+  }
+
+  // .verify__text
+
+  &__text {
+  }
+}
 
 @media (max-width: 48em) {
+  .all-doctors-card {
+    padding: 1.6rem 3.4rem;
+    row-gap: normal;
+    &__image-wrap {
+      margin-bottom: 2.4rem;
+    }
+    &__heading {
+      margin-bottom: 3.2rem;
+      font-size: 3rem;
+      line-height: 130.333%;
+      &::after {
+        bottom: -1.6rem;
+        width: 13.2rem;
+      }
+    }
+    &__text {
+      font-size: 2.6rem;
+      line-height:  246.154%;
+    }
+  }
   .patients {
     .option {
       margin-top: 4.3rem;
       align-self: flex-start;
-      flex: 0 0 3.2rem;
-      width: 3.2rem;
-      height: 3.2rem;
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
       &::before {
-        width: 2.9rem;
-        height: 2.9rem;
+        width: 12px;
+        height: 12px;
       }
     }
     &__item {
@@ -2302,6 +2434,9 @@ line-height: 127.273%;
   .details-steps {
     border: none;
     border-radius: 0;
+    &__item-cost {
+      font-size: 3.2rem;
+    }
     &__head {
       display: none;
     }
@@ -3344,6 +3479,16 @@ line-height: 127.273%;
     &__row {
       flex-direction: column;
       row-gap: 4rem;
+      &_grid {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+        .sort-dropdown__item {
+          row-gap: 1.4rem;
+        }
+      }
+    }
+    &__body {
+      margin-bottom: 2rem;
     }
     &__inner {
       padding: 4rem 0 0 0;

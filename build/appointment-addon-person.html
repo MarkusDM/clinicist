@@ -18,7 +18,7 @@
       href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="./css/choices.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Врачи (детальная)</title>
+    <title>Запись на приём</title>
     <noscript>
       <style>
         /**
@@ -41,88 +41,40 @@
   <body>
     
     <main class="main">
-      <section class="doctors-hero">
-        <div class="doctors-hero__container container">
-          <div class="doctors-hero__text-wrap">
-            <nav class="doctors-hero__breadcrumbs breadcrumbs txt">
+      <section class="baner baner-doctors-chapter-zapis">
+        <div class="baner__container container">
+          <div class="baner__text-wrap">
+            <nav class="baner__breadcrumbs breadcrumbs txt">
               <a href="#" class="breadcrumbs__link">Главная</a>
-              <a href="#" class="breadcrumbs__link">Врачи</a>
-              <span class="breadcrumbs__text"
-                >Мишустин Александр Васильевич</span
-              >
+              <span class="breadcrumbs__text">Запись на прием</span>
             </nav>
-            <div class="doctors-hero__application">
-              <span class="doctors-hero__title title"
-                >Мишустина Александра Васильевна</span
-              >
-              <form
-                data-da=".doctors-hero__container,768,last"
-                action="#"
-                class="doctors-hero__form">
-                <div class="doctors-hero__input-wrap">
-                  <input
-                    autocomplete="off"
-                    type="tel"
-                    name="form[]"
-                    data-error
-                    placeholder=""
-                    class="doctors-hero__input tel-mask" />
+            <div class="baner__text-content">
+              <span class="baner__title title">Запись на прием</span>
+              <p class="baner__text txt text-item">
+                Вы можете записаться к нам в клинику по номеру телефона или
+                онлайн на сайте
+              </p>
+              <a href="tel:79563665474" class="baner__call-link">
+                <div class="baner__call-link-icon">
+                  <img
+                    src="./img/a-image/icons/phone-white.svg"
+                    aria-hidden="true"
+                    alt="" />
                 </div>
-                <button type="submit" class="doctors-hero__btn btn">
-                  Оставить заявку
-                </button>
-              </form>
+                <span class="baner__call-link-text txt">+7 956 366 54 74</span>
+              </a>
             </div>
           </div>
-          <div class="doctors-hero__info">
-            <div class="doctors-hero__image-wrap">
-              <img
-                src="./img/a-image/doctor-card-img.webp"
-                alt=""
-                class="doctors-hero__image" />
-              <div
-                data-da=".doctors-hero__rating-wrap,768,1"
-                class="doctors-hero__price">
-                <span class="doctors-hero__price-text txt">Прием от </span>
-                <span class="doctors-hero__price-value"
-                  >1200 <span>₽</span></span
-                >
-              </div>
-            </div>
-            <div class="doctors-hero__group">
-              <div class="doctors-hero__labels">
-                <div class="doctors-hero__label">Гениколог</div>
-                <div class="doctors-hero__label">Акушер-гениколог</div>
-                <div class="doctors-hero__label">Хирург-уролог</div>
-                <div class="doctors-hero__label">Репродуктолог</div>
-              </div>
-              <div class="doctors-hero__rating-wrap">
-                <span class="doctors-hero__rating-text txt"
-                  >Высшая категория • Стаж 21 год</span
-                >
-                <div class="doctors-hero__rating-row">
-                  <span class="doctors-hero__rating-value">4.8</span>
-                  <div class="doctors-hero__rating-stars rating">
-                    <div class="rating__item rating__item_full"></div>
-                    <div class="rating__item rating__item_full"></div>
-                    <div class="rating__item rating__item_full"></div>
-                    <div class="rating__item rating__item_full"></div>
-                    <div class="rating__item rating__item_half"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="doctors-hero__row">
-                <span class="doctors-hero__text txt">1094 отзывов</span>
-                <a href="#" class="doctors-hero__link link"
-                  >Читать все отзывы</a
-                >
-              </div>
-            </div>
+          <div class="baner__image-wrap">
+            <img
+              src="./img/a-image/appointment-banner.webp"
+              alt=""
+              class="baner__image" />
           </div>
         </div>
       </section>
 
-      <section class="steps">
+      <section  class="steps steps-appointment">
         <div data-spoilers class="steps__container container">
           <div class="steps__spoiler">
             <button
@@ -134,251 +86,71 @@
             <div class="steps__body">
               <div class="steps__inner">
                 <div data-tabs class="steps__tabs">
-                  <nav data-tabs-titles class="steps__navigation">
-                    <button type="button" class="steps__title">
-                      <span class="steps__num">1</span>
-                      <span class="steps__title-text"
-                        >Выбор даты и времени</span
-                      >
-                    </button>
-                    <button type="button" class="steps__title">
-                      <span class="steps__num">2</span>
-                      <span class="steps__title-text">Выбор услуги</span>
-                    </button>
-                    <button type="button" class="steps__title _tab-active">
-                      <span class="steps__num">3</span>
-                      <span class="steps__title-text">Запись на прием</span>
-                    </button>
-                  </nav>
+                  <div data-sticky class="steps__navigation-wrap">
+                    <nav data-sticky-item data-tabs-titles class="steps__navigation steps__navigation_addon">
+                      <button type="button" class="steps__title">
+                        <span class="steps__num">1</span>
+                        <span class="steps__title-text"
+                          >Выбор специализации</span
+                        >
+                      </button>
+                      <button type="button" class="steps__title">
+                        <span class="steps__num">2</span>
+                        <span class="steps__title-text">Выбор времени и врача</span>
+                      </button>
+                      <button type="button" class="steps__title">
+                        <span class="steps__num">3</span>
+                        <span class="steps__title-text">Выбор услуги</span>
+                      </button>
+                      <button type="button" class="steps__title _tab-active">
+                        <span class="steps__num">4</span>
+                        <span class="steps__title-text">Оформление записи на прием</span>
+                      </button>
+                    </nav>
+                  </div>
                   <div data-tabs-body class="steps__content">
-                    <div class="steps__body">
+                    <div class="steps__body steps__body_hint">
                       <div class="steps__head">
                         <button type="button" class="steps__head-back link">
                           Вернуться назад
                         </button>
                         <span class="steps__subtitle"
-                          ><span class="steps__subtitle-txt">Шаг 1.</span> Выберите дату и время
-                          приема</span
+                          ><span class="steps__subtitle-txt">Шаг 1.</span> Выберите специализацию врача
+                          <div class="steps__hint hint">
+                            <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
+                            <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
+                          </div></span
                         >
                       </div>
+                    </div>
+                    <div class="steps__body steps__body_hint">
+                      <div class="steps__head">
+                        <button type="button" class="steps__head-back link">
+                          Вернуться назад
+                        </button>
+                        <div class="steps__subtitle">
+                          <span class="steps__subtitle-txt">Шаг 2.</span> Выберите свободное время и врача
+                          <div class="steps__hint hint">
+                            <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
+                            <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
+                          </div>
+                        </div>
+                      </div>
                       <div class="steps__wrapper">
-                        <div id="datepicker"></div>
-                        <div class="steps__options">
-                          <div class="steps__select-wrap centers-select">
-                            <select data-show-selected name="form[]">
-                              <option
-                                data-asset="г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК Замок)"
-                                value="1"
-                                selected>
-                                Центр планирования семьи «Клиницист»
-                              </option>
-                              <option
-                                data-asset="г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева)"
-                                value="2">
-                                Центр «Клиницист»
-                              </option>
-                            </select>
-                          </div>
-                          <div class="steps__date date">
-                            <button type="button" class="date__item txt">
-                              <span class="_desktop-only">Понедельник</span>
-                              <span class="_mobile-only">Пн</span>
-                              <span class="date__day">22 апр.</span>
-                            </button>
-                            <button
-                              type="button"
-                              class="date__item _active txt">
-                              <span class="_desktop-only">Воскресенье</span>
-                              <span class="_mobile-only">Вс</span>
-                              <span class="date__day">22 апр.</span>
-                            </button>
-                            <button type="button" class="date__item txt">
-                              <span class="_desktop-only">Среда</span>
-                              <span class="_mobile-only">Ср</span>
-                              <span class="date__day">22 апр.</span>
-                            </button>
-                            <button
-                              data-popup="#datepicker-modal"
-                              type="button"
-                              class="date__calendar">
-                              <img
-                                src="./img/a-image/icons/calendar.svg"
-                                aria-hidden="true"
-                                alt="" />
-                            </button>
-                          </div>
-                          <div class="steps__hours-group">
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                            <button
-                              type="button"
-                              class="steps__hours hours-item _desktop-only">
-                              9:00 - 9:15
-                            </button>
-                          </div>
-                          <div class="steps__actions">
-                            <button
-                              data-popup="#appointment-modal"
-                              type="button"
-                              class="steps__btn btn btn_white">
-                              Записаться к врачу
-                            </button>
-                            <a href="tel:88612073374" class="steps__call link"
-                              >8 (861) 207-33-74</a
-                            >
+                        <div class="steps__services-labels swiper">
+                          <div
+                            class="steps__services-labels-wrap swiper-wrapper">
+                            <div
+                              class="steps__service-label service-label swiper-slide">
+                              <div class="service-label__icon-wrap">
+                                <img
+                                  src="./img/a-image/icons/hospital.svg"
+                                  alt=""
+                                  aria-hidden="true"
+                                  class="service-label__icon" />
+                              </div>
+                              <span class="service-label__text">Гематолог</span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -389,7 +161,7 @@
                           Вернуться назад
                         </button>
                         <div class="steps__subtitle">
-                          <span class="steps__subtitle-txt">Шаг 2.</span> Выберите услугу для записи
+                          <span class="steps__subtitle-txt">Шаг 3.</span> Выберите услугу для записи
                           <div class="steps__hint hint">
                             <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
                             <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
@@ -436,19 +208,6 @@
                                 >Мишустина Александра</span
                               >
                             </div>
-                            <div
-                              class="steps__service-label service-label swiper-slide">
-                              <div class="service-label__icon-wrap">
-                                <img
-                                  src="./img/a-image/icons/calendar-outline-black.svg"
-                                  alt=""
-                                  aria-hidden="true"
-                                  class="service-label__icon" />
-                              </div>
-                              <span class="service-label__text"
-                                >24.04.23, 10:00-11:00</span
-                              >
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -459,7 +218,7 @@
                           Вернуться назад
                         </button>
                         <div class="steps__subtitle">
-                          <span class="steps__subtitle-txt">Шаг 3.</span> Оформление заявки
+                          <span class="steps__subtitle-txt">Шаг 4.</span> Оформление записи на прием
                           <div class="steps__hint hint">
                             <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
                             <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
@@ -467,71 +226,52 @@
                         </div>
                       </div>
                       <div data-spoilers class="steps__wrapper steps__wrapper_no-padding">
-                          <div class="steps__spoiler _mobile-only">
-                            <button type="button" data-spoiler class="steps__spoiler-title">Детали записи</button>
-                            <div class="steps__spoiler-body"></div>
-                          </div>
-                        <div data-da=".steps__spoiler-body,768,first" class="steps__details steps__details_mb details-steps">
-                          <div class="details-steps__head">
-                            <span class="details-steps__heading heading">Детали заявки</span>
-                          </div>
-                          <div class="details-steps__group">
-                            <div class="details-steps__item">
-                              <span class="details-steps__item-subtitle">Специализация</span>
-                              <span class="details-steps__item-text">УЗИ детям</span>
-                            </div>
-                            <div class="details-steps__item">
-                              <span class="details-steps__item-subtitle">Услуга</span>
-                              <span class="details-steps__item-text">УЗИ детям</span>
-                            </div>
-                            <div class="details-steps__item">
-                              <span class="details-steps__item-subtitle">Клиника</span>
-                              <span class="details-steps__item-text">Центр планирования семьи «Клиницист»</span>
-                              <span class="details-steps__item-subtext">г. Краснодар, ул. Монтажников, 2 </span>
-                            </div>
-                            <div class="details-steps__item">
-                              <span class="details-steps__item-subtitle">Врач</span>
-                              <div class="details-steps__item-row">
-                                <div class="details-steps__item-image"><img src="./img/a-image/doctor-card-img.webp" alt=""></div>
-                                <span class="details-steps__item-text">Мишустина Александра Ивановна</span>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="steps__spoiler _mobile-only">
+                          <button type="button" data-spoiler class="steps__spoiler-title">Детали записи</button>
+                          <div class="steps__spoiler-body"></div>
                         </div>
-                        <div class="steps__form-wrap">
-                            <form action="#" class="steps__form personal-data">
-                                <span class="personal-data__heading heading">Персональные данные</span>
-                                <div class="personal-data__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-                                <div class="personal-data__family">
-                                    <span class="personal-data__family-heading heading">Персональные данные</span>
-                                    <div class="personal-data__patients patients">
-                                        <div class="patients__item patients__item_disabled no-padding">
-                                            <button disabled type="button" class="patients__option option"></button>
-                                            <div class="patients__row">
-                                              <div class="patients__group">
-                                                <span class="patients__subtext txt">ФИО</span>
-                                                <span class="patients__text txt">Николай Тареченков Васильевич</span>
-                                              </div>
-                                              <div class="patients__group">
-                                                <span class="patients__subtext txt">Дата рождения</span>
-                                                <span class="patients__text txt">14.11.18</span>
-                                              </div>
-                                              <div class="patients__group">
-                                                <span class="patients__subtext txt">Пол</span>
-                                                <span class="patients__text txt">Мужской</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                    </div>
-                                </div>
-                                <div class="personal-data__warning warning">
-                                    <div class="warning__icon"><img aria-hidden="true" src="./img/a-image/icons/info.svg" alt=""></div>
-                                    <p class="warning__text txt">Данный врач недоступен для данного пациента. Пожалуйста, рассмотрите возможность выбора другого врача.</p>
-                                </div>
-                                <button data-popup="#sent-application-modal" type="button" class="personal-data__btn btn">Выбрать другого врача</button>
-                            </form>
+                      <div data-da=".steps__spoiler-body,768,first" class="steps__details steps__details_mb details-steps">
+                        <div class="details-steps__head">
+                          <span class="details-steps__heading heading">Детали заявки</span>
+                        </div>
+                        <div class="details-steps__group">
+                          <div class="details-steps__item">
+                            <span class="details-steps__item-subtitle">Специализация</span>
+                            <span class="details-steps__item-text">УЗИ детям</span>
+                          </div>
+                          <div class="details-steps__item">
+                            <span class="details-steps__item-subtitle">Услуга</span>
+                            <span class="details-steps__item-text">УЗИ детям</span>
+                          </div>
+                          <div class="details-steps__item">
+                            <span class="details-steps__item-subtitle">Клиника</span>
+                            <span class="details-steps__item-text">Центр планирования семьи «Клиницист»</span>
+                            <span class="details-steps__item-subtext">г. Краснодар, ул. Монтажников, 2 </span>
+                          </div>
+                          <div class="details-steps__item">
+                            <span class="details-steps__item-subtitle">Врач</span>
+                            <div class="details-steps__item-row">
+                              <div class="details-steps__item-image"><img src="./img/a-image/doctor-card-img.webp" alt=""></div>
+                              <span class="details-steps__item-text">Мишустина Александра Ивановна</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                      <div class="steps__form-wrap">
+                          <form action="#" class="steps__form personal-data">
+                              <span class="personal-data__heading heading">Контактные данные</span>
+                              <div class="personal-data__fields">
+                                <div class="personal-data__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
+                                <div class="personal-data__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder class="input__field tel-mask"></div>
+                              </div>
+                              <div class="personal-data__warning warning">
+                                  <div class="warning__icon"><img aria-hidden="true" src="./img/a-image/icons/warning-red.svg" alt=""></div>
+                                  <p class="warning__text txt">Данный врач недоступен для данного пациента. Пожалуйста, рассмотрите возможность выбора другого врача.</p>
+                              </div>
+                              <button type="submit" class="personal-data__btn btn">Выбрать другого врача</button>
+                          </form>
+                      </div>
+                    </div>
                     </div>
                   </div>
                 </div>

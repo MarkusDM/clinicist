@@ -18,7 +18,7 @@
       href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="./css/choices.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Врачи</title>
+    <title>Запись на приём</title>
     <noscript>
       <style>
         /**
@@ -39,324 +39,431 @@
     </noscript>
   </head>
   <body>
-    
+    <!-- @@include('./template/header.html') -->
     <main class="main">
-      <section class="baner baner-doctors">
+      <section class="baner baner-doctors-chapter-zapis">
         <div class="baner__container container">
           <div class="baner__text-wrap">
             <nav class="baner__breadcrumbs breadcrumbs txt">
               <a href="#" class="breadcrumbs__link">Главная</a>
-              <span class="breadcrumbs__text">Врачи</span>
+              <span class="breadcrumbs__text">Запись на прием</span>
             </nav>
             <div class="baner__text-content">
-              <span class="baner__title title">Врачи наших клиник</span>
+              <span class="baner__title title">Запись на прием</span>
               <p class="baner__text txt text-item">
-                В нашей клинике вы получите только самое современное и
-                эффективное лечение
+                Вы можете записаться к нам в клинику по номеру телефона или
+                онлайн на сайте
               </p>
-              <div class="baner__group">
-                <div class="baner__group-item">
-                  <span class="baner__group-item-heading">350+</span>
-                  <p class="baner__group-item-txt txt">Врачей в клиниках</p>
+              <a href="tel:79563665474" class="baner__call-link">
+                <div class="baner__call-link-icon">
+                  <img
+                    src="./img/a-image/icons/phone-white.svg"
+                    aria-hidden="true"
+                    alt="" />
                 </div>
-                <div class="baner__group-item">
-                  <span class="baner__group-item-heading">1000+</span>
-                  <p class="baner__group-item-txt txt">Здоровых пациентов</p>
-                </div>
-              </div>
+                <span class="baner__call-link-text txt">+7 956 366 54 74</span>
+              </a>
             </div>
           </div>
           <div class="baner__image-wrap">
             <img
-              src="./img/a-image/doctors-banner.webp"
+              src="./img/a-image/appointment-banner.webp"
               alt=""
               class="baner__image" />
           </div>
         </div>
       </section>
 
-      <section class="doctors">
-        <div data-spoilers class="doctors__container container">
-          <div class="doctors__spoiler alphabet-filter">
-            <button data-spoiler type="button" class="alphabet-filter__title">
-              Найти по алфавиту
+      <section  class="steps steps-appointment">
+        <div data-spoilers class="steps__container container">
+          <div class="steps__spoiler">
+            <button
+              type="button"
+              data-spoiler
+              class="steps__heading _spoiler-active title">
+              Записаться к врачу
             </button>
-            <div class="alphabet-filter__body">
-              <div class="alphabet-filter__group">
-                <button type="button" class="alphabet-filter__button">
-                  Все
-                </button>
-                <button type="button" class="alphabet-filter__button">А</button>
-                <button type="button" class="alphabet-filter__button">Б</button>
-                <button type="button" class="alphabet-filter__button">В</button>
-                <button type="button" class="alphabet-filter__button">Г</button>
-                <button type="button" class="alphabet-filter__button">Д</button>
-                <button type="button" class="alphabet-filter__button">Е</button>
-                <button type="button" class="alphabet-filter__button">Ж</button>
-                <button type="button" class="alphabet-filter__button">З</button>
-                <button type="button" class="alphabet-filter__button">И</button>
-                <button type="button" class="alphabet-filter__button">К</button>
-                <button type="button" class="alphabet-filter__button">Л</button>
-                <button type="button" class="alphabet-filter__button _active">
-                  М
-                </button>
-                <button type="button" class="alphabet-filter__button">Н</button>
-                <button type="button" class="alphabet-filter__button">О</button>
-                <button type="button" class="alphabet-filter__button">П</button>
-                <button type="button" class="alphabet-filter__button">Р</button>
-                <button type="button" class="alphabet-filter__button">С</button>
-                <button type="button" class="alphabet-filter__button">Т</button>
-                <button type="button" class="alphabet-filter__button">Ц</button>
-                <button type="button" class="alphabet-filter__button">Ш</button>
-                <button type="button" class="alphabet-filter__button">Щ</button>
-                <button type="button" class="alphabet-filter__button">Э</button>
-                <button type="button" class="alphabet-filter__button">Ю</button>
-                <button type="button" class="alphabet-filter__button">Я</button>
-              </div>
-            </div>
-          </div>
-          <form id="search-form" action="#" class="doctors__form search-form">
-            <div class="search-form__wrap">
-              <div class="search-form__input-wrap">
-                <input
-                  autocomplete="off"
-                  type="search"
-                  name="form[]"
-                  placeholder="Поиск среди услуг"
-                  class="search-form__input txt" />
-              </div>
-              <button
-                id="open-sort-dropdown"
-                type="button"
-                class="search-form__sort-button">
-                <span class="_desktop-only">Уточнить поиск</span>
-              </button>
-              <button type="submit" class="search-form__btn btn">
-                <span>Начать поиск</span>
-              </button>
-            </div>
-            <div class="search-form__sort sort-dropdown">
-              <div class="sort-dropdown__inner">
-                <div data-tabs class="sort-dropdown__tabs">
-                  <div
-                    data-tabs-titles
-                    class="sort-dropdown__navigation tabs tabs_blue">
-                    <button type="button" class="tabs__btn">Все</button>
-                    <button type="button" class="tabs__btn active _tab-active">
-                      Мужчины
-                    </button>
-                    <button type="button" class="tabs__btn">Женщины</button>
-                    <button type="button" class="tabs__btn">Дети</button>
+            <div class="steps__body">
+              <div class="steps__inner">
+                <div data-tabs class="steps__tabs">
+                  <div data-sticky class="steps__navigation-wrap">
+                    <nav data-sticky-item data-tabs-titles class="steps__navigation">
+                      <button type="button" class="steps__title">
+                        <span class="steps__num">1</span>
+                        <span class="steps__title-text"
+                          >Выбор специализации</span
+                        >
+                      </button>
+                      <button type="button" class="steps__title _tab-active">
+                        <span class="steps__num">2</span>
+                        <span class="steps__title-text">Выбор времени и врача</span>
+                      </button>
+                      <button type="button" class="steps__title">
+                        <span class="steps__num">3</span>
+                        <span class="steps__title-text">Оформление записи на прием</span>
+                      </button>
+                    </nav>
                   </div>
-                  <div
-                    data-tabs-body
-                    data-one-select
-                    class="sort-dropdown__content">
-                    <div class="sort-dropdown__body">
-                      <div class="sort-dropdown__row">
-                        <div class="sort-dropdown__item">
-                          <span class="sort-dropdown__subheading txt">
-                            Выбрать направление:
-                          </span>
-                          <select
-                            data-scroll="270"
-                            data-checkbox
-                            multiple
-                            data-pseudo-label="Все направления"
-                            name="form[]"
-                            class="sort-dropdown__select-wrap select-checkbox">
-                            <option value="1" selected>Уролог</option>
-                            <option value="2">Гинеколог</option>
-                            <option value="3">Гематолог</option>
-                            <option value="4">Гастроэнтеролог</option>
-                            <option value="5">Дерматолог</option>
-                            <option value="6">Гинеколог-эндокринолог</option>
-                            <option value="7">Аритмолог</option>
-                            <option value="8">Уролог</option>
-                            <option value="9">Гинеколог</option>
-                            <option value="10">Гематолог</option>
-                            <option value="11">Гастроэнтеролог</option>
-                            <option value="12">Дерматолог</option>
-                            <option value="13">Гинеколог-эндокринолог</option>
-                            <option value="14">Аритмолог</option>
-                          </select>
+                  <div data-tabs-body class="steps__content">
+                    <div class="steps__body steps__body_hint">
+                      <div class="steps__head">
+                        <button type="button" class="steps__head-back link">
+                          Вернуться назад
+                        </button>
+                        <span class="steps__subtitle"
+                          ><span class="steps__subtitle-txt">Шаг 1.</span> Выберите специализацию врача
+                          <div class="steps__hint hint">
+                            <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
+                            <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
+                          </div></span
+                        >
+                      </div>
+                    </div>
+                    <div class="steps__body steps__body_hint">
+                      <div class="steps__head">
+                        <button type="button" class="steps__head-back link">
+                          Вернуться назад
+                        </button>
+                        <div class="steps__subtitle">
+                          <span class="steps__subtitle-txt">Шаг 2.</span> Выберите свободное время и врача
+                          <div class="steps__hint hint">
+                            <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
+                            <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="steps__wrapper">
+                        <div class="steps__services-labels swiper">
+                          <div
+                            class="steps__services-labels-wrap swiper-wrapper">
+                            <div
+                              class="steps__service-label service-label swiper-slide">
+                              <div class="service-label__icon-wrap">
+                                <img
+                                  src="./img/a-image/icons/hospital.svg"
+                                  alt=""
+                                  aria-hidden="true"
+                                  class="service-label__icon" />
+                              </div>
+                              <span class="service-label__text">Гематолог</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="sort-dropdown__body">
-                      <div class="sort-dropdown__row">
-                        <div class="sort-dropdown__item">
-                          <span class="sort-dropdown__subheading txt">
-                            Выбрать направление:
-                          </span>
-                          <select
-                            data-scroll="270"
-                            data-checkbox
-                            multiple
-                            data-pseudo-label="Все направления"
-                            name="form[]"
-                            class="sort-dropdown__select-wrap select-checkbox">
-                            <option value="1" selected>Уролог</option>
-                            <option value="2">Гинеколог</option>
-                            <option value="3">Гематолог</option>
-                            <option value="4">Гастроэнтеролог</option>
-                            <option value="5">Дерматолог</option>
-                            <option value="6">Гинеколог-эндокринолог</option>
-                            <option value="7">Аритмолог</option>
-                            <option value="8">Уролог</option>
-                            <option value="9">Гинеколог</option>
-                            <option value="10">Гематолог</option>
-                            <option value="11">Гастроэнтеролог</option>
-                            <option value="12">Дерматолог</option>
-                            <option value="13">Гинеколог-эндокринолог</option>
-                            <option value="14">Аритмолог</option>
-                          </select>
-                        </div>
-                        <div class="sort-dropdown__item">
-                          <span class="sort-dropdown__subheading txt">
-                            Выбрать клинику:
-                          </span>
-                          <select
-                            data-scroll="270"
-                            data-checkbox
-                            multiple
-                            data-pseudo-label="Все клиники"
-                            name="form[]"
-                            class="sort-dropdown__select-wrap select-checkbox">
-                            <option value="1" selected>Уролог</option>
-                            <option value="2">Гинеколог</option>
-                            <option value="3">Гематолог</option>
-                            <option value="4">Гастроэнтеролог</option>
-                            <option value="5">Дерматолог</option>
-                            <option value="6">Гинеколог-эндокринолог</option>
-                            <option value="7">Аритмолог</option>
-                            <option value="8">Уролог</option>
-                            <option value="9">Гинеколог</option>
-                            <option value="10">Гематолог</option>
-                            <option value="11">Гастроэнтеролог</option>
-                            <option value="12">Дерматолог</option>
-                            <option value="13">Гинеколог-эндокринолог</option>
-                            <option value="14">Аритмолог</option>
-                          </select>
+                    <div class="steps__body steps__body_hint">
+                      <div class="steps__head">
+                        <button type="button" class="steps__head-back link">
+                          Вернуться назад
+                        </button>
+                        <div class="steps__subtitle">
+                          <span class="steps__subtitle-txt">Шаг 3.</span> Оформление записи на прием
+                          <div class="steps__hint hint">
+                            <div class="hint__icon"><img src="./img/a-image/icons/info.svg" alt="" /></div>
+                            <div class="hint__body"><span>Люди моложе 18 лет не могут записаться самостоятельно</span></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="sort-dropdown__body">
-                      <div class="sort-dropdown__row">
-                        <div class="sort-dropdown__item">
-                          <span class="sort-dropdown__subheading txt">
-                            Выбрать клинику:
-                          </span>
-                          <select
-                            data-scroll="270"
-                            data-checkbox
-                            multiple
-                            data-pseudo-label="Все клиники"
-                            name="form[]"
-                            class="sort-dropdown__select-wrap select-checkbox">
-                            <option value="1" selected>Уролог</option>
-                            <option value="2">Гинеколог</option>
-                            <option value="3">Гематолог</option>
-                            <option value="4">Гастроэнтеролог</option>
-                            <option value="5">Дерматолог</option>
-                            <option value="6">Гинеколог-эндокринолог</option>
-                            <option value="7">Аритмолог</option>
-                            <option value="8">Уролог</option>
-                            <option value="9">Гинеколог</option>
-                            <option value="10">Гематолог</option>
-                            <option value="11">Гастроэнтеролог</option>
-                            <option value="12">Дерматолог</option>
-                            <option value="13">Гинеколог-эндокринолог</option>
-                            <option value="14">Аритмолог</option>
-                          </select>
+                      <div data-spoilers class="steps__wrapper steps__wrapper_no-padding">
+                          <div class="steps__spoiler _mobile-only">
+                            <button type="button" data-spoiler class="steps__spoiler-title">Детали записи</button>
+                            <div class="steps__spoiler-body"></div>
+                          </div>
+                        <div data-da=".steps__spoiler-body,768,first" class="steps__details steps__details_mb details-steps">
+                          <div class="details-steps__head">
+                            <span class="details-steps__heading heading">Детали заявки</span>
+                          </div>
+                          <div class="details-steps__group">
+                            <div class="details-steps__item">
+                              <span class="details-steps__item-subtitle">Специализация</span>
+                              <span class="details-steps__item-text">УЗИ детям</span>
+                            </div>
+                            <div class="details-steps__item">
+                              <span class="details-steps__item-subtitle">Услуга</span>
+                              <span class="details-steps__item-text">УЗИ детям</span>
+                            </div>
+                            <div class="details-steps__item">
+                              <span class="details-steps__item-subtitle">Клиника</span>
+                              <span class="details-steps__item-text">Центр планирования семьи «Клиницист»</span>
+                              <span class="details-steps__item-subtext">г. Краснодар, ул. Монтажников, 2 </span>
+                            </div>
+                            <div class="details-steps__item">
+                              <span class="details-steps__item-subtitle">Врач</span>
+                              <div class="details-steps__item-row">
+                                <div class="details-steps__item-image"><img src="./img/a-image/doctor-card-img.webp" alt=""></div>
+                                <span class="details-steps__item-text">Мишустина Александра Ивановна</span>
+                              </div>
+                            </div>
+                            <div class="details-steps__item">
+                              <span class="details-steps__item-subtitle">Стоимость</span>
+                              <span class="details-steps__item-cost">10 200 ₽</span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="sort-dropdown__body">
-                      <div class="sort-dropdown__row">
-                        <div class="sort-dropdown__item">
-                          <span class="sort-dropdown__subheading txt">
-                            Выбрать направление:
-                          </span>
-                          <select
-                            data-scroll="270"
-                            data-checkbox
-                            multiple
-                            data-pseudo-label="Все направления"
-                            name="form[]"
-                            class="sort-dropdown__select-wrap select-checkbox">
-                            <option value="1" selected>Уролог</option>
-                            <option value="2">Гинеколог</option>
-                            <option value="3">Гематолог</option>
-                            <option value="4">Гастроэнтеролог</option>
-                            <option value="5">Дерматолог</option>
-                            <option value="6">Гинеколог-эндокринолог</option>
-                            <option value="7">Аритмолог</option>
-                            <option value="8">Уролог</option>
-                            <option value="9">Гинеколог</option>
-                            <option value="10">Гематолог</option>
-                            <option value="11">Гастроэнтеролог</option>
-                            <option value="12">Дерматолог</option>
-                            <option value="13">Гинеколог-эндокринолог</option>
-                            <option value="14">Аритмолог</option>
-                          </select>
-                        </div>
-                        <div class="sort-dropdown__item">
-                          <span class="sort-dropdown__subheading txt">
-                            Выбрать клинику:
-                          </span>
-                          <select
-                            data-scroll="270"
-                            data-checkbox
-                            multiple
-                            data-pseudo-label="Все клиники"
-                            name="form[]"
-                            class="sort-dropdown__select-wrap select-checkbox">
-                            <option value="1" selected>Уролог</option>
-                            <option value="2">Гинеколог</option>
-                            <option value="3">Гематолог</option>
-                            <option value="4">Гастроэнтеролог</option>
-                            <option value="5">Дерматолог</option>
-                            <option value="6">Гинеколог-эндокринолог</option>
-                            <option value="7">Аритмолог</option>
-                            <option value="8">Уролог</option>
-                            <option value="9">Гинеколог</option>
-                            <option value="10">Гематолог</option>
-                            <option value="11">Гастроэнтеролог</option>
-                            <option value="12">Дерматолог</option>
-                            <option value="13">Гинеколог-эндокринолог</option>
-                            <option value="14">Аритмолог</option>
-                          </select>
+                        <div class="steps__form-wrap">
+                          <form action="#" class="steps__form application application_person">
+                            <span class="application__title heading">Персональные данные</span>
+                            <div class="application__fields">
+                              <div class="application__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Ваше имя" class="input__field"></div>
+                              <div class="application__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder class="input__field tel-mask"></div>
+                            </div>
+                            <div class="application__contacts">
+                              <span class="application__contacts-subtitle txt">Выберите способ связи:</span>
+                              <div class="application__contacts-group">
+                                <button type="button" class="application__contact-item contact-item _active">
+                                  <div class="contact-item__icon-wrap">
+                                    <img
+                                      src="./img/a-image/icons/tel-outline-white.svg"
+                                      aria-hidden="true"
+                                      alt=""
+                                      class="contact-item__icon" />
+                                  </div>
+                                  <span class="contact-item__text txt">Телефон</span>
+                                </button>
+                                <button type="button" class="application__contact-item contact-item ">
+                                  <div class="contact-item__icon-wrap">
+                                    <img
+                                      src="./img/a-image/icons/whatsapp-white.svg"
+                                      aria-hidden="true"
+                                      alt=""
+                                      class="contact-item__icon" />
+                                  </div>
+                                  <span class="contact-item__text txt"
+                                    >WhatsApp</span
+                                  >
+                                </button>
+                                <button type="button" class="application__contact-item contact-item ">
+                                  <div class="contact-item__icon-wrap">
+                                    <img
+                                      src="./img/a-image/icons/telegram-white.svg"
+                                      aria-hidden="true"
+                                      alt=""
+                                      class="contact-item__icon" />
+                                  </div>
+                                  <span class="contact-item__text txt"
+                                    >Telegram</span
+                                  >
+                                </button>
+                                <button
+                                  type="button"
+                                  class="application__contact-item contact-item">
+                                  <div class="contact-item__icon-wrap">
+                                    <img
+                                      src="./img/a-image/icons/viber-white.svg"
+                                      aria-hidden="true"
+                                      alt=""
+                                      class="contact-item__icon" />
+                                  </div>
+                                  <span class="contact-item__text txt">Viber</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="application__checkbox checkbox">
+                              <input id="c_1" data-error class="checkbox__input" type="checkbox" value="1" name="form[]">
+                              <label for="c_1" class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
+                            </div>
+                            <button type="submit" class="application__btn btn">Записаться</button>
+                          </form>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <button
-                  id="slose-sort-dropdown"
-                  type="button"
-                  class="sort-dropdown__close-btn link">
-                  Свернуть
-                </button>
               </div>
             </div>
-            <div class="search-form__search-box search-box">
-              <ul class="search-box__list txt">
-                <li class="search-box__item">
-                  Гастроэнтеролог <span>Специализация</span>
-                </li>
-                <li class="search-box__item">
-                  Гастропольский Виктор Владимирович <span>Врач</span>
-                </li>
-                <li class="search-box__item">
-                  Гастроэнтероло <span>Специализация</span>
-                </li>
-                <li class="search-box__item">
-                  Гастропольский Виктор Владимирович <span>Врач</span>
-                </li>
-              </ul>
-            </div>
-          </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="doctors doctors-appointment">
+        <div class="doctors__container container">
+            <form id="search-form" action="#" class="doctors__form search-form">
+                <div class="search-form__wrap">
+                  <div class="search-form__input-wrap">
+                    <input
+                      autocomplete="off"
+                      type="search"
+                      name="form[]"
+                      placeholder="Поиск врача"
+                      class="search-form__input txt" />
+                  </div>
+                  <button
+                  id="open-sort-dropdown"
+                  type="button"
+                  class="search-form__sort-button">
+                  <span class="_desktop-only">Уточнить поиск</span>
+                </button>
+                  <button type="submit" class="search-form__btn btn">
+                    <span>Начать поиск</span>
+                  </button>
+                </div>
+                <div data-one-select class="search-form__sort sort-dropdown">
+                    <div class="sort-dropdown__inner">
+                        <div class="sort-dropdown__body">
+                            <div class="sort-dropdown__row sort-dropdown__row_grid">
+                              <div class="sort-dropdown__item">
+                                <span class="sort-dropdown__subheading txt">
+                                  Клиника:
+                                </span>
+                                <select
+                                  data-scroll="270"
+                                  data-checkbox
+                                  multiple
+                                  data-pseudo-label="Все клиники"
+                                  name="form[]"
+                                  class="sort-dropdown__select-wrap select-checkbox">
+                                  <option value="1" selected>Уролог</option>
+                                  <option value="2">Гинеколог</option>
+                                  <option value="3">Гематолог</option>
+                                  <option value="4">Гастроэнтеролог</option>
+                                  <option value="5">Дерматолог</option>
+                                  <option value="6">Гинеколог-эндокринолог</option>
+                                  <option value="7">Аритмолог</option>
+                                  <option value="8">Уролог</option>
+                                  <option value="9">Гинеколог</option>
+                                  <option value="10">Гематолог</option>
+                                  <option value="11">Гастроэнтеролог</option>
+                                  <option value="12">Дерматолог</option>
+                                  <option value="13">Гинеколог-эндокринолог</option>
+                                  <option value="14">Аритмолог</option>
+                                </select>
+                              </div>
+                              <div class="sort-dropdown__item">
+                                <span class="sort-dropdown__subheading txt">
+                                  Категория врача:
+                                </span>
+                                <select
+                                  data-scroll="270"
+                                  data-checkbox
+                                  multiple
+                                  data-pseudo-label="Все категории"
+                                  name="form[]"
+                                  class="sort-dropdown__select-wrap select-checkbox">
+                                  <option value="1" selected>Уролог</option>
+                                  <option value="2">Гинеколог</option>
+                                  <option value="3">Гематолог</option>
+                                  <option value="4">Гастроэнтеролог</option>
+                                  <option value="5">Дерматолог</option>
+                                  <option value="6">Гинеколог-эндокринолог</option>
+                                  <option value="7">Аритмолог</option>
+                                  <option value="8">Уролог</option>
+                                  <option value="9">Гинеколог</option>
+                                  <option value="10">Гематолог</option>
+                                  <option value="11">Гастроэнтеролог</option>
+                                  <option value="12">Дерматолог</option>
+                                  <option value="13">Гинеколог-эндокринолог</option>
+                                  <option value="14">Аритмолог</option>
+                                </select>
+                              </div>
+                              <div class="sort-dropdown__item">
+                                <span class="sort-dropdown__subheading txt">
+                                  С рейтингом:
+                                </span>
+                                <select
+                                  data-scroll="270"
+                                  data-checkbox
+                                  multiple
+                                  data-pseudo-label="Выше 4.0"
+                                  name="form[]"
+                                  class="sort-dropdown__select-wrap select-checkbox">
+                                  <option value="1" selected>Уролог</option>
+                                  <option value="2">Гинеколог</option>
+                                  <option value="3">Гематолог</option>
+                                  <option value="4">Гастроэнтеролог</option>
+                                  <option value="5">Дерматолог</option>
+                                  <option value="6">Гинеколог-эндокринолог</option>
+                                  <option value="7">Аритмолог</option>
+                                  <option value="8">Уролог</option>
+                                  <option value="9">Гинеколог</option>
+                                  <option value="10">Гематолог</option>
+                                  <option value="11">Гастроэнтеролог</option>
+                                  <option value="12">Дерматолог</option>
+                                  <option value="13">Гинеколог-эндокринолог</option>
+                                  <option value="14">Аритмолог</option>
+                                </select>
+                              </div>
+                              <div class="sort-dropdown__item">
+                                <span class="sort-dropdown__subheading txt">
+                                  Возраст пациента:
+                                </span>
+                                <select
+                                  data-scroll="270"
+                                  data-checkbox
+                                  multiple
+                                  data-pseudo-label="до 18 лет"
+                                  name="form[]"
+                                  class="sort-dropdown__select-wrap select-checkbox">
+                                  <option value="1" selected>Уролог</option>
+                                  <option value="2">Гинеколог</option>
+                                  <option value="3">Гематолог</option>
+                                  <option value="4">Гастроэнтеролог</option>
+                                  <option value="5">Дерматолог</option>
+                                  <option value="6">Гинеколог-эндокринолог</option>
+                                  <option value="7">Аритмолог</option>
+                                  <option value="8">Уролог</option>
+                                  <option value="9">Гинеколог</option>
+                                  <option value="10">Гематолог</option>
+                                  <option value="11">Гастроэнтеролог</option>
+                                  <option value="12">Дерматолог</option>
+                                  <option value="13">Гинеколог-эндокринолог</option>
+                                  <option value="14">Аритмолог</option>
+                                </select>
+                              </div>
+                              <div class="sort-dropdown__item">
+                                <span class="sort-dropdown__subheading txt">
+                                  Свободное время:
+                                </span>
+                                <select
+                                  data-scroll="270"
+                                  data-checkbox
+                                  multiple
+                                  data-pseudo-label="Вечер, после 18:00"
+                                  name="form[]"
+                                  class="sort-dropdown__select-wrap select-checkbox">
+                                  <option value="1" selected>Уролог</option>
+                                  <option value="2">Гинеколог</option>
+                                  <option value="3">Гематолог</option>
+                                  <option value="4">Гастроэнтеролог</option>
+                                  <option value="5">Дерматолог</option>
+                                  <option value="6">Гинеколог-эндокринолог</option>
+                                  <option value="7">Аритмолог</option>
+                                  <option value="8">Уролог</option>
+                                  <option value="9">Гинеколог</option>
+                                  <option value="10">Гематолог</option>
+                                  <option value="11">Гастроэнтеролог</option>
+                                  <option value="12">Дерматолог</option>
+                                  <option value="13">Гинеколог-эндокринолог</option>
+                                  <option value="14">Аритмолог</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                      <button
+                        id="slose-sort-dropdown"
+                        type="button"
+                        class="sort-dropdown__close-btn link">
+                        Свернуть
+                      </button>
+                    </div>
+                  </div>
+                <div class="search-form__search-box search-box">
+                  <ul class="search-box__list txt">
+                    <li class="search-box__item">
+                      Гастроэнтеролог <span>Специализация</span>
+                    </li>
+                    <li class="search-box__item">
+                      Гастропольский Виктор Владимирович <span>Врач</span>
+                    </li>
+                    <li class="search-box__item">
+                      Гастроэнтероло <span>Специализация</span>
+                    </li>
+                    <li class="search-box__item">
+                      Гастропольский Виктор Владимирович <span>Врач</span>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+              <span class="doctors__heading heading">Специалисты данного направления</span>
           <div class="doctors__group">
             <div class="doctors__card doctor-card">
               <div class="doctor-card__wrap">
@@ -1319,62 +1426,6 @@
           </div>
         </div>
       </section>
-
-      <section class="text-image">
-        <div class="text-image__container container">
-          <div class="text-image__text-wrap">
-            <span class="text-image__subtitle subtitle">Актуальные цены</span>
-            <span class="text-image__title title"
-              >Станьте частью нашей команды</span
-            >
-            <p class="text-image__text txt">
-              Про цены. Как и многие другие направления медицины, хирургия
-              делится на широкий спектр различных отраслей, каждая из которых по
-              своему Виды хирургов.
-            </p>
-            <div class="text-image__group">
-              <div class="text-image__group-item">
-                <span class="text-image__group-item-heading">382</span>
-                <span class="text-image__group-item-subtext txt"
-                  >Сотрудника</span
-                >
-              </div>
-              <div class="text-image__group-item">
-                <span class="text-image__group-item-heading">10 000</span>
-                <span class="text-image__group-item-subtext txt"
-                  >Пациентов в год</span
-                >
-              </div>
-              <div class="text-image__group-item">
-                <span class="text-image__group-item-heading">10</span>
-                <span class="text-image__group-item-subtext txt"
-                  >Клиник в городу</span
-                >
-              </div>
-            </div>
-            <a href="#" class="text-image__btn btn">Посмотреть вакансии</a>
-            <a href="#" class="text-image__link link">Посмотреть вакансии</a>
-          </div>
-          <div class="text-image__image-group">
-            <div class="text-image__col">
-              <div class="text-image__image-wrapper">
-                <img src="./img/a-image/text-image-01.jpg" alt="" />
-              </div>
-              <div class="text-image__image-wrapper">
-                <img src="./img/a-image/text-image-02.jpg" alt="" />
-              </div>
-            </div>
-            <div class="text-image__col">
-              <div class="text-image__image-wrapper">
-                <img src="./img/a-image/text-image-03.jpg" alt="" />
-              </div>
-              <div class="text-image__image-wrapper">
-                <img src="./img/a-image/text-image-04.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -1577,468 +1628,7 @@
         </div>
       </div>
     </footer>
-    <div id="datepicker-modal" aria-hidden="true" class="datepicker-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <form action="#" class="datepicker-modal__form">
-        <span class="datepicker-modal__title">Выберите время и дату</span>
-        <div id="datepicker"></div>
-        <div class="datepicker-modal__field">
-          <label for="pick-time-field" class="datepicker-modal__label"
-            >Выберите время записи</label
-          >
-          <div class="datepicker-modal__input-wrap">
-            <input
-              id="pick-time-field"
-              type="number"
-              placeholder="09:11"
-              class="datepicker-modal__input" />
-          </div>
-        </div>
-        <div class="datepicker-modal__actions">
-          <button type="button" class="datepicker-modal__head-back link">
-            Назад
-          </button>
-          <button type="submit" class="datepicker-modal__btn btn">
-            Готово
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div id="appointment-modal" aria-hidden="true" class="appointment-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="appointment-modal__body">
-        <span class="appointment-modal__title title">Запишитесь к врачу</span>
-        <span class="appointment-modal__subtitle subtitle"
-          >Присоединяйтесь к 600 000 нашихпациентов и получите действительно
-          качественные медицинские услуги</span
-        >
-        <form data-dev action="#" class="appointment-modal__form">
-          <div class="appointment-modal__input-wrap">
-            <input
-              autocomplete="off"
-              type="tel"
-              name="form[]"
-              data-error
-              placeholder
-              class="appointment-modal__input tel-mask" />
-          </div>
-          <div class="appointment-modal__contacts">
-            <span class="appointment-modal__contacts-heading txt"
-              >Выберите способ связи:</span
-            >
-            <div class="appointment-modal__contacts-group">
-              <button type="button" class="appointment-modal__contact contact-item _active">
-                <div class="contact-item__icon-wrap">
-                  <img
-                    src="./img/a-image/icons/tel-outline-white.svg"
-                    aria-hidden="true"
-                    alt=""
-                    class="contact-item__icon" />
-                </div>
-                <span class="contact-item__text txt">Телефон</span>
-              </button>
-              <button type="button" class="appointment-modal__contact contact-item ">
-                <div class="contact-item__icon-wrap">
-                  <img
-                    src="./img/a-image/icons/whatsapp-white.svg"
-                    aria-hidden="true"
-                    alt=""
-                    class="contact-item__icon" />
-                </div>
-                <span class="contact-item__text txt"
-                  >WhatsApp</span
-                >
-              </button>
-              <button type="button" class="appointment-modal__contact contact-item ">
-                <div class="contact-item__icon-wrap">
-                  <img
-                    src="./img/a-image/icons/telegram-white.svg"
-                    aria-hidden="true"
-                    alt=""
-                    class="contact-item__icon" />
-                </div>
-                <span class="contact-item__text txt"
-                  >Telegram</span
-                >
-              </button>
-              <button
-                type="button"
-                class="appointment-modal__contact  contact-item _mobile-only">
-                <div class="contact-item__icon-wrap">
-                  <img
-                    src="./img/a-image/icons/viber-white.svg"
-                    aria-hidden="true"
-                    alt=""
-                    class="contact-item__icon" />
-                </div>
-                <span class="contact-item__text txt">Viber</span>
-              </button>
-            </div>
-          </div>
-          <button type="submit" class="appointment-modal__btn btn">
-            Отправить
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="choose-patient-modal" aria-hidden="true" class="choose-patient-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="choose-patient-modal__body">
-        <span class="choose-patient-modal__title title">Запишитесь к врачу</span>
-        <p class="choose-patient-modal__text txt">Кого вы хотели бы записать на прием?</p>
-        <div class="choose-patient-modal__actions">
-          <button type="button" class="choose-patient-modal__btn btn">Себя</button>
-          <button type="button" class="choose-patient-modal__btn btn btn_outlined">Другого человека</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="add-patient-modal" aria-hidden="true" class="add-patient-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="add-patient-modal__body">
-        <div class="add-patient-modal__title-wrap">
-          <span class="add-patient-modal__subtitle subtitle">Для продолжения,  вам необходимо заполнить данные пациента</span>
-          <span class="add-patient-modal__title title">Добавить пациента</span>
-        </div>
-        <form data-dev action="#" class="add-patient-modal__form">
-          <div class="add-patient-modal__checkboxes">
-            <div class="add-patient-modal__checkbox checkbox">
-              <input id="o_1" data-error class="checkbox__input" type="radio" value="1" name="option">
-              <label for="o_1" class="checkbox__label"><span class="checkbox__text">Мужчина</span></label>
-            </div>
-            <div class="add-patient-modal__checkbox checkbox">
-              <input id="o_2" data-error class="checkbox__input" type="radio" value="2" name="option">
-              <label for="o_2" class="checkbox__label"><span class="checkbox__text">Женщина</span></label>
-            </div>
-          </div>
-          <div class="add-patient-modal__fields">
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="add-patient-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-          </div>
-          <button type="submit" class="add-patient-modal__btn btn">Сохранить</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="add-patient-disabled-modal" aria-hidden="true" class="add-patient-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="add-patient-modal__body">
-        <div class="add-patient-modal__title-wrap">
-          <span class="add-patient-modal__subtitle subtitle">Для продолжения,  вам необходимо заполнить данные пациента</span>
-          <span class="add-patient-modal__title title">Добавить пациента</span>
-        </div>
-        <form data-dev action="#" class="add-patient-modal__form">
-          <div class="add-patient-modal__checkboxes">
-            <div class="add-patient-modal__checkbox checkbox">
-              <input id="o_1" data-error class="checkbox__input" type="radio" value="1" name="option">
-              <label for="o_1" class="checkbox__label"><span class="checkbox__text">Мужчина</span></label>
-            </div>
-            <div class="add-patient-modal__checkbox checkbox">
-              <input id="o_2" data-error class="checkbox__input" type="radio" value="2" name="option">
-              <label for="o_2" class="checkbox__label"><span class="checkbox__text">Женщина</span></label>
-            </div>
-          </div>
-          <div class="add-patient-modal__fields">
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="add-patient-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-          </div>
-          <div class="add-patient-modal__warning warning">
-            <div class="warning__icon-wrap"><img aria-hidden="true" src="./img/a-image/icons/warning-red.svg" alt="" class="warning__icon"></div>
-            <p class="warning__text txt">Данный врач недоступен для данного пациента. Пожалуйста, рассмотрите возможность выбора другого врача.</p>
-          </div>
-          <button type="submit" class="add-patient-modal__btn btn">Выбрать другого врача</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="abort-application-modal" aria-hidden="true" class="abort-application-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="abort-application-modal__body">
-        <span class="abort-application-modal__title">Вы действительно хотите прервать запись?</span>
-        <p class="abort-application-modal__text txt">Возможно, потом у врача не останется свободных окон</p>
-        <div class="abort-application-modal__actions">
-          <button class="abort-application-modal__head-back link">Прервать запись</button>
-          <button type="button" class="abort-application-modal__btn btn">Вернуться к записи</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="done-application-modal" aria-hidden="true" class="done-application-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="done-application-modal__body">
-        <span class="done-application-modal__title">Вы записаны!</span>
-        <div class="done-application-modal__group">
-          <div class="done-application-modal__item">
-            <div class="done-application-modal__icon-wrap"><img src="./img/a-image/icons/calendar.svg" aria-hidden="true" alt="" class="done-application-modal__icon"></div>
-            <span class="done-application-modal__item-txt txt">15 августа, 10:30</span>
-          </div>
-          <a href="tel:88612073374" class="done-application-modal__item">
-            <div class="done-application-modal__icon-wrap"><img src="./img/a-image/icons/call-phone.svg" aria-hidden="true" alt="" class="done-application-modal__icon"></div>
-            <span class="done-application-modal__item-txt txt">8 (861) 207-33-74</span>
-          </a>
-          <div class="done-application-modal__item">
-            <div class="done-application-modal__icon-wrap"><img src="./img/a-image/icons/pin-blue.svg" aria-hidden="true" alt="" class="done-application-modal__icon"></div>
-            <span class="done-application-modal__item-txt txt">Краснодар, ул. Калинина, 202</span>
-          </div>
-        </div>
-        <button type="button" class="done-application-modal__btn btn">Хорошо</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="sent-application-modal" aria-hidden="true" class="sent-application-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="sent-application-modal__body">
-        <span class="sent-application-modal__title">Заявка отправлена</span>
-        <p class="sent-application-modal__text txt">Перезвоним вам в течении 1 часа и проконсультируем вас по услугам</p>
-        <button type="button" class="sent-application-modal__btn btn">Хорошо</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="registration-modal" aria-hidden="true" class="registration-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="registration-modal__body">
-        <div class="registration-modal__title-wrap">
-          <span class="registration-modal__subtitle subtitle"
-            >Для продолжения,  вам необходимо зарегистрироваться</span
-          >
-          <span class="registration-modal__title title">Регистрация</span>
-        </div>
-        <form data-dev action="#" class="registration-modal__form">
-          <div class="registration-modal__options options">
-            <div class="options__item">
-                <input hidden id="ro_1" class="options__input" checked type="radio" value="1" name="option">
-                <label for="ro_1" class="options__label"><span class="options__text">Мужчина</span></label>
-            </div>
-            <div class="options__item">
-                <input hidden id="ro_2" class="options__input" type="radio" value="2" name="option">
-                <label for="ro_2" class="options__label"><span class="options__text">Женщина</span></label>
-            </div>
-        </div>
-          <div class="registration-modal__fields">
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="registration-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-            <div class="registration-modal__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
-          </div>
-          <div class="registration-modal__actions">
-            <div class="registration-modal__checkbox checkbox">
-              <input id="rc_1" data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
-              <label for="rc_1" class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
-            </div>
-            <button type="submit" class="registration-modal__btn btn">
-              Зарегистрироваться
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="registration-pass-modal" aria-hidden="true" class="registration-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="registration-modal__body">
-        <div class="registration-modal__title-wrap">
-          <span class="registration-modal__subtitle subtitle"
-            >Для продолжения,  вам необходимо зарегистрироваться</span
-          >
-          <span class="registration-modal__title title">Регистрация</span>
-        </div>
-        <form data-dev action="#" class="registration-modal__form">
-          <div class="registration-modal__options options">
-            <div class="options__item">
-                <input hidden id="ro_1" class="options__input" checked type="radio" value="1" name="option">
-                <label for="ro_1" class="options__label"><span class="options__text">Мужчина</span></label>
-            </div>
-            <div class="options__item">
-                <input hidden id="ro_2" class="options__input" type="radio" value="2" name="option">
-                <label for="ro_2" class="options__label"><span class="options__text">Женщина</span></label>
-            </div>
-        </div>
-          <div class="registration-modal__fields">
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="registration-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-            <div class="registration-modal__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
-            <div class="registration-modal__input registration-modal__input_fc input input_password"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Введите пароль" class="input__field"></div>
-            <div class="registration-modal__input input input_password"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Повторите пароль" class="input__field"></div>
-          </div>
-          <div class="registration-modal__actions">
-            <div class="registration-modal__checkbox checkbox">
-              <input id="rc_1" data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
-              <label for="rc_1" class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
-            </div>
-            <button type="submit" class="registration-modal__btn btn">
-              Зарегистрироваться
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="registration-code-modal" aria-hidden="true" class="registration-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="registration-modal__body">
-        <div class="registration-modal__title-wrap">
-          <span class="registration-modal__subtitle subtitle"
-            >Для продолжения,  вам необходимо зарегистрироваться</span
-          >
-          <span class="registration-modal__title title">Регистрация</span>
-        </div>
-        <form data-dev action="#" class="registration-modal__form">
-          <div class="registration-modal__options options">
-            <div class="options__item">
-                <input hidden id="ro_1" class="options__input" checked type="radio" value="1" name="option">
-                <label for="ro_1" class="options__label"><span class="options__text">Мужчина</span></label>
-            </div>
-            <div class="options__item">
-                <input hidden id="ro_2" class="options__input" type="radio" value="2" name="option">
-                <label for="ro_2" class="options__label"><span class="options__text">Женщина</span></label>
-            </div>
-        </div>
-          <div class="registration-modal__fields registration-modal__fields_m20">
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="registration-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="registration-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
-            <div class="registration-modal__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Номер телефона" class="input__field"></div>
-            <div class="registration-modal__input input input_code"><input autocomplete="off" type="tel" name="form[]" data-error placeholder="Код подтверждения" class="input__field"></div>
-          </div>
-          <div class="registration-modal__verify verify txt">
-            <div class="verify__group">
-              <span class="verify__heading">Так и не получили код?</span>
-              <p class="verify__text">Повторно код можно получить через <span id="time">01:12</span></p>
-            </div>
-            <p class="verify__text">Через несколько секунд вам придеть SMS-сообщение с кодом подтверждения.</p>
-          </div>
-          <div class="registration-modal__actions">
-            <div class="registration-modal__checkbox checkbox">
-              <input id="rc_1" data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
-              <label for="rc_1" class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
-            </div>
-            <button type="submit" class="registration-modal__btn btn">
-              Зарегистрироваться
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="registration-confirm-modal" aria-hidden="true" class="registration-confirm-modal popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <div class="popup__head">
-        <button data-close type="button" class="popup__close">
-          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
-        </button>
-      </div>
-      <div class="registration-confirm-modal__body">
-        <div class="registration-confirm-modal__title-wrap">
-          <span class="registration-confirm-modal__subtitle subtitle">Для продолжения,  вам необходимо зарегистрироваться</span>
-          <span class="registration-confirm-modal__title title">Регистрация</span>
-        </div>
-        <form data-dev action="#" class="registration-confirm-modal__form">
-          <div class="registration-confirm-modal__input input input_code"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Код подтверждения" class="input__field"></div>
-          <p class="registration-confirm-modal__text txt">Через несколько секунд вам придеть SMS-сообщение с кодом подтверждения.</p>
-          <div class="registration-confirm-modal__checkbox checkbox">
-            <input id="c_1" data-error class="checkbox__input" type="checkbox" value="1" name="form[]">
-            <label for="c_1" class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
-          </div>
-          <button type="submit" class="registration-confirm-modal__btn btn">Зарегистрироваться</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+    @@include('./template/popups.html')
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./js/swiper-bundle.min.js"></script>
@@ -2048,6 +1638,7 @@
     <script src="./js/jquery.maskedinput.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-datepicker@5.18.2/dist/datepicker.min.js"></script>
+    <script src="./js/jquery.star-rating-svg.min.js"></script>
     <script src="./js/simplebar.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/main-a.js"></script>
