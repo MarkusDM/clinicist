@@ -6958,7 +6958,74 @@ input[type='search']::-webkit-search-results-decoration {
         font-weight: 500;
         font-size: 3.8rem;
         padding-bottom: 0.8rem;
-        line-height: normal; } }
+        line-height: normal; }
+  .baner-korporativnie {
+    margin-bottom: 12rem; }
+    .baner-korporativnie .baner .breadcrumbs {
+      margin-bottom: 7rem; }
+      .baner-korporativnie .baner .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+    .baner-korporativnie .baner__content {
+      width: 50%;
+      padding-top: 3rem; }
+      .baner-korporativnie .baner__content-links {
+        margin-bottom: 7.2rem; }
+      .baner-korporativnie .baner__content-title {
+        line-height: 110%;
+        margin-bottom: 3.1rem; }
+      .baner-korporativnie .baner__content-text {
+        width: 65%; }
+    .baner-korporativnie .baner__picture {
+      height: 43rem;
+      margin-right: 0;
+      width: 67rem; }
+      .baner-korporativnie .baner__picture::after {
+        width: 73.7rem;
+        height: 73.7rem;
+        top: -7rem;
+        left: 47%; }
+  .baner-uslovia-sotrudnichestva {
+    margin-bottom: 20rem; }
+    .baner-uslovia-sotrudnichestva .baner {
+      margin-bottom: 0rem; }
+      .baner-uslovia-sotrudnichestva .baner__inner::after {
+        top: 41rem;
+        left: 55%; }
+      .baner-uslovia-sotrudnichestva .baner .breadcrumbs {
+        margin-bottom: 7rem; }
+        .baner-uslovia-sotrudnichestva .baner .breadcrumbs__link {
+          color: rgba(51, 51, 51, 0.5); }
+      .baner-uslovia-sotrudnichestva .baner__content {
+        width: 100%;
+        padding-top: 3rem; }
+        .baner-uslovia-sotrudnichestva .baner__content-text {
+          width: 100%;
+          margin-left: 2rem; }
+      .baner-uslovia-sotrudnichestva .baner__picture {
+        width: 91rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        margin-right: 0rem;
+        margin-left: -10rem; }
+        .baner-uslovia-sotrudnichestva .baner__picture::after {
+          width: 75rem;
+          height: 75rem;
+          left: 48%; }
+  .baner-kontrol-kachestva {
+    margin-bottom: 12rem; }
+    .baner-kontrol-kachestva .baner__content-links {
+      margin-bottom: 7.5rem; }
+    .baner-kontrol-kachestva .baner__content-title {
+      line-height: 110%; }
+    .baner-kontrol-kachestva .baner__picture {
+      width: 65rem;
+      margin-right: 7.2rem; }
+      .baner-kontrol-kachestva .baner__picture::after {
+        width: 63.6rem;
+        height: 63.6rem;
+        top: -6rem;
+        left: 52%; } }
 
 .solution {
   margin-top: 20rem;
@@ -12217,7 +12284,7 @@ input[type='search']::-webkit-search-results-decoration {
       font-size: 1.8rem;
       line-height: 150%;
       margin-bottom: 4rem;
-      color: #2f2f2f; }
+      color: rgba(51, 51, 51, 0.5); }
   .new-clinic__text {
     font-size: 1.8rem; }
     .new-clinic__text:first-child {
@@ -13729,6 +13796,11 @@ input[type='search']::-webkit-search-results-decoration {
       font-weight: 400; }
     .new-clinic__content {
       margin-bottom: 6.4rem; }
+      .new-clinic__content-title {
+        margin-bottom: 6rem; }
+      .new-clinic__content-text {
+        font-size: 3.2rem;
+        line-height: 150%; }
     .new-clinic__call-block {
       margin-bottom: 4rem; }
     .new-clinic__socials-list {
@@ -14058,7 +14130,11 @@ input[type='search']::-webkit-search-results-decoration {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 100%; } }
+      width: 100%; }
+    .new-clinic.new-clinic-korporativnie .new-clinic__list li {
+      color: rgba(51, 51, 51, 0.5);
+      padding-left: 9.2rem;
+      max-width: 66.8rem; } }
 
 .licenzia {
   margin-bottom: 18rem; }
