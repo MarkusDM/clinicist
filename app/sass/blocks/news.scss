@@ -83,3 +83,11 @@
     }
   }
 }
+
+@media screen and (max-width: 48em) {
+	.news {
+		&__asides {
+			width: 100%;
+		}
+	}
+}

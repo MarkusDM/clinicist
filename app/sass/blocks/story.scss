@@ -10,9 +10,14 @@
     bottom: 13rem;
     background-color: #d8dde4;
   }
+  &::after {
+    bottom: 12.8rem;
+  }
   &__inner {
   }
   &__items {
+    position: relative;
+    z-index: 5;
     display: flex;
     width: 101.9%;
     gap: 4rem;
@@ -143,6 +148,7 @@
     }
   }
 }
+
 .swiper-slide-desc {
   margin-right: 2rem;
   width: 17.8%;

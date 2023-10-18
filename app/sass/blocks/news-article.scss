@@ -11,11 +11,19 @@
   .container {
     width: 144rem;
   }
+
+	&__aside {
+		width: 45.3rem;
+	}
 }
 
 @media screen and (max-width: 48em) {
   .news-article {
     margin-bottom: 20rem;
+
+		.container {
+			width: 100%;
+		}
     
     &__container {
       row-gap: 20rem;
@@ -23,6 +31,7 @@
 
     &__aside {
       order: 1;
+			width: 100%;
     }
   }
 }
