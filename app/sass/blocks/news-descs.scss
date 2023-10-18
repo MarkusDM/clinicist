@@ -1,0 +1,149 @@
+.news-descs {
+  &__desc {
+    width: 94.7rem;
+  }
+
+  &__desc {
+    margin-bottom: 6rem;
+
+    &:nth-child(3) {
+      padding-bottom: 4rem;
+      border-bottom: 0.1rem solid $grey;
+    }
+  }
+
+  &__desc-title {
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    line-height: normal;
+  }
+
+  &__desc-list {
+    li {
+      position: relative;
+      padding-left: 4.6rem;
+      font-size: 1.8rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0.4rem;
+        width: 2rem;
+        height: 1.8rem;
+        background-image: url(../img/a-image/icons/ok.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__desc-txt-bl {
+    color: $fzAll;
+    margin-bottom: 2rem;
+  }
+
+  &__desc-txt {
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin: 0;
+      line-height: 127%;
+    }
+  }
+
+  &__desc-slider {
+    margin: 4rem 0 3.8rem 0;
+    width: 94.7rem;
+    overflow: hidden;
+
+    .swiper-pagination {
+      left: 37.5%;
+    }
+  }
+
+  &__desc-wrapper {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+    .news-descs {
+        width: 100%;
+    
+        &__desc {
+          width: 100%;
+        }
+    
+        &__desc {
+          margin-bottom: 12rem;
+    
+          &:nth-child(1) {
+            margin-bottom: 4.8rem;
+          }
+    
+          &:nth-child(3) {
+            padding-bottom: 6rem;
+            margin-bottom: 8rem;
+          }
+        }
+    
+        &__desc-title {
+          margin-bottom: 5.2rem;
+          font-size: 5.4rem;
+        }
+    
+        &__desc-list {
+          li {
+            padding-left: 5.5rem;
+            max-width: 100%;
+            font-size: 3.2rem;
+            line-height: 150%;
+    
+            &:not(:last-child) {
+              margin-bottom: 2rem;
+            }
+    
+            &::after {
+              top: 1rem;
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+          }
+        }
+    
+        &__desc-txt-bl {
+          margin-bottom: 4rem;
+          font-size: 3.2rem;
+          line-height: 150%;
+        }
+    
+        &__desc-txt {
+          margin-bottom: 4rem;
+          font-size: 3.2rem;
+          line-height: 150%;
+    
+          &:last-child {
+            margin: 0;
+          }
+        }
+    
+        &__desc-slider {
+          margin: 4.6rem 0 6rem 0;
+          width: 100%;
+    
+          .swiper-pagination {
+            left: 50%;
+          }
+        }
+    
+        &__desc-wrapper {
+          margin-bottom: 2rem;
+        }
+      }
+}

@@ -64,11 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.tabs__content6[data-question=' + data + ']').toggleClass('active')
   })
 
-  $('.tabs-news__btn').click(function () {
-    $('.tabs-news__btn').removeClass('active')
-    $(this).toggleClass('active')
-  })
-
   // КОНЕЦ ТАБОВ
 
   // СЛАЙДЕРЫ
@@ -565,6 +560,7 @@ document.addEventListener('DOMContentLoaded', function () {
       slider25 = null
     }
   }
+
   /* let curnum = document.querySelector(".procedures-pagination .current");
     slider24.on("slideChange", function () {
     let ind = slider5.realIndex + 1,
