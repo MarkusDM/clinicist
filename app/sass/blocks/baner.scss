@@ -411,6 +411,70 @@
       border-radius: 50%;
     }
   }
+ &-news {
+  margin-bottom: 12rem;
+  .baner {
+    &__content-title {
+      margin-top: 12.7rem;
+    }
+    &__content-text {
+      font-family: Myriad Pro, sans-serif;
+      line-height: 130%;
+    }
+    &__picture {
+      margin-right: 2.7rem;
+      width: 82rem;
+    }
+  }
+ } 
+  &-news-article {
+    height: 41.3rem;
+    margin-bottom: 6rem;
+    .baner {
+      &__picture {
+        width: 59.1rem;
+        height: 35.4rem;
+        flex-shrink: 0;
+        margin: auto 0 0 0;
+        &::after {
+          display: none;
+        }
+      }
+      &__inner {
+        width: 158rem;
+        height: 41.3rem;
+      }
+      &__content {
+        width: 75%;
+      }
+      &__desc {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+        margin-bottom: 3rem;
+      }
+      &__desc-btn {
+        padding: 1.2rem 2.5rem;
+        border-radius: 10rem;
+        background: $white;
+        color: $fzAll;
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.8rem;
+        line-height: 130%;
+      }
+      &__desc-date {
+        color: $blue;
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      &__breadcrumbs {
+        margin-bottom: 7rem;
+      }
+    }
+  }
   &-licenzia {
     margin-bottom: 12rem;
     .baner {
@@ -3650,6 +3714,88 @@
   .baner {
     margin-bottom: 16rem;
     height: auto;
+
+     &-news {
+      margin-bottom: 20rem;
+      .baner {
+        &__content-title {
+          margin-top: 10rem;
+          margin-bottom: 2.6rem;
+        }
+        &__inner {
+          padding: 0;
+          &::after {
+            top: 48rem;
+          }
+        }
+        &__content-text {
+          line-height: 150%;
+          font-size: 3.2rem;
+        }
+        &__content {
+          padding-top: 12rem;
+          margin-bottom: 8.4rem;
+        }
+        &__picture {
+          margin-right: 0;
+          width: 76rem;
+          height: 67rem;
+        }
+      }
+    } 
+
+    &-news-article {
+      height: auto;
+      margin-bottom: 12rem;
+
+      .breadcrumbs__text{
+        white-space: wrap;
+        line-height: 130%;
+      }
+
+      .baner {
+        &::after {
+          display: none;
+        }
+        &__picture {
+          width: 71.2rem;
+          height: 42.6rem;
+          margin-left: -4rem;
+        }
+        &__inner {
+          width: 100%;
+          height: auto;
+          &::after {
+            display: none;
+          }
+        }
+        &__content {
+          width: 100%;
+          padding-top: 12rem;
+        }
+        &__desc {
+          column-gap: 4.2rem;
+          margin-bottom: 4rem;
+        }
+        &__desc-btn {
+          padding: 2rem 5rem;
+          border-radius: 20rem;
+          font-size: 3rem;
+          line-height: 150%;
+        }
+        &__desc-date {
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 150%;
+        }
+        &__breadcrumbs {
+          margin-bottom: 8.8rem;
+        }
+        &__content-title {
+          margin-bottom: 13.6rem;
+        }
+      }
+    }
     &-doctors-chapter-zapis {
       .baner {
         &__text {
