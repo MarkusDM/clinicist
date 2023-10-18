@@ -39,37 +39,85 @@
     </noscript>
   </head>
   <body>
-    <!-- @@include('./template/header.html') -->
+    
     <main class="main">
-      <section class="baner baner-doctors-chapter-zapis">
-        <div class="baner__container container">
-          <div class="baner__text-wrap">
-            <nav class="baner__breadcrumbs breadcrumbs txt">
+      <section class="doctors-hero">
+        <div class="doctors-hero__container container">
+          <div class="doctors-hero__text-wrap">
+            <nav class="doctors-hero__breadcrumbs breadcrumbs txt">
               <a href="#" class="breadcrumbs__link">Главная</a>
-              <span class="breadcrumbs__text">Запись на прием</span>
+              <a href="#" class="breadcrumbs__link">Врачи</a>
+              <span class="breadcrumbs__text"
+                >Мишустин Александр Васильевич</span
+              >
             </nav>
-            <div class="baner__text-content">
-              <span class="baner__title title">Запись на прием</span>
-              <p class="baner__text txt text-item">
-                Вы можете записаться к нам в клинику по номеру телефона или
-                онлайн на сайте
-              </p>
-              <a href="tel:79563665474" class="baner__call-link">
-                <div class="baner__call-link-icon">
-                  <img
-                    src="./img/a-image/icons/phone-white.svg"
-                    aria-hidden="true"
-                    alt="" />
+            <div class="doctors-hero__application">
+              <span class="doctors-hero__title title"
+                >Мишустина Александра Васильевна</span
+              >
+              <form
+                data-da=".doctors-hero__container,768,last"
+                action="#"
+                class="doctors-hero__form">
+                <div class="doctors-hero__input-wrap">
+                  <input
+                    autocomplete="off"
+                    type="tel"
+                    name="form[]"
+                    data-error
+                    placeholder=""
+                    class="doctors-hero__input tel-mask" />
                 </div>
-                <span class="baner__call-link-text txt">+7 956 366 54 74</span>
-              </a>
+                <button type="submit" class="doctors-hero__btn btn">
+                  Оставить заявку
+                </button>
+              </form>
             </div>
           </div>
-          <div class="baner__image-wrap">
-            <img
-              src="./img/a-image/appointment-banner.webp"
-              alt=""
-              class="baner__image" />
+          <div class="doctors-hero__info">
+            <div class="doctors-hero__image-wrap">
+              <img
+                src="./img/a-image/doctor-card-img.webp"
+                alt=""
+                class="doctors-hero__image" />
+              <div
+                data-da=".doctors-hero__rating-wrap,768,1"
+                class="doctors-hero__price">
+                <span class="doctors-hero__price-text txt">Прием от </span>
+                <span class="doctors-hero__price-value"
+                  >1200 <span>₽</span></span
+                >
+              </div>
+            </div>
+            <div class="doctors-hero__group">
+              <div class="doctors-hero__labels">
+                <div class="doctors-hero__label">Гениколог</div>
+                <div class="doctors-hero__label">Акушер-гениколог</div>
+                <div class="doctors-hero__label">Хирург-уролог</div>
+                <div class="doctors-hero__label">Репродуктолог</div>
+              </div>
+              <div class="doctors-hero__rating-wrap">
+                <span class="doctors-hero__rating-text txt"
+                  >Высшая категория • Стаж 21 год</span
+                >
+                <div class="doctors-hero__rating-row">
+                  <span class="doctors-hero__rating-value">4.8</span>
+                  <div class="doctors-hero__rating-stars rating">
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_half"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="doctors-hero__row">
+                <span class="doctors-hero__text txt">1094 отзывов</span>
+                <a href="#" class="doctors-hero__link link"
+                  >Читать все отзывы</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -93,11 +141,11 @@
                         >Выбор даты и времени</span
                       >
                     </button>
-                    <button type="button" class="steps__title _tab-active">
+                    <button type="button" class="steps__title">
                       <span class="steps__num">2</span>
                       <span class="steps__title-text">Выбор услуги</span>
                     </button>
-                    <button type="button" class="steps__title">
+                    <button type="button" class="steps__title _tab-active">
                       <span class="steps__num">3</span>
                       <span class="steps__title-text">Запись на прием</span>
                     </button>
@@ -376,7 +424,8 @@
                             </div>
                             <div
                               class="steps__service-label service-label_img service-label swiper-slide">
-                              <div class="service-label__icon-wrap">
+                              <div
+                                class="service-label__icon-wrap">
                                 <img
                                   src="./img/a-image/doctor-ginecolog.webp"
                                   alt=""
@@ -422,7 +471,7 @@
                             <button type="button" data-spoiler class="steps__spoiler-title">Детали записи</button>
                             <div class="steps__spoiler-body"></div>
                           </div>
-                        <div data-da=".steps__spoiler-body,768,first" class="steps__details details-steps">
+                        <div data-da=".steps__spoiler-body,768,first" class="steps__details steps__details_mb details-steps">
                           <div class="details-steps__head">
                             <span class="details-steps__heading heading">Детали заявки</span>
                           </div>
@@ -450,171 +499,20 @@
                           </div>
                         </div>
                         <div class="steps__form-wrap">
-                          <form action="#" class="steps__form application">
-                            <span class="application__title heading">Персональные данные</span>
-                            <div class="application__fields">
-                              <div class="application__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Ваше имя" class="input__field"></div>
-                              <div class="application__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder class="input__field tel-mask"></div>
-                            </div>
-                            <div class="application__contacts">
-                              <span class="application__contacts-subtitle txt">Выберите способ связи:</span>
-                              <div class="application__contacts-group">
-                                <button type="button" class="application__contact-item contact-item _active">
-                                  <div class="contact-item__icon-wrap">
-                                    <img
-                                      src="./img/a-image/icons/tel-outline-white.svg"
-                                      aria-hidden="true"
-                                      alt=""
-                                      class="contact-item__icon" />
-                                  </div>
-                                  <span class="contact-item__text txt">Телефон</span>
-                                </button>
-                                <button type="button" class="application__contact-item contact-item ">
-                                  <div class="contact-item__icon-wrap">
-                                    <img
-                                      src="./img/a-image/icons/whatsapp-white.svg"
-                                      aria-hidden="true"
-                                      alt=""
-                                      class="contact-item__icon" />
-                                  </div>
-                                  <span class="contact-item__text txt"
-                                    >WhatsApp</span
-                                  >
-                                </button>
-                                <button type="button" class="application__contact-item contact-item ">
-                                  <div class="contact-item__icon-wrap">
-                                    <img
-                                      src="./img/a-image/icons/telegram-white.svg"
-                                      aria-hidden="true"
-                                      alt=""
-                                      class="contact-item__icon" />
-                                  </div>
-                                  <span class="contact-item__text txt"
-                                    >Telegram</span
-                                  >
-                                </button>
-                                <button
-                                  type="button"
-                                  class="application__contact-item contact-item">
-                                  <div class="contact-item__icon-wrap">
-                                    <img
-                                      src="./img/a-image/icons/viber-white.svg"
-                                      aria-hidden="true"
-                                      alt=""
-                                      class="contact-item__icon" />
-                                  </div>
-                                  <span class="contact-item__text txt">Viber</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="application__checkbox checkbox _mobile-only">
-                              <input id="c_1" data-error class="checkbox__input" type="checkbox" value="1" name="form[]">
-                              <label for="c_1" class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
-                            </div>
-                            <span class="application__heading heading _desktop-only">Кого вы хотели бы записать</span>
-                            <div class="application__patients patients">
-                              <div class="patients__item">
-                                <button type="button" class="patients__option option _active"></button>
-                                <div class="patients__row">
-                                  <div class="patients__group">
-                                    <span class="patients__subtext txt">ФИО</span>
-                                    <span class="patients__text txt">Николай Тареченков Васильевич</span>
-                                  </div>
-                                  <div class="patients__group">
-                                    <span class="patients__subtext txt">Дата рождения</span>
-                                    <span class="patients__text txt">14.11.18</span>
-                                  </div>
-                                  <div class="patients__group">
-                                    <span class="patients__subtext txt">Пол</span>
-                                    <span class="patients__text txt">Мужской</span>
-                                  </div>
+                            <form action="#" class="steps__form personal-data">
+                                <span class="personal-data__heading heading">Персональные данные</span>
+                                <div class="personal-data__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
+                                <div class="personal-data__warning warning">
+                                    <div class="warning__icon"><img aria-hidden="true" src="./img/a-image/icons/info.svg" alt=""></div>
+                                    <p class="warning__text txt">Данный врач недоступен для данного пациента. Пожалуйста, рассмотрите возможность выбора другого врача.</p>
                                 </div>
-                              </div>
-                              <div class="patients__item">
-                                <button type="button" class="patients__option option"></button>
-                                <div class="patients__row">
-                                  <div class="patients__group">
-                                    <span class="patients__subtext txt">ФИО</span>
-                                    <span class="patients__text txt">Николай Тареченков Васильевич</span>
-                                  </div>
-                                  <div class="patients__group">
-                                    <span class="patients__subtext txt">Дата рождения</span>
-                                    <span class="patients__text txt">14.11.18</span>
-                                  </div>
-                                  <div class="patients__group">
-                                    <span class="patients__subtext txt">Пол</span>
-                                    <span class="patients__text txt">Мужской</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <button type="submit" class="application__btn btn">Оставить заявку</button>
-                          </form>
+                                <button type="submit" class="personal-data__btn btn">Выбрать другого врача</button>
+                            </form>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="application-form">
-        <div class="application-form__container container">
-          <span class="application-form__heading heading"
-            >Для записи на прием оставьте номер телефона</span
-          >
-          <div class="application-form__body">
-            <div class="application-form__call-block call-block">
-              <div class="call-block__head">
-                <span class="call-block__heading"
-                  ><span>
-                    Звоните
-                    <a href="tel:84951897397">8 (495) 189-73-97</a>
-                  </span></span
-                >
-              </div>
-              <p class="call-block__text txt">
-                Вы можете связаться с нами по телефону или оставить заявку
-              </p>
-            </div>
-            <div class="application-form__content">
-              <span class="application-form__subheading heading"
-                >Мы поможем вам подобрать время записи!</span
-              >
-              <p class="application-form__text txt">
-                Перезвоним вам в течении 1 часа и проконсультируем вас по
-                услугам
-              </p>
-              <form action="#" class="application-form__form">
-                <div class="application-form__input-wrap">
-                  <input
-                    autocomplete="off"
-                    type="tel"
-                    name="form[]"
-                    data-error
-                    placeholder="Номер телефона"
-                    class="application-form__input" />
-                </div>
-                <button
-                  data-popup="#application-modal"
-                  type="submit"
-                  class="application-form__btn btn">
-                  Отправить заявку
-                </button>
-              </form>
-              <div class="application-form__info txt">
-                Оставляя свои данные, вы соглашаетесь на обработку персональных
-                данных.
-              </div>
-              <div class="application-form__icon-wrap">
-                <img
-                  src="./img/a-image/icons/email-push.svg"
-                  aria-hidden="true"
-                  alt=""
-                  class="application-form__icon" />
               </div>
             </div>
           </div>
@@ -822,7 +720,246 @@
         </div>
       </div>
     </footer>
-    @@include('./template/popups.html')
+    <div id="datepicker-modal" aria-hidden="true" class="datepicker-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <form action="#" class="datepicker-modal__form">
+        <span class="datepicker-modal__title">Выберите время и дату</span>
+        <div id="datepicker"></div>
+        <div class="datepicker-modal__field">
+          <label for="pick-time-field" class="datepicker-modal__label"
+            >Выберите время записи</label
+          >
+          <div class="datepicker-modal__input-wrap">
+            <input
+              id="pick-time-field"
+              type="number"
+              placeholder="09:11"
+              class="datepicker-modal__input" />
+          </div>
+        </div>
+        <div class="datepicker-modal__actions">
+          <button type="button" class="datepicker-modal__head-back link">
+            Назад
+          </button>
+          <button type="submit" class="datepicker-modal__btn btn">
+            Готово
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="appointment-modal" aria-hidden="true" class="appointment-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="appointment-modal__body">
+        <span class="appointment-modal__title title">Запишитесь к врачу</span>
+        <span class="appointment-modal__subtitle subtitle"
+          >Присоединяйтесь к 600 000 нашихпациентов и получите действительно
+          качественные медицинские услуги</span
+        >
+        <form data-dev action="#" class="appointment-modal__form">
+          <div class="appointment-modal__input-wrap">
+            <input
+              autocomplete="off"
+              type="tel"
+              name="form[]"
+              data-error
+              placeholder
+              class="appointment-modal__input tel-mask" />
+          </div>
+          <div class="appointment-modal__contacts">
+            <span class="appointment-modal__contacts-heading txt"
+              >Выберите способ связи:</span
+            >
+            <div class="appointment-modal__contacts-group">
+              <button type="button" class="appointment-modal__contact contact-item _active">
+                <div class="contact-item__icon-wrap">
+                  <img
+                    src="./img/a-image/icons/tel-outline-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="contact-item__icon" />
+                </div>
+                <span class="contact-item__text txt">Телефон</span>
+              </button>
+              <button type="button" class="appointment-modal__contact contact-item ">
+                <div class="contact-item__icon-wrap">
+                  <img
+                    src="./img/a-image/icons/whatsapp-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="contact-item__icon" />
+                </div>
+                <span class="contact-item__text txt"
+                  >WhatsApp</span
+                >
+              </button>
+              <button type="button" class="appointment-modal__contact contact-item ">
+                <div class="contact-item__icon-wrap">
+                  <img
+                    src="./img/a-image/icons/telegram-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="contact-item__icon" />
+                </div>
+                <span class="contact-item__text txt"
+                  >Telegram</span
+                >
+              </button>
+              <button
+                type="button"
+                class="appointment-modal__contact  contact-item _mobile-only">
+                <div class="contact-item__icon-wrap">
+                  <img
+                    src="./img/a-image/icons/viber-white.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="contact-item__icon" />
+                </div>
+                <span class="contact-item__text txt">Viber</span>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="appointment-modal__btn btn">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="choose-patient-modal" aria-hidden="true" class="choose-patient-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="choose-patient-modal__body">
+        <span class="choose-patient-modal__title title">Запишитесь к врачу</span>
+        <p class="choose-patient-modal__text txt">Кого вы хотели бы записать на прием?</p>
+        <div class="choose-patient-modal__actions">
+          <button type="button" class="choose-patient-modal__btn btn">Себя</button>
+          <button type="button" class="choose-patient-modal__btn btn btn_outlined">Другого человека</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="add-patient-modal" aria-hidden="true" class="add-patient-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="add-patient-modal__body">
+        <div class="add-patient-modal__title-wrap">
+          <span class="add-patient-modal__subtitle subtitle">Для продолжения,  вам необходимо заполнить данные пациента</span>
+          <span class="add-patient-modal__title title">Добавить пациента</span>
+        </div>
+        <form data-dev action="#" class="add-patient-modal__form">
+          <div class="add-patient-modal__checkboxes">
+            <div class="add-patient-modal__checkbox checkbox">
+              <input id="o_1" data-error class="checkbox__input" type="radio" value="1" name="option">
+              <label for="o_1" class="checkbox__label"><span class="checkbox__text">Мужчина</span></label>
+            </div>
+            <div class="add-patient-modal__checkbox checkbox">
+              <input id="o_2" data-error class="checkbox__input" type="radio" value="2" name="option">
+              <label for="o_2" class="checkbox__label"><span class="checkbox__text">Женщина</span></label>
+            </div>
+          </div>
+          <div class="add-patient-modal__fields">
+            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
+            <div class="add-patient-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
+          </div>
+          <button type="submit" class="add-patient-modal__btn btn">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="abort-application-modal" aria-hidden="true" class="abort-application-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="abort-application-modal__body">
+        <span class="abort-application-modal__title">Вы действительно хотите прервать запись?</span>
+        <p class="abort-application-modal__text txt">Возможно, потом у врача не останется свободных окон</p>
+        <div class="abort-application-modal__actions">
+          <button class="abort-application-modal__head-back link">Прервать запись</button>
+          <button type="button" class="abort-application-modal__btn btn">Вернуться к записи</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="done-application-modal" aria-hidden="true" class="done-application-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="done-application-modal__body">
+        <span class="done-application-modal__title">Вы записаны!</span>
+        <div class="done-application-modal__group">
+          <div class="done-application-modal__item">
+            <div class="done-application-modal__icon-wrap"><img src="./img/a-image/icons/calendar.svg" aria-hidden="true" alt="" class="done-application-modal__icon"></div>
+            <span class="done-application-modal__item-txt txt">15 августа, 10:30</span>
+          </div>
+          <a href="tel:88612073374" class="done-application-modal__item">
+            <div class="done-application-modal__icon-wrap"><img src="./img/a-image/icons/call-phone.svg" aria-hidden="true" alt="" class="done-application-modal__icon"></div>
+            <span class="done-application-modal__item-txt txt">8 (861) 207-33-74</span>
+          </a>
+          <div class="done-application-modal__item">
+            <div class="done-application-modal__icon-wrap"><img src="./img/a-image/icons/pin-blue.svg" aria-hidden="true" alt="" class="done-application-modal__icon"></div>
+            <span class="done-application-modal__item-txt txt">Краснодар, ул. Калинина, 202</span>
+          </div>
+        </div>
+        <button type="button" class="done-application-modal__btn btn">Хорошо</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sent-application-modal" aria-hidden="true" class="sent-application-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="sent-application-modal__body">
+        <span class="sent-application-modal__title">Заявка отправлена</span>
+        <p class="sent-application-modal__text txt">Перезвоним вам в течении 1 часа и проконсультируем вас по услугам</p>
+        <button type="button" class="sent-application-modal__btn btn">Хорошо</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./js/swiper-bundle.min.js"></script>

@@ -1,0 +1,888 @@
+
+body::after {
+    content: '';
+    background-color: rgba(27, 66, 85, 0.2);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease 0s;
+    pointer-events: none;
+    z-index: 149;
+  }
+
+
+// base popup styles
+.popup-show body::after {
+    opacity: 1;
+  }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: visibility 0.8s ease 0s;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .popup_show {
+    z-index: 150;
+    visibility: visible;
+    overflow: auto;
+    pointer-events: auto;
+  }
+  .popup_show .popup__content {
+    visibility: visible;
+    transform: scale(1);
+  }
+  .popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup__content {
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    background-color: #ffffff;
+    padding: 4rem 4rem 7rem 4rem;
+    width: 100%;
+    max-width: 51.6rem;
+    .lock & {
+      visibility: visible;
+    }
+  }
+  .popup__close {
+    width: 2rem;
+    height: 2rem;
+    img {
+        height: 100%;
+      object-fit: contain;
+    }
+  }
+  .popup__head {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+// appointment modal
+.appointment-modal {
+    .popup__content {
+      padding: 4rem 4rem 7rem 7rem;
+    }
+    .popup__head {
+      margin-bottom: 1rem;
+    }
+  
+    // .appointment-modal__body
+  
+    &__body {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    // .appointment-modal__title
+  
+    &__title {
+      margin-bottom: 1.5rem;
+    }
+  
+    // .appointment-modal__subtitle
+  
+    &__subtitle {
+      margin-bottom: 4rem;
+      max-width: 70.5rem;
+    }
+  
+    // .appointment-modal__form
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    // .appointment-modal__input-wrap
+  
+    &__input-wrap {
+      margin-bottom: 2.5rem;
+      padding-left: 3rem;
+      display: flex;
+      width: 100%;
+      border-radius: 7.2rem;
+      border: 1px solid #d8dde4;
+      background-color: #ffffff;
+      &::before {
+        content: '';
+        align-self: center;
+        flex: 0 0 2rem;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../img/a-image/icons/phone-grey.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  
+    // .appointment-modal__input
+  
+    &__input {
+      @extend .txt;
+      padding: 2rem;
+      border: none;
+      font-size: 1.6rem;
+      background: none;
+    }
+  
+    // .appointment-modal__contacts
+  
+    &__contacts {
+      margin-bottom: 4.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    // .appointment-modal__contacts-heading
+  
+    &__contacts-heading {
+      font-size: 1.6rem;
+    }
+  
+    // .appointment-modal__contacts-group
+  
+    &__contacts-group {
+      display: flex;
+      column-gap: 2.4rem;
+    }
+  
+    // .appointment-modal__contact
+  
+    &__contact {
+    }
+  
+    // .appointment-modal__btn
+  
+    &__btn {
+      align-self: flex-start;
+      min-width: 29.3rem;
+    }
+  }
+
+// datepicker popup
+.datepicker-modal {
+    .popup__head {
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .popup__arrow {
+        img {
+          width: 3.7rem;
+          object-fit: contain;
+        }
+      }
+      .popup__close {
+        grid-column: 2/3;
+        justify-self: end;
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+    .qs-datepicker-container {
+      margin-bottom: 3rem;
+      grid-row: 2/3;
+    }
+  
+    // .datepicker-modal__form
+  
+    &__form {
+      display: grid;
+      justify-content: center;
+    }
+  
+    // .datepicker-modal__title
+  
+    &__title {
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #2f2f2f;
+      font-family: Montserrat;
+      font-size: 3rem;
+    }
+  
+    // .datepicker-modal__field
+  
+    &__field {
+      margin-bottom: 4.7rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5rem;
+      width: 100%;
+    }
+  
+    // .datepicker-modal__input-wrap
+  
+    &__input-wrap {
+      padding: 0.8rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $blue;
+      &::after {
+        content: '';
+        flex: 0 0 2.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(../img/a-image/icons/calendar-outline.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  
+    // .datepicker-modal__label
+  
+    &__label {
+      font-family: MyriadPro;
+      font-size: 2rem;
+      letter-spacing: -0.048rem;
+    }
+  
+    // .datepicker-modal__input
+  
+    &__input {
+      @extend .txt;
+      border: none;
+      &::placeholder {
+        @extend .txt;
+      }
+    }
+  
+    // .datepicker-modal__actions
+  
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    // .datepicker-modal__head-back
+  
+    &__head-back {
+      &.link {
+        flex-direction: row-reverse;
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  
+    // .datepicker-modal__btn
+  
+    &__btn {
+      min-width: 20.3rem;
+    }
+  }
+
+// choose patient modal
+.choose-patient-modal {
+    .popup__head {
+        margin-bottom: 2rem;
+    }
+    .popup__content {
+        padding: 4rem 4rem 8rem 4rem;
+    }
+
+    // .choose-patient-modal__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    // .choose-patient-modal__title
+
+    &__title {
+        margin-bottom: 3rem;
+        font-family: Montserrat;
+        font-size: 5rem;
+    }
+
+    // .choose-patient-modal__text
+
+    &__text {
+        margin-bottom: 4rem;
+        color: #2F2F2F;
+    }
+
+    // .choose-patient-modal__actions
+
+    &__actions {
+        display: flex;
+        column-gap: 4rem;
+    }
+
+    // .choose-patient-modal__btn
+
+    &__btn {
+        min-width: 13.8rem;
+        &_outlined {
+            min-width: 24rem;
+        }
+    }
+}
+
+// add patient modal
+.add-patient-modal {
+  .popup__content {
+    padding: 4rem 4rem 6rem 4rem;
+  }
+  .popup__head {
+    margin-bottom: 0.5rem;
+  }
+
+  // .add-patient-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .add-patient-modal__title-wrap
+
+  &__title-wrap {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .add-patient-modal__subtitle
+
+  &__subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  // .add-patient-modal__title
+
+  &__title {
+  }
+
+  // .add-patient-modal__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .add-patient-modal__checkboxes
+
+  &__checkboxes {
+    margin-bottom: 4rem;
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  // .add-patient-modal__checkbox
+
+  &__checkbox {
+  }
+
+  // .add-patient-modal__fields
+
+  &__fields {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  // .add-patient-modal__input
+
+  &__input {
+  }
+
+  // .add-patient-modal__btn
+
+  &__btn {
+    align-self: flex-start;
+    min-width: 28.4rem;
+  }
+}
+
+// abort application modal
+.abort-application-modal {
+  .popup__content {
+    padding: 8rem;
+  }
+
+  // .abort-application-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .abort-application-modal__title
+
+  &__title {
+    margin-bottom: 2.9rem;
+    font-family: Montserrat;
+    font-size: 5rem;
+    line-height: 120%;
+  }
+
+  // .abort-application-modal__text
+
+  &__text {
+    margin-bottom: 4.8rem;
+    line-height: 133.333%;
+    color: #000000;
+  }
+
+  // .abort-application-modal__actions
+
+  &__actions {
+    display: flex;
+    column-gap: 5.8rem;
+  }
+
+  // .abort-application-modal__head-back
+
+  &__head-back {
+  }
+
+  // .abort-application-modal__btn
+
+  &__btn {
+    min-width: 24.5rem;
+  }
+}
+
+// done application modal
+.done-application-modal {
+  .popup__content  {
+    padding: 4rem 4rem 7rem 4rem;
+  }
+  .popup__head {
+    margin-bottom: 2rem;
+  }
+
+  // .done-application-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .done-application-modal__title
+
+  &__title {
+    margin-bottom: 3rem;
+    font-family: Montserrat;
+    font-size: 5rem;
+    line-height: 130%;
+  }
+
+  // .done-application-modal__group
+
+  &__group {
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1.6rem;
+    max-width: 36rem;
+  }
+
+  // .done-application-modal__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  // .done-application-modal__icon-wrap
+
+  &__icon-wrap {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+  }
+
+  // .done-application-modal__icon
+
+  &__icon {
+    object-fit: contain;
+  }
+
+  // .done-application-modal__item-txt
+
+  &__item-txt {
+    line-height: 133.333%;
+    color: #2F2F2F;
+  }
+
+  // .done-application-modal__btn
+
+  &__btn {
+    min-width: 24.5rem;
+  }
+}
+
+// sent application modal
+.sent-application-modal {
+  .popup__content {
+    padding: 4rem 4rem 8rem 4rem;
+  }
+  .popup__head {
+    margin-bottom: 2rem;
+  }
+
+  // .sent-application-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .sent-application-modal__title
+
+  &__title {
+    margin-bottom: 2.5rem;
+    font-family: Montserrat;
+    font-size: 5rem;
+    line-height: 130%;
+  }
+
+  // .sent-application-modal__text
+
+  &__text {
+    margin-bottom: 5.2rem;
+    line-height: 133.333%;
+    color: #000000;
+  }
+
+  // .sent-application-modal__btn
+
+  &__btn {
+    min-width: 24.5rem;
+  }
+}
+
+ @media (max-width: 48em){
+  .popup {
+        &__wrapper {
+            padding: 0 4rem;
+        }
+        &__content {
+            max-width: none;
+        }
+        &__close {
+            width: 3rem;
+            height: 3rem;
+        }
+  }
+  .sent-application-modal {
+    .popup__content {
+      padding: 6rem 6rem 16rem 6rem;
+    }
+    .popup__head {
+      margin-bottom: 7rem;
+    }
+    &__title {
+      margin-bottom: 3.2rem;
+      font-size: 5.4rem;
+    }
+    &__text {
+      margin-bottom: 6rem;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+  .done-application-modal {
+    .popup__head {
+      margin-bottom: 7rem;
+    }
+    &__title {
+      margin-bottom: 3rem;
+    }
+    &__group {
+      margin-bottom: 6rem;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 2.4rem;
+      max-width: none;
+    }
+    &__btn {
+      width: 100%;
+    }
+    &__item {
+      column-gap: 2.4rem;
+    }
+    &__item-txt {
+      font-size: 3rem;
+      line-height: 170%;
+    }
+    &__icon-wrap {
+      flex: 0 0 4rem;
+      width: 4rem;
+    }
+  }
+  .abort-application-modal {
+    .popup__content {
+      padding: 16rem 2rem;
+    }
+    &__title {
+      margin-bottom: 3.2rem;
+      font-size: 5.4rem;
+    }
+    &__text {
+      margin-bottom: 6rem;
+      font-size: 3rem;
+      line-height: 160%;
+    }
+    &__actions {
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 6rem;
+      width: 100%;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+  .add-patient-modal {
+    .popup__wrapper {
+      padding: 20rem 4rem;
+    }
+    .popup__content {
+      padding: 6rem 3rem 16rem 3rem;
+    }
+    .popup__head {
+      margin-bottom: 7rem;
+    }
+    &__subtitle {
+      margin-bottom: 1.6rem;
+    }
+    &__title-wrap {
+      margin-bottom: 6.6rem;
+    }
+    &__checkboxes {
+      margin-bottom: 6.6rem;
+      column-gap: 8rem;
+    }
+    &__fields {
+      margin-bottom: 6rem;
+      grid-template-columns: 1fr;
+      row-gap: 3.2rem;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+  .choose-patient-modal {
+        .popup__content {
+            padding: 6rem 6rem 16rem 6rem;
+        }
+        .popup__head {
+            margin-bottom: 7rem;
+        }
+        &__title {
+            margin-bottom: 4rem;
+            font-size: 5rem;
+        }
+        &__text {
+            margin-bottom: 6rem;
+            font-size: 3rem;
+        }
+        &__actions {
+            flex-direction: column;
+            row-gap: 4rem;
+            width: 100%;
+        }
+        &__btn {
+            width: 100%;
+            height: 10rem;
+            &_outlined {
+                width: 100%;
+
+            }
+        }
+  }
+  .appointment-modal {
+    .popup__content {
+      padding: 6rem 4rem 16rem 4rem;
+    }
+    .popup__head {
+      margin-bottom: 6rem;
+    }
+    &__title {
+      margin-bottom: 1.6rem;
+    }
+    &__subtitle {
+      margin-bottom: 3rem;
+      max-width: 72rem;
+      font-size: 2.4rem;
+    }
+    &__input-wrap {
+      margin-bottom: 6rem;
+      padding-left: 4rem;
+      border-radius: 14.4rem;
+      &::before {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    &__input {
+      padding: 3.6rem 6rem;
+      font-size: 3.2rem;
+      color: #999999;
+    }
+    &__contacts {
+      margin-bottom: 6rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__contacts-heading {
+      margin-bottom: 3.6rem;
+      font-size: 3.2rem;
+    }
+    &__contacts-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      column-gap: 1.4rem;
+      row-gap: 3rem;
+    }
+    &__btn {
+      width: 100%;
+      height: 10rem;
+    }
+  }
+  .datepicker-modal {
+    .popup__content {
+      padding: 6rem 6rem 7.2rem 6rem;
+    }
+    .popup__head {
+      margin-bottom: 7rem;
+    }
+    .qs-datepicker-container {
+      margin-bottom: 5.5rem;
+      padding: 4rem;
+      width: 100%;
+      border-radius: 2rem;
+    }
+    .qs-arrow {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+    .qs-controls {
+      margin-bottom: 4rem;
+    }
+    .qs-month-year {
+      font-size: 4rem;
+    }
+    .qs-day {
+      margin-bottom: 6rem;
+      font-size: 2.8rem;
+    }
+    .qs-square::after {
+      left: 52%;
+      width: 5rem;
+      height: 5rem;
+    }
+    .qs-num {
+      margin-bottom: 3.6rem;
+      font-size: 3.6rem;
+    }
+    &__label {
+      font-size: 3.6rem;
+    }
+    &__title {
+      margin-bottom: 6rem;
+      font-size: 5.2rem;
+      line-height: 107%;
+      max-width: 63rem;
+    }
+    &__field {
+      margin-bottom: 6rem;
+      row-gap: 2.8rem;
+    }
+    &__input-wrap {
+      padding: 1.2rem;
+      &::after {
+        flex: 0 0 4.8rem;
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+    &__input {
+      font-size: 3.6rem;
+      &::placeholder {
+        font-size: 3.6rem;
+      }
+    }
+    &__btn {
+      min-width: 29.4rem;
+      height: 10rem;
+    }
+  } 
+}
+@media (min-width: 48em){
+  .sent-application-modal {
+    .popup__content {
+      max-width: 101.4rem;
+    }
+  }
+  .done-application-modal {
+    .popup__content {
+      max-width: 101.4rem;
+    }
+  }
+  .abort-application-modal{
+    .popup__content {
+      max-width: 101.4rem;
+    }
+  }
+    .add-patient-modal {
+      .popup__content {
+        max-width: 106.7rem;
+      }
+    }
+    .choose-patient-modal {
+        .popup__content {
+            max-width: 101.4rem;
+        }
+    }
+    .appointment-modal {
+        .popup__content {
+             max-width: 87rem;
+        }
+    }
+}

@@ -28,20 +28,6 @@
   }
 }
 
-body::after {
-  content: '';
-  background-color: rgba(27, 66, 85, 0.2);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease 0s;
-  pointer-events: none;
-  z-index: 149;
-}
-
 [data-showmore-button] {
   span {
     &:last-child {
@@ -1052,125 +1038,6 @@ body::after {
   visibility: hidden;
 }
 
-// datepicker popup
-.datepicker-modal {
-  .popup__head {
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    .popup__arrow {
-      img {
-        width: 3.7rem;
-        object-fit: contain;
-      }
-    }
-    .popup__close {
-      grid-column: 2/3;
-      justify-self: end;
-      img {
-        object-fit: contain;
-      }
-    }
-  }
-  .qs-datepicker-container {
-    margin-bottom: 3rem;
-    grid-row: 2/3;
-  }
-
-  // .datepicker-modal__form
-
-  &__form {
-    display: grid;
-    justify-content: center;
-  }
-
-  // .datepicker-modal__title
-
-  &__title {
-    margin-bottom: 3rem;
-    text-align: center;
-    color: #2f2f2f;
-    font-family: Montserrat;
-    font-size: 3rem;
-  }
-
-  // .datepicker-modal__field
-
-  &__field {
-    margin-bottom: 4.7rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.5rem;
-    width: 100%;
-  }
-
-  // .datepicker-modal__input-wrap
-
-  &__input-wrap {
-    padding: 0.8rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid $blue;
-    &::after {
-      content: '';
-      flex: 0 0 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      background-image: url(../img/a-image/icons/calendar-outline.svg);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  // .datepicker-modal__label
-
-  &__label {
-    font-family: MyriadPro;
-    font-size: 2rem;
-    letter-spacing: -0.048rem;
-  }
-
-  // .datepicker-modal__input
-
-  &__input {
-    @extend .txt;
-    border: none;
-    &::placeholder {
-      @extend .txt;
-    }
-  }
-
-  // .datepicker-modal__actions
-
-  &__actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  // .datepicker-modal__head-back
-
-  &__head-back {
-    &.link {
-      flex-direction: row-reverse;
-      &::after {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  // .datepicker-modal__btn
-
-  &__btn {
-    min-width: 20.3rem;
-  }
-}
 
 // price list item
 .pricelist-item {
@@ -1806,156 +1673,6 @@ body::after {
   }
 }
 
-// appointment modal
-.appointment-modal {
-  .popup__content {
-    padding: 4rem 4rem 7rem 7rem;
-    max-width: 87rem;
-  }
-  .popup__head {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  // .appointment-modal__body
-
-  &__body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  // .appointment-modal__title
-
-  &__title {
-    margin-bottom: 1.5rem;
-  }
-
-  // .appointment-modal__subtitle
-
-  &__subtitle {
-    margin-bottom: 4rem;
-    max-width: 70.5rem;
-  }
-
-  // .appointment-modal__form
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  // .appointment-modal__input-wrap
-
-  &__input-wrap {
-    margin-bottom: 2.5rem;
-    padding-left: 3rem;
-    display: flex;
-    width: 100%;
-    border-radius: 7.2rem;
-    border: 1px solid #d8dde4;
-    background-color: #ffffff;
-    &::before {
-      content: '';
-      align-self: center;
-      flex: 0 0 2rem;
-      width: 2rem;
-      height: 2rem;
-      background-image: url(../img/a-image/icons/phone-grey.svg);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
-
-  // .appointment-modal__input
-
-  &__input {
-    @extend .txt;
-    padding: 2rem;
-    border: none;
-    font-size: 1.6rem;
-    background: none;
-  }
-
-  // .appointment-modal__contacts
-
-  &__contacts {
-    margin-bottom: 4.7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  // .appointment-modal__contacts-heading
-
-  &__contacts-heading {
-    font-size: 1.6rem;
-  }
-
-  // .appointment-modal__contacts-group
-
-  &__contacts-group {
-    display: flex;
-    column-gap: 2.4rem;
-  }
-
-  // .appointment-modal__contact
-
-  &__contact {
-    padding: 0.7rem 3rem 0.7rem 0.8rem;
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-    border: 1px solid #d8dde4;
-    border-radius: 72rem;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    &._active {
-      border: 1px solid $blue;
-      background-color: #f3fbff;
-    }
-    &._mobile-only {
-      display: none;
-    }
-  }
-
-  // .appointment-modal__contact-icon-wrap
-
-  &__contact-icon-wrap {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 4rem;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: $blue;
-  }
-
-  // .appointment-modal__contact-icon
-
-  &__contact-icon {
-    flex: 0 0 2.4rem;
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-
-  // .appointment-modal__contact-text
-
-  &__contact-text {
-    font-size: 1.6rem;
-  }
-
-  // .appointment-modal__btn
-
-  &__btn {
-    align-self: flex-start;
-    min-width: 29.3rem;
-  }
-}
-
 // our doctors card
 .our-doctors-card {
   position: relative;
@@ -2237,8 +1954,439 @@ line-height: 127.273%;
   }
 }
 
+// hint
+.hint {
+  position: relative;
+  flex: 0 0 3rem;
+  align-self: center;
+  width: 3rem;
+  height: 3rem;
+  &._active {
+    .hint__body {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .hint__icon
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    img {
+
+    height: 100%;
+    object-fit: contain;
+    }
+  
+  }
+
+  // .hint__body
+
+  &__body {
+    position: absolute;width: 27rem;top: 0;left: 50%;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 1.2rem 0 #E3EBF0;
+    text-align: center;    line-height: 84%;
+    color:  #2F2F2F;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -121%);
+    transition: all 0.3s ease;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 1.1rem 0.65rem 0 0.65rem;
+        border-color: #FFFFFF transparent transparent transparent;
+        transform: rotate(0deg) translate(-50%, 100%);
+    }
+    span {
+      color:  #2F2F2F;
+      font-family: MyriadPro;
+      font-size: 1.6rem;
+
+    }
+    background-color: #ffffff;
+  }
+}
+
+// contact item
+.contact-item {
+  padding: 0.7rem 3rem 0.7rem 0.8rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  border: 1px solid #d8dde4;
+  border-radius: 72rem;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &._active {
+    border: 1px solid $blue;
+    background-color: #f3fbff;
+  }
+  &._mobile-only {
+    display: none;
+  }
+
+  // .contact-item__icon-wrap
+
+  &__icon-wrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $blue;
+  }
+
+  // .contact-item__icon
+
+  &__icon {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  // .contact-item__text
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}
+
+// patients 
+.patients {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.7rem;
+
+  // .patients__item
+
+  &__item {
+    display: flex;
+    column-gap: 2rem;
+    &_disabled {
+      .patients__text {
+        color: rgba(51, 51, 51, 0.50);
+      }
+    }
+  }
+
+  // .patients__option
+
+  &__option {
+    margin-bottom: 3.7rem;
+    align-self: flex-end;
+  }
+
+  // .patients__row
+
+  &__row {
+    padding-left: 1.2rem;
+    padding-bottom: 3.3rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 6rem;
+    border-bottom: 1px solid #D8DDE4;
+  }
+
+  // .patients__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .patients__subtext
+
+  &__subtext {
+    margin-bottom: 1.2rem;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    font-size: 1.6rem;
+  }
+
+  // .patients__text
+
+  &__text {
+    color: #2F2F2F;
+  }
+}
+
+// details-steps
+.details-steps {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $blue;
+  border-radius: 1rem;
+  background-color: #ffffff;
+
+  // .details-steps__head
+
+  &__head {
+    padding: 3rem 2rem;
+  }
+
+  // .details-steps__heading
+
+  &__heading {
+  }
+
+  // .details-steps__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .details-steps__item
+
+  &__item {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    &:first-child {
+      padding: 0 2rem 2rem 2rem;
+    }
+    &:last-child {
+      padding: 2rem 2rem 2.8rem 2rem;
+    }
+    &:not(:last-child) {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;width: 100%;height: 1px;bottom: 0;left: 0;
+        background-color: #EEF3F7;
+      }
+    }
+  }
+
+  // .details-steps__item-subtitle
+
+  &__item-subtitle {
+    margin-bottom: 1.2rem;
+    color: #B3B7BA;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  // .details-steps__item-text
+
+  &__item-text {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  // .details-steps__item-subtext
+
+  &__item-subtext {
+    margin-top: 0.7rem;
+    color: #B3B7BA;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  // .details-steps__item-row
+
+  &__item-row {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+    .details-steps__item-text {
+      max-width: 27rem;
+    }
+  }
+
+  // .details-steps__item-image
+
+  &__item-image {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 0 7.9rem;
+    width: 7.9rem;
+    height: 7.9rem;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+// warning
+.warning {
+  display: flex;
+  column-gap: 1.5rem;
+
+  // .warning__icon
+
+  &__icon {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    img {
+      object-fit: contain;
+    }
+  }
+
+  // .warning__text
+
+  &__text {
+    font-size: 1.6rem;    
+    line-height: 150%;
+    color: #2f2f2f;
+  }
+}
+
 
 @media (max-width: 48em) {
+  .patients {
+    .option {
+      margin-top: 4.3rem;
+      align-self: flex-start;
+      flex: 0 0 3.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      &::before {
+        width: 2.9rem;
+        height: 2.9rem;
+      }
+    }
+    &__item {
+      column-gap: 5rem;
+    }
+    &__row {
+      padding-left: 0;
+      padding-bottom: 4rem;
+      grid-template-columns: 1fr;
+      flex: 1 1 auto;
+      row-gap: 4rem;
+    }
+    &__subtext {
+      margin-bottom: 1.2rem;
+      font-size: 2.6rem;
+    }
+    &__text {
+      font-size: 3.2rem;
+    }
+  }
+  .warning {
+    column-gap: 4rem;
+    &__icon {
+      align-self: center;
+      flex: 0 0 4rem;
+      width: 4rem;
+      height: 4rem;
+    }
+    &__text {
+      font-size: 2.6rem;
+    }
+  }
+  .details-steps {
+    border: none;
+    border-radius: 0;
+    &__head {
+      display: none;
+    }
+    &__item-row {
+      column-gap: 3rem;
+      .details-steps__item-text {
+        max-width: 45rem;
+      }
+    }
+    &__item-image {
+      flex: 0 0 10rem;
+      width: 10rem;
+      height: 10rem;
+    }
+    &__item {
+      padding: 2.4rem 4rem;
+      &:first-child {
+        padding: 0 4rem 2.4rem 4rem;
+      }
+      &:last-child {
+        padding: 2.4rem 4rem 4rem 4rem;
+      }
+      &:not(:last-child) {
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+    &__item-subtitle {
+      margin-bottom: 0.8rem;
+      font-size: 2.4rem;
+      line-height: 200%;
+    }
+    &__item-text {
+      font-size: 3.2rem;
+      line-height: 150%;
+    }
+    &__item-subtext {
+      margin-top: 0.8rem;
+      font-size: 3.2rem;
+      line-height: 150%;
+    }
+  }
+  .contact-item {
+    padding: 1.6rem 4rem 1.6rem 1.6rem;
+    column-gap: 3rem;
+    border-radius: 14.4rem;
+    &._mobile-only {
+      display: flex;
+    }
+    &__icon-wrap {
+      flex: 0 0 8rem;
+      width: 8rem;
+      height: 8rem;
+    }
+    &__icon {
+      flex: 0 0 4.4rem;
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+    &__text {
+      font-size: 3.2rem;
+    }
+  }
+  .hint {
+    border-radius: 2rem;
+    flex: 0 0 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    &__body {
+      left: auto;
+      right: -50%;
+      padding: 2.4rem 3rem;
+      width: 48rem;
+      line-height: 150%;
+      transform: translateY(-117%);
+      span {
+        font-size: 3.2rem;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
   .service-card {
     padding: 2.3rem;
     column-gap: 3rem;
@@ -2356,78 +2504,6 @@ line-height: 127.273%;
     &__btn {
       height: 8.8rem;
       border-radius: 0 0 2rem 2rem;
-    }
-  }
-  .appointment-modal {
-    .popup__content {
-      padding: 6rem 4rem 16rem 4rem;
-    }
-    .popup__head {
-      margin-bottom: 6rem;
-    }
-    &__title {
-      margin-bottom: 1.6rem;
-    }
-    &__subtitle {
-      margin-bottom: 3rem;
-      max-width: 72rem;
-      font-size: 2.4rem;
-    }
-    &__input-wrap {
-      margin-bottom: 6rem;
-      padding-left: 4rem;
-      border-radius: 14.4rem;
-      &::before {
-        flex: 0 0 4rem;
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-    &__input {
-      padding: 3.6rem 6rem;
-      font-size: 3.2rem;
-      color: #999999;
-    }
-    &__contacts {
-      margin-bottom: 6rem;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    &__contacts-heading {
-      margin-bottom: 3.6rem;
-      font-size: 3.2rem;
-    }
-    &__contacts-group {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: space-between;
-      column-gap: 1.4rem;
-      row-gap: 3rem;
-    }
-    &__contact {
-      padding: 1.6rem 4rem 1.6rem 1.6rem;
-      column-gap: 3rem;
-      border-radius: 14.4rem;
-      &._mobile-only {
-        display: flex;
-      }
-    }
-    &__contact-icon-wrap {
-      flex: 0 0 8rem;
-      width: 8rem;
-      height: 8rem;
-    }
-    &__contact-icon {
-      flex: 0 0 4.4rem;
-      width: 4.4rem;
-      height: 4.4rem;
-    }
-    &__contact-text {
-      font-size: 3.2rem;
-    }
-    &__btn {
-      width: 100%;
-      height: 10rem;
     }
   }
   .review-card {
@@ -3296,76 +3372,21 @@ line-height: 127.273%;
       }
     }
   }
-  .datepicker-modal {
-    .popup__content {
-      padding: 6rem 6rem 7.2rem 6rem;
-    }
-    .popup__head {
-      margin-bottom: 7rem;
-    }
-    .qs-datepicker-container {
-      margin-bottom: 5.5rem;
-      padding: 4rem;
-      width: 100%;
-      border-radius: 2rem;
-    }
-    .qs-arrow {
-      width: 2.6rem;
-      height: 2.6rem;
-    }
-    .qs-controls {
-      margin-bottom: 4rem;
-    }
-    .qs-month-year {
-      font-size: 4rem;
-    }
-    .qs-day {
-      margin-bottom: 6rem;
-      font-size: 2.8rem;
-    }
-    .qs-square::after {
-      left: 52%;
-      width: 5rem;
-      height: 5rem;
-    }
-    .qs-num {
-      margin-bottom: 3.6rem;
-      font-size: 3.6rem;
-    }
-    &__label {
-      font-size: 3.6rem;
-    }
-    &__title {
-      margin-bottom: 6rem;
-      font-size: 5.2rem;
-      line-height: 107%;
-      max-width: 63rem;
-    }
-    &__field {
-      margin-bottom: 6rem;
-      row-gap: 2.8rem;
-    }
-    &__input-wrap {
-      padding: 1.2rem;
-      &::after {
-        flex: 0 0 4.8rem;
-        width: 4.8rem;
-        height: 4.8rem;
-      }
-    }
-    &__input {
-      font-size: 3.6rem;
-      &::placeholder {
-        font-size: 3.6rem;
-      }
-    }
-    &__btn {
-      min-width: 29.4rem;
-      height: 10rem;
-    }
-  }
 }
 @media (min-width: 48em) {
+  .patients {
+    &__item {
+    &.no-padding {
+      .patients__option {
+        margin-bottom: 0.3rem;
+      }
+      .patients__row {
+        padding: 0;
+        border: none;
+      }
+    }
+    }
+  }
   .navigation-block {
     &__wrapper {
       display: flex;

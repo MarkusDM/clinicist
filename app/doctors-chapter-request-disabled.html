@@ -41,35 +41,83 @@
   <body>
     <!-- @@include('./template/header.html') -->
     <main class="main">
-      <section class="baner baner-doctors-chapter-zapis">
-        <div class="baner__container container">
-          <div class="baner__text-wrap">
-            <nav class="baner__breadcrumbs breadcrumbs txt">
+      <section class="doctors-hero">
+        <div class="doctors-hero__container container">
+          <div class="doctors-hero__text-wrap">
+            <nav class="doctors-hero__breadcrumbs breadcrumbs txt">
               <a href="#" class="breadcrumbs__link">Главная</a>
-              <span class="breadcrumbs__text">Запись на прием</span>
+              <a href="#" class="breadcrumbs__link">Врачи</a>
+              <span class="breadcrumbs__text"
+                >Мишустин Александр Васильевич</span
+              >
             </nav>
-            <div class="baner__text-content">
-              <span class="baner__title title">Запись на прием</span>
-              <p class="baner__text txt text-item">
-                Вы можете записаться к нам в клинику по номеру телефона или
-                онлайн на сайте
-              </p>
-              <a href="tel:79563665474" class="baner__call-link">
-                <div class="baner__call-link-icon">
-                  <img
-                    src="./img/a-image/icons/phone-white.svg"
-                    aria-hidden="true"
-                    alt="" />
+            <div class="doctors-hero__application">
+              <span class="doctors-hero__title title"
+                >Мишустина Александра Васильевна</span
+              >
+              <form
+                data-da=".doctors-hero__container,768,last"
+                action="#"
+                class="doctors-hero__form">
+                <div class="doctors-hero__input-wrap">
+                  <input
+                    autocomplete="off"
+                    type="tel"
+                    name="form[]"
+                    data-error
+                    placeholder=""
+                    class="doctors-hero__input tel-mask" />
                 </div>
-                <span class="baner__call-link-text txt">+7 956 366 54 74</span>
-              </a>
+                <button type="submit" class="doctors-hero__btn btn">
+                  Оставить заявку
+                </button>
+              </form>
             </div>
           </div>
-          <div class="baner__image-wrap">
-            <img
-              src="./img/a-image/appointment-banner.webp"
-              alt=""
-              class="baner__image" />
+          <div class="doctors-hero__info">
+            <div class="doctors-hero__image-wrap">
+              <img
+                src="./img/a-image/doctor-card-img.webp"
+                alt=""
+                class="doctors-hero__image" />
+              <div
+                data-da=".doctors-hero__rating-wrap,768,1"
+                class="doctors-hero__price">
+                <span class="doctors-hero__price-text txt">Прием от </span>
+                <span class="doctors-hero__price-value"
+                  >1200 <span>₽</span></span
+                >
+              </div>
+            </div>
+            <div class="doctors-hero__group">
+              <div class="doctors-hero__labels">
+                <div class="doctors-hero__label">Гениколог</div>
+                <div class="doctors-hero__label">Акушер-гениколог</div>
+                <div class="doctors-hero__label">Хирург-уролог</div>
+                <div class="doctors-hero__label">Репродуктолог</div>
+              </div>
+              <div class="doctors-hero__rating-wrap">
+                <span class="doctors-hero__rating-text txt"
+                  >Высшая категория • Стаж 21 год</span
+                >
+                <div class="doctors-hero__rating-row">
+                  <span class="doctors-hero__rating-value">4.8</span>
+                  <div class="doctors-hero__rating-stars rating">
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_full"></div>
+                    <div class="rating__item rating__item_half"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="doctors-hero__row">
+                <span class="doctors-hero__text txt">1094 отзывов</span>
+                <a href="#" class="doctors-hero__link link"
+                  >Читать все отзывы</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -93,11 +141,11 @@
                         >Выбор даты и времени</span
                       >
                     </button>
-                    <button type="button" class="steps__title _tab-active">
+                    <button type="button" class="steps__title">
                       <span class="steps__num">2</span>
                       <span class="steps__title-text">Выбор услуги</span>
                     </button>
-                    <button type="button" class="steps__title">
+                    <button type="button" class="steps__title _tab-active">
                       <span class="steps__num">3</span>
                       <span class="steps__title-text">Запись на прием</span>
                     </button>
@@ -376,7 +424,8 @@
                             </div>
                             <div
                               class="steps__service-label service-label_img service-label swiper-slide">
-                              <div class="service-label__icon-wrap">
+                              <div
+                                class="service-label__icon-wrap">
                                 <img
                                   src="./img/a-image/doctor-ginecolog.webp"
                                   alt=""
@@ -530,8 +579,8 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="patients__item">
-                                <button type="button" class="patients__option option"></button>
+                              <div class="patients__item patients__item_disabled">
+                                <button type="button" disabled class="patients__option option"></button>
                                 <div class="patients__row">
                                   <div class="patients__group">
                                     <span class="patients__subtext txt">ФИО</span>
@@ -548,73 +597,17 @@
                                 </div>
                               </div>
                             </div>
-                            <button type="submit" class="application__btn btn">Оставить заявку</button>
+                            <div class="application__warning warning">
+                                <div class="warning__icon"><img aria-hidden="true" src="./img/a-image/icons/info.svg" alt=""></div>
+                                <p class="warning__text txt">Данный врач недоступен для данного пациента. Пожалуйста, рассмотрите возможность выбора другого врача.</p>
+                            </div>
+                            <button type="submit" class="application__btn btn">Выбрать другого врача</button>
                           </form>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="application-form">
-        <div class="application-form__container container">
-          <span class="application-form__heading heading"
-            >Для записи на прием оставьте номер телефона</span
-          >
-          <div class="application-form__body">
-            <div class="application-form__call-block call-block">
-              <div class="call-block__head">
-                <span class="call-block__heading"
-                  ><span>
-                    Звоните
-                    <a href="tel:84951897397">8 (495) 189-73-97</a>
-                  </span></span
-                >
-              </div>
-              <p class="call-block__text txt">
-                Вы можете связаться с нами по телефону или оставить заявку
-              </p>
-            </div>
-            <div class="application-form__content">
-              <span class="application-form__subheading heading"
-                >Мы поможем вам подобрать время записи!</span
-              >
-              <p class="application-form__text txt">
-                Перезвоним вам в течении 1 часа и проконсультируем вас по
-                услугам
-              </p>
-              <form action="#" class="application-form__form">
-                <div class="application-form__input-wrap">
-                  <input
-                    autocomplete="off"
-                    type="tel"
-                    name="form[]"
-                    data-error
-                    placeholder="Номер телефона"
-                    class="application-form__input" />
-                </div>
-                <button
-                  data-popup="#application-modal"
-                  type="submit"
-                  class="application-form__btn btn">
-                  Отправить заявку
-                </button>
-              </form>
-              <div class="application-form__info txt">
-                Оставляя свои данные, вы соглашаетесь на обработку персональных
-                данных.
-              </div>
-              <div class="application-form__icon-wrap">
-                <img
-                  src="./img/a-image/icons/email-push.svg"
-                  aria-hidden="true"
-                  alt=""
-                  class="application-form__icon" />
               </div>
             </div>
           </div>

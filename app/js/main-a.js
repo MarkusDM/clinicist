@@ -2018,10 +2018,11 @@ document.addEventListener('DOMContentLoaded', function () {
         '_active'
       )
     }
-    if (target.closest('.appointment-modal__contact')) {
+    if (target.closest('.contact-item')) {
+      const targetParent = target.closest('.contact-item').parentElement
       setActiveClass(
-        target.closest('.appointment-modal__contact'),
-        document.querySelectorAll('.appointment-modal__contact'),
+        target.closest('.contact-item'),
+        targetParent.querySelectorAll('.contact-item'),
         '_active'
       )
     }
@@ -2039,6 +2040,19 @@ document.addEventListener('DOMContentLoaded', function () {
       setActiveClass(
         currentContentBlock,
         document.querySelectorAll('.new-clinic__content'),
+        '_active'
+      )
+    }
+    if (target.closest('.hint__icon')) {
+      target.closest('.hint').classList.toggle('_active')
+    }
+    if (document.querySelector('.hint._active') && !target.closest('.hint__body') && !target.closest('.hint__icon')) {
+      document.querySelector('.hint._active').classList.remove('_active')
+    }
+    if (target.closest('.option')) {
+      setActiveClass(
+        target.closest('.option'),
+        document.querySelectorAll('.option'),
         '_active'
       )
     }
