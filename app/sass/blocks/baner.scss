@@ -5135,13 +5135,34 @@
     }
     &-kontrol-kachestva {
       margin-bottom: 12rem;
+      .breadcrumbs {
+        margin-bottom: 7rem;
+        width: 110%;
+        &__link {
+          color: rgba(51, 51, 51, 0.5);
+        }
+        &__text {
+          margin-left: -0.5rem;
+          font-size: 2.8rem;
+        }
+      }
       .baner {
+        &__inner::after {
+          width: 84.2rem;
+          height: 84.2rem;
+          top: 41rem;
+        }
         &__content {
+          width: 100%;
+          padding-top: 3rem;
           &-links {
             margin-bottom: 7.5rem;
           }
           &-title {
             line-height: 110%;
+          }
+          &-text {
+            color: #999;
           }
         }
         &__picture {

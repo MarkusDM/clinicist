@@ -7014,10 +7014,27 @@ input[type='search']::-webkit-search-results-decoration {
           left: 48%; }
   .baner-kontrol-kachestva {
     margin-bottom: 12rem; }
-    .baner-kontrol-kachestva .baner__content-links {
-      margin-bottom: 7.5rem; }
-    .baner-kontrol-kachestva .baner__content-title {
-      line-height: 110%; }
+    .baner-kontrol-kachestva .breadcrumbs {
+      margin-bottom: 7rem;
+      width: 110%; }
+      .baner-kontrol-kachestva .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+      .baner-kontrol-kachestva .breadcrumbs__text {
+        margin-left: -0.5rem;
+        font-size: 2.8rem; }
+    .baner-kontrol-kachestva .baner__inner::after {
+      width: 84.2rem;
+      height: 84.2rem;
+      top: 41rem; }
+    .baner-kontrol-kachestva .baner__content {
+      width: 100%;
+      padding-top: 3rem; }
+      .baner-kontrol-kachestva .baner__content-links {
+        margin-bottom: 7.5rem; }
+      .baner-kontrol-kachestva .baner__content-title {
+        line-height: 110%; }
+      .baner-kontrol-kachestva .baner__content-text {
+        color: #999; }
     .baner-kontrol-kachestva .baner__picture {
       width: 65rem;
       margin-right: 7.2rem; }
@@ -12812,8 +12829,20 @@ input[type='search']::-webkit-search-results-decoration {
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left::before {
         left: 22rem;
         bottom: -15rem; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-text {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        margin-bottom: 5.5rem; }
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr {
         width: 100%; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr .call-block {
+          padding: 5.2rem 5.2rem 7rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr .call-block__list {
+          row-gap: 3.3rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr .call-block__heading a {
+          text-decoration: none; }
       .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone > a.call-block__list-text, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-whatsapp > a.call-block__list-text, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-online > a.call-block__list-text {
         -moz-column-gap: 3rem;
              column-gap: 3rem;
@@ -14134,7 +14163,94 @@ input[type='search']::-webkit-search-results-decoration {
     .new-clinic.new-clinic-korporativnie .new-clinic__list li {
       color: rgba(51, 51, 51, 0.5);
       padding-left: 9.2rem;
-      max-width: 66.8rem; } }
+      max-width: 66.8rem; }
+    .new-clinic.new-clinic-kontrol-kachestva {
+      margin-bottom: 14.8rem; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__content-text {
+        margin-bottom: 6rem; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right {
+        width: 65.8%; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-wr {
+          width: 100%;
+          margin-bottom: 8rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-subtitle {
+          margin-bottom: 1rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-text {
+          margin-bottom: 3rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__right-title {
+          margin-bottom: 5.3rem; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__list li {
+        max-width: 68rem;
+        padding-left: 9.2rem;
+        color: rgba(51, 51, 51, 0.5); }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__list .call-block__heading a {
+        text-decoration: none; }
+      .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left {
+        width: 31.4%;
+        padding-right: 4.7rem;
+        padding-bottom: 7rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left::after {
+          width: 45.6rem;
+          height: 45.6rem;
+          right: -26rem;
+          bottom: -13rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left::before {
+          left: 22rem;
+          bottom: -15rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-title {
+          font-size: 4rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-text {
+          font-family: 'Montserrat';
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 150%;
+          margin-bottom: 5.5rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr {
+          grid-row: 2/3; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr .call-block {
+            padding: 5.2rem 5.2rem 7rem; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-wr .call-block__list {
+            row-gap: 4.3rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone > a.call-block__list-text, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-whatsapp > a.call-block__list-text, .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-online > a.call-block__list-text {
+          -moz-column-gap: 3rem;
+               column-gap: 3rem;
+          -webkit-column-gap: 3rem; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 150%;
+          margin-bottom: 3.6rem; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone::after {
+            width: 3rem;
+            height: 3rem; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone::before {
+            content: none; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone-call {
+            padding: 0;
+            margin-bottom: 0; }
+            .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone-call > a::before {
+              content: '';
+              width: 4.8rem;
+              height: 4.8rem;
+              background-image: url(../../img/ans_image/icons/call-phone.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat; }
+            .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-phone-call::before {
+              content: none; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-text {
+          font-size: 3.2rem;
+          margin-bottom: 7rem; }
+          .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-text::before {
+            content: none; }
+        .new-clinic.new-clinic-kontrol-kachestva .new-clinic__left-title {
+          font-family: 'Montserrat';
+          font-weight: 600;
+          font-size: 4rem;
+          line-height: 160%;
+          color: #ffffff;
+          margin-bottom: 7rem; } }
 
 .licenzia {
   margin-bottom: 18rem; }

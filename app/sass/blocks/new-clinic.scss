@@ -743,8 +743,24 @@
           left: 22rem;
           bottom: -15rem;
         }
+        &-text {
+          font-family: 'Montserrat';
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 150%;
+          margin-bottom: 5.5rem;
+        }
         &-wr {
           width: 100%;
+          & .call-block {
+            padding: 5.2rem 5.2rem 7rem;
+          }
+          & .call-block__list {
+            row-gap: 3.3rem;
+          }
+          & .call-block__heading a {
+            text-decoration: none;
+          }
         }
         &-phone,
         &-whatsapp,
@@ -2352,6 +2368,133 @@
         color: rgba(51, 51, 51, 0.5);
         padding-left: 9.2rem;
         max-width: 66.8rem;
+      }
+    }
+    &.new-clinic-kontrol-kachestva {
+      margin-bottom: 14.8rem;
+      .new-clinic {
+        &__content {
+          &-text {
+            margin-bottom: 6rem;
+          }
+        }
+        &__right {
+          width: 65.8%;
+          &-wr {
+            width: 100%;
+            margin-bottom: 8rem;
+          }
+          &-subtitle {
+            margin-bottom: 1rem;
+          }
+          &-text {
+            margin-bottom: 3rem;
+          }
+          &-title {
+            margin-bottom: 5.3rem;
+          }
+        }
+        &__list {
+          & li {
+            max-width: 68rem;
+            padding-left: 9.2rem;
+            color: rgba(51, 51, 51, 0.5);
+          }
+          & .call-block__heading a {
+            text-decoration: none;
+          }
+        }
+        &__left {
+          width: 31.4%;
+          padding-right: 4.7rem;
+          padding-bottom: 7rem;
+          &::after {
+            width: 45.6rem;
+            height: 45.6rem;
+            right: -26rem;
+            bottom: -13rem;
+          }
+          &::before {
+            left: 22rem;
+            bottom: -15rem;
+          }
+          &-title {
+            font-size: 4rem;
+          }
+          &-text {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            margin-bottom: 5.5rem;
+          }
+          &-wr {
+            grid-row: 2/3;
+            & .call-block {
+              padding: 5.2rem 5.2rem 7rem;
+            }
+            & .call-block__list {
+              row-gap: 4.3rem;
+            }
+          }
+          &-phone,
+          &-whatsapp,
+          &-online {
+            //padding-left: 6rem;
+            & > a.call-block__list-text {
+              column-gap: 3rem;
+              -webkit-column-gap: 3rem;
+            }
+          }
+          &-whatsapp {
+            //margin-bottom: 4.2rem;
+          }
+          &-phone {
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 150%;
+            margin-bottom: 3.6rem;
+            &::after {
+              width: 3rem;
+              height: 3rem;
+            }
+            &::before {
+              content: none;
+            }
+            &-call {
+              padding: 0;
+              margin-bottom: 0;
+              & > a::before {
+                content: '';
+                width: 4.8rem;
+                height: 4.8rem;
+                background-image: url(../../img/ans_image/icons/call-phone.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+              &::before {
+                content: none;
+              }
+            }
+          }
+          &-text {
+            font-size: 3.2rem;
+            margin-bottom: 7rem;
+            &::before {
+              content: none;
+            }
+          }
+          &-title {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 4rem;
+            line-height: 160%;
+            color: $white;
+            margin-bottom: 7rem;
+          }
+        }
       }
     }
   }
