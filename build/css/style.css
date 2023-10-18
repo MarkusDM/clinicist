@@ -6899,25 +6899,35 @@ input[type='search']::-webkit-search-results-decoration {
         padding-bottom: 0.8rem;
         line-height: normal; }
   .baner-korporativnie {
-    margin-bottom: 12rem; }
-    .baner-korporativnie .baner .breadcrumbs {
-      margin-bottom: 7rem; }
-      .baner-korporativnie .baner .breadcrumbs__link {
+    margin-bottom: 20rem; }
+    .baner-korporativnie .breadcrumbs {
+      margin-bottom: 7rem;
+      width: 69.4rem;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+      .baner-korporativnie .breadcrumbs__link {
         color: rgba(51, 51, 51, 0.5); }
+      .baner-korporativnie .breadcrumbs__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .baner-korporativnie .baner__inner::after {
+      top: 45rem; }
     .baner-korporativnie .baner__content {
-      width: 50%;
+      width: 100%;
       padding-top: 3rem; }
       .baner-korporativnie .baner__content-links {
         margin-bottom: 7.2rem; }
       .baner-korporativnie .baner__content-title {
         line-height: 110%;
-        margin-bottom: 3.1rem; }
+        margin-bottom: 4rem; }
       .baner-korporativnie .baner__content-text {
-        width: 65%; }
+        width: 100%; }
     .baner-korporativnie .baner__picture {
-      height: 43rem;
-      margin-right: 0;
-      width: 67rem; }
+      height: 55.2rem;
+      margin-left: -5rem;
+      margin-top: -7rem;
+      width: 82.8rem; }
       .baner-korporativnie .baner__picture::after {
         width: 73.7rem;
         height: 73.7rem;
@@ -14107,7 +14117,7 @@ input[type='search']::-webkit-search-results-decoration {
       color: rgba(51, 51, 51, 0.5);
       padding-left: 9.2rem;
       max-width: 66.8rem; }
-    .new-clinic.new-clinic-history .new-clinic__content-text {
+    .new-clinic.new-clinic-korporativnie .new-clinic__content-text, .new-clinic.new-clinic-history .new-clinic__content-text {
       margin-bottom: 6rem; }
     .new-clinic.new-clinic-kontrol-kachestva {
       margin-bottom: 14.8rem; }

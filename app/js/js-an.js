@@ -33,15 +33,15 @@ const doctorsSlider = new Swiper('.our-doctors__slider', {
 
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
-  let slidesHistory = historySlider.slides;
+  //let slidesHistory = historySlider.slides();
   //let slidesDoctors = doctorsSlider.slides();
   if (width < 768){
     historySlider.init(historySlider);
-    doctorsSlider.init();
+    doctorsSlider.init(doctorsSlider);
   }
-  if (slidesHistory.length > 5) {
-    historySlider.init(historySlider);
-  }
+  // if (slidesHistory.length > 5) {
+  //   historySlider.init(historySlider);
+  // }
   historySlider.destroy(false, false);
   doctorsSlider.destroy(false, false);
 })
@@ -74,9 +74,25 @@ closeBtn.addEventListener('click', () => {
   slider.classList.remove('active');
 })
 
+const llSlider = new Swiper('.modal-licenzia__swiper', {
+  //loop: true,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  initialSlide: index,
+
+  navigation: {
+    nextEl: '.modal-licenzia-btn-next',
+    prevEl: '.modal-licenzia-btn-prev',
+  },
+  spaceBetween: rem(52),
+  speed: 1000,
+})
+
+
 const quoteSlider = new Swiper('.licenzia-swiper', {
   //loop: true,
   slidesPerView: 4,
+  slidesPerGroup: 4,
 
   navigation: {
     nextEl: '.licenzia-btn-next',
@@ -110,20 +126,6 @@ const quoteSlider = new Swiper('.licenzia-swiper', {
       }
     }
   },
-})
-
-const llSlider = new Swiper('.modal-licenzia__swiper', {
-  //loop: true,
-  slidesPerView: 'auto',
-  slidesPerGroup: 1,
-  initialSlide: index,
-
-  navigation: {
-    nextEl: '.modal-licenzia-btn-next',
-    prevEl: '.modal-licenzia-btn-prev',
-  },
-  spaceBetween: rem(52),
-  speed: 1000,
 })
 
 quoteSlider.controller.control = llSlider;
