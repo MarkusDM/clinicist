@@ -33,102 +33,21 @@ const doctorsSlider = new Swiper('.our-doctors__slider', {
 
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
-  //let slidesHistory = historySlider.slides();
-  //let slidesDoctors = doctorsSlider.slides();
   if (width < 768){
     historySlider.init(historySlider);
     doctorsSlider.init(doctorsSlider);
   }
-  // if (slidesHistory.length > 5) {
-  //   historySlider.init(historySlider);
-  // }
   historySlider.destroy(false, false);
   doctorsSlider.destroy(false, false);
 })
 
-const valueThumbs = new Swiper('.thumbs-swiper', {
-  slideToClickedSlide: true,
-  slidesPerView: 'auto',
-  touchRatio: 0.2,
-})
-
-const valueslider = new Swiper('.values-swiper', {
-  slidesPerView: 1,
-  spaceBetween: rem(1),
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  speed: 1000,
-})
-
-valueslider.controller.control = valueThumbs;
-valueThumbs.controller.control = valueslider;
-
-const licBtn = document.querySelectorAll('.licenzia__item-btn');
 const closeBtn = document.querySelector('.modal-licenzia__slider-close');
-const licSlides = document.querySelectorAll('.licenzia__item');
 let slider = document.querySelector('.modal-licenzia__slider')
 let index;
 closeBtn.addEventListener('click', () => {
   slider.classList.remove('active');
 })
 
-const llSlider = new Swiper('.modal-licenzia__swiper', {
-  //loop: true,
-  slidesPerView: 'auto',
-  slidesPerGroup: 1,
-  initialSlide: index,
-
-  navigation: {
-    nextEl: '.modal-licenzia-btn-next',
-    prevEl: '.modal-licenzia-btn-prev',
-  },
-  spaceBetween: rem(52),
-  speed: 1000,
-})
-
-
-const quoteSlider = new Swiper('.licenzia-swiper', {
-  //loop: true,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
-
-  navigation: {
-    nextEl: '.licenzia-btn-next',
-    prevEl: '.licenzia-btn-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-  spaceBetween: rem(2.1),
-  speed: 1000,
-  breakpoints: {
-    768: {
-      spaceBetween: rem(2.1),
-      slidesPerView: 4,
-      slidesPerColumn: 1,
-    },
-    120: {
-      spaceBetween: rem(4.2),
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-    },
-  },
-  on: {
-    click: function (e) {
-      console.log(e)
-      if(e.clickedSlide !== undefined) {
-        slider.classList.add('active');
-        index = e.clickedIndex;
-        llSlider.update();
-      }
-    }
-  },
-})
-
-quoteSlider.controller.control = llSlider;
 
 
 const aboutSlider = new Swiper('.about-swiper', {
@@ -162,3 +81,90 @@ const aboutSlider = new Swiper('.about-swiper', {
     }
   }
 })
+
+const llSlider = new Swiper('.modal-licenzia__swiper', {
+  //loop: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.modal-licenzia-btn-next',
+    prevEl: '.modal-licenzia-btn-prev',
+  },
+  spaceBetween: rem(5),
+  speed: 1000,
+})
+
+
+const quoteSlider = new Swiper('.licenzia-swiper', {
+  slidesPerGroup: 4,
+  slidesPerView: 4,
+
+  navigation: {
+    nextEl: '.licenzia-btn-next',
+    prevEl: '.licenzia-btn-prev',
+  },
+  pagination: {
+    el: '.licenzia-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  spaceBetween: rem(2.1),
+  speed: 1000,
+  breakpoints: {
+    768: {
+      spaceBetween: rem(2.1),
+      slidesPerGroup: 4,
+      slidesPerView: 4,
+      slidesPerColumn: 1,
+    },
+    120: {
+      spaceBetween: rem(4.2),
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+    },
+  },
+  on: {
+    click: function (e) {
+      if(e.clickedSlide !== undefined) {
+        slider.classList.add('active');
+        index = e.clickedIndex;
+        llSlider.slideTo(index, 0);
+        llSlider.update();
+      }
+    }
+  },
+})
+
+document.addEventListener('click', (el) => {
+  const licenseSlider = document.querySelector('.modal-licenzia__wrapper');
+  const notSlider = el.composedPath().includes(licenseSlider);
+  const notModal = el.composedPath().includes(slider);
+    if(slider.className.includes('active')) {
+      if(notModal && !notSlider){
+        slider.classList.remove('active');
+      }
+    }
+})
+
+quoteSlider.controller.control = llSlider;
+
+const valueThumbs = new Swiper('.thumbs-swiper', {
+  slideToClickedSlide: true,
+  slidesPerView: 'auto',
+  touchRatio: 0.2,
+})
+
+const valueslider = new Swiper('.values-swiper', {
+  slidesPerView: 1,
+  spaceBetween: rem(1),
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  speed: 1000,
+})
+
+valueslider.controller.control = valueThumbs;
+valueThumbs.controller.control = valueslider;

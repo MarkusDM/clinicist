@@ -6068,7 +6068,7 @@ input[type='search']::-webkit-search-results-decoration {
         padding-bottom: 8.5rem; }
       .baner.baner-licenzia .baner__content {
         width: 100%;
-        padding-top: 11rem;
+        padding-top: 5rem;
         margin-bottom: 5rem; }
         .baner.baner-licenzia .baner__content-links {
           margin-bottom: 9.3rem; }
@@ -7000,7 +7000,37 @@ input[type='search']::-webkit-search-results-decoration {
       height: 57rem;
       width: 82.8rem;
       margin-top: 0rem;
-      margin-left: -5rem; } }
+      margin-left: -5rem; }
+  .baner-licenzia {
+    margin-bottom: 12rem; }
+    .baner-licenzia .baner__inner {
+      padding-bottom: 4rem; }
+      .baner-licenzia .baner__inner::after {
+        top: 45rem; }
+    .baner-licenzia .baner__content .breadcrumbs {
+      margin-bottom: 7rem;
+      width: 110%; }
+      .baner-licenzia .baner__content .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+      .baner-licenzia .baner__content .breadcrumbs__text {
+        margin-left: -0.5rem;
+        font-size: 2.8rem; }
+    .baner-licenzia .baner__content-links {
+      margin-bottom: 13rem; }
+    .baner-licenzia .baner__content-title {
+      margin-bottom: 2.2rem; }
+    .baner-licenzia .baner__content-text {
+      width: 75%; }
+    .baner-licenzia .baner__picture {
+      width: 50.5rem;
+      height: 39.1rem;
+      padding-top: 4rem;
+      margin-right: 11.7rem; }
+      .baner-licenzia .baner__picture::after {
+        width: 66.6rem;
+        height: 66.6rem;
+        top: -10rem;
+        left: 51.5%; } }
 
 .solution {
   margin-top: 20rem;
@@ -14309,20 +14339,22 @@ input[type='search']::-webkit-search-results-decoration {
 .about-licenzia .licenzia__content::after {
   content: none; }
 
+.about-licenzia .licenzia__content-right {
+  width: 74.5%; }
+
 .about-licenzia .licenzia__info::after {
   content: none; }
 
 .about-licenzia .licenzia__slider {
   width: 100%;
-  height: 34.2rem;
+  height: 37.2rem;
   padding-top: 0;
   margin: 0;
   overflow: visible; }
 
 .about-licenzia .licenzia-swiper {
   position: relative;
-  width: 74.5%;
-  padding: 0 0 13.2rem;
+  width: 100%;
   overflow: hidden; }
 
 .about-licenzia .licenzia__item {
@@ -14378,7 +14410,7 @@ input[type='search']::-webkit-search-results-decoration {
 .about-licenzia .licenzia-btn-prev, .about-licenzia .licenzia-btn-next {
   position: absolute;
   top: unset;
-  bottom: 0; }
+  bottom: -10rem; }
 
 .about-licenzia .licenzia-btn-prev {
   left: unset; }
@@ -14387,19 +14419,22 @@ input[type='search']::-webkit-search-results-decoration {
   right: 0; }
 
 .about-licenzia .licenzia-pagination {
-  left: 0;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 65%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   right: unset;
   top: unset;
-  bottom: 2.8rem; }
+  bottom: -8rem; }
 
 .about-licenzia .modal-licenzia__swiper {
   overflow: hidden; }
 
 .about-licenzia .modal-licenzia__wrapper {
   position: relative;
-  padding: 9.1rem 0 11.8rem; }
+  padding: 6rem 0 4rem; }
 
 .about-licenzia .modal-licenzia__slider {
   display: none;
@@ -14429,35 +14464,39 @@ input[type='search']::-webkit-search-results-decoration {
     position: absolute;
     z-index: 155;
     right: 0;
-    top: 0; }
-  .about-licenzia .modal-licenzia__slider .swiper-slide-active {
-    position: relative;
-    z-index: 55;
-    top: 50%;
-    left: 50%;
-    width: 45.3rem;
-    height: auto; }
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer; }
   .about-licenzia .modal-licenzia__slider .modal-licenzia__item {
     position: relative;
     z-index: 55;
     top: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    width: 45.3rem !important;
-    height: 67.7rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%; }
     .about-licenzia .modal-licenzia__slider .modal-licenzia__item-img {
-      width: 100%;
+      width: 45.3rem;
       height: 100%;
       -o-object-fit: contain;
          object-fit: contain; }
+      .about-licenzia .modal-licenzia__slider .modal-licenzia__item-img img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+           object-fit: contain; }
   .about-licenzia .modal-licenzia__slider.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
 
 .about-licenzia .modal-licenzia__wr {
-  z-index: 105; }
+  z-index: 105;
+  width: 100%; }
 
 .about-licenzia .modal-licenzia-btn-prev, .about-licenzia .modal-licenzia-btn-next {
   position: absolute;
@@ -14525,6 +14564,8 @@ input[type='search']::-webkit-search-results-decoration {
         font-size: 3.1rem; }
   .about-licenzia .licenzia__title {
     margin-bottom: 8rem; }
+  .about-licenzia .licenzia__content-right {
+    width: 100%; }
   .about-licenzia .licenzia__info {
     padding-top: 0; }
     .about-licenzia .licenzia__info::after {
@@ -14597,9 +14638,12 @@ input[type='search']::-webkit-search-results-decoration {
     right: 0;
     left: unset; }
   .about-licenzia .licenzia-pagination {
-    left: 0;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     right: unset;
     top: unset;
     bottom: 2.8rem; }
@@ -14634,27 +14678,27 @@ input[type='search']::-webkit-search-results-decoration {
       background: rgba(27, 66, 85, 0.2); }
     .about-licenzia .modal-licenzia__slider-close {
       display: none; }
-    .about-licenzia .modal-licenzia__slider .swiper-slide-active {
-      position: relative;
-      z-index: 55;
-      top: 50%;
-      left: 50%;
-      width: 38.2rem;
-      height: auto; }
     .about-licenzia .modal-licenzia__slider .modal-licenzia__item {
       position: relative;
       z-index: 55;
       top: 0;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0);
-      width: 38.2rem !important;
-      height: 57rem; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%; }
       .about-licenzia .modal-licenzia__slider .modal-licenzia__item-img {
-        width: 100%;
+        width: 38.2rem;
         height: 100%;
         -o-object-fit: contain;
            object-fit: contain; }
+        .about-licenzia .modal-licenzia__slider .modal-licenzia__item-img img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: contain;
+             object-fit: contain; }
     .about-licenzia .modal-licenzia__slider.active {
       display: -webkit-box;
       display: -ms-flexbox;
