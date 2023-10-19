@@ -1,0 +1,45 @@
+.rec-materials {
+
+  margin-bottom: 18rem;
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .rec-materials {
+  
+      margin-bottom: 20rem;
+  
+      &__cards {
+        row-gap: 4.8rem;
+      }
+
+      &__titles a {
+        display: none;
+      }
+
+      &__title {
+        line-height: 150%;
+      }
+  
+      &__subtitle {
+        margin-bottom: 3rem;
+      }
+    }
+}
