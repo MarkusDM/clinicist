@@ -411,6 +411,70 @@
       border-radius: 50%;
     }
   }
+ &-news {
+  margin-bottom: 12rem;
+  .baner {
+    &__content-title {
+      margin-top: 12.7rem;
+    }
+    &__content-text {
+      font-family: Myriad Pro, sans-serif;
+      line-height: 130%;
+    }
+    &__picture {
+      margin-right: 2.7rem;
+      width: 82rem;
+    }
+  }
+ } 
+  &-news-article {
+    height: 41.3rem;
+    margin-bottom: 6rem;
+    .baner {
+      &__picture {
+        width: 59.1rem;
+        height: 35.4rem;
+        flex-shrink: 0;
+        margin: auto 0 0 0;
+        &::after {
+          display: none;
+        }
+      }
+      &__inner {
+        width: 158rem;
+        height: 41.3rem;
+      }
+      &__content {
+        width: 75%;
+      }
+      &__desc {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+        margin-bottom: 3rem;
+      }
+      &__desc-btn {
+        padding: 1.2rem 2.5rem;
+        border-radius: 10rem;
+        background: $white;
+        color: $fzAll;
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.8rem;
+        line-height: 130%;
+      }
+      &__desc-date {
+        color: $blue;
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      &__breadcrumbs {
+        margin-bottom: 7rem;
+      }
+    }
+  }
   &-licenzia {
     margin-bottom: 12rem;
     .baner {
@@ -606,7 +670,7 @@
     }
   }
   &-o_klinike {
-    margin-bottom: 23.6rem;
+    margin-bottom: 18rem;
     height: auto;
     .baner {
       &__inner {
@@ -3650,6 +3714,88 @@
   .baner {
     margin-bottom: 16rem;
     height: auto;
+
+     &-news {
+      margin-bottom: 20rem;
+      .baner {
+        &__content-title {
+          margin-top: 10rem;
+          margin-bottom: 2.6rem;
+        }
+        &__inner {
+          padding: 0;
+          &::after {
+            top: 48rem;
+          }
+        }
+        &__content-text {
+          line-height: 150%;
+          font-size: 3.2rem;
+        }
+        &__content {
+          padding-top: 12rem;
+          margin-bottom: 8.4rem;
+        }
+        &__picture {
+          margin-right: 0;
+          width: 76rem;
+          height: 67rem;
+        }
+      }
+    } 
+
+    &-news-article {
+      height: auto;
+      margin-bottom: 12rem;
+
+      .breadcrumbs__text{
+        white-space: wrap;
+        line-height: 130%;
+      }
+
+      .baner {
+        &::after {
+          display: none;
+        }
+        &__picture {
+          width: 71.2rem;
+          height: 42.6rem;
+          margin-left: -4rem;
+        }
+        &__inner {
+          width: 100%;
+          height: auto;
+          &::after {
+            display: none;
+          }
+        }
+        &__content {
+          width: 100%;
+          padding-top: 12rem;
+        }
+        &__desc {
+          column-gap: 4.2rem;
+          margin-bottom: 4rem;
+        }
+        &__desc-btn {
+          padding: 2rem 5rem;
+          border-radius: 20rem;
+          font-size: 3rem;
+          line-height: 150%;
+        }
+        &__desc-date {
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 150%;
+        }
+        &__breadcrumbs {
+          margin-bottom: 8.8rem;
+        }
+        &__content-title {
+          margin-bottom: 13.6rem;
+        }
+      }
+    }
     &-doctors-chapter-zapis {
       .baner {
         &__text {
@@ -4956,6 +5102,7 @@
 }
 
 
+<<<<<<< HEAD
 .baner--empty-services {
   height: 53.7rem;
 
@@ -4986,8 +5133,214 @@
     img {
       position: relative;
       z-index: 2;
+=======
+@media (max-width: 48em) {
+  .baner {
+    &-o_klinike {
+      margin-bottom: 20rem;
+      .breadcrumbs{
+        margin-bottom: 7rem;
+        &__link {
+        color: rgba(51, 51, 51, 0.5);
+        }
+      }
+      .baner {
+        &__inner{
+          padding: 0;
+          &::after {
+            content: none;
+          }
+        }
+        &__content {
+          padding-top: 3rem;
+          &-text {
+            padding-left: 5.6rem;
+            &::after {
+              content: '';
+              left: 0rem;
+              top: 0rem;
+              width: 3.4rem;
+              height: 3.2rem;
+            }
+          }
+          &-txt {
+            position: relative;
+            font-family: 'MyriadPro';
+            font-weight: 600;
+            font-size: 3rem;
+            line-height: 150%;
+            color: $blue;
+            padding-left: 5.3rem;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 0.2rem;
+              width: 3.3rem;
+              background-color: $blue;
+            }
+          }
+        }
+        &__picture {
+          width: 47.4rem;
+          height: 100%;
+          left: 4rem;
+          margin-top: 5rem;
+          & img {
+            object-fit: contain;
+          }
+          &::after {
+            content: none;
+          }
+        }
+        &__inserts {
+          position: absolute;
+          z-index: 5;
+          right: 1rem;
+          top: unset;
+          bottom: 6rem;
+          transform: translateY(0);
+        }
+        &__insert {
+          padding: 3rem;
+          box-shadow: 0px 2rem 9rem rgba(124, 148, 159, 0.2);
+          background-color: $white;
+          width: 31.4rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &:not(:last-child) {
+            margin-bottom: 6rem;
+          }
+          &-number {
+            padding-top: 0;
+            font-family: 'MyriadPro';
+            font-weight: 600;
+            font-size: 6rem;
+            line-height: normal;
+          }
+          &-text {
+            font-family: 'MyriadPro';
+            font-size: 2.4rem;
+            line-height: normal;
+            color: rgba(51, 51, 51, 0.5);
+          }
+          &-subtitle {
+            display: none;
+          }
+          &-name {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 3.8rem;
+            padding-bottom: 0.8rem;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    &-korporativnie {
+      margin-bottom: 12rem;
+      .baner {
+        .breadcrumbs{
+          margin-bottom: 7rem;
+          &__link {
+          color: rgba(51, 51, 51, 0.5);
+          }
+        }
+        &__content {
+          width: 50%;
+          padding-top: 3rem;
+          &-links {
+            margin-bottom: 7.2rem;
+          }
+          &-title {
+            line-height: 110%;
+            margin-bottom: 3.1rem;
+          }
+          &-text {
+            width: 65%;
+          }
+        }
+        &__picture {
+          height: 43rem;
+          margin-right: 0;
+          width: 67rem;
+          &::after {
+            width: 73.7rem;
+            height: 73.7rem;
+            top: -7rem;
+            left: 47%;
+          }
+        }
+      }
+    }
+    &-uslovia-sotrudnichestva {
+      margin-bottom: 20rem;
+      .baner {
+        margin-bottom: 0rem;
+        &__inner::after {
+          top: 41rem;
+          left: 55%;
+        }
+        .breadcrumbs{
+          margin-bottom: 7rem;
+          &__link {
+          color: rgba(51, 51, 51, 0.5);
+          }
+        }
+        &__content {
+          width: 100%;
+          padding-top: 3rem;
+          &-text {
+            width: 100%;
+            margin-left: 2rem;
+          }
+        }
+        &__picture {
+          width: 91rem;
+          height: fit-content;
+          margin-right: 0rem;
+          margin-left: -10rem;
+          &::after {
+            width: 75rem;
+            height: 75rem;
+            left: 48%;
+          }
+        }
+      }
+    }
+    &-kontrol-kachestva {
+      margin-bottom: 12rem;
+      .baner {
+        &__content {
+          &-links {
+            margin-bottom: 7.5rem;
+          }
+          &-title {
+            line-height: 110%;
+          }
+        }
+        &__picture {
+          width: 65rem;
+          margin-right: 7.2rem;
+          &::after {
+            width: 63.6rem;
+            height: 63.6rem;
+            top: -6rem;
+            left: 52%;
+          }
+        }
+      }
+>>>>>>> 9703c632b7fe3a2a6fc4b10d6e663ad43f5a2609
     }
   }
 }
 
+<<<<<<< HEAD
 /////////////////////////////////// t-styles ///////////////////////////////////////
+=======
+
+/////////////////////////////////// t-styles ///////////////////////////////////////
+>>>>>>> 9703c632b7fe3a2a6fc4b10d6e663ad43f5a2609

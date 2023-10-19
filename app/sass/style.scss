@@ -55,7 +55,6 @@
 @import './blocks/advertising';
 @import './blocks/command';
 @import './blocks/footer';
-@import './blocks/modal';
 @import './blocks/profile';
 @import './blocks/forms';
 @import './blocks/appointment';
@@ -72,6 +71,7 @@
 @import './blocks/other-programs';
 @import './general/a-elements';
 @import './general/t-elements';
+@import './blocks/popups';
 
 @import './blocks/services-page';
 @import './blocks/offer-banner';
@@ -103,6 +103,14 @@
 @import './blocks/detailed-services';
 @import './blocks/d-services-prices';
 @import './blocks/empty-services';
+
+@import './blocks/subscribe-block.scss';
+@import './blocks/news.scss';
+@import './blocks/news-article.scss';
+@import './blocks/news-other.scss';
+@import './blocks/socials.scss';
+@import './blocks/news-descs.scss';
+
 
 #ui-datepicker-div {
   display: block !important;

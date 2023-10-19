@@ -1,0 +1,30 @@
+.news-article {
+  margin-bottom: 18rem;
+  
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 18rem;
+  }
+
+
+	&__aside {
+		width: 45.3rem;
+	}
+}
+
+@media screen and (max-width: 48em) {
+  .news-article {
+    margin-bottom: 20rem;
+
+    &__container {
+      row-gap: 20rem;
+    }
+
+    &__aside {
+      order: 1;
+			width: 100%;
+    }
+  }
+}

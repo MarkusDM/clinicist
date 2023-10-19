@@ -15,137 +15,87 @@
   }
 }
 
-// input
-input[type='text'],
-input[type='email'],
-input[type='tel'],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-textarea:focus,
-input:focus {
-  outline: none;
-}
-input {
-  display: block;
-  width: 100%;
-  cursor: text;
-}
-textarea {
-  padding: 0;
-  resize: none;
-}
-
-.input {
-  position: relative;
-  width: 100%;
-  &::before,
-  &::after {
-    position: absolute;
-    z-index: 1;
-    content: '';
-    top: 50%;
-    width: 2.1rem;
-    height: 100%;
-    background-position: center;
-    background-size: 2.1rem;
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    @media (max-width: 48.98em) {
-      width: 3.2rem;
-      background-size: 3.2rem;
-    }
-  }
-  &::after {
-    right: 2.5rem;
-    opacity: 0;
-    background-image: url(../img/a-image/icons/warning.svg);
-    @media (max-width: 48.98em) {
-      right: 3rem;
-    }
-  }
-  &::before {
-    left: 2.5rem;
-    @media (max-width: 48.98em) {
-      left: 3rem;
-    }
-  }
-  &_tel {
-    &::before {
-      background-image: url(../img/a-image/icons/phone-grey.svg);
-    }
-  }
-  &_user {
-    &::before {
-      background-image: url(../img/a-image/icons/user-grey.svg);
-    }
-  }
-  &_password {
-    &::before {
-      width: 2.6rem;
-      height: 2.6rem;
-      background-image: url(../img/a-image/icons/key-grey.svg);
-      @media (max-width: 48.98em) {
-        width: 4.5rem;
-        height: 4.5rem;
-      }
-    }
-  }
-  &_date {
-    &::before {
-      background-image: url(../img/a-image/icons/calendar-grey.svg);
-    }
-  }
-  &_verify {
-    &::before {
-      background-image: url(../img/a-image/icons/comment-grey.svg);
-    }
-  }
-  &._filled {
-    .input__inner {
-      background-color: #f3fbff;
-      border: 1px solid $blue;
-    }
-  }
-  &._form-error {
-    &::after {
-      opacity: 1;
-    }
+// application form
+.application {
+  padding: 6.8rem 6.8rem 6rem 6.8rem;
+  display: flex;
+  flex-direction: column;
+  .contact-item {
+    min-width: 14.7rem;
   }
 
-  // .input__inner
+  // .application__title
 
-  &__inner {
-    padding: 1.8rem 5rem 1.8rem 7rem;
-    height: 5.5rem;
-    font-family: 'MyriadPro';
+  &__title {
+    margin-bottom: 3.8rem;
+  }
+
+  // .application__fields
+
+  &__fields {
+    margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+
+  // .application__input
+
+  &__input {
+  }
+
+  // .application__contacts
+
+  &__contacts {
+    margin-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .application__contacts-subtitle
+
+  &__contacts-subtitle {
+    margin-bottom: 1.8rem;
     font-size: 1.6rem;
-    font-weight: 600;
-    border: 1px solid #d8dde4;
-    border-radius: 7.2rem;
-    background-size: 2rem;
-    transition: all 0.3s ease;
-    &._form-error {
-      border: 1px solid #e81919;
-    }
-    &::placeholder {
-      font-family: 'MyriadPro';
-      font-size: 1.6rem;
-      font-weight: 400;
-      color: #999999;
-      @media (max-width: 48.98em) {
-        font-size: 3rem;
-      }
-    }
+  }
 
-    @media (max-width: 48.98em) {
-      padding: 3rem 7.5rem 3rem 12rem;
-      height: 8.7rem;
-      font-size: 2.8rem;
-      border-radius: 14.4rem;
+  // .application__contacts-group
+
+  &__contacts-group {
+    display: flex;
+    gap: 3rem;
+  }
+
+  // .application__contact-item
+
+  &__contact-item {
+  }
+
+  // .application__heading
+
+  &__heading {
+    margin-bottom: 3.6rem;
+  }
+
+  // .application__patients
+
+  &__patients {
+    margin-bottom: 4rem;
+  }
+
+  // .application__btn
+
+  &__btn {
+    align-self: flex-start;
+    min-width: 29.3rem;
+  }
+
+  // .application__warning
+
+  &__warning {
+    margin-bottom: 4.2rem;
+    .warning__text {
+      max-width: 67.8rem;
     }
   }
 }
@@ -254,6 +204,413 @@ textarea {
   // .options__text
 
   &__text {
-    @extend .checkbox__text;
+    @extend .checkbox__text;    
+    line-height: 150%;
   }
+}
+
+// option
+.option {
+  position: relative;
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(47, 47, 47, 0.35);
+  cursor: pointer;
+  &._active {
+    &::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;width: 1rem;height: 1rem;top: 50%;left: 50%;
+    border-radius: 50%;
+    background-color: $orange;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+  }
+}
+
+// input
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+input {
+  display: block;
+  width: 100%;
+  cursor: text;
+}
+textarea {
+  padding: 0;
+  resize: none;
+}
+.input {
+  padding-left: 3rem;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  border: 1px solid #D8DDE4;
+  border-radius: 7.2rem;
+  background-color: #ffffff;
+  &::placeholder {
+    font-weight: 400;
+  }
+  &::before {
+    content: "";
+    align-self: center;
+    width: 2rem;
+    height: 2rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // .input_user
+
+  &_user {
+    &::before {
+      background-image: url(../img/a-image/icons/user-grey.svg);
+    }
+  }
+
+  // .input_tel
+
+  &_tel {
+    &::before {
+      background-image: url(../img/a-image/icons/phone-grey.svg);
+    }
+  }
+
+  // .input_date
+
+  &_date {
+    &::before {
+      background-image: url(../img/a-image/icons/calendar-grey.svg);
+    }
+  }
+
+  // .input_pass
+
+  &_pass {
+    &::before {
+      background-image: url(../img/a-image/icons/lock-grey.svg);
+    }
+  }
+
+  // .input_code
+
+  &_code {
+    &::before {
+      background-image: url(../img/a-image/icons/code-grey.svg);
+    }
+  }
+
+  // .input__field
+
+  &__field {
+    @extend .txt;
+    padding: 1.8rem 2rem;
+    border: none;
+    border-radius: 7.2rem;
+    font-size: 1.6rem;    
+    line-height: 140%;
+  }
+  
+}
+
+// login form
+.login-form {
+  padding: 4.3rem 8.4rem 6rem 5.2rem;
+  display: flex;
+  flex-direction: column;
+
+  // .login-form__head
+
+  &__head {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .login-form__subtitle
+
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  // .login-form__title
+
+  &__title {
+  }
+
+  // .login-form__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .login-form__options
+
+  &__options {
+    margin-bottom: 4rem;
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  // .login-form__fields
+
+  &__fields {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.1rem;
+    row-gap: 3rem;
+  }
+
+  // .login-form__input
+
+  &__input {
+    &_code {
+      margin-bottom: 3rem;
+      width: 38.3rem;
+    }
+  }
+
+  // .login-form__checkbox
+
+  &__checkbox {
+    margin-bottom: 4rem;
+  }
+
+  // .login-form__text
+
+  &__text {
+    margin-bottom: 3rem;
+    max-width: 42.8rem
+  }
+
+  // .login-form__password
+
+  &__password {
+    @extend .login-form__fields;
+    margin-bottom: 3.8rem;
+  }
+
+  // .login-form__btn
+
+  &__btn {
+    align-self: flex-start;
+    min-width: 29.3rem;
+  }
+}
+
+// personal data
+.personal-data {
+  padding: 6.6rem;
+  display: flex;
+  flex-direction: column;
+
+  // .personal-data__heading
+
+  &__heading {
+    margin-bottom: 3.8rem;
+  }
+
+  // .personal-data__input
+
+  &__input {
+    margin-bottom: 6.4rem;
+    width: 100%;
+  }
+
+  // .personal-data__warning
+
+  &__warning {
+    margin-bottom: 4.2rem;
+  }
+
+  // .personal-data__btn
+
+  &__btn {
+    align-self: flex-start;
+    min-width: 29.3rem;
+  }
+
+  // .personal-data__family
+
+  &__family {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+   // .personal-data__family-heading
+
+   &__family-heading {
+    margin-bottom: 4rem;
+   }
+
+  // .personal-data__patients
+
+  &__patients {
+
+  }
+}
+
+@media (max-width: 48em){
+  .personal-data {
+    padding: 5rem 4rem 8rem 4rem;
+    &__family-heading {
+      margin-bottom: 6rem;
+      font-weight: 500;
+      font-size: 3rem;
+    }
+    &__family {
+      margin-bottom: 6rem;
+    }
+    &__heading {
+      margin-bottom: 5rem;
+      font-weight: 500;
+      font-size: 3rem;
+    }
+    &__input {
+      margin-bottom: 4rem;
+    }
+    &__warning {
+      margin-bottom: 6rem;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+  .login-form {
+    padding: 5rem 4rem 8rem 4rem;
+    &__subtitle {
+      margin-bottom: 4rem;
+      max-width: 47.6rem;
+    }
+    &__input {
+      &_code {
+        width: 100%;
+      }
+    }
+    &__title {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    &__head {
+      margin-bottom: 6rem;
+    }
+    &__options {
+      margin-bottom: 6rem;
+      column-gap: 8rem;
+    }
+    &__fields {
+      margin-bottom: 3rem;
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+    &__password {
+      margin-bottom: 3rem;
+    }
+    &__checkbox {
+      margin-bottom: 4rem;
+      .checkbox__label {
+        line-height:  150%;
+        &::before,
+        &::after {
+          align-self: center;
+        }
+      }
+    }
+    &__btn {
+      width: 100%;
+      height: 10rem;
+    }
+  }
+  .application {
+    padding: 5rem 4rem 8rem 4rem;
+    .patients {
+      display: none;
+    }
+    .contact-item {
+      min-width: none;
+    }
+    &__warning {
+      display: none;
+    }
+    &__title {
+      margin-bottom: 6rem;
+      font-weight: 500;
+    }
+    &__fields {
+      margin-bottom: 6rem;
+      row-gap: 4rem;
+    }
+    &__contacts {
+      margin-bottom: 6rem;
+    }
+    &__contacts-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      column-gap: 1.4rem;
+      row-gap: 4rem;
+    }
+    &__contacts-subtitle {
+      margin-bottom: 3.4rem;
+      font-size: 3.2rem;
+    }
+    &__btn {
+      width: 100%;
+      height: 10rem;
+    }
+    &__checkbox {
+      margin-bottom: 4rem;
+    }
+  }
+   .input {
+    padding-left: 4rem;
+    grid-template-columns: 4rem 1fr;
+    border-radius: 14.4rem;
+    &_pass {
+      padding: 0 4rem;
+     grid-template-columns: 4rem 1fr 4rem;
+    }
+    &::before {
+      width: 4rem;
+      height: 4rem;
+    }
+    &__viewpass {
+      justify-self: end;
+      align-self: center;
+      width: 4rem;
+      height: 4rem;
+    }
+    &__field {
+      padding: 2.6rem 3.2rem;
+      border-radius: 14.4rem;
+      font-size: 3.2rem;
+      line-height: 150%;
+    }
+   } 
+}
+@media (min-width: 48em){
+   .login-form {
+      .input__viewpass {
+          display: none;
+    }
+   } 
 }
