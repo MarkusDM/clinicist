@@ -6766,8 +6766,103 @@ input[type='search']::-webkit-search-results-decoration {
     border-color: #d8dde4;
     top: 70%; }
 
-.baner--s-direction {
-  margin-bottom: 4rem; }
+.baner-preparation-information .baner__image-wrap {
+  width: 73rem; }
+
+.baner-preparation-information .baner__image.img-mobile {
+  display: none; }
+
+.baner-vacancy {
+  height: 54.7rem; }
+
+.baner-vacancy-details {
+  height: 60rem; }
+  .baner-vacancy-details .baner__image-wrap {
+    -ms-flex-item-align: center;
+        align-self: center; }
+    .baner-vacancy-details .baner__image-wrap::before {
+      width: 95.1rem;
+      height: 95.1rem; }
+
+.baner-diseases-details {
+  height: 74.8rem; }
+  .baner-diseases-details .baner__article-value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 8rem; }
+    .baner-diseases-details .baner__article-value.mobile {
+      display: none; }
+    .baner-diseases-details .baner__article-value .white-circle {
+      font-family: MyriadPro;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #2f2f2f;
+      padding: 0.7rem 2.4rem;
+      border-radius: 5.4rem;
+      background-color: #fff; }
+    .baner-diseases-details .baner__article-value .date {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: #36b4f1; }
+  .baner-diseases-details .baner__image-wrap {
+    width: 123.8rem;
+    height: 95rem; }
+    .baner-diseases-details .baner__image-wrap::before {
+      display: none; }
+  .baner-diseases-details .baner__breadcrumbs {
+    margin-bottom: 7.5rem; }
+  .baner-diseases-details .baner__text-content {
+    margin-bottom: 13.2rem; }
+  .baner-diseases-details .baner__text::before {
+    display: none; }
+  .baner-diseases-details .baner__scroll-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .baner-diseases-details .baner__scroll-block .scroll-block-icon > svg {
+      width: 2.5rem; }
+    .baner-diseases-details .baner__scroll-block .scroll-block-text {
+      font-family: Montserrat;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      color: #36b4f1; }
+
+.baner-patients-voice {
+  height: 50rem;
+  position: relative; }
+  .baner-patients-voice .baner__container {
+    grid-template-columns: 91rem 73.6rem; }
+  .baner-patients-voice .baner__image-wrap {
+    position: absolute;
+    bottom: -5rem;
+    right: 0; }
+    .baner-patients-voice .baner__image-wrap::before {
+      display: none; }
+  .baner-patients-voice .baner__text {
+    width: 50.1rem; }
+  .baner-patients-voice .baner__image {
+    width: 81.3rem;
+    height: 60.2rem;
+    -o-object-fit: contain;
+       object-fit: contain; }
+    .baner-patients-voice .baner__image.img-mobile {
+      display: none; }
 
 @media (max-width: 48em) {
   .baner-diseases .baner__breadcrumbs {
@@ -6862,7 +6957,92 @@ input[type='search']::-webkit-search-results-decoration {
       height: 77.8rem;
       top: -10%;
       -webkit-transform: translate(-47%, 0);
-              transform: translate(-47%, 0); } }
+              transform: translate(-47%, 0); }
+  .baner-preparation-information .baner__text-wrap {
+    margin-bottom: 10.6rem; }
+  .baner-preparation-information .baner__text-content {
+    width: 63.6rem; }
+  .baner-preparation-information .baner__image-wrap {
+    width: 70rem; }
+    .baner-preparation-information .baner__image-wrap::before {
+      width: 77.8rem;
+      height: 77.8rem;
+      top: -15%; }
+  .baner-preparation-information .baner__image.img-desctop {
+    display: none; }
+  .baner-preparation-information .baner__image.img-mobile {
+    display: block; }
+  .baner-vacancy {
+    height: 100rem; }
+    .baner-vacancy .baner__breadcrumbs {
+      margin-bottom: 8.4rem; }
+    .baner-vacancy .baner__text-wrap {
+      margin-bottom: 10.4rem; }
+  .baner-vacancy-details {
+    height: 105rem; }
+    .baner-vacancy-details .baner__image-wrap::before {
+      width: 79.6rem;
+      height: 79.6rem;
+      top: -45%;
+      left: 32%; }
+    .baner-vacancy-details .baner__breadcrumbs .breadcrumbs__text span {
+      display: none; }
+  .baner-diseases-details {
+    height: 139.2rem; }
+    .baner-diseases-details .baner__article-value {
+      margin-bottom: 0;
+      gap: 2.6rem;
+      margin-top: 6.4rem; }
+      .baner-diseases-details .baner__article-value.desctop {
+        display: none; }
+      .baner-diseases-details .baner__article-value.mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+      .baner-diseases-details .baner__article-value .white-circle {
+        font-size: 3.2rem;
+        padding: 1.4rem 4.8rem;
+        border-radius: 10.8rem; }
+      .baner-diseases-details .baner__article-value .date {
+        font-size: 3.2rem; }
+    .baner-diseases-details .baner__image-wrap {
+      width: 81.4rem;
+      height: 64rem;
+      -webkit-transform: translateY(1rem) translateX(-10rem);
+              transform: translateY(1rem) translateX(-10rem); }
+      .baner-diseases-details .baner__image-wrap::before {
+        display: none; }
+    .baner-diseases-details .baner__breadcrumbs {
+      margin-bottom: 13rem; }
+    .baner-diseases-details .baner__text-content {
+      width: 71rem;
+      margin-bottom: 0; }
+    .baner-diseases-details .baner__text-wrap {
+      margin-bottom: 0; }
+    .baner-diseases-details .baner__text {
+      font-size: 3.2rem; }
+      .baner-diseases-details .baner__text::before {
+        display: none; }
+    .baner-diseases-details .baner__scroll-block {
+      display: none; }
+  .baner-patients-voice {
+    height: 120rem; }
+    .baner-patients-voice .baner__container {
+      grid-template-columns: 71rem; }
+    .baner-patients-voice .baner__text {
+      width: 63.6rem; }
+    .baner-patients-voice .baner__breadcrumbs {
+      font-size: 2.6rem; }
+    .baner-patients-voice .baner__image-wrap {
+      bottom: 0;
+      right: 3rem; }
+    .baner-patients-voice .baner__image {
+      width: 77rem;
+      height: 55.6rem; }
+      .baner-patients-voice .baner__image.img-desctop {
+        display: none; }
+      .baner-patients-voice .baner__image.img-mobile {
+        display: block; } }
 
 .baner--s-parent {
   height: 48.7rem;
@@ -6874,7 +7054,7 @@ input[type='search']::-webkit-search-results-decoration {
     margin-bottom: 3.6rem; }
     .baner--s-parent .baner__price-d span {
       color: rgba(51, 51, 51, 0.5);
-      font-family: 'Myriad Pro',sans-serif;
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 2.4rem;
       font-style: normal;
       font-weight: 300;
@@ -6882,8 +7062,8 @@ input[type='search']::-webkit-search-results-decoration {
       margin-right: 0.4rem; }
     .baner--s-parent .baner__price-d strong {
       display: block;
-      color: #36B4F1;
-      font-family: 'Myriad Pro',sans-serif;
+      color: #36b4f1;
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 3.2rem;
       font-style: normal;
       font-weight: 700;
@@ -33021,7 +33201,7 @@ textarea {
   gap: 1.6rem;
   margin-bottom: 6.8rem; }
   .component--title-head .title, .component--title-head .doctor__item-info-title {
-    font-family: Myriad Pro;
+    font-family: MyriadPro;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
@@ -33043,6 +33223,22 @@ textarea {
       font-size: 3rem; }
     .component--title-head .subtitle, .component--title-head .doctor__item-info-subtitle {
       font-size: 5.4rem; } }
+
+.component--line-with-text {
+  font-family: MyriadPro;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: rgba(51, 51, 51, 0.5);
+  padding: 0 0 0.8rem 3rem;
+  border-left: 1px solid #d8dde4; }
+
+@media (max-width: 48em) {
+  .component--line-with-text {
+    font-size: 3.2rem;
+    line-height: 150%;
+    padding: 0 0 0 2rem; } }
 
 .component--vacancy-list {
   padding: 4rem;
@@ -33077,7 +33273,10 @@ textarea {
     height: 1.1rem;
     border-radius: 50%;
     background-color: #36b4f1;
-    border: 0.3rem solid #eef3f7; }
+    border: 0.3rem solid #eef3f7;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none; }
   .component--vacancy-list .text {
     font-size: 1.8rem;
     font-style: normal;
@@ -33121,7 +33320,8 @@ textarea {
   font-size: 1.8rem;
   line-height: 122%;
   color: #36b4f1;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .component--link-btn::after {
     content: '';
     -webkit-box-flex: 0;
@@ -33244,6 +33444,280 @@ textarea {
         top: 2rem;
         -webkit-transform: translateY(0%);
                 transform: translateY(0%); } }
+
+.component--call-us {
+  padding: 4rem;
+  padding-bottom: 0;
+  width: 45.3rem;
+  height: 53.8rem;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5fcbff), to(#36b4f1));
+  background: linear-gradient(180deg, #5fcbff 0%, #36b4f1 100%); }
+  .component--call-us .content {
+    height: 100%;
+    overflow: hidden; }
+  .component--call-us .text,
+  .component--call-us .title,
+  .component--call-us .doctor__item-info-title {
+    color: #fff; }
+  .component--call-us .text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 2.3rem; }
+  
+  .component--call-us .title,
+  .component--call-us .doctor__item-info-title {
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; }
+  .component--call-us .image {
+    width: 36.2rem; }
+  .component--call-us .phone-box {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+    border-radius: 3.5rem;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1); }
+    .component--call-us .phone-box-text {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: rgba(51, 51, 51, 0.5);
+      white-space: nowrap; }
+      .component--call-us .phone-box-text > span {
+        color: #36b4f1;
+        font-weight: 600; }
+
+@media (max-width: 48em) {
+  .component--call-us {
+    padding: 6rem 4rem;
+    padding-bottom: 0;
+    width: 67rem;
+    height: 102.4rem; }
+    .component--call-us .text {
+      font-size: 3rem;
+      margin-bottom: 4rem; }
+    
+    .component--call-us .title,
+    .component--call-us .doctor__item-info-title {
+      font-size: 4rem;
+      margin-bottom: 4rem; }
+    .component--call-us .image {
+      width: 60.4rem; }
+    .component--call-us .phone-box {
+      padding: 2.6rem 8.6rem;
+      border-radius: 7rem; }
+      .component--call-us .phone-box-text {
+        font-size: 3.2rem; } }
+
+.component--our-vacancies {
+  width: 45.3rem;
+  height: 44rem;
+  padding: 4rem;
+  background-color: #eef3f7; }
+  .component--our-vacancies .content {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .component--our-vacancies .title, .component--our-vacancies .doctor__item-info-title {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: #2f2f2f;
+    margin-bottom: 2rem; }
+  .component--our-vacancies .text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5); }
+  .component--our-vacancies .address-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem; }
+    .component--our-vacancies .address-box .address-icon {
+      width: 4.6rem;
+      height: 4.6rem;
+      background-color: #fff;
+      border-radius: 50%;
+      -webkit-box-shadow: 0px 2.5rem 6rem 0px rgba(124, 148, 159, 0.2);
+              box-shadow: 0px 2.5rem 6rem 0px rgba(124, 148, 159, 0.2);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .component--our-vacancies .address-box .address-icon > svg {
+        width: 2.4rem;
+        height: 2.4rem; }
+    .component--our-vacancies .address-box .address-value {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 0.2rem; }
+      .component--our-vacancies .address-box .address-value p:nth-child(1) {
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        color: rgba(51, 51, 51, 0.5); }
+      .component--our-vacancies .address-box .address-value p:nth-child(2) {
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #36b4f1; }
+  .component--our-vacancies .button {
+    width: 100%;
+    text-align: center;
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 1.7rem 4.8rem;
+    border-radius: 10rem;
+    background-color: #36b4f1;
+    margin-top: 4rem; }
+
+@media (max-width: 48em) {
+  .component--our-vacancies {
+    width: 67rem;
+    height: 72rem;
+    padding: 6.4rem 4rem; }
+    .component--our-vacancies .title, .component--our-vacancies .doctor__item-info-title {
+      font-size: 3.6rem;
+      margin-bottom: 2.4rem; }
+    .component--our-vacancies .text {
+      font-size: 2.6rem;
+      line-height: 120%; }
+    .component--our-vacancies .address-box {
+      gap: 2.4rem; }
+      .component--our-vacancies .address-box .address-icon {
+        width: 8.4rem;
+        height: 8.4rem; }
+        .component--our-vacancies .address-box .address-icon > svg {
+          width: 4rem;
+          height: 4rem; }
+      .component--our-vacancies .address-box .address-value p:nth-child(1) {
+        font-size: 2.6rem; }
+      .component--our-vacancies .address-box .address-value p:nth-child(2) {
+        font-size: 3.2rem; }
+    .component--our-vacancies .button {
+      font-size: 3rem;
+      padding: 3rem 4rem;
+      border-radius: 11rem;
+      margin-top: 6rem; } }
+
+.component--grey-btn {
+  width: 100%;
+  background-color: #eef3f7;
+  border-radius: 10rem;
+  padding: 1.7rem 4.8rem;
+  font-family: MyriadPro;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: #36b4f1;
+  text-align: center; }
+
+@media (max-width: 48em) {
+  .component--grey-btn {
+    padding: 2rem 8rem;
+    font-size: 3.2rem;
+    line-height: 150%;
+    border-radius: 20rem; } }
+
+.component--cards {
+  width: 33rem;
+  height: 21.2rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  background-image: url(../img/t-image/cards-background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .component--cards .title, .component--cards .doctor__item-info-title {
+    width: 12.5rem;
+    margin-bottom: 3.6rem; }
+  .component--cards .price p:nth-child(1) {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; }
+  .component--cards .price p:nth-child(2) {
+    color: #fff;
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; }
+  .component--cards .decoration-shadow-right {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    z-index: -1; }
+    .component--cards .decoration-shadow-right > svg {
+      width: 17rem;
+      height: 17rem; }
+  .component--cards .decoration-shadow-left {
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    z-index: -1; }
+    .component--cards .decoration-shadow-left > svg {
+      width: 17rem;
+      height: 17rem; }
+
+@media (max-width: 48em) {
+  .component--cards {
+    width: 44.4rem;
+    height: 28.4rem;
+    padding: 5.2rem; }
+    .component--cards .title, .component--cards .doctor__item-info-title {
+      width: 16.8rem;
+      margin-bottom: 4.8rem; }
+    .component--cards .price p:nth-child(1) {
+      font-size: 4.8rem; }
+    .component--cards .price p:nth-child(2) {
+      font-size: 2.6rem; } }
 
 body::after {
   content: '';
@@ -36768,51 +37242,6 @@ body::after {
       background-repeat: no-repeat;
       background-size: 100% 100%; }
 
-.patients-stocks {
-  margin-bottom: 18rem; }
-  .patients-stocks .stocks__list {
-    display: grid;
-    grid-template-columns: repeat(3, 43.3rem);
-    gap: 5.9rem; }
-  .patients-stocks .stocks__btn {
-    margin-top: 4rem; }
-    .patients-stocks .stocks__btn::after {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
-
-@media (max-width: 48em) {
-  .patients-stocks {
-    margin-bottom: 16rem; }
-    .patients-stocks .stocks__list {
-      display: grid;
-      grid-template-columns: repeat(1, 67rem);
-      gap: 3.2rem; }
-    .patients-stocks .stocks__btn-box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    .patients-stocks .stocks__btn {
-      margin-top: 6.4rem; } }
-
-.new-clinic__title {
-  color: #2f2f2f;
-  font-family: Montserrat;
-  font-size: 5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 6.8rem; }
-
-@media (max-width: 48em) {
-  .new-clinic__text {
-    margin-bottom: 3.2rem; }
-  .new-clinic__title {
-    font-size: 5.4rem;
-    margin-bottom: 6.4rem; } }
-
 .quote {
   margin-bottom: 18rem; }
   .quote__inner {
@@ -37395,6 +37824,746 @@ body::after {
   .new-clinic__title {
     font-size: 5.4rem;
     margin-bottom: 6.4rem; } }
+
+.finished-resume {
+  padding: 8rem 0; }
+  .finished-resume .component--title-head {
+    width: 44.7rem; }
+  .finished-resume .component--line-with-text {
+    width: 40.7rem; }
+  .finished-resume__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4.7rem; }
+    .finished-resume__content .content-left .component--title-head {
+      margin-bottom: 3.2rem; }
+    .finished-resume__content .content-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 4rem; }
+  .finished-resume__info-block {
+    width: 45.6rem;
+    height: 27.2rem;
+    padding: 2.8rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    background-color: #fff; }
+  .finished-resume__icon-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 9.9rem;
+    height: 9.9rem;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 2.5rem 4rem 0px rgba(124, 148, 159, 0.05);
+            box-shadow: 0px 2.5rem 4rem 0px rgba(124, 148, 159, 0.05);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .finished-resume__icon-box > svg {
+      width: 4.5rem;
+      height: 4.5rem; }
+  .finished-resume__text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.5);
+    margin: 0 auto; }
+    .finished-resume__text.text-first {
+      width: 32.1rem; }
+    .finished-resume__text.text-second {
+      width: 33.8rem; }
+  .finished-resume__btn {
+    width: 100%;
+    text-align: center;
+    padding: 1.7rem 4.8rem;
+    border-radius: 10rem;
+    margin-top: 4rem; }
+    .finished-resume__btn.blue-btn {
+      background-color: #36b4f1;
+      color: #ffffff; }
+    .finished-resume__btn.grey-btn {
+      background-color: #eef3f7;
+      color: #36b4f1; }
+
+@media (max-width: 48em) {
+  .finished-resume .component--title-head {
+    width: 100%; }
+  .finished-resume .component--line-with-text {
+    width: 100%; }
+  .finished-resume__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12.4rem; }
+    .finished-resume__content .content-left .component--title-head {
+      margin-bottom: 4rem; }
+    .finished-resume__content .content-right {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 9.2rem; }
+  .finished-resume__info-block {
+    width: 67rem;
+    height: 40rem;
+    padding: 4.4rem 4rem; }
+  .finished-resume__icon-box {
+    width: 12rem;
+    height: 12rem; }
+    .finished-resume__icon-box > svg {
+      width: 5.8rem;
+      height: 5.8rem; }
+  .finished-resume__text {
+    font-size: 3.2rem;
+    line-height: 150%; }
+    .finished-resume__text.text-first, .finished-resume__text.text-second {
+      width: 100%; }
+  .finished-resume__btn {
+    font-size: 3rem;
+    padding: 3rem 4rem;
+    margin-top: 6rem; } }
+
+.our-vacancies__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem; }
+
+.our-vacancies__page-navigation {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.our-vacancies__call-box {
+  width: 45.3rem;
+  padding: 5rem 4rem 4rem 4rem;
+  -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+          box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .our-vacancies__call-box .call-box__icon {
+    width: 9.9rem;
+    height: 9.9rem;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 2.5rem 4rem 0px rgba(124, 148, 159, 0.05);
+            box-shadow: 0px 2.5rem 4rem 0px rgba(124, 148, 159, 0.05);
+    margin-bottom: 4.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .our-vacancies__call-box .call-box__icon > svg {
+      width: 4.5rem;
+      height: 4.5rem; }
+  .our-vacancies__call-box .call-box__title {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: #2f2f2f;
+    margin-bottom: 1.9rem;
+    text-align: center; }
+  .our-vacancies__call-box .call-box__text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5);
+    margin-bottom: 4.8rem; }
+
+@media (max-width: 48em) {
+  .our-vacancies__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3.2rem; }
+  .our-vacancies__call-box {
+    width: 67rem;
+    padding: 6.4rem 4rem; }
+    .our-vacancies__call-box .call-box__icon {
+      width: 12rem;
+      height: 12rem; }
+      .our-vacancies__call-box .call-box__icon > svg {
+        width: 5.8rem;
+        height: 5.8rem;
+        margin-bottom: 4rem; }
+    .our-vacancies__call-box .call-box__title {
+      font-size: 3.2rem;
+      line-height: 150%;
+      margin-bottom: 3.2rem; }
+    .our-vacancies__call-box .call-box__text {
+      font-size: 2.6rem;
+      margin-bottom: 6.4rem; }
+  .our-vacancies__page-navigation {
+    display: none; } }
+
+.vacancy__baner {
+  position: relative; }
+  .vacancy__baner .baner__phone-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 2.8rem 18.6rem 2.8rem 23.8rem;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    background-color: #fff;
+    border-top-right-radius: 6.5rem;
+    border-bottom-right-radius: 6.5rem;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem; }
+    .vacancy__baner .baner__phone-box .phone-box__icon {
+      width: 6.8rem;
+      height: 6.8rem;
+      background-color: #36b4f1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      border-radius: 1.4rem; }
+      .vacancy__baner .baner__phone-box .phone-box__icon > svg {
+        width: 3.2rem;
+        height: 3.2rem; }
+    .vacancy__baner .baner__phone-box .phone-box__value p:nth-child(1) {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 0.4rem; }
+    .vacancy__baner .baner__phone-box .phone-box__value p:nth-child(2) {
+      font-family: Montserrat;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      color: #36b4f1; }
+
+@media (max-width: 48em) {
+  .vacancy__baner .baner__phone-box {
+    padding: 1.6rem 16rem 1.6rem 4rem;
+    -webkit-box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1); }
+    .vacancy__baner .baner__phone-box .phone-box__icon {
+      width: 9.2rem;
+      height: 9.2rem;
+      border-radius: 2.8rem; }
+    .vacancy__baner .baner__phone-box .phone-box__value p:nth-child(1) {
+      font-size: 2.6rem;
+      margin-bottom: 0;
+      margin-top: 0.6rem; }
+    .vacancy__baner .baner__phone-box .phone-box__value p:nth-child(2) {
+      font-size: 3.2rem; } }
+
+.vacancy-details .finished-resume {
+  background-color: #eef3f7; }
+
+.baner-vacancy-details .baner__content-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem; }
+  .baner-vacancy-details .baner__content-boxes .content-box {
+    width: 30.8rem;
+    padding: 3rem 2.7rem 4.2rem 3rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1); }
+    .baner-vacancy-details .baner__content-boxes .content-box__icon {
+      width: 6.8rem;
+      height: 6.8rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background-color: #36b4f1;
+      -webkit-box-shadow: 0px 2rem 3rem 0px rgba(64, 185, 244, 0.1);
+              box-shadow: 0px 2rem 3rem 0px rgba(64, 185, 244, 0.1);
+      border-radius: 1.4rem;
+      margin-bottom: 4.7rem; }
+      .baner-vacancy-details .baner__content-boxes .content-box__icon > svg {
+        width: 3.2rem;
+        height: 3.2rem; }
+    .baner-vacancy-details .baner__content-boxes .content-box__title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 3.2rem; }
+      .baner-vacancy-details .baner__content-boxes .content-box__title .black-title {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        color: #2f2f2f;
+        position: relative; }
+        .baner-vacancy-details .baner__content-boxes .content-box__title .black-title.money::after {
+          content: '₽';
+          position: absolute;
+          top: 0;
+          left: calc(100% + 0.3rem);
+          font-family: MyriadPro;
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          color: #2f2f2f; }
+      .baner-vacancy-details .baner__content-boxes .content-box__title .grey-title {
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: rgba(51, 51, 51, 0.5); }
+    .baner-vacancy-details .baner__content-boxes .content-box__text {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: rgba(51, 51, 51, 0.5); }
+
+.baner-vacancy-details .baner__btn {
+  width: 27.4rem;
+  padding: 1.7rem 4.8rem;
+  background-color: #36b4f1;
+  border-radius: 10rem;
+  font-family: MyriadPro;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: #fff;
+  text-align: center;
+  margin-top: 4rem; }
+
+@media (max-width: 48em) {
+  .baner-vacancy-details .baner__content-boxes {
+    gap: 3.6rem;
+    padding-bottom: 10rem; }
+    .baner-vacancy-details .baner__content-boxes .content-box {
+      width: 32rem;
+      padding: 0;
+      background-color: transparent;
+      z-index: 10;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+      .baner-vacancy-details .baner__content-boxes .content-box__icon {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 2rem;
+        margin-bottom: 2.2rem; }
+        .baner-vacancy-details .baner__content-boxes .content-box__icon > svg {
+          width: 4rem;
+          height: 4rem; }
+      .baner-vacancy-details .baner__content-boxes .content-box__title {
+        margin-bottom: 2.2rem;
+        gap: 0; }
+        .baner-vacancy-details .baner__content-boxes .content-box__title .black-title {
+          font-size: 3.2rem;
+          line-height: 150%; }
+          .baner-vacancy-details .baner__content-boxes .content-box__title .black-title.money {
+            font-size: 5rem;
+            font-weight: 600; }
+            .baner-vacancy-details .baner__content-boxes .content-box__title .black-title.money::after {
+              font-family: Montserrat;
+              font-size: 2.4rem;
+              font-weight: 700;
+              left: calc(100% + 0.6rem); }
+        .baner-vacancy-details .baner__content-boxes .content-box__title .grey-title {
+          font-size: 2.6rem;
+          line-height: 120%; }
+      .baner-vacancy-details .baner__content-boxes .content-box__text {
+        font-size: 2.6rem;
+        line-height: 120%; }
+  .baner-vacancy-details .baner__btn {
+    display: none; } }
+
+.information-for-applicants {
+  padding: 4rem 0; }
+  .information-for-applicants__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem; }
+    .information-for-applicants__content .content-left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 5.9rem; }
+    .information-for-applicants__content .content-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 4rem; }
+      .information-for-applicants__content .content-right__text {
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: rgba(51, 51, 51, 0.5); }
+  .information-for-applicants__call-box {
+    background: -webkit-gradient(linear, left top, left bottom, from(#5fcbff), to(#36b4f1));
+    background: linear-gradient(180deg, #5fcbff 0%, #36b4f1 100%);
+    padding: 4rem;
+    color: #fff; }
+    .information-for-applicants__call-box .call-box__title {
+      font-family: Montserrat;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      margin-bottom: 1.2rem; }
+    .information-for-applicants__call-box .call-box__text {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      margin-bottom: 2.8rem; }
+    .information-for-applicants__call-box .call-box__links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 2rem; }
+    .information-for-applicants__call-box .call-box__link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 2.4rem; }
+    .information-for-applicants__call-box .call-box__icon.icon-phone > svg {
+      width: 3rem;
+      height: 3rem; }
+    .information-for-applicants__call-box .call-box__icon.icon-mail {
+      padding-left: 0.5rem; }
+      .information-for-applicants__call-box .call-box__icon.icon-mail > svg {
+        width: 2.5rem;
+        height: 2.5rem; }
+    .information-for-applicants__call-box .call-box__value {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal; }
+  .information-for-applicants__call-block {
+    display: none;
+    overflow: hidden; }
+  .information-for-applicants-details__call-block {
+    display: block;
+    width: 45.3rem;
+    height: 40.2rem; }
+
+@media (max-width: 48rem) {
+  .information-for-applicants .component--title-head {
+    margin-bottom: 6.4rem; }
+  .information-for-applicants__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 3.2rem; }
+    .information-for-applicants__content .content-left {
+      gap: 8.2rem; }
+    .information-for-applicants__content .content-right {
+      gap: 3.2rem; }
+      .information-for-applicants__content .content-right__text {
+        font-size: 2.6rem;
+        line-height: 120%;
+        margin-bottom: 3.2rem; }
+  .information-for-applicants__call-box {
+    display: none; }
+  .information-for-applicants__call-block {
+    display: block; }
+  .information-for-applicants-details__call-block {
+    display: block;
+    width: 100%;
+    height: 100%; } }
+
+.questions-accordion {
+  margin-bottom: 18rem; }
+  .questions-accordion #accordion-questions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem; }
+  .questions-accordion .accordion-element {
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1); }
+    .questions-accordion .accordion-element.acc_active .accordion-swap {
+      background-color: #eef3f7; }
+      .questions-accordion .accordion-element.acc_active .accordion-swap > svg {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transition: -webkit-transform 0.25s linear;
+        transition: -webkit-transform 0.25s linear;
+        transition: transform 0.25s linear;
+        transition: transform 0.25s linear, -webkit-transform 0.25s linear; }
+        .questions-accordion .accordion-element.acc_active .accordion-swap > svg line {
+          fill: #36b4f1;
+          stroke: #36b4f1; }
+  .questions-accordion .accordion-swap {
+    position: absolute;
+    top: 50%;
+    right: 4rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #36b4f1; }
+    .questions-accordion .accordion-swap > svg {
+      width: 2.4rem;
+      height: 2.4rem; }
+  .questions-accordion .accordion-title {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: #2f2f2f;
+    padding: 3.8rem 18.6rem 3.8rem 4rem;
+    position: relative; }
+  .questions-accordion .accordion-text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5);
+    padding: 4rem;
+    padding-top: 0; }
+    .questions-accordion .accordion-text > span {
+      color: #36b4f1; }
+  .questions-accordion__btn-box .component--link-btn::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+
+@media (max-width: 48em) {
+  .questions-accordion {
+    margin-bottom: 15rem; }
+    .questions-accordion .accordion-swap.swap-start-mob {
+      top: 2.4rem;
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }
+    .questions-accordion .accordion-title {
+      font-family: MyriadPro;
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 150%;
+      padding: 2.4rem 12.8rem 4rem 4rem; }
+    .questions-accordion .accordion-text {
+      font-size: 2.6rem;
+      padding: 4rem;
+      padding-top: 0; } }
+
+.cards-stocks {
+  margin-bottom: 18.5rem; }
+  .cards-stocks__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8rem; }
+    .cards-stocks__content .content-bottom {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 4rem; }
+      .cards-stocks__content .content-bottom--right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 4.8rem; }
+  .cards-stocks__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem; }
+  .cards-stocks__image {
+    width: 70rem; }
+  .cards-stocks__title {
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    color: #2f2f2f;
+    margin-bottom: 4rem; }
+  .cards-stocks__text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5); }
+  .cards-stocks__panels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.2rem; }
+  .cards-stocks__panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    padding: 3rem 4rem 3rem 3rem;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1); }
+    .cards-stocks__panel .panel-icon > svg {
+      width: 4.5rem;
+      height: 4.5rem; }
+    .cards-stocks__panel .panel-text {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: #2f2f2f; }
+
+@media (max-width: 48em) {
+  .cards-stocks__content {
+    gap: 6rem; }
+    .cards-stocks__content .content-top {
+      overflow: hidden; }
+    .cards-stocks__content .content-bottom {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 4rem; }
+      .cards-stocks__content .content-bottom--right {
+        gap: 6.4rem; }
+  .cards-stocks__cards {
+    overflow-x: auto; }
+  .cards-stocks__image {
+    width: 71rem; }
+  .cards-stocks__title {
+    font-size: 3.6rem;
+    margin-bottom: 4rem; }
+  .cards-stocks__text {
+    font-size: 3.2rem; }
+  .cards-stocks__panels {
+    gap: 3.2rem; }
+  .cards-stocks__panel {
+    padding: 3rem 8rem 3rem 4rem; }
+    .cards-stocks__panel .panel-icon > svg {
+      width: 4.8rem;
+      height: 4.8rem; }
+    .cards-stocks__panel .panel-text {
+      font-size: 2.6rem; } }
+
+.pages-patients .pages__item-title {
+  font-size: 2.5rem; }
 
 .sl-reviews {
   margin-bottom: 18rem; }

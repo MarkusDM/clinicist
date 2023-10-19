@@ -86,16 +86,19 @@
 @import './blocks/leave-contacts';
 @import './blocks/about-the-s';
 
-@import './blocks/patients-stocks-page';
-@import './blocks/patients-information-page';
-
 @import './blocks/quote';
 @import './blocks/part-team';
 @import './blocks/pages';
 
-
 @import './blocks/patients-stocks-page';
 @import './blocks/patients-information-page';
+@import './blocks/finished-resume';
+@import './blocks/vacancy-page';
+@import './blocks/vacancy-details-page';
+@import './blocks/information-for-applicants';
+@import './blocks/questions-accordion';
+@import './blocks/patients-cards-page';
+@import './blocks/patients-page';
 
 @import './blocks/sl-reviews';
 @import './blocks/services-parent';
@@ -110,7 +113,6 @@
 @import './blocks/news-other.scss';
 @import './blocks/socials.scss';
 @import './blocks/news-descs.scss';
-
 
 #ui-datepicker-div {
   display: block !important;

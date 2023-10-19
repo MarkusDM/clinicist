@@ -411,22 +411,22 @@
       border-radius: 50%;
     }
   }
- &-news {
-  margin-bottom: 12rem;
-  .baner {
-    &__content-title {
-      margin-top: 12.7rem;
-    }
-    &__content-text {
-      font-family: Myriad Pro, sans-serif;
-      line-height: 130%;
-    }
-    &__picture {
-      margin-right: 2.7rem;
-      width: 82rem;
+  &-news {
+    margin-bottom: 12rem;
+    .baner {
+      &__content-title {
+        margin-top: 12.7rem;
+      }
+      &__content-text {
+        font-family: Myriad Pro, sans-serif;
+        line-height: 130%;
+      }
+      &__picture {
+        margin-right: 2.7rem;
+        width: 82rem;
+      }
     }
   }
- } 
   &-news-article {
     height: 41.3rem;
     margin-bottom: 6rem;
@@ -3715,7 +3715,7 @@
     margin-bottom: 16rem;
     height: auto;
 
-     &-news {
+    &-news {
       margin-bottom: 20rem;
       .baner {
         &__content-title {
@@ -3742,13 +3742,13 @@
           height: 67rem;
         }
       }
-    } 
+    }
 
     &-news-article {
       height: auto;
       margin-bottom: 12rem;
 
-      .breadcrumbs__text{
+      .breadcrumbs__text {
         white-space: wrap;
         line-height: 130%;
       }
@@ -4646,7 +4646,7 @@
       position: relative;
       z-index: 2;
     }
-}
+  }
 
   .baner__picture::after {
     position: absolute;
@@ -4701,11 +4701,6 @@
     z-index: 2;
   }
 }
-
-
-
-
-
 
 @media (max-width: 48em) {
   .baner--services {
@@ -4875,17 +4870,133 @@
       }
     }
   }
+  &-preparation-information {
+    .baner {
+      &__image-wrap {
+        width: 73rem;
+      }
+      &__image {
+        &.img-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  &-vacancy {
+    height: 54.7rem;
+  }
+  &-vacancy-details {
+    height: 60rem;
+    .baner {
+      &__image-wrap {
+        align-self: center;
+        &::before {
+          width: 95.1rem;
+          height: 95.1rem;
+        }
+      }
+    }
+  }
+  &-diseases-details {
+    height: 74.8rem;
+    .baner {
+      &__article-value {
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+        margin-bottom: 8rem;
+        &.mobile {
+          display: none;
+        }
+        .white-circle {
+          font-family: MyriadPro;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: #2f2f2f;
+          padding: 0.7rem 2.4rem;
+          border-radius: 5.4rem;
+          background-color: #fff;
+        }
+        .date {
+          font-family: MyriadPro;
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          color: #36b4f1;
+        }
+      }
+      &__image-wrap {
+        width: 123.8rem;
+        height: 95rem;
+        &::before {
+          display: none;
+        }
+      }
+      &__breadcrumbs {
+        margin-bottom: 7.5rem;
+      }
+      &__text-content {
+        margin-bottom: 13.2rem;
+      }
+      &__text {
+        &::before {
+          display: none;
+        }
+      }
+      &__scroll-block {
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+        .scroll-block {
+          &-icon {
+            & > svg {
+              width: 2.5rem;
+            }
+          }
+          &-text {
+            font-family: Montserrat;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            color: #36b4f1;
+          }
+        }
+      }
+    }
+  }
+  &-patients-voice {
+    height: 50rem;
+    position: relative;
+    .baner {
+      &__container {
+        grid-template-columns: 91rem 73.6rem;
+      }
+      &__image-wrap {
+        position: absolute;
+        bottom: -5rem;
+        right: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &__text {
+        width: 50.1rem;
+      }
+      &__image {
+        width: 81.3rem;
+        height: 60.2rem;
+        object-fit: contain;
+        &.img-mobile {
+          display: none;
+        }
+      }
+    }
+  }
 }
-
- .baner--s-direction {
-   margin-bottom: 4rem;
-
-
-   .baner__content-title {
-    
-   }
- }
-
 
 @media (max-width: 48em) {
   .baner {
@@ -5030,9 +5141,146 @@
         }
       }
     }
+    &-preparation-information {
+      .baner {
+        &__text-wrap {
+          margin-bottom: 10.6rem;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__image-wrap {
+          width: 70rem;
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -15%;
+          }
+        }
+        &__image {
+          &.img-desctop {
+            display: none;
+          }
+          &.img-mobile {
+            display: block;
+          }
+        }
+      }
+    }
+    &-vacancy {
+      height: 100rem;
+      .baner {
+        &__breadcrumbs {
+          margin-bottom: 8.4rem;
+        }
+        &__text-wrap {
+          margin-bottom: 10.4rem;
+        }
+      }
+    }
+    &-vacancy-details {
+      height: 105rem;
+      .baner {
+        &__image-wrap {
+          &::before {
+            width: 79.6rem;
+            height: 79.6rem;
+            top: -45%;
+            left: 32%;
+          }
+        }
+        &__breadcrumbs {
+          .breadcrumbs {
+            &__text {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-diseases-details {
+      height: 139.2rem;
+      .baner {
+        &__article-value {
+          &.desctop {
+            display: none;
+          }
+          &.mobile {
+            display: flex;
+          }
+          margin-bottom: 0;
+          gap: 2.6rem;
+          margin-top: 6.4rem;
+          .white-circle {
+            font-size: 3.2rem;
+            padding: 1.4rem 4.8rem;
+            border-radius: 10.8rem;
+          }
+          .date {
+            font-size: 3.2rem;
+          }
+        }
+        &__image-wrap {
+          width: 81.4rem;
+          height: 64rem;
+          transform: translateY(1rem) translateX(-10rem);
+          &::before {
+            display: none;
+          }
+        }
+        &__breadcrumbs {
+          margin-bottom: 13rem;
+        }
+        &__text-content {
+          width: 71rem;
+          margin-bottom: 0;
+        }
+        &__text-wrap {
+          margin-bottom: 0;
+        }
+        &__text {
+          font-size: 3.2rem;
+          &::before {
+            display: none;
+          }
+        }
+        &__scroll-block {
+          display: none;
+        }
+      }
+    }
+    &-patients-voice {
+      height: 120rem;
+      .baner {
+        &__container {
+          grid-template-columns: 71rem;
+        }
+        &__text {
+          width: 63.6rem;
+        }
+        &__breadcrumbs {
+          font-size: 2.6rem;
+        }
+        &__image-wrap {
+          bottom: 0;
+          right: 3rem;
+        }
+        &__image {
+          width: 77rem;
+          height: 55.6rem;
+          &.img-desctop {
+            display: none;
+          }
+          &.img-mobile {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
-
 
 .baner--s-parent {
   height: 48.7rem;
@@ -5041,8 +5289,8 @@
     display: flex;
     margin-bottom: 3.6rem;
     span {
-      color:  rgba(51, 51, 51, 0.50);
-      font-family: 'Myriad Pro',sans-serif;
+      color: rgba(51, 51, 51, 0.5);
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 2.4rem;
       font-style: normal;
       font-weight: 300;
@@ -5052,8 +5300,8 @@
 
     strong {
       display: block;
-      color:  #36B4F1;
-      font-family: 'Myriad Pro',sans-serif;
+      color: #36b4f1;
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 3.2rem;
       font-style: normal;
       font-weight: 700;
@@ -5083,10 +5331,9 @@
 
     img {
       position: relative;
-    z-index: 2;
+      z-index: 2;
     }
   }
-
 
   .baner__picture::after {
     top: -3rem;
@@ -5095,13 +5342,8 @@
     width: 55.7rem;
     height: 55.7rem;
     border: 1px solid #d8dde4;
-   
   }
-
-  
 }
-
-
 
 .baner--empty-services {
   height: 53.7rem;
@@ -5126,9 +5368,9 @@
     margin-right: 0;
     &::after {
       top: -2rem;
-    left: 37%;
-    width: 60rem;
-    height: 60rem;
+      left: 37%;
+      width: 60rem;
+      height: 60rem;
     }
     img {
       position: relative;
@@ -5140,14 +5382,14 @@
   .baner {
     &-o_klinike {
       margin-bottom: 20rem;
-      .breadcrumbs{
+      .breadcrumbs {
         margin-bottom: 7rem;
         &__link {
-        color: rgba(51, 51, 51, 0.5);
+          color: rgba(51, 51, 51, 0.5);
         }
       }
       .baner {
-        &__inner{
+        &__inner {
           padding: 0;
           &::after {
             content: none;
@@ -5245,10 +5487,10 @@
     &-korporativnie {
       margin-bottom: 12rem;
       .baner {
-        .breadcrumbs{
+        .breadcrumbs {
           margin-bottom: 7rem;
           &__link {
-          color: rgba(51, 51, 51, 0.5);
+            color: rgba(51, 51, 51, 0.5);
           }
         }
         &__content {
@@ -5286,10 +5528,10 @@
           top: 41rem;
           left: 55%;
         }
-        .breadcrumbs{
+        .breadcrumbs {
           margin-bottom: 7rem;
           &__link {
-          color: rgba(51, 51, 51, 0.5);
+            color: rgba(51, 51, 51, 0.5);
           }
         }
         &__content {
@@ -5335,11 +5577,8 @@
           }
         }
       }
-
     }
   }
 }
 
-
 /////////////////////////////////// t-styles ///////////////////////////////////////
-
