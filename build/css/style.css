@@ -7129,46 +7129,7 @@ input[type='search']::-webkit-search-results-decoration {
         width: 63.6rem;
         height: 63.6rem;
         top: -6rem;
-        left: 52%; }
-  .baner-history {
-    margin-bottom: 20rem; }
-    .baner-history .baner__inner::after {
-      top: 44rem; }
-    .baner-history .baner__picture {
-      height: 57rem;
-      width: 82.8rem;
-      margin-top: 0rem;
-      margin-left: -5rem; }
-  .baner-licenzia {
-    margin-bottom: 12rem; }
-    .baner-licenzia .baner__inner {
-      padding-bottom: 4rem; }
-      .baner-licenzia .baner__inner::after {
-        top: 45rem; }
-    .baner-licenzia .baner__content .breadcrumbs {
-      margin-bottom: 7rem;
-      width: 110%; }
-      .baner-licenzia .baner__content .breadcrumbs__link {
-        color: rgba(51, 51, 51, 0.5); }
-      .baner-licenzia .baner__content .breadcrumbs__text {
-        margin-left: -0.5rem;
-        font-size: 2.8rem; }
-    .baner-licenzia .baner__content-links {
-      margin-bottom: 13rem; }
-    .baner-licenzia .baner__content-title {
-      margin-bottom: 2.2rem; }
-    .baner-licenzia .baner__content-text {
-      width: 75%; }
-    .baner-licenzia .baner__picture {
-      width: 50.5rem;
-      height: 39.1rem;
-      padding-top: 4rem;
-      margin-right: 11.7rem; }
-      .baner-licenzia .baner__picture::after {
-        width: 66.6rem;
-        height: 66.6rem;
-        top: -10rem;
-        left: 51.5%; } }
+        left: 52%; } }
 
 .solution {
   margin-top: 20rem;

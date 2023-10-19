@@ -5105,6 +5105,7 @@
   
 }
 
+
 .baner--empty-services {
   height: 53.7rem;
 
@@ -5137,8 +5138,8 @@
       z-index: 2;
     }
   }
-}
 
+}
 @media (max-width: 48em) {
   .baner {
     &-o_klinike {
@@ -5371,67 +5372,8 @@
         }
       }
     }
-    &-history {
-      margin-bottom: 20rem;
-      & .baner__inner::after {
-        top: 44rem;
-      }
-      & .baner__picture {
-        height: 57rem;
-        width: 82.8rem;
-        margin-top: 0rem;
-        margin-left: -5rem;
-      }
-    }
-    &-licenzia {
-      margin-bottom: 12rem;
-      .baner {
-        &__inner {
-          padding-bottom: 4rem;
-          &::after {
-            top: 45rem;
-          }
-        }
-        &__content {
-          .breadcrumbs {
-            margin-bottom: 7rem;
-            width: 110%;
-            &__link {
-              color: rgba(51, 51, 51, 0.5);
-            }
-            &__text {
-              margin-left: -0.5rem;
-              font-size: 2.8rem;
-            }
-          }
-          &-links {
-            margin-bottom: 13rem;
-          }
-          &-title {
-            margin-bottom: 2.2rem;
-          }
-          &-text {
-            width: 75%;
-          }
-        }
-        &__picture {
-          width: 50.5rem;
-          height: 39.1rem;
-          padding-top: 4rem;
-          margin-right: 11.7rem;
-          &::after {
-            width: 66.6rem;
-            height: 66.6rem;
-            top: -10rem;
-            left: 51.5%;
-          }
-        }
-      }
-    }
   }
 }
 
+
 /////////////////////////////////// t-styles ///////////////////////////////////////
-
-
-
