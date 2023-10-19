@@ -1,5 +1,8 @@
 const storyItems = Array.from(document.querySelectorAll('.story__item'));
 const storyBottoms = Array.from(document.querySelectorAll('.story__bottom'));
+const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
+const valuesSlides = Array.from(document.querySelectorAll('.values__right-slide'));
+let tabIndex;
 storyItems.forEach( e => {
   e.addEventListener('mouseenter', () => {
     e.childNodes[7].classList.add('active');
@@ -9,6 +12,17 @@ storyItems.forEach( e => {
   })
 })
 
+valuesTabs.forEach(e => {
+  e.addEventListener('click', () => {
+    for(let i = 0; i < valuesTabs.length;i++){
+      valuesTabs[i].classList.remove('active-tab');
+      valuesSlides[i].classList.remove('active-slide');
+    }
+    e.classList.add('active-tab');
+    tabIndex = valuesTabs.indexOf(e);
+    valuesSlides[tabIndex].classList.add('active-slide');
+  })
+})
 
 const historySlider = new Swiper('.story-swiper', {
   freeMode: false,
