@@ -1053,6 +1053,9 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 @media (max-width: 48em) {
+  .breadcrumbs {
+    row-gap: 1rem;
+  }
   .breadcrumbs.txt {
     font-size: 3rem;
   }
