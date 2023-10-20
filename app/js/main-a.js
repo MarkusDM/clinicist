@@ -234,6 +234,15 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function() {
           item.classList.toggle('_active')
           _slideToggle(showmore)
+          setTimeout(() => {
+            if (item.classList.contains('_active')) {
+              btn.innerHTML = 'Показать все время записи'
+              btn.innerHTML = 'Свернуть'
+            } else if (!item.classList.contains('_active')) {
+              btn.innerHTML = 'Показать все время записи'
+          }
+
+          }, 500)
         })
       })
     }

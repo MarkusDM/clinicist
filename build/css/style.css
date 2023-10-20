@@ -30727,24 +30727,16 @@ textarea {
   .doctor-card__hours-more {
     margin-top: 2.5rem;
     justify-self: center; }
-    .doctor-card__hours-more span:last-child {
-      display: none; }
-      .doctor-card__hours-more span:last-child.link::after, .doctor-card__hours-more span.alphabet-filter__title:last-child::after {
-        -webkit-transform: rotate(-90deg);
-                transform: rotate(-90deg); }
-    .doctor-card__hours-more span:first-child {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .doctor-card__hours-more span:first-child.link::after, .doctor-card__hours-more span.alphabet-filter__title:first-child::after {
-        -webkit-transform: rotate(90deg);
-                transform: rotate(90deg); }
-    ._active .doctor-card__hours-more span:first-child {
-      display: none; }
-    ._active .doctor-card__hours-more span:last-child {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+    .doctor-card__hours-more::after {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      -webkit-transition: -webkit-transform 0s ease 0.5s;
+      transition: -webkit-transform 0s ease 0.5s;
+      transition: transform 0s ease 0.5s;
+      transition: transform 0s ease 0.5s, -webkit-transform 0s ease 0.5s; }
+    ._active .doctor-card__hours-more::after {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
 
 .hours-item {
   padding: 0.7rem 1.1rem 0.5rem 1.1rem;
