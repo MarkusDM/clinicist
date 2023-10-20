@@ -257,6 +257,12 @@
   &__btn {
     min-width: 49.8rem;
     background-color: transparent;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: transparent;
+        border: 1px solid #d8dde4;
+      }
+    }
   }
 
   // .steps__call
