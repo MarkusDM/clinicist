@@ -32186,6 +32186,8 @@ textarea {
   display: grid;
   grid-template-columns: 45.7rem 1fr;
   background-color: #EEF3F7; }
+  .all-reviews-card .review-card__text-wrap {
+    margin-bottom: 0; }
   .all-reviews-card__info {
     padding: 4rem 7rem 4rem 4rem;
     display: -webkit-box;
@@ -34688,8 +34690,6 @@ body::after {
     row-gap: 3rem; }
     .all-reviews__cards_margin {
       margin-bottom: 18rem; }
-  .all-reviews__card .review-card__text-wrap {
-    margin-bottom: 0; }
   .all-reviews__page-navigation {
     -ms-flex-item-align: end;
         align-self: flex-end; }
