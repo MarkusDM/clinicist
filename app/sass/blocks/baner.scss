@@ -2448,6 +2448,7 @@
   &-error-404 {
     position: relative;
     overflow: hidden;
+    height: fit-content;
     margin-bottom: 0.2rem;
     .baner {
       &__inner {
@@ -5512,6 +5513,7 @@
           &__link {
             color: rgba(51, 51, 51, 0.5);
           }
+        }
 
         &__inner::after {
           top: 45rem;
@@ -5624,10 +5626,195 @@
         }
       }
     }
+    &-error-404 {
+      position: relative;
+      overflow: hidden;
+      height: fit-content;
+      margin-bottom: 0.2rem;
+      .baner {
+        &__inner {
+          display: block;
+          &::after {
+            width: 97.6rem;
+            height: 97.6rem;
+            top: unset;
+            bottom: -12rem;
+          }
+        }
+        &__content {
+          padding-top: 8.6rem;
+          width: 100%;
+          padding-bottom: 3rem;
+          margin: 0;
+          position: relative;
+          z-index: 5;
+          &-links {
+            margin-bottom: 1.3rem;
+            & .nolink {
+              font-family: 'MyriadPro';
+              font-weight: 600;
+              font-size: 2.5rem;
+              line-height: 100%;
+            }
+          }
+          &-title {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 5.5rem;
+            line-height: 100%;
+            letter-spacing: normal;
+            margin-bottom: 6rem;
+            & span {
+              display: block;
+              font-weight: 400;
+            }
+          }
+          &-btns {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8rem;
+            &-link {
+              display: inline-block;
+              padding: 2rem 19rem;
+              margin-right: 2.4rem;
+            }
+            &-search {
+              display: flex;
+              flex-wrap: wrap;
+              position: relative;
+              & div {
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                cursor: pointer;
+                & img {
+                  width: 4.2rem;
+                  height: 4.2rem;
+                }
+                &.active {
+                  display: flex;
+                  top: -10rem;
+                  right: 0;
+                  left: unset;
+                }
+              }
+              & label {
+                position: relative;
+                display: none;
+                margin-top: 4rem;
+                & input {
+                  height: 10rem;
+                  background-color: $white;
+                  outline: none;
+                  border: none;
+                  width: 65.2rem;
+                  border-radius: 14rem;
+                  font-family: 'MyriadPro';
+                  font-size: 3rem;
+                  line-height: normal;
+                  color: rgba(51, 51, 51, 0.5);
+                  border: 0.2rem solid #D8DDE4;
+                  padding-left: 5.4rem;
+                  &::placeholder {
+                    font-family: 'MyriadPro';
+                    font-size: 3rem;
+                    line-height: normal;
+                    color: rgba(51, 51, 51, 0.5);
+                  }
+                }
+                & button {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 2.8rem;
+                  & img {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    object-fit: contain;
+                  }
+                }
+              }
+            }
+          }
+          &-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-info {
+              width: 80%;
+              margin-top: 0;
+              margin-bottom: 47.4rem;
+              &-title {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 3.2rem;
+                line-height: 150%;
+                margin-bottom: 1.5rem;
+              }
+              &-text {
+                font-family: 'MyriadPro';
+                font-size: 3.2rem;
+                line-height: 150%;
+                color: rgba(51, 51, 51, 0.5);
+              }
+            }
+            &-items {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 100%;
+              gap: 2.4rem;
+            }
+            &-item {
+              width: 58.2rem;
+              padding: 2rem 4rem;
+              background-color: $white;
+              display: flex;
+              align-items: center;
+              &-img {
+                margin-right: 3.2rem;
+                width: 6.3rem;
+                height: 6.3rem;
+                box-shadow: 0px 1.36rem 2rem rgba(64, 185, 244, 0.1);
+                border-radius: 0.94rem;
+                & img {
+                  width: 3.2rem;
+                  height: 3.2rem;
+                }
+              }
+              &-title {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                width: 65%;
+              }
+            }
+          }
+        }
+        &__picture {
+          position: absolute;
+          right: -17rem;
+          bottom: 0rem;
+          width: 101rem;
+          height: 81rem;
+          & img {
+            position: relative;
+            z-index: 3;
+          }
+        }
+      }
+    }
   }
 }
 
-}
 
 .baner--search {
   margin-bottom: 10rem;

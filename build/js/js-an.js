@@ -2,6 +2,8 @@ const storyItems = Array.from(document.querySelectorAll('.story__item'));
 const storyBottoms = Array.from(document.querySelectorAll('.story__bottom'));
 const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
 const valuesSlides = Array.from(document.querySelectorAll('.values__right-slide'));
+const searchBtn = document.querySelector('.search-btn');
+const searchLabel = document.querySelector('.search__label');
 let tabIndex;
 storyItems.forEach( e => {
   e.addEventListener('mouseenter', () => {
@@ -11,6 +13,13 @@ storyItems.forEach( e => {
     e.childNodes[7].classList.remove('active');
   })
 })
+
+if(searchBtn) {
+  searchBtn.addEventListener('click', () => {
+    searchBtn.classList.add('active');
+    searchLabel.style.display = 'block';
+  })
+}
 
 valuesTabs.forEach(e => {
   e.addEventListener('click', () => {
@@ -25,7 +34,6 @@ valuesTabs.forEach(e => {
 })
 
 const historySlider = new Swiper('.story-swiper', {
-  freeMode: false,
   slidesPerView: 5,
   spaceBetween: rem(4),
   speed: 1000,
@@ -47,12 +55,27 @@ const doctorsSlider = new Swiper('.our-doctors__slider', {
 
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
+  historySlider.update();
   if (width < 768){
     historySlider.init(historySlider);
-    doctorsSlider.init(doctorsSlider);
+    historySlider.update();
+  } else if(width > 768) {
+    historySlider.update();
+    historySlider.destroy(false, false);
   }
-  historySlider.destroy(false, false);
-  doctorsSlider.destroy(false, false);
+})
+
+window.addEventListener('resize', () => {
+  const width = window.innerWidth;
+  historySlider.update();
+  if (width < 768){
+    historySlider.init(historySlider);
+    historySlider.update();
+  }
+   if(width > 768) {
+    historySlider.update();
+    historySlider.destroy(false, false);
+  }
 })
 
 const closeBtn = document.querySelector('.modal-licenzia__slider-close');
@@ -61,8 +84,6 @@ let index;
 closeBtn.addEventListener('click', () => {
   slider.classList.remove('active');
 })
-
-
 
 const aboutSlider = new Swiper('.about-swiper', {
   navigation: {
