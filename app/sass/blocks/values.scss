@@ -228,7 +228,7 @@
         background-color: #fff;
         box-shadow: 0rem 2rem 6rem rgba(124, 148, 159, 0.07);
         cursor: pointer;
-        &.swiper-slide-active {
+        &.active-tab {
           background-color: #EEF3F7;
         }
         &-icon {
@@ -266,6 +266,12 @@
     &__right {
       width: 71.9rem;
       &-slide {
+        position: absolute;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        &.active-slide {
+          opacity: 1;
+        }
         &-content {
           width: 100%;
           &-top {
@@ -302,6 +308,7 @@
 
 @media (max-width: 48em) {
   .about-values {
+    margin-bottom: 20rem;
     .values {
       &__inner {
         flex-direction: column;
@@ -346,6 +353,9 @@
             }
           }
         }
+      }
+      &-swiper__wrapper {
+        height: 100rem;
       }
       &__right {
         width: 100%;
