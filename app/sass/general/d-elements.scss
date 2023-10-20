@@ -66,3 +66,39 @@
 
 
 }
+
+@media (max-width: 48em) {  
+    .g-pagination {
+        width: 100%;
+
+        &__prev {
+            width: 8rem;
+            height: 8rem;
+            svg {
+                width: 1.2rem;
+                height: 2.4rem;
+            }
+        }
+
+        &__next {
+            width: 8rem;
+            height: 8rem;
+            svg {
+                width: 1.2rem;
+                height: 2.4rem;
+            }
+        }
+
+        &__numbers {
+            justify-content: space-between;
+            width: 100%;
+            a {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 2rem;
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+}

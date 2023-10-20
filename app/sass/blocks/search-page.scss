@@ -2,7 +2,7 @@
     margin-top: 12rem;
     margin-bottom: 18rem;
     .container {
-        width: 107.7rem;
+        width: 107rem;
     }
 
     &__search {
@@ -130,7 +130,7 @@
     }
 
     &__box-text {
-        padding-left: 3.3rem;
+        padding-left: 5.3rem;
         color:  rgba(51, 51, 51, 0.50);
         font-family: 'Montserrat';
         font-size: 1.8rem;
@@ -156,6 +156,19 @@
 
     &__search-down-lists {
        
+    }
+
+    &__error {
+        color:  #2F2F2F;
+        text-align: center;
+        font-family: 'Montserrat',sans-serif;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+        width: 58.6rem;
+        margin: 0 auto;
+        display: none;
     }
 
     &__search-down-lists-item {

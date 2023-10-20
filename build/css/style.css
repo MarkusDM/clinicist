@@ -7101,6 +7101,16 @@ input[type='search']::-webkit-search-results-decoration {
         top: -6rem;
         left: 52%; } }
 
+.baner--search {
+  margin-bottom: 10rem; }
+  .baner--search .baner__picture {
+    width: 70.9rem;
+    height: 43rem;
+    margin-right: 9.7rem;
+    position: relative;
+    margin-top: auto;
+    overflow: hidden; }
+
 .solution {
   margin-top: 20rem;
   margin-bottom: 18rem; }
@@ -28467,7 +28477,7 @@ textarea {
   margin-top: 12rem;
   margin-bottom: 18rem; }
   .search-page .container {
-    width: 107.7rem; }
+    width: 107rem; }
   .search-page__search {
     position: relative;
     margin-bottom: 5rem; }
@@ -28581,7 +28591,7 @@ textarea {
     .search-page__box-title a {
       color: #36B4F1; }
   .search-page__box-text {
-    padding-left: 3.3rem;
+    padding-left: 5.3rem;
     color: rgba(51, 51, 51, 0.5);
     font-family: 'Montserrat';
     font-size: 1.8rem;
@@ -28598,6 +28608,17 @@ textarea {
     width: 100%;
     padding-top: 2.7rem;
     padding-bottom: 2rem;
+    display: none; }
+  .search-page__error {
+    color: #2F2F2F;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    width: 58.6rem;
+    margin: 0 auto;
     display: none; }
   .search-page__search-down-lists-item {
     padding-left: 1.9rem;
@@ -28761,6 +28782,32 @@ textarea {
       color: #fff; }
     .g-pagination__numbers a:last-child {
       margin-right: 0; }
+
+@media (max-width: 48em) {
+  .g-pagination {
+    width: 100%; }
+    .g-pagination__prev {
+      width: 8rem;
+      height: 8rem; }
+      .g-pagination__prev svg {
+        width: 1.2rem;
+        height: 2.4rem; }
+    .g-pagination__next {
+      width: 8rem;
+      height: 8rem; }
+      .g-pagination__next svg {
+        width: 1.2rem;
+        height: 2.4rem; }
+    .g-pagination__numbers {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%; }
+      .g-pagination__numbers a {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 2rem;
+        font-size: 3.2rem; } }
 
 .superior {
   margin-bottom: 18rem; }
@@ -34431,6 +34478,8 @@ body::after {
 @media (max-width: 48em) {
   .services-p .container {
     padding: 0; }
+  .services-p .doctors__spoiler {
+    padding: 0 4rem; }
   .services-p__form {
     padding: 0 4rem; }
   .services-p__alphabet-btn {
@@ -34444,6 +34493,8 @@ body::after {
       height: 2rem;
       width: 2.2rem;
       right: -4rem; }
+  .services-p #search-form {
+    padding: 0 4rem; }
   .services-p__form-alphabet-inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -34907,7 +34958,9 @@ body::after {
       display: block;
       z-index: -1;
       position: absolute;
-      top: 0; }
+      top: 0;
+      width: 100%;
+      height: 100%; }
       .blue-banner__image-m img {
         width: 100%;
         height: 100%;
@@ -35171,13 +35224,13 @@ body::after {
       margin: 0 auto; }
     .recording-site__block-image {
       position: relative;
-      width: 80rem;
+      width: 68rem;
       height: 67rem;
       right: initial;
       -webkit-transform: initial;
               transform: initial;
       top: 18rem;
-      right: -3rem;
+      right: -4rem;
       margin-top: -10rem; }
     .recording-site__image {
       width: 57.3rem;
@@ -36520,6 +36573,29 @@ body::after {
       background-repeat: no-repeat;
       background-size: 100% 100%; }
 
+@media (max-width: 48em) {
+  .s-direction__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .s-direction__box {
+    width: 100%;
+    max-width: 100%;
+    height: 26rem;
+    margin-bottom: 4rem;
+    margin-right: 0; }
+  .s-direction__box-content {
+    height: 100%;
+    width: 57rem; }
+  .s-direction__box-block-image {
+    width: 20rem;
+    height: 20rem;
+    border: 0.4rem solid #36B4F1; }
+  .s-direction__box-title {
+    font-size: 3.2rem;
+    max-width: auto; } }
+
 .leave-contacts {
   background: #F8F8F8;
   margin-bottom: 18rem; }
@@ -36767,6 +36843,86 @@ body::after {
       background-image: url(../img/d-image/icon/galkagrey.svg);
       background-repeat: no-repeat;
       background-size: 100% 100%; }
+
+@media (max-width: 48em) {
+  .about-the-s__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .about-the-s__left {
+    width: 100%; }
+  .about-the-s__title {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.75%;
+    margin-bottom: 4rem; }
+  .about-the-s__sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 0.3rem solid #a0a1a4;
+    margin-bottom: 6rem; }
+  .about-the-s__sidebar::-webkit-scrollbar {
+    display: none; }
+  .about-the-s__item {
+    border: none;
+    height: auto;
+    padding: 0;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    margin-right: 4rem;
+    padding-bottom: 2rem; }
+    .about-the-s__item::before {
+      display: none; }
+  .about-the-s__item.active {
+    background: none;
+    font-weight: 400; }
+    .about-the-s__item.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2rem;
+      background: #36B4F1;
+      bottom: -0.15rem;
+      z-index: 2;
+      left: 0; }
+  .about-the-s__right {
+    width: 100%; }
+  .about-the-s__content h3 {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125.926%;
+    margin-bottom: 6rem; }
+  .about-the-s__content p {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 4rem; }
+  .about-the-s__content li {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; }
+    .about-the-s__content li::before {
+      width: 2rem;
+      height: 2.7rem; } }
 
 .patients-stocks {
   margin-bottom: 18rem; }

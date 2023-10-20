@@ -511,7 +511,9 @@
         .container {
             padding: 0;
         }
-
+        .doctors__spoiler {
+            padding: 0 4rem;
+        }
         &__form {
             padding: 0 4rem;
         }
@@ -526,6 +528,10 @@
                 right: -4rem;
             }
 
+        }
+
+        #search-form {
+            padding: 0 4rem;
         }
 
         &__form-alphabet-inner {

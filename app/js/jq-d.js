@@ -220,7 +220,7 @@ function initBoxDown() {
   if (window.innerWidth <= 768) {
     if (!initBox) {
       initBox = true;
-      $('.services-p__wrapper').each(function () {
+      $('.services-p__box').each(function () {
         let more = $(this).find('.services-p__box-inner');
         let hide = $(this).find('.services-p__box-down');
         hide.hide(0);
