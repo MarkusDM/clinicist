@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         btn.addEventListener('click', function() {
-          item.classList.toggle('_active')
+          // item.classList.toggle('_active')
           _slideToggle(showmore)
           setTimeout(() => {
             if (item.classList.contains('_active')) {
@@ -419,6 +419,9 @@ document.addEventListener('DOMContentLoaded', function () {
           })
         )
       }, duration)
+      document.addEventListener('slideUpDone', function(e) {
+        e.detail.target.parentElement.classList.remove('_active')
+      })
     }
   }
   function _slideDown(target, duration = 500, showmore = 0) {
@@ -456,6 +459,9 @@ document.addEventListener('DOMContentLoaded', function () {
           })
         )
       }, duration)
+      document.addEventListener('slideDownDone', function(e) {
+        e.detail.target.parentElement.classList.add('_active')
+      })
     }
   }
   function _slideToggle(target, duration = 500) {

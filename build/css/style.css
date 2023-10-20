@@ -30730,10 +30730,10 @@ textarea {
     .doctor-card__hours-more::after {
       -webkit-transform: rotate(90deg);
               transform: rotate(90deg);
-      -webkit-transition: -webkit-transform 0s ease 0.5s;
-      transition: -webkit-transform 0s ease 0.5s;
-      transition: transform 0s ease 0.5s;
-      transition: transform 0s ease 0.5s, -webkit-transform 0s ease 0.5s; }
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
     ._active .doctor-card__hours-more::after {
       -webkit-transform: rotate(-90deg);
               transform: rotate(-90deg); }

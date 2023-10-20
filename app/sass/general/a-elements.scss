@@ -880,7 +880,7 @@
     justify-self: center;
     &::after {
       transform: rotate(90deg);
-      transition: transform 0s ease 0.5s;
+      transition: transform 0.3s ease;
     }
     ._active & {
       &::after {
