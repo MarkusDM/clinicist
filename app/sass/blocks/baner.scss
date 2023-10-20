@@ -112,6 +112,10 @@
   }
   &-history {
     margin-bottom: 10rem;
+    & .baner__picture {
+      height: auto;
+      margin-top: -2rem;
+    }
   }
   &__container {
     display: grid;
@@ -4076,7 +4080,7 @@
         }
         &__content {
           width: 100%;
-          padding-top: 11rem;
+          padding-top: 5rem;
           margin-bottom: 5rem;
           &-links {
             margin-bottom: 9.3rem;
@@ -5102,7 +5106,6 @@
 }
 
 
-
 .baner--empty-services {
   height: 53.7rem;
 
@@ -5135,6 +5138,7 @@
       z-index: 2;
     }
   }
+
 }
 @media (max-width: 48em) {
   .baner {
@@ -5243,32 +5247,43 @@
       }
     }
     &-korporativnie {
-      margin-bottom: 12rem;
+      margin-bottom: 20rem;
+      .breadcrumbs{
+        margin-bottom: 7rem;
+        width: 69.4rem;
+        flex-wrap: nowrap;
+        &__link {
+        color: rgba(51, 51, 51, 0.5);
+        }
+        &__text {
+          white-space: nowrap; 
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
       .baner {
-        .breadcrumbs{
-          margin-bottom: 7rem;
-          &__link {
-          color: rgba(51, 51, 51, 0.5);
-          }
+        &__inner::after {
+          top: 45rem;
         }
         &__content {
-          width: 50%;
+          width: 100%;
           padding-top: 3rem;
           &-links {
             margin-bottom: 7.2rem;
           }
           &-title {
             line-height: 110%;
-            margin-bottom: 3.1rem;
+            margin-bottom: 4rem;
           }
           &-text {
-            width: 65%;
+            width: 100%;
           }
         }
         &__picture {
-          height: 43rem;
-          margin-right: 0;
-          width: 67rem;
+          height: 55.2rem;
+          margin-left: -5rem;
+          margin-top: -7rem;
+          width: 82.8rem;
           &::after {
             width: 73.7rem;
             height: 73.7rem;
@@ -5315,13 +5330,34 @@
     }
     &-kontrol-kachestva {
       margin-bottom: 12rem;
+      .breadcrumbs {
+        margin-bottom: 7rem;
+        width: 110%;
+        &__link {
+          color: rgba(51, 51, 51, 0.5);
+        }
+        &__text {
+          margin-left: -0.5rem;
+          font-size: 2.8rem;
+        }
+      }
       .baner {
+        &__inner::after {
+          width: 84.2rem;
+          height: 84.2rem;
+          top: 41rem;
+        }
         &__content {
+          width: 100%;
+          padding-top: 3rem;
           &-links {
             margin-bottom: 7.5rem;
           }
           &-title {
             line-height: 110%;
+          }
+          &-text {
+            color: #999;
           }
         }
         &__picture {
@@ -5335,11 +5371,9 @@
           }
         }
       }
-
     }
   }
 }
 
 
 /////////////////////////////////// t-styles ///////////////////////////////////////
-
