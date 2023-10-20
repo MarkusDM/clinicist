@@ -210,23 +210,35 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  // doctor card hours (set height)
-  const hoursItems = document.querySelectorAll('.doctor-card__hours')
-  const setHoursHeight = () => {
-    if (hoursItems.length) {
-      const gap = window.matchMedia('(max-width: 768px)').matches ? 4 : 12
-      const rows = window.matchMedia('(max-width: 768px)').matches ? 2 : 3
-      hoursItems.forEach(hoursItem => {
-          const parent = hoursItem.closest('[data-showmore-content]')
-          let height = hoursItem.offsetHeight - 1
-          hoursItem.style.marginBottom = `${4}px`
-          parent.dataset.showmoreContent = `${(height + 4) * 2}`
-          // parent.style.height = parent.dataset.showmoreContent + 'px'
-          // parent.style.overflow = 'hidden'
+  // hours
+  const hours = document.querySelectorAll('.doctor-card__hours-group')
+  const moveItems = (items, target) => {
+    items.forEach((item) => {
+      target.appendChild(item)
+    })
+  }
+  const initHoursItems = () => {
+    if (hours.length) {
+      hours.forEach(item => {
+        const btn = item.querySelector('[data-showmore-btn]')
+        const showmore = item.querySelector('[data-showmore-hours]')
+        const items = item.querySelectorAll('.doctor-card__hours._move')
+        const parent = item.querySelector('.doctor-card__hours-row_parent')
+
+        if (window.innerWidth <= 768) {
+          moveItems(items, showmore.querySelector('.doctor-card__hours-row'))
+        } else if (window.innerWidth > 768) {
+          moveItems(items, parent)
+        }
+
+        btn.addEventListener('click', function() {
+          item.classList.toggle('_active')
+          _slideToggle(showmore)
+        })
       })
     }
   }
-  setHoursHeight()
+  initHoursItems()
 
   // sort dropdown
   const sortDropdown = document.querySelector('.sort-dropdown')
@@ -2264,7 +2276,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initSliders()
     moveImage()
     allReviewsModify()
-    setTimeout(() => setHoursHeight, 1000)
+    initHoursItems()
   })
     const display = document.querySelector('#time');
     if (display) {
