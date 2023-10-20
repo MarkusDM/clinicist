@@ -5120,7 +5120,7 @@ input[type='search']::-webkit-search-results-decoration {
         width: 82.6rem;
         height: 85.5rem;
         top: -15rem;
-        left: 53%; }
+        left: 50%; }
   .baner-zapisatsa {
     margin-bottom: 10rem; }
     .baner-zapisatsa .baner__content-links {
@@ -35554,10 +35554,20 @@ body::after {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  .services-p-map .services-p__box {
-    width: 100%; }
-    .services-p-map .services-p__box-block-title {
-      margin-bottom: 0; }
+  .services-p-map {
+    margin-bottom: 12rem; }
+    .services-p-map .services-p__box {
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+      .services-p-map .services-p__box-block-title {
+        margin-bottom: 0; }
+      .services-p-map .services-p__box-down-title {
+        margin-bottom: 3rem;
+        margin-top: 6rem; }
+      .services-p-map .services-p__box-inner {
+        margin-bottom: 9.1rem; }
 
 @media (max-width: 48em) {
   .services-p .container {

@@ -501,13 +501,24 @@
     }
 
     &-map {
+        margin-bottom: 12rem;
         .services-p {
             &__box{
                 width: 100%;
+                height: fit-content;
                 &-block {
                     &-title {
                         margin-bottom: 0;
                     }
+                }
+                &-down {
+                    &-title {
+                        margin-bottom: 3rem;
+                        margin-top: 6rem;
+                    }
+                }
+                &-inner {
+                    margin-bottom: 9.1rem;
                 }
             }
         }
