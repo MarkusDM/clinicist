@@ -34688,6 +34688,8 @@ body::after {
     row-gap: 3rem; }
     .all-reviews__cards_margin {
       margin-bottom: 18rem; }
+  .all-reviews__card .review-card__text-wrap {
+    margin-bottom: 0; }
   .all-reviews__page-navigation {
     -ms-flex-item-align: end;
         align-self: flex-end; }
