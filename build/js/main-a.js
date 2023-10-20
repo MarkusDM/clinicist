@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
   // input mask
   $('.tel-mask').inputmask('+7 (999) 999-99-99', {
     clearMaskOnLostFocus: false,
@@ -1685,6 +1685,7 @@ window.addEventListener('load', function () {
 
   // showmore
   function showMore() {
+    window.addEventListener('load', function() {
       const showMoreBlocks = document.querySelectorAll('[data-showmore]')
       let showMoreBlocksRegular
       let mdQueriesArray
@@ -1819,6 +1820,8 @@ window.addEventListener('load', function () {
             : null
         }
       }
+
+    })
   }
   showMore()
 
@@ -2261,9 +2264,7 @@ window.addEventListener('load', function () {
     initSliders()
     moveImage()
     allReviewsModify()
-    setTimeout(() => {
-      setHoursHeight()
-    }, 1000)
+    setHoursHeight()
   })
     const display = document.querySelector('#time');
     if (display) {
