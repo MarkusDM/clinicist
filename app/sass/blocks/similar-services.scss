@@ -160,3 +160,119 @@
    }
 
 }
+
+
+@media (max-width: 48em) {
+    .similar-services {
+        &__title {
+            margin-bottom: 6.4rem;
+           span {
+            display: block;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 1rem;
+           }
+
+           strong {
+            display: block;
+            font-size: 5.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125.926%;
+           }
+    
+            
+        }
+
+        &__inner {
+            flex-direction: column-reverse;
+        }
+
+        &__pagination {
+            position: relative;
+            width: 100%;
+            margin-bottom: 6.2rem;
+        }
+
+        &__pagination-bullets {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__arrows {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            
+        }
+
+        &__pagination {
+            .swiper-pagination-bullet {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 2rem;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            width: 100%;
+
+
+        }
+
+        &__box {
+            width: 100%;
+            height: 72.8rem;
+        }
+
+        &__box-content {
+            height: 60.6rem;
+            padding-top: 17.6rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            padding-bottom: 4rem;
+        }
+        
+        &__box-image-block {
+            width: 24.4rem;
+            height: 24.4rem;
+            border: 0.4rem solid #36B4F1;
+        }
+
+        &__box-image {
+            width: 22rem;
+            height: 22rem;
+            
+        }
+
+        &__box-title {
+            font-size: 3.6rem;
+            margin-bottom: 3.2rem;
+        }
+
+        &__box-text {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        &__box-link {
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 600;
+            &::after {
+                width: 2rem;
+                height: 2.4rem;
+            }
+        }
+
+      
+    }
+}
