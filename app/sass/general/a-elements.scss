@@ -3083,6 +3083,8 @@ line-height: 127.273%;
       &:first-child {
         &::after {
           display: inline-block;
+          flex: 0 0 auto;
+          background-image: none;
         }
       }
       &:last-child {
@@ -3103,7 +3105,7 @@ line-height: 127.273%;
       &::after {
         position: absolute;
         right: auto;
-        left: 0;
+        left: 1px;
         display: none;
         background-image: none;
       }

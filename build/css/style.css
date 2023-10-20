@@ -32750,7 +32750,11 @@ textarea {
       width: auto;
       height: 20rem; }
       .navigation-block__tab:first-child::after {
-        display: inline-block; }
+        display: inline-block;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        background-image: none; }
       .navigation-block__tab:last-child::before {
         display: inline-block; }
       .navigation-block__tab::before, .navigation-block__tab::after {
@@ -32765,7 +32769,7 @@ textarea {
       .navigation-block__tab::after {
         position: absolute;
         right: auto;
-        left: 0;
+        left: 1px;
         display: none;
         background-image: none; }
     .navigation-block__tab-title {
