@@ -500,7 +500,18 @@
         justify-content: space-between;
     }
 
-  
+    &-map {
+        .services-p {
+            &__box{
+                width: 100%;
+                &-block {
+                    &-title {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

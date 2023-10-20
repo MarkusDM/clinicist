@@ -4900,8 +4900,6 @@ input[type='search']::-webkit-search-results-decoration {
             font-size: 1.8rem;
             line-height: 144%;
             width: 63%; }
-          .baner-error-404 .baner__content-bottom-item:hover {
-            background: #eef3f7; }
     .baner-error-404 .baner__picture {
       position: absolute;
       right: 6.5rem;
@@ -35319,6 +35317,10 @@ body::after {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .services-p-map .services-p__box {
+    width: 100%; }
+    .services-p-map .services-p__box-block-title {
+      margin-bottom: 0; }
 
 @media (max-width: 48em) {
   .services-p .container {
