@@ -75,6 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 25,
         slidesPerView: 1,
         speed: 1000,
+       
+
         autoHeight: true,
         navigation: {
           nextEl: '.offers__slider-control .btn-next',
@@ -126,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function () {
           spaceBetween: 40,
           slidesPerView: 1,
           speed: 1000,
+         
+
           autoHeight: true,
           navigation: {
             nextEl: '.our-doctors__slider-control .btn-next',
@@ -140,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function () {
         ourDoctorsSlider = new Swiper('.our-doctors__slider', {
           spaceBetween: 40,
           slidesPerView: 3,
+          observer: true,
+          observeParents: true,
           speed: 1000,
           autoHeight: false,
           navigation: {
