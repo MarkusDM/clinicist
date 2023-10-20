@@ -7097,6 +7097,47 @@ input[type='search']::-webkit-search-results-decoration {
     height: 55.7rem;
     border: 1px solid #d8dde4; }
 
+@media (max-width: 48em) {
+  .baner--s-parent {
+    height: auto;
+    padding-bottom: 52rem; }
+    .baner--s-parent .container {
+      padding: 0; }
+    .baner--s-parent .baner__content {
+      width: 100%; }
+    .baner--s-parent .baner__inner {
+      padding: 0;
+      position: initial; }
+      .baner--s-parent .baner__inner::after {
+        width: 60rem;
+        height: 60rem;
+        top: 74rem;
+        left: 27%; }
+    .baner--s-parent .baner__content-links {
+      padding-left: 4rem;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+    .baner--s-parent .baner__picture {
+      position: absolute;
+      bottom: 0;
+      width: 71.6rem;
+      height: 49rem; }
+    .baner--s-parent .baner__content-title {
+      padding-left: 4rem;
+      margin-bottom: 4rem; }
+    .baner--s-parent .baner__content-text {
+      margin-left: 4rem; }
+    .baner--s-parent .baner__price-d {
+      padding-left: 4rem;
+      margin-bottom: 4rem; }
+      .baner--s-parent .baner__price-d span {
+        font-size: 3.6rem;
+        margin-right: 0.8rem; }
+      .baner--s-parent .baner__price-d strong {
+        font-size: 4.8rem;
+        line-height: 5rem;
+        padding-right: 3rem; } }
+
 .baner--empty-services {
   height: 53.7rem; }
   .baner--empty-services .baner__content {
@@ -38983,6 +39024,99 @@ body::after {
       font-style: normal;
       font-weight: 400;
       line-height: 130%; }
+  .sl-reviews__btn {
+    display: none; }
+
+@media (max-width: 48em) {
+  .sl-reviews__title {
+    margin-bottom: 6.4rem; }
+    .sl-reviews__title span {
+      display: block;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 1rem; }
+    .sl-reviews__title strong {
+      display: block;
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+    .sl-reviews__title .btn {
+      display: none; }
+  .sl-reviews__pagination {
+    position: relative; }
+  .sl-reviews__pagination-bullets {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .sl-reviews__arrows {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .sl-reviews__pagination .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem; }
+  .sl-reviews__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .sl-reviews__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 16rem; }
+  .sl-reviews__box {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 8rem; }
+  .sl-reviews__box:last-child {
+    margin-bottom: 0; }
+  .sl-reviews__box-icon {
+    margin-right: 0;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2rem; }
+    .sl-reviews__box-icon svg {
+      width: 20rem;
+      height: 20rem; }
+  .sl-reviews__box-inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .sl-reviews__box-inner strong {
+      font-size: 3.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 155.556%; }
+    .sl-reviews__box-inner span {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-align: center; } }
 
 .similar-services {
   margin-bottom: 18rem; }
@@ -39145,6 +39279,86 @@ body::after {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+
+@media (max-width: 48em) {
+  .similar-services__title {
+    margin-bottom: 6.4rem; }
+    .similar-services__title span {
+      display: block;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 1rem; }
+    .similar-services__title strong {
+      display: block;
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+  .similar-services__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .similar-services__pagination {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6.2rem; }
+  .similar-services__pagination-bullets {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .similar-services__arrows {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .similar-services__pagination .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem; }
+  .similar-services__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .similar-services__box {
+    width: 100%;
+    height: 72.8rem; }
+  .similar-services__box-content {
+    height: 60.6rem;
+    padding-top: 17.6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem; }
+  .similar-services__box-image-block {
+    width: 24.4rem;
+    height: 24.4rem;
+    border: 0.4rem solid #36B4F1; }
+  .similar-services__box-image {
+    width: 22rem;
+    height: 22rem; }
+  .similar-services__box-title {
+    font-size: 3.6rem;
+    margin-bottom: 3.2rem; }
+  .similar-services__box-text {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; }
+  .similar-services__box-link {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600; }
+    .similar-services__box-link::after {
+      width: 2rem;
+      height: 2.4rem; } }
 
 .d-services {
   margin-bottom: 18rem;

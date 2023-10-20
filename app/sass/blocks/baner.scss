@@ -5350,6 +5350,75 @@
 }
 
 
+@media (max-width: 48em) {
+  .baner--s-parent {
+    height: auto;
+    padding-bottom: 52rem;
+
+    .container {
+      padding: 0;
+    }
+
+    .baner__content {
+      width: 100%;
+    }
+
+    .baner__inner {
+      padding: 0;
+      position: initial;
+      &::after {
+       
+        width: 60rem;
+        height: 60rem;
+        top: 74rem;
+        left: 27%;
+      }
+    }
+
+    .baner__content-links {
+      padding-left: 4rem;
+      flex-wrap: wrap;
+    }
+
+
+    .baner__picture {
+      position: absolute;
+      bottom:0;
+      width: 71.6rem;
+      height: 49rem;
+     
+    }
+
+    .baner__content-title {
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .baner__content-text {
+      margin-left: 4rem;
+    }
+
+
+    .baner__price-d {
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+
+      span {
+        font-size: 3.6rem;
+        margin-right: 0.8rem;
+      }
+
+      strong {
+        font-size: 4.8rem;
+        line-height: 5rem;
+        padding-right: 3rem;
+      }
+    }
+  }
+
+}
+
+
 .baner--empty-services {
   height: 53.7rem;
 
