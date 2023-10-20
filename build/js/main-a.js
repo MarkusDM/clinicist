@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   // input mask
   $('.tel-mask').inputmask('+7 (999) 999-99-99', {
     clearMaskOnLostFocus: false,
@@ -222,8 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
           hoursItem.style.marginBottom = `${gap}px`
           parent.dataset.showmoreContent = `${(height + gap) * rows}`
           parent.style.height = parent.dataset.showmoreContent + 'px'
-          console.log(height, gap, rows)
-          console.log((hoursItem.getBoundingClientRect().height + gap) * rows)
+          parent.style.overflow = 'hidden'
       })
     }
   }
@@ -1686,7 +1685,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // showmore
   function showMore() {
-    window.addEventListener('load', function (e) {
       const showMoreBlocks = document.querySelectorAll('[data-showmore]')
       let showMoreBlocksRegular
       let mdQueriesArray
@@ -1821,7 +1819,6 @@ document.addEventListener('DOMContentLoaded', function () {
             : null
         }
       }
-    })
   }
   showMore()
 
@@ -2268,10 +2265,8 @@ document.addEventListener('DOMContentLoaded', function () {
       setHoursHeight()
     }, 1000)
   })
-  window.addEventListener('load', function() {
     const display = document.querySelector('#time');
     if (display) {
       startTimer(72, display);
     }
-  })
 })
