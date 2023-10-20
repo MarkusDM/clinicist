@@ -221,8 +221,8 @@ document.addEventListener('DOMContentLoaded', function () {
           let height = hoursItem.offsetHeight - 1
           hoursItem.style.marginBottom = `${gap}px`
           parent.dataset.showmoreContent = `${(height + gap) * rows}`
-          parent.style.height = parent.dataset.showmoreContent + 'px'
-          parent.style.overflow = 'hidden'
+          // parent.style.height = parent.dataset.showmoreContent + 'px'
+          // parent.style.overflow = 'hidden'
       })
     }
   }
@@ -2264,7 +2264,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initSliders()
     moveImage()
     allReviewsModify()
-    setHoursHeight()
+    setTimeout(() => setHoursHeight, 1000)
   })
     const display = document.querySelector('#time');
     if (display) {
