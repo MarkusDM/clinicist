@@ -107,12 +107,17 @@
 @import './blocks/d-services-prices';
 @import './blocks/empty-services';
 
+@import './general/dim-elements.scss';
 @import './blocks/subscribe-block.scss';
 @import './blocks/news.scss';
 @import './blocks/news-article.scss';
 @import './blocks/news-other.scss';
 @import './blocks/socials.scss';
 @import './blocks/news-descs.scss';
+@import './blocks/blog-card.scss';
+@import './blocks/rec-materials.scss';
+@import './blocks/blog-cards.scss';
+@import './blocks/blog-search.scss';
 
 #ui-datepicker-div {
   display: block !important;
