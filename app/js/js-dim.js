@@ -28,4 +28,21 @@ $( document ).ready(function() {
         clickable: true,
       },
     })
+
+		const blogArticleSlidder = new Swiper('.blog-desc__desc-slider', {
+      spaceBetween: rem(1),
+      loop: false,
+      autoplay: {
+        delay: 4000,
+      },
+      speed: 1000,
+      navigation: {
+        nextEl: '.blog-desc__desc-slider .btn-next',
+        prevEl: '.blog-desc__desc-slider .btn-prev',
+      },
+      pagination: {
+        el: '.blog-desc__desc-slider .swiper-pagination',
+        clickable: true,
+      },
+    })
 })
