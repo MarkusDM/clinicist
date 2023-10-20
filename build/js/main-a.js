@@ -2207,10 +2207,10 @@ document.addEventListener('DOMContentLoaded', function () {
       )
     }
     if (target.closest('.hours-item')) {
-      const targetParent = target.closest('.hours-item').parentElement
+      const targetParent = target.closest('.hours-item')
       setActiveClass(
         target.closest('.hours-item'),
-        targetParent.querySelectorAll('.hours-item'),
+        targetParent.closest('.doctor-card__hours-group').querySelectorAll('.hours-item'),
         '_active'
       )
     }
