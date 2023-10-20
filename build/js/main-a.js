@@ -298,6 +298,54 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   moveImage()
 
+  // show more text
+  const toggleText = () => {
+    const showmoreTextElements = document.querySelectorAll('[data-showmore-text]')
+
+    if (showmoreTextElements.length) {
+      showmoreTextElements.forEach(item => {
+        const points = item.querySelector('[data-points]')
+        const showmoreText = item.querySelector('[data-more-text]')
+        const buttonText = item.querySelector('[data-showmore-txt-btn]')
+        const response = item.querySelector('.review-card__response')
+
+        buttonText.addEventListener('click', function() {
+          if (points.style.display === "none") {
+            showmoreText.style.display = "none";
+            points.style.display = "inline";
+            buttonText.innerHTML = "Весь отзыв";
+            buttonText.classList.remove('_active')
+            if (md) {
+              response.style.display = 'none'
+            }
+          }
+          else {
+              showmoreText.style.display = "inline";
+              points.style.display = "none";
+              buttonText.innerHTML = "Свернуть отзыв";
+              buttonText.classList.add('_active')
+              if (md) {
+                response.style.display = 'flex'
+              }
+          }
+        })
+      })
+    }
+  }
+  toggleText()
+
+  // move elements (all reviews cards)
+  const allReviewsModify = () => {
+    const allReviewsCards = document.querySelectorAll('.all-reviews-card')
+    if (allReviewsCards.length && md) {
+      allReviewsCards.forEach(allReviewsCard => {
+        allReviewsCard.querySelector('.all-reviews-card__body').appendChild(allReviewsCard.querySelector('.review-card__heading-wrap'))
+        allReviewsCard.querySelector('.all-reviews-card__body').appendChild(allReviewsCard.querySelector('.all-reviews-card__info'))
+      })
+    }
+  }
+  allReviewsModify()
+
   // ===========================================================================
 
   // smooth behaviour
@@ -2166,6 +2214,14 @@ document.addEventListener('DOMContentLoaded', function () {
         '_active'
       )
     }
+      if (target.closest('.review-card__show_response')) {
+        target.closest('.review-card__show_response').parentElement.nextElementSibling.style.display = 'flex'
+        target.closest('.review-card__text-wrap').classList.add('_active')
+      }
+      if (target.closest('.review-card__hide')) {
+        target.closest('.review-card__hide').parentElement.parentElement.style.display = 'none'
+        target.closest('.review-card__text-wrap').classList.remove('_active')
+      }
   }
 
   // ===========================================================================
@@ -2175,6 +2231,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initSliders()
     setHoursHeight()
     moveImage()
+    allReviewsModify()
   })
   window.addEventListener('load', function() {
     const display = document.querySelector('#time');
