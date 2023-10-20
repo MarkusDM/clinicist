@@ -2264,7 +2264,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initSliders()
     moveImage()
     allReviewsModify()
-    setTimeout(() => setHoursHeight, 1000)
+    // setTimeout(() => setHoursHeight, 1000)
   })
     const display = document.querySelector('#time');
     if (display) {
