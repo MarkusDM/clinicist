@@ -7,6 +7,11 @@ $( document ).ready(function() {
       $(this).toggleClass('active')
     })
 
+    $('.js-toggle').on('click', function () {
+      $('.js-toggle').removeClass('active')
+      $(this).toggleClass('active')
+    })
+
     const newsArticleSlidder = new Swiper('.news-descs__desc-slider', {
       spaceBetween: rem(1),
       loop: false,
