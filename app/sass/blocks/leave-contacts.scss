@@ -22,6 +22,10 @@
         margin-bottom: 3.2rem;
     }
 
+    &__image-m {
+      display: none;
+    }
+
     &__circle {
         width: 30.2rem;
         height: 30.2rem;
@@ -180,6 +184,10 @@
 
 				&__form-label {
 					height: 5rem;
+
+          .btn {
+            display: none;
+          }
 				}
 
         &__left {
@@ -244,3 +252,115 @@
       }
     }
 }
+
+
+@media (max-width: 48em)  {
+
+  .leave-contacts  {
+
+    .container {
+      padding: 0;
+    }
+      &__wrapper {
+        flex-direction: column;
+      }
+
+      &__left {
+        padding: 6rem 4rem;
+      }
+
+      &__title {
+        font-size: 5.4rem;
+        max-width: 67rem;
+        text-align: left;
+        margin-bottom: 3.6rem;
+      }
+
+      &__inner {
+         justify-content: space-between;
+      }
+
+      &__text {
+        font-size: 3.2rem;
+      }
+
+      &__bonus {
+        font-size: 3.2rem;
+        padding: 0.8rem 3rem;
+        font-weight: 600;
+      }
+
+      &__circle {
+        left: 25rem;
+        width: 28rem;
+        height: 28rem;
+      }
+
+      &__image {
+        width: 100%;
+        height: 38.4rem;
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &__right {
+        padding: 6rem 4rem;
+      }
+
+      &__form-title {
+        font-size: 5.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125.926%; 
+        margin-bottom: 6rem;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      &__form-label {
+        margin-bottom: 3rem;
+        &::before {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+        input {
+          width: 66.9rem;
+          font-size: 2.6rem;
+        }
+        height: 8rem;
+        .btn {
+         display: flex;
+         position: absolute;
+         top: 0;
+        height: 8rem;
+        right: 0;
+        }
+      }
+
+      &__image-m {
+        display: block;
+      }
+
+      &__image-d {
+        display: none;
+      }
+
+      &__form-policy {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        max-width: 100%;
+        br {
+          display: none;
+        }
+      }
+
+     
+  }
+ 
+
+ }
