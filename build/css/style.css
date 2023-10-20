@@ -30730,6 +30730,8 @@ textarea {
   .doctor-card__hours-more {
     justify-self: center; }
     .doctor-card__hours-more.link::after, .doctor-card__hours-more.alphabet-filter__title::after {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
       -webkit-transition: -webkit-transform 0.3s ease;
       transition: -webkit-transform 0.3s ease;
       transition: transform 0.3s ease;

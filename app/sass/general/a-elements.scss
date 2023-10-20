@@ -879,6 +879,7 @@
     justify-self: center;
     &.link {
       &::after {
+        transform: rotate(90deg);
         transition: transform 0.3s ease;
         ._showmore-active & {
           transform: rotate(-90deg);
