@@ -4,7 +4,7 @@
   gap: 1.6rem;
   margin-bottom: 6.8rem;
   .title {
-    font-family: Myriad Pro;
+    font-family: MyriadPro;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
@@ -31,6 +31,25 @@
     .subtitle {
       font-size: 5.4rem;
     }
+  }
+}
+
+.component--line-with-text {
+  font-family: MyriadPro;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: rgba(51, 51, 51, 0.5);
+  padding: 0 0 0.8rem 3rem;
+  border-left: 1px solid #d8dde4;
+}
+
+@media (max-width: 48em) {
+  .component--line-with-text {
+    font-size: 3.2rem;
+    line-height: 150%;
+    padding: 0 0 0 2rem;
   }
 }
 
@@ -61,6 +80,7 @@
     border-radius: 50%;
     background-color: #36b4f1;
     border: 0.3rem solid #eef3f7;
+    flex: none;
   }
   .text {
     font-size: 1.8rem;
@@ -107,6 +127,7 @@
   line-height: 122%;
   color: #36b4f1;
   position: relative;
+  cursor: pointer;
   &::after {
     content: '';
     flex: 0 0 1rem;
@@ -228,6 +249,325 @@
         height: 1.4rem;
         top: 2rem;
         transform: translateY(-0%);
+      }
+    }
+  }
+}
+
+.component--call-us {
+  padding: 4rem;
+  padding-bottom: 0;
+  width: 45.3rem;
+  height: 53.8rem;
+  position: relative;
+  background: linear-gradient(180deg, #5fcbff 0%, #36b4f1 100%);
+  .content {
+    height: 100%;
+    overflow: hidden;
+  }
+  .text,
+  .title {
+    color: #fff;
+  }
+  .text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 2.3rem;
+  }
+  .title {
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  .image {
+    width: 36.2rem;
+  }
+  .phone-box {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+    border-radius: 3.5rem;
+    box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    &-text {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: rgba(51, 51, 51, 0.5);
+      white-space: nowrap;
+      & > span {
+        color: #36b4f1;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .component--call-us {
+    padding: 6rem 4rem;
+    padding-bottom: 0;
+    width: 67rem;
+    height: 102.4rem;
+    .text {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+    }
+    .title {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+    .image {
+      width: 60.4rem;
+    }
+    .phone-box {
+      padding: 2.6rem 8.6rem;
+      border-radius: 7rem;
+      &-text {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
+.component--our-vacancies {
+  width: 45.3rem;
+  height: 44rem;
+  padding: 4rem;
+  background-color: #eef3f7;
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .title {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: #2f2f2f;
+    margin-bottom: 2rem;
+  }
+  .text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5);
+  }
+  .address-box {
+    display: flex;
+    gap: 2rem;
+    .address {
+      &-icon {
+        width: 4.6rem;
+        height: 4.6rem;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 2.5rem 6rem 0px rgba(124, 148, 159, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > svg {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+      &-value {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        p {
+          &:nth-child(1) {
+            font-family: Montserrat;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            color: rgba(51, 51, 51, 0.5);
+          }
+          &:nth-child(2) {
+            font-family: MyriadPro;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: #36b4f1;
+          }
+        }
+      }
+    }
+  }
+  .button {
+    width: 100%;
+    text-align: center;
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 1.7rem 4.8rem;
+    border-radius: 10rem;
+    background-color: #36b4f1;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .component--our-vacancies {
+    width: 67rem;
+    height: 72rem;
+    padding: 6.4rem 4rem;
+    .title {
+      font-size: 3.6rem;
+      margin-bottom: 2.4rem;
+    }
+    .text {
+      font-size: 2.6rem;
+      line-height: 120%;
+    }
+    .address-box {
+      gap: 2.4rem;
+      .address {
+        &-icon {
+          width: 8.4rem;
+          height: 8.4rem;
+          & > svg {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+        &-value {
+          p {
+            &:nth-child(1) {
+              font-size: 2.6rem;
+            }
+            &:nth-child(2) {
+              font-size: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+    .button {
+      font-size: 3rem;
+      padding: 3rem 4rem;
+      border-radius: 11rem;
+      margin-top: 6rem;
+    }
+  }
+}
+
+.component--grey-btn {
+  width: 100%;
+  background-color: #eef3f7;
+  border-radius: 10rem;
+  padding: 1.7rem 4.8rem;
+  font-family: MyriadPro;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: #36b4f1;
+  text-align: center;
+}
+
+@media (max-width: 48em) {
+  .component--grey-btn {
+    padding: 2rem 8rem;
+    font-size: 3.2rem;
+    line-height: 150%;
+    border-radius: 20rem;
+  }
+}
+
+.component--cards {
+  width: 33rem;
+  height: 21.2rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  background-image: url(../img/t-image/cards-background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .title {
+    width: 12.5rem;
+    margin-bottom: 3.6rem;
+  }
+  .price {
+    p {
+      &:nth-child(1) {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 3.6rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      &:nth-child(2) {
+        color: #fff;
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+  .decoration-shadow {
+    &-right {
+      position: absolute;
+      top: 6rem;
+      right: 1rem;
+      z-index: -1;
+      & > svg {
+        width: 17rem;
+        height: 17rem;
+      }
+    }
+    &-left {
+      position: absolute;
+      top: 6rem;
+      left: 1rem;
+      z-index: -1;
+      & > svg {
+        width: 17rem;
+        height: 17rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .component--cards {
+    width: 44.4rem;
+    height: 28.4rem;
+    padding: 5.2rem;
+
+    .title {
+      width: 16.8rem;
+      margin-bottom: 4.8rem;
+    }
+    .price {
+      p {
+        &:nth-child(1) {
+          font-size: 4.8rem;
+        }
+        &:nth-child(2) {
+          font-size: 2.6rem;
+        }
       }
     }
   }

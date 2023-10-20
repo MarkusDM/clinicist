@@ -1,0 +1,121 @@
+.cards-stocks {
+  margin-bottom: 18.5rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    .content {
+      &-bottom {
+        display: flex;
+        gap: 4rem;
+        &--right {
+          display: flex;
+          flex-direction: column;
+          gap: 4.8rem;
+        }
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    gap: 4rem;
+  }
+  &__image {
+    width: 70rem;
+  }
+  &__title {
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    color: #2f2f2f;
+    margin-bottom: 4rem;
+  }
+  &__text {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5);
+  }
+  &__panels {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 4rem 3rem 3rem;
+    box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    .panel {
+      &-icon {
+        & > svg {
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+      }
+      &-text {
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: #2f2f2f;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .cards-stocks {
+    &__content {
+      gap: 6rem;
+      .content {
+        &-top {
+          overflow: hidden;
+        }
+        &-bottom {
+          flex-direction: column;
+          gap: 4rem;
+          &--right {
+            gap: 6.4rem;
+          }
+        }
+      }
+    }
+    &__cards {
+      overflow-x: auto;
+    }
+    &__image {
+      width: 71rem;
+    }
+    &__title {
+      font-size: 3.6rem;
+      margin-bottom: 4rem;
+    }
+    &__text {
+      font-size: 3.2rem;
+    }
+    &__panels {
+      gap: 3.2rem;
+    }
+    &__panel {
+      padding: 3rem 8rem 3rem 4rem;
+      .panel {
+        &-icon {
+          & > svg {
+            width: 4.8rem;
+            height: 4.8rem;
+          }
+        }
+        &-text {
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+}
