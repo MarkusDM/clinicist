@@ -4,19 +4,33 @@ document.addEventListener('DOMContentLoaded', function () {
     clearMaskOnLostFocus: false,
   })
 
-  // rating set
-  // $('.my-rating').starRating({
-  //   starSize: 40,
-  //   initialRating: 5,
-  //   emptyColor: '#ffffff',
-  //   hoverColor: '#fe7200',
-  //   activeColor: '#fe7200',
-  //   ratedColor: '#fe7200',
-  //   useGradient: false,
-  //   strokeWidth: 20,
-  //   strokeColor: '#fe7200',
-  //   starShape: 'straight',
-  // })
+  // is mobile
+  let isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i)
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i)
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i)
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i)
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i)
+    },
+    any: function () {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      )
+    },
+  }
 
   const md = window.matchMedia('(max-width: 768px)').matches
 
@@ -200,13 +214,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const hoursItems = document.querySelectorAll('.doctor-card__hours')
   const setHoursHeight = () => {
     if (hoursItems.length) {
-      const gap = md ? 4 : 12
-      const rows = md ? 2 : 3
+      const gap = window.matchMedia('(max-width: 768px)').matches ? 4 : 12
+      const rows = window.matchMedia('(max-width: 768px)').matches ? 2 : 3
       hoursItems.forEach(hoursItem => {
-        const parent = hoursItem.closest('[data-showmore-content]')
-        const height = hoursItem.offsetHeight - 1
-        hoursItem.style.marginBottom = `${gap}px`
-        parent.dataset.showmoreContent = `${(height + gap) * rows}`
+          const parent = hoursItem.closest('[data-showmore-content]')
+          let height = hoursItem.offsetHeight - 1
+          hoursItem.style.marginBottom = `${gap}px`
+          parent.dataset.showmoreContent = `${(height + gap) * rows}`
+          parent.style.height = parent.dataset.showmoreContent + 'px'
+          console.log(height, gap, rows)
+          console.log((hoursItem.getBoundingClientRect().height + gap) * rows)
       })
     }
   }
@@ -2214,14 +2231,30 @@ document.addEventListener('DOMContentLoaded', function () {
         '_active'
       )
     }
-      if (target.closest('.review-card__show_response')) {
-        target.closest('.review-card__show_response').parentElement.nextElementSibling.style.display = 'flex'
-        target.closest('.review-card__text-wrap').classList.add('_active')
+    if (target.closest('.review-card__show_response')) {
+      target.closest('.review-card__show_response').parentElement.nextElementSibling.style.display = 'flex'
+      target.closest('.review-card__text-wrap').classList.add('_active')
+    }
+    if (target.closest('.review-card__hide')) {
+      target.closest('.review-card__hide').parentElement.parentElement.style.display = 'none'
+      target.closest('.review-card__text-wrap').classList.remove('_active')
+    }
+    if (target.closest('[data-showmore-items-btn]')) {
+      const btn = target.closest('[data-showmore-items-btn]')
+      const parent = btn.previousElementSibling
+
+      if (!parent.classList.contains('_active')) {
+        _slideDown(parent)
+        parent.classList.add('_active')
+        btn.classList.add('_active')
+        btn.innerHTML = 'Скрыть'
+      } else {
+        _slideUp(parent)
+        parent.classList.remove('_active')
+        btn.classList.remove('_active')
+        btn.innerHTML = 'Загрузить еще'
       }
-      if (target.closest('.review-card__hide')) {
-        target.closest('.review-card__hide').parentElement.parentElement.style.display = 'none'
-        target.closest('.review-card__text-wrap').classList.remove('_active')
-      }
+    }
   }
 
   // ===========================================================================
@@ -2229,12 +2262,16 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', onClickHandler)
   window.addEventListener('resize', function () {
     initSliders()
-    setHoursHeight()
     moveImage()
     allReviewsModify()
+    setTimeout(() => {
+      setHoursHeight()
+    }, 1000)
   })
   window.addEventListener('load', function() {
     const display = document.querySelector('#time');
-    startTimer(72, display);
+    if (display) {
+      startTimer(72, display);
+    }
   })
 })

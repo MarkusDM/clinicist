@@ -286,7 +286,13 @@ input[type='number'] {
   border-radius: 10rem;
   padding: 1rem 4rem;
   text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer; }
+  @media (any-hover: hover) {
+    .btn:hover {
+      color: #ffffff;
+      background-color: #9AD9F8; } }
   .btn_white {
     background-color: #ffffff;
     border: 1px solid #d8dde4;
@@ -295,6 +301,11 @@ input[type='number'] {
     background-color: #ffffff;
     border: 1px solid #36b4f1;
     color: #2F2F2F; }
+  @media (any-hover: hover) {
+    .btn_white:hover, .btn_outlined:hover {
+      border: 1px solid #EEF3F7;
+      background-color: #EEF3F7;
+      color: #919395; } }
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -16312,7 +16323,6 @@ input[type='search']::-webkit-search-results-decoration {
   .price-list__services-group {
     margin-bottom: 4rem;
     display: grid;
-    grid-auto-rows: 1fr;
     row-gap: 2.9rem; }
   .price-list__page-navigation {
     -ms-flex-item-align: end;
@@ -16459,8 +16469,9 @@ input[type='search']::-webkit-search-results-decoration {
   .services-price-list__heading {
     margin-bottom: 3.2rem;
     font-weight: 400; }
-  .services-price-list__group {
-    margin-bottom: 4rem;
+  .services-price-list__group:not(.services-price-list__group_hidden) {
+    margin-bottom: 0.4rem; }
+  .services-price-list__group:not(.services-price-list__group_hidden), .services-price-list__group._active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16470,11 +16481,19 @@ input[type='search']::-webkit-search-results-decoration {
             flex-direction: column;
     row-gap: 0.4rem; }
   .services-price-list__link {
+    margin-top: 4rem;
     -ms-flex-item-align: center;
         align-self: center; }
+    .services-price-list__link._active::after {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
     .services-price-list__link::after {
       -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
+              transform: rotate(90deg);
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
 
 @media (max-width: 48em) {
   .price-list__head {
@@ -16544,19 +16563,19 @@ input[type='search']::-webkit-search-results-decoration {
       font-weight: 600;
       font-size: 3.6rem; }
     .price-list .services-price-list__group {
-      margin-bottom: 6.4rem;
+      margin-bottom: 0.8rem; }
+    .price-list .services-price-list__group , .price-list .services-price-list__group._active {
       row-gap: 0.8rem; }
     .price-list .services-price-list__services {
       padding: 8rem 4rem; }
     .price-list .services-price-list__item {
       height: auto; }
-    .price-list .services-price-list__link.link, .price-list .services-price-list__link.alphabet-filter__title {
-      -webkit-column-gap: 1.5rem;
-         -moz-column-gap: 1.5rem;
-              column-gap: 1.5rem; }
-    .price-list .services-price-list__link::after {
-      -webkit-transform: none;
-              transform: none; }
+    .price-list .services-price-list__link {
+      margin-top: 6.3rem; }
+      .price-list .services-price-list__link.link, .price-list .services-price-list__link.alphabet-filter__title {
+        -webkit-column-gap: 1.5rem;
+           -moz-column-gap: 1.5rem;
+                column-gap: 1.5rem; }
   .price-list .alphabet-filter {
     margin-bottom: 1.8rem;
     display: block; }
@@ -30931,7 +30950,7 @@ textarea {
     position: relative;
     padding: 0 3rem;
     display: grid;
-    grid-template-columns: 1fr 11.1rem;
+    grid-template-columns: 1fr 11.2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -32735,7 +32754,7 @@ textarea {
       .navigation-block__tab::before, .navigation-block__tab::after {
         top: 3rem;
         left: auto;
-        right: 0;
+        right: 1px;
         width: 1px;
         height: 14.2rem;
         background-color: #d8dde4;

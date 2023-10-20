@@ -65,7 +65,14 @@
   border-radius: 10rem;
   padding: 1rem 4rem;
   text-align: center;
+  transition: all 0.3s ease;
   cursor: pointer;
+  @media (any-hover: hover){
+    &:hover{
+      color: #ffffff;
+      background-color: #9AD9F8;
+    }
+  }
   &_white {
     background-color: #ffffff;
     border: 1px solid #d8dde4;
@@ -75,6 +82,16 @@
     background-color: #ffffff;
     border: 1px solid $blue;
     color: #2F2F2F;
+  }
+  &_white,
+  &_outlined {
+    @media (any-hover: hover){
+      &:hover{
+        border: 1px solid #EEF3F7;
+        background-color: #EEF3F7;
+        color: #919395;
+      }
+    }
   }
 }
 

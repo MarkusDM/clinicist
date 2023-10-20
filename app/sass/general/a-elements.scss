@@ -1091,7 +1091,7 @@
     position: relative;
     padding: 0 3rem;
     display: grid;
-    grid-template-columns: 1fr 11.1rem;
+    grid-template-columns: 1fr 11.2rem;
     align-items: center;
     column-gap: 1rem;
     height: 100%;
@@ -3093,7 +3093,7 @@ line-height: 127.273%;
       &::after {
         top: 3rem;
         left: auto;
-        right: 0;
+        right: 1px;
         width: 1px;
         height: 14.2rem;
         background-color: #d8dde4;
