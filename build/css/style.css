@@ -4929,6 +4929,9 @@ input[type='search']::-webkit-search-results-decoration {
   .baner-error-404 {
     position: relative;
     overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin-bottom: 0.2rem; }
     .baner-error-404 .baner__inner {
       display: block; }
@@ -5117,7 +5120,7 @@ input[type='search']::-webkit-search-results-decoration {
         width: 82.6rem;
         height: 85.5rem;
         top: -15rem;
-        left: 53%; }
+        left: 50%; }
   .baner-zapisatsa {
     margin-bottom: 10rem; }
     .baner-zapisatsa .baner__content-links {
@@ -7470,87 +7473,298 @@ input[type='search']::-webkit-search-results-decoration {
       margin-bottom: 7rem; }
       .baner-korporativnie .baner .breadcrumbs__link {
         color: rgba(51, 51, 51, 0.5); }
-      .baner-korporativnie .baner .breadcrumbs__inner::after {
-        top: 45rem; }
-      .baner-korporativnie .baner .breadcrumbs__content {
-        width: 100%;
-        padding-top: 3rem; }
-        .baner-korporativnie .baner .breadcrumbs__content-links {
-          margin-bottom: 7.2rem; }
-        .baner-korporativnie .baner .breadcrumbs__content-title {
-          line-height: 110%;
-          margin-bottom: 4rem; }
-        .baner-korporativnie .baner .breadcrumbs__content-text {
-          width: 100%; }
-      .baner-korporativnie .baner .breadcrumbs__picture {
-        height: 55.2rem;
-        margin-left: -5rem;
-        margin-top: -7rem;
-        width: 82.8rem; }
-        .baner-korporativnie .baner .breadcrumbs__picture::after {
-          width: 73.7rem;
-          height: 73.7rem;
-          top: -7rem;
-          left: 47%; }
-    .baner-korporativnie-uslovia-sotrudnichestva {
-      margin-bottom: 20rem; }
-      .baner-korporativnie-uslovia-sotrudnichestva .baner {
-        margin-bottom: 0rem; }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner__inner::after {
-          top: 41rem;
-          left: 55%; }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner .breadcrumbs {
-          margin-bottom: 7rem; }
-          .baner-korporativnie-uslovia-sotrudnichestva .baner .breadcrumbs__link {
-            color: rgba(51, 51, 51, 0.5); }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner__content {
-          width: 100%;
-          padding-top: 3rem; }
-          .baner-korporativnie-uslovia-sotrudnichestva .baner__content-text {
-            width: 100%;
-            margin-left: 2rem; }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner__picture {
-          width: 91rem;
-          height: -webkit-fit-content;
-          height: -moz-fit-content;
-          height: fit-content;
-          margin-right: 0rem;
-          margin-left: -10rem; }
-          .baner-korporativnie-uslovia-sotrudnichestva .baner__picture::after {
-            width: 75rem;
-            height: 75rem;
-            left: 48%; }
-    .baner-korporativnie-kontrol-kachestva {
-      margin-bottom: 12rem; }
-      .baner-korporativnie-kontrol-kachestva .breadcrumbs {
-        margin-bottom: 7rem;
-        width: 110%; }
-        .baner-korporativnie-kontrol-kachestva .breadcrumbs__link {
+    .baner-korporativnie .baner__inner::after {
+      top: 45rem; }
+    .baner-korporativnie .baner__content {
+      width: 100%;
+      padding-top: 3rem; }
+      .baner-korporativnie .baner__content-links {
+        margin-bottom: 7.2rem; }
+      .baner-korporativnie .baner__content-title {
+        line-height: 110%;
+        margin-bottom: 4rem; }
+      .baner-korporativnie .baner__content-text {
+        width: 100%; }
+    .baner-korporativnie .baner__picture {
+      height: 55.2rem;
+      margin-left: -5rem;
+      margin-top: -7rem;
+      width: 82.8rem; }
+      .baner-korporativnie .baner__picture::after {
+        width: 73.7rem;
+        height: 73.7rem;
+        top: -7rem;
+        left: 47%; }
+  .baner-uslovia-sotrudnichestva {
+    margin-bottom: 20rem; }
+    .baner-uslovia-sotrudnichestva .baner {
+      margin-bottom: 0rem; }
+      .baner-uslovia-sotrudnichestva .baner__inner::after {
+        top: 41rem;
+        left: 55%; }
+      .baner-uslovia-sotrudnichestva .baner .breadcrumbs {
+        margin-bottom: 7rem; }
+        .baner-uslovia-sotrudnichestva .baner .breadcrumbs__link {
           color: rgba(51, 51, 51, 0.5); }
-        .baner-korporativnie-kontrol-kachestva .breadcrumbs__text {
-          margin-left: -0.5rem;
-          font-size: 2.8rem; }
-      .baner-korporativnie-kontrol-kachestva .baner__inner::after {
-        width: 84.2rem;
-        height: 84.2rem;
-        top: 41rem; }
-      .baner-korporativnie-kontrol-kachestva .baner__content {
+      .baner-uslovia-sotrudnichestva .baner__content {
         width: 100%;
         padding-top: 3rem; }
-        .baner-korporativnie-kontrol-kachestva .baner__content-links {
-          margin-bottom: 7.5rem; }
-        .baner-korporativnie-kontrol-kachestva .baner__content-title {
-          line-height: 110%; }
-        .baner-korporativnie-kontrol-kachestva .baner__content-text {
-          color: #999; }
-      .baner-korporativnie-kontrol-kachestva .baner__picture {
-        width: 65rem;
-        margin-right: 7.2rem; }
-        .baner-korporativnie-kontrol-kachestva .baner__picture::after {
-          width: 63.6rem;
-          height: 63.6rem;
-          top: -6rem;
-          left: 52%; } }
+        .baner-uslovia-sotrudnichestva .baner__content-text {
+          width: 100%;
+          margin-left: 2rem; }
+      .baner-uslovia-sotrudnichestva .baner__picture {
+        width: 91rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        margin-right: 0rem;
+        margin-left: -10rem; }
+        .baner-uslovia-sotrudnichestva .baner__picture::after {
+          width: 75rem;
+          height: 75rem;
+          left: 48%; }
+  .baner-kontrol-kachestva {
+    margin-bottom: 12rem; }
+    .baner-kontrol-kachestva .breadcrumbs {
+      margin-bottom: 7rem;
+      width: 110%; }
+      .baner-kontrol-kachestva .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+      .baner-kontrol-kachestva .breadcrumbs__text {
+        margin-left: -0.5rem;
+        font-size: 2.8rem; }
+    .baner-kontrol-kachestva .baner__inner::after {
+      width: 84.2rem;
+      height: 84.2rem;
+      top: 41rem; }
+    .baner-kontrol-kachestva .baner__content {
+      width: 100%;
+      padding-top: 3rem; }
+      .baner-kontrol-kachestva .baner__content-links {
+        margin-bottom: 7.5rem; }
+      .baner-kontrol-kachestva .baner__content-title {
+        line-height: 110%; }
+      .baner-kontrol-kachestva .baner__content-text {
+        color: #999; }
+    .baner-kontrol-kachestva .baner__picture {
+      width: 65rem;
+      margin-right: 7.2rem; }
+      .baner-kontrol-kachestva .baner__picture::after {
+        width: 63.6rem;
+        height: 63.6rem;
+        top: -6rem;
+        left: 52%; }
+  .baner-error-404 {
+    position: relative;
+    overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 0.2rem; }
+    .baner-error-404 .baner__inner {
+      display: block; }
+      .baner-error-404 .baner__inner::after {
+        width: 97.6rem;
+        height: 97.6rem;
+        top: unset;
+        bottom: -12rem; }
+    .baner-error-404 .baner__content {
+      padding-top: 8.6rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      margin: 0;
+      position: relative;
+      z-index: 5; }
+      .baner-error-404 .baner__content-links {
+        margin-bottom: 1.3rem; }
+        .baner-error-404 .baner__content-links .nolink {
+          font-family: 'MyriadPro';
+          font-weight: 600;
+          font-size: 2.5rem;
+          line-height: 100%; }
+      .baner-error-404 .baner__content-title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 5.5rem;
+        line-height: 100%;
+        letter-spacing: normal;
+        margin-bottom: 6rem; }
+        .baner-error-404 .baner__content-title span {
+          display: block;
+          font-weight: 400; }
+      .baner-error-404 .baner__content-btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-bottom: 8rem; }
+        .baner-error-404 .baner__content-btns-link {
+          display: inline-block;
+          padding: 2rem 19rem;
+          margin-right: 2.4rem; }
+        .baner-error-404 .baner__content-btns-search {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          position: relative; }
+          .baner-error-404 .baner__content-btns-search div {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer; }
+            .baner-error-404 .baner__content-btns-search div img {
+              width: 4.2rem;
+              height: 4.2rem; }
+            .baner-error-404 .baner__content-btns-search div.active {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              top: -10rem;
+              right: 0;
+              left: unset; }
+          .baner-error-404 .baner__content-btns-search label {
+            position: relative;
+            display: none;
+            margin-top: 4rem; }
+            .baner-error-404 .baner__content-btns-search label input {
+              height: 10rem;
+              background-color: #ffffff;
+              outline: none;
+              border: none;
+              width: 65.2rem;
+              border-radius: 14rem;
+              font-family: 'MyriadPro';
+              font-size: 3rem;
+              line-height: normal;
+              color: rgba(51, 51, 51, 0.5);
+              border: 0.2rem solid #D8DDE4;
+              padding-left: 5.4rem; }
+              .baner-error-404 .baner__content-btns-search label input::-webkit-input-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input::-moz-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input:-ms-input-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input::-ms-input-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input::placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+            .baner-error-404 .baner__content-btns-search label button {
+              position: absolute;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%);
+              right: 2.8rem; }
+              .baner-error-404 .baner__content-btns-search label button img {
+                width: 4.2rem;
+                height: 4.2rem;
+                -o-object-fit: contain;
+                   object-fit: contain; }
+      .baner-error-404 .baner__content-bottom {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .baner-error-404 .baner__content-bottom-info {
+          width: 80%;
+          margin-top: 0;
+          margin-bottom: 47.4rem; }
+          .baner-error-404 .baner__content-bottom-info-title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 3.2rem;
+            line-height: 150%;
+            margin-bottom: 1.5rem; }
+          .baner-error-404 .baner__content-bottom-info-text {
+            font-family: 'MyriadPro';
+            font-size: 3.2rem;
+            line-height: 150%;
+            color: rgba(51, 51, 51, 0.5); }
+        .baner-error-404 .baner__content-bottom-items {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          width: 100%;
+          gap: 2.4rem; }
+        .baner-error-404 .baner__content-bottom-item {
+          width: 58.2rem;
+          padding: 2rem 4rem;
+          background-color: #ffffff;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .baner-error-404 .baner__content-bottom-item-img {
+            margin-right: 3.2rem;
+            width: 6.3rem;
+            height: 6.3rem;
+            -webkit-box-shadow: 0px 1.36rem 2rem rgba(64, 185, 244, 0.1);
+                    box-shadow: 0px 1.36rem 2rem rgba(64, 185, 244, 0.1);
+            border-radius: 0.94rem; }
+            .baner-error-404 .baner__content-bottom-item-img img {
+              width: 3.2rem;
+              height: 3.2rem; }
+          .baner-error-404 .baner__content-bottom-item-title {
+            font-family: 'MyriadPro';
+            font-size: 3rem;
+            line-height: normal;
+            width: 65%; }
+    .baner-error-404 .baner__picture {
+      position: absolute;
+      right: -17rem;
+      bottom: 0rem;
+      width: 101rem;
+      height: 81rem; }
+      .baner-error-404 .baner__picture img {
+        position: relative;
+        z-index: 3; } }
 
 .baner--search {
   margin-bottom: 10rem; }
@@ -35340,6 +35554,20 @@ body::after {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .services-p-map {
+    margin-bottom: 12rem; }
+    .services-p-map .services-p__box {
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+      .services-p-map .services-p__box-block-title {
+        margin-bottom: 0; }
+      .services-p-map .services-p__box-down-title {
+        margin-bottom: 3rem;
+        margin-top: 6rem; }
+      .services-p-map .services-p__box-inner {
+        margin-bottom: 9.1rem; }
 
 @media (max-width: 48em) {
   .services-p .container {
@@ -38214,6 +38442,8 @@ body::after {
       padding: 5.5rem 5.5rem 3rem;
       -webkit-box-shadow: 0rem 2rem 6rem 0rem rgba(124, 148, 159, 0.1);
               box-shadow: 0rem 2rem 6rem 0rem rgba(124, 148, 159, 0.1); }
+      .pages__content-item:hover {
+        background: #EEF3F7; }
       .pages__content-item-title {
         text-align: center;
         width: 29.4rem;
