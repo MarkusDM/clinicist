@@ -17,16 +17,20 @@
 }
 
 @media screen and (min-width: 48em) {
-  .socials__item {
-    background: none;
-    width: 4rem;
-    height: 4rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+	.blog-descs {
+		&__desc-socials {
+			.socials__item {
+					background: none;
+					width: 4rem;
+					height: 4rem;
+			
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+		}
+	}
 }
 
 @media screen and (max-width: 48em) {

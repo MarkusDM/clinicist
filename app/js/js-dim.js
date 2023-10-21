@@ -2,14 +2,16 @@
 
 $( document ).ready(function() {
 
-    $('.tabs-news__btn').on('click', function () {
-      $('.tabs-news__btn').removeClass('active')
-      $(this).toggleClass('active')
-    })
-
     $('.js-toggle').on('click', function () {
       $('.js-toggle').removeClass('active')
       $(this).toggleClass('active')
+    })
+
+    $('.leave-comment__stars-star').each(function() {
+      $(this).on('click', function() {
+        const star = $(this).attr('data-star-value');
+        $(this).parent().attr('data-star-total', star);
+      })
     })
 
     const newsArticleSlidder = new Swiper('.news-descs__desc-slider', {
@@ -29,7 +31,7 @@ $( document ).ready(function() {
       },
     })
 
-		const blogArticleSlidder = new Swiper('.blog-desc__desc-slider', {
+    const blogArticleSlidder = new Swiper('.blog-desc__desc-slider', {
       spaceBetween: rem(1),
       loop: false,
       autoplay: {

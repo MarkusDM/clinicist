@@ -283,6 +283,21 @@ textarea {
     }
   }
 
+  &_email {
+    &::before {
+      background-image: url(../img/dim-image/icons/email-2.svg);
+    }
+  }
+
+  &_comment {
+    &::before {
+      background-image: url(../img/dim-image/icons/question.svg);
+      align-self: flex-start;
+      position: relative;
+      top: 1.8rem;
+    }
+  }
+
   // .input_tel
 
   &_tel {
@@ -604,6 +619,11 @@ textarea {
       border-radius: 14.4rem;
       font-size: 3.2rem;
       line-height: 150%;
+    }
+    &_comment {
+      &::before {
+        top: 3rem;
+      }
     }
    } 
 }

@@ -748,9 +748,10 @@
             <div class="baner__content-text">В нашей клинике вы получите только самое современное и эффективное лечение В нашей клинике вы получите</div>
             <form class="baner__content-form">
               <div class="baner__content-input">
-                <label class="baner__content-label">
-                  <input type="email" placeholder="Эл.почта">
-                </label>
+                <div class="baner__content-inp input input_email">
+                  <input data-required data-validate autocomplete="off" type="email" name="" data-error="Заполните поле"
+                    placeholder="Эл.почта" class="input__field">
+                </div>
                 <button type="submit" class="btn">
                   Подписаться
                 </button>
@@ -1082,13 +1083,14 @@
             <img src="./img/d-image/leave-contacts/img.webp" alt="">
           </div>
           <div class="leave-contacts__right">
-            <form action="" class="leave-contacts__form">
+            <form action="" class="leave-contacts__form" data-dev>
               <div class="leave-contacts__form-title">
                 Подписаться на рассылку
               </div>
-              <label class="leave-contacts__form-label">
-                <input type="email" placeholder="Эл.почта">
-              </label>
+              <div class="leave-contacts__input input input_email">
+                <input data-required data-validate autocomplete="off" type="email" name="" data-error="Заполните поле"
+                  placeholder="Эл.почта" class="input__field">
+              </div>
               <div class="leave-contacts__form-btns">
                 <button type="button" class="btn"><span>Подписаться</span></button>
                 <label class="leave-contacts__checkbox checkbox">

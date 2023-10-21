@@ -51,35 +51,25 @@
     font-weight: 400;
   }
 
-  &__input {
-    display: flex;
-    align-items: center;
-    column-gap: 2rem;
-    border-radius: 10rem;
-    border: 1px solid $white;
+  &__input,
+	&__input input {
     background: transparent;
-    margin-bottom: 2rem;
-    padding-left: 3rem;
-
-    img {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
-
-    input {
-      padding: 1rem 3rem 1rem 0;
-    }
-
-    input,
-    input::placeholder {
-      border: 0;
-      background: transparent;
-      color: $white;
-      font-family: Myriad Pro, sans-serif;
-      font-size: 1.8rem;
-      line-height: 200%;
-    }
+		color: $white;
   }
+
+	&__input {
+		border-color: $white;
+		margin-bottom: 3rem;
+		position: relative;
+
+		&::before {
+			background-image: url(../img/dim-image/icons/email.svg);
+		}
+	}
+
+	&__input input::placeholder {
+		color: $white;
+	}
 
   &__btn {
     width: 100%;
@@ -127,8 +117,12 @@
     &__input {
       column-gap: 3rem;
       border-radius: 20rem;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       padding-left: 6rem;
+
+			input {
+				padding-left: 0.5rem;
+			}
 
       img {
         width: 3.2rem;

@@ -149,35 +149,35 @@
             Поделиться в соц. сетях:
           </div>
           <div class="socials__items _desc-only">
-            <button type="button" class="socials__item">
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/facebook-2.svg" alt="facebook">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/vk-2.svg" alt="vk">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/watsapp-2.svg" alt="whatsapp">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/viber-2.svg" alt="viber">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/telegramm-2.svg" alt="telegram">
-            </button>
+            </a>
           </div>
           <div class="socials__items _mobile-only">
-            <button type="button" class="socials__item">
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/whatsapp.svg" alt="whatsapp">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/telegram.svg" alt="telegram">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/facebook.svg" alt="facebook">
-            </button>
-            <button type="button" class="socials__item">
+            </a>
+            <a href="#" class="socials__item">
               <img src="./img/dim-image/icons/vk.svg" alt="vk">
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -189,9 +189,9 @@
             <div class="blog-comments__title">
               <span>103</span>комментария
             </div>
-            <div class="blog-comments__btn btn">
+            <a href="#leave-comment" class="blog-comments__btn btn">
               Написать комментарий
-            </div>
+            </a>
           </div>
           <div class="blog-comments__items">
             <div class="blog-comments__item">
@@ -271,49 +271,41 @@
         </div>
       </div>
     </section>
-    <section class="leave-comment">
+    <section class="leave-comment" id="leave-comment">
       <div class="container">
         <div class="leave-comment__container">
           <div class="leave-comment__title">
             Оставить комментарий
           </div>
-          <form action="" class="leave-comment__form">
+          <form action="" class="leave-comment__form" data-dev>
             <div class="leave-comment__stars">
               <div class="leave-comment__stars-title">
                 Оцените эту статью:
               </div>
-              <div class="leave-comment__stars-stars">
-                <img src="./img/dim-image/icons/full-star.svg" alt="">
-                <img src="./img/dim-image/icons/full-star.svg" alt="">
-                <img src="./img/dim-image/icons/full-star.svg" alt="">
-                <img src="./img/dim-image/icons/full-star.svg" alt="">
-                <img src="./img/dim-image/icons/empty-star.svg" alt="">
+              <div class="leave-comment__stars-stars" data-star-total="0">
+                <div class="leave-comment__stars-star" data-star-value="5"></div>
+                <div class="leave-comment__stars-star" data-star-value="4"></div>
+                <div class="leave-comment__stars-star" data-star-value="3"></div>
+                <div class="leave-comment__stars-star" data-star-value="2"></div>
+                <div class="leave-comment__stars-star" data-star-value="1"></div>
               </div>
             </div>
             <div class="leave-comment__inputs">
-              <div class="leave-comment__input">
-                <div class="leave-comment__img">
-                  <img src="./img/dim-image/icons/user.svg" alt="">
-                </div>
-                <input type="text" placeholder="Имя">
+              <div class="leave-comment__input input input_user">
+                <input data-required data-validate autocomplete="off" type="text" name="" data-error="Заполните поле"
+                  placeholder="Фамилия" class="input__field">
               </div>
-              <div class="leave-comment__input">
-                <div class="leave-comment__img">
-                  <img src="./img/dim-image/icons/phone.svg" alt="">
-                </div>
-                <input type="phone" placeholder="Номер телефона">
+              <div class="leave-comment__input input input_tel">
+                <input data-required data-validate autocomplete="off" type="tel" name="" data-error="Заполните поле"
+                  placeholder="Номер телефона" class="input__field">
               </div>
-              <div class="leave-comment__input">
-                <div class="leave-comment__img">
-                  <img src="./img/dim-image/icons/phone.svg" alt="">
-                </div>
-                <input type="phone" placeholder="Заголовок комментария">
+              <div class="leave-comment__input input input_tel">
+                <input data-required data-validate autocomplete="off" type="text" name="" data-error="Заполните поле"
+                  placeholder="Заголовок комментария" class="input__field">
               </div>
-              <div class="leave-comment__input">
-                <div class="leave-comment__img">
-                  <img src="./img/dim-image/icons/question.svg" alt="">
-                </div>
-                <textarea placeholder="Задайте вопрос"></textarea>
+              <div class="leave-comment__input input input_comment">
+                <textarea data-required data-validate autocomplete="off" data-error="Заполните поле" name=""
+                  placeholder="Задайте вопрос" class="input__field"></textarea>
               </div>
             </div>
             <div class="leave-comment__btns">
