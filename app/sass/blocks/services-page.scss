@@ -522,6 +522,9 @@
                 }
             }
         }
+        .search-form__input-wrap::after {
+            content: none;
+        }
     }
 }
 

@@ -309,6 +309,73 @@
   }
 }
 
+.map-appointment {
+  .appointment {
+    &__subtitle {
+      margin-top: 1.6rem;
+      margin-bottom: 0;
+    }
+  }
+  .callback-appointment {
+    &__text {
+      font-family: 'Montserrat';
+      margin-bottom: 3rem;
+      line-height: 150%;
+    }
+    &__input {
+      &-wrap {
+        border: 1px solid  #D8DDE4;
+      }
+    }
+    &__btn {
+      border: 0;
+      margin-top: 3rem;
+    }
+  }
+  .contacts-appointment {
+    &__heading {
+      margin-bottom: 3.2rem;
+    }
+    &__text-wrap {
+      gap: 2rem;
+      .link {
+        font-size: 1.6rem;
+        line-height: 120%;
+        text-decoration: underline;
+        &::after {
+          content: none;
+        }
+      }
+    }
+    &__links {
+      row-gap: 2.4rem;
+    }
+    &__item {
+      border: 0;
+      &::before {
+        left: 2rem;
+        width: 3rem;
+        height: 3rem;
+      }
+      &_whatsapp::before {
+        background-image: url(../../img/ans_image/icons/whatsapp.svg);
+      }
+      &_telegram::before {
+        background-image: url(../../img/ans_image/icons/telegram.svg);
+      }
+      &_chat::before {
+        background-image: url(../../img/ans_image/icons/chat.svg);
+      }
+    }
+  }
+  .registration-appointment {
+    &__btn {
+      width: 33.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 @media (max-width: 48em) {
   .callback-appointment {
     &::before {

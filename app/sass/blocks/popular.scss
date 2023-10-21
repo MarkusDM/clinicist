@@ -49,6 +49,9 @@
          left: 0;
       }
    }
+   &.about-popular {
+      display: none;
+   }
 }
 
 @media (max-width: 48em) {
@@ -111,6 +114,10 @@
                }
             }
          }
+      }
+      &.error-popular {
+         display: block;
+         margin: 20rem 0 0;
       }
    }
 }

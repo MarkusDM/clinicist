@@ -12748,6 +12748,8 @@ input[type='search']::-webkit-search-results-decoration {
       position: absolute;
       bottom: 0;
       left: 0; }
+  .popular.about-popular {
+    display: none; }
 
 @media (max-width: 48em) {
   .popular__inner {
@@ -12785,7 +12787,10 @@ input[type='search']::-webkit-search-results-decoration {
   .popular.popular-akcii .popular__item:not(:last-child) {
     margin-bottom: 8.7rem; }
   .popular.popular-akcii .popular__item li:not(:last-child) {
-    margin-bottom: 2.6rem; } }
+    margin-bottom: 2.6rem; }
+  .popular.error-popular {
+    display: block;
+    margin: 20rem 0 0; } }
 
 .story {
   position: relative;
@@ -29142,6 +29147,54 @@ textarea {
       font-weight: 400;
       text-decoration: underline; }
 
+.map-appointment .appointment__subtitle {
+  margin-top: 1.6rem;
+  margin-bottom: 0; }
+
+.map-appointment .callback-appointment__text {
+  font-family: 'Montserrat';
+  margin-bottom: 3rem;
+  line-height: 150%; }
+
+.map-appointment .callback-appointment__input-wrap {
+  border: 1px solid  #D8DDE4; }
+
+.map-appointment .callback-appointment__btn {
+  border: 0;
+  margin-top: 3rem; }
+
+.map-appointment .contacts-appointment__heading {
+  margin-bottom: 3.2rem; }
+
+.map-appointment .contacts-appointment__text-wrap {
+  gap: 2rem; }
+  .map-appointment .contacts-appointment__text-wrap .link, .map-appointment .contacts-appointment__text-wrap .alphabet-filter__title {
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-decoration: underline; }
+    .map-appointment .contacts-appointment__text-wrap .link::after, .map-appointment .contacts-appointment__text-wrap .alphabet-filter__title::after {
+      content: none; }
+
+.map-appointment .contacts-appointment__links {
+  row-gap: 2.4rem; }
+
+.map-appointment .contacts-appointment__item {
+  border: 0; }
+  .map-appointment .contacts-appointment__item::before {
+    left: 2rem;
+    width: 3rem;
+    height: 3rem; }
+  .map-appointment .contacts-appointment__item_whatsapp::before {
+    background-image: url(../../img/ans_image/icons/whatsapp.svg); }
+  .map-appointment .contacts-appointment__item_telegram::before {
+    background-image: url(../../img/ans_image/icons/telegram.svg); }
+  .map-appointment .contacts-appointment__item_chat::before {
+    background-image: url(../../img/ans_image/icons/chat.svg); }
+
+.map-appointment .registration-appointment__btn {
+  width: 33.5rem;
+  margin-bottom: 3rem; }
+
 @media (max-width: 48em) {
   .callback-appointment::before {
     left: 50%;
@@ -35568,6 +35621,8 @@ body::after {
         margin-top: 6rem; }
       .services-p-map .services-p__box-inner {
         margin-bottom: 9.1rem; }
+    .services-p-map .search-form__input-wrap::after {
+      content: none; }
 
 @media (max-width: 48em) {
   .services-p .container {
