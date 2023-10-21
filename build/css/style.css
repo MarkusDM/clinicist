@@ -37714,12 +37714,14 @@ body::after {
   .leave-contacts__title {
     color: #2F2F2F;
     text-align: right;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
     margin-bottom: 3.2rem; }
+  .leave-contacts__image-m {
+    display: none; }
   .leave-contacts__circle {
     width: 30.2rem;
     height: 30.2rem;
@@ -37743,7 +37745,7 @@ body::after {
     z-index: 2; }
   .leave-contacts__text {
     color: rgba(47, 47, 47, 0.35);
-    font-family: 'Myriad Pro',sans-serif;
+    font-family: 'Myriad Pro', sans-serif;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
@@ -37761,11 +37763,11 @@ body::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0.6rem 1.5rem;
+    padding: 0.4rem 1.5rem;
     border-radius: 4.5rem;
     background: #36B4F1;
     color: #FFF;
-    font-family: 'Myriad Pro',sans-serif;
+    font-family: 'Myriad Pro', sans-serif;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
@@ -37785,7 +37787,7 @@ body::after {
     padding-left: 6rem; }
   .leave-contacts__form-title {
     color: #2F2F2F;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3.5rem;
     font-style: normal;
     font-weight: 400;
@@ -37798,7 +37800,7 @@ body::after {
     height: fit-content;
     display: block;
     height: 5.5rem;
-    margin-bottom: 2.4rem; }
+    margin-bottom: 2rem; }
     .leave-contacts__form-label::before {
       position: absolute;
       content: '';
@@ -37812,7 +37814,7 @@ body::after {
               transform: translate(0, -50%);
       left: 3rem; }
     .leave-contacts__form-label input {
-      width: 91%;
+      width: 45.9rem;
       height: 100%;
       border-radius: 7.2rem;
       border: 0.1rem solid rgba(47, 47, 47, 0.35);
@@ -37821,7 +37823,7 @@ body::after {
       padding-top: 1.9rem;
       padding-bottom: 1.7rem;
       color: rgba(47, 47, 47, 0.35);
-      font-family: 'Myriad Pro',sans-serif;
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 1.6rem;
       font-style: normal;
       font-weight: 400;
@@ -37831,7 +37833,7 @@ body::after {
     margin-bottom: 1.9rem; }
   .leave-contacts__form-policy {
     color: rgba(47, 47, 47, 0.35);
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
@@ -37842,7 +37844,7 @@ body::after {
     margin-bottom: 0; }
     .leave-contacts-blog .btn {
       margin-bottom: 0;
-      width: 32rem;
+      width: 30rem;
       height: 5rem; }
     .leave-contacts-blog .container {
       width: 100%; }
@@ -37856,6 +37858,8 @@ body::after {
       margin-bottom: 3rem; }
     .leave-contacts-blog .leave-contacts__form-label {
       height: 5rem; }
+      .leave-contacts-blog .leave-contacts__form-label .btn {
+        display: none; }
     .leave-contacts-blog .leave-contacts__left {
       position: relative;
       z-index: 2;
@@ -37863,20 +37867,7 @@ body::after {
       padding-top: 8rem;
       margin-left: 24rem; }
     .leave-contacts-blog .leave-contacts__title {
-      margin-bottom: 4.5rem; }
-    .leave-contacts-blog .leave-contacts__input {
-      position: relative;
-      margin-bottom: 2.5rem; }
-      .leave-contacts-blog .leave-contacts__input input::-webkit-input-placeholder {
-        color: rgba(51, 51, 51, 0.5); }
-      .leave-contacts-blog .leave-contacts__input input::-moz-placeholder {
-        color: rgba(51, 51, 51, 0.5); }
-      .leave-contacts-blog .leave-contacts__input input:-ms-input-placeholder {
-        color: rgba(51, 51, 51, 0.5); }
-      .leave-contacts-blog .leave-contacts__input input::-ms-input-placeholder {
-        color: rgba(51, 51, 51, 0.5); }
-      .leave-contacts-blog .leave-contacts__input input::placeholder {
-        color: rgba(51, 51, 51, 0.5); }
+      margin-bottom: 4.2rem; }
     .leave-contacts-blog .leave-contacts__circle {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -37887,10 +37878,10 @@ body::after {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      border: 1px solid #D8DDE4;
+      border: 1px solid rgba(51, 51, 51, 0.5);
       border-radius: 50%;
       z-index: -2;
-      left: -1rem; }
+      left: 1rem; }
     .leave-contacts-blog .leave-contacts__form-btns {
       display: -webkit-box;
       display: -ms-flexbox;
