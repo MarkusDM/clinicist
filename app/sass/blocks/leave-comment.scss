@@ -24,7 +24,7 @@
   &__stars-star {
     cursor: pointer;
     transition: 0.2s;
-    background: url('../../img/dim-image/icons/empty-star.svg') no-repeat;
+    background: url('../img/dim-image/icons/empty-star.svg') no-repeat;
     width: 3.1rem;
     height: 3.1rem;
     background-size: cover;
@@ -35,7 +35,7 @@
   &__stars-stars[data-star-total="3"] .leave-comment__stars-star:nth-child(n + 3),
   &__stars-stars[data-star-total="4"] .leave-comment__stars-star:nth-child(n + 2),
   &__stars-stars[data-star-total="5"] .leave-comment__stars-star:nth-child(n + 1) {
-    background: url('../../img/dim-image/icons/full-star.svg') no-repeat;
+    background: url('../img/dim-image/icons/full-star.svg') no-repeat;
       width: 3.1rem;
       height: 3.1rem;
       background-size: cover;
@@ -164,7 +164,7 @@
 
   .leave-comment__stars-star:hover,
   .leave-comment__stars-star:hover~.leave-comment__stars-star {
-    background: url('../../img/dim-image/icons/full-star.svg') no-repeat;
+    background: url('../img/dim-image/icons/full-star.svg') no-repeat;
     width: 3.1rem;
     height: 3.1rem;
     background-size: cover;
@@ -196,7 +196,7 @@
       }
 
       &__stars-star {
-        background: url('../../img/dim-image/icons/empty-star.svg') no-repeat;
+        background: url('../img/dim-image/icons/empty-star.svg') no-repeat;
         width: 4.8rem;
         height: 4.8rem;
         background-size: cover;
@@ -207,7 +207,7 @@
       &__stars-stars[data-star-total="3"] .leave-comment__stars-star:nth-child(n + 3),
       &__stars-stars[data-star-total="4"] .leave-comment__stars-star:nth-child(n + 2),
       &__stars-stars[data-star-total="5"] .leave-comment__stars-star:nth-child(n + 1) {
-        background: url('../../img/dim-image/icons/full-star.svg') no-repeat;
+        background: url('../img/dim-image/icons/full-star.svg') no-repeat;
           width: 4.8rem;
           height: 4.8rem;
           background-size: cover;
