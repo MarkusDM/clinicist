@@ -25,6 +25,9 @@
       width: 45.3rem;
       padding: 5.5rem 5.5rem 3rem;
       box-shadow: 0rem 2rem 6rem 0rem rgba(124, 148, 159, 0.10);
+      &:hover {
+        background: #EEF3F7;
+      }
       &-title {
         text-align: center;
         width: 29.4rem;

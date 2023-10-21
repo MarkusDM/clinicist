@@ -1,0 +1,68 @@
+.diseases-details {
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+  &__subtitle {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 6rem;
+    margin-bottom: 3.2rem;
+  }
+  &__slider {
+    overflow: hidden;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    & > li {
+      font-family: MyriadPro;
+      font-size: 1, 8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: rgba(51, 51, 51, 0.5);
+      padding: 2rem 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(207, 215, 226, 0.5);
+      }
+    }
+  }
+  &__heading {
+    &::before {
+      content: '';
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url(../img/t-image/icons/diseases-details-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .diseases-details {
+    &__title {
+      margin-bottom: 4rem;
+    }
+    &__subtitle {
+      font-size: 3.6rem;
+      margin-top: 6.4rem;
+      margin-bottom: 4rem;
+    }
+    &__list {
+      & > li {
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 150%;
+        padding: 2.4rem 0;
+      }
+    }
+  }
+}

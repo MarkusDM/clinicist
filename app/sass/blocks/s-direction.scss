@@ -182,6 +182,48 @@
             font-size: 3.2rem;
             max-width: auto;
         }
+
+        &__inner {
+            flex-direction: column;
+            align-items: initial;
+        }
+
+        &__title {
+            font-size: 5.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125.926%;
+            margin-bottom: 4rem;
+        }
+
+        &__price {
+            span {
+                font-size: 3.6rem;
+                padding-right: 1rem;
+            }
+
+            strong {
+                font-size: 4.8rem;
+                line-height: 4.6rem;
+                padding-right: 3rem;
+            }
+        }
+
+
+        &__div-btn {
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+            
+        }
+
+        &__btn {
+            font-size: 3.2rem;
+            padding-right: 4rem;
+            &::before {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
     }
 
  }

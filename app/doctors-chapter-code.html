@@ -499,13 +499,13 @@
                           </div>
                         </div>
                         <div class="steps__form-wrap">
-                         <form action="#" class="steps__login-form login-form">
+                         <form data-dev action="#" class="steps__login-form login-form">
                             <div class="login-form__head">
                                 <span class="login-form__subtitle subtitle">Для продолжения,  вам необходимо зарегистрироваться</span>
                                 <span class="login-form__title heading">Регистрация</span>
                             </div>
                             <div class="login-form__body">
-                                <div class="login-form__input login-form__input_code input input_code"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Код подтверждения" class="input__field"></div>
+                                <div class="login-form__input login-form__input_code input input_code"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Код подтверждения" class="input__field"></div>
                                 <p class="login-form__text txt _desktop-only">Через несколько секунд вам придеть SMS-сообщение с кодом подтверждения.</p>
                                 <div class="login-form__checkbox checkbox">
                                   <input id="c_1" data-error class="checkbox__input" type="checkbox" value="1" name="form[]">

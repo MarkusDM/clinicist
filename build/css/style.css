@@ -4986,6 +4986,9 @@ input[type='search']::-webkit-search-results-decoration {
   .baner-error-404 {
     position: relative;
     overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin-bottom: 0.2rem; }
     .baner-error-404 .baner__inner {
       display: block; }
@@ -5174,7 +5177,7 @@ input[type='search']::-webkit-search-results-decoration {
         width: 82.6rem;
         height: 85.5rem;
         top: -15rem;
-        left: 53%; }
+        left: 50%; }
   .baner-zapisatsa {
     margin-bottom: 10rem; }
     .baner-zapisatsa .baner__content-links {
@@ -7562,6 +7565,47 @@ input[type='search']::-webkit-search-results-decoration {
     height: 55.7rem;
     border: 1px solid #d8dde4; }
 
+@media (max-width: 48em) {
+  .baner--s-parent {
+    height: auto;
+    padding-bottom: 52rem; }
+    .baner--s-parent .container {
+      padding: 0; }
+    .baner--s-parent .baner__content {
+      width: 100%; }
+    .baner--s-parent .baner__inner {
+      padding: 0;
+      position: initial; }
+      .baner--s-parent .baner__inner::after {
+        width: 60rem;
+        height: 60rem;
+        top: 74rem;
+        left: 27%; }
+    .baner--s-parent .baner__content-links {
+      padding-left: 4rem;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+    .baner--s-parent .baner__picture {
+      position: absolute;
+      bottom: 0;
+      width: 71.6rem;
+      height: 49rem; }
+    .baner--s-parent .baner__content-title {
+      padding-left: 4rem;
+      margin-bottom: 4rem; }
+    .baner--s-parent .baner__content-text {
+      margin-left: 4rem; }
+    .baner--s-parent .baner__price-d {
+      padding-left: 4rem;
+      margin-bottom: 4rem; }
+      .baner--s-parent .baner__price-d span {
+        font-size: 3.6rem;
+        margin-right: 0.8rem; }
+      .baner--s-parent .baner__price-d strong {
+        font-size: 4.8rem;
+        line-height: 5rem;
+        padding-right: 3rem; } }
+
 .baner--empty-services {
   height: 53.7rem; }
   .baner--empty-services .baner__content {
@@ -7698,87 +7742,298 @@ input[type='search']::-webkit-search-results-decoration {
       margin-bottom: 7rem; }
       .baner-korporativnie .baner .breadcrumbs__link {
         color: rgba(51, 51, 51, 0.5); }
-      .baner-korporativnie .baner .breadcrumbs__inner::after {
-        top: 45rem; }
-      .baner-korporativnie .baner .breadcrumbs__content {
-        width: 100%;
-        padding-top: 3rem; }
-        .baner-korporativnie .baner .breadcrumbs__content-links {
-          margin-bottom: 7.2rem; }
-        .baner-korporativnie .baner .breadcrumbs__content-title {
-          line-height: 110%;
-          margin-bottom: 4rem; }
-        .baner-korporativnie .baner .breadcrumbs__content-text {
-          width: 100%; }
-      .baner-korporativnie .baner .breadcrumbs__picture {
-        height: 55.2rem;
-        margin-left: -5rem;
-        margin-top: -7rem;
-        width: 82.8rem; }
-        .baner-korporativnie .baner .breadcrumbs__picture::after {
-          width: 73.7rem;
-          height: 73.7rem;
-          top: -7rem;
-          left: 47%; }
-    .baner-korporativnie-uslovia-sotrudnichestva {
-      margin-bottom: 20rem; }
-      .baner-korporativnie-uslovia-sotrudnichestva .baner {
-        margin-bottom: 0rem; }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner__inner::after {
-          top: 41rem;
-          left: 55%; }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner .breadcrumbs {
-          margin-bottom: 7rem; }
-          .baner-korporativnie-uslovia-sotrudnichestva .baner .breadcrumbs__link {
-            color: rgba(51, 51, 51, 0.5); }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner__content {
-          width: 100%;
-          padding-top: 3rem; }
-          .baner-korporativnie-uslovia-sotrudnichestva .baner__content-text {
-            width: 100%;
-            margin-left: 2rem; }
-        .baner-korporativnie-uslovia-sotrudnichestva .baner__picture {
-          width: 91rem;
-          height: -webkit-fit-content;
-          height: -moz-fit-content;
-          height: fit-content;
-          margin-right: 0rem;
-          margin-left: -10rem; }
-          .baner-korporativnie-uslovia-sotrudnichestva .baner__picture::after {
-            width: 75rem;
-            height: 75rem;
-            left: 48%; }
-    .baner-korporativnie-kontrol-kachestva {
-      margin-bottom: 12rem; }
-      .baner-korporativnie-kontrol-kachestva .breadcrumbs {
-        margin-bottom: 7rem;
-        width: 110%; }
-        .baner-korporativnie-kontrol-kachestva .breadcrumbs__link {
+    .baner-korporativnie .baner__inner::after {
+      top: 45rem; }
+    .baner-korporativnie .baner__content {
+      width: 100%;
+      padding-top: 3rem; }
+      .baner-korporativnie .baner__content-links {
+        margin-bottom: 7.2rem; }
+      .baner-korporativnie .baner__content-title {
+        line-height: 110%;
+        margin-bottom: 4rem; }
+      .baner-korporativnie .baner__content-text {
+        width: 100%; }
+    .baner-korporativnie .baner__picture {
+      height: 55.2rem;
+      margin-left: -5rem;
+      margin-top: -7rem;
+      width: 82.8rem; }
+      .baner-korporativnie .baner__picture::after {
+        width: 73.7rem;
+        height: 73.7rem;
+        top: -7rem;
+        left: 47%; }
+  .baner-uslovia-sotrudnichestva {
+    margin-bottom: 20rem; }
+    .baner-uslovia-sotrudnichestva .baner {
+      margin-bottom: 0rem; }
+      .baner-uslovia-sotrudnichestva .baner__inner::after {
+        top: 41rem;
+        left: 55%; }
+      .baner-uslovia-sotrudnichestva .baner .breadcrumbs {
+        margin-bottom: 7rem; }
+        .baner-uslovia-sotrudnichestva .baner .breadcrumbs__link {
           color: rgba(51, 51, 51, 0.5); }
-        .baner-korporativnie-kontrol-kachestva .breadcrumbs__text {
-          margin-left: -0.5rem;
-          font-size: 2.8rem; }
-      .baner-korporativnie-kontrol-kachestva .baner__inner::after {
-        width: 84.2rem;
-        height: 84.2rem;
-        top: 41rem; }
-      .baner-korporativnie-kontrol-kachestva .baner__content {
+      .baner-uslovia-sotrudnichestva .baner__content {
         width: 100%;
         padding-top: 3rem; }
-        .baner-korporativnie-kontrol-kachestva .baner__content-links {
-          margin-bottom: 7.5rem; }
-        .baner-korporativnie-kontrol-kachestva .baner__content-title {
-          line-height: 110%; }
-        .baner-korporativnie-kontrol-kachestva .baner__content-text {
-          color: #999; }
-      .baner-korporativnie-kontrol-kachestva .baner__picture {
-        width: 65rem;
-        margin-right: 7.2rem; }
-        .baner-korporativnie-kontrol-kachestva .baner__picture::after {
-          width: 63.6rem;
-          height: 63.6rem;
-          top: -6rem;
-          left: 52%; } }
+        .baner-uslovia-sotrudnichestva .baner__content-text {
+          width: 100%;
+          margin-left: 2rem; }
+      .baner-uslovia-sotrudnichestva .baner__picture {
+        width: 91rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        margin-right: 0rem;
+        margin-left: -10rem; }
+        .baner-uslovia-sotrudnichestva .baner__picture::after {
+          width: 75rem;
+          height: 75rem;
+          left: 48%; }
+  .baner-kontrol-kachestva {
+    margin-bottom: 12rem; }
+    .baner-kontrol-kachestva .breadcrumbs {
+      margin-bottom: 7rem;
+      width: 110%; }
+      .baner-kontrol-kachestva .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+      .baner-kontrol-kachestva .breadcrumbs__text {
+        margin-left: -0.5rem;
+        font-size: 2.8rem; }
+    .baner-kontrol-kachestva .baner__inner::after {
+      width: 84.2rem;
+      height: 84.2rem;
+      top: 41rem; }
+    .baner-kontrol-kachestva .baner__content {
+      width: 100%;
+      padding-top: 3rem; }
+      .baner-kontrol-kachestva .baner__content-links {
+        margin-bottom: 7.5rem; }
+      .baner-kontrol-kachestva .baner__content-title {
+        line-height: 110%; }
+      .baner-kontrol-kachestva .baner__content-text {
+        color: #999; }
+    .baner-kontrol-kachestva .baner__picture {
+      width: 65rem;
+      margin-right: 7.2rem; }
+      .baner-kontrol-kachestva .baner__picture::after {
+        width: 63.6rem;
+        height: 63.6rem;
+        top: -6rem;
+        left: 52%; }
+  .baner-error-404 {
+    position: relative;
+    overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 0.2rem; }
+    .baner-error-404 .baner__inner {
+      display: block; }
+      .baner-error-404 .baner__inner::after {
+        width: 97.6rem;
+        height: 97.6rem;
+        top: unset;
+        bottom: -12rem; }
+    .baner-error-404 .baner__content {
+      padding-top: 8.6rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      margin: 0;
+      position: relative;
+      z-index: 5; }
+      .baner-error-404 .baner__content-links {
+        margin-bottom: 1.3rem; }
+        .baner-error-404 .baner__content-links .nolink {
+          font-family: 'MyriadPro';
+          font-weight: 600;
+          font-size: 2.5rem;
+          line-height: 100%; }
+      .baner-error-404 .baner__content-title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 5.5rem;
+        line-height: 100%;
+        letter-spacing: normal;
+        margin-bottom: 6rem; }
+        .baner-error-404 .baner__content-title span {
+          display: block;
+          font-weight: 400; }
+      .baner-error-404 .baner__content-btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-bottom: 8rem; }
+        .baner-error-404 .baner__content-btns-link {
+          display: inline-block;
+          padding: 2rem 19rem;
+          margin-right: 2.4rem; }
+        .baner-error-404 .baner__content-btns-search {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          position: relative; }
+          .baner-error-404 .baner__content-btns-search div {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer; }
+            .baner-error-404 .baner__content-btns-search div img {
+              width: 4.2rem;
+              height: 4.2rem; }
+            .baner-error-404 .baner__content-btns-search div.active {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              top: -10rem;
+              right: 0;
+              left: unset; }
+          .baner-error-404 .baner__content-btns-search label {
+            position: relative;
+            display: none;
+            margin-top: 4rem; }
+            .baner-error-404 .baner__content-btns-search label input {
+              height: 10rem;
+              background-color: #ffffff;
+              outline: none;
+              border: none;
+              width: 65.2rem;
+              border-radius: 14rem;
+              font-family: 'MyriadPro';
+              font-size: 3rem;
+              line-height: normal;
+              color: rgba(51, 51, 51, 0.5);
+              border: 0.2rem solid #D8DDE4;
+              padding-left: 5.4rem; }
+              .baner-error-404 .baner__content-btns-search label input::-webkit-input-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input::-moz-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input:-ms-input-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input::-ms-input-placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+              .baner-error-404 .baner__content-btns-search label input::placeholder {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                color: rgba(51, 51, 51, 0.5); }
+            .baner-error-404 .baner__content-btns-search label button {
+              position: absolute;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%);
+              right: 2.8rem; }
+              .baner-error-404 .baner__content-btns-search label button img {
+                width: 4.2rem;
+                height: 4.2rem;
+                -o-object-fit: contain;
+                   object-fit: contain; }
+      .baner-error-404 .baner__content-bottom {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .baner-error-404 .baner__content-bottom-info {
+          width: 80%;
+          margin-top: 0;
+          margin-bottom: 47.4rem; }
+          .baner-error-404 .baner__content-bottom-info-title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 3.2rem;
+            line-height: 150%;
+            margin-bottom: 1.5rem; }
+          .baner-error-404 .baner__content-bottom-info-text {
+            font-family: 'MyriadPro';
+            font-size: 3.2rem;
+            line-height: 150%;
+            color: rgba(51, 51, 51, 0.5); }
+        .baner-error-404 .baner__content-bottom-items {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          width: 100%;
+          gap: 2.4rem; }
+        .baner-error-404 .baner__content-bottom-item {
+          width: 58.2rem;
+          padding: 2rem 4rem;
+          background-color: #ffffff;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .baner-error-404 .baner__content-bottom-item-img {
+            margin-right: 3.2rem;
+            width: 6.3rem;
+            height: 6.3rem;
+            -webkit-box-shadow: 0px 1.36rem 2rem rgba(64, 185, 244, 0.1);
+                    box-shadow: 0px 1.36rem 2rem rgba(64, 185, 244, 0.1);
+            border-radius: 0.94rem; }
+            .baner-error-404 .baner__content-bottom-item-img img {
+              width: 3.2rem;
+              height: 3.2rem; }
+          .baner-error-404 .baner__content-bottom-item-title {
+            font-family: 'MyriadPro';
+            font-size: 3rem;
+            line-height: normal;
+            width: 65%; }
+    .baner-error-404 .baner__picture {
+      position: absolute;
+      right: -17rem;
+      bottom: 0rem;
+      width: 101rem;
+      height: 81rem; }
+      .baner-error-404 .baner__picture img {
+        position: relative;
+        z-index: 3; } }
 
 .baner--search {
   margin-bottom: 10rem; }
@@ -34144,7 +34399,7 @@ textarea {
     font-weight: 400;
     line-height: 130%;
     margin-bottom: 2.3rem; }
-  
+
   .component--call-us .title,
   .component--call-us .doctor__item-info-title {
     font-family: Montserrat;
@@ -34186,7 +34441,7 @@ textarea {
     .component--call-us .text {
       font-size: 3rem;
       margin-bottom: 4rem; }
-    
+
     .component--call-us .title,
     .component--call-us .doctor__item-info-title {
       font-size: 4rem;
@@ -35578,6 +35833,20 @@ body::after {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .services-p-map {
+    margin-bottom: 12rem; }
+    .services-p-map .services-p__box {
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+      .services-p-map .services-p__box-block-title {
+        margin-bottom: 0; }
+      .services-p-map .services-p__box-down-title {
+        margin-bottom: 3rem;
+        margin-top: 6rem; }
+      .services-p-map .services-p__box-inner {
+        margin-bottom: 9.1rem; }
 
 @media (max-width: 48em) {
   .services-p .container {
@@ -37698,7 +37967,37 @@ body::after {
     border: 0.4rem solid #36B4F1; }
   .s-direction__box-title {
     font-size: 3.2rem;
-    max-width: auto; } }
+    max-width: auto; }
+  .s-direction__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial; }
+  .s-direction__title {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125.926%;
+    margin-bottom: 4rem; }
+  .s-direction__price span {
+    font-size: 3.6rem;
+    padding-right: 1rem; }
+  .s-direction__price strong {
+    font-size: 4.8rem;
+    line-height: 4.6rem;
+    padding-right: 3rem; }
+  .s-direction__div-btn {
+    margin-top: 10rem;
+    margin-bottom: 10rem; }
+  .s-direction__btn {
+    font-size: 3.2rem;
+    padding-right: 4rem; }
+    .s-direction__btn::before {
+      width: 2rem;
+      height: 2rem; } }
 
 .leave-contacts {
   background: #F8F8F8;
@@ -37914,6 +38213,7 @@ body::after {
         top: 0.8rem; }
 
 @media (max-width: 48em) {
+<<<<<<< HEAD
   .leave-contacts-blog {
     background: #ffffff;
     margin-bottom: 20rem; }
@@ -37994,6 +38294,8 @@ body::after {
         width: 4rem;
         height: 4rem;
         top: 1.6rem; }
+=======
+>>>>>>> upstream/main
   .leave-contacts .container {
     padding: 0; }
   .leave-contacts__wrapper {
@@ -38502,6 +38804,8 @@ body::after {
       padding: 5.5rem 5.5rem 3rem;
       -webkit-box-shadow: 0rem 2rem 6rem 0rem rgba(124, 148, 159, 0.1);
               box-shadow: 0rem 2rem 6rem 0rem rgba(124, 148, 159, 0.1); }
+      .pages__content-item:hover {
+        background: #EEF3F7; }
       .pages__content-item-title {
         text-align: center;
         width: 29.4rem;
@@ -39377,6 +39681,63 @@ body::after {
     width: 100%;
     height: 100%; } }
 
+.diseases-details__title {
+  margin-bottom: 3.2rem; }
+
+.diseases-details__subtitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 6rem;
+  margin-bottom: 3.2rem; }
+
+.diseases-details__slider {
+  overflow: hidden; }
+
+.diseases-details__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .diseases-details__list > li {
+    font-family: MyriadPro;
+    font-size: 1, 8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgba(51, 51, 51, 0.5);
+    padding: 2rem 0; }
+    .diseases-details__list > li:first-child {
+      padding-top: 0; }
+    .diseases-details__list > li:last-child {
+      padding-bottom: 0; }
+    .diseases-details__list > li:not(:last-child) {
+      border-bottom: 1px solid rgba(207, 215, 226, 0.5); }
+
+.diseases-details__heading::before {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../img/t-image/icons/diseases-details-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+@media (max-width: 48em) {
+  .diseases-details__title {
+    margin-bottom: 4rem; }
+  .diseases-details__subtitle {
+    font-size: 3.6rem;
+    margin-top: 6.4rem;
+    margin-bottom: 4rem; }
+  .diseases-details__list > li {
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 2.4rem 0; } }
+
 .questions-accordion {
   margin-bottom: 18rem; }
   .questions-accordion #accordion-questions {
@@ -39688,6 +40049,99 @@ body::after {
       font-style: normal;
       font-weight: 400;
       line-height: 130%; }
+  .sl-reviews__btn {
+    display: none; }
+
+@media (max-width: 48em) {
+  .sl-reviews__title {
+    margin-bottom: 6.4rem; }
+    .sl-reviews__title span {
+      display: block;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 1rem; }
+    .sl-reviews__title strong {
+      display: block;
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+    .sl-reviews__title .btn {
+      display: none; }
+  .sl-reviews__pagination {
+    position: relative; }
+  .sl-reviews__pagination-bullets {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .sl-reviews__arrows {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .sl-reviews__pagination .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem; }
+  .sl-reviews__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .sl-reviews__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 16rem; }
+  .sl-reviews__box {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 8rem; }
+  .sl-reviews__box:last-child {
+    margin-bottom: 0; }
+  .sl-reviews__box-icon {
+    margin-right: 0;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2rem; }
+    .sl-reviews__box-icon svg {
+      width: 20rem;
+      height: 20rem; }
+  .sl-reviews__box-inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .sl-reviews__box-inner strong {
+      font-size: 3.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 155.556%; }
+    .sl-reviews__box-inner span {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-align: center; } }
 
 .similar-services {
   margin-bottom: 18rem; }
@@ -39851,6 +40305,89 @@ body::after {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 48em) {
+  .similar-services__title {
+    margin-bottom: 6.4rem; }
+    .similar-services__title span {
+      display: block;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 1rem; }
+    .similar-services__title strong {
+      display: block;
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+  .similar-services__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .similar-services__pagination {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6.2rem; }
+  .similar-services__pagination-bullets {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .similar-services__arrows {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .similar-services__pagination .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem; }
+  .similar-services__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .similar-services__box {
+    width: 100%;
+    height: 72.8rem; }
+  .similar-services__box-content {
+    height: 60.6rem;
+    padding-top: 17.6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem; }
+  .similar-services__box-image-block {
+    width: 24.4rem;
+    height: 24.4rem;
+    border: 0.4rem solid #36B4F1; }
+  .similar-services__box-image {
+    width: 22rem;
+    height: 22rem; }
+  .similar-services__box-title {
+    font-size: 3.6rem;
+    margin-bottom: 3.2rem; }
+  .similar-services__box-text {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; }
+  .similar-services__box-link {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600; }
+    .similar-services__box-link::after {
+      width: 2rem;
+      height: 2.4rem; } }
+
+>>>>>>> upstream/main
 .d-services {
   margin-bottom: 18rem;
   background: #EEF3F7; }
