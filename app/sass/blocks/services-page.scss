@@ -500,7 +500,29 @@
         justify-content: space-between;
     }
 
-  
+    &-map {
+        margin-bottom: 12rem;
+        .services-p {
+            &__box{
+                width: 100%;
+                height: fit-content;
+                &-block {
+                    &-title {
+                        margin-bottom: 0;
+                    }
+                }
+                &-down {
+                    &-title {
+                        margin-bottom: 3rem;
+                        margin-top: 6rem;
+                    }
+                }
+                &-inner {
+                    margin-bottom: 9.1rem;
+                }
+            }
+        }
+    }
 }
 
 
@@ -511,7 +533,9 @@
         .container {
             padding: 0;
         }
-
+        .doctors__spoiler {
+            padding: 0 4rem;
+        }
         &__form {
             padding: 0 4rem;
         }
@@ -526,6 +550,10 @@
                 right: -4rem;
             }
 
+        }
+
+        #search-form {
+            padding: 0 4rem;
         }
 
         &__form-alphabet-inner {

@@ -14,6 +14,211 @@
     line-height: normal;
     margin-bottom: 1.6rem;
   }
+  &-blog-article {
+    height: 50rem;
+    margin-bottom: 0;
+
+    .container {
+      height: 100%;
+    }
+
+    .baner {
+      &__content {
+        width: 45.3rem;
+        flex-shrink: 0;
+        padding-top: 9rem;
+        left: -10.5rem;
+        position: relative;
+      }
+      &__content-title {
+        margin-bottom: 3.6rem;
+      }
+      &__content-text {
+        margin-bottom: 6.1rem;
+      }
+      &__content-form {
+        .btn {
+          height: 4.5rem;
+        }
+      }
+      &__content-input {
+        border-radius: 8rem;
+        background: $white;
+        padding: 0.4rem;
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+      &__content-checkbox {
+        input {
+            &:checked+span:before {
+              background-position: 50% 50%;
+              background-size: 1.2rem 1.2rem;
+              background-repeat: no-repeat;
+              background-image: url('../img/dim-image/icons/subscribe-check-2.svg');
+            }
+          }
+
+          span {
+            color: $list;
+            font-family: Myriad Pro, sans-serif;
+            font-size: 1.1rem;
+            line-height: 160%;
+            padding-left: 3rem;
+
+            &::before {
+              width: 2rem;
+              height: 2rem;
+              border: 1px solid $list;
+              left: 0;
+              top: -0.3rem;
+            }
+          }
+      }
+      &__inner {
+        height: 100%;
+        padding: 0;
+      }
+      &__picture {
+        margin-right: 3.4rem;
+        width: 72.6rem;
+        height: 48.3rem;
+        left: -10.5rem;
+        flex-shrink: 0;
+        &::after {
+          width: 66rem;
+          height: 66rem;
+          top: -5.5rem;
+          left: 50%;
+        }
+      }
+      &__content-checkbox {
+        margin-left: 0.8rem;
+      }
+       &__content-label {
+          position: relative;
+          height: fit-content;
+          display: block;
+          height: 4.5rem;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            background-image: url('../img/dim-image/icons/email-2.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 2.4rem;
+          }
+
+          input {
+            height: 100%;
+            padding-left: 6rem;
+            color: $list;
+            font-family: 'Myriad Pro', sans-serif;
+            font-size: 1.6rem;
+            line-height: normal;
+            border: none;
+          }
+        }
+        &__left {
+          width: 33.2rem;
+          flex-shrink: 0;
+        }
+        &__breadcrumbs {
+          padding-top: 5rem;
+          margin-bottom: 3rem;
+        }
+        &__circles {
+          display: flex;
+          flex-direction: column;
+          row-gap: 4.7rem;
+          margin-bottom: 4.5rem;
+        }
+        &__circle {
+          text-align: right;
+          color: $list;
+            font-family: Montserrat, sans-serif;
+            font-size: 1.6rem;
+            line-height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            svg {
+              width: 12.8rem;
+              height: 12.8rem;
+            }
+
+            &:nth-child(1) {
+              column-gap: 1.9rem;
+              left: -1.5rem;
+            }
+
+            &:nth-child(2) {
+              column-gap: 1.6rem;
+              left: -4.7rem;
+            }
+
+            &:nth-child(3) {
+              column-gap: 1.8rem;
+              left: -6.5rem;
+            }
+
+            &:nth-child(4) {
+              column-gap: 2.2rem;
+              left: -7rem;
+            }
+
+            &::after {
+              content: "";
+              width: 0.5rem;
+              height: 0.5rem;
+              background: #D8DDE4;
+              border-radius: 50%;
+              display: block;
+            }
+        }
+        &__plash {
+          padding: 0.5rem;
+          border-radius: 6.6rem;
+          background: $white;
+          display: flex;
+          align-items: center;
+          column-gap: 1.5rem;
+          position: relative;
+          z-index: 2;
+        }
+        &__plash-img {
+          width: 6rem;
+          height: 6rem;
+          flex-shrink: 0;
+        }
+        &__plash-txt {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+        }
+        &__plash-title {
+          color: $list;
+          font-family: Montserrat, sans-serif;
+          font-size: 1.4rem;
+          line-height: 110%;
+        }
+        &__plash-text {
+          color: $blue;
+          font-family: Montserrat, sans-serif;
+          font-size: 1.6rem;
+          line-height: 100%;
+        }
+    }
+  }
   &-carousel {
     height: auto;
     overflow: visible;
@@ -112,6 +317,10 @@
   }
   &-history {
     margin-bottom: 10rem;
+    & .baner__picture {
+      height: auto;
+      margin-top: -2rem;
+    }
   }
   &__container {
     display: grid;
@@ -409,6 +618,70 @@
       height: 82.1rem;
       border: 1px solid #d8dde4;
       border-radius: 50%;
+    }
+  }
+  &-news {
+    margin-bottom: 12rem;
+    .baner {
+      &__content-title {
+        margin-top: 12.7rem;
+      }
+      &__content-text {
+        font-family: Myriad Pro, sans-serif;
+        line-height: 130%;
+      }
+      &__picture {
+        margin-right: 2.7rem;
+        width: 82rem;
+      }
+    }
+  }
+  &-news-article {
+    height: 41.3rem;
+    margin-bottom: 6rem;
+    .baner {
+      &__picture {
+        width: 59.1rem;
+        height: 35.4rem;
+        flex-shrink: 0;
+        margin: auto 0 0 0;
+        &::after {
+          display: none;
+        }
+      }
+      &__inner {
+        width: 158rem;
+        height: 41.3rem;
+      }
+      &__content {
+        width: 75%;
+      }
+      &__desc {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+        margin-bottom: 3rem;
+      }
+      &__desc-btn {
+        padding: 1.2rem 2.5rem;
+        border-radius: 10rem;
+        background: $white;
+        color: $fzAll;
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.8rem;
+        line-height: 130%;
+      }
+      &__desc-date {
+        color: $blue;
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      &__breadcrumbs {
+        margin-bottom: 7rem;
+      }
     }
   }
   &-licenzia {
@@ -2380,6 +2653,7 @@
   &-error-404 {
     position: relative;
     overflow: hidden;
+    height: fit-content;
     margin-bottom: 0.2rem;
     .baner {
       &__inner {
@@ -2561,7 +2835,7 @@
           width: 82.6rem;
           height: 85.5rem;
           top: -15rem;
-          left: 53%;
+          left: 50%;
         }
       }
     }
@@ -3799,6 +4073,88 @@
         }
       }
     }
+
+    &-news {
+      margin-bottom: 20rem;
+      .baner {
+        &__content-title {
+          margin-top: 10rem;
+          margin-bottom: 2.6rem;
+        }
+        &__inner {
+          padding: 0;
+          &::after {
+            top: 48rem;
+          }
+        }
+        &__content-text {
+          line-height: 150%;
+          font-size: 3.2rem;
+        }
+        &__content {
+          padding-top: 12rem;
+          margin-bottom: 8.4rem;
+        }
+        &__picture {
+          margin-right: 0;
+          width: 76rem;
+          height: 67rem;
+        }
+      }
+    }
+
+    &-news-article {
+      height: auto;
+      margin-bottom: 12rem;
+
+      .breadcrumbs__text {
+        white-space: wrap;
+        line-height: 130%;
+      }
+
+      .baner {
+        &::after {
+          display: none;
+        }
+        &__picture {
+          width: 71.2rem;
+          height: 42.6rem;
+          margin-left: -4rem;
+        }
+        &__inner {
+          width: 100%;
+          height: auto;
+          &::after {
+            display: none;
+          }
+        }
+        &__content {
+          width: 100%;
+          padding-top: 12rem;
+        }
+        &__desc {
+          column-gap: 4.2rem;
+          margin-bottom: 4rem;
+        }
+        &__desc-btn {
+          padding: 2rem 5rem;
+          border-radius: 20rem;
+          font-size: 3rem;
+          line-height: 150%;
+        }
+        &__desc-date {
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 150%;
+        }
+        &__breadcrumbs {
+          margin-bottom: 8.8rem;
+        }
+        &__content-title {
+          margin-bottom: 13.6rem;
+        }
+      }
+    }
     &-doctors-chapter-zapis {
       .baner {
         &__text {
@@ -4079,7 +4435,7 @@
         }
         &__content {
           width: 100%;
-          padding-top: 11rem;
+          padding-top: 5rem;
           margin-bottom: 5rem;
           &-links {
             margin-bottom: 9.3rem;
@@ -4649,7 +5005,7 @@
       position: relative;
       z-index: 2;
     }
-}
+  }
 
   .baner__picture::after {
     position: absolute;
@@ -4704,11 +5060,6 @@
     z-index: 2;
   }
 }
-
-
-
-
-
 
 @media (max-width: 48em) {
   .baner--services {
@@ -4878,17 +5229,133 @@
       }
     }
   }
+  &-preparation-information {
+    .baner {
+      &__image-wrap {
+        width: 73rem;
+      }
+      &__image {
+        &.img-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  &-vacancy {
+    height: 54.7rem;
+  }
+  &-vacancy-details {
+    height: 60rem;
+    .baner {
+      &__image-wrap {
+        align-self: center;
+        &::before {
+          width: 95.1rem;
+          height: 95.1rem;
+        }
+      }
+    }
+  }
+  &-diseases-details {
+    height: 74.8rem;
+    .baner {
+      &__article-value {
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+        margin-bottom: 8rem;
+        &.mobile {
+          display: none;
+        }
+        .white-circle {
+          font-family: MyriadPro;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: #2f2f2f;
+          padding: 0.7rem 2.4rem;
+          border-radius: 5.4rem;
+          background-color: #fff;
+        }
+        .date {
+          font-family: MyriadPro;
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          color: #36b4f1;
+        }
+      }
+      &__image-wrap {
+        width: 123.8rem;
+        height: 95rem;
+        &::before {
+          display: none;
+        }
+      }
+      &__breadcrumbs {
+        margin-bottom: 7.5rem;
+      }
+      &__text-content {
+        margin-bottom: 13.2rem;
+      }
+      &__text {
+        &::before {
+          display: none;
+        }
+      }
+      &__scroll-block {
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+        .scroll-block {
+          &-icon {
+            & > svg {
+              width: 2.5rem;
+            }
+          }
+          &-text {
+            font-family: Montserrat;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            color: #36b4f1;
+          }
+        }
+      }
+    }
+  }
+  &-patients-voice {
+    height: 50rem;
+    position: relative;
+    .baner {
+      &__container {
+        grid-template-columns: 91rem 73.6rem;
+      }
+      &__image-wrap {
+        position: absolute;
+        bottom: -5rem;
+        right: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &__text {
+        width: 50.1rem;
+      }
+      &__image {
+        width: 81.3rem;
+        height: 60.2rem;
+        object-fit: contain;
+        &.img-mobile {
+          display: none;
+        }
+      }
+    }
+  }
 }
-
- .baner--s-direction {
-   margin-bottom: 4rem;
-
-
-   .baner__content-title {
-
-   }
- }
-
 
 @media (max-width: 48em) {
   .baner {
@@ -5033,9 +5500,146 @@
         }
       }
     }
+    &-preparation-information {
+      .baner {
+        &__text-wrap {
+          margin-bottom: 10.6rem;
+        }
+        &__text-content {
+          width: 63.6rem;
+        }
+        &__image-wrap {
+          width: 70rem;
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: -15%;
+          }
+        }
+        &__image {
+          &.img-desctop {
+            display: none;
+          }
+          &.img-mobile {
+            display: block;
+          }
+        }
+      }
+    }
+    &-vacancy {
+      height: 100rem;
+      .baner {
+        &__breadcrumbs {
+          margin-bottom: 8.4rem;
+        }
+        &__text-wrap {
+          margin-bottom: 10.4rem;
+        }
+      }
+    }
+    &-vacancy-details {
+      height: 105rem;
+      .baner {
+        &__image-wrap {
+          &::before {
+            width: 79.6rem;
+            height: 79.6rem;
+            top: -45%;
+            left: 32%;
+          }
+        }
+        &__breadcrumbs {
+          .breadcrumbs {
+            &__text {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-diseases-details {
+      height: 139.2rem;
+      .baner {
+        &__article-value {
+          &.desctop {
+            display: none;
+          }
+          &.mobile {
+            display: flex;
+          }
+          margin-bottom: 0;
+          gap: 2.6rem;
+          margin-top: 6.4rem;
+          .white-circle {
+            font-size: 3.2rem;
+            padding: 1.4rem 4.8rem;
+            border-radius: 10.8rem;
+          }
+          .date {
+            font-size: 3.2rem;
+          }
+        }
+        &__image-wrap {
+          width: 81.4rem;
+          height: 64rem;
+          transform: translateY(1rem) translateX(-10rem);
+          &::before {
+            display: none;
+          }
+        }
+        &__breadcrumbs {
+          margin-bottom: 13rem;
+        }
+        &__text-content {
+          width: 71rem;
+          margin-bottom: 0;
+        }
+        &__text-wrap {
+          margin-bottom: 0;
+        }
+        &__text {
+          font-size: 3.2rem;
+          &::before {
+            display: none;
+          }
+        }
+        &__scroll-block {
+          display: none;
+        }
+      }
+    }
+    &-patients-voice {
+      height: 120rem;
+      .baner {
+        &__container {
+          grid-template-columns: 71rem;
+        }
+        &__text {
+          width: 63.6rem;
+        }
+        &__breadcrumbs {
+          font-size: 2.6rem;
+        }
+        &__image-wrap {
+          bottom: 0;
+          right: 3rem;
+        }
+        &__image {
+          width: 77rem;
+          height: 55.6rem;
+          &.img-desctop {
+            display: none;
+          }
+          &.img-mobile {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
-
 
 .baner--s-parent {
   height: 48.7rem;
@@ -5044,8 +5648,8 @@
     display: flex;
     margin-bottom: 3.6rem;
     span {
-      color:  rgba(51, 51, 51, 0.50);
-      font-family: 'Myriad Pro',sans-serif;
+      color: rgba(51, 51, 51, 0.5);
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 2.4rem;
       font-style: normal;
       font-weight: 300;
@@ -5055,8 +5659,8 @@
 
     strong {
       display: block;
-      color:  #36B4F1;
-      font-family: 'Myriad Pro',sans-serif;
+      color: #36b4f1;
+      font-family: 'Myriad Pro', sans-serif;
       font-size: 3.2rem;
       font-style: normal;
       font-weight: 700;
@@ -5086,10 +5690,9 @@
 
     img {
       position: relative;
-    z-index: 2;
+      z-index: 2;
     }
   }
-
 
   .baner__picture::after {
     top: -3rem;
@@ -5098,25 +5701,125 @@
     width: 55.7rem;
     height: 55.7rem;
     border: 1px solid #d8dde4;
-
   }
-
-
 }
 
 
 @media (max-width: 48em) {
+  .baner--s-parent {
+    height: auto;
+    padding-bottom: 52rem;
+
+    .container {
+      padding: 0;
+    }
+
+    .baner__content {
+      width: 100%;
+    }
+
+    .baner__inner {
+      padding: 0;
+      position: initial;
+      &::after {
+
+        width: 60rem;
+        height: 60rem;
+        top: 74rem;
+        left: 27%;
+      }
+    }
+
+    .baner__content-links {
+      padding-left: 4rem;
+      flex-wrap: wrap;
+    }
+
+
+    .baner__picture {
+      position: absolute;
+      bottom:0;
+      width: 71.6rem;
+      height: 49rem;
+
+    }
+
+    .baner__content-title {
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .baner__content-text {
+      margin-left: 4rem;
+    }
+
+
+    .baner__price-d {
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+
+      span {
+        font-size: 3.6rem;
+        margin-right: 0.8rem;
+      }
+
+      strong {
+        font-size: 4.8rem;
+        line-height: 5rem;
+        padding-right: 3rem;
+      }
+    }
+  }
+
+}
+
+
+.baner--empty-services {
+  height: 53.7rem;
+
+  .baner__content {
+    padding-top: 5rem;
+    width: 63%;
+  }
+
+  .baner__content-text {
+    width: 60rem;
+  }
+
+  .baner__picture {
+    width: 70.9rem;
+    height: 43rem;
+    margin-right: 6.7rem;
+    position: absolute;
+    margin-top: auto;
+    bottom: 0;
+    right: 16.3rem;
+    margin-right: 0;
+    &::after {
+      top: -2rem;
+      left: 37%;
+      width: 60rem;
+      height: 60rem;
+    }
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+}
+@media (max-width: 48em) {
   .baner {
     &-o_klinike {
       margin-bottom: 20rem;
-      .breadcrumbs{
+      .breadcrumbs {
         margin-bottom: 7rem;
         &__link {
-        color: rgba(51, 51, 51, 0.5);
+          color: rgba(51, 51, 51, 0.5);
         }
       }
       .baner {
-        &__inner{
+        &__inner {
           padding: 0;
           &::after {
             content: none;
@@ -5212,32 +5915,52 @@
       }
     }
     &-korporativnie {
-      margin-bottom: 12rem;
+      margin-bottom: 20rem;
+      .breadcrumbs{
+        margin-bottom: 7rem;
+        width: 69.4rem;
+        flex-wrap: nowrap;
+        &__link {
+        color: rgba(51, 51, 51, 0.5);
+        }
+        &__text {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
       .baner {
-        .breadcrumbs{
+
+        .breadcrumbs {
           margin-bottom: 7rem;
           &__link {
-          color: rgba(51, 51, 51, 0.5);
+            color: rgba(51, 51, 51, 0.5);
           }
         }
+
+        &__inner::after {
+          top: 45rem;
+
+        }
         &__content {
-          width: 50%;
+          width: 100%;
           padding-top: 3rem;
           &-links {
             margin-bottom: 7.2rem;
           }
           &-title {
             line-height: 110%;
-            margin-bottom: 3.1rem;
+            margin-bottom: 4rem;
           }
           &-text {
-            width: 65%;
+            width: 100%;
           }
         }
         &__picture {
-          height: 43rem;
-          margin-right: 0;
-          width: 67rem;
+          height: 55.2rem;
+          margin-left: -5rem;
+          margin-top: -7rem;
+          width: 82.8rem;
           &::after {
             width: 73.7rem;
             height: 73.7rem;
@@ -5255,10 +5978,10 @@
           top: 41rem;
           left: 55%;
         }
-        .breadcrumbs{
+        .breadcrumbs {
           margin-bottom: 7rem;
           &__link {
-          color: rgba(51, 51, 51, 0.5);
+            color: rgba(51, 51, 51, 0.5);
           }
         }
         &__content {
@@ -5284,13 +6007,34 @@
     }
     &-kontrol-kachestva {
       margin-bottom: 12rem;
+      .breadcrumbs {
+        margin-bottom: 7rem;
+        width: 110%;
+        &__link {
+          color: rgba(51, 51, 51, 0.5);
+        }
+        &__text {
+          margin-left: -0.5rem;
+          font-size: 2.8rem;
+        }
+      }
       .baner {
+        &__inner::after {
+          width: 84.2rem;
+          height: 84.2rem;
+          top: 41rem;
+        }
         &__content {
+          width: 100%;
+          padding-top: 3rem;
           &-links {
             margin-bottom: 7.5rem;
           }
           &-title {
             line-height: 110%;
+          }
+          &-text {
+            color: #999;
           }
         }
         &__picture {
@@ -5305,8 +6049,208 @@
         }
       }
     }
+    &-error-404 {
+      position: relative;
+      overflow: hidden;
+      height: fit-content;
+      margin-bottom: 0.2rem;
+      .baner {
+        &__inner {
+          display: block;
+          &::after {
+            width: 97.6rem;
+            height: 97.6rem;
+            top: unset;
+            bottom: -12rem;
+          }
+        }
+        &__content {
+          padding-top: 8.6rem;
+          width: 100%;
+          padding-bottom: 3rem;
+          margin: 0;
+          position: relative;
+          z-index: 5;
+          &-links {
+            margin-bottom: 1.3rem;
+            & .nolink {
+              font-family: 'MyriadPro';
+              font-weight: 600;
+              font-size: 2.5rem;
+              line-height: 100%;
+            }
+          }
+          &-title {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 5.5rem;
+            line-height: 100%;
+            letter-spacing: normal;
+            margin-bottom: 6rem;
+            & span {
+              display: block;
+              font-weight: 400;
+            }
+          }
+          &-btns {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8rem;
+            &-link {
+              display: inline-block;
+              padding: 2rem 19rem;
+              margin-right: 2.4rem;
+            }
+            &-search {
+              display: flex;
+              flex-wrap: wrap;
+              position: relative;
+              & div {
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                cursor: pointer;
+                & img {
+                  width: 4.2rem;
+                  height: 4.2rem;
+                }
+                &.active {
+                  display: flex;
+                  top: -10rem;
+                  right: 0;
+                  left: unset;
+                }
+              }
+              & label {
+                position: relative;
+                display: none;
+                margin-top: 4rem;
+                & input {
+                  height: 10rem;
+                  background-color: $white;
+                  outline: none;
+                  border: none;
+                  width: 65.2rem;
+                  border-radius: 14rem;
+                  font-family: 'MyriadPro';
+                  font-size: 3rem;
+                  line-height: normal;
+                  color: rgba(51, 51, 51, 0.5);
+                  border: 0.2rem solid #D8DDE4;
+                  padding-left: 5.4rem;
+                  &::placeholder {
+                    font-family: 'MyriadPro';
+                    font-size: 3rem;
+                    line-height: normal;
+                    color: rgba(51, 51, 51, 0.5);
+                  }
+                }
+                & button {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 2.8rem;
+                  & img {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    object-fit: contain;
+                  }
+                }
+              }
+            }
+          }
+          &-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-info {
+              width: 80%;
+              margin-top: 0;
+              margin-bottom: 47.4rem;
+              &-title {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 3.2rem;
+                line-height: 150%;
+                margin-bottom: 1.5rem;
+              }
+              &-text {
+                font-family: 'MyriadPro';
+                font-size: 3.2rem;
+                line-height: 150%;
+                color: rgba(51, 51, 51, 0.5);
+              }
+            }
+            &-items {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 100%;
+              gap: 2.4rem;
+            }
+            &-item {
+              width: 58.2rem;
+              padding: 2rem 4rem;
+              background-color: $white;
+              display: flex;
+              align-items: center;
+              &-img {
+                margin-right: 3.2rem;
+                width: 6.3rem;
+                height: 6.3rem;
+                box-shadow: 0px 1.36rem 2rem rgba(64, 185, 244, 0.1);
+                border-radius: 0.94rem;
+                & img {
+                  width: 3.2rem;
+                  height: 3.2rem;
+                }
+              }
+              &-title {
+                font-family: 'MyriadPro';
+                font-size: 3rem;
+                line-height: normal;
+                width: 65%;
+              }
+            }
+          }
+        }
+        &__picture {
+          position: absolute;
+          right: -17rem;
+          bottom: 0rem;
+          width: 101rem;
+          height: 81rem;
+          & img {
+            position: relative;
+            z-index: 3;
+          }
+        }
+      }
+    }
   }
 }
 
 
-/////////////////////////////////// t-styles ///////////////////////////////////////
+.baner--search {
+  margin-bottom: 10rem;
+
+  .baner__picture {
+    width: 70.9rem;
+    height: 43rem;
+    margin-right: 9.7rem;
+    position: relative;
+    margin-top: auto;
+    overflow: hidden;
+}
+}
+
+
+

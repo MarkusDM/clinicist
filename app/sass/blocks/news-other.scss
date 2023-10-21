@@ -1,0 +1,43 @@
+.news-other {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .news-other {
+      &__container {
+        row-gap: 8rem;
+      }
+  
+      &__subtitle {
+        margin-bottom: 3rem;
+      }
+
+      &__titles .link {
+        display: none;
+      }
+  
+      &__cards {
+        row-gap: 4rem;
+      }
+    }
+}

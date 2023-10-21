@@ -560,6 +560,7 @@ document.addEventListener('DOMContentLoaded', function () {
       slider25 = null
     }
   }
+
   /* let curnum = document.querySelector(".procedures-pagination .current");
     slider24.on("slideChange", function () {
     let ind = slider5.realIndex + 1,

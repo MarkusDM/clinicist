@@ -1,0 +1,181 @@
+.our-vacancies {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  &__page-navigation {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__call-box {
+    width: 45.3rem;
+    padding: 5rem 4rem 4rem 4rem;
+    box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .call-box {
+      &__icon {
+        width: 9.9rem;
+        height: 9.9rem;
+        border-radius: 50%;
+        box-shadow: 0px 2.5rem 4rem 0px rgba(124, 148, 159, 0.05);
+        margin-bottom: 4.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > svg {
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+      }
+      &__title {
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        color: #2f2f2f;
+        margin-bottom: 1.9rem;
+        text-align: center;
+      }
+      &__text {
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: rgba(51, 51, 51, 0.5);
+        margin-bottom: 4.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .our-vacancies {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3.2rem;
+    }
+    &__call-box {
+      width: 67rem;
+      padding: 6.4rem 4rem;
+      .call-box {
+        &__icon {
+          width: 12rem;
+          height: 12rem;
+          & > svg {
+            width: 5.8rem;
+            height: 5.8rem;
+            margin-bottom: 4rem;
+          }
+        }
+        &__title {
+          font-size: 3.2rem;
+          line-height: 150%;
+          margin-bottom: 3.2rem;
+        }
+        &__text {
+          font-size: 2.6rem;
+          margin-bottom: 6.4rem;
+        }
+      }
+    }
+    &__page-navigation {
+      display: none;
+    }
+  }
+}
+
+.vacancy {
+  &__baner {
+    position: relative;
+    .baner {
+      &__phone-box {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        padding: 2.8rem 18.6rem 2.8rem 23.8rem;
+        box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+        background-color: #fff;
+        border-top-right-radius: 6.5rem;
+        border-bottom-right-radius: 6.5rem;
+        z-index: 10;
+        display: flex;
+        gap: 3rem;
+        .phone-box {
+          &__icon {
+            width: 6.8rem;
+            height: 6.8rem;
+            background-color: #36b4f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.4rem;
+            & > svg {
+              width: 3.2rem;
+              height: 3.2rem;
+            }
+          }
+          &__value {
+            p {
+              &:nth-child(1) {
+                font-family: MyriadPro;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                color: rgba(51, 51, 51, 0.5);
+                margin-bottom: 0.4rem;
+              }
+              &:nth-child(2) {
+                font-family: Montserrat;
+                font-size: 3rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                color: #36b4f1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .vacancy {
+    &__baner {
+      .baner {
+        &__phone-box {
+          padding: 1.6rem 16rem 1.6rem 4rem;
+          box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1);
+          .phone-box {
+            &__icon {
+              width: 9.2rem;
+              height: 9.2rem;
+              border-radius: 2.8rem;
+            }
+            &__value {
+              p {
+                &:nth-child(1) {
+                  font-size: 2.6rem;
+                  margin-bottom: 0;
+                  margin-top: 0.6rem;
+                }
+                &:nth-child(2) {
+                  font-size: 3.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

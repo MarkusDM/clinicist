@@ -220,7 +220,7 @@ function initBoxDown() {
   if (window.innerWidth <= 768) {
     if (!initBox) {
       initBox = true;
-      $('.services-p__wrapper').each(function () {
+      $('.services-p__box').each(function () {
         let more = $(this).find('.services-p__box-inner');
         let hide = $(this).find('.services-p__box-down');
         hide.hide(0);
@@ -333,6 +333,7 @@ const slReviews = new Swiper('.sl-reviews__swiper', {
     nextEl: '.sl-reviews__next',
     prevEl: '.sl-reviews__prev',
   },
+
   on: {
     slideChange: function (slReviews) {
         $('.swiper-pagination-bullet').removeClass('swiper-pagination-bullet-active');
@@ -346,12 +347,19 @@ const slReviews = new Swiper('.sl-reviews__swiper', {
 
 const similarServicesSwiper = new Swiper('.similar-services__swiper', {
   spaceBetween: rem(3.6),
-  slidesPerView: 3,
+  slidesPerView: 1,
   speed: 1000,
   navigation: {
     nextEl: '.similar-services__next',
     prevEl: '.similar-services__prev',
   },
+  breakpoints: {
+		769: {
+			slidesPerView: 3,
+			spaceBetween: rem(1),
+		},
+		
+	},
   on: {
     slideChange: function (similarServicesSwiper) {
         $('.swiper-pagination-bullet').removeClass('swiper-pagination-bullet-active');
@@ -360,5 +368,4 @@ const similarServicesSwiper = new Swiper('.similar-services__swiper', {
   },
   
 });
-
 

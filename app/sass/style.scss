@@ -88,20 +88,39 @@
 @import './blocks/leave-contacts';
 @import './blocks/about-the-s';
 
-@import './blocks/patients-stocks-page';
-@import './blocks/patients-information-page';
-
 @import './blocks/quote';
 @import './blocks/part-team';
 @import './blocks/pages';
 
-
 @import './blocks/patients-stocks-page';
 @import './blocks/patients-information-page';
+@import './blocks/finished-resume';
+@import './blocks/vacancy-page';
+@import './blocks/vacancy-details-page';
+@import './blocks/information-for-applicants';
+@import './blocks/diseases-details-page';
+@import './blocks/questions-accordion';
+@import './blocks/patients-cards-page';
+@import './blocks/patients-page';
 
 @import './blocks/sl-reviews';
 @import './blocks/services-parent';
 @import './blocks/similar-services';
+@import './blocks/detailed-services';
+@import './blocks/d-services-prices';
+@import './blocks/empty-services';
+
+@import './general/dim-elements.scss';
+@import './blocks/subscribe-block.scss';
+@import './blocks/news.scss';
+@import './blocks/news-article.scss';
+@import './blocks/news-other.scss';
+@import './blocks/socials.scss';
+@import './blocks/news-descs.scss';
+@import './blocks/blog-card.scss';
+@import './blocks/rec-materials.scss';
+@import './blocks/blog-cards.scss';
+@import './blocks/blog-search.scss';
 
 #ui-datepicker-div {
   display: block !important;

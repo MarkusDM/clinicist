@@ -1,0 +1,152 @@
+.news {
+  margin-bottom: 18rem;
+
+  .article-card__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__asides-subscribe {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 4rem;
+    width: 100%;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cards-row {
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
+  
+  &__cards-link {
+    align-self: flex-start;
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__asides {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 45.3rem;
+  }
+}
+
+.navigation-news {
+  background: #EEF3F7;
+  padding: 3rem;
+
+  &__title {
+    font-family: Montserrat, sans-serif;
+    color: $fzAll;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 120%;
+    padding-bottom: 2.3rem;
+    border-bottom: 0.1rem solid $grey;
+    margin-bottom: 3rem;
+  }
+}
+
+.tabs-news {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+  &__btn {
+    padding: 0.9rem 2.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid $grey;
+    background: $white;
+    color: $list;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 150%;
+    transition: all 0.3s ease;
+
+    &.active {
+      color: $orange;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+
+  .news {
+    margin-bottom: 20rem;
+
+    .article-card__heading {
+      margin-bottom: 1.5rem;
+    }
+
+    &__asides-subscribe {
+      display: block;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__cards {
+      margin-bottom: 20rem;
+      margin-top: 14rem;
+    }
+
+    &__cards-row {
+      margin-bottom: 8rem;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 5.6rem;
+    }
+
+    &__asides {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      width: 100%;
+
+      .navigation-news,
+      .call-block {
+        display: none;
+      }
+    }
+  }
+
+  .navigation-news {
+    padding: 4rem;
+
+    &__title {
+      font-size: 3.6rem;
+      padding-bottom: 3rem;
+      margin-bottom: 4rem;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+
+  .tabs-news {
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    &__btn {
+      padding: 2rem 2.8rem;
+      border-radius: 2rem;
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}

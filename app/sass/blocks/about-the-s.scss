@@ -128,3 +128,109 @@
         }
     }
 }
+
+
+@media (max-width: 48em) { 
+
+    .about-the-s {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__left {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 143.75%;
+            margin-bottom: 4rem;
+        }
+
+     
+
+        &__sidebar {
+			display: flex;
+			width: 100%;
+			justify-content: initial;
+			align-items: initial;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
+			border-bottom: 0.3rem solid #a0a1a4;
+            margin-bottom: 6rem;
+		}
+
+		&__sidebar::-webkit-scrollbar {
+			display: none;
+		}
+
+        &__item {
+            border: none;
+            height: auto;
+            padding: 0;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%;
+            margin-right: 4rem;
+            padding-bottom: 2rem;
+            &::before {
+                display: none;
+            }
+        }
+
+        &__item.active {
+            background: none;
+            font-weight: 400;
+            &::after {
+                content:'';
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                background: #36B4F1;
+                bottom: -0.15rem;
+                z-index: 2;
+                left: 0;
+            }
+        }
+
+        &__right {
+            width: 100%;
+        }
+
+        &__content {
+            h3 {
+                font-size: 5.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125.926%;
+                margin-bottom: 6rem;
+            }
+
+            p {
+               
+                font-size: 3.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                margin-bottom: 4rem;
+            }
+
+            li {
+                font-size: 3.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                &::before {
+                    width: 2rem;
+                    height: 2.7rem;
+                }
+            }
+        }
+    }
+
+}
