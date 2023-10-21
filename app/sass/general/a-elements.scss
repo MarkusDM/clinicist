@@ -583,6 +583,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3.6rem;
+      row-gap: 3.3rem;
+      .select {
+        flex: 0 0 auto;
+        width: auto;
+      }
+      .sort-dropdown__item {
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 1.2rem;
+      }
+    }
   }
   &__item {
     display: inline-flex;
@@ -837,7 +852,7 @@
   // .doctor-card__hours-group
 
   &__hours-group {
-    padding: 1.6rem 0;
+    padding: 1.6rem 2rem;
     display: grid;
     gap: 1.2rem;
     border-radius: 0.8rem;
@@ -847,10 +862,10 @@
   // .doctor-card__hours-row
 
   &__hours-row {
-    padding: 0 2rem;
+    // padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 1.2rem;
+    gap: 1.2rem;
   }
 
   // .doctor-card__hours
@@ -861,15 +876,20 @@
   // .doctor-card__hours-more
 
   &__hours-more {
+    margin-top: 2.5rem;
     justify-self: center;
-    &.link {
+    &::after {
+      transform: rotate(90deg);
+      transition: transform 0.3s ease;
+    }
+    ._active & {
       &::after {
-        transition: transform 0.3s ease;
-        ._showmore-active & {
-          transform: rotate(-90deg);
-        }
+        transform: rotate(-90deg);
       }
     }
+  }
+
+  &__hours-container {
   }
 }
 
@@ -1076,7 +1096,7 @@
     position: relative;
     padding: 0 3rem;
     display: grid;
-    grid-template-columns: 1fr 11.1rem;
+    grid-template-columns: 1fr 11.2rem;
     align-items: center;
     column-gap: 1rem;
     height: 100%;
@@ -1636,6 +1656,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.3rem;
+    &._active {
+      .review-card__show_response {
+        display: none;
+      }
+    }
   }
 
   // .review-card__text-item
@@ -1672,6 +1697,117 @@
 
   &__link {
     align-self: flex-start;
+  }
+
+  // .review-card__spoilers
+
+  &__spoilers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 3.2rem;
+  }
+
+  // .review-card__showmore
+
+  &__showmore {
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+  }
+
+  // .review-card__show
+
+  &__show {
+    &_response {
+      &.link {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &.link {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    &._active {
+      &.link {
+        &::after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  // .review-card__review-date
+
+  &__review-date {
+    margin-left: auto;
+    color:  rgba(51, 51, 51, 0.50);
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 110%;
+  }
+
+  &__response {
+    flex-direction: column;
+  }
+
+  &__response-head {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  &__response-img {
+    flex: 0 0 7.2rem;
+    width: 7.2rem;
+    height: 7.2rem;
+    border: 2px solid $blue;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__response-heading-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__response-heading {
+    margin-bottom: 0.5rem;
+  }
+
+  &__response-subheading {
+    font-size: 1.6rem;
+  }
+
+  &__response-text {
+    margin-bottom: 3.2rem;
+    max-width: 67.2rem;
+    color: #2F2F2F;
+  }
+
+  &__response-date {
+    @extend .review-card__review-date;
+    margin-bottom: 2rem;
+  }
+
+  &__showless {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .link {
+      &::after {
+        transform: rotate(-90deg);
+      }
+    }
   }
 }
 
@@ -1906,16 +2042,16 @@ box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 2.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
     border: 1px solid rgba(47, 47, 47, 0.35);
     border-radius: 50%;
     &::before {
       content: "";
-      flex: 0 0 1.1rem;
-      width: 1.1rem;
-      height: 1.1rem;
+      flex: 0 0 1rem;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
       background-color: $orange;
       transform: scale(0);
@@ -1952,7 +2088,7 @@ box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
     max-width: 21.6rem;
 font-family: MyriadPro;
 font-size: 2.2rem;
-line-height: 127.273%; 
+line-height: 127.273%;
   }
 }
 
@@ -1981,7 +2117,7 @@ line-height: 127.273%;
     height: 100%;
     object-fit: contain;
     }
-  
+
   }
 
   // .hint__body
@@ -2066,7 +2202,7 @@ line-height: 127.273%;
   }
 }
 
-// patients 
+// patients
 .patients {
   display: flex;
   flex-direction: column;
@@ -2230,6 +2366,16 @@ line-height: 127.273%;
       object-fit: contain;
     }
   }
+
+
+  // .details-steps__item-cost
+
+  &__item-cost {
+    color: $blue;
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-weight: 600;
+  }
 }
 
 // warning
@@ -2251,24 +2397,253 @@ line-height: 127.273%;
   // .warning__text
 
   &__text {
-    font-size: 1.6rem;    
+    font-size: 1.6rem;
     line-height: 150%;
     color: #2f2f2f;
   }
 }
 
+// all-doctors card
+.all-doctors-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.6rem;
+  font-family: MyriadPro;
+  text-align: center;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
+  background-color: #ffffff;
+
+  // .all-doctors-card__image-wrap
+
+  &__image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 14rem;
+    border: 2px solid $blue;
+    border-radius: 50%;
+  }
+
+  // .all-doctors-card__image
+
+  &__image {
+    flex: 0 0 12rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  // .all-doctors-card__heading
+
+  &__heading {
+    position: relative;
+    flex: 1 1 auto;
+    font-size: 2.2rem;
+    line-height: 145.455%;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6.6rem;
+      height: 1px;
+      bottom: -0.8rem;
+      left: 50%;
+      background-color: $blue;
+      transform: translateX(-50%);
+    }
+  }
+
+  // .all-doctors-card__text
+
+  &__text {
+    font-size: 1.3rem;
+    line-height: 246.154%;
+  }
+}
+
+// verify
+.verify {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+
+  // .verify__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .verify__heading
+
+  &__heading {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: $blue;
+  }
+
+  // .verify__text
+
+  &__text {
+  }
+}
+
+// all reviews card
+.all-reviews-card {
+  display: grid;
+  grid-template-columns: 45.7rem 1fr;
+  background-color: #EEF3F7;
+  .review-card__text-wrap {
+      margin-bottom: 0;
+  }
+
+  // .all-reviews-card__info
+
+  &__info {
+    padding: 4rem 7rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .all-reviews-card__heading
+
+  &__heading {
+    margin-bottom: 3.2rem;
+    font-weight: 500;
+  }
+
+  // .all-reviews-card__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.4rem;
+  }
+
+  // .all-reviews-card__group-item
+
+  &__group-item {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  // .all-reviews-card__group-heading
+
+  &__group-heading {
+    font-family: MyriadPro;
+    font-size: 1.6rem;
+    line-height: 123.077%;
+    color: $blue;
+  }
+
+  // .all-reviews-card__group-txt
+
+  &__group-txt {
+    color: #2F2F2F;
+  }
+
+  // .all-reviews-card__body
+
+  &__body {
+    position: relative;
+    .review-card__text-content {
+      max-width: 57.1rem;
+    }
+  }
+}
+
+[data-showmore-text] {
+  overflow: hidden;
+}
 
 @media (max-width: 48em) {
+  .all-reviews-card {
+    padding: 4rem;
+    grid-template-columns: 1fr;
+    .rating-group__subtitle {
+      margin-bottom: 0;
+      align-self: center;
+    }
+    .review-card {
+      padding: 0;
+      &__heading-wrap {
+        order: -1;
+      }
+      &__showmore {
+        margin-top: 3.7rem;
+      }
+      &__text-wrap {
+        margin-bottom: 0;
+        row-gap: normal;
+        .review-card__response {
+          margin-top: 6.3rem;
+          padding-top: 5rem;
+          border-top: 1px solid #D8DDE4;
+        }
+      }
+      &__text-item {
+       &:not(:last-child) {
+        margin-bottom: 2.6rem;
+       }
+      }
+    }
+    &__heading {
+      margin-bottom: 0;
+      font-size: 3.6rem;
+      font-weight: 600;
+      line-height: 166.667%;
+    }
+    &__group {
+      row-gap: 2.4rem;
+    }
+    &__group-item {
+      column-gap: 2.4rem;
+    }
+    &__group-heading {
+      font-size: 2.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &__info {
+      margin-bottom: 3.6rem;
+      padding: 0;
+      order: -1;
+    }
+  }
+  .all-doctors-card {
+    padding: 1.6rem 3.4rem;
+    row-gap: normal;
+    &__image-wrap {
+      margin-bottom: 2.4rem;
+    }
+    &__heading {
+      margin-bottom: 3.2rem;
+      font-size: 3rem;
+      line-height: 130.333%;
+      &::after {
+        bottom: -1.6rem;
+        width: 13.2rem;
+      }
+    }
+    &__text {
+      font-size: 2.6rem;
+      line-height:  246.154%;
+    }
+  }
   .patients {
     .option {
       margin-top: 4.3rem;
       align-self: flex-start;
-      flex: 0 0 3.2rem;
-      width: 3.2rem;
-      height: 3.2rem;
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
       &::before {
-        width: 2.9rem;
-        height: 2.9rem;
+        width: 12px;
+        height: 12px;
       }
     }
     &__item {
@@ -2304,6 +2679,9 @@ line-height: 127.273%;
   .details-steps {
     border: none;
     border-radius: 0;
+    &__item-cost {
+      font-size: 3.2rem;
+    }
     &__head {
       display: none;
     }
@@ -2509,6 +2887,42 @@ line-height: 127.273%;
     }
   }
   .review-card {
+    &__response-head {
+      margin-bottom: 3rem;
+      column-gap: 2.6rem;
+    }
+    &__response-heading {
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+      font-size: 2.6rem;
+    }
+    &__response-subheading {
+      font-size: 2.6rem;
+    }
+    &__response-date {
+      margin-bottom: 4rem;
+      margin-left: 0;
+      font-size: 2.6rem;
+    }
+    &__response-img {
+      display: inline-flex;
+      justify-content: center;
+      text-align: center;
+      flex: 0 0 10rem;
+      width: 10rem;
+      height: 10rem;
+      img {
+        flex: 0 0 9rem;
+        width: 9rem;
+        height: 9rem;
+      }
+    }
+    &__response-text {
+      margin-bottom: 0;
+    }
+    &__showless {
+      display: none;
+    }
     &__head {
       margin-bottom: 4rem;
       flex-direction: column;
@@ -2689,6 +3103,8 @@ line-height: 127.273%;
       &:first-child {
         &::after {
           display: inline-block;
+          flex: 0 0 auto;
+          background-image: none;
         }
       }
       &:last-child {
@@ -2700,7 +3116,7 @@ line-height: 127.273%;
       &::after {
         top: 3rem;
         left: auto;
-        right: 0;
+        right: 1px;
         width: 1px;
         height: 14.2rem;
         background-color: #d8dde4;
@@ -2709,7 +3125,7 @@ line-height: 127.273%;
       &::after {
         position: absolute;
         right: auto;
-        left: 0;
+        left: 1px;
         display: none;
         background-image: none;
       }
@@ -3283,13 +3699,13 @@ line-height: 127.273%;
       row-gap: 1.6rem;
     }
     &__hours-group {
-      padding: 2.5rem 0 3.6rem 0;
+      padding: 2.5rem 2.5rem 3.6rem 2.5rem;
+      gap: 0.8rem;
       border-radius: 2rem;
     }
     &__hours-row {
-      padding: 0 2.5rem;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 0.8rem;
+     gap: 0.8rem;
     }
     &__hours-more {
       margin-top: 5rem;
@@ -3349,6 +3765,7 @@ line-height: 127.273%;
       width: 100%;
       border-radius: 1.2rem;
       &__btn {
+        padding: 0 2rem;
         flex: 1 1 auto;
         height: 7.6rem;
         border-radius: 1.2rem;
@@ -3360,6 +3777,16 @@ line-height: 127.273%;
     &__row {
       flex-direction: column;
       row-gap: 4rem;
+      &_grid {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+        .sort-dropdown__item {
+          row-gap: 1.4rem;
+        }
+      }
+    }
+    &__body {
+      margin-bottom: 2rem;
     }
     &__inner {
       padding: 4rem 0 0 0;
@@ -3390,6 +3817,21 @@ line-height: 127.273%;
   }
 }
 @media (min-width: 48em) {
+  .review-card {
+    &__head {
+      &._mobile-only {
+        margin-bottom: 0;
+        .review-card__heading-wrap {
+          display: none;
+        }
+        .review-card__rating-group {
+          position: absolute;
+          top: 4rem;
+          right: 4rem;
+        }
+      }
+    }
+  }
   .patients {
     &__item {
     &.no-padding {

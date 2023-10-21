@@ -937,6 +937,14 @@ function formFieldsInit(options = { viewPass: true }) {
     formFields.forEach(formField => {
       if (!formField.hasAttribute('data-placeholder-nohide')) {
         formField.dataset.placeholder = formField.placeholder
+        // formField.addEventListener('input', function() {
+        //   const targetElement = e.target
+        //   if (!targetElement.parentElement.classList.contains('_form-error') && targetElement.value) {
+        //     targetElement.parentElement.classList.add('_filled')
+        //   } else if (targetElement.parentElement.classList.contains('_form-error')) {
+        //     targetElement.parentElement.classList.remove('_filled')
+        //   }
+        // })
       }
     })
   }
@@ -952,9 +960,6 @@ function formFieldsInit(options = { viewPass: true }) {
       if (!targetElement.hasAttribute('data-no-focus-classes')) {
         targetElement.classList.add('_form-focus')
         targetElement.parentElement.classList.add('_form-focus')
-      }
-      if (targetElement.parentElement.classList.contains('_filled')) {
-        targetElement.parentElement.classList.remove('_filled')
       }
       formValidate.removeError(targetElement)
     }
@@ -975,9 +980,10 @@ function formFieldsInit(options = { viewPass: true }) {
       if (targetElement.hasAttribute('data-validate')) {
         formValidate.validateInput(targetElement)
       }
-      if (!targetElement.parentElement.classList.contains('_form-error')) {
+      console.log(targetElement.value.length)
+      if (!targetElement.parentElement.classList.contains('_form-error') && targetElement.value.length) {
         targetElement.parentElement.classList.add('_filled')
-      } else {
+      } else if (targetElement.parentElement.classList.contains('_form-error') || (!targetElement.value.length)) {
         targetElement.parentElement.classList.remove('_filled')
       }
     }
