@@ -37743,7 +37743,37 @@ body::after {
     border: 0.4rem solid #36B4F1; }
   .s-direction__box-title {
     font-size: 3.2rem;
-    max-width: auto; } }
+    max-width: auto; }
+  .s-direction__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial; }
+  .s-direction__title {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125.926%;
+    margin-bottom: 4rem; }
+  .s-direction__price span {
+    font-size: 3.6rem;
+    padding-right: 1rem; }
+  .s-direction__price strong {
+    font-size: 4.8rem;
+    line-height: 4.6rem;
+    padding-right: 3rem; }
+  .s-direction__div-btn {
+    margin-top: 10rem;
+    margin-bottom: 10rem; }
+  .s-direction__btn {
+    font-size: 3.2rem;
+    padding-right: 4rem; }
+    .s-direction__btn::before {
+      width: 2rem;
+      height: 2rem; } }
 
 .leave-contacts {
   background: #F8F8F8;
@@ -37765,6 +37795,8 @@ body::after {
     font-weight: 400;
     line-height: 120%;
     margin-bottom: 3.2rem; }
+  .leave-contacts__image-m {
+    display: none; }
   .leave-contacts__circle {
     width: 30.2rem;
     height: 30.2rem;
@@ -37901,6 +37933,8 @@ body::after {
       margin-bottom: 3rem; }
     .leave-contacts-blog .leave-contacts__form-label {
       height: 5rem; }
+      .leave-contacts-blog .leave-contacts__form-label .btn {
+        display: none; }
     .leave-contacts-blog .leave-contacts__left {
       position: relative;
       z-index: 2;
@@ -37953,6 +37987,81 @@ body::after {
         border: 1px solid rgba(51, 51, 51, 0.5);
         left: 0;
         top: 0.8rem; }
+
+@media (max-width: 48em) {
+  .leave-contacts .container {
+    padding: 0; }
+  .leave-contacts__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .leave-contacts__left {
+    padding: 6rem 4rem; }
+  .leave-contacts__title {
+    font-size: 5.4rem;
+    max-width: 67rem;
+    text-align: left;
+    margin-bottom: 3.6rem; }
+  .leave-contacts__inner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .leave-contacts__text {
+    font-size: 3.2rem; }
+  .leave-contacts__bonus {
+    font-size: 3.2rem;
+    padding: 0.8rem 3rem;
+    font-weight: 600; }
+  .leave-contacts__circle {
+    left: 25rem;
+    width: 28rem;
+    height: 28rem; }
+  .leave-contacts__image {
+    width: 100%;
+    height: 38.4rem; }
+    .leave-contacts__image img {
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .leave-contacts__right {
+    padding: 6rem 4rem; }
+  .leave-contacts__form-title {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125.926%;
+    margin-bottom: 6rem; }
+  .leave-contacts .btn {
+    display: none; }
+  .leave-contacts__form-label {
+    margin-bottom: 3rem;
+    height: 8rem; }
+    .leave-contacts__form-label::before {
+      width: 2.6rem;
+      height: 2.6rem; }
+    .leave-contacts__form-label input {
+      width: 66.9rem;
+      font-size: 2.6rem; }
+    .leave-contacts__form-label .btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      top: 0;
+      height: 8rem;
+      right: 0; }
+  .leave-contacts__image-m {
+    display: block; }
+  .leave-contacts__image-d {
+    display: none; }
+  .leave-contacts__form-policy {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    max-width: 100%; }
+    .leave-contacts__form-policy br {
+      display: none; } }
 
 .about-the-s {
   margin-bottom: 18rem; }

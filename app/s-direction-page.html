@@ -46,286 +46,157 @@
       
         <section class="s-direction">
             <div class="container">
-                <div class="doctors__spoiler alphabet-filter">
-                    <button data-spoiler type="button" class="alphabet-filter__title">
-                      Найти по алфавиту
+              <div class="doctors__spoiler alphabet-filter">
+                <button data-spoiler type="button" class="alphabet-filter__title">
+                  Найти по алфавиту
+                </button>
+                <div class="alphabet-filter__body">
+                  <div class="alphabet-filter__group">
+                    <button type="button" class="alphabet-filter__button">
+                      Все
                     </button>
-                    <div class="alphabet-filter__body">
-                      <div class="alphabet-filter__group">
-                        <button type="button" class="alphabet-filter__button">
-                          Все
-                        </button>
-                        <button type="button" class="alphabet-filter__button">А</button>
-                        <button type="button" class="alphabet-filter__button">Б</button>
-                        <button type="button" class="alphabet-filter__button">В</button>
-                        <button type="button" class="alphabet-filter__button">Г</button>
-                        <button type="button" class="alphabet-filter__button">Д</button>
-                        <button type="button" class="alphabet-filter__button">Е</button>
-                        <button type="button" class="alphabet-filter__button">Ж</button>
-                        <button type="button" class="alphabet-filter__button">З</button>
-                        <button type="button" class="alphabet-filter__button">И</button>
-                        <button type="button" class="alphabet-filter__button">К</button>
-                        <button type="button" class="alphabet-filter__button">Л</button>
-                        <button type="button" class="alphabet-filter__button _active">
-                          М
-                        </button>
-                        <button type="button" class="alphabet-filter__button">Н</button>
-                        <button type="button" class="alphabet-filter__button">О</button>
-                        <button type="button" class="alphabet-filter__button">П</button>
-                        <button type="button" class="alphabet-filter__button">Р</button>
-                        <button type="button" class="alphabet-filter__button">С</button>
-                        <button type="button" class="alphabet-filter__button">Т</button>
-                        <button type="button" class="alphabet-filter__button">Ц</button>
-                        <button type="button" class="alphabet-filter__button">Ш</button>
-                        <button type="button" class="alphabet-filter__button">Щ</button>
-                        <button type="button" class="alphabet-filter__button">Э</button>
-                        <button type="button" class="alphabet-filter__button">Ю</button>
-                        <button type="button" class="alphabet-filter__button">Я</button>
-                      </div>
-                    </div>
+                    <button type="button" class="alphabet-filter__button">А</button>
+                    <button type="button" class="alphabet-filter__button">Б</button>
+                    <button type="button" class="alphabet-filter__button">В</button>
+                    <button type="button" class="alphabet-filter__button">Г</button>
+                    <button type="button" class="alphabet-filter__button">Д</button>
+                    <button type="button" class="alphabet-filter__button">Е</button>
+                    <button type="button" class="alphabet-filter__button">Ж</button>
+                    <button type="button" class="alphabet-filter__button">З</button>
+                    <button type="button" class="alphabet-filter__button">И</button>
+                    <button type="button" class="alphabet-filter__button">К</button>
+                    <button type="button" class="alphabet-filter__button">Л</button>
+                    <button type="button" class="alphabet-filter__button _active">
+                      М
+                    </button>
+                    <button type="button" class="alphabet-filter__button">Н</button>
+                    <button type="button" class="alphabet-filter__button">О</button>
+                    <button type="button" class="alphabet-filter__button">П</button>
+                    <button type="button" class="alphabet-filter__button">Р</button>
+                    <button type="button" class="alphabet-filter__button">С</button>
+                    <button type="button" class="alphabet-filter__button">Т</button>
+                    <button type="button" class="alphabet-filter__button">Ц</button>
+                    <button type="button" class="alphabet-filter__button">Ш</button>
+                    <button type="button" class="alphabet-filter__button">Щ</button>
+                    <button type="button" class="alphabet-filter__button">Э</button>
+                    <button type="button" class="alphabet-filter__button">Ю</button>
+                    <button type="button" class="alphabet-filter__button">Я</button>
                   </div>
-                  <form id="search-form" action="#" class="doctors__form search-form">
-                    <div class="search-form__wrap">
-                      <div class="search-form__input-wrap">
-                        <input
-                          autocomplete="off"
-                          type="search"
-                          name="form[]"
-                          placeholder="Поиск среди услуг"
-                          class="search-form__input txt" />
-                      </div>
-                      <button
-                        id="open-sort-dropdown"
-                        type="button"
-                        class="search-form__sort-button">
-                        <span class="_desktop-only">Уточнить поиск</span>
-                      </button>
-                      <button type="submit" class="search-form__btn btn">
-                        <span>Начать поиск</span>
-                      </button>
-                    </div>
-                    <div class="search-form__sort sort-dropdown">
-                      <div class="sort-dropdown__inner">
-                        <div data-tabs class="sort-dropdown__tabs">
-                          <div
-                            data-tabs-titles
-                            class="sort-dropdown__navigation tabs tabs_blue">
-                            <button type="button" class="tabs__btn">Все</button>
-                            <button type="button" class="tabs__btn active _tab-active">
-                              Мужчины
-                            </button>
-                            <button type="button" class="tabs__btn">Женщины</button>
-                            <button type="button" class="tabs__btn">Дети</button>
-                          </div>
-                          <div
-                            data-tabs-body
-                            data-one-select
-                            class="sort-dropdown__content">
-                            <div class="sort-dropdown__body">
-                              <div class="sort-dropdown__row">
-                                <div class="sort-dropdown__item">
-                                  <span class="sort-dropdown__subheading txt">
-                                    Выбрать направление:
-                                  </span>
-                                  <select
-                                    data-scroll="270"
-                                    data-checkbox
-                                    multiple
-                                    data-pseudo-label="Все направления"
-                                    name="form[]"
-                                    class="sort-dropdown__select-wrap select-checkbox">
-                                    <option value="1" selected>Уролог</option>
-                                    <option value="2">Гинеколог</option>
-                                    <option value="3">Гематолог</option>
-                                    <option value="4">Гастроэнтеролог</option>
-                                    <option value="5">Дерматолог</option>
-                                    <option value="6">Гинеколог-эндокринолог</option>
-                                    <option value="7">Аритмолог</option>
-                                    <option value="8">Уролог</option>
-                                    <option value="9">Гинеколог</option>
-                                    <option value="10">Гематолог</option>
-                                    <option value="11">Гастроэнтеролог</option>
-                                    <option value="12">Дерматолог</option>
-                                    <option value="13">Гинеколог-эндокринолог</option>
-                                    <option value="14">Аритмолог</option>
-                                  </select>
-                                </div>
-                              </div>
+                </div>
+              </div>
+              <form id="search-form" action="#" class="doctors__form search-form">
+                <div class="search-form__wrap">
+                  <div class="search-form__input-wrap">
+                    <input
+                      autocomplete="off"
+                      type="search"
+                      name="form[]"
+                      placeholder="Поиск среди услуг"
+                      class="search-form__input txt" />
+                  </div>
+                  <button
+                    id="open-sort-dropdown"
+                    type="button"
+                    class="search-form__sort-button">
+                    <span class="_desktop-only">Уточнить поиск</span>
+                  </button>
+                  <button type="submit" class="search-form__btn btn">
+                    <span>Начать поиск</span>
+                  </button>
+                </div>
+                <div class="search-form__sort sort-dropdown">
+                  <div class="sort-dropdown__inner">
+                    <div
+                        data-tabs-body
+                        data-one-select
+                        class="sort-dropdown__content">
+                        
+                        <div class="sort-dropdown__body">
+                          <div class="sort-dropdown__row">
+                            <div class="sort-dropdown__item">
+                              <span class="sort-dropdown__subheading txt">
+                                Выбрать направление:
+                              </span>
+                              <select
+                                data-scroll="270"
+                                data-checkbox
+                                multiple
+                                data-pseudo-label="Все направления"
+                                name="form[]"
+                                class="sort-dropdown__select-wrap select-checkbox">
+                                <option value="1" selected>Уролог</option>
+                                <option value="2">Гинеколог</option>
+                                <option value="3">Гематолог</option>
+                                <option value="4">Гастроэнтеролог</option>
+                                <option value="5">Дерматолог</option>
+                                <option value="6">Гинеколог-эндокринолог</option>
+                                <option value="7">Аритмолог</option>
+                                <option value="8">Уролог</option>
+                                <option value="9">Гинеколог</option>
+                                <option value="10">Гематолог</option>
+                                <option value="11">Гастроэнтеролог</option>
+                                <option value="12">Дерматолог</option>
+                                <option value="13">Гинеколог-эндокринолог</option>
+                                <option value="14">Аритмолог</option>
+                              </select>
                             </div>
-                            <div class="sort-dropdown__body">
-                              <div class="sort-dropdown__row">
-                                <div class="sort-dropdown__item">
-                                  <span class="sort-dropdown__subheading txt">
-                                    Выбрать направление:
-                                  </span>
-                                  <select
-                                    data-scroll="270"
-                                    data-checkbox
-                                    multiple
-                                    data-pseudo-label="Все направления"
-                                    name="form[]"
-                                    class="sort-dropdown__select-wrap select-checkbox">
-                                    <option value="1" selected>Уролог</option>
-                                    <option value="2">Гинеколог</option>
-                                    <option value="3">Гематолог</option>
-                                    <option value="4">Гастроэнтеролог</option>
-                                    <option value="5">Дерматолог</option>
-                                    <option value="6">Гинеколог-эндокринолог</option>
-                                    <option value="7">Аритмолог</option>
-                                    <option value="8">Уролог</option>
-                                    <option value="9">Гинеколог</option>
-                                    <option value="10">Гематолог</option>
-                                    <option value="11">Гастроэнтеролог</option>
-                                    <option value="12">Дерматолог</option>
-                                    <option value="13">Гинеколог-эндокринолог</option>
-                                    <option value="14">Аритмолог</option>
-                                  </select>
-                                </div>
-                                <div class="sort-dropdown__item">
-                                  <span class="sort-dropdown__subheading txt">
-                                    Выбрать клинику:
-                                  </span>
-                                  <select
-                                    data-scroll="270"
-                                    data-checkbox
-                                    multiple
-                                    data-pseudo-label="Все клиники"
-                                    name="form[]"
-                                    class="sort-dropdown__select-wrap select-checkbox">
-                                    <option value="1" selected>Уролог</option>
-                                    <option value="2">Гинеколог</option>
-                                    <option value="3">Гематолог</option>
-                                    <option value="4">Гастроэнтеролог</option>
-                                    <option value="5">Дерматолог</option>
-                                    <option value="6">Гинеколог-эндокринолог</option>
-                                    <option value="7">Аритмолог</option>
-                                    <option value="8">Уролог</option>
-                                    <option value="9">Гинеколог</option>
-                                    <option value="10">Гематолог</option>
-                                    <option value="11">Гастроэнтеролог</option>
-                                    <option value="12">Дерматолог</option>
-                                    <option value="13">Гинеколог-эндокринолог</option>
-                                    <option value="14">Аритмолог</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="sort-dropdown__body">
-                              <div class="sort-dropdown__row">
-                                <div class="sort-dropdown__item">
-                                  <span class="sort-dropdown__subheading txt">
-                                    Выбрать клинику:
-                                  </span>
-                                  <select
-                                    data-scroll="270"
-                                    data-checkbox
-                                    multiple
-                                    data-pseudo-label="Все клиники"
-                                    name="form[]"
-                                    class="sort-dropdown__select-wrap select-checkbox">
-                                    <option value="1" selected>Уролог</option>
-                                    <option value="2">Гинеколог</option>
-                                    <option value="3">Гематолог</option>
-                                    <option value="4">Гастроэнтеролог</option>
-                                    <option value="5">Дерматолог</option>
-                                    <option value="6">Гинеколог-эндокринолог</option>
-                                    <option value="7">Аритмолог</option>
-                                    <option value="8">Уролог</option>
-                                    <option value="9">Гинеколог</option>
-                                    <option value="10">Гематолог</option>
-                                    <option value="11">Гастроэнтеролог</option>
-                                    <option value="12">Дерматолог</option>
-                                    <option value="13">Гинеколог-эндокринолог</option>
-                                    <option value="14">Аритмолог</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="sort-dropdown__body">
-                              <div class="sort-dropdown__row">
-                                <div class="sort-dropdown__item">
-                                  <span class="sort-dropdown__subheading txt">
-                                    Выбрать направление:
-                                  </span>
-                                  <select
-                                    data-scroll="270"
-                                    data-checkbox
-                                    multiple
-                                    data-pseudo-label="Все направления"
-                                    name="form[]"
-                                    class="sort-dropdown__select-wrap select-checkbox">
-                                    <option value="1" selected>Уролог</option>
-                                    <option value="2">Гинеколог</option>
-                                    <option value="3">Гематолог</option>
-                                    <option value="4">Гастроэнтеролог</option>
-                                    <option value="5">Дерматолог</option>
-                                    <option value="6">Гинеколог-эндокринолог</option>
-                                    <option value="7">Аритмолог</option>
-                                    <option value="8">Уролог</option>
-                                    <option value="9">Гинеколог</option>
-                                    <option value="10">Гематолог</option>
-                                    <option value="11">Гастроэнтеролог</option>
-                                    <option value="12">Дерматолог</option>
-                                    <option value="13">Гинеколог-эндокринолог</option>
-                                    <option value="14">Аритмолог</option>
-                                  </select>
-                                </div>
-                                <div class="sort-dropdown__item">
-                                  <span class="sort-dropdown__subheading txt">
-                                    Выбрать клинику:
-                                  </span>
-                                  <select
-                                    data-scroll="270"
-                                    data-checkbox
-                                    multiple
-                                    data-pseudo-label="Все клиники"
-                                    name="form[]"
-                                    class="sort-dropdown__select-wrap select-checkbox">
-                                    <option value="1" selected>Уролог</option>
-                                    <option value="2">Гинеколог</option>
-                                    <option value="3">Гематолог</option>
-                                    <option value="4">Гастроэнтеролог</option>
-                                    <option value="5">Дерматолог</option>
-                                    <option value="6">Гинеколог-эндокринолог</option>
-                                    <option value="7">Аритмолог</option>
-                                    <option value="8">Уролог</option>
-                                    <option value="9">Гинеколог</option>
-                                    <option value="10">Гематолог</option>
-                                    <option value="11">Гастроэнтеролог</option>
-                                    <option value="12">Дерматолог</option>
-                                    <option value="13">Гинеколог-эндокринолог</option>
-                                    <option value="14">Аритмолог</option>
-                                  </select>
-                                </div>
-                              </div>
+                            <div class="sort-dropdown__item">
+                              <span class="sort-dropdown__subheading txt">
+                                Выбрать клинику:
+                              </span>
+                              <select
+                                data-scroll="270"
+                                data-checkbox
+                                multiple
+                                data-pseudo-label="Все клиники"
+                                name="form[]"
+                                class="sort-dropdown__select-wrap select-checkbox">
+                                <option value="1" selected>Уролог</option>
+                                <option value="2">Гинеколог</option>
+                                <option value="3">Гематолог</option>
+                                <option value="4">Гастроэнтеролог</option>
+                                <option value="5">Дерматолог</option>
+                                <option value="6">Гинеколог-эндокринолог</option>
+                                <option value="7">Аритмолог</option>
+                                <option value="8">Уролог</option>
+                                <option value="9">Гинеколог</option>
+                                <option value="10">Гематолог</option>
+                                <option value="11">Гастроэнтеролог</option>
+                                <option value="12">Дерматолог</option>
+                                <option value="13">Гинеколог-эндокринолог</option>
+                                <option value="14">Аритмолог</option>
+                              </select>
                             </div>
                           </div>
                         </div>
-                        <button
-                          id="slose-sort-dropdown"
-                          type="button"
-                          class="sort-dropdown__close-btn link">
-                          Свернуть
-                        </button>
+                        
+                       
                       </div>
-                    </div>
-                    <div class="search-form__search-box search-box">
-                      <ul class="search-box__list txt">
-                        <li class="search-box__item">
-                          Гастроэнтеролог <span>Специализация</span>
-                        </li>
-                        <li class="search-box__item">
-                          Гастропольский Виктор Владимирович <span>Врач</span>
-                        </li>
-                        <li class="search-box__item">
-                          Гастроэнтероло <span>Специализация</span>
-                        </li>
-                        <li class="search-box__item">
-                          Гастропольский Виктор Владимирович <span>Врач</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </form>
+                    <button
+                      id="slose-sort-dropdown"
+                      type="button"
+                      class="sort-dropdown__close-btn link">
+                      Свернуть
+                    </button>
+                  </div>
+                </div>
+                <div class="search-form__search-box search-box">
+                  <ul class="search-box__list txt">
+                    <li class="search-box__item">
+                      Гастроэнтеролог <span>Специализация</span>
+                    </li>
+                    <li class="search-box__item">
+                      Гастропольский Виктор Владимирович <span>Врач</span>
+                    </li>
+                    <li class="search-box__item">
+                      Гастроэнтероло <span>Специализация</span>
+                    </li>
+                    <li class="search-box__item">
+                      Гастропольский Виктор Владимирович <span>Врач</span>
+                    </li>
+                  </ul>
+                </div>
+            </form>
                 <div class="s-direction__inner">
                     <div class="s-direction__title">
                         Ультрозвуковая диагностика (УЗИ)
