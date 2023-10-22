@@ -1,0 +1,33 @@
+.career-card {
+  &.diseases {
+    grid-template-columns: 33.9rem 1fr;
+    .career-card {
+      &__text-wrap {
+        padding: 4rem;
+        padding-left: 0;
+      }
+      &__info {
+        display: flex;
+        gap: 4rem;
+        p {
+          &:nth-child(1) {
+            font-family: MyriadPro;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: #36b4f1;
+          }
+          &:nth-child(2) {
+            font-family: MyriadPro;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: rgba(51, 51, 51, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
