@@ -4,6 +4,8 @@ const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
 const valuesSlides = Array.from(document.querySelectorAll('.values__right-slide'));
 const searchBtn = document.querySelector('.search-btn');
 const searchLabel = document.querySelector('.search__label');
+const btnMore = Array.from(document.querySelectorAll('.services-p__box-link'));
+const mapList = document.querySelectorAll('.services-p__box-inner');
 let tabIndex;
 storyItems.forEach( e => {
   e.addEventListener('mouseenter', () => {
@@ -20,6 +22,26 @@ if(searchBtn) {
     searchLabel.style.display = 'block';
   })
 }
+
+if(btnMore) {
+  btnMore.forEach(e => {
+    e.addEventListener('click', () => {
+      e.classList.toggle('active');
+      e.previousElementSibling.childNodes[5].classList.toggle('active')
+    })
+  })
+}
+
+mapList.forEach(e => {
+  e.addEventListener('click', () => {
+    if(e.className.includes('active')) {
+      e.parentElement.nextElementSibling.style.display = 'block';
+    }
+    if(!(e.className.includes('active'))) {
+      e.parentElement.nextElementSibling.style.display = 'none';
+    }
+  })
+})
 
 valuesTabs.forEach(e => {
   e.addEventListener('click', () => {
@@ -81,9 +103,11 @@ window.addEventListener('resize', () => {
 const closeBtn = document.querySelector('.modal-licenzia__slider-close');
 let slider = document.querySelector('.modal-licenzia__slider')
 let index;
-closeBtn.addEventListener('click', () => {
-  slider.classList.remove('active');
-})
+if(closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    slider.classList.remove('active');
+  })
+}
 
 const aboutSlider = new Swiper('.about-swiper', {
   navigation: {

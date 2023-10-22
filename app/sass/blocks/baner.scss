@@ -2709,6 +2709,9 @@
               left: 0;
               top: 0;
               cursor: pointer;
+              &:hover {
+                border: 1px solid #36B4F1;
+              }
               & img {
                 width: 2.4rem;
                 height: 2.4rem;
@@ -2838,6 +2841,9 @@
           left: 50%;
         }
       }
+    }
+    .breadcrumbs__link {
+      color: rgba(51, 51, 51, 0.50);
     }
   }
   &-zapisatsa {
@@ -6082,6 +6088,43 @@
           & img {
             position: relative;
             z-index: 3;
+          }
+        }
+      }
+    }
+    &-karta-site {
+      margin-bottom: 4.8rem;
+      .baner {
+        &__inner {
+          &::after {
+            top: 41rem;
+            width: 80.8rem;
+            height: 83.6rem;
+          }
+        }
+        &__content {
+          padding-top: 3rem;
+          margin-bottom: 11rem;
+        }
+        .breadcrumbs {
+          margin-bottom: 7rem;
+          width: 110%;
+          &__link {
+            color: rgba(51, 51, 51, 0.5);
+          }
+          &__text {
+            margin-left: -0.5rem;
+            font-size: 2.8rem;
+          }
+        }
+        &__picture {
+          width: 77.7rem;
+          margin-left: -5rem;
+          &::after {
+            width: 82.6rem;
+            height: 85.5rem;
+            top: -15rem;
+            left: 50%;
           }
         }
       }
