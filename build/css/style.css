@@ -5056,6 +5056,8 @@ input[type='search']::-webkit-search-results-decoration {
             left: 0;
             top: 0;
             cursor: pointer; }
+            .baner-error-404 .baner__content-btns-search div:hover {
+              border: 1px solid #36B4F1; }
             .baner-error-404 .baner__content-btns-search div img {
               width: 2.4rem;
               height: 2.4rem; }
@@ -5189,6 +5191,8 @@ input[type='search']::-webkit-search-results-decoration {
         height: 85.5rem;
         top: -15rem;
         left: 50%; }
+    .baner-karta-site .breadcrumbs__link {
+      color: rgba(51, 51, 51, 0.5); }
   .baner-zapisatsa {
     margin-bottom: 10rem; }
     .baner-zapisatsa .baner__content-links {
@@ -8113,7 +8117,32 @@ input[type='search']::-webkit-search-results-decoration {
       height: 81rem; }
       .baner-error-404 .baner__picture img {
         position: relative;
-        z-index: 3; } }
+        z-index: 3; }
+  .baner-karta-site {
+    margin-bottom: 4.8rem; }
+    .baner-karta-site .baner__inner::after {
+      top: 41rem;
+      width: 80.8rem;
+      height: 83.6rem; }
+    .baner-karta-site .baner__content {
+      padding-top: 3rem;
+      margin-bottom: 11rem; }
+    .baner-karta-site .baner .breadcrumbs {
+      margin-bottom: 7rem;
+      width: 110%; }
+      .baner-karta-site .baner .breadcrumbs__link {
+        color: rgba(51, 51, 51, 0.5); }
+      .baner-karta-site .baner .breadcrumbs__text {
+        margin-left: -0.5rem;
+        font-size: 2.8rem; }
+    .baner-karta-site .baner__picture {
+      width: 77.7rem;
+      margin-left: -5rem; }
+      .baner-karta-site .baner__picture::after {
+        width: 82.6rem;
+        height: 85.5rem;
+        top: -15rem;
+        left: 50%; } }
 
 .baner--search {
   margin-bottom: 10rem; }
@@ -13097,6 +13126,8 @@ input[type='search']::-webkit-search-results-decoration {
       position: absolute;
       bottom: 0;
       left: 0; }
+  .popular.error-popular {
+    display: none; }
 
 @media (max-width: 48em) {
   .popular__inner {
@@ -13134,7 +13165,10 @@ input[type='search']::-webkit-search-results-decoration {
   .popular.popular-akcii .popular__item:not(:last-child) {
     margin-bottom: 8.7rem; }
   .popular.popular-akcii .popular__item li:not(:last-child) {
-    margin-bottom: 2.6rem; } }
+    margin-bottom: 2.6rem; }
+  .popular.error-popular {
+    display: block;
+    margin: 20rem 0 0; } }
 
 .story {
   position: relative;
@@ -29567,6 +29601,62 @@ textarea {
       font-weight: 400;
       text-decoration: underline; }
 
+.map-appointment .appointment {
+  margin-bottom: 12rem; }
+  .map-appointment .appointment__subtitle {
+    margin-top: 1.6rem;
+    margin-bottom: 0; }
+
+.map-appointment .callback-appointment__text {
+  font-family: 'Montserrat';
+  margin-bottom: 3rem;
+  line-height: 150%; }
+
+.map-appointment .callback-appointment__input-wrap {
+  border: 1px solid  #D8DDE4; }
+
+.map-appointment .callback-appointment__btn {
+  border: 0;
+  margin-top: 3rem; }
+
+.map-appointment .contacts-appointment__heading {
+  margin-bottom: 3.2rem; }
+
+.map-appointment .contacts-appointment__text {
+  font-family: 'Montserrat'; }
+
+.map-appointment .contacts-appointment__text-wrap {
+  gap: 2rem; }
+  .map-appointment .contacts-appointment__text-wrap .link, .map-appointment .contacts-appointment__text-wrap .alphabet-filter__title {
+    font-size: 1.6rem;
+    line-height: 120%;
+    font-weight: 400;
+    text-decoration: underline; }
+    .map-appointment .contacts-appointment__text-wrap .link::after, .map-appointment .contacts-appointment__text-wrap .alphabet-filter__title::after {
+      content: none; }
+
+.map-appointment .contacts-appointment__links {
+  row-gap: 2.4rem; }
+
+.map-appointment .contacts-appointment__item {
+  border: 0; }
+  .map-appointment .contacts-appointment__item::before {
+    left: 2rem;
+    width: 3rem;
+    height: 3rem; }
+  .map-appointment .contacts-appointment__item_whatsapp::before {
+    background-image: url(../../img/ans_image/icons/whatsapp.svg); }
+  .map-appointment .contacts-appointment__item_telegram::before {
+    background-image: url(../../img/ans_image/icons/telegram.svg); }
+  .map-appointment .contacts-appointment__item_chat::before {
+    background-image: url(../../img/ans_image/icons/chat.svg); }
+  .map-appointment .contacts-appointment__item:hover {
+    border: 0.1rem solid #36b4f1; }
+
+.map-appointment .registration-appointment__btn {
+  width: 33.5rem;
+  margin-bottom: 3rem; }
+
 @media (max-width: 48em) {
   .callback-appointment::before {
     left: 50%;
@@ -29678,7 +29768,73 @@ textarea {
     font-weight: 400;
     font-size: 2.6rem; }
     .registration-appointment__hint a {
-      display: block; } }
+      display: block; }
+  .map-appointment .appointment__subtitle {
+    margin-top: 1.6rem;
+    margin-bottom: 0; }
+  .map-appointment .callback-appointment__text {
+    font-family: 'Montserrat';
+    margin-bottom: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 150%; }
+  .map-appointment .callback-appointment__input-wrap {
+    border: 0.1rem solid  #D8DDE4; }
+  .map-appointment .callback-appointment__btn {
+    border: 0;
+    margin-top: 0; }
+  .map-appointment .callback-appointment__form {
+    margin-bottom: 1rem;
+    row-gap: 4rem; }
+  .map-appointment .callback-appointment__heading span, .map-appointment .registration-appointment__heading span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .map-appointment .callback-appointment__heading::before, .map-appointment .registration-appointment__heading::before {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 6.6rem;
+            flex: 0 0 6.6rem;
+    width: 6.6rem;
+    height: 6.6rem; }
+  .map-appointment .contacts-appointment__heading {
+    margin-bottom: 4rem; }
+  .map-appointment .contacts-appointment__text-wrap {
+    gap: 2rem; }
+    .map-appointment .contacts-appointment__text-wrap .link, .map-appointment .contacts-appointment__text-wrap .alphabet-filter__title {
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 120%;
+      text-decoration: underline; }
+      .map-appointment .contacts-appointment__text-wrap .link::after, .map-appointment .contacts-appointment__text-wrap .alphabet-filter__title::after {
+        content: none; }
+  .map-appointment .contacts-appointment__links {
+    row-gap: 4rem; }
+  .map-appointment .contacts-appointment__item {
+    border: 0;
+    height: 6.8rem;
+    min-height: 6.8rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .map-appointment .contacts-appointment__item span {
+      padding-left: 0; }
+    .map-appointment .contacts-appointment__item::before {
+      left: 2rem;
+      width: 3rem;
+      height: 3rem; }
+    .map-appointment .contacts-appointment__item_whatsapp::before {
+      background-image: url(../../img/ans_image/icons/whatsapp.svg); }
+    .map-appointment .contacts-appointment__item_telegram::before {
+      background-image: url(../../img/ans_image/icons/telegram.svg); }
+    .map-appointment .contacts-appointment__item_chat::before {
+      background-image: url(../../img/ans_image/icons/chat.svg); }
+  .map-appointment .registration-appointment {
+    padding: 5rem; }
+    .map-appointment .registration-appointment__btn {
+      width: 55rem;
+      height: 6.8rem;
+      min-height: 6.8rem;
+      margin-bottom: 3.2rem; } }
 
 @media (min-width: 48em) {
   .appointment__body {
@@ -36710,8 +36866,12 @@ body::after {
       .services-p-map .services-p__box-down-title {
         margin-bottom: 3rem;
         margin-top: 6rem; }
+      .services-p-map .services-p__box-link {
+        display: none; }
       .services-p-map .services-p__box-inner {
         margin-bottom: 9.1rem; }
+    .services-p-map .search-form__input-wrap::after {
+      content: none; }
 
 @media (max-width: 48em) {
   .services-p .container {
@@ -36939,7 +37099,93 @@ body::after {
       color: rgba(51, 51, 51, 0.5);
       line-height: 137.5%; }
   .services-p__box-down-title {
-    font-size: 3.2rem; } }
+    font-size: 3.2rem; }
+  .services-p-map {
+    margin-bottom: 12rem; }
+    .services-p-map .services-p__box {
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+      .services-p-map .services-p__box-block-title {
+        margin-bottom: 0; }
+      .services-p-map .services-p__box-block-text-mob {
+        padding-right: 4rem; }
+      .services-p-map .services-p__box-down {
+        background-color: #FFF;
+        -webkit-box-shadow: 0px 40px 35px -6px rgba(124, 148, 159, 0.07) inset;
+                box-shadow: 0px 40px 35px -6px rgba(124, 148, 159, 0.07) inset; }
+        .services-p-map .services-p__box-down-title {
+          margin-bottom: 6rem;
+          margin-top: 10rem;
+          display: none; }
+          .services-p-map .services-p__box-down-title:first-child {
+            margin-top: 0; }
+        .services-p-map .services-p__box-down ul li {
+          display: none; }
+          .services-p-map .services-p__box-down ul li:nth-child(-n + 4) {
+            display: block; }
+        .services-p-map .services-p__box-down.active-title {
+          display: block; }
+        .services-p-map .services-p__box-down.active ul li {
+          display: block; }
+      .services-p-map .services-p__box-link {
+        display: none;
+        text-align: right;
+        margin-bottom: 3rem;
+        margin-right: 5rem;
+        cursor: pointer; }
+        .services-p-map .services-p__box-link::after {
+          position: absolute;
+          content: '';
+          width: 3rem;
+          height: 3rem;
+          background-image: url(../img/d-image/icon/bluearrow.svg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          top: 0;
+          right: -5rem;
+          -webkit-transform: rotate(-180deg);
+                  transform: rotate(-180deg);
+          -webkit-transition: -webkit-transform 0.2s linear;
+          transition: -webkit-transform 0.2s linear;
+          transition: transform 0.2s linear;
+          transition: transform 0.2s linear, -webkit-transform 0.2s linear; }
+        .services-p-map .services-p__box-link.active::after {
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg); }
+      .services-p-map .services-p__box-inner {
+        margin-bottom: 9.1rem; }
+    .services-p-map .search-form__wrap {
+      border-radius: 20rem;
+      height: 6.4rem; }
+    .services-p-map .search-form__input-wrap input {
+      padding: 1.2rem 2.4rem; }
+    .services-p-map .search-form__input-wrap::after {
+      content: '';
+      display: block;
+      width: 3.4rem;
+      height: 3.4rem;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 3.4rem;
+              flex: 0 0 3.4rem;
+      margin-right: 3.2rem;
+      background-color: transparent;
+      background-image: url(../../img/ans_image/icons/close-gray.svg);
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .services-p-map .search-form__input-wrap::before {
+      content: '';
+      display: block;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 3.4rem;
+              flex: 0 0 3.4rem;
+      width: 3.4rem;
+      height: 3.4rem;
+      margin-left: 3.2rem;
+      background-image: url(../img/a-image/icons/search-grey.png);
+      background-size: contain;
+      background-repeat: no-repeat; } }
 
 .services-p--s-direction {
   margin-bottom: 6rem; }
