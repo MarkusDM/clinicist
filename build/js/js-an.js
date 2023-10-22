@@ -68,20 +68,24 @@ const historySlider = new Swiper('.story-swiper', {
       slidesPerView: 2,
       spaceBetween: rem(8.8),
     }
-  }
+  },
 })
 
 const doctorsSlider = new Swiper('.our-doctors__slider', {
   slidesPerView: 3,
 })
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
-  historySlider.update();
-  if (width < 768){
-    historySlider.init(historySlider);
+  if (width < 768) {
+    historySlider.updateSlides();
+    historySlider.updateSize();
     historySlider.update();
+    historySlider.init(historySlider);
   } else if(width > 768) {
+    historySlider.updateSlides();
+    historySlider.updateSize();
     historySlider.update();
     historySlider.destroy(false, false);
   }
@@ -89,12 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
   const width = window.innerWidth;
-  historySlider.update();
-  if (width < 768){
-    historySlider.init(historySlider);
+  if (width < 768) {
+    historySlider.updateSize();
+    historySlider.updateSlides();
     historySlider.update();
-  }
-   if(width > 768) {
+    historySlider.init(historySlider);
+   } else if(width > 768) {
+    historySlider.updateSlides();
+    historySlider.updateSize();
     historySlider.update();
     historySlider.destroy(false, false);
   }

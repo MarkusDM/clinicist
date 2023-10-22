@@ -29176,9 +29176,11 @@ textarea {
       font-weight: 400;
       text-decoration: underline; }
 
-.map-appointment .appointment__subtitle {
-  margin-top: 1.6rem;
-  margin-bottom: 0; }
+.map-appointment .appointment {
+  margin-bottom: 12rem; }
+  .map-appointment .appointment__subtitle {
+    margin-top: 1.6rem;
+    margin-bottom: 0; }
 
 .map-appointment .callback-appointment__text {
   font-family: 'Montserrat';
