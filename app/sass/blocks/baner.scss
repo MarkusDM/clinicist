@@ -5466,6 +5466,7 @@
     }
   }
   &-patients-preparation {
+    margin-bottom: 6rem;
     .baner {
       &__container {
         grid-template-columns: minmax(auto, 56.3rem) 63rem;
@@ -5730,6 +5731,7 @@
       }
     }
     &-patients-preparation {
+      margin-bottom: 10rem;
       .baner {
         &__container {
           grid-template-columns: none;

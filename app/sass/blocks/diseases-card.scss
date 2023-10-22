@@ -6,9 +6,18 @@
         padding: 4rem;
         padding-left: 0;
       }
+      &__image-box {
+        display: flex;
+        gap: 2.5rem;
+        margin-bottom: 4.5rem;
+      }
+      &__image-doctors {
+        width: 13.2rem;
+      }
       &__info {
         display: flex;
-        gap: 4rem;
+        flex-direction: column;
+        gap: 0.4rem;
         p {
           &:nth-child(1) {
             font-family: MyriadPro;
@@ -26,6 +35,48 @@
             line-height: normal;
             color: rgba(51, 51, 51, 0.5);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .career-card {
+    &.diseases {
+      grid-template-columns: 1fr;
+      .career-card {
+        &__heading {
+          font-size: 3.2rem;
+          font-weight: 400;
+          margin-bottom: 0.8rem;
+        }
+        &__text {
+          margin-bottom: 4rem;
+        }
+        &__text-wrap {
+          padding: 0;
+        }
+        &__image-box {
+          align-items: center;
+          margin-bottom: 0;
+        }
+        &__image-doctors {
+          width: 21rem;
+        }
+        &__info {
+          gap: 1rem;
+          p {
+            &:nth-child(1) {
+              font-size: 2.6rem;
+            }
+            &:nth-child(2) {
+              font-size: 2.6rem;
+            }
+          }
+        }
+        &__btn {
+          display: none;
         }
       }
     }

@@ -38,4 +38,19 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   }
+
+  if (document.querySelector('.preparation__breadcrumbs')) {
+    document
+      .querySelectorAll('.preparation__breadcrumbs button')
+      .forEach((el) => {
+        el.addEventListener('click', () => {
+          document
+            .querySelectorAll('.preparation__breadcrumbs button')
+            .forEach((el) => {
+              el.classList.remove('_active');
+            });
+          el.classList.add('_active');
+        });
+      });
+  }
 });

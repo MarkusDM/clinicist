@@ -7303,16 +7303,17 @@ input[type='search']::-webkit-search-results-decoration {
       border-color: #d8dde4;
       top: 70%; }
 
-.baner-patients-preparation .baner__container {
-  grid-template-columns: minmax(auto, 56.3rem) 63rem; }
-
-.baner-patients-preparation .baner__image-wrap {
-  width: 62rem; }
-  .baner-patients-preparation .baner__image-wrap::before {
-    width: 78.4rem;
-    height: 78.4rem;
-    border-color: #d8dde4;
-    top: 70%; }
+.baner-patients-preparation {
+  margin-bottom: 6rem; }
+  .baner-patients-preparation .baner__container {
+    grid-template-columns: minmax(auto, 56.3rem) 63rem; }
+  .baner-patients-preparation .baner__image-wrap {
+    width: 62rem; }
+    .baner-patients-preparation .baner__image-wrap::before {
+      width: 78.4rem;
+      height: 78.4rem;
+      border-color: #d8dde4;
+      top: 70%; }
 
 .baner-preparation-information .baner__image-wrap {
   width: 73rem; }
@@ -7490,22 +7491,24 @@ input[type='search']::-webkit-search-results-decoration {
         width: 77.8rem;
         height: 77.8rem;
         top: -15%; }
-  .baner-patients-preparation .baner__container {
-    grid-template-columns: none; }
-  .baner-patients-preparation .baner__text-content {
-    width: 63.6rem; }
-  .baner-patients-preparation .baner__text-wrap {
-    margin-bottom: 17.4rem; }
-  .baner-patients-preparation .baner__image-wrap {
-    width: 88.8rem;
-    -webkit-transform: translateX(-12rem);
-            transform: translateX(-12rem); }
-    .baner-patients-preparation .baner__image-wrap::before {
-      width: 77.8rem;
-      height: 77.8rem;
-      top: -10%;
-      -webkit-transform: translate(-47%, 0);
-              transform: translate(-47%, 0); }
+  .baner-patients-preparation {
+    margin-bottom: 10rem; }
+    .baner-patients-preparation .baner__container {
+      grid-template-columns: none; }
+    .baner-patients-preparation .baner__text-content {
+      width: 63.6rem; }
+    .baner-patients-preparation .baner__text-wrap {
+      margin-bottom: 17.4rem; }
+    .baner-patients-preparation .baner__image-wrap {
+      width: 88.8rem;
+      -webkit-transform: translateX(-12rem);
+              transform: translateX(-12rem); }
+      .baner-patients-preparation .baner__image-wrap::before {
+        width: 77.8rem;
+        height: 77.8rem;
+        top: -10%;
+        -webkit-transform: translate(-47%, 0);
+                transform: translate(-47%, 0); }
   .baner-preparation-information .baner__text-wrap {
     margin-bottom: 10.6rem; }
   .baner-preparation-information .baner__text-content {
@@ -40640,6 +40643,21 @@ body::after {
     line-height: 150%;
     padding: 2.4rem 0; } }
 
+@media (max-width: 48em) {
+  .other-programs__head.diseases .other-programs__link {
+    display: none; } }
+
+.other-programs__link.diseases-link-mob {
+  display: none; }
+
+@media (max-width: 48em) {
+  .other-programs__link.diseases-link-mob {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start; } }
+
 .questions-accordion {
   margin-bottom: 18rem; }
   .questions-accordion #accordion-questions {
@@ -40841,19 +40859,151 @@ body::after {
     .cards-stocks__panel .panel-text {
       font-size: 2.6rem; } }
 
-.pages-patients .pages__item-title {
+.pages.pages-patients .pages__item {
+  overflow: hidden; }
+  .pages.pages-patients .pages__item-big-img.stocks > img.desc {
+    height: 35rem; }
+  .pages.pages-patients .pages__item-big-img.stocks > img.mob {
+    display: none; }
+  .pages.pages-patients .pages__item-small-img.information {
+    height: 23.9rem;
+    right: -4rem;
+    margin-bottom: 0; }
+  .pages.pages-patients .pages__item-small-img.cards {
+    height: 29.7rem; }
+  .pages.pages-patients .pages__item-small-img.questions {
+    height: 30.5rem;
+    right: 3.2rem; }
+  .pages.pages-patients .pages__item-small-img.preparation {
+    height: 32rem;
+    right: 2.7rem; }
+
+.pages.pages-patients .pages__item-title {
   font-size: 2.5rem; }
+
+@media (max-width: 48em) {
+  .pages.pages-patients .pages__item-big {
+    height: 75.4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+    .pages.pages-patients .pages__item-big-img.stocks {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 51.6rem;
+      height: 41rem; }
+      .pages.pages-patients .pages__item-big-img.stocks > img.desc {
+        display: none; }
+      .pages.pages-patients .pages__item-big-img.stocks > img.mob {
+        display: block; }
+  .pages.pages-patients .pages__item-small {
+    height: 75.4rem; }
+    .pages.pages-patients .pages__item-small-text {
+      font-family: MyriadPro;
+      font-size: 2.6rem; }
+    .pages.pages-patients .pages__item-small-img.cards {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 47.8rem; }
+    .pages.pages-patients .pages__item-small-img.questions {
+      position: absolute;
+      bottom: 0;
+      right: 6rem;
+      height: 52rem; }
+    .pages.pages-patients .pages__item-small-img.preparation {
+      position: absolute;
+      bottom: 0;
+      right: 4.8rem;
+      height: 52rem; }
+    .pages.pages-patients .pages__item-small-img.information {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 39rem; }
+  .pages.pages-patients .pages__item-title {
+    font-size: 5rem; } }
+
+.patients-preparation {
+  margin-bottom: 17.5rem; }
+  .patients-preparation .preparation__breadcrumbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 8rem; }
+    .patients-preparation .preparation__breadcrumbs button {
+      font-family: Montserrat;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: rgba(51, 51, 51, 0.5);
+      padding: 1rem 2.5rem;
+      border: 1px solid #d8dde4;
+      border-radius: 1rem; }
+      .patients-preparation .preparation__breadcrumbs button._active {
+        color: #fe7200;
+        font-weight: 700; }
+  .patients-preparation .preparation__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem; }
+  .patients-preparation .preparation__btn-box {
+    margin-top: 4rem; }
+  .patients-preparation .preparation__btn::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+
+@media (max-width: 48em) {
+  .patients-preparation {
+    margin-bottom: 16rem; }
+    .patients-preparation .preparation__breadcrumbs {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      row-gap: 2.4rem;
+      -webkit-column-gap: 1.6rem;
+         -moz-column-gap: 1.6rem;
+              column-gap: 1.6rem;
+      margin-bottom: 16rem; }
+      .patients-preparation .preparation__breadcrumbs button {
+        font-size: 2.4rem;
+        padding: 0.8rem 2.4rem;
+        border: 1px solid #d8dde4;
+        border-radius: 1rem; }
+    .patients-preparation .preparation__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3.2rem; }
+    .patients-preparation .preparation__btn-box {
+      margin-top: 8rem; } }
 
 .career-card.diseases {
   grid-template-columns: 33.9rem 1fr; }
   .career-card.diseases .career-card__text-wrap {
     padding: 4rem;
     padding-left: 0; }
+  .career-card.diseases .career-card__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 4.5rem; }
+  .career-card.diseases .career-card__image-doctors {
+    width: 13.2rem; }
   .career-card.diseases .career-card__info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 4rem; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.4rem; }
     .career-card.diseases .career-card__info p:nth-child(1) {
       font-family: MyriadPro;
       font-size: 1.8rem;
@@ -40868,6 +41018,33 @@ body::after {
       font-weight: 400;
       line-height: normal;
       color: rgba(51, 51, 51, 0.5); }
+
+@media (max-width: 48em) {
+  .career-card.diseases {
+    grid-template-columns: 1fr; }
+    .career-card.diseases .career-card__heading {
+      font-size: 3.2rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem; }
+    .career-card.diseases .career-card__text {
+      margin-bottom: 4rem; }
+    .career-card.diseases .career-card__text-wrap {
+      padding: 0; }
+    .career-card.diseases .career-card__image-box {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 0; }
+    .career-card.diseases .career-card__image-doctors {
+      width: 21rem; }
+    .career-card.diseases .career-card__info {
+      gap: 1rem; }
+      .career-card.diseases .career-card__info p:nth-child(1) {
+        font-size: 2.6rem; }
+      .career-card.diseases .career-card__info p:nth-child(2) {
+        font-size: 2.6rem; }
+    .career-card.diseases .career-card__btn {
+      display: none; } }
 
 .sl-reviews {
   margin-bottom: 18rem; }

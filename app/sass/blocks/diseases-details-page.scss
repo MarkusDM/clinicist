@@ -67,3 +67,33 @@
   }
 }
 
+@media (max-width: 48em) {
+  .other-programs__head {
+    &.diseases {
+      .other-programs {
+        &__link {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.other-programs {
+  &__link {
+    &.diseases-link-mob {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .other-programs {
+    &__link {
+      &.diseases-link-mob {
+        display: inline-flex;
+        align-self: flex-start;
+      }
+    }
+  }
+}
