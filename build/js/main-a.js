@@ -4,21 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     clearMaskOnLostFocus: false,
   })
 
-<<<<<<< HEAD
-  // rating set
-  // $('.my-rating').starRating({
-  //   starSize: 40,
-  //   initialRating: 5,
-  //   emptyColor: '#ffffff',
-  //   hoverColor: '#fe7200',
-  //   activeColor: '#fe7200',
-  //   ratedColor: '#fe7200',
-  //   useGradient: false,
-  //   strokeWidth: 20,
-  //   strokeColor: '#fe7200',
-  //   starShape: 'straight',
-  // })
-=======
   // is mobile
   let isMobile = {
     Android: function () {
@@ -46,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
       )
     },
   }
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
 
   const md = window.matchMedia('(max-width: 768px)').matches
 
@@ -232,23 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-<<<<<<< HEAD
-  // doctor card hours (set height)
-  const hoursItems = document.querySelectorAll('.doctor-card__hours')
-  const setHoursHeight = () => {
-    if (hoursItems.length) {
-      const gap = md ? 4 : 12
-      const rows = md ? 2 : 3
-      hoursItems.forEach(hoursItem => {
-        const parent = hoursItem.closest('[data-showmore-content]')
-        const height = hoursItem.offsetHeight - 1
-        hoursItem.style.marginBottom = `${gap}px`
-        parent.dataset.showmoreContent = `${(height + gap) * rows}`
-      })
-    }
-  }
-  setHoursHeight()
-=======
   // hours
   const hours = document.querySelectorAll('.doctor-card__hours-group')
   const moveItems = (items, target) => {
@@ -287,7 +254,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   initHoursItems()
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
 
   // sort dropdown
   const sortDropdown = document.querySelector('.sort-dropdown')
@@ -375,8 +341,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   moveImage()
 
-<<<<<<< HEAD
-=======
   // show more text
   const toggleText = () => {
     const showmoreTextElements = document.querySelectorAll('[data-showmore-text]')
@@ -425,7 +389,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   allReviewsModify()
 
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
   // ===========================================================================
 
   // smooth behaviour
@@ -462,12 +425,9 @@ document.addEventListener('DOMContentLoaded', function () {
           })
         )
       }, duration)
-<<<<<<< HEAD
-=======
       document.addEventListener('slideUpDone', function(e) {
         e.detail.target.parentElement.classList.remove('_active')
       })
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
     }
   }
   function _slideDown(target, duration = 500, showmore = 0) {
@@ -505,12 +465,9 @@ document.addEventListener('DOMContentLoaded', function () {
           })
         )
       }, duration)
-<<<<<<< HEAD
-=======
       document.addEventListener('slideDownDone', function(e) {
         e.detail.target.parentElement.classList.add('_active')
       })
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
     }
   }
   function _slideToggle(target, duration = 500) {
@@ -1761,11 +1718,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // showmore
   function showMore() {
-<<<<<<< HEAD
-    window.addEventListener('load', function (e) {
-=======
     window.addEventListener('load', function() {
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
       const showMoreBlocks = document.querySelectorAll('[data-showmore]')
       let showMoreBlocksRegular
       let mdQueriesArray
@@ -1900,10 +1853,7 @@ document.addEventListener('DOMContentLoaded', function () {
             : null
         }
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
     })
   }
   showMore()
@@ -2034,8 +1984,6 @@ document.addEventListener('DOMContentLoaded', function () {
     target.classList.add(className)
   }
 
-<<<<<<< HEAD
-=======
   // control window scroll event
   let addWindowScrollEvent = false
 
@@ -2147,7 +2095,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
   }
 
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
   // ===========================================================================
 
   const onClickHandler = e => {
@@ -2265,31 +2212,17 @@ document.addEventListener('DOMContentLoaded', function () {
       )
     }
     if (target.closest('.all-services__service-card')) {
-<<<<<<< HEAD
-      const targetParent = target.closest('.all-services__service-card').parentElement
-      setActiveClass(
-        target.closest('.all-services__service-card'),
-        targetParent.querySelectorAll('.all-services__service-card'),
-=======
       setActiveClass(
         target.closest('.all-services__service-card'),
         document.querySelectorAll('.all-services__service-card'),
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
         '_active'
       )
     }
     if (target.closest('.hours-item')) {
-<<<<<<< HEAD
-      const targetParent = target.closest('.hours-item').parentElement
-      setActiveClass(
-        target.closest('.hours-item'),
-        targetParent.querySelectorAll('.hours-item'),
-=======
       const targetParent = target.closest('.hours-item')
       setActiveClass(
         target.closest('.hours-item'),
         targetParent.closest('.doctor-card__hours-group').querySelectorAll('.hours-item'),
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
         '_active'
       )
     }
@@ -2331,8 +2264,6 @@ document.addEventListener('DOMContentLoaded', function () {
         '_active'
       )
     }
-<<<<<<< HEAD
-=======
     if (target.closest('.review-card__show_response')) {
       target.closest('.review-card__show_response').parentElement.nextElementSibling.style.display = 'flex'
       target.closest('.review-card__text-wrap').classList.add('_active')
@@ -2357,7 +2288,6 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.innerHTML = 'Загрузить еще'
       }
     }
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
   }
 
   // ===========================================================================
@@ -2365,11 +2295,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', onClickHandler)
   window.addEventListener('resize', function () {
     initSliders()
-<<<<<<< HEAD
-    setHoursHeight()
-    moveImage()
-  })
-=======
     moveImage()
     allReviewsModify()
     initHoursItems()
@@ -2378,5 +2303,4 @@ document.addEventListener('DOMContentLoaded', function () {
     if (display) {
       startTimer(72, display);
     }
->>>>>>> 98ecda94830443396943d1705c3bd514886af0bf
 })

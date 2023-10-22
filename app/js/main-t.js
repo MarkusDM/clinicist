@@ -5,39 +5,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  if (document.querySelector('.diseases-doctors__slide')) {
-    if (md) {
-      ourDoctorsSlider = new Swiper('.diseases-doctors__slider', {
-        spaceBetween: 40,
-        slidesPerView: 1,
-        speed: 1000,
-        autoHeight: true,
-        navigation: {
-          nextEl: '.diseases-doctors__slider-control .btn-next',
-          prevEl: '.diseases-doctors__slider-control .btn-prev',
-        },
-        pagination: {
-          el: '.diseases-doctors__slider-pagination',
-          clickable: true,
-        },
-      });
-    } else if (!md) {
-      ourDoctorsSlider = new Swiper('.diseases-doctors__slider', {
-        spaceBetween: 40,
+
+
+
+  const ourDoctorsSliderTwo = new Swiper('.diseases-doctors__slider', {
+    
+    slidesPerView: 1,
+    spaceBetween: 50,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 1000,
+    navigation: {
+      nextEl: '.diseases-doctors__slider-control .btn-next',
+      prevEl: '.diseases-doctors__slider-control .btn-prev',
+    },
+
+  
+    breakpoints: {
+      769: {
         slidesPerView: 2,
+        spaceBetween: 50,
         observer: true,
         observeParents: true,
         speed: 1000,
         autoHeight: false,
-        observer: true,
-        observeParents: true,
-        navigation: {
-          nextEl: '.diseases-doctors__slider-control .btn-next',
-          prevEl: '.diseases-doctors__slider-control .btn-prev',
-        },
-      });
-    }
-  }
+      },
+      
+    },
+  
+  
+    
+  });
+
+  
 
   if (document.querySelector('.preparation__breadcrumbs')) {
     document
