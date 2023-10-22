@@ -720,7 +720,11 @@
             <div class="baner__content-text">В нашей клинике вы получите только самое современное и эффективное лечение</div>
           </div>
           <div class="baner__picture">
-            <img src="./img/ans_image/map-baner.webp" alt="">
+            <picture>
+              <source media="(max-width: 769px)" srcset="./img/ans_image/map-baner-mob.webp" />
+              <source media="(min-width: 768px)" srcset="./img/ans_image/map-baner.webp" />
+              <img src="./img/ans_image/map-baner.webp" alt="" />
+            </picture>
           </div>
         </div>
       </div>
@@ -769,10 +773,10 @@
               Виды хирургов. Как и многие другие направления медицины, хирургия делится на широкий
               спектр различны
           </div>
-          <div class="services-p__box-down-title">
-            Ультразвуковая диагностика (УЗИ)
-          </div>
           <div class="services-p__box-down">
+            <div class="services-p__box-down-title">
+              Ультразвуковая диагностика (УЗИ)
+            </div>
               <ul class="services-p__box-lists">
                   <li><a href="#">УЗИ мошонки</a></li>
                   <li><a href="#">УЗИ мягких тканей</a></li>
@@ -820,61 +824,60 @@
                   <li><a href="#">Цервикометрия</a></li>
                   <li><a href="#">Эхогистеросальпингография (Эхо-ГСГ)</a></li>
               </ul>
-          </div>
-          
-          <div class="services-p__box-down-title">
-            Компьютерная томография
-          </div>
-          <div class="services-p__box-down">
+
+              <div class="services-p__box-down-title">
+                Компьютерная томография
+              </div>
               <ul class="services-p__box-lists">
-                  <li><a href="#">УЗИ мошонки</a></li>
-                  <li><a href="#">УЗИ мягких тканей</a></li>
-                  <li><a href="#">УЗИ околоносовых пазух</a></li>
-                  <li><a href="#">УЗИ органов брюшной полости</a></li>
-                  <li><a href="#">УЗИ органов мочеполовой системы</a></li>
-                  <li><a href="#">УЗИ печени и желчного пузыря</a></li>
-                  <li><a href="#">УЗИ плевральной полости</a></li>
-                  <li><a href="#">УЗИ поверхностных структур</a></li>
-                  <li><a href="#">УЗИ поджелудочной железы</a></li>
-                  <li><a href="#">УЗИ почек и надпочечников</a></li>
-                  <li><a href="#">УЗИ, ТРУЗИ предстательной железы (простаты)</a></li>
-                  <li><a href="#">УЗИ селезенки</a></li>
-                  <li><a href="#">УЗИ сердца (эхокардиография)</a></li>
-                  <li><a href="#">УЗИ слюнных желез</a></li>
-                  <li><a href="#">УЗИ сосудов</a></li>
-                  <li><a href="#">УЗИ сосудов головы</a></li>
-                  <li><a href="#">УЗИ сосудов шеи</a></li>
-                  <li><a href="#">УЗИ суставов</a></li>
-                  <li><a href="#">УЗИ щитовидной железы</a></li>
-                  <li><a href="#">Фолликулометрия (УЗ-мониторинг созревания фолликула)</a></li>
-                  <li><a href="#">Цервикометрия</a></li>
-                  <li><a href="#">Эхогистеросальпингография (Эхо-ГСГ)</a></li>
-  
-                  <li><a href="#">УЗИ мошонки</a></li>
-                  <li><a href="#">УЗИ мягких тканей</a></li>
-                  <li><a href="#">УЗИ околоносовых пазух</a></li>
-                  <li><a href="#">УЗИ органов брюшной полости</a></li>
-                  <li><a href="#">УЗИ органов мочеполовой системы</a></li>
-                  <li><a href="#">УЗИ печени и желчного пузыря</a></li>
-                  <li><a href="#">УЗИ плевральной полости</a></li>
-                  <li><a href="#">УЗИ поверхностных структур</a></li>
-                  <li><a href="#">УЗИ поджелудочной железы</a></li>
-                  <li><a href="#">УЗИ почек и надпочечников</a></li>
-                  <li><a href="#">УЗИ, ТРУЗИ предстательной железы (простаты)</a></li>
-                  <li><a href="#">УЗИ селезенки</a></li>
-                  <li><a href="#">УЗИ сердца (эхокардиография)</a></li>
-                  <li><a href="#">УЗИ слюнных желез</a></li>
-                  <li><a href="#">УЗИ сосудов</a></li>
-                  <li><a href="#">УЗИ сосудов головы</a></li>
-                  <li><a href="#">УЗИ сосудов шеи</a></li>
-                  <li><a href="#">УЗИ суставов</a></li>
-                  <li><a href="#">УЗИ щитовидной железы</a></li>
-                  <li><a href="#">Фолликулометрия (УЗ-мониторинг созревания фолликула)</a></li>
-                  <li><a href="#">Цервикометрия</a></li>
-                  <li><a href="#">Эхогистеросальпингография (Эхо-ГСГ)</a></li>
-              </ul>
+                <li><a href="#">УЗИ мошонки</a></li>
+                <li><a href="#">УЗИ мягких тканей</a></li>
+                <li><a href="#">УЗИ околоносовых пазух</a></li>
+                <li><a href="#">УЗИ органов брюшной полости</a></li>
+                <li><a href="#">УЗИ органов мочеполовой системы</a></li>
+                <li><a href="#">УЗИ печени и желчного пузыря</a></li>
+                <li><a href="#">УЗИ плевральной полости</a></li>
+                <li><a href="#">УЗИ поверхностных структур</a></li>
+                <li><a href="#">УЗИ поджелудочной железы</a></li>
+                <li><a href="#">УЗИ почек и надпочечников</a></li>
+                <li><a href="#">УЗИ, ТРУЗИ предстательной железы (простаты)</a></li>
+                <li><a href="#">УЗИ селезенки</a></li>
+                <li><a href="#">УЗИ сердца (эхокардиография)</a></li>
+                <li><a href="#">УЗИ слюнных желез</a></li>
+                <li><a href="#">УЗИ сосудов</a></li>
+                <li><a href="#">УЗИ сосудов головы</a></li>
+                <li><a href="#">УЗИ сосудов шеи</a></li>
+                <li><a href="#">УЗИ суставов</a></li>
+                <li><a href="#">УЗИ щитовидной железы</a></li>
+                <li><a href="#">Фолликулометрия (УЗ-мониторинг созревания фолликула)</a></li>
+                <li><a href="#">Цервикометрия</a></li>
+                <li><a href="#">Эхогистеросальпингография (Эхо-ГСГ)</a></li>
+
+                <li><a href="#">УЗИ мошонки</a></li>
+                <li><a href="#">УЗИ мягких тканей</a></li>
+                <li><a href="#">УЗИ околоносовых пазух</a></li>
+                <li><a href="#">УЗИ органов брюшной полости</a></li>
+                <li><a href="#">УЗИ органов мочеполовой системы</a></li>
+                <li><a href="#">УЗИ печени и желчного пузыря</a></li>
+                <li><a href="#">УЗИ плевральной полости</a></li>
+                <li><a href="#">УЗИ поверхностных структур</a></li>
+                <li><a href="#">УЗИ поджелудочной железы</a></li>
+                <li><a href="#">УЗИ почек и надпочечников</a></li>
+                <li><a href="#">УЗИ, ТРУЗИ предстательной железы (простаты)</a></li>
+                <li><a href="#">УЗИ селезенки</a></li>
+                <li><a href="#">УЗИ сердца (эхокардиография)</a></li>
+                <li><a href="#">УЗИ слюнных желез</a></li>
+                <li><a href="#">УЗИ сосудов</a></li>
+                <li><a href="#">УЗИ сосудов головы</a></li>
+                <li><a href="#">УЗИ сосудов шеи</a></li>
+                <li><a href="#">УЗИ суставов</a></li>
+                <li><a href="#">УЗИ щитовидной железы</a></li>
+                <li><a href="#">Фолликулометрия (УЗ-мониторинг созревания фолликула)</a></li>
+                <li><a href="#">Цервикометрия</a></li>
+                <li><a href="#">Эхогистеросальпингография (Эхо-ГСГ)</a></li>
+            </ul>
           </div>
         </div>
+        <div class="services-p__box-link link">Показать все</div>
 
         <div class="services-p__box services-p__box--big">
           <div class="services-p__box-inner">
@@ -935,10 +938,11 @@
               </ul>
           </div>
         </div>
+        <div class="services-p__box-link link">Показать все</div>
       </div>
     </section>
 
-    <section class="appointment">
+    <section class="appointment map-appointment">
       <div class="appointment__container container">
         <div class="appointment__head">
           <span class="appointment__title title">Не нашли нужную страницу?</span>
@@ -953,7 +957,7 @@
               >
             </div>
             <p class="callback-appointment__text txt">
-              Или оставьте заявку на обратный звонок
+              Или можете оставить заявку на обратный звонок
             </p>
             <form action="#" class="callback-appointment__form">
               <div class="callback-appointment__input-wrap">
@@ -972,10 +976,6 @@
                 Заказать обратный звонок
               </button>
             </form>
-            <p class="callback-appointment__hint txt">
-              *Заказывая обратный звонок, вы соглашаетесь с
-              <a href="#">политикой обработки своих персональных данных</a>
-            </p>
           </div>
           <div class="appointment__contacts contacts-appointment">
             <span class="contacts-appointment__heading">Запишитесь онлайн</span>
@@ -985,12 +985,12 @@
                 *Нажимая кнопку «Заказать обратный звонок», 
                 вы соглашаетесь с обработкой своих персональных данных.
               </p>
-              <p class="contacts-appointment__text">
+              <a class="contacts-appointment__text link" href="#">
                 Политика в отношении обработки персональных данных
-              </p>
-              <p class="contacts-appointment__text">
+              </a>
+              <a class="contacts-appointment__text link" href="#">
                 Согласие на обработку персональных данных
-              </p>
+              </a>
             </div>
           </div>
           <div class="appointment__registration registration-appointment">
@@ -1004,9 +1004,9 @@
               </a>
               <a
                 href="#"
-                class="contacts-appointment__item contacts-appointment__item_telegram"
+                class="contacts-appointment__item contacts-appointment__item_chat"
               >
-                <span>Написать в Telegram</span>
+                <span>Онлайн-чат</span>
               </a>
               <a
                 href="#"
@@ -1100,6 +1100,7 @@
               </ul>
           </div>
         </div>
+        <div class="services-p__box-link link">Показать все</div>
 
         <div class="services-p__box services-p__box--big">
           <div class="services-p__box-inner">
@@ -1141,6 +1142,7 @@
               </ul>
           </div>
         </div>
+        <div class="services-p__box-link link">Показать все</div>
 
         <div class="services-p__box services-p__box--big">
           <div class="services-p__box-inner">
@@ -1200,10 +1202,11 @@
               </ul>
           </div>
         </div>
+        <div class="services-p__box-link link">Показать все</div>
       </div>
     </section>
 
-    <section class="appointment">
+    <section class="appointment map-appointment">
       <div class="appointment__container container">
         <div class="appointment__head">
           <span class="appointment__title title">Не нашли нужную страницу?</span>
@@ -1218,7 +1221,7 @@
               >
             </div>
             <p class="callback-appointment__text txt">
-              Или оставьте заявку на обратный звонок
+              Или можете оставить заявку на обратный звонок
             </p>
             <form action="#" class="callback-appointment__form">
               <div class="callback-appointment__input-wrap">
@@ -1237,10 +1240,6 @@
                 Заказать обратный звонок
               </button>
             </form>
-            <p class="callback-appointment__hint txt">
-              *Заказывая обратный звонок, вы соглашаетесь с
-              <a href="#">политикой обработки своих персональных данных</a>
-            </p>
           </div>
           <div class="appointment__contacts contacts-appointment">
             <span class="contacts-appointment__heading">Запишитесь онлайн</span>
@@ -1250,12 +1249,12 @@
                 *Нажимая кнопку «Заказать обратный звонок», 
                 вы соглашаетесь с обработкой своих персональных данных.
               </p>
-              <p class="contacts-appointment__text">
+              <a class="contacts-appointment__text link" href="#">
                 Политика в отношении обработки персональных данных
-              </p>
-              <p class="contacts-appointment__text">
+              </a>
+              <a class="contacts-appointment__text link" href="#">
                 Согласие на обработку персональных данных
-              </p>
+              </a>
             </div>
           </div>
           <div class="appointment__registration registration-appointment">
@@ -1269,9 +1268,9 @@
               </a>
               <a
                 href="#"
-                class="contacts-appointment__item contacts-appointment__item_telegram"
+                class="contacts-appointment__item contacts-appointment__item_chat"
               >
-                <span>Написать в Telegram</span>
+                <span>Онлайн-чат</span>
               </a>
               <a
                 href="#"
@@ -1462,5 +1461,7 @@
   <script src="./js/js-an.js"></script>
   <script src="./js/jq-d.js"></script>
 
+   <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+   <script src="./js/js-an.js"></script>
 </body>
 </html>

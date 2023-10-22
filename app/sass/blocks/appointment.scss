@@ -309,6 +309,81 @@
   }
 }
 
+.map-appointment {
+  .appointment {
+    margin-bottom: 12rem;
+    &__subtitle {
+      margin-top: 1.6rem;
+      margin-bottom: 0;
+    }
+  }
+  .callback-appointment {
+    &__text {
+      font-family: 'Montserrat';
+      margin-bottom: 3rem;
+      line-height: 150%;
+    }
+    &__input {
+      &-wrap {
+        border: 1px solid  #D8DDE4;
+      }
+    }
+    &__btn {
+      border: 0;
+      margin-top: 3rem;
+    }
+  }
+  .contacts-appointment {
+    &__heading {
+      margin-bottom: 3.2rem;
+    }
+    &__text {
+      font-family: 'Montserrat';
+    }
+    &__text-wrap {
+      gap: 2rem;
+      .link {
+        font-size: 1.6rem;
+        line-height: 120%;
+        font-weight: 400;
+        text-decoration: underline;
+        &::after {
+          content: none;
+        }
+      }
+    }
+    &__links {
+      row-gap: 2.4rem;
+    }
+    &__item {
+      border: 0;
+      &::before {
+        left: 2rem;
+        width: 3rem;
+        height: 3rem;
+      }
+      &_whatsapp::before {
+        background-image: url(../../img/ans_image/icons/whatsapp.svg);
+      }
+      &_telegram::before {
+        background-image: url(../../img/ans_image/icons/telegram.svg);
+      }
+      &_chat::before {
+        background-image: url(../../img/ans_image/icons/chat.svg);
+      }
+      &:hover {
+        border: 0.1rem solid #36b4f1;
+      }
+    }
+  }
+  .registration-appointment {
+    &__btn {
+      width: 33.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 @media (max-width: 48em) {
   .callback-appointment {
     &::before {
@@ -429,6 +504,98 @@
       font-size: 2.6rem;
       a {
         display: block;
+      }
+    }
+  }
+  .map-appointment {
+    .appointment {
+      &__subtitle {
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+      }
+    }
+    .callback-appointment {
+      &__text {
+        font-family: 'Montserrat';
+        margin-bottom: 3.2rem;
+        font-size: 3.2rem;
+        line-height: 150%;
+      }
+      &__input {
+        &-wrap {
+          border: 0.1rem solid  #D8DDE4;
+        }
+      }
+      &__btn {
+        border: 0;
+        margin-top: 0;
+      }
+      &__form {
+        margin-bottom: 1rem;
+        row-gap: 4rem;
+      }
+      &__heading {
+        & span {
+          flex-direction: column;
+          //row-gap: ;
+        }
+        &::before {
+          flex: 0 0 6.6rem;
+          width: 6.6rem;
+          height: 6.6rem;
+        }
+      }
+    }
+    .contacts-appointment {
+      &__heading {
+        margin-bottom: 4rem;
+      }
+      &__text-wrap {
+        gap: 2rem;
+        .link {
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 120%;
+          text-decoration: underline;
+          &::after {
+            content: none;
+          }
+        }
+      }
+      &__links {
+        row-gap: 4rem;
+      }
+      &__item {
+        border: 0;
+        height: 6.8rem;
+        min-height: 6.8rem;
+        justify-content: center;
+        & span {
+          padding-left: 0;
+        }
+        &::before {
+          left: 2rem;
+          width: 3rem;
+          height: 3rem;
+        }
+        &_whatsapp::before {
+          background-image: url(../../img/ans_image/icons/whatsapp.svg);
+        }
+        &_telegram::before {
+          background-image: url(../../img/ans_image/icons/telegram.svg);
+        }
+        &_chat::before {
+          background-image: url(../../img/ans_image/icons/chat.svg);
+        }
+      }
+    }
+    .registration-appointment {
+      padding: 5rem;
+      &__btn {
+        width: 55rem;
+        height: 6.8rem;
+        min-height: 6.8rem;
+        margin-bottom: 3.2rem;
       }
     }
   }

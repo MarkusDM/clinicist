@@ -4,6 +4,8 @@ const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
 const valuesSlides = Array.from(document.querySelectorAll('.values__right-slide'));
 const searchBtn = document.querySelector('.search-btn');
 const searchLabel = document.querySelector('.search__label');
+const btnMore = Array.from(document.querySelectorAll('.services-p__box-link'));
+const mapList = document.querySelectorAll('.services-p__box-inner');
 let tabIndex;
 storyItems.forEach( e => {
   e.addEventListener('mouseenter', () => {
@@ -21,6 +23,26 @@ if(searchBtn) {
   })
 }
 
+if(btnMore) {
+  btnMore.forEach(e => {
+    e.addEventListener('click', () => {
+      e.classList.toggle('active');
+      e.previousElementSibling.childNodes[5].classList.toggle('active')
+    })
+  })
+}
+
+mapList.forEach(e => {
+  e.addEventListener('click', () => {
+    if(e.className.includes('active')) {
+      e.parentElement.nextElementSibling.style.display = 'block';
+    }
+    if(!(e.className.includes('active'))) {
+      e.parentElement.nextElementSibling.style.display = 'none';
+    }
+  })
+})
+
 valuesTabs.forEach(e => {
   e.addEventListener('click', () => {
     for(let i = 0; i < valuesTabs.length;i++){
@@ -33,47 +55,52 @@ valuesTabs.forEach(e => {
   })
 })
 
-const historySlider = new Swiper('.story-swiper', {
-  slidesPerView: 5,
-  spaceBetween: rem(4),
-  speed: 1000,
-  breakpoints: {
-    768: {
+
+let historySlider;
+
+function historyInit() {
+  if (historySlider) {
+    historySlider.destroy(true, true);
+  }
+
+  historySlider = new Swiper('.story-swiper', {
       slidesPerView: 5,
       spaceBetween: rem(4),
-    },
-    200: {
-      slidesPerView: 2,
-      spaceBetween: rem(8.8),
-    }
-  }
-})
+      speed: 1000,
+      breakpoints: {
+        768: {
+          slidesPerView: 5,
+          spaceBetween: rem(4),
+        },
+        200: {
+          slidesPerView: 2,
+          spaceBetween: rem(8.8),
+        }
+      },
+  })
+}
 
 const doctorsSlider = new Swiper('.our-doctors__slider', {
   slidesPerView: 3,
 })
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
-  historySlider.update();
-  if (width < 768){
-    historySlider.init(historySlider);
-    historySlider.update();
+  if (width < 768) {
+    historyInit();
   } else if(width > 768) {
-    historySlider.update();
+    historyInit();
     historySlider.destroy(false, false);
   }
 })
 
 window.addEventListener('resize', () => {
   const width = window.innerWidth;
-  historySlider.update();
-  if (width < 768){
-    historySlider.init(historySlider);
-    historySlider.update();
-  }
-   if(width > 768) {
-    historySlider.update();
+  if (width < 768) {
+    historyInit()
+   } else if(width > 768) {
+    historyInit()
     historySlider.destroy(false, false);
   }
 })
@@ -81,9 +108,11 @@ window.addEventListener('resize', () => {
 const closeBtn = document.querySelector('.modal-licenzia__slider-close');
 let slider = document.querySelector('.modal-licenzia__slider')
 let index;
-closeBtn.addEventListener('click', () => {
-  slider.classList.remove('active');
-})
+if(closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    slider.classList.remove('active');
+  })
+}
 
 const aboutSlider = new Swiper('.about-swiper', {
   navigation: {
