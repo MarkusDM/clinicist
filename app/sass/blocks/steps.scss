@@ -1,6 +1,12 @@
 .steps {
   position: relative;
   margin-bottom: 15rem;
+  &.steps-appointment {
+    margin-bottom: 4rem;
+  }
+  &.steps-appointment-addon {
+    margin-bottom: 6rem;
+  }
   .popup-show & {
     z-index: -1;
   }
@@ -75,14 +81,34 @@
   &__tabs {
   }
 
+  // .steps__navigation-wrap
+
+  &__navigation-wrap {
+    height: 16rem;
+  }
+
   // .steps__navigation
 
   &__navigation {
+    position: relative;
     padding: 3rem 4rem;
     display: grid;
     grid-template-columns: repeat(3, 27rem);
     justify-content: space-between;
     background-color: #eef3f7;
+    &_addon {
+      grid-template-columns: repeat(4, 27rem);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 41.4rem);
+      height: 2px;
+      top: 4.85rem;
+      left: 20.7rem;
+      background-color: #d8dde4;
+      transform: translate(0, -50%);
+    }
   }
 
   // .steps__title
@@ -98,26 +124,13 @@
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.04rem;
-    &:not(:last-child) {
-      .steps__num {
-        &::after {
-          content: '';
-          position: absolute;
-          width: 51rem;
-          height: 2px;
-          top: 50%;
-          right: 0;
-          background-color: #d8dde4;
-          transform: translate(100%, -50%);
-        }
-      }
-    }
   }
 
   // .steps__num
 
   &__num {
     position: relative;
+    z-index: 2;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -244,6 +257,12 @@
   &__btn {
     min-width: 49.8rem;
     background-color: transparent;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: transparent;
+        border: 1px solid #d8dde4;
+      }
+    }
   }
 
   // .steps__call
@@ -295,14 +314,34 @@
 
     &__details {
       margin: 4rem 4rem auto 4rem;
+      align-self: start;
       &_mb {
         margin: 4rem;
       }
     }
+
+  // .steps__login-form
+
+  &__login-form {
+    &_appointment {
+      .login-form__head {
+        margin-bottom: 2.9rem;
+      }
+      .login-form__input {
+        margin-bottom: 1.6rem;
+      }
+      .login-form__checkbox {
+        margin-bottom: 4rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
   .steps {
+    &.steps-appointment {
+      margin-bottom: 8rem;
+    }
     &.steps-date-busy {
       .steps__select-wrap {
         margin-bottom: 6.4rem;
@@ -321,6 +360,22 @@
         margin: 0;
       }
     }
+    &.steps-appointment-addon {
+      margin-bottom: 8rem;
+    }
+    &__login-form {
+      &_appointment {
+        .login-form__head {
+          margin-bottom: 6rem;
+        }
+        .login-form__input {
+          margin-bottom: 4rem;
+        }
+        .login-form__checkbox {
+          margin-bottom: 4rem;
+        }
+      }
+    }
     &__details {
       margin: 0;
     }
@@ -331,7 +386,7 @@
       padding: 4rem 4.4rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;    
+      align-items: center;
       width: 100%;
       font-family: Montserrat;
       font-size: 3rem;
@@ -385,10 +440,16 @@
     &__date {
       margin-bottom: 2.3rem;
     }
+    &__navigation-wrap {
+      height: 17rem;
+    }
     &__navigation {
       padding: 5rem 4rem;
       display: flex;
       justify-content: flex-start;
+      &::after {
+        display: none;
+      }
     }
     &__title {
       margin-right: 0.8rem;
@@ -420,9 +481,6 @@
       border-radius: 1.6rem;
       font-size: 3rem;
       color: #b6b6b6;
-      &::after {
-        display: none;
-      }
     }
     &__head {
       margin-top: 0.6rem;
@@ -493,6 +551,10 @@
       &._desktop-only {
         display: none;
       }
+    }
+    &__title-text {
+      text-align: left;
+    line-height: 100%;
     }
   }
 }

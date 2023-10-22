@@ -54,7 +54,6 @@
   &__services-group {
     margin-bottom: 4rem;
     display: grid;
-    grid-auto-rows: 1fr;
     row-gap: 2.9rem;
   }
 
@@ -227,18 +226,30 @@
   // .services-price-list__group
 
   &__group {
-    margin-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.4rem;
+    &:not(&_hidden) {
+      margin-bottom: 0.4rem;
+    }
+    &:not(&_hidden),
+    &._active {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.4rem;
+    }
   }
 
   // .services-price-list__link
 
   &__link {
+    margin-top: 4rem;
     align-self: center;
+    &._active {
+      &::after {
+        transform: rotate(-90deg);
+      }
+    }
     &::after {
       transform: rotate(90deg);
+      transition: transform 0.3s ease;
     }
   }
 }
@@ -320,8 +331,13 @@
         font-size: 3.6rem;
       }
       &__group {
-        margin-bottom: 6.4rem;
-        row-gap: 0.8rem;
+        &:not(&_hidden) {
+          margin-bottom: 0.8rem;
+        }
+        &:not(&_hidden),
+        &._active {
+          row-gap: 0.8rem;
+        }
       }
       &__services {
         padding: 8rem 4rem;
@@ -330,11 +346,9 @@
         height: auto;
       }
       &__link {
+        margin-top: 6.3rem;
         &.link {
           column-gap: 1.5rem;
-        }
-        &::after {
-          transform: none;
         }
       }
     }

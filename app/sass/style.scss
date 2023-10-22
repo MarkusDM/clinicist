@@ -72,6 +72,8 @@
 @import './general/a-elements';
 @import './general/t-elements';
 @import './blocks/popups';
+@import './blocks/all-doctors';
+@import './blocks/all-reviews';
 
 @import './blocks/services-page';
 @import './blocks/offer-banner';
@@ -100,6 +102,8 @@
 @import './blocks/questions-accordion';
 @import './blocks/patients-cards-page';
 @import './blocks/patients-page';
+@import './blocks/patients-preparation';
+@import './blocks/diseases-card';
 
 @import './blocks/sl-reviews';
 @import './blocks/services-parent';
@@ -119,6 +123,11 @@
 @import './blocks/rec-materials.scss';
 @import './blocks/blog-cards.scss';
 @import './blocks/blog-search.scss';
+@import './blocks/blog-descs.scss';
+@import './blocks/blog-man.scss';
+@import './blocks/blog-desc.scss';
+@import './blocks/comments-2.scss';
+@import './blocks/leave-comment.scss';
 
 #ui-datepicker-div {
   display: block !important;

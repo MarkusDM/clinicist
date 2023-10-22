@@ -1,7 +1,114 @@
-.pages-patients {
+.pages {
+  &.pages-patients {
+    .pages {
+      &__item {
+        overflow: hidden;
+        &-big {
+          &-img {
+            &.stocks {
+              & > img {
+                &.desc {
+                  height: 35rem;
+                }
+                &.mob {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        &-small {
+          &-img {
+            &.information {
+              height: 23.9rem;
+              right: 1-5rem;
+              margin-bottom: 0;
+            }
+            &.cards {
+              height: 29.7rem;
+            }
+            &.questions {
+              height: 30.5rem;
+              right: 3.2rem;
+            }
+            &.preparation {
+              height: 32rem;
+              right: 2.7rem;
+            }
+          }
+        }
+      }
+      &__item-title {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
   .pages {
-    &__item-title {
-      font-size: 2.5rem;
+    &.pages-patients {
+      .pages {
+        &__item {
+          &-big {
+            height: 75.4rem;
+            flex-direction: column-reverse;
+            &-img {
+              &.stocks {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: 51.6rem;
+                height: 41rem;
+                & > img {
+                  &.desc {
+                    display: none;
+                  }
+                  &.mob {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+          &-small {
+            height: 75.4rem;
+            &-text {
+              font-family: MyriadPro;
+              font-size: 2.6rem;
+            }
+            &-img {
+              &.cards {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 47.8rem;
+              }
+              &.questions {
+                position: absolute;
+                bottom: 0;
+                right: 6rem;
+                height: 52rem;
+              }
+              &.preparation {
+                position: absolute;
+                bottom: 0;
+                right: 4.8rem;
+                height: 52rem;
+              }
+              &.information {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 39rem;
+              }
+            }
+          }
+        }
+        &__item-title {
+          font-size: 5rem;
+        }
+      }
     }
   }
 }

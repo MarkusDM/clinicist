@@ -82,37 +82,37 @@ body::after {
     .popup__head {
       margin-bottom: 1rem;
     }
-  
+
     // .appointment-modal__body
-  
+
     &__body {
       display: flex;
       flex-direction: column;
     }
-  
+
     // .appointment-modal__title
-  
+
     &__title {
       margin-bottom: 1.5rem;
     }
-  
+
     // .appointment-modal__subtitle
-  
+
     &__subtitle {
       margin-bottom: 4rem;
       max-width: 70.5rem;
     }
-  
+
     // .appointment-modal__form
-  
+
     &__form {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
-  
+
     // .appointment-modal__input-wrap
-  
+
     &__input-wrap {
       margin-bottom: 2.5rem;
       padding-left: 3rem;
@@ -133,9 +133,9 @@ body::after {
         background-repeat: no-repeat;
       }
     }
-  
+
     // .appointment-modal__input
-  
+
     &__input {
       @extend .txt;
       padding: 2rem;
@@ -143,36 +143,36 @@ body::after {
       font-size: 1.6rem;
       background: none;
     }
-  
+
     // .appointment-modal__contacts
-  
+
     &__contacts {
       margin-bottom: 4.7rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-  
+
     // .appointment-modal__contacts-heading
-  
+
     &__contacts-heading {
       font-size: 1.6rem;
     }
-  
+
     // .appointment-modal__contacts-group
-  
+
     &__contacts-group {
       display: flex;
       column-gap: 2.4rem;
     }
-  
+
     // .appointment-modal__contact
-  
+
     &__contact {
     }
-  
+
     // .appointment-modal__btn
-  
+
     &__btn {
       align-self: flex-start;
       min-width: 29.3rem;
@@ -206,16 +206,16 @@ body::after {
       margin-bottom: 3rem;
       grid-row: 2/3;
     }
-  
+
     // .datepicker-modal__form
-  
+
     &__form {
       display: grid;
       justify-content: center;
     }
-  
+
     // .datepicker-modal__title
-  
+
     &__title {
       margin-bottom: 3rem;
       text-align: center;
@@ -223,9 +223,9 @@ body::after {
       font-family: Montserrat;
       font-size: 3rem;
     }
-  
+
     // .datepicker-modal__field
-  
+
     &__field {
       margin-bottom: 4.7rem;
       display: flex;
@@ -233,9 +233,9 @@ body::after {
       row-gap: 2.5rem;
       width: 100%;
     }
-  
+
     // .datepicker-modal__input-wrap
-  
+
     &__input-wrap {
       padding: 0.8rem 0;
       display: flex;
@@ -253,17 +253,17 @@ body::after {
         background-repeat: no-repeat;
       }
     }
-  
+
     // .datepicker-modal__label
-  
+
     &__label {
       font-family: MyriadPro;
       font-size: 2rem;
       letter-spacing: -0.048rem;
     }
-  
+
     // .datepicker-modal__input
-  
+
     &__input {
       @extend .txt;
       border: none;
@@ -271,18 +271,18 @@ body::after {
         @extend .txt;
       }
     }
-  
+
     // .datepicker-modal__actions
-  
+
     &__actions {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
     }
-  
+
     // .datepicker-modal__head-back
-  
+
     &__head-back {
       &.link {
         flex-direction: row-reverse;
@@ -291,9 +291,9 @@ body::after {
         }
       }
     }
-  
+
     // .datepicker-modal__btn
-  
+
     &__btn {
       min-width: 20.3rem;
     }
@@ -424,6 +424,12 @@ body::after {
     align-self: flex-start;
     min-width: 28.4rem;
   }
+
+   // .add-patient-modal__warning
+
+   &__warning {
+    margin-bottom: 4rem;
+   }
 }
 
 // abort application modal
@@ -593,6 +599,178 @@ body::after {
   }
 }
 
+// registration modal
+.registration-modal {
+  .popup__content {
+    padding: 4rem 4rem 6rem 4rem;
+  }
+  .popup__head {
+    margin-bottom: 1rem;
+  }
+
+  // .registration-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .registration-modal__title-wrap
+
+  &__title-wrap {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .registration-modal__subtitle
+
+  &__subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  // .registration-modal__title
+
+  &__title {
+  }
+
+  // .registration-modal__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .registration-modal__options
+
+  &__options {
+    margin-bottom: 6rem;
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  // .registration-modal__checkbox
+
+  &__checkbox {
+  }
+
+  // .registration-modal__fields
+
+  &__fields {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    &_m20 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .registration-modal__input
+
+  &__input {
+    &_fc {
+      grid-column: 1/2;
+    }
+  }
+
+  // .registration-modal__actions
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .registration-modal__btn
+
+  &__btn {
+    min-width: 28.4rem;
+  }
+
+  // .registration-modal__verify
+
+  &__verify {
+    margin-bottom: 3.6rem;
+  }
+}
+
+// registration confirm modal
+.registration-confirm-modal {
+  .popup__content {
+    padding: 4rem 4rem 6rem 4rem;
+  }
+  .popup__head {
+    margin-bottom: 0.5rem;
+  }
+
+  // .registration-confirm-modal__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .registration-confirm-modal__title-wrap
+
+  &__title-wrap {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .registration-confirm-modal__subtitle
+
+  &__subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  // .registration-confirm-modal__title
+
+  &__title {
+  }
+
+  // .registration-confirm-modal__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .registration-confirm-modal__input
+
+  &__input {
+    margin-bottom: 2rem;
+    width: 45.9rem;
+  }
+
+  // .registration-confirm-modal__text
+
+  &__text {
+    margin-bottom: 4rem;
+    max-width: 43rem;
+    text-align: left;
+  }
+
+  // .registration-confirm-modal__checkbox
+
+  &__checkbox {
+    margin-bottom: 4rem;
+    max-width: 43rem;
+    text-align: left;
+  }
+
+  // .registration-confirm-modal__btn
+
+  &__btn {
+    min-width: 45.9rem;
+  }
+}
+
  @media (max-width: 48em){
   .popup {
         &__wrapper {
@@ -605,6 +783,11 @@ body::after {
             width: 3rem;
             height: 3rem;
         }
+  }
+  .registration-modal {
+    &__subtitle {
+      margin-bottom: 1rem;
+    }
   }
   .sent-application-modal {
     .popup__content {
@@ -685,6 +868,9 @@ body::after {
     }
     .popup__head {
       margin-bottom: 7rem;
+    }
+    &__warning {
+      margin-bottom: 6rem;
     }
     &__subtitle {
       margin-bottom: 1.6rem;
@@ -852,9 +1038,19 @@ body::after {
       min-width: 29.4rem;
       height: 10rem;
     }
-  } 
+  }
 }
 @media (min-width: 48em){
+  .registration-confirm-modal {
+    .popup__content {
+      max-width: 106.7rem;
+    }
+  }
+  .registration-modal {
+    .popup__content {
+      max-width: 106.7rem;
+    }
+  }
   .sent-application-modal {
     .popup__content {
       max-width: 101.4rem;

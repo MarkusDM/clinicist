@@ -1,0 +1,178 @@
+.all-reviews {
+    margin-bottom: 18rem;
+
+    // .all-reviews__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .all-reviews__select-items
+
+    &__select-items {
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+        .select__title {
+            @extend .txt;
+            padding: 1.3rem 2rem;
+            border-radius: 1rem;
+            border: 1px solid #d8dde4;
+        }
+        .select__options {
+            padding: 2rem 2rem 2.6rem 2rem;
+            top: calc(100% - 1rem);
+            border-radius: 0 0 1rem 1rem;
+            border: 1px solid #d8dde4;
+            border-top: none;
+        }
+        .select__option {
+            @extend .txt;
+            position: relative;
+            border-radius: 1rem;
+            display: grid;
+            grid-template-columns: 2.2rem auto;
+            align-items: center;
+            column-gap: 1.5rem;
+            font-family: MyriadPro;
+            color: #2f2f2f;
+            &:hover {
+                background-color: transparent;
+            }
+            &::before {
+                content: '';
+                width: 2.2rem;
+                height: 2.2rem;
+                border: 2px solid rgba(51, 51, 51, 0.5);
+                border-radius: 0.5rem;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0.6rem;
+                left: 0.3rem;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-image: url(../img/a-image/icons/check-white.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
+                -webkit-transition: opacity 0.3s ease;
+                transition: opacity 0.3s ease;
+            }
+            &:not(:last-child) {
+                margin-bottom: 1.7rem;
+            }
+            &._select-selected {
+                background-color: transparent;
+                &::after {
+                    opacity: 1;
+                }
+                &::before {
+                    background-color: #fe7200;
+                    border: 1px solid #fe7200;
+                }
+            }
+        }
+    }
+
+    // .all-reviews__select-wrap
+
+    &__select-wrap {
+    }
+
+    // .all-reviews__cards
+
+    &__cards {
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        &_margin {
+            margin-bottom: 18rem;
+        }
+    }
+
+    // .all-reviews__card
+
+    &__card {
+    }
+
+    // .all-reviews__page-navigation
+
+    &__page-navigation {
+        align-self: flex-end;
+    }
+  }
+
+  @media (max-width: 48em){
+     .all-reviews {
+        margin-bottom: 16rem;
+        .page-navigation {
+            justify-content: space-between;
+             width: 100%;
+            &__group {
+                justify-content: space-between;
+                 width: 100%;
+            }
+        }
+        &__select-items {
+            margin-bottom: 6.3rem;
+            grid-template-columns: 1fr;
+            row-gap: 4rem;
+            .select__title {
+                margin: 0;
+                padding: 2rem 3.8rem;
+                border-radius: 2rem;
+                font-size: 3rem;
+            }
+            .select__options {
+                padding: 3rem 3.8rem 2.6rem 3.8rem;
+                 top: calc(100% - 2rem);
+            }
+            .select__option {
+                padding: 0;
+                grid-template-columns: 4.4rem auto;
+                column-gap: 3rem;
+                &:not(:last-child) {
+                    margin-bottom: 3.5rem;
+                }
+                &::before {
+                    width: 4.4rem;
+                    height: 4.4rem;
+                }
+                &::after {
+                    top: 1.2rem;
+                    left: 0.6rem;
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+            .select__value {
+                &::after {
+                    flex: 0 0 2.5rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    background-image: url(../img/a-image/icons/select-arrow-grey.svg);
+                }
+            }
+        }
+        &__page-navigation {
+            align-self: center;
+        }
+        &__cards {
+            margin-bottom: 28.8rem;
+            &_margin {
+                margin-bottom: 44rem;
+            }
+        }
+     }
+  }
+
+ [data-more-text] {
+    display: none;
+  }
