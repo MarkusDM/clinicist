@@ -39363,8 +39363,6 @@ body::after {
         top: 0.8rem; }
 
 @media (max-width: 48em) {
-<<<<<<< HEAD
-=======
   .leave-contacts-blog {
     background: #ffffff;
     margin-bottom: 20rem; }
@@ -39449,7 +39447,6 @@ body::after {
         top: 1.6rem; } }
 
 @media (max-width: 48em) and (max-width: 48em) {
->>>>>>> upstream/main
   .leave-contacts .container {
     padding: 0; }
   .leave-contacts__wrapper {
