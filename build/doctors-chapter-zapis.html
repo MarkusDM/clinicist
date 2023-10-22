@@ -450,11 +450,11 @@
                           </div>
                         </div>
                         <div class="steps__form-wrap">
-                          <form action="#" class="steps__form application">
+                          <form data-dev action="#" class="steps__form application">
                             <span class="application__title heading">Персональные данные</span>
                             <div class="application__fields">
-                              <div class="application__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Ваше имя" class="input__field"></div>
-                              <div class="application__input input input_tel"><input autocomplete="off" type="tel" name="form[]" data-error placeholder class="input__field tel-mask"></div>
+                              <div class="application__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Ваше имя" class="input__field"></div>
+                              <div class="application__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder class="input__field tel-mask"></div>
                             </div>
                             <div class="application__contacts">
                               <span class="application__contacts-subtitle txt">Выберите способ связи:</span>
@@ -588,15 +588,12 @@
                 Перезвоним вам в течении 1 часа и проконсультируем вас по
                 услугам
               </p>
-              <form action="#" class="application-form__form">
-                <div class="application-form__input-wrap">
+              <form data-dev action="#" class="application-form__form">
+                <div class="application-form__input-wrap input input_tel">
                   <input
-                    autocomplete="off"
-                    type="tel"
-                    name="form[]"
-                    data-error
+                  data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле"
                     placeholder="Номер телефона"
-                    class="application-form__input" />
+                    class="input__field" />
                 </div>
                 <button
                   data-popup="#application-modal"
@@ -875,10 +872,7 @@
         <form data-dev action="#" class="appointment-modal__form">
           <div class="appointment-modal__input-wrap">
             <input
-              autocomplete="off"
-              type="tel"
-              name="form[]"
-              data-error
+            data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле"
               placeholder
               class="appointment-modal__input tel-mask" />
           </div>
@@ -980,21 +974,62 @@
         <form data-dev action="#" class="add-patient-modal__form">
           <div class="add-patient-modal__checkboxes">
             <div class="add-patient-modal__checkbox checkbox">
-              <input id="o_1" data-error class="checkbox__input" type="radio" value="1" name="option">
-              <label for="o_1" class="checkbox__label"><span class="checkbox__text">Мужчина</span></label>
+              <input data-error class="checkbox__input" type="radio" value="1" name="option">
+              <label class="checkbox__label"><span class="checkbox__text">Мужчина</span></label>
             </div>
             <div class="add-patient-modal__checkbox checkbox">
-              <input id="o_2" data-error class="checkbox__input" type="radio" value="2" name="option">
-              <label for="o_2" class="checkbox__label"><span class="checkbox__text">Женщина</span></label>
+              <input data-error class="checkbox__input" type="radio" value="2" name="option">
+              <label class="checkbox__label"><span class="checkbox__text">Женщина</span></label>
             </div>
           </div>
           <div class="add-patient-modal__fields">
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Фамилия" class="input__field"></div>
-            <div class="add-patient-modal__input input input_user"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field"></div>
-            <div class="add-patient-modal__input input input_date"><input autocomplete="off" type="text" name="form[]" data-error placeholder="Дата рождения" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="add-patient-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
           </div>
           <button type="submit" class="add-patient-modal__btn btn">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="add-patient-disabled-modal" aria-hidden="true" class="add-patient-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="add-patient-modal__body">
+        <div class="add-patient-modal__title-wrap">
+          <span class="add-patient-modal__subtitle subtitle">Для продолжения,  вам необходимо заполнить данные пациента</span>
+          <span class="add-patient-modal__title title">Добавить пациента</span>
+        </div>
+        <form data-dev action="#" class="add-patient-modal__form">
+          <div class="add-patient-modal__checkboxes">
+            <div class="add-patient-modal__checkbox checkbox">
+              <input data-error class="checkbox__input" type="radio" value="1" name="option">
+              <label class="checkbox__label"><span class="checkbox__text">Мужчина</span></label>
+            </div>
+            <div class="add-patient-modal__checkbox checkbox">
+              <input data-error class="checkbox__input" type="radio" value="2" name="option">
+              <label class="checkbox__label"><span class="checkbox__text">Женщина</span></label>
+            </div>
+          </div>
+          <div class="add-patient-modal__fields">
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="add-patient-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="add-patient-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+          </div>
+          <div class="add-patient-modal__warning warning">
+            <div class="warning__icon-wrap"><img aria-hidden="true" src="./img/a-image/icons/warning-red.svg" alt="" class="warning__icon"></div>
+            <p class="warning__text txt">Данный врач недоступен для данного пациента. Пожалуйста, рассмотрите возможность выбора другого врача.</p>
+          </div>
+          <button type="submit" class="add-patient-modal__btn btn">Выбрать другого врача</button>
         </form>
       </div>
     </div>
@@ -1058,6 +1093,187 @@
         <span class="sent-application-modal__title">Заявка отправлена</span>
         <p class="sent-application-modal__text txt">Перезвоним вам в течении 1 часа и проконсультируем вас по услугам</p>
         <button type="button" class="sent-application-modal__btn btn">Хорошо</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registration-modal" aria-hidden="true" class="registration-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="registration-modal__body">
+        <div class="registration-modal__title-wrap">
+          <span class="registration-modal__subtitle subtitle"
+            >Для продолжения,  вам необходимо зарегистрироваться</span
+          >
+          <span class="registration-modal__title title">Регистрация</span>
+        </div>
+        <form data-dev action="#" class="registration-modal__form">
+          <div class="registration-modal__options options">
+            <div class="options__item">
+                <input hidden class="options__input" checked type="radio" value="1" name="option">
+                <label class="options__label"><span class="options__text">Мужчина</span></label>
+            </div>
+            <div class="options__item">
+                <input hidden class="options__input" type="radio" value="2" name="option">
+                <label class="options__label"><span class="options__text">Женщина</span></label>
+            </div>
+        </div>
+          <div class="registration-modal__fields">
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="registration-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+            <div class="registration-modal__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
+          </div>
+          <div class="registration-modal__actions">
+            <div class="registration-modal__checkbox checkbox">
+              <input data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
+              <label class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
+            </div>
+            <button type="submit" class="registration-modal__btn btn">
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registration-pass-modal" aria-hidden="true" class="registration-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="registration-modal__body">
+        <div class="registration-modal__title-wrap">
+          <span class="registration-modal__subtitle subtitle"
+            >Для продолжения,  вам необходимо зарегистрироваться</span
+          >
+          <span class="registration-modal__title title">Регистрация</span>
+        </div>
+        <form data-dev action="#" class="registration-modal__form">
+          <div class="registration-modal__options options">
+            <div class="options__item">
+                <input hidden class="options__input" checked type="radio" value="1" name="option">
+                <label class="options__label"><span class="options__text">Мужчина</span></label>
+            </div>
+            <div class="options__item">
+                <input class="options__input" type="radio" value="2" name="option">
+                <label class="options__label"><span class="options__text">Женщина</span></label>
+            </div>
+        </div>
+          <div class="registration-modal__fields">
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="registration-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+            <div class="registration-modal__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
+            <div class="registration-modal__input registration-modal__input_fc input input_password"><input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Введите пароль" class="input__field"></div>
+            <div class="registration-modal__input input input_password"><input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Повторите пароль" class="input__field"></div>
+          </div>
+          <div class="registration-modal__actions">
+            <div class="registration-modal__checkbox checkbox">
+              <input data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
+              <label class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
+            </div>
+            <button type="submit" class="registration-modal__btn btn">
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registration-code-modal" aria-hidden="true" class="registration-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="registration-modal__body">
+        <div class="registration-modal__title-wrap">
+          <span class="registration-modal__subtitle subtitle"
+            >Для продолжения,  вам необходимо зарегистрироваться</span
+          >
+          <span class="registration-modal__title title">Регистрация</span>
+        </div>
+        <form data-dev action="#" class="registration-modal__form">
+          <div class="registration-modal__options options">
+            <div class="options__item">
+                <input hidden class="options__input" checked type="radio" value="1" name="option">
+                <label class="options__label"><span class="options__text">Мужчина</span></label>
+            </div>
+            <div class="options__item">
+                <input hidden class="options__input" type="radio" value="2" name="option">
+                <label class="options__label"><span class="options__text">Женщина</span></label>
+            </div>
+        </div>
+          <div class="registration-modal__fields registration-modal__fields_m20">
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Отчество" class="input__field"></div>
+            <div class="registration-modal__input input input_date"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" class="input__field"></div>
+            <div class="registration-modal__input input input_tel"><input data-required data-validate autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field"></div>
+            <div class="registration-modal__input input input_code"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Код подтверждения" class="input__field"></div>
+          </div>
+          <div class="registration-modal__verify verify txt">
+            <div class="verify__group">
+              <span class="verify__heading">Так и не получили код?</span>
+              <p class="verify__text">Повторно код можно получить через <span id="time">01:12</span></p>
+            </div>
+            <p class="verify__text">Через несколько секунд вам придеть SMS-сообщение с кодом подтверждения.</p>
+          </div>
+          <div class="registration-modal__actions">
+            <div class="registration-modal__checkbox checkbox">
+              <input data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
+              <label class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
+            </div>
+            <button type="submit" class="registration-modal__btn btn">
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registration-confirm-modal" aria-hidden="true" class="registration-confirm-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="registration-confirm-modal__body">
+        <div class="registration-confirm-modal__title-wrap">
+          <span class="registration-confirm-modal__subtitle subtitle">Для продолжения,  вам необходимо зарегистрироваться</span>
+          <span class="registration-confirm-modal__title title">Регистрация</span>
+        </div>
+        <form data-dev action="#" class="registration-confirm-modal__form">
+          <div class="registration-confirm-modal__input input input_code"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Код подтверждения" class="input__field"></div>
+          <p class="registration-confirm-modal__text txt">Через несколько секунд вам придеть SMS-сообщение с кодом подтверждения.</p>
+          <div class="registration-confirm-modal__checkbox checkbox">
+            <input data-error class="checkbox__input" type="checkbox" value="1" name="form[]">
+            <label class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
+          </div>
+          <button type="submit" class="registration-confirm-modal__btn btn">Зарегистрироваться</button>
+        </form>
       </div>
     </div>
   </div>

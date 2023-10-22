@@ -1,0 +1,192 @@
+.blog-comments {
+
+  margin-bottom: 11rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    width: 94.7rem;
+  }
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+      color: $fzAll;
+      font-family: Montserrat, sans-serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: normal;
+
+      span {
+          color: $blue;
+          font-weight: 500;
+          padding-right: 0.8rem;
+      }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  &__item {
+    background: $white;
+    box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.10);
+    padding: 5.3rem 5rem 6.2rem 5rem;
+  }
+
+  &__tit {
+      color: $fzAll;
+      font-family: Montserrat, sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 125%;
+      margin-bottom: 2.6rem;
+  }
+
+  &__text {
+      color: $list;
+      font-family: Myriad Pro, sans-serif;
+      font-size: 1.8rem;
+      line-height: 125%;
+  }
+
+  &__descs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  &__name {
+    display: flex;
+    column-gap: 3.2rem;
+    align-items: center;
+  }
+
+  &__author {
+      color: $blue;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 110%;
+  }
+
+  &__date {
+      color: $list;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 110%;
+
+      span {
+        color: #D8DDE4;
+        display: inline-block;
+        padding-right: 3rem;
+      }
+  }
+
+  &__stars {
+    display: flex;
+    column-gap: 0.5rem;
+
+    img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .blog-comments {
+  
+      margin-bottom: 14.4rem;
+  
+      &__container {
+        row-gap: 6rem;
+        width: 100%;
+      }
+  
+      &__titles {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  
+      &__title {
+        font-size: 5.4rem;
+        font-weight: 400;
+        margin-bottom: 4rem;
+  
+        span {
+          padding-right: 1.2rem;
+        }
+      }
+
+      &__btn {
+        width: 59rem;
+      }
+  
+      &__items {
+        row-gap: 4.8rem;
+      }
+  
+      &__item {
+        padding: 6rem 4.8rem 6rem 6rem;
+      }
+  
+      &__text {
+        color: $fzAll;
+        font-size: 3.2rem;
+        line-height: 150%;
+      }
+
+      &__tit {
+          font-size: 4rem;
+          font-weight: 500;
+          line-height: 110%;
+          margin-bottom: 4rem;
+          font-family: Montserrat, sans-serif;
+      }
+  
+      &__descs {
+        flex-direction: column;
+        row-gap: 2.4rem;
+        margin-bottom: 6rem;
+        align-items: flex-start;
+      }
+  
+      &__name {
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: flex-start;
+      }
+  
+      &__author {
+        font-size: 3.6rem;
+      }
+  
+      &__date {
+        font-size: 3rem;
+        font-weight: 500;
+  
+        span {
+          display: none;
+        }
+      }
+  
+      &__stars {
+        column-gap: 1rem;
+  
+        img {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+    }
+}

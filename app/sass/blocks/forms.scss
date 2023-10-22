@@ -20,6 +20,14 @@
   padding: 6.8rem 6.8rem 6rem 6.8rem;
   display: flex;
   flex-direction: column;
+  &_person {
+    .application__contacts {
+      margin-bottom: 4rem;
+    }
+    .application__checkbox {
+      margin-bottom: 4rem;
+    }
+  }
   .contact-item {
     min-width: 14.7rem;
   }
@@ -164,6 +172,7 @@
   &__text {
     font-family: 'MyriadPro';
     font-size: 1.6rem;
+    line-height: 160%;
     color: rgba(51, 51, 51, 0.5);
     @media (max-width: 48.98em) {
       font-size: 2.6rem;
@@ -204,7 +213,7 @@
   // .options__text
 
   &__text {
-    @extend .checkbox__text;    
+    @extend .checkbox__text;
     line-height: 150%;
   }
 }
@@ -224,8 +233,12 @@
     }
   }
   &::before {
-    content: "";
-    position: absolute;width: 1rem;height: 1rem;top: 50%;left: 50%;
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 50%;
+    left: 50%;
     border-radius: 50%;
     background-color: $orange;
     transform: translate(-50%, -50%) scale(0);
@@ -256,17 +269,29 @@ textarea {
   resize: none;
 }
 .input {
+  position: relative;
   padding-left: 3rem;
   display: grid;
   grid-template-columns: 2rem 1fr;
-  border: 1px solid #D8DDE4;
+  border: 1px solid #d8dde4;
   border-radius: 7.2rem;
   background-color: #ffffff;
+  transition: all 0.3s ease;
+  &._form-error {
+    border: 1px solid #e81919;
+  }
+  &._form-focus {
+    border: 1px solid $blue;
+  }
+  &._filled {
+    border: 1px solid $blue;
+    background-color: #f3fbff;
+  }
   &::placeholder {
     font-weight: 400;
   }
   &::before {
-    content: "";
+    content: '';
     align-self: center;
     width: 2rem;
     height: 2rem;
@@ -280,6 +305,21 @@ textarea {
   &_user {
     &::before {
       background-image: url(../img/a-image/icons/user-grey.svg);
+    }
+  }
+
+  &_email {
+    &::before {
+      background-image: url(../img/dim-image/icons/email-2.svg);
+    }
+  }
+
+  &_comment {
+    &::before {
+      background-image: url(../img/dim-image/icons/question.svg);
+      align-self: flex-start;
+      position: relative;
+      top: 1.8rem;
     }
   }
 
@@ -315,6 +355,14 @@ textarea {
     }
   }
 
+  // .input_password
+
+  &_password {
+    &::before {
+      background-image: url(../img/a-image/icons/key-grey.svg);
+    }
+  }
+
   // .input__field
 
   &__field {
@@ -322,10 +370,20 @@ textarea {
     padding: 1.8rem 2rem;
     border: none;
     border-radius: 7.2rem;
-    font-size: 1.6rem;    
+    font-size: 1.6rem;
     line-height: 140%;
+    background-color: transparent;
+    transition: color 0.3s ease;
+    &._form-focus {
+      color: #2f2f2f;
+    }
+    ._filled & {
+      color: #2f2f2f;
+    }
+    &::placeholder {
+      color: rgba(51, 51, 51, 0.5);
+    }
   }
-  
 }
 
 // login form
@@ -398,7 +456,7 @@ textarea {
 
   &__text {
     margin-bottom: 3rem;
-    max-width: 42.8rem
+    max-width: 42.8rem;
   }
 
   // .login-form__password
@@ -426,6 +484,18 @@ textarea {
 
   &__heading {
     margin-bottom: 3.8rem;
+  }
+
+  // .personal-data__fields
+
+  &__fields {
+    margin-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    .personal-data__input {
+      margin: 0;
+    }
   }
 
   // .personal-data__input
@@ -456,22 +526,28 @@ textarea {
     flex-direction: column;
   }
 
-   // .personal-data__family-heading
+  // .personal-data__family-heading
 
-   &__family-heading {
+  &__family-heading {
     margin-bottom: 4rem;
-   }
+  }
 
   // .personal-data__patients
 
   &__patients {
-
   }
 }
 
-@media (max-width: 48em){
+@media (max-width: 48em) {
   .personal-data {
     padding: 5rem 4rem 8rem 4rem;
+    &__fields {
+      margin-bottom: 4rem;
+      row-gap: 4rem;
+      &_family {
+        margin-bottom: 8rem;
+      }
+    }
     &__family-heading {
       margin-bottom: 6rem;
       font-weight: 500;
@@ -528,7 +604,7 @@ textarea {
     &__checkbox {
       margin-bottom: 4rem;
       .checkbox__label {
-        line-height:  150%;
+        line-height: 150%;
         &::before,
         &::after {
           align-self: center;
@@ -542,11 +618,24 @@ textarea {
   }
   .application {
     padding: 5rem 4rem 8rem 4rem;
-    .patients {
-      display: none;
+    &_person {
+      .application__contacts {
+        margin-bottom: 6rem;
+      }
+      .application__checkbox {
+        margin-bottom: 6.4rem;
+      }
     }
     .contact-item {
       min-width: none;
+    }
+    &__patients {
+      &_mobile {
+        margin-bottom: 4rem;
+      }
+      &:not(&_mobile) {
+        display: none;
+      }
     }
     &__warning {
       display: none;
@@ -580,14 +669,18 @@ textarea {
     &__checkbox {
       margin-bottom: 4rem;
     }
+    &__heading {
+      margin-bottom: 6.4rem;
+      font-weight: 500;
+    }
   }
-   .input {
+  .input {
     padding-left: 4rem;
     grid-template-columns: 4rem 1fr;
     border-radius: 14.4rem;
     &_pass {
       padding: 0 4rem;
-     grid-template-columns: 4rem 1fr 4rem;
+      grid-template-columns: 4rem 1fr 4rem;
     }
     &::before {
       width: 4rem;
@@ -605,12 +698,12 @@ textarea {
       font-size: 3.2rem;
       line-height: 150%;
     }
-   } 
+  }
 }
-@media (min-width: 48em){
-   .login-form {
-      .input__viewpass {
-          display: none;
+@media (min-width: 48em) {
+  .login-form {
+    .input__viewpass {
+      display: none;
     }
-   } 
+  }
 }

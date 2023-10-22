@@ -1,0 +1,66 @@
+.patients-preparation {
+  margin-bottom: 17.5rem;
+  .preparation {
+    &__breadcrumbs {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 8rem;
+      button {
+        font-family: Montserrat;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        color: rgba(51, 51, 51, 0.5);
+        padding: 1rem 2.5rem;
+        border: 1px solid #d8dde4;
+        border-radius: 1rem;
+        &._active {
+          color: #fe7200;
+          font-weight: 700;
+        }
+      }
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+    &__btn-box {
+      margin-top: 4rem;
+    }
+    &__btn {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .patients-preparation {
+    margin-bottom: 16rem;
+    .preparation {
+      &__breadcrumbs {
+        display: flex;
+        row-gap: 2.4rem;
+        column-gap: 1.6rem;
+        margin-bottom: 16rem;
+        button {
+          font-size: 2.4rem;
+          padding: 0.8rem 2.4rem;
+          border: 1px solid #d8dde4;
+          border-radius: 1rem;
+        }
+      }
+      &__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3.2rem;
+      }
+      &__btn-box {
+        margin-top: 8rem;
+      }
+    }
+  }
+}

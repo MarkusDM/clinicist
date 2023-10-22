@@ -4,19 +4,33 @@ document.addEventListener('DOMContentLoaded', function () {
     clearMaskOnLostFocus: false,
   })
 
-  // rating set
-  // $('.my-rating').starRating({
-  //   starSize: 40,
-  //   initialRating: 5,
-  //   emptyColor: '#ffffff',
-  //   hoverColor: '#fe7200',
-  //   activeColor: '#fe7200',
-  //   ratedColor: '#fe7200',
-  //   useGradient: false,
-  //   strokeWidth: 20,
-  //   strokeColor: '#fe7200',
-  //   starShape: 'straight',
-  // })
+  // is mobile
+  let isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i)
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i)
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i)
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i)
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i)
+    },
+    any: function () {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      )
+    },
+  }
 
   const md = window.matchMedia('(max-width: 768px)').matches
 
@@ -202,21 +216,44 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  // doctor card hours (set height)
-  const hoursItems = document.querySelectorAll('.doctor-card__hours')
-  const setHoursHeight = () => {
-    if (hoursItems.length) {
-      const gap = md ? 4 : 12
-      const rows = md ? 2 : 3
-      hoursItems.forEach(hoursItem => {
-        const parent = hoursItem.closest('[data-showmore-content]')
-        const height = hoursItem.offsetHeight - 1
-        hoursItem.style.marginBottom = `${gap}px`
-        parent.dataset.showmoreContent = `${(height + gap) * rows}`
+  // hours
+  const hours = document.querySelectorAll('.doctor-card__hours-group')
+  const moveItems = (items, target) => {
+    items.forEach((item) => {
+      target.appendChild(item)
+    })
+  }
+  const initHoursItems = () => {
+    if (hours.length) {
+      hours.forEach(item => {
+        const btn = item.querySelector('[data-showmore-btn]')
+        const showmore = item.querySelector('[data-showmore-hours]')
+        const items = item.querySelectorAll('.doctor-card__hours._move')
+        const parent = item.querySelector('.doctor-card__hours-row_parent')
+
+        if (window.innerWidth <= 768) {
+          moveItems(items, showmore.querySelector('.doctor-card__hours-row'))
+        } else if (window.innerWidth > 768) {
+          moveItems(items, parent)
+        }
+
+        btn.addEventListener('click', function() {
+          // item.classList.toggle('_active')
+          _slideToggle(showmore)
+          setTimeout(() => {
+            if (item.classList.contains('_active')) {
+              btn.innerHTML = 'Показать все время записи'
+              btn.innerHTML = 'Свернуть'
+            } else if (!item.classList.contains('_active')) {
+              btn.innerHTML = 'Показать все время записи'
+          }
+
+          }, 500)
+        })
       })
     }
   }
-  setHoursHeight()
+  initHoursItems()
 
   // sort dropdown
   const sortDropdown = document.querySelector('.sort-dropdown')
@@ -304,6 +341,54 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   moveImage()
 
+  // show more text
+  const toggleText = () => {
+    const showmoreTextElements = document.querySelectorAll('[data-showmore-text]')
+
+    if (showmoreTextElements.length) {
+      showmoreTextElements.forEach(item => {
+        const points = item.querySelector('[data-points]')
+        const showmoreText = item.querySelector('[data-more-text]')
+        const buttonText = item.querySelector('[data-showmore-txt-btn]')
+        const response = item.querySelector('.review-card__response')
+
+        buttonText.addEventListener('click', function() {
+          if (points.style.display === "none") {
+            showmoreText.style.display = "none";
+            points.style.display = "inline";
+            buttonText.innerHTML = "Весь отзыв";
+            buttonText.classList.remove('_active')
+            if (md) {
+              response.style.display = 'none'
+            }
+          }
+          else {
+              showmoreText.style.display = "inline";
+              points.style.display = "none";
+              buttonText.innerHTML = "Свернуть отзыв";
+              buttonText.classList.add('_active')
+              if (md) {
+                response.style.display = 'flex'
+              }
+          }
+        })
+      })
+    }
+  }
+  toggleText()
+
+  // move elements (all reviews cards)
+  const allReviewsModify = () => {
+    const allReviewsCards = document.querySelectorAll('.all-reviews-card')
+    if (allReviewsCards.length && md) {
+      allReviewsCards.forEach(allReviewsCard => {
+        allReviewsCard.querySelector('.all-reviews-card__body').appendChild(allReviewsCard.querySelector('.review-card__heading-wrap'))
+        allReviewsCard.querySelector('.all-reviews-card__body').appendChild(allReviewsCard.querySelector('.all-reviews-card__info'))
+      })
+    }
+  }
+  allReviewsModify()
+
   // ===========================================================================
 
   // smooth behaviour
@@ -340,6 +425,9 @@ document.addEventListener('DOMContentLoaded', function () {
           })
         )
       }, duration)
+      document.addEventListener('slideUpDone', function(e) {
+        e.detail.target.parentElement.classList.remove('_active')
+      })
     }
   }
   function _slideDown(target, duration = 500, showmore = 0) {
@@ -377,6 +465,9 @@ document.addEventListener('DOMContentLoaded', function () {
           })
         )
       }, duration)
+      document.addEventListener('slideDownDone', function(e) {
+        e.detail.target.parentElement.classList.add('_active')
+      })
     }
   }
   function _slideToggle(target, duration = 500) {
@@ -1627,7 +1718,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // showmore
   function showMore() {
-    window.addEventListener('load', function (e) {
+    window.addEventListener('load', function() {
       const showMoreBlocks = document.querySelectorAll('[data-showmore]')
       let showMoreBlocksRegular
       let mdQueriesArray
@@ -1762,6 +1853,7 @@ document.addEventListener('DOMContentLoaded', function () {
             : null
         }
       }
+
     })
   }
   showMore()
@@ -1892,6 +1984,117 @@ document.addEventListener('DOMContentLoaded', function () {
     target.classList.add(className)
   }
 
+  // control window scroll event
+  let addWindowScrollEvent = false
+
+  // sticky block
+  function stickyBlock() {
+    addWindowScrollEvent = true
+    function stickyBlockInit() {
+      const stickyParents = document.querySelectorAll('[data-sticky]')
+      if (stickyParents.length) {
+        stickyParents.forEach(stickyParent => {
+          let stickyConfig = {
+            media: stickyParent.dataset.sticky
+              ? parseInt(stickyParent.dataset.sticky)
+              : null,
+            top: stickyParent.dataset.stickyTop
+              ? parseInt(stickyParent.dataset.stickyTop)
+              : 0,
+            bottom: stickyParent.dataset.stickyBottom
+              ? parseInt(stickyParent.dataset.stickyBottom)
+              : 0,
+            header: stickyParent.hasAttribute('data-sticky-header')
+              ? document.querySelector('header.header').offsetHeight
+              : 0,
+          }
+          stickyBlockItem(stickyParent, stickyConfig)
+        })
+      }
+    }
+    function stickyBlockItem(stickyParent, stickyConfig) {
+      const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]')
+      const headerHeight = stickyConfig.header
+      const offsetTop = headerHeight + stickyConfig.top
+      const startPoint =
+        stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop
+
+      document.addEventListener('windowScroll', stickyBlockActions)
+      //window.addEventListener("resize", stickyBlockActions);
+
+      function stickyBlockActions(e) {
+        const endPoint =
+          stickyParent.offsetHeight +
+          stickyParent.getBoundingClientRect().top +
+          scrollY -
+          (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom)
+        let stickyItemValues = {
+          position: 'relative',
+          top: '0',
+          left: '0',
+          width: 'auto',
+        }
+        if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
+          if (
+            offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight <
+            window.innerHeight
+          ) {
+            if (scrollY >= startPoint && scrollY <= endPoint) {
+              stickyItemValues.position = `relative`
+              stickyItemValues.zIndex = `1`
+              stickyItemValues.top = `0`
+              stickyItemValues.left = `0`
+              stickyItemValues.width = `auto`
+            } else if (scrollY >= endPoint) {
+              stickyItemValues.position = `fixed`
+              stickyItemValues.zIndex = `200`
+              stickyItemValues.top = `0`
+              stickyItemValues.left = `calc((100vw - 100%) / -2)`
+              stickyItemValues.width = `100vw`
+            }
+          }
+        }
+        stickyBlockType(stickyBlockItem, stickyItemValues)
+      }
+    }
+    function stickyBlockType(stickyBlockItem, stickyItemValues) {
+      stickyBlockItem.style.cssText = `position:${stickyItemValues.position};z-index:${stickyItemValues.zIndex};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`
+    }
+    stickyBlockInit()
+  }
+  stickyBlock()
+
+  setTimeout(() => {
+    if (addWindowScrollEvent) {
+      let windowScroll = new Event('windowScroll')
+      window.addEventListener('scroll', function (e) {
+        document.dispatchEvent(windowScroll)
+      })
+    }
+  }, 0)
+
+  // timer
+  function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        if (seconds === 0 && minutes === 0) {
+          display.textContent =  "00:00";
+          return
+        }
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+  }
+
   // ===========================================================================
 
   const onClickHandler = e => {
@@ -2009,18 +2212,17 @@ document.addEventListener('DOMContentLoaded', function () {
       )
     }
     if (target.closest('.all-services__service-card')) {
-      const targetParent = target.closest('.all-services__service-card').parentElement
       setActiveClass(
         target.closest('.all-services__service-card'),
-        targetParent.querySelectorAll('.all-services__service-card'),
+        document.querySelectorAll('.all-services__service-card'),
         '_active'
       )
     }
     if (target.closest('.hours-item')) {
-      const targetParent = target.closest('.hours-item').parentElement
+      const targetParent = target.closest('.hours-item')
       setActiveClass(
         target.closest('.hours-item'),
-        targetParent.querySelectorAll('.hours-item'),
+        targetParent.closest('.doctor-card__hours-group').querySelectorAll('.hours-item'),
         '_active'
       )
     }
@@ -2062,6 +2264,30 @@ document.addEventListener('DOMContentLoaded', function () {
         '_active'
       )
     }
+    if (target.closest('.review-card__show_response')) {
+      target.closest('.review-card__show_response').parentElement.nextElementSibling.style.display = 'flex'
+      target.closest('.review-card__text-wrap').classList.add('_active')
+    }
+    if (target.closest('.review-card__hide')) {
+      target.closest('.review-card__hide').parentElement.parentElement.style.display = 'none'
+      target.closest('.review-card__text-wrap').classList.remove('_active')
+    }
+    if (target.closest('[data-showmore-items-btn]')) {
+      const btn = target.closest('[data-showmore-items-btn]')
+      const parent = btn.previousElementSibling
+
+      if (!parent.classList.contains('_active')) {
+        _slideDown(parent)
+        parent.classList.add('_active')
+        btn.classList.add('_active')
+        btn.innerHTML = 'Скрыть'
+      } else {
+        _slideUp(parent)
+        parent.classList.remove('_active')
+        btn.classList.remove('_active')
+        btn.innerHTML = 'Загрузить еще'
+      }
+    }
   }
 
   // ===========================================================================
@@ -2069,7 +2295,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', onClickHandler)
   window.addEventListener('resize', function () {
     initSliders()
-    setHoursHeight()
     moveImage()
+    allReviewsModify()
+    initHoursItems()
   })
+    const display = document.querySelector('#time');
+    if (display) {
+      startTimer(72, display);
+    }
 })
