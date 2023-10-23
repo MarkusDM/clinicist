@@ -1,4 +1,4 @@
-const storyItems = Array.from(document.querySelectorAll('.story__item'));
+const historyItems = Array.from(document.querySelectorAll('.story__item'));
 const storyBottoms = Array.from(document.querySelectorAll('.story__bottom'));
 const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
 const valuesSlides = Array.from(document.querySelectorAll('.values__right-slide'));
@@ -7,7 +7,7 @@ const searchLabel = document.querySelector('.search__label');
 const btnMore = Array.from(document.querySelectorAll('.services-p__box-link'));
 const mapList = document.querySelectorAll('.services-p__box-inner');
 let tabIndex;
-storyItems.forEach( e => {
+historyItems.forEach( e => {
   e.addEventListener('mouseenter', () => {
     e.childNodes[7].classList.add('active');
   })
