@@ -253,7 +253,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // sort dropdown
   const sortDropdown = document.querySelector('.sort-dropdown');
-  if (sortDropdown && !sortDropdown.classList.contains('.our-vacanies__sort')) {
+  if (
+    sortDropdown &&
+    !sortDropdown.classList.contains('our-vacancies__sort')
+  ) {
     _slideUp(sortDropdown);
   }
 
@@ -2204,7 +2207,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (
       target.closest('#open-sort-dropdown') &&
       !sortDropdown.classList.contains('_slide') &&
-      !sortDropdown.classList.contains('.our-vacanies__sort')
+      !sortDropdown.classList.contains('.our-vacancies__sort')
     ) {
       if (!document.documentElement.classList.contains('_sort-dropdown-open')) {
         document.documentElement.classList.add('_sort-dropdown-open');
