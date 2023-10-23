@@ -17,6 +17,7 @@
     <title>Главная</title>
   </head>
   <body>
+    @@include('./template/header.html')
     <main>
       <section class="baner baner-patients-preparation">
         <div class="baner__container container">
@@ -43,6 +44,494 @@
           </div>
         </div>
       </section>
+
+      <div class="patients-preparation preparation">
+        <div class="preparation__container container">
+          <form id="search-form" action="#" class="doctors__form search-form">
+            <div class="search-form__wrap">
+              <div class="search-form__input-wrap">
+                <input
+                  autocomplete="off"
+                  type="search"
+                  name="form[]"
+                  placeholder="Поиск среди услуг"
+                  class="search-form__input txt"
+                />
+              </div>
+              <button
+                id="open-sort-dropdown"
+                type="button"
+                class="search-form__sort-button"
+              >
+                <span class="_desktop-only">Уточнить поиск</span>
+              </button>
+              <button type="submit" class="search-form__btn btn">
+                <span>Начать поиск</span>
+              </button>
+            </div>
+            <div class="search-form__sort sort-dropdown">
+              <div class="sort-dropdown__inner">
+                <div data-tabs class="sort-dropdown__tabs">
+                  <nav
+                    data-tabs-titles
+                    class="sort-dropdown__navigation tabs tabs_blue"
+                  >
+                    <button type="button" class="tabs__btn">Все</button>
+                    <button type="button" class="tabs__btn active _tab-active">
+                      Мужчины
+                    </button>
+                    <button type="button" class="tabs__btn">Женщины</button>
+                    <button type="button" class="tabs__btn">Дети</button>
+                  </nav>
+                  <div
+                    data-tabs-body
+                    data-one-select
+                    class="sort-dropdown__content"
+                  >
+                    <div class="sort-dropdown__body">
+                      <div class="sort-dropdown__row">
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать направление:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все направления"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать клинику:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все клиники"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sort-dropdown__body">
+                      <div class="sort-dropdown__row">
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать направление:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все направления"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать клинику:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все клиники"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sort-dropdown__body">
+                      <div class="sort-dropdown__row">
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать направление:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все направления"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать клинику:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все клиники"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sort-dropdown__body">
+                      <div class="sort-dropdown__row">
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать направление:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все направления"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                        <div class="sort-dropdown__item">
+                          <span class="sort-dropdown__subheading txt">
+                            Выбрать клинику:
+                          </span>
+                          <select
+                            data-scroll="270"
+                            data-checkbox
+                            multiple
+                            data-pseudo-label="Все клиники"
+                            name="form[]"
+                            class="sort-dropdown__select-wrap select-checkbox"
+                          >
+                            <option value="1" selected>Уролог</option>
+                            <option value="2">Гинеколог</option>
+                            <option value="3">Гематолог</option>
+                            <option value="4">Гастроэнтеролог</option>
+                            <option value="5">Дерматолог</option>
+                            <option value="6">Гинеколог-эндокринолог</option>
+                            <option value="7">Аритмолог</option>
+                            <option value="8">Уролог</option>
+                            <option value="9">Гинеколог</option>
+                            <option value="10">Гематолог</option>
+                            <option value="11">Гастроэнтеролог</option>
+                            <option value="12">Дерматолог</option>
+                            <option value="13">Гинеколог-эндокринолог</option>
+                            <option value="14">Аритмолог</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="slose-sort-dropdown"
+                  type="button"
+                  class="sort-dropdown__close-btn link"
+                >
+                  Свернуть
+                </button>
+              </div>
+            </div>
+            <div class="search-form__search-box search-box">
+              <ul class="search-box__list txt">
+                <li class="search-box__item">
+                  Гастроэнтеролог <span>Специализация</span>
+                </li>
+                <li class="search-box__item">
+                  Гастропольский Виктор Владимирович <span>Врач</span>
+                </li>
+                <li class="search-box__item">
+                  Гастроэнтероло <span>Специализация</span>
+                </li>
+                <li class="search-box__item">
+                  Гастропольский Виктор Владимирович <span>Врач</span>
+                </li>
+              </ul>
+            </div>
+          </form>
+
+          <div class="preparation__breadcrumbs">
+            <button type="button">Все</button>
+            <button type="button">Андрология</button>
+            <button type="button">Угорология</button>
+            <button type="button">Гастроэнтерология</button>
+            <button type="button">Гинекология</button>
+            <button type="button">Сексология</button>
+            <button type="button">Угорология</button>
+            <button type="button">Остеопатия</button>
+            <button type="button">УЗИ</button>
+            <button type="button">Эндоскопия</button>
+            <button type="button">Гинекология</button>
+            <button type="button">Сексология</button>
+            <button type="button">Другие</button>
+          </div>
+          <div class="preparation__list">
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+            <div class="similar-services__box">
+              <div class="similar-services__box-image-block">
+                <div class="similar-services__box-image">
+                  <img src="./img/d-image/similar/img2.webp" alt="" />
+                </div>
+              </div>
+              <div class="similar-services__box-content">
+                <div class="similar-services__box-title">
+                  Ангиография аорты и ее ветвей
+                </div>
+                <div class="similar-services__box-text">
+                  Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                  отталкивает онтогенез речи талкивает онтогенез речи.
+                </div>
+                <a href="#" class="similar-services__box-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="preparation__btn-box">
+            <div class="component--link-btn preparation__btn">Показать еще</div>
+          </div>
+        </div>
+      </div>
 
       <section class="new-clinic">
         <div class="container">
@@ -120,14 +609,6 @@
         </div>
       </section>
     </main>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/choices.min.js"></script>
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/jquery-ui_(1.13.2).min.js"></script>
-    <script src="./js/jquery.maskedinput.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
-    <script src="./js/main.js"></script>
+    @@include('./template/footer.html')
   </body>
 </html>

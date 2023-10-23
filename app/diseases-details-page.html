@@ -17,6 +17,7 @@
     <title>Главная</title>
   </head>
   <body>
+    @@include('./template/header.html')
     <main>
       <section class="baner baner-diseases-details">
         <div class="baner__container container">
@@ -109,7 +110,7 @@
                       </span>
                     </button>
                     <button
-                      data-type="doctor-career"
+                      data-type="diseases-symptoms"
                       type="button"
                       class="navigation-block__tab swiper-slide"
                     >
@@ -205,7 +206,7 @@
                       >
                     </button>
                     <button
-                      data-type="doctor-reviews"
+                      data-type="diseases-specialties"
                       type="button"
                       class="navigation-block__tab swiper-slide"
                     >
@@ -415,11 +416,26 @@
                 </li>
               </ul>
             </div>
-            <div data-content-type="doctor-career" class="new-clinic__content">
-              <div class="new-clinic__subtitle subtitle">О враче</div>
-              <div class="new-clinic__title title">Специализация врача</div>
+            <div
+              data-content-type="diseases-specialties"
+              class="new-clinic__content"
+            >
+              <div class="diseases other-programs__head">
+                <div class="other-programs__title-wrap">
+                  <span class="other-programs__subtitle subtitle"
+                    >Наша команда специалистов</span
+                  >
+                  <span class="other-programs__title title">Специальности</span>
+                </div>
+                <a
+                  data-da=".other-programs__container,768,last"
+                  href="#"
+                  class="other-programs__link link"
+                  >Все специальности</a
+                >
+              </div>
               <div class="new-clinic__career">
-                <div class="new-clinic__career-card career-card">
+                <div class="career-card diseases">
                   <div class="career-card__image-wrap">
                     <img
                       src="./img/a-image/career-card-01.webp"
@@ -428,51 +444,34 @@
                     />
                   </div>
                   <div class="career-card__text-wrap">
-                    <span class="career-card__heading heading">Ортопедия</span>
+                    <span class="career-card__heading heading"
+                      >Общая практика</span
+                    >
                     <p class="career-card__text txt">
                       В нашей клинике вы получите только самое современное и
-                      эффективное лечение В нашей клинике вы получите только
-                      самое современное и эффективное лечение
+                      эффективное лечение
                     </p>
-                    <a href="#" class="career-card__link link">Подробнее</a>
+                    <div class="career-card__image-box">
+                      <div class="career-card__image-doctors">
+                        <img src="./img/t-image/diseases-card.webp" alt="" />
+                      </div>
+                      <div class="career-card__info">
+                        <p>+20</p>
+                        <p>Врачей в направлении</p>
+                      </div>
+                    </div>
+                    <button type="buttom" class="career-card__btn btn">
+                      Записаться на прием
+                    </button>
+                    <!-- <a href="#" class="career-card__link link">Подробнее</a> -->
                   </div>
                 </div>
-                <div class="new-clinic__career-card career-card">
-                  <div class="career-card__image-wrap">
-                    <img
-                      src="./img/a-image/career-card-02.webp"
-                      alt=""
-                      class="career-card__image"
-                    />
-                  </div>
-                  <div class="career-card__text-wrap">
-                    <span class="career-card__heading heading">Хирургия</span>
-                    <p class="career-card__text txt">
-                      В нашей клинике вы получите только самое современное и
-                      эффективное лечение В нашей клинике вы получите только
-                      самое современное и эффективное лечение
-                    </p>
-                    <a href="#" class="career-card__link link">Подробнее</a>
-                  </div>
-                </div>
-                <div class="new-clinic__career-card career-card">
-                  <div class="career-card__image-wrap">
-                    <img
-                      src="./img/a-image/career-card-01.webp"
-                      alt=""
-                      class="career-card__image"
-                    />
-                  </div>
-                  <div class="career-card__text-wrap">
-                    <span class="career-card__heading heading">Ортопедия</span>
-                    <p class="career-card__text txt">
-                      В нашей клинике вы получите только самое современное и
-                      эффективное лечение В нашей клинике вы получите только
-                      самое современное и эффективное лечение
-                    </p>
-                    <a href="#" class="career-card__link link">Подробнее</a>
-                  </div>
-                </div>
+                <a
+                  data-da=".other-programs__container,768,last"
+                  href="#"
+                  class="other-programs__link diseases-link-mob link"
+                  >Все специальности</a
+                >
               </div>
             </div>
             <div
@@ -768,16 +767,15 @@
                     </div>
                     <div
                       data-da=".our-doctors__container,768,last"
-                      class="our-doctors__slider-control slider-control"
+                      class="diseases-doctors__slider-control slider-control"
                     >
-                      <div class="our-doctors__slider-fraction"></div>
                       <div class="our-doctors__slider-navigation">
                         <button
                           type="button"
                           class="swiper-button-prev btn-prev"
                         ></button>
                         <div
-                          class="our-doctors__slider-pagination swiper-pagination pagination"
+                          class="diseases-doctors__slider-pagination swiper-pagination pagination"
                         ></div>
                         <button
                           type="button"
@@ -787,7 +785,7 @@
                     </div>
                   </div>
                   <div class="our-doctors__body">
-                    <div class="our-doctors__slider swiper">
+                    <div class="diseases-doctors__slider swiper">
                       <div class="our-doctors__wrapper swiper-wrapper">
                         <div
                           class="our-doctors__slide our-doctors-card swiper-slide"
@@ -1465,16 +1463,7 @@
         </div>
       </section>
     </main>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/choices.min.js"></script>
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/jquery-ui_(1.13.2).min.js"></script>
-    <script src="./js/jquery.maskedinput.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
-    <!-- <script src="./js/main-t.js"></script> -->
-    <script src="./js/main-a.js"></script>
-    <script src="./js/main.js"></script>
+    @@include('./template/footer.html')
+    
   </body>
 </html>

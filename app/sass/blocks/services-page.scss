@@ -517,10 +517,16 @@
                         margin-top: 6rem;
                     }
                 }
+                &-link {
+                    display: none;
+                }
                 &-inner {
                     margin-bottom: 9.1rem;
                 }
             }
+        }
+        .search-form__input-wrap::after {
+            content: none;
         }
     }
 }
@@ -824,6 +830,114 @@
          &__box-down-title {
             font-size: 3.2rem;
          }
+
+        &-map {
+            margin-bottom: 12rem;
+            .services-p {
+                &__box{
+                    width: 100%;
+                    height: fit-content;
+                    &-block {
+                        &-title {
+                            margin-bottom: 0;
+                        }
+                        &-text-mob {
+                            padding-right: 4rem;
+                        }
+                    }
+                    &-down {
+                        background-color: #FFF;
+                        box-shadow: 0px 40px 35px -6px rgba(124, 148, 159, 0.07) inset;
+                        &-title {
+                            margin-bottom: 6rem;
+                            margin-top: 10rem;
+                            display: none;
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                        & ul {
+                            & li{
+                                display: none;
+                                &:nth-child(-n + 4) {
+                                    display: block;
+                                }
+                            }
+                        }
+                        &.active {
+                            &-title {
+                                display: block;
+                            }
+                            & ul {
+                                & li{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    &-link {
+                        display: none;
+                        text-align: right;
+                        margin-bottom: 3rem;
+                        margin-right: 5rem;
+                        cursor: pointer;
+                        &::after {
+                            position: absolute;
+                            content:'';
+                            width: 3rem;
+                            height: 3rem;
+                            background-image: url(../img/d-image/icon/bluearrow.svg);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            top: 0;
+                            right: -5rem;
+                            transform: rotate(-180deg);
+                            transition: transform 0.2s linear;
+                        }
+                        &.active {
+                            &::after {
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+                    &-inner {
+                        margin-bottom: 9.1rem;
+                    }
+                }
+            }
+            .search-form__wrap {
+                border-radius: 20rem;
+                height: 6.4rem;
+            }
+            .search-form__input-wrap {
+                & input {
+                    padding: 1.2rem 2.4rem;
+                }
+            }
+            .search-form__input-wrap::after {
+                content: '';
+                display: block;
+                width: 3.4rem;
+                height: 3.4rem;
+                flex: 0 0 3.4rem;
+                margin-right: 3.2rem;
+                background-color: transparent;
+                background-image: url(../../img/ans_image/icons/close-gray.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .search-form__input-wrap::before {
+                content: '';
+                display: block;
+                flex: 0 0 3.4rem;
+                width: 3.4rem;
+                height: 3.4rem;
+                margin-left: 3.2rem;
+                background-image: url(../img/a-image/icons/search-grey.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
     }
 
 }
