@@ -29390,6 +29390,8 @@ textarea {
     background-image: url(../img/a-image/icons/code-grey.svg); }
   .input_password::before {
     background-image: url(../img/a-image/icons/key-grey.svg); }
+  .input_comment::before {
+    background-image: url(../img/t-image/comment.svg); }
   .input__field {
     padding: 1.8rem 2rem;
     border: none;
@@ -36131,7 +36133,7 @@ body::after {
 
 .choose-patient-modal__text {
   margin-bottom: 4rem;
-  color: #2F2F2F; }
+  color: #2f2f2f; }
 
 .choose-patient-modal__actions {
   display: -webkit-box;
@@ -36308,7 +36310,7 @@ body::after {
 
 .done-application-modal__item-txt {
   line-height: 133.333%;
-  color: #2F2F2F; }
+  color: #2f2f2f; }
 
 .done-application-modal__btn {
   min-width: 24.5rem; }
@@ -36397,8 +36399,24 @@ body::after {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem; }
+  .registration-modal__fields.vacancy {
+    margin-bottom: 3rem; }
   .registration-modal__fields_m20 {
     margin-bottom: 2rem; }
+
+.registration-modal__input.vacancy-email {
+  margin-bottom: 3rem; }
+
+.registration-modal__input.vacancy-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 26.3rem;
+  border-radius: 3rem;
+  margin-bottom: 3rem; }
 
 .registration-modal__input_fc {
   grid-column: 1/2; }

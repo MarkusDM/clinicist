@@ -363,6 +363,13 @@ textarea {
     }
   }
 
+  // .input_comment
+  &_comment {
+    &::before {
+      background-image: url(../img/t-image/comment.svg);
+    }
+  }
+
   // .input__field
 
   &__field {
