@@ -6,15 +6,26 @@ const searchBtn = document.querySelector('.search-btn');
 const searchLabel = document.querySelector('.search__label');
 const btnMore = Array.from(document.querySelectorAll('.services-p__box-link'));
 const mapList = document.querySelectorAll('.services-p__box-inner');
+const rem = function (rem) {
+  if ($(window).width() > 768) {
+    return 0.005208335 * $(window).width() * rem
+  } else {
+    // где 375 это ширина моб версии макета
+    return (100 / 375) * (0.05 * $(window).width()) * rem
+  }
+}
+
 let tabIndex;
-historyItems.forEach( e => {
-  e.addEventListener('mouseenter', () => {
-    e.childNodes[7].classList.add('active');
+if(historyItems) {
+  historyItems.forEach( e => {
+    e.addEventListener('mouseenter', () => {
+      e.childNodes[7].classList.add('active');
+    })
+    e.addEventListener('mouseleave', () => {
+      e.childNodes[7].classList.remove('active');
+    })
   })
-  e.addEventListener('mouseleave', () => {
-    e.childNodes[7].classList.remove('active');
-  })
-})
+}
 
 if(searchBtn) {
   searchBtn.addEventListener('click', () => {
@@ -79,10 +90,6 @@ function historyInit() {
       },
   })
 }
-
-const doctorsSlider = new Swiper('.our-doctors__slider', {
-  slidesPerView: 3,
-})
 
 
 document.addEventListener('DOMContentLoaded', () => {
