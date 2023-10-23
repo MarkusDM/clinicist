@@ -698,6 +698,9 @@ textarea {
       font-size: 3.2rem;
       line-height: 150%;
     }
+		&_comment::before {
+			top: 3rem;
+		}
   }
 }
 @media (min-width: 48em) {
