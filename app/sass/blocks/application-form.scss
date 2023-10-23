@@ -180,11 +180,53 @@
     width: 5.2rem;
     height: 5.2rem;
   }
+
+  // .application-form__content-checkbox
+
+  &__content-checkbox {
+    &.checkbox_ellipse {
+      input:checked + span:before {
+        background-position: center;
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-image: url(../img/dim-image/icons/subscribe-check-2.svg);
+      }
+      span {
+        @extend .txt;
+        font-size: 1.6rem;
+        line-height: 125%;
+        &::before {
+          top: -0.1rem;
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid rgba(51, 51, 51, 0.5);
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
   .application-form {
     margin-bottom: 20rem;
+    &__content-checkbox {
+      &.checkbox_ellipse {
+        input:checked + span:before {
+          background-size: 2rem;
+        }
+        span {
+          padding-left: 6rem;
+          font-size: 3rem;
+          line-height: 140%;
+          &::before {
+            top: 0.4rem;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid rgba(51, 51, 51, 0.5);
+          }
+        }
+      }
+    }
     &__heading {
       margin-bottom: 8rem;
       max-width: 66rem;
