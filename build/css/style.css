@@ -29392,6 +29392,8 @@ textarea {
     background-image: url(../img/a-image/icons/key-grey.svg); }
   .input_comment::before {
     background-image: url(../img/t-image/comment.svg); }
+  .input_file::before {
+    background-image: url(../img/t-image/file.svg); }
   .input__field {
     padding: 1.8rem 2rem;
     border: none;
@@ -36404,6 +36406,12 @@ body::after {
   .registration-modal__fields_m20 {
     margin-bottom: 2rem; }
 
+@media (max-width: 48rem) {
+  .registration-modal__fields.vacancy {
+    gap: 6rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 6rem; } }
+
 .registration-modal__input.vacancy-email {
   margin-bottom: 3rem; }
 
@@ -36421,6 +36429,14 @@ body::after {
 .registration-modal__input_fc {
   grid-column: 1/2; }
 
+@media (max-width: 48em) {
+  .registration-modal__input.vacancy-email {
+    margin-bottom: 6rem; }
+  .registration-modal__input.vacancy-comment {
+    height: 18.8rem;
+    border-radius: 6rem;
+    margin-bottom: 6rem; } }
+
 .registration-modal__actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36432,8 +36448,19 @@ body::after {
       -ms-flex-align: center;
           align-items: center; }
 
+@media (max-width: 48em) {
+  .registration-modal__actions.vacancy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
 .registration-modal__btn {
   min-width: 28.4rem; }
+
+@media (max-width: 48em) {
+  .registration-modal__btn.vacancy {
+    min-width: 100%; } }
 
 .registration-modal__verify {
   margin-bottom: 3.6rem; }
@@ -36744,6 +36771,74 @@ body::after {
     max-width: 101.4rem; }
   .appointment-modal .popup__content {
     max-width: 87rem; } }
+
+#input-file {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+.input_file {
+  padding-top: 2rem; }
+
+.input-file__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4.4rem; }
+
+.input-file__icon > svg {
+  width: 2.4rem;
+  height: 2.4rem; }
+
+.input-file__texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 3rem; }
+
+.input-file__text-load {
+  font-family: Golos;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #2f2f2f;
+  cursor: pointer; }
+
+.input-file__text-size {
+  font-family: MyriadPro;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: rgba(51, 51, 51, 0.5); }
+
+@media (max-width: 48em) {
+  .input-file__label {
+    gap: 2rem;
+    margin-bottom: 6.4rem; }
+  .input-file__icon > svg {
+    width: 5.6rem;
+    height: 8rem; }
+  .input-file__texts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem; }
+  .input-file__text-load {
+    font-size: 3.2rem; }
+  .input-file__text-size {
+    font-size: 2.8rem; } }
 
 .all-doctors {
   margin-bottom: 18rem; }
@@ -41069,6 +41164,34 @@ body::after {
       margin-top: 0.6rem; }
     .vacancy__baner .baner__phone-box .phone-box__value p:nth-child(2) {
       font-size: 3.2rem; } }
+
+.blog-search__form.our-vacancies .blog-search__form-label {
+  height: 5rem; }
+
+.blog-search__form.our-vacancies input {
+  color: rgba(51, 51, 51, 0.5);
+  border-color: #d8dde4; }
+
+@media (max-width: 48em) {
+  .blog-search__form.our-vacancies {
+    padding: 0; }
+    .blog-search__form.our-vacancies .blog-search__form-label {
+      height: 8rem; }
+      .blog-search__form.our-vacancies .blog-search__form-label::before {
+        width: 4.5rem;
+        height: 4.5rem; }
+    .blog-search__form.our-vacancies input {
+      font-size: 2.6rem; } }
+
+.sort-dropdown.our-vacancies__sort .sort-dropdown__inner {
+  padding: 4rem 0; }
+
+@media (max-width: 48em) {
+  .sort-dropdown.our-vacancies__sort .sort-dropdown__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; } }
 
 .vacancy-details .finished-resume {
   background-color: #eef3f7; }
