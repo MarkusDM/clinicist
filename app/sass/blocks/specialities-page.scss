@@ -1,0 +1,119 @@
+.specialities {
+  margin-bottom: 18rem;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  &__page-navigation {
+    margin-top: 4rem;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 48em) {
+  .specialities {
+    margin-bottom: 16rem;
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.2rem;
+    }
+    &__page-navigation {
+      margin-top: 8rem;
+      justify-content: center;
+    }
+  }
+}
+
+.career-card {
+  &.specialities {
+    grid-template-columns: 24.2rem 1fr;
+    height: 25.6rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    .career-card {
+      &__text-wrap {
+        padding: 4rem;
+        padding-left: 0;
+      }
+      &__image-box {
+        display: flex;
+        gap: 2.5rem;
+        margin-bottom: 4.5rem;
+      }
+      &__image-wrap {
+        height: 25.6rem;
+      }
+      &__image-doctors {
+        width: 13.2rem;
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        p {
+          &:nth-child(1) {
+            font-family: MyriadPro;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: #36b4f1;
+          }
+          &:nth-child(2) {
+            font-family: MyriadPro;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: rgba(51, 51, 51, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .career-card {
+    &.specialities {
+      grid-template-columns: 1fr;
+      height: 100%;
+      .career-card {
+        &__heading {
+          font-size: 3.2rem;
+          font-weight: 400;
+          margin-bottom: 0.8rem;
+        }
+        &__text {
+          margin-bottom: 4rem;
+        }
+        &__text-wrap {
+          padding: 0;
+        }
+        &__image-box {
+          align-items: center;
+          margin-bottom: 0;
+        }
+        &__image-doctors {
+          width: 21rem;
+        }
+        &__info {
+          gap: 1rem;
+          p {
+            &:nth-child(1) {
+              font-size: 2.6rem;
+            }
+            &:nth-child(2) {
+              font-size: 2.6rem;
+            }
+          }
+        }
+        &__btn {
+          display: none;
+        }
+      }
+    }
+  }
+}

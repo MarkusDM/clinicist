@@ -933,6 +933,43 @@
     </div>
   </div>
 </div>
+
+<div id="vacancy-modal" aria-hidden="true" class="registration-modal popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__head">
+        <button data-close type="button" class="popup__close">
+          <img src="./img/a-image/icons/cross.svg" aria-hidden="true" alt="" />
+        </button>
+      </div>
+      <div class="registration-modal__body">
+        <div class="registration-modal__title-wrap">
+          <span class="registration-modal__subtitle subtitle"
+            >Для продолжения,  вам необходимо зарегистрироваться</span
+          >
+          <span class="registration-modal__title title">Регистрация</span>
+        </div>
+        <form data-dev action="#" class="registration-modal__form">
+          <div class="registration-modal__fields">
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Эл.почта" class="input__field"></div>
+            <div class="registration-modal__input input input_user"><textarea data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Оставить комментарий" class="input__field"></div>
+          </div>
+          <div class="registration-modal__actions">
+            <div class="registration-modal__checkbox checkbox">
+              <input data-error class="checkbox__input" type="checkbox" value="3" name="form[]">
+              <label class="checkbox__label"><span class="checkbox__text">Я согласен на обработку моих персональных данных</span></label>
+            </div>
+            <button type="submit" class="registration-modal__btn btn">
+              Отправить запрос
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./js/swiper-bundle.min.js"></script>
