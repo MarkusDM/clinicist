@@ -1058,7 +1058,6 @@
   visibility: hidden;
 }
 
-
 // price list item
 .pricelist-item {
   padding: 1.7rem 4rem;
@@ -1745,7 +1744,7 @@
 
   &__review-date {
     margin-left: auto;
-    color:  rgba(51, 51, 51, 0.50);
+    color: rgba(51, 51, 51, 0.5);
     font-family: Montserrat;
     font-size: 1.6rem;
     font-weight: 500;
@@ -1791,7 +1790,7 @@
   &__response-text {
     margin-bottom: 3.2rem;
     max-width: 67.2rem;
-    color: #2F2F2F;
+    color: #2f2f2f;
   }
 
   &__response-date {
@@ -2028,13 +2027,13 @@
   display: flex;
   align-items: center;
   column-gap: 2rem;
-  background-color:  #FFFfff;
-box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
-&._active {
-  .service-card__ellipse::before {
-    transform: scale(1);
+  background-color: #ffffff;
+  box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
+  &._active {
+    .service-card__ellipse::before {
+      transform: scale(1);
+    }
   }
-}
 
   // .service-card__ellipse
 
@@ -2048,7 +2047,7 @@ box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
     border: 1px solid rgba(47, 47, 47, 0.35);
     border-radius: 50%;
     &::before {
-      content: "";
+      content: '';
       flex: 0 0 1rem;
       width: 1rem;
       height: 1rem;
@@ -2086,9 +2085,9 @@ box-shadow: 0 2rem 6rem 0 rgba(124, 148, 159, 0.07);
 
   &__heading {
     max-width: 21.6rem;
-font-family: MyriadPro;
-font-size: 2.2rem;
-line-height: 127.273%;
+    font-family: MyriadPro;
+    font-size: 2.2rem;
+    line-height: 127.273%;
   }
 }
 
@@ -2113,43 +2112,45 @@ line-height: 127.273%;
     height: 100%;
     cursor: pointer;
     img {
-
-    height: 100%;
-    object-fit: contain;
+      height: 100%;
+      object-fit: contain;
     }
-
   }
 
   // .hint__body
 
   &__body {
-    position: absolute;width: 27rem;top: 0;left: 50%;
+    position: absolute;
+    z-index: 5;
+    width: 27rem;
+    top: 0;
+    left: 50%;
     padding: 2rem 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 0.2rem 1.2rem 0 #E3EBF0;
-    text-align: center;    line-height: 84%;
-    color:  #2F2F2F;
+    box-shadow: 0 0.2rem 1.2rem 0 #e3ebf0;
+    text-align: center;
+    line-height: 84%;
+    color: #2f2f2f;
     opacity: 0;
     visibility: hidden;
     transform: translate(-50%, -121%);
     transition: all 0.3s ease;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 50%;
       bottom: 0;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 1.1rem 0.65rem 0 0.65rem;
-        border-color: #FFFFFF transparent transparent transparent;
-        transform: rotate(0deg) translate(-50%, 100%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1.1rem 0.65rem 0 0.65rem;
+      border-color: #ffffff transparent transparent transparent;
+      transform: rotate(0deg) translate(-50%, 100%);
     }
     span {
-      color:  #2F2F2F;
+      color: #2f2f2f;
       font-family: MyriadPro;
       font-size: 1.6rem;
-
     }
     background-color: #ffffff;
   }
@@ -2215,7 +2216,7 @@ line-height: 127.273%;
     column-gap: 2rem;
     &_disabled {
       .patients__text {
-        color: rgba(51, 51, 51, 0.50);
+        color: rgba(51, 51, 51, 0.5);
       }
     }
   }
@@ -2235,7 +2236,7 @@ line-height: 127.273%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     column-gap: 6rem;
-    border-bottom: 1px solid #D8DDE4;
+    border-bottom: 1px solid #d8dde4;
   }
 
   // .patients__group
@@ -2257,7 +2258,7 @@ line-height: 127.273%;
   // .patients__text
 
   &__text {
-    color: #2F2F2F;
+    color: #2f2f2f;
   }
 }
 
@@ -2303,9 +2304,13 @@ line-height: 127.273%;
     &:not(:last-child) {
       position: relative;
       &::after {
-        content: "";
-        position: absolute;width: 100%;height: 1px;bottom: 0;left: 0;
-        background-color: #EEF3F7;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #eef3f7;
       }
     }
   }
@@ -2314,7 +2319,7 @@ line-height: 127.273%;
 
   &__item-subtitle {
     margin-bottom: 1.2rem;
-    color: #B3B7BA;
+    color: #b3b7ba;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 150%;
@@ -2332,7 +2337,7 @@ line-height: 127.273%;
 
   &__item-subtext {
     margin-top: 0.7rem;
-    color: #B3B7BA;
+    color: #b3b7ba;
     font-size: 2rem;
     font-weight: 500;
     line-height: 120%;
@@ -2359,14 +2364,13 @@ line-height: 127.273%;
     width: 7.9rem;
     height: 7.9rem;
     border-radius: 50%;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     overflow: hidden;
     img {
       height: 100%;
       object-fit: contain;
     }
   }
-
 
   // .details-steps__item-cost
 
@@ -2445,7 +2449,7 @@ line-height: 127.273%;
     font-size: 2.2rem;
     line-height: 145.455%;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 6.6rem;
       height: 1px;
@@ -2495,9 +2499,9 @@ line-height: 127.273%;
 .all-reviews-card {
   display: grid;
   grid-template-columns: 45.7rem 1fr;
-  background-color: #EEF3F7;
+  background-color: #eef3f7;
   .review-card__text-wrap {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   // .all-reviews-card__info
@@ -2543,7 +2547,7 @@ line-height: 127.273%;
   // .all-reviews-card__group-txt
 
   &__group-txt {
-    color: #2F2F2F;
+    color: #2f2f2f;
   }
 
   // .all-reviews-card__body
@@ -2582,13 +2586,13 @@ line-height: 127.273%;
         .review-card__response {
           margin-top: 6.3rem;
           padding-top: 5rem;
-          border-top: 1px solid #D8DDE4;
+          border-top: 1px solid #d8dde4;
         }
       }
       &__text-item {
-       &:not(:last-child) {
-        margin-bottom: 2.6rem;
-       }
+        &:not(:last-child) {
+          margin-bottom: 2.6rem;
+        }
       }
     }
     &__heading {
@@ -2631,7 +2635,7 @@ line-height: 127.273%;
     }
     &__text {
       font-size: 2.6rem;
-      line-height:  246.154%;
+      line-height: 246.154%;
     }
   }
   .patients {
@@ -2754,7 +2758,7 @@ line-height: 127.273%;
     height: 3.6rem;
     &__body {
       left: auto;
-      right: -50%;
+      right: -156%;
       padding: 2.4rem 3rem;
       width: 48rem;
       line-height: 150%;
@@ -2793,9 +2797,9 @@ line-height: 127.273%;
     }
     &__heading {
       max-width: 34rem;
-    font-size: 3.2rem;
-    font-weight: 400;
-  }
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
   }
   .service-label {
     padding: 2.4rem;
@@ -2813,14 +2817,13 @@ line-height: 127.273%;
         flex: 0 0 5rem;
         width: 5rem;
         height: 5rem;
-
       }
     }
     &__icon-wrap {
       flex: 0 0 5rem;
       width: 5rem;
       height: 5rem;
-      }
+    }
     &__text {
       max-width: 16rem;
       font-size: 2.4rem;
@@ -3013,32 +3016,32 @@ line-height: 127.273%;
       bottom: 3rem;
       border-radius: 2rem;
       font-size: 3rem;
-			line-height: normal;
+      line-height: normal;
     }
     &__date {
       margin-bottom: 3rem;
-			font-size: 3rem;
-			line-height: 150%;
-			color: $list;
-			font-family: Montserrat, sans-serif;
+      font-size: 3rem;
+      line-height: 150%;
+      color: $list;
+      font-family: Montserrat, sans-serif;
     }
     &__heading {
       margin-bottom: 3rem;
-			max-width: 100%;
-			font-size: 3.6rem;
-			font-weight: 400;
-			line-height: 150%;
+      max-width: 100%;
+      font-size: 3.6rem;
+      font-weight: 400;
+      line-height: 150%;
     }
     &__text {
       margin-bottom: 8rem;
       font-size: 3.2rem;
-			line-height: 150%;
-			max-width: 100%;
-			font-family: Myriad Pro, sans-serif;
+      line-height: 150%;
+      max-width: 100%;
+      font-family: Myriad Pro, sans-serif;
     }
-		&__text-wrap {
-			padding: 4rem 4rem 6rem 4rem;
-		}
+    &__text-wrap {
+      padding: 4rem 4rem 6rem 4rem;
+    }
   }
   .link-item {
     grid-template-columns: 1.4rem 1fr;
@@ -3705,7 +3708,7 @@ line-height: 127.273%;
     }
     &__hours-row {
       grid-template-columns: repeat(3, 1fr);
-     gap: 0.8rem;
+      gap: 0.8rem;
     }
     &__hours-more {
       margin-top: 5rem;
@@ -3834,15 +3837,15 @@ line-height: 127.273%;
   }
   .patients {
     &__item {
-    &.no-padding {
-      .patients__option {
-        margin-bottom: 0.3rem;
+      &.no-padding {
+        .patients__option {
+          margin-bottom: 0.3rem;
+        }
+        .patients__row {
+          padding: 0;
+          border: none;
+        }
       }
-      .patients__row {
-        padding: 0;
-        border: none;
-      }
-    }
     }
   }
   .navigation-block {

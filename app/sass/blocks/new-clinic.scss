@@ -1,5 +1,42 @@
 .new-clinic {
   margin-bottom: 13.8rem;
+  .leave-comment__stars-stars[data-star-total='1']
+    .leave-comment__stars-star:nth-child(n + 5),
+  .leave-comment__stars-stars[data-star-total='2']
+    .leave-comment__stars-star:nth-child(n + 4),
+  .leave-comment__stars-stars[data-star-total='3']
+    .leave-comment__stars-star:nth-child(n + 3),
+  .leave-comment__stars-stars[data-star-total='4']
+    .leave-comment__stars-star:nth-child(n + 2),
+  .leave-comment__stars-stars[data-star-total='5']
+    .leave-comment__stars-star:nth-child(n + 1) {
+    width: 2rem;
+    height: 2rem;
+  }
+  .leave-comment__stars-star:hover,
+  .leave-comment__stars-star:hover ~ .leave-comment__stars-star {
+    width: 2rem;
+    height: 2rem;
+  }
+  .leave-comment {
+    &__stars {
+      margin: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: normal;
+    }
+    &__stars-title {
+      margin-bottom: 1.6rem;
+      font-family: 'MyriadPro';
+      line-height: 130%;
+      color: #2f2f2f;
+      white-space: nowrap;
+    }
+    &__stars-star {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
   &__subtitle {
     margin-bottom: 1.6rem;
   }
@@ -47,7 +84,7 @@
       font-size: 1.8rem;
       line-height: 150%;
       margin-bottom: 4rem;
-      color: rgba(51, 51, 51, 0.50);
+      color: rgba(51, 51, 51, 0.5);
     }
   }
   &__text {
@@ -1881,6 +1918,45 @@
   .new-clinic {
     overflow: hidden;
     margin-bottom: 16rem;
+
+    .leave-comment__stars-stars[data-star-total='1']
+      .leave-comment__stars-star:nth-child(n + 5),
+    .leave-comment__stars-stars[data-star-total='2']
+      .leave-comment__stars-star:nth-child(n + 4),
+    .leave-comment__stars-stars[data-star-total='3']
+      .leave-comment__stars-star:nth-child(n + 3),
+    .leave-comment__stars-stars[data-star-total='4']
+      .leave-comment__stars-star:nth-child(n + 2),
+    .leave-comment__stars-stars[data-star-total='5']
+      .leave-comment__stars-star:nth-child(n + 1) {
+      width: 4rem;
+      height: 4rem;
+    }
+    .leave-comment__stars-star:hover,
+    .leave-comment__stars-star:hover ~ .leave-comment__stars-star {
+      width: 4rem;
+      height: 4rem;
+    }
+    .leave-comment {
+      &__stars {
+        margin-bottom: 6rem;
+        display: grid;
+        grid-template-columns: 1fr 29rem;
+        column-gap: 6.6rem;
+      }
+      &__stars-title {
+        margin: 0;
+        white-space: wrap;
+      }
+      &__stars-stars {
+        column-gap: 0.8rem;
+        justify-self: start;
+      }
+      &__stars-star {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
     &__inner {
       grid-template-columns: 1fr;
     }
@@ -2363,9 +2439,9 @@
         }
       }
     }
-    &.new-clinic-korporativnie, 
+    &.new-clinic-korporativnie,
     &.new-clinic-history {
-      & .new-clinic__list li{
+      & .new-clinic__list li {
         color: rgba(51, 51, 51, 0.5);
         padding-left: 9.2rem;
         max-width: 66.8rem;

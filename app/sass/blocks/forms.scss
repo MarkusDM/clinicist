@@ -111,6 +111,51 @@
 // checkbox
 .checkbox {
   position: relative;
+  &_ellipse {
+    display: flex;
+    column-gap: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      display: block;
+      width: 0;
+      height: 0;
+
+      &:checked + span:before {
+        background-position: 50% 50%;
+        background-size: 0.75rem 0.75rem;
+        background-repeat: no-repeat;
+        background-image: url('../img/dim-image/icons/subscribe-check.svg');
+      }
+    }
+
+    span {
+      color: $white;
+      font-family: Myriad Pro, sans-serif;
+      font-size: 1.6rem;
+      line-height: 125%;
+      padding-left: 3rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: 1px solid $white;
+        position: absolute;
+        left: 0;
+        top: 0.3rem;
+        background: 0 0;
+        background: transparent;
+      }
+    }
+  }
   &._form-error {
     .checkbox__label::before {
       border: 2px solid #e81919;
@@ -699,8 +744,39 @@ textarea {
       line-height: 150%;
     }
   }
+  .checkbox {
+    &_ellipse {
+      input {
+        &:checked + span:before {
+          background-position: 50% 50%;
+          background-size: 1.25rem 1.25rem;
+          background-repeat: no-repeat;
+          background-image: url('../img/dim-image/icons/subscribe-check.svg');
+        }
+      }
+
+      span {
+        font-size: 2.8rem;
+        line-height: 150%;
+        padding-left: 4rem;
+
+        &::before {
+          width: 2rem;
+          height: 2rem;
+          top: 1rem;
+        }
+      }
+    }
+  }
 }
 @media (min-width: 48em) {
+  .application {
+    &__checkbox {
+      &._mobile-only {
+        display: none;
+      }
+    }
+  }
   .login-form {
     .input__viewpass {
       display: none;
