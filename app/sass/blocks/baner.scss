@@ -387,6 +387,7 @@
   &-history {
     margin-bottom: 10rem;
     & .baner__picture {
+      width: 71.9rem;
       height: auto;
       margin-top: -2rem;
     }
@@ -767,6 +768,9 @@
         }
         &-title {
           margin-bottom: 2.2rem;
+          & br {
+            display: none;
+          }
         }
         &-text {
           width: 75%;
@@ -4611,33 +4615,43 @@
     .baner {
       &__inner {
         padding-bottom: 8.5rem;
+        overflow: visible;
       }
       &__content {
         width: 100%;
         padding-top: 5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 5.8rem;
         &-links {
           margin-bottom: 9.3rem;
         }
         &-title {
-          margin-bottom: 4.8rem;
+          margin-bottom: 5.2rem;
           line-height: 110%;
+          & br {
+            display: block;
+          }
         }
         &-text {
+          font-size: 3.2rem;
+          font-weight: 300;
           width: 100%;
+          border: 0;
+          padding-left: 0;
+          &::after {
+            content: none;
+          }
         }
       }
       &__picture {
         width: 112%;
         height: 51.1rem;
         padding-top: 0rem;
-        margin-right: 0;
-        margin-left: -4rem;
+        margin: 0 0 0 -4rem;
 
         &::after {
-          width: 66.6rem;
-          height: 66.6rem;
-          top: -10rem;
+          width: 133.2rem;
+          height: 133.2rem;
+          top: -6rem;
           left: 51.5%;
         }
       }
@@ -6373,7 +6387,9 @@
         &__content {
           padding-top: 3rem;
           &-text {
+            font-size: 3.2rem;
             padding-left: 5.6rem;
+            border: 0;
             &::after {
               content: '';
               left: 0rem;
@@ -6405,7 +6421,7 @@
         &__picture {
           width: 47.4rem;
           height: 100%;
-          left: 4rem;
+          left: 0;
           margin-top: 5rem;
           & img {
             object-fit: contain;
@@ -6451,10 +6467,41 @@
           }
           &-name {
             font-family: 'Montserrat';
-            font-weight: 500;
+            font-weight: 600;
             font-size: 3.8rem;
             padding-bottom: 0.8rem;
             line-height: normal;
+          }
+        }
+      }
+    }
+    &-history {
+      margin-bottom: 20rem;
+      & .baner {
+        &__inner {
+          overflow: visible;
+        }
+        &__content {
+          &-text {
+            font-size: 3.2rem;
+            font-weight: 300;
+            border: 0;
+            padding-left: 0;
+            &::after {
+              content: none;
+            }
+          }
+        }
+        &__picture {
+          width: 90.4rem;
+          left: -9rem;
+          height: auto;
+          margin-top: 1.3rem;
+          &::after {
+            width: 133.2rem;
+            height: 133.2rem;
+            top: -1rem;
+            left: 55%;
           }
         }
       }
@@ -6464,6 +6511,8 @@
       .breadcrumbs {
         margin-bottom: 7rem;
         width: 69.4rem;
+        font-size: 3rem;
+        line-height: 120%;
         flex-wrap: nowrap;
         &__link {
           color: rgba(51, 51, 51, 0.5);
@@ -6482,8 +6531,11 @@
           }
         }
 
-        &__inner::after {
-          top: 45rem;
+        &__inner {
+          overflow: visible;
+          &::after {
+            top: 45rem;
+          }
         }
         &__content {
           width: 100%;
@@ -6496,18 +6548,20 @@
             margin-bottom: 4rem;
           }
           &-text {
+            font-size: 3.2rem;
+            font-weight: 300;
             width: 100%;
           }
         }
         &__picture {
           height: 55.2rem;
           margin-left: -5rem;
-          margin-top: -7rem;
+          margin-top: -3rem;
           width: 82.8rem;
           &::after {
-            width: 73.7rem;
-            height: 73.7rem;
-            top: -7rem;
+            width: 133.2rem;
+            height: 133.2rem;
+            top: 1rem;
             left: 47%;
           }
         }
@@ -6517,9 +6571,12 @@
       margin-bottom: 20rem;
       .baner {
         margin-bottom: 0rem;
-        &__inner::after {
-          top: 41rem;
-          left: 55%;
+        &__inner {
+          overflow: visible;
+          &::after {
+            top: 41rem;
+            left: 55%;
+          }
         }
         .breadcrumbs {
           margin-bottom: 7rem;
@@ -6531,8 +6588,9 @@
           width: 100%;
           padding-top: 3rem;
           &-text {
+            font-size: 3.2rem;
+            font-weight: 300;
             width: 100%;
-            margin-left: 2rem;
           }
         }
         &__picture {
@@ -6540,10 +6598,12 @@
           height: fit-content;
           margin-right: 0rem;
           margin-left: -10rem;
+          margin-top: -0.6rem;
           &::after {
-            width: 75rem;
-            height: 75rem;
-            left: 48%;
+            width: 133.2rem;
+            height: 133.2rem;
+            left: 54%;
+            top: -2rem;
           }
         }
       }
@@ -6562,10 +6622,13 @@
         }
       }
       .baner {
-        &__inner::after {
-          width: 84.2rem;
-          height: 84.2rem;
-          top: 41rem;
+        &__inner {
+          overflow: visible;
+          &::after {
+            width: 84.2rem;
+            height: 84.2rem;
+            top: 41rem;
+          }
         }
         &__content {
           width: 100%;
@@ -6577,17 +6640,21 @@
             line-height: 110%;
           }
           &-text {
+            font-size: 3.2rem;
+            font-weight: 300;
             color: #999;
           }
         }
         &__picture {
-          width: 65rem;
+          width: 80.4rem;
+          left: -8rem;
           margin-right: 7.2rem;
+          margin-top: 3rem;
           &::after {
-            width: 63.6rem;
-            height: 63.6rem;
-            top: -6rem;
-            left: 52%;
+            width: 84.4rem;
+            height: 84.4rem;
+            top: -4rem;
+            left: 57%;
           }
         }
       }
