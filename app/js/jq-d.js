@@ -270,15 +270,6 @@ $('.about-the-s__item').click(function () {
 
 
 
-const rem = function (rem) {
-  if ($(window).width() > 768) {
-    return 0.005208335 * $(window).width() * rem
-  } else {
-    // где 375 это ширина моб версии макета
-    return (100 / 375) * (0.05 * $(window).width()) * rem
-  }
-}
-
 
 const offerBannerSwiper = new Swiper('.offer-banner__swiper', {
   spaceBetween: rem(1),
