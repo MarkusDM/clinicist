@@ -6302,7 +6302,8 @@ input[type='search']::-webkit-search-results-decoration {
           row-gap: 4rem; }
       .baner-all-reviews .baner__container {
         padding: 0;
-        grid-template-columns: 1fr; }
+        grid-template-columns: 1fr;
+        justify-items: center; }
       .baner-all-reviews .baner__text-wrap {
         margin-bottom: 11rem;
         padding: 8rem 4rem 0 4rem; }
@@ -6347,7 +6348,7 @@ input[type='search']::-webkit-search-results-decoration {
           content: '';
           position: absolute;
           z-index: 2;
-          top: 0;
+          top: -1%;
           left: 0;
           width: 100%;
           height: 23.8rem;
@@ -36755,6 +36756,8 @@ body::after {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 3rem; }
+    .all-reviews__cards._no-margin {
+      margin: 0; }
     .all-reviews__cards_margin {
       margin-bottom: 18rem; }
   .all-reviews__page-navigation {
@@ -36813,7 +36816,7 @@ body::after {
       -ms-flex-item-align: center;
           align-self: center; }
     .all-reviews__cards {
-      margin-bottom: 28.8rem; }
+      margin-bottom: 8rem; }
       .all-reviews__cards_margin {
         margin-bottom: 44rem; } }
 

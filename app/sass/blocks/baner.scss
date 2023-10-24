@@ -4163,6 +4163,7 @@
         &__container {
           padding: 0;
           grid-template-columns: 1fr;
+          justify-items: center;
         }
         &__text-wrap {
           margin-bottom: 11rem;
@@ -4222,7 +4223,7 @@
             content: '';
             position: absolute;
             z-index: 2;
-            top: 0;
+            top: -1%;
             left: 0;
             width: 100%;
             height: 23.8rem;
