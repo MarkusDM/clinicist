@@ -430,6 +430,21 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   allReviewsModify();
 
+  // date mask
+  const dateInputs = document.querySelectorAll('[data-required="date"]');
+  if (dateInputs.length) {
+    dateInputs.forEach(dateInput => {
+      dateInput.addEventListener('keyup', function () {
+        const v = dateInput.value;
+        if (v.match(/^\d{2}$/) !== null) {
+          dateInput.value = v + '/';
+        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+          dateInput.value = v + '/';
+        }
+      });
+    });
+  }
+
   // ===========================================================================
 
   // smooth behaviour

@@ -6103,52 +6103,6 @@ input[type='search']::-webkit-search-results-decoration {
         font-weight: 600;
         -webkit-transform: translate(0.3rem, -0.6rem);
                 transform: translate(0.3rem, -0.6rem); }
-  .baner-doctors-chapter-zapis .baner__image-wrap::before {
-    border: 1px solid #d8dde4; }
-  .baner-doctors-chapter-zapis .baner__call-link {
-    padding: 0.4rem 3.7rem 0.4rem 0.4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    -webkit-column-gap: 2rem;
-       -moz-column-gap: 2rem;
-            column-gap: 2rem;
-    border-radius: 5.2rem;
-    background-color: #ffffff; }
-  .baner-doctors-chapter-zapis .baner__call-link-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 4.8rem;
-            flex: 0 0 4.8rem;
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 50%;
-    background-color: #36b4f1; }
-    .baner-doctors-chapter-zapis .baner__call-link-icon img {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 2.4rem;
-              flex: 0 0 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      -o-object-fit: contain;
-         object-fit: contain; }
-  .baner-doctors-chapter-zapis .baner__call-link-text {
-    color: #36b4f1; }
-  .baner-doctors-chapter-zapis .baner__text {
-    margin-bottom: 4rem; }
   .baner-reviews {
     margin-bottom: 6.2rem;
     height: 57.9rem; }
@@ -6210,11 +6164,97 @@ input[type='search']::-webkit-search-results-decoration {
         border: 1px solid #d8dde4;
         -webkit-transform: translate(-50%, -35%);
                 transform: translate(-50%, -35%); }
+  .baner-doctors-chapter-zapis .baner__image-wrap::before {
+    border: 1px solid #d8dde4; }
+  .baner-doctors-chapter-zapis .baner__call-link {
+    padding: 0.4rem 3.7rem 0.4rem 0.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    border-radius: 5.2rem;
+    background-color: #ffffff; }
+  .baner-doctors-chapter-zapis .baner__call-link-icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 4.8rem;
+            flex: 0 0 4.8rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background-color: #36b4f1; }
+    .baner-doctors-chapter-zapis .baner__call-link-icon img {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 2.4rem;
+              flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .baner-doctors-chapter-zapis .baner__call-link-text {
+    color: #36b4f1; }
+  .baner-doctors-chapter-zapis .baner__text {
+    margin-bottom: 4rem; }
 
 @media (max-width: 48em) {
   .baner {
     margin-bottom: 16rem;
     height: auto; }
+    .baner-doctors-chapter-zapis .baner__text-wrap {
+      padding: 4rem 0 0 0; }
+    .baner-doctors-chapter-zapis .baner__text {
+      margin-bottom: 10.8rem;
+      font-size: 3.2rem; }
+    .baner-doctors-chapter-zapis .baner__call-link {
+      padding: 0.8rem 4rem 0.8rem 0.8rem;
+      -webkit-column-gap: 1.6rem;
+         -moz-column-gap: 1.6rem;
+              column-gap: 1.6rem;
+      border-radius: 10.4rem; }
+    .baner-doctors-chapter-zapis .baner__call-link-icon {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 7rem;
+              flex: 0 0 7rem;
+      width: 7rem;
+      height: 7rem; }
+      .baner-doctors-chapter-zapis .baner__call-link-icon img {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 3.6rem;
+                flex: 0 0 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem; }
+    .baner-doctors-chapter-zapis .baner__call-link-text {
+      font-size: 3rem; }
+    .baner-doctors-chapter-zapis .baner__text-wrap {
+      position: relative;
+      z-index: 2; }
+    .baner-doctors-chapter-zapis .baner__image-wrap {
+      width: 71rem; }
+      .baner-doctors-chapter-zapis .baner__image-wrap::before {
+        top: -25%;
+        left: 0;
+        width: 78rem;
+        height: 78rem;
+        -webkit-transform: translate(-4%, 0);
+                transform: translate(-4%, 0); }
+    .baner-doctors-chapter-zapis .baner__image {
+      -webkit-transform: translateX(4rem);
+              transform: translateX(4rem); }
     .baner-all-reviews {
       margin-bottom: 16rem; }
       .baner-all-reviews .text-item {
@@ -6432,41 +6472,6 @@ input[type='search']::-webkit-search-results-decoration {
     .baner .baner__plash-text {
       font-size: 2.6rem;
       line-height: 130%; }
-  -doctors-chapter-zapis .baner__text {
-    margin-bottom: 10.8rem;
-    font-size: 3.2rem; }
-  -doctors-chapter-zapis .baner__call-link {
-    padding: 0.8rem 4rem 0.8rem 0.8rem;
-    -webkit-column-gap: 1.6rem;
-       -moz-column-gap: 1.6rem;
-            column-gap: 1.6rem;
-    border-radius: 10.4rem; }
-  -doctors-chapter-zapis .baner__call-link-icon {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 7rem;
-            flex: 0 0 7rem;
-    width: 7rem;
-    height: 7rem; }
-    -doctors-chapter-zapis .baner__call-link-icon img {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 3.6rem;
-              flex: 0 0 3.6rem;
-      width: 3.6rem;
-      height: 3.6rem; }
-  -doctors-chapter-zapis .baner__call-link-text {
-    font-size: 3rem; }
-  -doctors-chapter-zapis .baner__text-wrap {
-    position: relative;
-    z-index: 2; }
-  -doctors-chapter-zapis .baner__image-wrap {
-    width: 89.6rem; }
-    -doctors-chapter-zapis .baner__image-wrap::before {
-      top: -51%;
-      left: 0;
-      width: 78rem;
-      height: 78rem;
-      -webkit-transform: translate(-10%, 0);
-              transform: translate(-10%, 0); }
   .baner-carousel {
     margin-bottom: 16rem; }
     .baner-carousel .swiper-container {
@@ -32784,7 +32789,7 @@ textarea {
       background-color: #f3fbff; } }
 
 .centers-select .select__asset {
-  font-size: 1.3rem; }
+  font-size: 1.6rem; }
 
 .centers-select .select__row {
   -webkit-box-orient: vertical;
@@ -32794,7 +32799,8 @@ textarea {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  row-gap: 0.4rem; }
+  row-gap: 0.4rem;
+  font-size: 1.8rem; }
 
 .centers-select .select__options {
   top: calc(100% - 1rem);

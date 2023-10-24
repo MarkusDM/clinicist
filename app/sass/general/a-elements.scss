@@ -1219,12 +1219,13 @@
     }
   }
   .select__asset {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .select__row {
     flex-direction: column-reverse;
     align-items: flex-start;
     row-gap: 0.4rem;
+    font-size: 1.8rem;
   }
   .select__options {
     top: calc(100% - 1rem);
