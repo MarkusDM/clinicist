@@ -231,6 +231,15 @@
 @media (max-width: 48.98em) {
   .doctor {
     margin-bottom: 9.4rem;
+    .swiper-slide {
+      &.active {
+        width: 28rem;
+        transform: translateY(-11rem);
+        .doctor__imgs-item-img {
+          height: 34rem;
+        }
+      }
+    }
     &__inner {
       &::after {
         content: none;
@@ -389,13 +398,6 @@
           font-size: 2.8rem;
         }
         &:not(:last-child) {
-        }
-        &.active {
-          width: 28rem;
-          transform: translateY(-11rem);
-          & .doctor__imgs-item-img {
-            height: 34rem;
-          }
         }
         &-link {
           display: inline-block;
