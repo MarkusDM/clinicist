@@ -2919,9 +2919,6 @@ input[type='search']::-webkit-search-results-decoration {
            object-fit: contain;
         -webkit-transform: translateX(-1%);
                 transform: translateX(-1%); }
-    .baner-carousel .baner-btn-next,
-    .baner-carousel .baner-btn-prev {
-      display: none; }
     .baner-carousel .baner__row {
       position: absolute;
       bottom: 5.5rem;
@@ -5060,7 +5057,7 @@ input[type='search']::-webkit-search-results-decoration {
             top: 0;
             cursor: pointer; }
             .baner-error-404 .baner__content-btns-search div:hover {
-              border: 1px solid #36B4F1; }
+              border: 1px solid #36b4f1; }
             .baner-error-404 .baner__content-btns-search div img {
               width: 2.4rem;
               height: 2.4rem; }
@@ -6109,52 +6106,6 @@ input[type='search']::-webkit-search-results-decoration {
         font-weight: 600;
         -webkit-transform: translate(0.3rem, -0.6rem);
                 transform: translate(0.3rem, -0.6rem); }
-  .baner-doctors-chapter-zapis .baner__image-wrap::before {
-    border: 1px solid #d8dde4; }
-  .baner-doctors-chapter-zapis .baner__call-link {
-    padding: 0.4rem 3.7rem 0.4rem 0.4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    -webkit-column-gap: 2rem;
-       -moz-column-gap: 2rem;
-            column-gap: 2rem;
-    border-radius: 5.2rem;
-    background-color: #ffffff; }
-  .baner-doctors-chapter-zapis .baner__call-link-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 4.8rem;
-            flex: 0 0 4.8rem;
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 50%;
-    background-color: #36b4f1; }
-    .baner-doctors-chapter-zapis .baner__call-link-icon img {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 2.4rem;
-              flex: 0 0 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      -o-object-fit: contain;
-         object-fit: contain; }
-  .baner-doctors-chapter-zapis .baner__call-link-text {
-    color: #36b4f1; }
-  .baner-doctors-chapter-zapis .baner__text {
-    margin-bottom: 4rem; }
   .baner-reviews {
     margin-bottom: 6.2rem;
     height: 57.9rem; }
@@ -6216,11 +6167,274 @@ input[type='search']::-webkit-search-results-decoration {
         border: 1px solid #d8dde4;
         -webkit-transform: translate(-50%, -35%);
                 transform: translate(-50%, -35%); }
+  .baner-doctors-chapter-zapis .baner__image-wrap::before {
+    border: 1px solid #d8dde4; }
+  .baner-doctors-chapter-zapis .baner__call-link {
+    padding: 0.4rem 3.7rem 0.4rem 0.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    border-radius: 5.2rem;
+    background-color: #ffffff; }
+  .baner-doctors-chapter-zapis .baner__call-link-icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 4.8rem;
+            flex: 0 0 4.8rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background-color: #36b4f1; }
+    .baner-doctors-chapter-zapis .baner__call-link-icon img {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 2.4rem;
+              flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .baner-doctors-chapter-zapis .baner__call-link-text {
+    color: #36b4f1; }
+  .baner-doctors-chapter-zapis .baner__text {
+    margin-bottom: 4rem; }
 
 @media (max-width: 48em) {
   .baner {
     margin-bottom: 16rem;
     height: auto; }
+    .baner-prices-programs {
+      margin-bottom: 10rem; }
+      .baner-prices-programs .baner__title {
+        margin-bottom: 4rem;
+        max-width: 71rem; }
+      .baner-prices-programs .baner__text-wrap {
+        margin-bottom: 15.6rem; }
+      .baner-prices-programs .baner__text {
+        margin-bottom: 4.5rem;
+        max-width: 67rem;
+        font-size: 3.6rem;
+        color: #999999; }
+      .baner-prices-programs .baner__privileges {
+        padding: 0;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .baner-prices-programs .baner__privileges::before {
+          display: none; }
+      .baner-prices-programs .baner__privileges-icon-wrap {
+        margin-bottom: 2rem;
+        width: 6.4rem;
+        height: 6.4rem; }
+      .baner-prices-programs .baner__privileges-subheading {
+        font-family: Montserrat;
+        font-size: 3rem;
+        color: #2f2f2f; }
+      .baner-prices-programs .baner__image-wrap {
+        width: 71rem; }
+        .baner-prices-programs .baner__image-wrap::before {
+          top: 0;
+          width: 87.6rem;
+          height: 87.6rem;
+          -webkit-transform: translate(-50%, -9%);
+                  transform: translate(-50%, -9%); }
+    .baner-prices-detailed {
+      margin-bottom: 16rem;
+      padding-bottom: 6rem;
+      padding-top: 3rem; }
+      .baner-prices-detailed .baner__container {
+        grid-template-columns: 1fr;
+        width: 100%; }
+      .baner-prices-detailed .baner__breadcrumbs {
+        margin-bottom: 2.2rem; }
+      .baner-prices-detailed .baner__subtitle {
+        display: none; }
+      .baner-prices-detailed .baner__title {
+        margin-bottom: 4rem; }
+      .baner-prices-detailed .baner__text {
+        margin: 0;
+        font-size: 3.2rem; }
+      .baner-prices-detailed .baner__text-wrap {
+        margin-bottom: 4rem;
+        padding: 0; }
+      .baner-prices-detailed .baner__image-wrap {
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%; }
+        .baner-prices-detailed .baner__image-wrap::after {
+          display: none; }
+      .baner-prices-detailed .baner__image {
+        height: auto; }
+      .baner-prices-detailed .baner__btn {
+        margin-top: 6rem;
+        width: 100%; }
+      .baner-prices-detailed .baner__info {
+        position: static;
+        margin-bottom: 2rem;
+        padding: 4rem;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1;
+        -webkit-column-gap: 3rem;
+           -moz-column-gap: 3rem;
+                column-gap: 3rem;
+        width: 100%;
+        -webkit-transform: none;
+                transform: none; }
+      .baner-prices-detailed .baner__info-wrap {
+        -webkit-column-gap: 0.8rem;
+           -moz-column-gap: 0.8rem;
+                column-gap: 0.8rem;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 7.6rem;
+                flex: 0 0 7.6rem;
+        width: 7.6rem;
+        height: 7.6rem;
+        font-size: 4rem;
+        border-radius: 2rem; }
+      .baner-prices-detailed .baner__info-items {
+        padding-right: 3rem;
+        row-gap: 2rem;
+        border-right: 1px solid #d8dde4; }
+      .baner-prices-detailed .baner__info-item {
+        padding: 0;
+        border: none; }
+      .baner-prices-detailed .baner__info-text {
+        font-size: 2.6rem;
+        font-weight: 400; }
+      .baner-prices-detailed .baner__info-cost {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        text-align: left; }
+      .baner-prices-detailed .baner__info-cost-text {
+        margin-bottom: 2.1rem;
+        font-size: 2.6rem;
+        font-weight: 400; }
+      .baner-prices-detailed .baner__info-cost-value {
+        font-size: 4rem;
+        white-space: nowrap;
+        font-weight: 600; }
+        .baner-prices-detailed .baner__info-cost-value span {
+          font-size: 2.6rem;
+          font-weight: 400;
+          -webkit-transform: translate(0.5rem, -1rem);
+                  transform: translate(0.5rem, -1rem); }
+    .baner-prices {
+      margin-bottom: 10rem; }
+      .baner-prices .baner__text-wrap {
+        margin-bottom: 19rem;
+        padding: 4rem 0 0 0; }
+      .baner-prices .baner__image-wrap::before {
+        border: 1px solid #dfe4ea;
+        -webkit-transform: translate(-50%, -40%);
+                transform: translate(-50%, -40%); }
+    .baner-doctors .baner {
+      margin-bottom: 10rem; }
+      .baner-doctors .baner__text-content {
+        width: 100%; }
+      .baner-doctors .baner__text-wrap {
+        padding: 4rem 0 0 0;
+        margin-bottom: 12.6rem; }
+      .baner-doctors .baner__text {
+        margin-bottom: 7.2rem;
+        max-width: 54.5rem; }
+      .baner-doctors .baner__group {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-column-gap: normal;
+           -moz-column-gap: normal;
+                column-gap: normal; }
+      .baner-doctors .baner__group-item .datepicker-modal__input::-webkit-input-placeholder, .baner-doctors .baner__group-item .application-form__input::-webkit-input-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .datepicker-modal__input::-moz-placeholder, .baner-doctors .baner__group-item .application-form__input::-moz-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .datepicker-modal__input:-ms-input-placeholder, .baner-doctors .baner__group-item .application-form__input:-ms-input-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .datepicker-modal__input::-ms-input-placeholder, .baner-doctors .baner__group-item .application-form__input::-ms-input-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .txt, .baner-doctors .baner__group-item .select__value._select-pseudo-label::before, .baner-doctors .baner__group-item .doctor__item-info-data, .baner-doctors .baner__group-item .doctor__item-info-category, .baner-doctors .baner__group-item .doctor__imgs-item-title, .baner-doctors .baner__group-item .doctor__imgs-item-subtitle, .baner-doctors .baner__group-item .reviews__item-img-info-data, .baner-doctors .baner__group-item .reviews__item-img-info-text, .baner-doctors .baner__group-item .input__field, .baner-doctors .baner__group-item .sort-dropdown .select__title, .sort-dropdown .baner-doctors .baner__group-item .select__title, .baner-doctors .baner__group-item .sort-dropdown .select__option, .sort-dropdown .baner-doctors .baner__group-item .select__option, .baner-doctors .baner__group-item .centers-select .select__title, .centers-select .baner-doctors .baner__group-item .select__title, .baner-doctors .baner__group-item .appointment-modal__input, .baner-doctors .baner__group-item .datepicker-modal__input, .baner-doctors .baner__group-item .datepicker-modal__input::placeholder, .baner-doctors .baner__group-item .all-reviews__select-items .select__title, .all-reviews__select-items .baner-doctors .baner__group-item .select__title, .baner-doctors .baner__group-item .all-reviews__select-items .select__option, .all-reviews__select-items .baner-doctors .baner__group-item .select__option, .baner-doctors .baner__group-item .application-form__input, .baner-doctors .baner__group-item .application-form__input::placeholder, .baner-doctors .baner__group-item .application-form__content-checkbox.checkbox_ellipse span, .application-form__content-checkbox.checkbox_ellipse .baner-doctors .baner__group-item span {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item-heading {
+        font-size: 5rem;
+        font-weight: 500; }
+      .baner-doctors .baner__image-wrap {
+        width: 100%; }
+        .baner-doctors .baner__image-wrap::before {
+          top: -1%;
+          -webkit-transform: translate(-50%, 1%);
+                  transform: translate(-50%, 1%); }
+      .baner-doctors .baner__image {
+        width: 127%; }
+    .baner-doctors-chapter-zapis .baner__text-wrap {
+      padding: 4rem 0 0 0; }
+    .baner-doctors-chapter-zapis .baner__text {
+      margin-bottom: 10.8rem;
+      font-size: 3.2rem; }
+    .baner-doctors-chapter-zapis .baner__call-link {
+      padding: 0.8rem 4rem 0.8rem 0.8rem;
+      -webkit-column-gap: 1.6rem;
+         -moz-column-gap: 1.6rem;
+              column-gap: 1.6rem;
+      border-radius: 10.4rem; }
+    .baner-doctors-chapter-zapis .baner__call-link-icon {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 7rem;
+              flex: 0 0 7rem;
+      width: 7rem;
+      height: 7rem; }
+      .baner-doctors-chapter-zapis .baner__call-link-icon img {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 3.6rem;
+                flex: 0 0 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem; }
+    .baner-doctors-chapter-zapis .baner__call-link-text {
+      font-size: 3rem; }
+    .baner-doctors-chapter-zapis .baner__text-wrap {
+      position: relative;
+      z-index: 2; }
+    .baner-doctors-chapter-zapis .baner__image-wrap {
+      width: 71rem; }
+      .baner-doctors-chapter-zapis .baner__image-wrap::before {
+        top: -25%;
+        left: 0;
+        width: 78rem;
+        height: 78rem;
+        -webkit-transform: translate(-4%, 0);
+                transform: translate(-4%, 0); }
+    .baner-doctors-chapter-zapis .baner__image {
+      -webkit-transform: translateX(4rem);
+              transform: translateX(4rem); }
     .baner-all-reviews {
       margin-bottom: 16rem; }
       .baner-all-reviews .text-item {
@@ -6230,7 +6444,8 @@ input[type='search']::-webkit-search-results-decoration {
           row-gap: 4rem; }
       .baner-all-reviews .baner__container {
         padding: 0;
-        grid-template-columns: 1fr; }
+        grid-template-columns: 1fr;
+        justify-items: center; }
       .baner-all-reviews .baner__text-wrap {
         margin-bottom: 11rem;
         padding: 8rem 4rem 0 4rem; }
@@ -6275,7 +6490,7 @@ input[type='search']::-webkit-search-results-decoration {
           content: '';
           position: absolute;
           z-index: 2;
-          top: 0;
+          top: -1%;
           left: 0;
           width: 100%;
           height: 23.8rem;
@@ -6438,75 +6653,49 @@ input[type='search']::-webkit-search-results-decoration {
     .baner .baner__plash-text {
       font-size: 2.6rem;
       line-height: 130%; }
-  -doctors-chapter-zapis .baner__text {
-    margin-bottom: 10.8rem;
-    font-size: 3.2rem; }
-  -doctors-chapter-zapis .baner__call-link {
-    padding: 0.8rem 4rem 0.8rem 0.8rem;
-    -webkit-column-gap: 1.6rem;
-       -moz-column-gap: 1.6rem;
-            column-gap: 1.6rem;
-    border-radius: 10.4rem; }
-  -doctors-chapter-zapis .baner__call-link-icon {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 7rem;
-            flex: 0 0 7rem;
-    width: 7rem;
-    height: 7rem; }
-    -doctors-chapter-zapis .baner__call-link-icon img {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 3.6rem;
-              flex: 0 0 3.6rem;
-      width: 3.6rem;
-      height: 3.6rem; }
-  -doctors-chapter-zapis .baner__call-link-text {
-    font-size: 3rem; }
-  -doctors-chapter-zapis .baner__text-wrap {
-    position: relative;
-    z-index: 2; }
-  -doctors-chapter-zapis .baner__image-wrap {
-    width: 89.6rem; }
-    -doctors-chapter-zapis .baner__image-wrap::before {
-      top: -51%;
-      left: 0;
-      width: 78rem;
-      height: 78rem;
-      -webkit-transform: translate(-10%, 0);
-              transform: translate(-10%, 0); }
-  -carousel {
-    padding-top: 10rem; }
-    -carousel .baner-slide .baner__body {
+  .baner-carousel {
+    margin-bottom: 16rem; }
+    .baner-carousel .swiper-container {
+      padding-top: 10rem; }
+    .baner-carousel .baner-slide .baner__body {
       grid-template-columns: 1fr; }
-      -carousel .baner-slide .baner__body .title, -carousel .baner-slide .baner__body .doctor__item-info-title {
+      .baner-carousel .baner-slide .baner__body .title, .baner-carousel .baner-slide .baner__body .doctor__item-info-title {
         max-width: 60.9rem; }
-      -carousel .baner-slide .baner__body .baner__info {
-        margin-bottom: 24rem;
+      .baner-carousel .baner-slide .baner__body .baner__info {
+        margin-bottom: 14rem;
         padding: 0; }
-        -carousel .baner-slide .baner__body .baner__info-btn {
+        .baner-carousel .baner-slide .baner__body .baner__info-subtitle {
+          font-size: 3rem; }
+        .baner-carousel .baner-slide .baner__body .baner__info-list {
+          margin-bottom: 6rem; }
+          .baner-carousel .baner-slide .baner__body .baner__info-list li {
+            font-size: 3.2rem;
+            color: rgba(51, 51, 51, 0.5); }
+        .baner-carousel .baner-slide .baner__body .baner__info-btn {
           grid-row: 2/3;
           grid-column: span 2;
           min-height: 10rem; }
-        -carousel .baner-slide .baner__body .baner__info-price {
+        .baner-carousel .baner-slide .baner__body .baner__info-price {
           margin: 0; }
-          -carousel .baner-slide .baner__body .baner__info-price span {
+          .baner-carousel .baner-slide .baner__body .baner__info-price span {
             margin-top: 0;
             font-family: Montserrat;
             font-size: 2.4rem;
             font-weight: 700; }
-        -carousel .baner-slide .baner__body .baner__info-group {
+        .baner-carousel .baner-slide .baner__body .baner__info-group {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center;
           row-gap: 6.4rem; }
-    -carousel .baner-slide .baner__img {
+    .baner-carousel .baner-slide .baner__img {
       width: 100%; }
-      -carousel .baner-slide .baner__img img {
+      .baner-carousel .baner-slide .baner__img img {
         width: calc(100% + 4rem);
         height: auto;
-        -webkit-transform: translateX(4rem);
-                transform: translateX(4rem); }
-    -carousel .baner__row {
-      bottom: 66.2rem;
+        -webkit-transform: none;
+                transform: none; }
+    .baner-carousel .baner__row {
+      bottom: 51.2rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -6518,29 +6707,27 @@ input[type='search']::-webkit-search-results-decoration {
               align-items: center;
       width: calc(100% - 8rem);
       height: auto; }
-    -carousel .baner__scroll {
+    .baner-carousel .baner__scroll {
       display: none; }
-    -carousel .baner-swiper-pagination {
+    .baner-carousel .baner-swiper-pagination {
       position: static;
       -webkit-transform: none;
               transform: none; }
-    -carousel .baner-btn-next,
-    -carousel .baner-btn-prev {
+    .baner-carousel .baner-btn-next,
+    .baner-carousel .baner-btn-prev {
       position: static;
       margin: 0;
       display: inline-block;
       -webkit-transform: none;
               transform: none; }
-      -carousel .baner-btn-next::before,
-      -carousel .baner-btn-prev::before {
+      .baner-carousel .baner-btn-next::before,
+      .baner-carousel .baner-btn-prev::before {
         position: static;
         display: inline-block;
         width: 4rem;
         height: 4rem;
         -webkit-transform: none;
                 transform: none; }
-  -prices {
-    margin-bottom: 10rem; }
   -history {
     margin-bottom: 14rem;
     overflow: hidden; }
@@ -6792,7 +6979,7 @@ input[type='search']::-webkit-search-results-decoration {
     .baner-blog-article .baner__content-inp {
       width: 100%;
       margin-bottom: 2rem;
-      border: 1px solid #D8DDE4;
+      border: 1px solid #d8dde4;
       position: relative; }
       .baner-blog-article .baner__content-inp input::-webkit-input-placeholder {
         color: rgba(51, 51, 51, 0.5); }
@@ -6884,7 +7071,7 @@ input[type='search']::-webkit-search-results-decoration {
         padding-left: 10.2rem;
         font-size: 3rem;
         border-radius: 14.4rem;
-        border: 1px solid #D8DDE4;
+        border: 1px solid #d8dde4;
         background: #ffffff; }
     .baner-blog-article .baner__left {
       width: 100%;
@@ -7208,178 +7395,20 @@ input[type='search']::-webkit-search-results-decoration {
       line-height: 150%; }
     .baner-akcii-statia .baner__bottom-mess a {
       width: 5.3rem;
-      height: 5.3rem; }
-  -doctors .baner {
-    margin-bottom: 10rem; }
-    -doctors .baner__text-content {
-      width: 100%; }
-    -doctors .baner__text-wrap {
-      margin-bottom: 12.6rem; }
-    -doctors .baner__text {
-      margin-bottom: 7.2rem;
-      max-width: 54.5rem; }
-    -doctors .baner__group {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-column-gap: normal;
-         -moz-column-gap: normal;
-              column-gap: normal; }
-    -doctors .baner__group-item .datepicker-modal__input::-webkit-input-placeholder, -doctors .baner__group-item .application-form__input::-webkit-input-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .datepicker-modal__input::-moz-placeholder, -doctors .baner__group-item .application-form__input::-moz-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .datepicker-modal__input:-ms-input-placeholder, -doctors .baner__group-item .application-form__input:-ms-input-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .datepicker-modal__input::-ms-input-placeholder, -doctors .baner__group-item .application-form__input::-ms-input-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .txt, -doctors .baner__group-item .select__value._select-pseudo-label::before, -doctors .baner__group-item .doctor__item-info-data, -doctors .baner__group-item .doctor__item-info-category, -doctors .baner__group-item .doctor__imgs-item-title, -doctors .baner__group-item .doctor__imgs-item-subtitle, -doctors .baner__group-item .reviews__item-img-info-data, -doctors .baner__group-item .reviews__item-img-info-text, -doctors .baner__group-item .input__field, -doctors .baner__group-item .sort-dropdown .select .select__value._select-pseudo-label::before, .sort-dropdown .select -doctors .baner__group-item .select__value._select-pseudo-label::before, -doctors .baner__group-item .sort-dropdown .select__title, .sort-dropdown -doctors .baner__group-item .select__title, -doctors .baner__group-item .sort-dropdown .select__option, .sort-dropdown -doctors .baner__group-item .select__option, -doctors .baner__group-item .centers-select .select__title, .centers-select -doctors .baner__group-item .select__title, -doctors .baner__group-item .appointment-modal__input, -doctors .baner__group-item .datepicker-modal__input, -doctors .baner__group-item .datepicker-modal__input::placeholder, -doctors .baner__group-item .all-reviews__select-items .select__title, .all-reviews__select-items -doctors .baner__group-item .select__title, -doctors .baner__group-item .all-reviews__select-items .select__option, .all-reviews__select-items -doctors .baner__group-item .select__option, -doctors .baner__group-item .application-form__input, -doctors .baner__group-item .application-form__input::placeholder, -doctors .baner__group-item .application-form__content-checkbox.checkbox_ellipse span, .application-form__content-checkbox.checkbox_ellipse -doctors .baner__group-item span {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item-heading {
-      font-size: 5rem;
-      font-weight: 500; }
-    -doctors .baner__image-wrap {
-      width: 100%; }
-      -doctors .baner__image-wrap::before {
-        top: -1%; }
-    -doctors .baner__image {
-      width: 127%; }
-  -prices-programs {
-    margin-bottom: 10rem; }
-    -prices-programs .baner__title {
-      margin-bottom: 4rem;
-      max-width: 71rem; }
-    -prices-programs .baner__text-wrap {
-      margin-bottom: 15.6rem; }
-    -prices-programs .baner__text {
-      margin-bottom: 4.5rem;
-      max-width: 67rem;
-      font-size: 3.6rem;
-      color: #999999; }
-    -prices-programs .baner__privileges {
-      padding: 0;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      -prices-programs .baner__privileges::before {
-        display: none; }
-    -prices-programs .baner__privileges-icon-wrap {
-      margin-bottom: 2rem;
-      width: 6.4rem;
-      height: 6.4rem; }
-    -prices-programs .baner__privileges-subheading {
-      font-family: Montserrat;
-      font-size: 3rem;
-      color: #2f2f2f; }
-    -prices-programs .baner__image-wrap {
-      width: 71rem; }
-      -prices-programs .baner__image-wrap::before {
-        top: 0;
-        width: 87.6rem;
-        height: 87.6rem;
-        -webkit-transform: translate(-50%, -9%);
-                transform: translate(-50%, -9%); }
-  -prices-detailed {
-    margin-bottom: 16rem;
-    padding-bottom: 6rem;
-    padding-top: 3rem; }
-    -prices-detailed .baner__container {
-      grid-template-columns: 1fr;
-      width: 100%; }
-    -prices-detailed .baner__breadcrumbs {
-      margin-bottom: 2.2rem; }
-    -prices-detailed .baner__subtitle {
-      display: none; }
-    -prices-detailed .baner__title {
-      margin-bottom: 4rem; }
-    -prices-detailed .baner__text {
-      margin: 0;
-      font-size: 3.2rem; }
-    -prices-detailed .baner__text-wrap {
-      margin-bottom: 4rem;
-      padding: 0; }
-    -prices-detailed .baner__image-wrap {
-      margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      width: 100%; }
-      -prices-detailed .baner__image-wrap::after {
-        display: none; }
-    -prices-detailed .baner__image {
-      height: auto; }
-    -prices-detailed .baner__btn {
-      margin-top: 6rem;
-      width: 100%; }
-    -prices-detailed .baner__info {
-      position: static;
-      margin-bottom: 2rem;
-      padding: 4rem;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
-      -webkit-column-gap: 3rem;
-         -moz-column-gap: 3rem;
-              column-gap: 3rem;
-      width: 100%;
-      -webkit-transform: none;
-              transform: none; }
-    -prices-detailed .baner__info-wrap {
-      -webkit-column-gap: 0.8rem;
-         -moz-column-gap: 0.8rem;
-              column-gap: 0.8rem;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 7.6rem;
-              flex: 0 0 7.6rem;
-      width: 7.6rem;
-      height: 7.6rem;
-      font-size: 4rem;
-      border-radius: 2rem; }
-    -prices-detailed .baner__info-items {
-      padding-right: 3rem;
-      row-gap: 2rem;
-      border-right: 1px solid #d8dde4; }
-    -prices-detailed .baner__info-item {
-      padding: 0;
-      border: none; }
-    -prices-detailed .baner__info-text {
-      font-size: 2.6rem;
-      font-weight: 400; }
-    -prices-detailed .baner__info-cost {
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      text-align: left; }
-    -prices-detailed .baner__info-cost-text {
-      margin-bottom: 2.1rem;
-      font-size: 2.6rem;
-      font-weight: 400; }
-    -prices-detailed .baner__info-cost-value {
-      font-size: 4rem;
-      white-space: nowrap;
-      font-weight: 600; }
-      -prices-detailed .baner__info-cost-value span {
-        font-size: 2.6rem;
-        font-weight: 400;
-        -webkit-transform: translate(0.5rem, -1rem);
-                transform: translate(0.5rem, -1rem); } }
+      height: 5.3rem; } }
 
 @media (min-width: 48em) {
   .baner.baner-prices-programs .baner__container {
     grid-template-columns: minmax(auto, 56.3rem) 78.7rem; }
   .baner.baner-carousel {
     padding-top: 3rem; }
+    .baner.baner-carousel .baner-btn-next,
+    .baner.baner-carousel .baner-btn-prev {
+      top: -32rem; }
+    .baner.baner-carousel .baner-btn-prev {
+      left: -14rem; }
+    .baner.baner-carousel .baner-btn-next {
+      right: -14rem; }
     .baner.baner-carousel .baner__info-price {
       grid-column: span 2; }
     .baner.baner-carousel .baner__info-group {
@@ -9283,6 +9312,12 @@ input[type='search']::-webkit-search-results-decoration {
 @media (max-width: 48.98em) {
   .doctor {
     margin-bottom: 9.4rem; }
+    .doctor .swiper-slide.active {
+      width: 28rem;
+      -webkit-transform: translateY(-11rem);
+              transform: translateY(-11rem); }
+      .doctor .swiper-slide.active .doctor__imgs-item-img {
+        height: 34rem; }
     .doctor__inner::after {
       content: none; }
     .doctor__tabs {
@@ -9415,12 +9450,6 @@ input[type='search']::-webkit-search-results-decoration {
           font-size: 3rem; }
         .doctor__imgs-item-subtitle {
           font-size: 2.8rem; }
-        .doctor__imgs-item.active {
-          width: 28rem;
-          -webkit-transform: translateY(-11rem);
-                  transform: translateY(-11rem); }
-          .doctor__imgs-item.active .doctor__imgs-item-img {
-            height: 34rem; }
         .doctor__imgs-item-link {
           display: inline-block;
           font-size: 2.5rem; } }
@@ -29989,6 +30018,7 @@ textarea {
             align-items: flex-start;
     font-size: 3rem;
     line-height: 120%;
+    font-weight: 600;
     color: #2f2f2f; }
     .registration-appointment__heading::before {
       background-image: url(../img/a-image/icons/note.svg);
@@ -30019,7 +30049,7 @@ textarea {
   line-height: 150%; }
 
 .map-appointment .callback-appointment__input-wrap {
-  border: 1px solid  #D8DDE4; }
+  border: 1px solid #d8dde4; }
 
 .map-appointment .callback-appointment__btn {
   border: 0;
@@ -30080,9 +30110,9 @@ textarea {
             transform: translateX(50%); }
   .callback-appointment__heading, .registration-appointment__heading {
     margin-bottom: 3.4rem;
-    -webkit-column-gap: 2.4rem;
-       -moz-column-gap: 2.4rem;
-            column-gap: 2.4rem; }
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem; }
     .callback-appointment__heading::before, .registration-appointment__heading::before {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 4.8rem;
@@ -30096,11 +30126,13 @@ textarea {
               flex-direction: row;
       -ms-flex-item-align: end;
           align-self: flex-end;
-      -webkit-column-gap: 1rem;
-         -moz-column-gap: 1rem;
-              column-gap: 1rem;
+      -webkit-column-gap: 0.5rem;
+         -moz-column-gap: 0.5rem;
+              column-gap: 0.5rem;
       max-width: none;
-      font-size: 3.6rem; }
+      font-size: 3.2rem;
+      text-align: left;
+      line-height: 150%; }
   .callback-appointment__text {
     margin-bottom: 4rem; }
   .callback-appointment__input, .callback-appointment__btn {
@@ -30184,7 +30216,7 @@ textarea {
     font-size: 3.2rem;
     line-height: 150%; }
   .map-appointment .callback-appointment__input-wrap {
-    border: 0.1rem solid  #D8DDE4; }
+    border: 0.1rem solid #d8dde4; }
   .map-appointment .callback-appointment__btn {
     border: 0;
     margin-top: 0; }
@@ -31000,6 +31032,8 @@ textarea {
 
 .doctors {
   margin-bottom: 24.8rem; }
+  .doctors.doctors-main .doctors__group {
+    margin-bottom: 4rem; }
   .doctors.doctors-appointment {
     margin-bottom: 18rem; }
     .doctors.doctors-appointment .doctors__form {
@@ -31045,6 +31079,8 @@ textarea {
 @media (max-width: 48em) {
   .doctors {
     margin-bottom: 16rem; }
+    .doctors.doctors-main .doctors__group {
+      margin-bottom: 6rem; }
     .doctors.doctors-appointment {
       margin-bottom: 20rem; }
       .doctors.doctors-appointment .doctors__form {
@@ -32820,7 +32856,7 @@ textarea {
       background-color: #f3fbff; } }
 
 .centers-select .select__asset {
-  font-size: 1.3rem; }
+  font-size: 1.6rem; }
 
 .centers-select .select__row {
   -webkit-box-orient: vertical;
@@ -32830,7 +32866,8 @@ textarea {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  row-gap: 0.4rem; }
+  row-gap: 0.4rem;
+  font-size: 1.8rem; }
 
 .centers-select .select__options {
   top: calc(100% - 1rem);
@@ -34611,9 +34648,11 @@ textarea {
     .centers-select .select__option:not(:last-child) {
       margin-bottom: 2.5rem; }
   .centers-select .select__title {
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: 2rem; }
   .centers-select .select__row {
+    position: relative;
+    z-index: 3;
     row-gap: normal; }
   .centers-select .select__asset {
     font-size: 2.6rem;
@@ -34622,7 +34661,7 @@ textarea {
     margin-bottom: 0.5rem;
     font-size: 2.6rem; }
   .centers-select .select__options {
-    top: calc(100% - 2rem); }
+    top: calc(100% - 3rem); }
   .card-services {
     margin-bottom: 4.4rem;
     display: -webkit-box;
@@ -36776,6 +36815,8 @@ body::after {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 3rem; }
+    .all-reviews__cards._no-margin {
+      margin: 0; }
     .all-reviews__cards_margin {
       margin-bottom: 18rem; }
   .all-reviews__page-navigation {
@@ -36834,7 +36875,7 @@ body::after {
       -ms-flex-item-align: center;
           align-self: center; }
     .all-reviews__cards {
-      margin-bottom: 28.8rem; }
+      margin-bottom: 8rem; }
       .all-reviews__cards_margin {
         margin-bottom: 44rem; } }
 

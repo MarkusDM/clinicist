@@ -1219,12 +1219,13 @@
     }
   }
   .select__asset {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .select__row {
     flex-direction: column-reverse;
     align-items: flex-start;
     row-gap: 0.4rem;
+    font-size: 1.8rem;
   }
   .select__options {
     top: calc(100% - 1rem);
@@ -3200,10 +3201,12 @@
         }
       }
       &__title {
-        padding: 2.5rem;
+        padding: 3rem;
         border-radius: 2rem;
       }
       &__row {
+        position: relative;
+        z-index: 3;
         row-gap: normal;
       }
       &__asset {
@@ -3215,7 +3218,7 @@
         font-size: 2.6rem;
       }
       &__options {
-        top: calc(100% - 2rem);
+        top: calc(100% - 3rem);
       }
     }
   }

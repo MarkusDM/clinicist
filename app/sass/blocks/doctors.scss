@@ -1,5 +1,10 @@
 .doctors {
   margin-bottom: 24.8rem;
+  &.doctors-main {
+    .doctors__group {
+      margin-bottom: 4rem;
+    }
+  }
   &.doctors-appointment {
     margin-bottom: 18rem;
     .doctors__form {
@@ -61,6 +66,11 @@
 @media (max-width: 48em) {
   .doctors {
     margin-bottom: 16rem;
+    &.doctors-main {
+      .doctors__group {
+        margin-bottom: 6rem;
+      }
+    }
     &.doctors-appointment {
       margin-bottom: 20rem;
       .doctors__form {
