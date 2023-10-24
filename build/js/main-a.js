@@ -2189,6 +2189,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       currentFilter.classList.add('active');
       document.documentElement.classList.remove('_dropdown-open');
+      document.documentElement.style.overflow = 'auto';
       dropdownTxt.innerHTML = `${
         currentFilter.querySelector('.centers-filter-list__item-text').innerHTML
       }`;
