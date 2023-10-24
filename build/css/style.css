@@ -6215,6 +6215,145 @@ input[type='search']::-webkit-search-results-decoration {
   .baner {
     margin-bottom: 16rem;
     height: auto; }
+    .baner-prices-programs {
+      margin-bottom: 10rem; }
+      .baner-prices-programs .baner__title {
+        margin-bottom: 4rem;
+        max-width: 71rem; }
+      .baner-prices-programs .baner__text-wrap {
+        margin-bottom: 15.6rem; }
+      .baner-prices-programs .baner__text {
+        margin-bottom: 4.5rem;
+        max-width: 67rem;
+        font-size: 3.6rem;
+        color: #999999; }
+      .baner-prices-programs .baner__privileges {
+        padding: 0;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .baner-prices-programs .baner__privileges::before {
+          display: none; }
+      .baner-prices-programs .baner__privileges-icon-wrap {
+        margin-bottom: 2rem;
+        width: 6.4rem;
+        height: 6.4rem; }
+      .baner-prices-programs .baner__privileges-subheading {
+        font-family: Montserrat;
+        font-size: 3rem;
+        color: #2f2f2f; }
+      .baner-prices-programs .baner__image-wrap {
+        width: 71rem; }
+        .baner-prices-programs .baner__image-wrap::before {
+          top: 0;
+          width: 87.6rem;
+          height: 87.6rem;
+          -webkit-transform: translate(-50%, -9%);
+                  transform: translate(-50%, -9%); }
+    .baner-prices-detailed {
+      margin-bottom: 16rem;
+      padding-bottom: 6rem;
+      padding-top: 3rem; }
+      .baner-prices-detailed .baner__container {
+        grid-template-columns: 1fr;
+        width: 100%; }
+      .baner-prices-detailed .baner__breadcrumbs {
+        margin-bottom: 2.2rem; }
+      .baner-prices-detailed .baner__subtitle {
+        display: none; }
+      .baner-prices-detailed .baner__title {
+        margin-bottom: 4rem; }
+      .baner-prices-detailed .baner__text {
+        margin: 0;
+        font-size: 3.2rem; }
+      .baner-prices-detailed .baner__text-wrap {
+        margin-bottom: 4rem;
+        padding: 0; }
+      .baner-prices-detailed .baner__image-wrap {
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%; }
+        .baner-prices-detailed .baner__image-wrap::after {
+          display: none; }
+      .baner-prices-detailed .baner__image {
+        height: auto; }
+      .baner-prices-detailed .baner__btn {
+        margin-top: 6rem;
+        width: 100%; }
+      .baner-prices-detailed .baner__info {
+        position: static;
+        margin-bottom: 2rem;
+        padding: 4rem;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1;
+        -webkit-column-gap: 3rem;
+           -moz-column-gap: 3rem;
+                column-gap: 3rem;
+        width: 100%;
+        -webkit-transform: none;
+                transform: none; }
+      .baner-prices-detailed .baner__info-wrap {
+        -webkit-column-gap: 0.8rem;
+           -moz-column-gap: 0.8rem;
+                column-gap: 0.8rem;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 7.6rem;
+                flex: 0 0 7.6rem;
+        width: 7.6rem;
+        height: 7.6rem;
+        font-size: 4rem;
+        border-radius: 2rem; }
+      .baner-prices-detailed .baner__info-items {
+        padding-right: 3rem;
+        row-gap: 2rem;
+        border-right: 1px solid #d8dde4; }
+      .baner-prices-detailed .baner__info-item {
+        padding: 0;
+        border: none; }
+      .baner-prices-detailed .baner__info-text {
+        font-size: 2.6rem;
+        font-weight: 400; }
+      .baner-prices-detailed .baner__info-cost {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        text-align: left; }
+      .baner-prices-detailed .baner__info-cost-text {
+        margin-bottom: 2.1rem;
+        font-size: 2.6rem;
+        font-weight: 400; }
+      .baner-prices-detailed .baner__info-cost-value {
+        font-size: 4rem;
+        white-space: nowrap;
+        font-weight: 600; }
+        .baner-prices-detailed .baner__info-cost-value span {
+          font-size: 2.6rem;
+          font-weight: 400;
+          -webkit-transform: translate(0.5rem, -1rem);
+                  transform: translate(0.5rem, -1rem); }
+    .baner-prices {
+      margin-bottom: 10rem; }
+      .baner-prices .baner__text-wrap {
+        margin-bottom: 19rem;
+        padding: 4rem 0 0 0; }
+      .baner-prices .baner__image-wrap::before {
+        border: 1px solid #dfe4ea;
+        -webkit-transform: translate(-50%, -40%);
+                transform: translate(-50%, -40%); }
     .baner-doctors .baner {
       margin-bottom: 10rem; }
       .baner-doctors .baner__text-content {
@@ -6586,8 +6725,6 @@ input[type='search']::-webkit-search-results-decoration {
         height: 4rem;
         -webkit-transform: none;
                 transform: none; }
-  -prices {
-    margin-bottom: 10rem; }
   -history {
     margin-bottom: 14rem;
     overflow: hidden; }
@@ -7247,137 +7384,7 @@ input[type='search']::-webkit-search-results-decoration {
       line-height: 150%; }
     .baner-akcii-statia .baner__bottom-mess a {
       width: 5.3rem;
-      height: 5.3rem; }
-  -prices-programs {
-    margin-bottom: 10rem; }
-    -prices-programs .baner__title {
-      margin-bottom: 4rem;
-      max-width: 71rem; }
-    -prices-programs .baner__text-wrap {
-      margin-bottom: 15.6rem; }
-    -prices-programs .baner__text {
-      margin-bottom: 4.5rem;
-      max-width: 67rem;
-      font-size: 3.6rem;
-      color: #999999; }
-    -prices-programs .baner__privileges {
-      padding: 0;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      -prices-programs .baner__privileges::before {
-        display: none; }
-    -prices-programs .baner__privileges-icon-wrap {
-      margin-bottom: 2rem;
-      width: 6.4rem;
-      height: 6.4rem; }
-    -prices-programs .baner__privileges-subheading {
-      font-family: Montserrat;
-      font-size: 3rem;
-      color: #2f2f2f; }
-    -prices-programs .baner__image-wrap {
-      width: 71rem; }
-      -prices-programs .baner__image-wrap::before {
-        top: 0;
-        width: 87.6rem;
-        height: 87.6rem;
-        -webkit-transform: translate(-50%, -9%);
-                transform: translate(-50%, -9%); }
-  -prices-detailed {
-    margin-bottom: 16rem;
-    padding-bottom: 6rem;
-    padding-top: 3rem; }
-    -prices-detailed .baner__container {
-      grid-template-columns: 1fr;
-      width: 100%; }
-    -prices-detailed .baner__breadcrumbs {
-      margin-bottom: 2.2rem; }
-    -prices-detailed .baner__subtitle {
-      display: none; }
-    -prices-detailed .baner__title {
-      margin-bottom: 4rem; }
-    -prices-detailed .baner__text {
-      margin: 0;
-      font-size: 3.2rem; }
-    -prices-detailed .baner__text-wrap {
-      margin-bottom: 4rem;
-      padding: 0; }
-    -prices-detailed .baner__image-wrap {
-      margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      width: 100%; }
-      -prices-detailed .baner__image-wrap::after {
-        display: none; }
-    -prices-detailed .baner__image {
-      height: auto; }
-    -prices-detailed .baner__btn {
-      margin-top: 6rem;
-      width: 100%; }
-    -prices-detailed .baner__info {
-      position: static;
-      margin-bottom: 2rem;
-      padding: 4rem;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
-      -webkit-column-gap: 3rem;
-         -moz-column-gap: 3rem;
-              column-gap: 3rem;
-      width: 100%;
-      -webkit-transform: none;
-              transform: none; }
-    -prices-detailed .baner__info-wrap {
-      -webkit-column-gap: 0.8rem;
-         -moz-column-gap: 0.8rem;
-              column-gap: 0.8rem;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 7.6rem;
-              flex: 0 0 7.6rem;
-      width: 7.6rem;
-      height: 7.6rem;
-      font-size: 4rem;
-      border-radius: 2rem; }
-    -prices-detailed .baner__info-items {
-      padding-right: 3rem;
-      row-gap: 2rem;
-      border-right: 1px solid #d8dde4; }
-    -prices-detailed .baner__info-item {
-      padding: 0;
-      border: none; }
-    -prices-detailed .baner__info-text {
-      font-size: 2.6rem;
-      font-weight: 400; }
-    -prices-detailed .baner__info-cost {
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      text-align: left; }
-    -prices-detailed .baner__info-cost-text {
-      margin-bottom: 2.1rem;
-      font-size: 2.6rem;
-      font-weight: 400; }
-    -prices-detailed .baner__info-cost-value {
-      font-size: 4rem;
-      white-space: nowrap;
-      font-weight: 600; }
-      -prices-detailed .baner__info-cost-value span {
-        font-size: 2.6rem;
-        font-weight: 400;
-        -webkit-transform: translate(0.5rem, -1rem);
-                transform: translate(0.5rem, -1rem); } }
+      height: 5.3rem; } }
 
 @media (min-width: 48em) {
   .baner.baner-prices-programs .baner__container {
@@ -30073,7 +30080,8 @@ textarea {
               column-gap: 0.5rem;
       max-width: none;
       font-size: 3.2rem;
-      text-align: left; }
+      text-align: left;
+      line-height: 150%; }
   .callback-appointment__text {
     margin-bottom: 4rem; }
   .callback-appointment__input, .callback-appointment__btn {
