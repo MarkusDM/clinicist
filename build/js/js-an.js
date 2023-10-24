@@ -1,3 +1,5 @@
+"use strict";
+
 const historyItems = Array.from(document.querySelectorAll('.story__item'));
 const storyBottoms = Array.from(document.querySelectorAll('.story__bottom'));
 const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
@@ -219,7 +221,7 @@ document.addEventListener('click', (el) => {
     }
 })
 
-quoteSlider.controller.control = llSlider;
+
 
 const valueThumbs = new Swiper('.thumbs-swiper', {
   slideToClickedSlide: true,
@@ -237,5 +239,3 @@ const valueslider = new Swiper('.values-swiper', {
   speed: 1000,
 })
 
-valueslider.controller.control = valueThumbs;
-valueThumbs.controller.control = valueslider;
