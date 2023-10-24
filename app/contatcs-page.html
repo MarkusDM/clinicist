@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="another website" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+    <noscript>
+        <style>
+          /**
+          * Reinstate scrolling for non-JS clients
+          */
+          .simplebar-content-wrapper {
+            scrollbar-width: auto;
+            -ms-overflow-style: auto;
+          }
+  
+          .simplebar-content-wrapper::-webkit-scrollbar,
+          .simplebar-hide-scrollbar::-webkit-scrollbar {
+            display: initial;
+            width: initial;
+            height: initial;
+          }
+        </style>
+      </noscript>
+</head>
+
+<body>
+    @@include('./template/header.html')
+
+    <main>
+      
+        <section class="appointment">
+            <div class="appointment__container container">
+                <div class="appointment__head">
+                    <span class="appointment__subtitle subtitle">Присоединяйтесь к 600 000 наших пациентов и получите
+                        действительно качественные медицинские услуги!</span>
+                    <span class="appointment__title title">Запись на прием</span>
+                </div>
+                <div class="appointment__body">
+                    <div class="appointment__callback callback-appointment">
+                        <div class="callback-appointment__heading">
+                            <span>Позвоните
+                                <a href="tel:84951897397">8 (495) 189-73-97</a></span>
+                        </div>
+                        <p class="callback-appointment__text txt">
+                            Или оставьте заявку на обратный звонок
+                        </p>
+                        <form action="#" class="callback-appointment__form">
+                            <div class="callback-appointment__input-wrap">
+                                <input autocomplete="off" type="tel" name="form[]" placeholder=""
+                                    class="callback-appointment__input tel-mask" />
+                            </div>
+                            <button type="submit" class="btn btn_white callback-appointment__btn">
+                                Заказать обратный звонок
+                            </button>
+                        </form>
+                        <p class="callback-appointment__hint txt">
+                            *Заказывая обратный звонок, вы соглашаетесь с
+                            <a href="#">политикой обработки своих персональных данных</a>
+                        </p>
+                    </div>
+                    <div class="appointment__contacts contacts-appointment">
+                        <span class="contacts-appointment__heading">Напишите нам</span>
+                        <div class="contacts-appointment__text-wrap txt">
+                            <span class="contacts-appointment__text-heading">Мы ответим на все ваши вопросы в ближайшее.
+                            </span>
+                            <p class="contacts-appointment__text">
+                                Будьте уверены, что наша команда сделает все возможное и
+                                предоставим вам полную информацию, которую вы ищете.
+                            </p>
+                        </div>
+                        <div class="contacts-appointment__links">
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_whatsapp">
+                                <span>Написать в WhatsApp</span>
+                            </a>
+                            <a href="#" class="contacts-appointment__item contacts-appointment__item_telegram">
+                                <span>Написать в Telegram</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="appointment__registration registration-appointment">
+                        <span class="registration-appointment__heading">Вы можете записаться онлайн на нашем
+                            сайте</span>
+                        <p class="registration-appointment__text txt">
+                            Онлайн запись к врачу позволяет быстро выбрать удобное время и
+                            день для посещения, а также записаться на прием
+                        </p>
+                        <a href="#" class="registration-appointment__btn btn">Выбрать врача и время записи</a>
+                        <p class="registration-appointment__hint txt">
+                            *Ознакомьтесь с
+                            <a href="#">Согласием на обработку персональных данных</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./template/footer.html')
+
+
+</body>
+
+</html>
