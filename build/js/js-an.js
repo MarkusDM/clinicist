@@ -1,4 +1,6 @@
-const storyItems = Array.from(document.querySelectorAll('.story__item'));
+"use strict";
+
+const historyItems = Array.from(document.querySelectorAll('.story__item'));
 const storyBottoms = Array.from(document.querySelectorAll('.story__bottom'));
 const valuesTabs = Array.from(document.querySelectorAll('.values__left-slide'));
 const valuesSlides = Array.from(document.querySelectorAll('.values__right-slide'));
@@ -6,15 +8,26 @@ const searchBtn = document.querySelector('.search-btn');
 const searchLabel = document.querySelector('.search__label');
 const btnMore = Array.from(document.querySelectorAll('.services-p__box-link'));
 const mapList = document.querySelectorAll('.services-p__box-inner');
+const rem = function (rem) {
+  if ($(window).width() > 768) {
+    return 0.005208335 * $(window).width() * rem
+  } else {
+    // где 375 это ширина моб версии макета
+    return (100 / 375) * (0.05 * $(window).width()) * rem
+  }
+}
+
 let tabIndex;
-storyItems.forEach( e => {
-  e.addEventListener('mouseenter', () => {
-    e.childNodes[7].classList.add('active');
+if(historyItems) {
+  historyItems.forEach( e => {
+    e.addEventListener('mouseenter', () => {
+      e.childNodes[7].classList.add('active');
+    })
+    e.addEventListener('mouseleave', () => {
+      e.childNodes[7].classList.remove('active');
+    })
   })
-  e.addEventListener('mouseleave', () => {
-    e.childNodes[7].classList.remove('active');
-  })
-})
+}
 
 if(searchBtn) {
   searchBtn.addEventListener('click', () => {
@@ -79,10 +92,6 @@ function historyInit() {
       },
   })
 }
-
-const doctorsSlider = new Swiper('.our-doctors__slider', {
-  slidesPerView: 3,
-})
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -212,7 +221,7 @@ document.addEventListener('click', (el) => {
     }
 })
 
-quoteSlider.controller.control = llSlider;
+
 
 const valueThumbs = new Swiper('.thumbs-swiper', {
   slideToClickedSlide: true,
@@ -230,5 +239,3 @@ const valueslider = new Swiper('.values-swiper', {
   speed: 1000,
 })
 
-valueslider.controller.control = valueThumbs;
-valueThumbs.controller.control = valueslider;

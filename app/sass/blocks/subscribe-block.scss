@@ -30,6 +30,23 @@
     height: 41.7rem;
   }
 
+  .input._filled {
+		background-color: transparent;
+		border-color: $white;
+	}
+
+	._filled .input__field {
+		color: $white;
+	}
+
+	.input__field._form-focus {
+		color: $white;
+	}
+
+	.input._form-focus {
+		border-color: $white;
+	}
+
   &__head {
     margin-bottom: 3.8rem;
   }

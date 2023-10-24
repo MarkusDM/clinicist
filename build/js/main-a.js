@@ -216,13 +216,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // hours
   const hours = document.querySelectorAll('.doctor-card__hours-group');
   const moveItems = (items, target) => {
-    items.forEach((item) => {
+    items.forEach(item => {
       target.appendChild(item);
     });
   };
   const initHoursItems = () => {
     if (hours.length) {
-      hours.forEach((item) => {
+      hours.forEach(item => {
         const btn = item.querySelector('[data-showmore-btn]');
         const showmore = item.querySelector('[data-showmore-hours]');
         const items = item.querySelectorAll('.doctor-card__hours._move');
@@ -253,10 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // sort dropdown
   const sortDropdown = document.querySelector('.sort-dropdown');
-  if (
-    sortDropdown &&
-    !sortDropdown.classList.contains('our-vacancies__sort')
-  ) {
+  if (sortDropdown) {
     _slideUp(sortDropdown);
   }
 
@@ -347,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     if (showmoreTextElements.length) {
-      showmoreTextElements.forEach((item) => {
+      showmoreTextElements.forEach(item => {
         const points = item.querySelector('[data-points]');
         const showmoreText = item.querySelector('[data-more-text]');
         const buttonText = item.querySelector('[data-showmore-txt-btn]');
@@ -381,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const allReviewsModify = () => {
     const allReviewsCards = document.querySelectorAll('.all-reviews-card');
     if (allReviewsCards.length && md) {
-      allReviewsCards.forEach((allReviewsCard) => {
+      allReviewsCards.forEach(allReviewsCard => {
         allReviewsCard
           .querySelector('.all-reviews-card__body')
           .appendChild(
@@ -513,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       // initialization
       function initSpoilers(spoilersArray, matchMedia = false) {
-        spoilersArray.forEach((spoilersBlock) => {
+        spoilersArray.forEach(spoilersBlock => {
           spoilersBlock = matchMedia ? spoilersBlock.item : spoilersBlock;
           if (matchMedia.matches || !matchMedia) {
             spoilersBlock.classList.add('_spoiler-init');
@@ -531,9 +528,9 @@ document.addEventListener('DOMContentLoaded', function () {
         let spoilerTitles = spoilersBlock.querySelectorAll('[data-spoiler]');
         if (spoilerTitles.length) {
           spoilerTitles = Array.from(spoilerTitles).filter(
-            (item) => item.closest('[data-spoilers]') === spoilersBlock
+            item => item.closest('[data-spoilers]') === spoilersBlock
           );
-          spoilerTitles.forEach((spoilerTitle) => {
+          spoilerTitles.forEach(spoilerTitle => {
             if (hideSpoilerBody) {
               spoilerTitle.removeAttribute('tabindex');
               if (!spoilerTitle.classList.contains('_spoiler-active')) {
@@ -589,7 +586,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('click', function (e) {
           const el = e.target;
           if (!el.closest('[data-spoilers]')) {
-            spoilersClose.forEach((spoilerClose) => {
+            spoilersClose.forEach(spoilerClose => {
               const spoilersBlock = spoilerClose.closest('[data-spoilers]');
               const spoilerSpeed = spollersBlock.dataset.spoilersSpeed
                 ? parseInt(spoilersBlock.dataset.spoilersSpeed)
@@ -828,7 +825,7 @@ document.addEventListener('DOMContentLoaded', function () {
         )}${this.getSelectClass(this.selectClasses.classSelectOpen)}`
       );
       if (selectActiveItems.length) {
-        selectActiveItems.forEach((selectActiveItem) => {
+        selectActiveItems.forEach(selectActiveItem => {
           this.selectСlose(selectActiveItem);
         });
       }
@@ -960,7 +957,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     getSelectPlaceholder(originalSelect) {
       const selectPlaceholder = Array.from(originalSelect.options).find(
-        (option) => !option.value
+        option => !option.value
       );
       if (selectPlaceholder) {
         return {
@@ -977,8 +974,8 @@ document.addEventListener('DOMContentLoaded', function () {
       let selectedOptions = [];
       if (originalSelect.multiple) {
         selectedOptions = Array.from(originalSelect.options)
-          .filter((option) => option.value)
-          .filter((option) => option.selected);
+          .filter(option => option.value)
+          .filter(option => option.selected);
       } else {
         selectedOptions.push(
           originalSelect.options[originalSelect.selectedIndex]
@@ -1009,12 +1006,12 @@ document.addEventListener('DOMContentLoaded', function () {
             !this.getSelectPlaceholder(originalSelect).show) ||
           originalSelect.multiple
         ) {
-          selectOptions = selectOptions.filter((option) => option.value);
+          selectOptions = selectOptions.filter(option => option.value);
         }
         selectOptionsHTML += selectOptionsScroll
           ? `<div ${selectOptionsScroll} ${selectOptionsScrollHeight} data-simplebar-auto-hide="false" class="${this.selectClasses.classSelectOptionsScroll}">`
           : '';
-        selectOptions.forEach((selectOption) => {
+        selectOptions.forEach(selectOption => {
           selectOptionsHTML += this.getOption(selectOption, originalSelect);
         });
         selectOptionsHTML += selectOptionsScroll ? `</div>` : '';
@@ -1065,13 +1062,13 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         const originalSelectSelectedItems =
           this.getSelectedOptionsData(originalSelect).elements;
-        originalSelectSelectedItems.forEach((originalSelectSelectedItem) => {
+        originalSelectSelectedItems.forEach(originalSelectSelectedItem => {
           originalSelectSelectedItem.removeAttribute('selected');
         });
         const selectSelectedItems = selectItem.querySelectorAll(
           this.getSelectClass(this.selectClasses.classSelectOptionSelected)
         );
-        selectSelectedItems.forEach((selectSelectedItems) => {
+        selectSelectedItems.forEach(selectSelectedItems => {
           originalSelect
             .querySelector(
               `option[value="${selectSelectedItems.dataset.value}"]`
@@ -1206,7 +1203,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     function setTitlePosition(tabsMediaArray, matchMedia) {
-      tabsMediaArray.forEach((tabsMediaItem) => {
+      tabsMediaArray.forEach(tabsMediaItem => {
         tabsMediaItem = tabsMediaItem.item;
         let tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]');
         let tabsTitleItems =
@@ -1215,10 +1212,10 @@ document.addEventListener('DOMContentLoaded', function () {
         let tabsContentItems =
           tabsMediaItem.querySelectorAll('[data-tabs-item]');
         tabsTitleItems = Array.from(tabsTitleItems).filter(
-          (item) => item.closest('[data-tabs]') === tabsMediaItem
+          item => item.closest('[data-tabs]') === tabsMediaItem
         );
         tabsContentItems = Array.from(tabsContentItems).filter(
-          (item) => item.closest('[data-tabs]') === tabsMediaItem
+          item => item.closest('[data-tabs]') === tabsMediaItem
         );
         tabsContentItems.forEach((tabsContentItem, index) => {
           if (matchMedia.matches) {
@@ -1248,10 +1245,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       if (tabsContent.length) {
         tabsContent = Array.from(tabsContent).filter(
-          (item) => item.closest('[data-tabs]') === tabsBlock
+          item => item.closest('[data-tabs]') === tabsBlock
         );
         tabsTitles = Array.from(tabsTitles).filter(
-          (item) => item.closest('[data-tabs]') === tabsBlock
+          item => item.closest('[data-tabs]') === tabsBlock
         );
         tabsContent.forEach((tabsContentItem, index) => {
           tabsTitles[index].setAttribute('data-tabs-title', '');
@@ -1280,10 +1277,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (tabsContent.length > 0) {
         const isHash = tabsBlock.hasAttribute('data-tabs-hash');
         tabsContent = Array.from(tabsContent).filter(
-          (item) => item.closest('[data-tabs]') === tabsBlock
+          item => item.closest('[data-tabs]') === tabsBlock
         );
         tabsTitles = Array.from(tabsTitles).filter(
-          (item) => item.closest('[data-tabs]') === tabsBlock
+          item => item.closest('[data-tabs]') === tabsBlock
         );
         tabsContent.forEach((tabsContentItem, index) => {
           if (tabsTitles[index].classList.contains('_tab-active')) {
@@ -1767,12 +1764,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
       function initItemsMedia(mdQueriesArray) {
-        mdQueriesArray.forEach((mdQueriesItem) => {
+        mdQueriesArray.forEach(mdQueriesItem => {
           initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
         });
       }
       function initItems(showMoreBlocks, matchMedia) {
-        showMoreBlocks.forEach((showMoreBlock) => {
+        showMoreBlocks.forEach(showMoreBlock => {
           initItem(showMoreBlock, matchMedia);
         });
       }
@@ -1785,10 +1782,10 @@ document.addEventListener('DOMContentLoaded', function () {
           '[data-showmore-button]'
         );
         showMoreContent = Array.from(showMoreContent).filter(
-          (item) => item.closest('[data-showmore]') === showMoreBlock
+          item => item.closest('[data-showmore]') === showMoreBlock
         )[0];
         showMoreButton = Array.from(showMoreButton).filter(
-          (item) => item.closest('[data-showmore]') === showMoreBlock
+          item => item.closest('[data-showmore]') === showMoreBlock
         )[0];
         const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
         if (matchMedia.matches || !matchMedia) {
@@ -1894,7 +1891,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // objects with media queries initialization
     if (media.length) {
       const breakpointsArray = [];
-      media.forEach((item) => {
+      media.forEach(item => {
         const params = item.dataset[dataSetValue];
         const breakpoint = {};
         const paramsArray = params.split(',');
@@ -1921,7 +1918,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (mdQueries.length) {
         // work with every breakpoint
-        mdQueries.forEach((breakpoint) => {
+        mdQueries.forEach(breakpoint => {
           const paramsArray = breakpoint.split(',');
           const mediaBreakpoint = paramsArray[1];
           const mediaType = paramsArray[2];
@@ -2117,7 +2114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ===========================================================================
 
-  const onClickHandler = (e) => {
+  const onClickHandler = e => {
     const target = e.target;
     if (target.closest('.centers-filter-list__item')) {
       const dropdownTxt = document.querySelector(
@@ -2246,7 +2243,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setActiveClass(
         target.closest('.hours-item'),
         targetParent
-          .closest('.doctor-card__hours-group')
+          .closest('[class$="__hours-group"]')
           .querySelectorAll('.hours-item'),
         '_active'
       );
