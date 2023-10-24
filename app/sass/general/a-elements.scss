@@ -3201,10 +3201,12 @@
         }
       }
       &__title {
-        padding: 2.5rem;
+        padding: 3rem;
         border-radius: 2rem;
       }
       &__row {
+        position: relative;
+        z-index: 3;
         row-gap: normal;
       }
       &__asset {
@@ -3216,7 +3218,7 @@
         font-size: 2.6rem;
       }
       &__options {
-        top: calc(100% - 2rem);
+        top: calc(100% - 3rem);
       }
     }
   }

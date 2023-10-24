@@ -4065,6 +4065,45 @@
     margin-bottom: 16rem;
     height: auto;
 
+    &-doctors {
+      .baner {
+        margin-bottom: 10rem;
+        &__text-content {
+          width: 100%;
+        }
+        &__text-wrap {
+          padding: 4rem 0 0 0;
+          margin-bottom: 12.6rem;
+        }
+        &__text {
+          margin-bottom: 7.2rem;
+          max-width: 54.5rem;
+        }
+        &__group {
+          justify-content: space-between;
+          column-gap: normal;
+        }
+        &__group-item {
+          .txt {
+            font-size: 3.2rem;
+          }
+        }
+        &__group-item-heading {
+          font-size: 5rem;
+          font-weight: 500;
+        }
+        &__image-wrap {
+          width: 100%;
+          &::before {
+            top: -1%;
+            transform: translate(-50%, 1%);
+          }
+        }
+        &__image {
+          width: 127%;
+        }
+      }
+    }
     &-doctors-chapter-zapis {
       .baner {
         &__text-wrap {
@@ -5312,43 +5351,6 @@
     }
   }
 
-  &-doctors {
-    .baner {
-      margin-bottom: 10rem;
-      &__text-content {
-        width: 100%;
-      }
-      &__text-wrap {
-        margin-bottom: 12.6rem;
-      }
-      &__text {
-        margin-bottom: 7.2rem;
-        max-width: 54.5rem;
-      }
-      &__group {
-        justify-content: space-between;
-        column-gap: normal;
-      }
-      &__group-item {
-        .txt {
-          font-size: 3.2rem;
-        }
-      }
-      &__group-item-heading {
-        font-size: 5rem;
-        font-weight: 500;
-      }
-      &__image-wrap {
-        width: 100%;
-        &::before {
-          top: -1%;
-        }
-      }
-      &__image {
-        width: 127%;
-      }
-    }
-  }
   &-prices-programs {
     margin-bottom: 10rem;
     .baner {

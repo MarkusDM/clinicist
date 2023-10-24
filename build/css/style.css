@@ -6215,6 +6215,44 @@ input[type='search']::-webkit-search-results-decoration {
   .baner {
     margin-bottom: 16rem;
     height: auto; }
+    .baner-doctors .baner {
+      margin-bottom: 10rem; }
+      .baner-doctors .baner__text-content {
+        width: 100%; }
+      .baner-doctors .baner__text-wrap {
+        padding: 4rem 0 0 0;
+        margin-bottom: 12.6rem; }
+      .baner-doctors .baner__text {
+        margin-bottom: 7.2rem;
+        max-width: 54.5rem; }
+      .baner-doctors .baner__group {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-column-gap: normal;
+           -moz-column-gap: normal;
+                column-gap: normal; }
+      .baner-doctors .baner__group-item .datepicker-modal__input::-webkit-input-placeholder, .baner-doctors .baner__group-item .application-form__input::-webkit-input-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .datepicker-modal__input::-moz-placeholder, .baner-doctors .baner__group-item .application-form__input::-moz-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .datepicker-modal__input:-ms-input-placeholder, .baner-doctors .baner__group-item .application-form__input:-ms-input-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .datepicker-modal__input::-ms-input-placeholder, .baner-doctors .baner__group-item .application-form__input::-ms-input-placeholder {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item .txt, .baner-doctors .baner__group-item .select__value._select-pseudo-label::before, .baner-doctors .baner__group-item .doctor__item-info-data, .baner-doctors .baner__group-item .doctor__item-info-category, .baner-doctors .baner__group-item .doctor__imgs-item-title, .baner-doctors .baner__group-item .doctor__imgs-item-subtitle, .baner-doctors .baner__group-item .reviews__item-img-info-data, .baner-doctors .baner__group-item .reviews__item-img-info-text, .baner-doctors .baner__group-item .input__field, .baner-doctors .baner__group-item .sort-dropdown .select__title, .sort-dropdown .baner-doctors .baner__group-item .select__title, .baner-doctors .baner__group-item .sort-dropdown .select__option, .sort-dropdown .baner-doctors .baner__group-item .select__option, .baner-doctors .baner__group-item .centers-select .select__title, .centers-select .baner-doctors .baner__group-item .select__title, .baner-doctors .baner__group-item .appointment-modal__input, .baner-doctors .baner__group-item .datepicker-modal__input, .baner-doctors .baner__group-item .datepicker-modal__input::placeholder, .baner-doctors .baner__group-item .all-reviews__select-items .select__title, .all-reviews__select-items .baner-doctors .baner__group-item .select__title, .baner-doctors .baner__group-item .all-reviews__select-items .select__option, .all-reviews__select-items .baner-doctors .baner__group-item .select__option, .baner-doctors .baner__group-item .application-form__input, .baner-doctors .baner__group-item .application-form__input::placeholder, .baner-doctors .baner__group-item .application-form__content-checkbox.checkbox_ellipse span, .application-form__content-checkbox.checkbox_ellipse .baner-doctors .baner__group-item span {
+        font-size: 3.2rem; }
+      .baner-doctors .baner__group-item-heading {
+        font-size: 5rem;
+        font-weight: 500; }
+      .baner-doctors .baner__image-wrap {
+        width: 100%; }
+        .baner-doctors .baner__image-wrap::before {
+          top: -1%;
+          -webkit-transform: translate(-50%, 1%);
+                  transform: translate(-50%, 1%); }
+      .baner-doctors .baner__image {
+        width: 127%; }
     .baner-doctors-chapter-zapis .baner__text-wrap {
       padding: 4rem 0 0 0; }
     .baner-doctors-chapter-zapis .baner__text {
@@ -7209,41 +7247,6 @@ input[type='search']::-webkit-search-results-decoration {
     .baner-akcii-statia .baner__bottom-mess a {
       width: 5.3rem;
       height: 5.3rem; }
-  -doctors .baner {
-    margin-bottom: 10rem; }
-    -doctors .baner__text-content {
-      width: 100%; }
-    -doctors .baner__text-wrap {
-      margin-bottom: 12.6rem; }
-    -doctors .baner__text {
-      margin-bottom: 7.2rem;
-      max-width: 54.5rem; }
-    -doctors .baner__group {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-column-gap: normal;
-         -moz-column-gap: normal;
-              column-gap: normal; }
-    -doctors .baner__group-item .datepicker-modal__input::-webkit-input-placeholder, -doctors .baner__group-item .application-form__input::-webkit-input-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .datepicker-modal__input::-moz-placeholder, -doctors .baner__group-item .application-form__input::-moz-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .datepicker-modal__input:-ms-input-placeholder, -doctors .baner__group-item .application-form__input:-ms-input-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .datepicker-modal__input::-ms-input-placeholder, -doctors .baner__group-item .application-form__input::-ms-input-placeholder {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item .txt, -doctors .baner__group-item .select__value._select-pseudo-label::before, -doctors .baner__group-item .doctor__item-info-data, -doctors .baner__group-item .doctor__item-info-category, -doctors .baner__group-item .doctor__imgs-item-title, -doctors .baner__group-item .doctor__imgs-item-subtitle, -doctors .baner__group-item .reviews__item-img-info-data, -doctors .baner__group-item .reviews__item-img-info-text, -doctors .baner__group-item .input__field, -doctors .baner__group-item .sort-dropdown .select .select__value._select-pseudo-label::before, .sort-dropdown .select -doctors .baner__group-item .select__value._select-pseudo-label::before, -doctors .baner__group-item .sort-dropdown .select__title, .sort-dropdown -doctors .baner__group-item .select__title, -doctors .baner__group-item .sort-dropdown .select__option, .sort-dropdown -doctors .baner__group-item .select__option, -doctors .baner__group-item .centers-select .select__title, .centers-select -doctors .baner__group-item .select__title, -doctors .baner__group-item .appointment-modal__input, -doctors .baner__group-item .datepicker-modal__input, -doctors .baner__group-item .datepicker-modal__input::placeholder, -doctors .baner__group-item .all-reviews__select-items .select__title, .all-reviews__select-items -doctors .baner__group-item .select__title, -doctors .baner__group-item .all-reviews__select-items .select__option, .all-reviews__select-items -doctors .baner__group-item .select__option, -doctors .baner__group-item .application-form__input, -doctors .baner__group-item .application-form__input::placeholder, -doctors .baner__group-item .application-form__content-checkbox.checkbox_ellipse span, .application-form__content-checkbox.checkbox_ellipse -doctors .baner__group-item span {
-      font-size: 3.2rem; }
-    -doctors .baner__group-item-heading {
-      font-size: 5rem;
-      font-weight: 500; }
-    -doctors .baner__image-wrap {
-      width: 100%; }
-      -doctors .baner__image-wrap::before {
-        top: -1%; }
-    -doctors .baner__image {
-      width: 127%; }
   -prices-programs {
     margin-bottom: 10rem; }
     -prices-programs .baner__title {
@@ -30969,6 +30972,8 @@ textarea {
 
 .doctors {
   margin-bottom: 24.8rem; }
+  .doctors.doctors-main .doctors__group {
+    margin-bottom: 4rem; }
   .doctors.doctors-appointment {
     margin-bottom: 18rem; }
     .doctors.doctors-appointment .doctors__form {
@@ -31014,6 +31019,8 @@ textarea {
 @media (max-width: 48em) {
   .doctors {
     margin-bottom: 16rem; }
+    .doctors.doctors-main .doctors__group {
+      margin-bottom: 6rem; }
     .doctors.doctors-appointment {
       margin-bottom: 20rem; }
       .doctors.doctors-appointment .doctors__form {
@@ -34581,9 +34588,11 @@ textarea {
     .centers-select .select__option:not(:last-child) {
       margin-bottom: 2.5rem; }
   .centers-select .select__title {
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: 2rem; }
   .centers-select .select__row {
+    position: relative;
+    z-index: 3;
     row-gap: normal; }
   .centers-select .select__asset {
     font-size: 2.6rem;
@@ -34592,7 +34601,7 @@ textarea {
     margin-bottom: 0.5rem;
     font-size: 2.6rem; }
   .centers-select .select__options {
-    top: calc(100% - 2rem); }
+    top: calc(100% - 3rem); }
   .card-services {
     margin-bottom: 4.4rem;
     display: -webkit-box;
