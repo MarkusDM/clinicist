@@ -1,0 +1,83 @@
+.get-there {
+    margin-bottom: 18rem;
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 6.8rem;
+
+        span {
+            display: block;
+            color:  #36B4F1;
+      
+            font-family: 'Myriad Pro',sans-serif;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        strong {
+            color:  #2F2F2F;
+           
+            font-family: 'Montserrat',sans-serif;
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: block;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box {
+        display: flex;
+        align-items:center;
+    }
+
+    &__box-icon {
+        width: 6.8rem;
+        height: 6.8rem;
+        margin-right: 3rem;
+        svg {
+            width: 6.8rem;
+            height: 6.8rem;
+        }
+    }
+
+    &__box-inner-one {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+            display: block;
+            color:  #2F2F2F;
+            font-family: 'Myriad Pro',sans-serif;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__box-inner {
+       
+
+        span {
+            display: block;
+            color:  rgba(51, 51, 51, 0.50);
+            font-family: 'Myriad Pro',sans-serif;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+    }
+
+    &__box-inner-one {
+        margin-bottom: 0.8rem;
+    }
+}
