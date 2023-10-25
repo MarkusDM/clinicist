@@ -1,0 +1,22 @@
+.stocks-slider {
+  margin-bottom: 18rem;
+  .swiper-stocks-controls {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .stocks-slider {
+    margin-bottom: 16rem;
+    .swiper-stocks-controls {
+      margin-top: 6.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .swiper-stocks-pagination {
+        position: static;
+        transform: translate(0, 0);
+      }
+    }
+  }
+}

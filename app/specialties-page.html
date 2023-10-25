@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="another website" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Главная</title>
+  </head>
+  <body>
+    @@include('./template/header.html')
+    <main>
+      <section class="baner baner-specialities">
+        <div class="baner__container container">
+          <div class="baner__text-wrap">
+            <nav class="baner__breadcrumbs breadcrumbs txt">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+              <span class="breadcrumbs__text">Специальности и направления</span>
+            </nav>
+            <div class="baner__text-content">
+              <span class="baner__title title">Специальности и направления</span>
+              <p class="baner__text txt text-item">
+                В нашей клинике вы получите только самое современное и
+                эффективное лечение
+              </p>
+            </div>
+          </div>
+          <div class="baner__image-wrap">
+            <img
+              src="./img/t-image/baner-specialities.webp"
+              alt=""
+              class="baner__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="specialities">
+        <div class="specialities__container container">
+          <form id="search-form" action="#" class="doctors__form search-form">
+            <div class="search-form__wrap">
+              <div class="search-form__input-wrap">
+                <input
+                  autocomplete="off"
+                  type="search"
+                  name="form[]"
+                  placeholder="Поиск среди услуг"
+                  class="search-form__input txt"
+                />
+              </div>
+              <button
+                id="open-sort-dropdown"
+                type="button"
+                class="search-form__sort-button"
+              >
+                <span class="_desktop-only">Уточнить поиск</span>
+              </button>
+              <button type="submit" class="search-form__btn btn">
+                <span>Начать поиск</span>
+              </button>
+            </div>
+            <div class="search-form__sort sort-dropdown">
+              <div class="sort-dropdown__inner">
+                <div
+                  data-tabs-body
+                  data-one-select
+                  class="sort-dropdown__content"
+                >
+                  <div class="sort-dropdown__body">
+                    <div class="sort-dropdown__row">
+                      <div class="sort-dropdown__item">
+                        <span class="sort-dropdown__subheading txt">
+                          Выбрать направление:
+                        </span>
+                        <select
+                          data-scroll="270"
+                          data-checkbox
+                          multiple
+                          data-pseudo-label="Все направления"
+                          name="form[]"
+                          class="sort-dropdown__select-wrap select-checkbox"
+                        >
+                          <option value="1" selected>Уролог</option>
+                          <option value="2">Гинеколог</option>
+                          <option value="3">Гематолог</option>
+                          <option value="4">Гастроэнтеролог</option>
+                          <option value="5">Дерматолог</option>
+                          <option value="6">Гинеколог-эндокринолог</option>
+                          <option value="7">Аритмолог</option>
+                          <option value="8">Уролог</option>
+                          <option value="9">Гинеколог</option>
+                          <option value="10">Гематолог</option>
+                          <option value="11">Гастроэнтеролог</option>
+                          <option value="12">Дерматолог</option>
+                          <option value="13">Гинеколог-эндокринолог</option>
+                          <option value="14">Аритмолог</option>
+                        </select>
+                      </div>
+                      <div class="sort-dropdown__item">
+                        <span class="sort-dropdown__subheading txt">
+                          Выбрать клинику:
+                        </span>
+                        <select
+                          data-scroll="270"
+                          data-checkbox
+                          multiple
+                          data-pseudo-label="Все клиники"
+                          name="form[]"
+                          class="sort-dropdown__select-wrap select-checkbox"
+                        >
+                          <option value="1" selected>Уролог</option>
+                          <option value="2">Гинеколог</option>
+                          <option value="3">Гематолог</option>
+                          <option value="4">Гастроэнтеролог</option>
+                          <option value="5">Дерматолог</option>
+                          <option value="6">Гинеколог-эндокринолог</option>
+                          <option value="7">Аритмолог</option>
+                          <option value="8">Уролог</option>
+                          <option value="9">Гинеколог</option>
+                          <option value="10">Гематолог</option>
+                          <option value="11">Гастроэнтеролог</option>
+                          <option value="12">Дерматолог</option>
+                          <option value="13">Гинеколог-эндокринолог</option>
+                          <option value="14">Аритмолог</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="slose-sort-dropdown"
+                  type="button"
+                  class="sort-dropdown__close-btn link"
+                >
+                  Свернуть
+                </button>
+              </div>
+            </div>
+            <div class="search-form__search-box search-box">
+              <ul class="search-box__list txt">
+                <li class="search-box__item">
+                  Гастроэнтеролог <span>Специализация</span>
+                </li>
+                <li class="search-box__item">
+                  Гастропольский Виктор Владимирович <span>Врач</span>
+                </li>
+                <li class="search-box__item">
+                  Гастроэнтероло <span>Специализация</span>
+                </li>
+                <li class="search-box__item">
+                  Гастропольский Виктор Владимирович <span>Врач</span>
+                </li>
+              </ul>
+            </div>
+          </form>
+
+          <div class="specialities__list">
+            <div class="career-card specialities">
+              <div class="career-card__image-wrap">
+                <img
+                  src="./img/a-image/career-card-01.webp"
+                  alt=""
+                  class="career-card__image"
+                />
+              </div>
+              <div class="career-card__text-wrap">
+                <span class="career-card__heading heading">Общая практика</span>
+                <p class="career-card__text txt">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение
+                </p>
+                <div class="career-card__image-box">
+                  <div class="career-card__image-doctors">
+                    <img src="./img/t-image/diseases-card.webp" alt="" />
+                  </div>
+                  <div class="career-card__info">
+                    <p>+120</p>
+                    <p>Врачей в направлении</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="career-card specialities">
+              <div class="career-card__image-wrap">
+                <img
+                  src="./img/a-image/career-card-01.webp"
+                  alt=""
+                  class="career-card__image"
+                />
+              </div>
+              <div class="career-card__text-wrap">
+                <span class="career-card__heading heading">Общая практика</span>
+                <p class="career-card__text txt">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение
+                </p>
+                <div class="career-card__image-box">
+                  <div class="career-card__image-doctors">
+                    <img src="./img/t-image/diseases-card.webp" alt="" />
+                  </div>
+                  <div class="career-card__info">
+                    <p>+120</p>
+                    <p>Врачей в направлении</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="career-card specialities">
+              <div class="career-card__image-wrap">
+                <img
+                  src="./img/a-image/career-card-01.webp"
+                  alt=""
+                  class="career-card__image"
+                />
+              </div>
+              <div class="career-card__text-wrap">
+                <span class="career-card__heading heading">Общая практика</span>
+                <p class="career-card__text txt">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение
+                </p>
+                <div class="career-card__image-box">
+                  <div class="career-card__image-doctors">
+                    <img src="./img/t-image/diseases-card.webp" alt="" />
+                  </div>
+                  <div class="career-card__info">
+                    <p>+120</p>
+                    <p>Врачей в направлении</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="career-card specialities">
+              <div class="career-card__image-wrap">
+                <img
+                  src="./img/a-image/career-card-01.webp"
+                  alt=""
+                  class="career-card__image"
+                />
+              </div>
+              <div class="career-card__text-wrap">
+                <span class="career-card__heading heading">Общая практика</span>
+                <p class="career-card__text txt">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение
+                </p>
+                <div class="career-card__image-box">
+                  <div class="career-card__image-doctors">
+                    <img src="./img/t-image/diseases-card.webp" alt="" />
+                  </div>
+                  <div class="career-card__info">
+                    <p>+120</p>
+                    <p>Врачей в направлении</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="career-card specialities">
+              <div class="career-card__image-wrap">
+                <img
+                  src="./img/a-image/career-card-01.webp"
+                  alt=""
+                  class="career-card__image"
+                />
+              </div>
+              <div class="career-card__text-wrap">
+                <span class="career-card__heading heading">Общая практика</span>
+                <p class="career-card__text txt">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение
+                </p>
+                <div class="career-card__image-box">
+                  <div class="career-card__image-doctors">
+                    <img src="./img/t-image/diseases-card.webp" alt="" />
+                  </div>
+                  <div class="career-card__info">
+                    <p>+120</p>
+                    <p>Врачей в направлении</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="career-card specialities">
+              <div class="career-card__image-wrap">
+                <img
+                  src="./img/a-image/career-card-01.webp"
+                  alt=""
+                  class="career-card__image"
+                />
+              </div>
+              <div class="career-card__text-wrap">
+                <span class="career-card__heading heading">Общая практика</span>
+                <p class="career-card__text txt">
+                  В нашей клинике вы получите только самое современное и
+                  эффективное лечение
+                </p>
+                <div class="career-card__image-box">
+                  <div class="career-card__image-doctors">
+                    <img src="./img/t-image/diseases-card.webp" alt="" />
+                  </div>
+                  <div class="career-card__info">
+                    <p>+120</p>
+                    <p>Врачей в направлении</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="specialities__page-navigation page-navigation">
+            <a
+              href="#"
+              class="page-navigation__arrow page-navigation__arrow_prev"
+              ><img src="./img/a-image/icons/select-arrow-grey.svg" alt=""
+            /></a>
+            <div class="page-navigation__group">
+              <a href="#" class="page-navigation__item _active">1</a>
+              <a href="#" class="page-navigation__item">2</a>
+              <a href="#" class="page-navigation__item">3</a>
+              <a href="#" class="page-navigation__item">4</a>
+            </div>
+            <a
+              href="#"
+              class="page-navigation__arrow page-navigation__arrow_next"
+              ><img src="./img/a-image/icons/select-arrow-grey.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-block text-block">
+        <div class="text-block__container container">
+          <div class="text-block__call-block call-block">
+            <div class="call-block__head">
+              <span class="call-block__heading"
+                ><span>
+                  Звоните
+                  <a href="tel:84951897397">8 (495) 189-73-97</a>
+                </span></span
+              >
+            </div>
+            <p class="call-block__text txt">
+              Или можете связаться с нами онлайн любым способом
+            </p>
+            <ul class="call-block__list">
+              <li class="call-block__list-item call-block__list-item_whatsapp">
+                <a href="#" class="call-block__list-text"
+                  >Написать в WhatsApp</a
+                >
+              </li>
+              <li class="call-block__list-item call-block__list-item_browser">
+                <a href="#" class="call-block__list-text"
+                  >Записаться на сайте</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="text-block__content">
+            <span class="text-block__subtitle subtitle">Все о клинике</span>
+            <span class="text-block__title title"
+              >Заголовок текстового блока</span
+            >
+            <p class="text-block__text txt">
+              Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+              отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал: гештальт
+              осознаёт институциональный ассоцианизм, как и предсказывает теория
+              о бесполезном знании. Комплекс текстологически интегрирует психоз.
+              Гендер заметно представляет собой социометрический гомеостаз,
+              таким образом, стратегия поведения.
+            </p>
+            <p class="text-block__text txt">
+              Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+              отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал: гештальт
+              осознаёт институциональный ассоцианизм, как и предсказывает теория
+              о бесполезном знании. Комплекс текстологически интегрирует психоз.
+              Гендер заметно представляет собой социометрический гомеостаз,
+              таким образом, стратегия поведения. Восприятие, как справедливо
+              считает Ф.Энгельс, устойчиво отталкивает онтогенез речи.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./template/footer.html')
+  </body>
+</html>

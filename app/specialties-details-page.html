@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="another website" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Главная</title>
+  </head>
+  <body>
+    @@include('./template/header.html')
+    <main>
+      <section class="baner baner-specialities-details">
+        <div class="baner__container container">
+          <div class="baner__text-wrap">
+            <nav class="baner__breadcrumbs breadcrumbs txt">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+              <a href="#" class="breadcrumbs__link"
+                >Специальности и направления</a
+              >
+              <span class="breadcrumbs__text"
+                >Программы ведения беременности</span
+              >
+            </nav>
+            <div class="baner__text-content">
+              <p class="baner__subtitle">Специализация</p>
+              <span class="baner__title title">Гастроэнтерология</span>
+              <p class="baner__text txt text-item">
+                В нашей клинике вы получите только самое современное и
+                эффективное лечение
+              </p>
+            </div>
+          </div>
+          <div class="baner__image-wrap">
+            <img
+              src="./img/t-image/baner-specialities-details-desc.webp"
+              alt=""
+              class="baner__image desc"
+            />
+            <img
+              src="./img/t-image/baner-specialities-details-mob.webp"
+              alt=""
+              class="baner__image mob"
+            />
+            <div class="baner__specialities-box">
+              <div class="specialities-box__blocks">
+                <div class="specialities-box__block">
+                  <div class="specialities-box__number">15</div>
+                  <p class="specialities-box__text">
+                    Врачей в этом направлении
+                  </p>
+                </div>
+                <div class="specialities-box__block">
+                  <div class="specialities-box__number">15</div>
+                  <p class="specialities-box__text">Методов обследования</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-clinic new-clinic-doctors-detailed">
+        <div class="container">
+          <div class="new-clinic__inner">
+            <div class="new-clinic__aside">
+              <div class="new-clinic__navigation-block navigation-block">
+                <div class="navigation-block__head">
+                  <span class="navigation-block__heading heading"
+                    >Больше информации</span
+                  >
+                  <p class="navigation-block__text txt">
+                    Подробная информация о враче
+                  </p>
+                </div>
+                <div class="navigation-block__tabs swiper">
+                  <div class="navigation-block__wrapper swiper-wrapper">
+                    <button
+                      data-type="doctor-info"
+                      type="button"
+                      class="navigation-block__tab swiper-slide _active"
+                    >
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_3269_93173)">
+                            <path
+                              d="M19.535 3.12202L17.879 1.46402C17.4157 0.998332 16.8646 0.629159 16.2576 0.377864C15.6507 0.126569 14.9999 -0.00185599 14.343 2.02654e-05H8C6.67441 0.00160812 5.40356 0.528902 4.46622 1.46624C3.52888 2.40358 3.00159 3.67443 3 5.00002V19C3.00159 20.3256 3.52888 21.5965 4.46622 22.5338C5.40356 23.4711 6.67441 23.9984 8 24H16C17.3256 23.9984 18.5964 23.4711 19.5338 22.5338C20.4711 21.5965 20.9984 20.3256 21 19V6.65702C21.0016 6.0002 20.873 5.34959 20.6215 4.74281C20.37 4.13604 20.0007 3.58515 19.535 3.12202ZM18.121 4.53602C18.2628 4.67734 18.3898 4.83282 18.5 5.00002H16V2.50002C16.1669 2.61134 16.3227 2.7386 16.465 2.88002L18.121 4.53602ZM19 19C19 19.7957 18.6839 20.5587 18.1213 21.1213C17.5587 21.684 16.7956 22 16 22H8C7.20435 22 6.44129 21.684 5.87868 21.1213C5.31607 20.5587 5 19.7957 5 19V5.00002C5 4.20437 5.31607 3.44131 5.87868 2.8787C6.44129 2.31609 7.20435 2.00002 8 2.00002H14V5.00002C14 5.53045 14.2107 6.03916 14.5858 6.41423C14.9609 6.78931 15.4696 7.00002 16 7.00002H19V19ZM16 9.00002C16.2652 9.00002 16.5196 9.10538 16.7071 9.29291C16.8946 9.48045 17 9.7348 17 10C17 10.2652 16.8946 10.5196 16.7071 10.7071C16.5196 10.8947 16.2652 11 16 11H8C7.73478 11 7.48043 10.8947 7.29289 10.7071C7.10536 10.5196 7 10.2652 7 10C7 9.7348 7.10536 9.48045 7.29289 9.29291C7.48043 9.10538 7.73478 9.00002 8 9.00002H16ZM17 14C17 14.2652 16.8946 14.5196 16.7071 14.7071C16.5196 14.8947 16.2652 15 16 15H8C7.73478 15 7.48043 14.8947 7.29289 14.7071C7.10536 14.5196 7 14.2652 7 14C7 13.7348 7.10536 13.4804 7.29289 13.2929C7.48043 13.1054 7.73478 13 8 13H16C16.2652 13 16.5196 13.1054 16.7071 13.2929C16.8946 13.4804 17 13.7348 17 14ZM16.808 17.413C16.9634 17.6269 17.0279 17.8936 16.9872 18.1548C16.9466 18.416 16.8041 18.6505 16.591 18.807C15.5778 19.529 14.3778 19.9432 13.135 20C12.4089 19.9965 11.7048 19.7501 11.135 19.3C10.807 19.075 10.682 19 10.435 19C9.76643 19.1035 9.13562 19.3769 8.603 19.794C8.39175 19.9446 8.13024 20.0072 7.87369 19.9686C7.61715 19.93 7.38565 19.7932 7.22808 19.5871C7.07052 19.381 6.99922 19.1217 7.02925 18.864C7.05927 18.6063 7.18827 18.3704 7.389 18.206C8.27018 17.522 9.32828 17.1036 10.439 17C11.1051 17.0107 11.7491 17.2409 12.271 17.655C12.5089 17.869 12.8152 17.9913 13.135 18C13.9527 17.9388 14.739 17.6594 15.412 17.191C15.6266 17.0355 15.8942 16.9715 16.1559 17.0131C16.4177 17.0547 16.6522 17.1986 16.808 17.413Z"
+                              fill="#D8DDE4"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_3269_93173">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs></svg
+                        ><span>Информация</span>
+                      </span>
+                    </button>
+                    <button
+                      data-type="doctor-career"
+                      type="button"
+                      class="navigation-block__tab swiper-slide"
+                    >
+                      <span class="navigation-block__tab-title txt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_3058_75245)">
+                            <path
+                              d="M23.8352 8.79151C23.6307 8.14041 23.222 7.57242 22.6697 7.17155C22.1173 6.77067 21.4507 6.55818 20.7682 6.56551H16.3992L15.0722 2.42951C14.8635 1.77847 14.4535 1.21053 13.9012 0.807578C13.3489 0.40463 12.6829 0.1875 11.9992 0.1875C11.3155 0.1875 10.6495 0.40463 10.0972 0.807578C9.54495 1.21053 9.13489 1.77847 8.92622 2.42951L7.59922 6.56551H3.23022C2.54996 6.56648 1.88741 6.7824 1.3372 7.18242C0.786984 7.58244 0.377257 8.1461 0.166538 8.7929C-0.0441816 9.4397 -0.0451143 10.1365 0.163873 10.7839C0.37286 11.4313 0.781077 11.996 1.33022 12.3975L4.88622 14.9975L3.53422 19.1845C3.31573 19.8339 3.31296 20.5365 3.52633 21.1876C3.73969 21.8387 4.15776 22.4034 4.71822 22.7975C5.26907 23.2043 5.93661 23.4222 6.62137 23.4188C7.30613 23.4154 7.97146 23.1908 8.51822 22.7785L11.9992 20.2165L15.4812 22.7755C16.0311 23.18 16.695 23.3996 17.3776 23.403C18.0602 23.4063 18.7262 23.1931 19.28 22.794C19.8338 22.3949 20.2467 21.8306 20.4595 21.182C20.6723 20.5334 20.6739 19.8341 20.4642 19.1845L19.1122 14.9975L22.6722 12.3975C23.2276 12.0011 23.6406 11.4363 23.8501 10.7869C24.0596 10.1374 24.0543 9.43777 23.8352 8.79151ZM21.4922 10.7825L17.3482 13.8115C17.178 13.9357 17.0514 14.1104 16.9864 14.3108C16.9213 14.5113 16.9213 14.7271 16.9862 14.9275L18.5612 19.7975C18.6409 20.0445 18.6402 20.3104 18.5593 20.557C18.4783 20.8036 18.3212 21.0182 18.1106 21.1699C17.9 21.3216 17.6468 21.4026 17.3872 21.4013C17.1277 21.3999 16.8753 21.3164 16.6662 21.1625L12.5912 18.1625C12.4196 18.0364 12.2122 17.9685 11.9992 17.9685C11.7863 17.9685 11.5789 18.0364 11.4072 18.1625L7.33222 21.1625C7.1233 21.3184 6.87015 21.4038 6.60948 21.4061C6.34881 21.4085 6.09416 21.3278 5.88245 21.1757C5.67073 21.0236 5.51296 20.808 5.43201 20.5602C5.35106 20.3124 5.35113 20.0453 5.43222 19.7975L7.01222 14.9275C7.07713 14.7271 7.07709 14.5113 7.01208 14.3108C6.94707 14.1104 6.82043 13.9357 6.65022 13.8115L2.50622 10.7825C2.29752 10.6297 2.14245 10.4149 2.06316 10.1687C1.98386 9.92245 1.9844 9.65749 2.0647 9.41161C2.145 9.16573 2.30094 8.95152 2.51026 8.79957C2.71958 8.64761 2.97156 8.56569 3.23022 8.56551H8.33022C8.54193 8.56551 8.74818 8.49831 8.91926 8.37359C9.09035 8.24887 9.21743 8.07307 9.28222 7.87151L10.8322 3.04051C10.9118 2.7933 11.0677 2.5777 11.2776 2.42476C11.4875 2.27182 11.7405 2.18942 12.0002 2.18942C12.2599 2.18942 12.5129 2.27182 12.7228 2.42476C12.9327 2.5777 13.0887 2.7933 13.1682 3.04051L14.7182 7.87151C14.783 8.07307 14.9101 8.24887 15.0812 8.37359C15.2523 8.49831 15.4585 8.56551 15.6702 8.56551H20.7702C21.0289 8.56569 21.2809 8.64761 21.4902 8.79957C21.6995 8.95152 21.8554 9.16573 21.9357 9.41161C22.016 9.65749 22.0166 9.92245 21.9373 10.1687C21.858 10.4149 21.7029 10.6297 21.4942 10.7825H21.4922Z"
+                              fill="#D8DDE4"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_3058_75245">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs></svg
+                        ><span>Преимущества</span></span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-content-type="doctor-info"
+              class="new-clinic__content _active"
+            >
+              <div class="new-clinic__subtitle subtitle">Больше информации</div>
+              <div class="new-clinic__title title">Преимущества</div>
+              <div class="new-clinic__text txt">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+              <ul class="new-clinic__list txt">
+                <li>Восприятие, как справедливо считает Ф.Энгельс</li>
+                <li>Однако Э.Дюркгейм утверждал: гештальт осознаёт</li>
+                <li>
+                  Гендер заметно представляет собой социометрический гомеостаз
+                </li>
+              </ul>
+              <div class="new-clinic__img">
+                <img src="./img/a-image/new-clinic.webp" alt="" />
+              </div>
+              <div class="new-clinic__text txt">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения. Восприятие, как справедливо считает Ф.Энгельс,
+                устойчиво отталкивает онтогенез речи. Однако Э.Дюркгейм
+                утверждал: гештальт осознаёт институциональный ассоцианизм, как
+                и предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+            </div>
+            <div data-content-type="doctor-career" class="new-clinic__content">
+              <div class="new-clinic__subtitle subtitle">Больше информации</div>
+              <div class="new-clinic__title title">Преимущества</div>
+              <div class="new-clinic__text txt">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+              <ul class="new-clinic__list txt">
+                <li>Восприятие, как справедливо считает Ф.Энгельс</li>
+                <li>Однако Э.Дюркгейм утверждал: гештальт осознаёт</li>
+                <li>
+                  Гендер заметно представляет собой социометрический гомеостаз
+                </li>
+              </ul>
+              <div class="new-clinic__img">
+                <img src="./img/a-image/new-clinic.webp" alt="" />
+              </div>
+              <div class="new-clinic__text txt">
+                Восприятие, как справедливо считает Ф.Энгельс, устойчиво
+                отталкивает онтогенез речи. Однако Э.Дюркгейм утверждал:
+                гештальт осознаёт институциональный ассоцианизм, как и
+                предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения. Восприятие, как справедливо считает Ф.Энгельс,
+                устойчиво отталкивает онтогенез речи. Однако Э.Дюркгейм
+                утверждал: гештальт осознаёт институциональный ассоцианизм, как
+                и предсказывает теория о бесполезном знании. Комплекс
+                текстологически интегрирует психоз. Гендер заметно представляет
+                собой социометрический гомеостаз, таким образом, стратегия
+                поведения.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-doctors">
+        <div class="our-doctors__container container">
+          <div class="our-doctors__head">
+            <div class="our-doctors__title-wrap">
+              <span class="our-doctors__subtitle subtitle"
+                >Наша команда специалистов</span
+              >
+              <span class="our-doctors__title title">Наши врачи</span>
+            </div>
+            <div
+              data-da=".our-doctors__container,768,last"
+              class="our-doctors__slider-control slider-control"
+            >
+              <div class="our-doctors__slider-fraction"></div>
+              <div class="our-doctors__slider-navigation">
+                <button
+                  type="button"
+                  class="swiper-button-prev btn-prev"
+                ></button>
+                <div
+                  class="our-doctors__slider-pagination swiper-pagination pagination"
+                ></div>
+                <button
+                  type="button"
+                  class="swiper-button-next btn-next"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="our-doctors__body">
+            <div class="our-doctors__slider swiper">
+              <div class="our-doctors__wrapper swiper-wrapper">
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn"
+                  >
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/doctor-card-img.webp"
+                      alt=""
+                      class="our-doctors-card__image"
+                    />
+                  </div>
+                </div>
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn"
+                  >
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/our-doctors-card-02.webp"
+                      alt=""
+                      class="our-doctors-card__image"
+                    />
+                  </div>
+                </div>
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn"
+                  >
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/doctor-ginecolog.webp"
+                      alt=""
+                      class="our-doctors-card__image"
+                    />
+                  </div>
+                </div>
+                <div class="our-doctors__slide our-doctors-card swiper-slide">
+                  <a href="#" class="our-doctors-card__head link">
+                    Главный хирург
+                  </a>
+                  <div class="our-doctors-card__body">
+                    <span class="our-doctors-card__heading heading"
+                      >Мишустина Александра Ивановна</span
+                    >
+                    <p class="our-doctors-card__text txt">
+                      Главный хирург, доктор медицинских наук, врач высшей
+                      категории
+                    </p>
+                    <div class="our-doctors-card__group">
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/coins.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <span class="our-doctors-card__group-text txt"
+                          >Прием от <span>1200 ₽ </span></span
+                        >
+                      </div>
+                      <div class="our-doctors-card__group-item">
+                        <div class="our-doctors-card__group-icon-wrap">
+                          <img
+                            src="./img/a-image/icons/thumb-up.svg"
+                            alt=""
+                            class="our-doctors-card__group-icon"
+                          />
+                        </div>
+                        <div class="our-doctors-card__rating">
+                          <div class="our-doctors-card__stars rating">
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_full"></div>
+                            <div class="rating__item rating__item_empty"></div>
+                          </div>
+                          <span class="our-doctors-card__rating-value"
+                            >4.8</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    data-popup="#appointment-modal"
+                    type="button"
+                    class="our-doctors-card__btn btn"
+                  >
+                    Записаться
+                  </button>
+                  <div class="our-doctors-card__image-wrap">
+                    <img
+                      src="./img/a-image/doctor-card-img.webp"
+                      alt=""
+                      class="our-doctors-card__image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="centers centers-prices-detailed">
+        <div class="centers__container container">
+          <div class="centers__subtitle subtitle">Адреса</div>
+          <div class="centers__title title">
+            Услуга осуществляется в центрах
+          </div>
+          <div class="centers__content">
+            <div class="centers-filter">
+              <div class="centers-filter__dropdown">
+                <button type="button" class="centers-filter__dropdown-btn">
+                  <span>Центр планирования семьи «Клиницист»</span>
+                </button>
+                <div class="centers-filter__dropdown-body">
+                  <button type="button" class="centers-filter__dropdown-close">
+                    Назад
+                  </button>
+                  <div class="centers-filter__dropdown-search-wrap">
+                    <input
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      placeholder="Поиск центров"
+                      class="centers-filter__dropdown-search"
+                    />
+                  </div>
+                </div>
+              </div>
+              <input
+                type="hidden"
+                class="centers-filter__select"
+                value="Центр планирования семьи «Клиницист»"
+              />
+
+              <div
+                data-da=".centers-filter__dropdown-body,768,last"
+                class="centers-filter-list"
+              >
+                <div class="centers-filter-list__item active" data-question="1">
+                  <div class="centers-filter-list__item-img"></div>
+                  <div class="centers-filter-list__item-text">
+                    На Гидростроителей
+                  </div>
+                  <span class="centers-filter-list__item-txt"
+                    >г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                    Замок)</span
+                  >
+                </div>
+                <div class="centers-filter-list__item" data-question="2">
+                  <div class="centers-filter-list__item-img"></div>
+                  <div class="centers-filter-list__item-text">
+                    На Гидростроителей
+                  </div>
+                  <span class="centers-filter-list__item-txt"
+                    >г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                    Замок)</span
+                  >
+                </div>
+                <div class="centers-filter-list__item" data-question="3">
+                  <div class="centers-filter-list__item-img"></div>
+                  <div class="centers-filter-list__item-text">На Калинина</div>
+                  <span class="centers-filter-list__item-txt"
+                    >г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                    Замок)</span
+                  >
+                </div>
+                <div class="centers-filter-list__item" data-question="4">
+                  <div class="centers-filter-list__item-img"></div>
+                  <div class="centers-filter-list__item-text">
+                    На Фестивальном
+                  </div>
+                  <span class="centers-filter-list__item-txt"
+                    >г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                    Замок)</span
+                  >
+                </div>
+                <div class="centers-filter-list__item" data-question="5">
+                  <div class="centers-filter-list__item-img"></div>
+                  <div class="centers-filter-list__item-text">
+                    На Ставропольской
+                  </div>
+                  <span class="centers-filter-list__item-txt"
+                    >г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                    Замок)</span
+                  >
+                </div>
+                <div class="centers-filter-list__item" data-question="6">
+                  <div class="centers-filter-list__item-img"></div>
+                  <div class="centers-filter-list__item-text">На ТЭЦ</div>
+                  <span class="centers-filter-list__item-txt"
+                    >г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                    Замок)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="centers-info tabs__content5 active" data-question="1">
+              <div class="centers-info-title">
+                Центр планирования семьи «Клиницист»
+              </div>
+              <div class="centers-info-links">
+                <div class="centers-info-links-route">Проложить маршрут</div>
+                <div class="centers-info-links-taxi">Вызвать такси</div>
+              </div>
+              <div class="centers-info-address">
+                г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                Замок)
+              </div>
+              <a href="tel:74951897397" class="centers-info-phone"
+                >+7 (495) 189-73-97</a
+              >
+              <div class="centers-info-works">Режим работы:</div>
+              <div class="centers-info-days">
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Вт</div>
+                <div class="centers-info-days-day">Ср</div>
+                <div class="centers-info-days-day">Чт</div>
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Сб</div>
+                <div class="centers-info-days-day black">Вс</div>
+              </div>
+              <div class="centers-info-times">
+                <div class="centers-info-times-time">8:00 - 20:00</div>
+                <div class="centers-info-times-time black">8:00 - 15:00</div>
+              </div>
+              <div class="centers-info-btn btn">Записаться на прием</div>
+            </div>
+            <div class="centers-info tabs__content5" data-question="2">
+              <div class="centers-info-title">Клиника на Гидростроителей</div>
+              <div class="centers-info-links">
+                <div class="centers-info-links-route">Проложить маршрут</div>
+                <div class="centers-info-links-taxi">Вызвать такси</div>
+              </div>
+              <div class="centers-info-address">
+                г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                Замок)
+              </div>
+              <a href="tel:74951897397" class="centers-info-phone"
+                >+7 (495) 189-73-97</a
+              >
+              <div class="centers-info-works">Режим работы:</div>
+              <div class="centers-info-days">
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Вт</div>
+                <div class="centers-info-days-day">Ср</div>
+                <div class="centers-info-days-day">Чт</div>
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Сб</div>
+                <div class="centers-info-days-day black">Вс</div>
+              </div>
+              <div class="centers-info-times">
+                <div class="centers-info-times-time">8:00 - 20:00</div>
+                <div class="centers-info-times-time black">8:00 - 15:00</div>
+              </div>
+              <div class="centers-info-btn btn">Записаться на прием</div>
+            </div>
+            <div class="centers-info tabs__content5" data-question="3">
+              <div class="centers-info-title">Клиника на Калинина</div>
+              <div class="centers-info-links">
+                <div class="centers-info-links-route">Проложить маршрут</div>
+                <div class="centers-info-links-taxi">Вызвать такси</div>
+              </div>
+              <div class="centers-info-address">
+                г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                Замок)
+              </div>
+              <a href="tel:74951897397" class="centers-info-phone"
+                >+7 (495) 189-73-97</a
+              >
+              <div class="centers-info-works">Режим работы:</div>
+              <div class="centers-info-days">
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Вт</div>
+                <div class="centers-info-days-day">Ср</div>
+                <div class="centers-info-days-day">Чт</div>
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Сб</div>
+                <div class="centers-info-days-day black">Вс</div>
+              </div>
+              <div class="centers-info-times">
+                <div class="centers-info-times-time">8:00 - 20:00</div>
+                <div class="centers-info-times-time black">8:00 - 15:00</div>
+              </div>
+              <div class="centers-info-btn btn">Записаться на прием</div>
+            </div>
+            <div class="centers-info tabs__content5" data-question="4">
+              <div class="centers-info-title">Клиника на Фестивальном</div>
+              <div class="centers-info-links">
+                <div class="centers-info-links-route">Проложить маршрут</div>
+                <div class="centers-info-links-taxi">Вызвать такси</div>
+              </div>
+              <div class="centers-info-address">
+                г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                Замок)
+              </div>
+              <a href="tel:74951897397" class="centers-info-phone"
+                >+7 (495) 189-73-97</a
+              >
+              <div class="centers-info-works">Режим работы:</div>
+              <div class="centers-info-days">
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Вт</div>
+                <div class="centers-info-days-day">Ср</div>
+                <div class="centers-info-days-day">Чт</div>
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Сб</div>
+                <div class="centers-info-days-day black">Вс</div>
+              </div>
+              <div class="centers-info-times">
+                <div class="centers-info-times-time">8:00 - 20:00</div>
+                <div class="centers-info-times-time black">8:00 - 15:00</div>
+              </div>
+              <div class="centers-info-btn btn">Записаться на прием</div>
+            </div>
+            <div class="centers-info tabs__content5" data-question="5">
+              <div class="centers-info-title">Клиника на Ставропольской</div>
+              <div class="centers-info-links">
+                <div class="centers-info-links-route">Проложить маршрут</div>
+                <div class="centers-info-links-taxi">Вызвать такси</div>
+              </div>
+              <div class="centers-info-address">
+                г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                Замок)
+              </div>
+              <a href="tel:74951897397" class="centers-info-phone"
+                >+7 (495) 189-73-97</a
+              >
+              <div class="centers-info-works">Режим работы:</div>
+              <div class="centers-info-days">
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Вт</div>
+                <div class="centers-info-days-day">Ср</div>
+                <div class="centers-info-days-day">Чт</div>
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Сб</div>
+                <div class="centers-info-days-day black">Вс</div>
+              </div>
+              <div class="centers-info-times">
+                <div class="centers-info-times-time">8:00 - 20:00</div>
+                <div class="centers-info-times-time black">8:00 - 15:00</div>
+              </div>
+              <div class="centers-info-btn btn">Записаться на прием</div>
+            </div>
+            <div class="centers-info tabs__content5" data-question="6">
+              <div class="centers-info-title">Клиника на ТЭЦ</div>
+              <div class="centers-info-links">
+                <div class="centers-info-links-route">Проложить маршрут</div>
+                <div class="centers-info-links-taxi">Вызвать такси</div>
+              </div>
+              <div class="centers-info-address">
+                г. Краснодар, ул. Монтажников, 2 (угол с ул. Тургенева, ЖК
+                Замок)
+              </div>
+              <a href="tel:74951897397" class="centers-info-phone"
+                >+7 (495) 189-73-97</a
+              >
+              <div class="centers-info-works">Режим работы:</div>
+              <div class="centers-info-days">
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Вт</div>
+                <div class="centers-info-days-day">Ср</div>
+                <div class="centers-info-days-day">Чт</div>
+                <div class="centers-info-days-day">Пн</div>
+                <div class="centers-info-days-day">Сб</div>
+                <div class="centers-info-days-day black">Вс</div>
+              </div>
+              <div class="centers-info-times">
+                <div class="centers-info-times-time">8:00 - 20:00</div>
+                <div class="centers-info-times-time black">8:00 - 15:00</div>
+              </div>
+              <div class="centers-info-btn btn">Записаться на прием</div>
+            </div>
+          </div>
+        </div>
+        <div data-da=".centers__container,768,2" class="centers__map">
+          <div id="contloc"></div>
+        </div>
+      </section>
+
+      <section class="appointment">
+        <div class="appointment__container container">
+          <div class="appointment__head">
+            <span class="appointment__subtitle subtitle"
+              >Присоединяйтесь к 600 000 наших пациентов и получите
+              действительно качественные медицинские услуги!</span
+            >
+            <span class="appointment__title title">Запись на прием</span>
+          </div>
+          <div class="appointment__body">
+            <div class="appointment__callback callback-appointment">
+              <div class="callback-appointment__heading">
+                <span
+                  >Позвоните
+                  <a href="tel:84951897397">8 (495) 189-73-97</a></span
+                >
+              </div>
+              <p class="callback-appointment__text txt">
+                Или оставьте заявку на обратный звонок
+              </p>
+              <form action="#" class="callback-appointment__form">
+                <div class="callback-appointment__input-wrap">
+                  <input
+                    autocomplete="off"
+                    type="tel"
+                    name="form[]"
+                    placeholder=""
+                    class="callback-appointment__input tel-mask"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn_white callback-appointment__btn"
+                >
+                  Заказать обратный звонок
+                </button>
+              </form>
+              <p class="callback-appointment__hint txt">
+                *Заказывая обратный звонок, вы соглашаетесь с
+                <a href="#">политикой обработки своих персональных данных</a>
+              </p>
+            </div>
+            <div class="appointment__contacts contacts-appointment">
+              <span class="contacts-appointment__heading">Напишите нам</span>
+              <div class="contacts-appointment__text-wrap txt">
+                <span class="contacts-appointment__text-heading"
+                  >Мы ответим на все ваши вопросы в ближайшее.
+                </span>
+                <p class="contacts-appointment__text">
+                  Будьте уверены, что наша команда сделает все возможное и
+                  предоставим вам полную информацию, которую вы ищете.
+                </p>
+              </div>
+              <div class="contacts-appointment__links">
+                <a
+                  href="#"
+                  class="contacts-appointment__item contacts-appointment__item_whatsapp"
+                >
+                  <span>Написать в WhatsApp</span>
+                </a>
+                <a
+                  href="#"
+                  class="contacts-appointment__item contacts-appointment__item_telegram"
+                >
+                  <span>Написать в Telegram</span>
+                </a>
+              </div>
+            </div>
+            <div class="appointment__registration registration-appointment">
+              <span class="registration-appointment__heading"
+                >Вы можете записаться онлайн на нашем сайте</span
+              >
+              <p class="registration-appointment__text txt">
+                Онлайн запись к врачу позволяет быстро выбрать удобное время и
+                день для посещения, а также записаться на прием
+              </p>
+              <a href="#" class="registration-appointment__btn btn"
+                >Выбрать врача и время записи</a
+              >
+              <p class="registration-appointment__hint txt">
+                *Ознакомьтесь с
+                <a href="#">Согласием на обработку персональных данных</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./template/footer.html')
+  </body>
+</html>

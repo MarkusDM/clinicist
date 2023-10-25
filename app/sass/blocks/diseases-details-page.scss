@@ -97,3 +97,53 @@
     }
   }
 }
+
+.symptoms {
+  &.other-programs__head {
+    align-items: flex-end;
+  }
+  &__btn {
+    &.mob {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .symptoms {
+    &__btn {
+      &.desc {
+        display: none;
+      }
+      &.mob {
+        margin-top: 6.4rem;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.swiper-diseases-symptoms {
+  width: 94.7rem;
+  overflow: hidden;
+}
+
+@media (max-width: 48em) {
+  .swiper-diseases-symptoms {
+    width: 66.5rem;
+  }
+}
+
+.swiper-symptoms {
+  &-controls {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-pagination {
+    position: static;
+    transform: translate(0, 0);
+  }
+}

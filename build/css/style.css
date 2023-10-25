@@ -7696,6 +7696,184 @@ input[type='search']::-webkit-search-results-decoration {
     .baner-patients-voice .baner__image.img-mobile {
       display: none; }
 
+.baner-stocks-article {
+  height: 48.5rem; }
+  .baner-stocks-article .baner__container {
+    grid-template-columns: minmax(auto, 72.4rem) 73.6rem;
+    position: relative; }
+  .baner-stocks-article .baner__image-wrap {
+    position: absolute;
+    right: -23.2rem;
+    bottom: 0; }
+    .baner-stocks-article .baner__image-wrap::before {
+      display: none; }
+  .baner-stocks-article .baner__percent-box {
+    position: absolute;
+    top: 10rem;
+    left: 0%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 4.8rem 2.2rem 3rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    z-index: 10; }
+    .baner-stocks-article .baner__percent-box .text {
+      font-family: MyriadPro;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 0.8rem; }
+    .baner-stocks-article .baner__percent-box .percent {
+      font-family: Montserrat;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      color: #36b4f1;
+      text-align: center; }
+    .baner-stocks-article .baner__percent-box .percent-icon {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 5.1rem;
+      height: 5.1rem; }
+      .baner-stocks-article .baner__percent-box .percent-icon .icon-percent > svg {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+      .baner-stocks-article .baner__percent-box .percent-icon .text-percent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        font-family: MyriadPro;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 400;
+        color: #2f2f2f; }
+  .baner-stocks-article .baner__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .baner-stocks-article .baner__text span.baner-price {
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      color: #2f2f2f;
+      position: relative; }
+      .baner-stocks-article .baner__text span.baner-price::after {
+        content: '₽';
+        position: absolute;
+        top: 0;
+        left: 102%;
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: #2f2f2f; }
+  .baner-stocks-article .baner__image.desc {
+    width: 78.7rem;
+    height: 48.4rem; }
+  .baner-stocks-article .baner__image.mob {
+    display: none; }
+
+.baner-specialities-details {
+  position: relative; }
+  .baner-specialities-details .baner__container {
+    grid-template-columns: minmax(auto, 59.3rem) 73.6rem; }
+  .baner-specialities-details .baner__subtitle {
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #36b4f1;
+    margin-bottom: 1.6rem; }
+  .baner-specialities-details .baner__image-wrap {
+    width: 78.3rem;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .baner-specialities-details .baner__image-wrap::before {
+      display: none; }
+  .baner-specialities-details .baner__image.mob {
+    display: none; }
+  .baner-specialities-details .baner__specialities-box {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 4rem 4.8rem 3.8rem 4rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+    z-index: 10; }
+    .baner-specialities-details .baner__specialities-box .specialities-box__blocks {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .baner-specialities-details .baner__specialities-box .specialities-box__block {
+      width: 20.5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 2rem; }
+      .baner-specialities-details .baner__specialities-box .specialities-box__block:nth-child(1) {
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #d8dde4; }
+      .baner-specialities-details .baner__specialities-box .specialities-box__block:nth-child(2) {
+        padding-top: 3rem; }
+    .baner-specialities-details .baner__specialities-box .specialities-box__number {
+      width: 5rem;
+      height: 5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      border-radius: 1rem;
+      font-family: MyriadPro;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: #36b4f1;
+      background-color: #eef3f7;
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; }
+    .baner-specialities-details .baner__specialities-box .specialities-box__text {
+      font-family: MyriadPro;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: rgba(51, 51, 51, 0.5); }
+
 @media (max-width: 48em) {
   .baner-diseases .baner__breadcrumbs {
     margin-bottom: 13.4rem; }
@@ -7773,7 +7951,7 @@ input[type='search']::-webkit-search-results-decoration {
       .baner-patients-stocks .baner__image-wrap::before {
         width: 77.8rem;
         height: 77.8rem;
-        top: -15%; }
+        top: 50%; }
   .baner-patients-preparation {
     margin-bottom: 10rem; }
     .baner-patients-preparation .baner__container {
@@ -7876,7 +8054,115 @@ input[type='search']::-webkit-search-results-decoration {
       .baner-patients-voice .baner__image.img-desctop {
         display: none; }
       .baner-patients-voice .baner__image.img-mobile {
-        display: block; } }
+        display: block; }
+  .baner-stocks-article {
+    min-height: 122.2rem; }
+    .baner-stocks-article .baner__container {
+      grid-template-columns: 1fr; }
+    .baner-stocks-article .baner__image-wrap {
+      position: static;
+      -webkit-transform: translateX(-4rem);
+              transform: translateX(-4rem); }
+    .baner-stocks-article .baner__percent-box {
+      top: 0%;
+      left: 50rem;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      padding: 8rem 4rem 3rem;
+      -webkit-box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1);
+              box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1); }
+      .baner-stocks-article .baner__percent-box .text {
+        font-size: 3rem;
+        margin-bottom: 0rem; }
+      .baner-stocks-article .baner__percent-box .percent {
+        font-size: 4.4rem;
+        font-weight: 700; }
+      .baner-stocks-article .baner__percent-box .percent-icon {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 5.1rem;
+        height: 5.1rem; }
+        .baner-stocks-article .baner__percent-box .percent-icon .icon-percent > svg {
+          width: 25rem;
+          height: 25rem;
+          position: absolute;
+          top: 105%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+        .baner-stocks-article .baner__percent-box .percent-icon .text-percent {
+          font-size: 4rem; }
+    .baner-stocks-article .baner__text-wrap {
+      width: 71rem; }
+    .baner-stocks-article .baner__text span.baner-price {
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 150%; }
+      .baner-stocks-article .baner__text span.baner-price::after {
+        content: '₽';
+        position: absolute;
+        top: 0;
+        left: 102%;
+        font-size: 3.2rem;
+        line-height: 150%; }
+    .baner-stocks-article .baner__image.desc {
+      display: none; }
+    .baner-stocks-article .baner__image.mob {
+      display: block;
+      width: 75rem; }
+  .baner-specialities .baner__text-content {
+    margin-bottom: 12rem; }
+  .baner-specialities .baner__image-wrap::before {
+    width: 77.8rem;
+    height: 77.8rem;
+    top: 80%; }
+  .baner-specialities-details {
+    overflow: visible;
+    margin-bottom: 31rem; }
+    .baner-specialities-details .baner__container {
+      grid-template-columns: 71rem; }
+    .baner-specialities-details .baner__subtitle {
+      font-size: 2.6rem;
+      margin-bottom: 0.8rem; }
+    .baner-specialities-details .baner__text {
+      max-width: 63.6rem; }
+    .baner-specialities-details .baner__image-wrap {
+      width: 75rem;
+      -webkit-transform: translateX(-4rem);
+              transform: translateX(-4rem);
+      position: relative; }
+    .baner-specialities-details .baner__text-content {
+      margin-bottom: 12.4rem; }
+    .baner-specialities-details .baner__image.desc {
+      display: none; }
+    .baner-specialities-details .baner__image.mob {
+      display: block; }
+    .baner-specialities-details .baner__specialities-box {
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      padding: 4rem;
+      -webkit-box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1);
+              box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1); }
+      .baner-specialities-details .baner__specialities-box .specialities-box__block {
+        width: 42.4rem;
+        gap: 2.4rem; }
+        .baner-specialities-details .baner__specialities-box .specialities-box__block:nth-child(1) {
+          padding-bottom: 2.4rem;
+          border-bottom: 1px solid #d8dde4; }
+        .baner-specialities-details .baner__specialities-box .specialities-box__block:nth-child(2) {
+          padding-top: 2.4rem; }
+      .baner-specialities-details .baner__specialities-box .specialities-box__number {
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 1.6rem;
+        font-size: 4.2rem; }
+      .baner-specialities-details .baner__specialities-box .specialities-box__text {
+        font-size: 2.8rem; } }
 
 .baner--s-parent {
   height: 48.7rem;
@@ -29522,6 +29808,10 @@ textarea {
     background-image: url(../img/a-image/icons/code-grey.svg); }
   .input_password::before {
     background-image: url(../img/a-image/icons/key-grey.svg); }
+  .input_comment::before {
+    background-image: url(../img/t-image/comment.svg); }
+  .input_file::before {
+    background-image: url(../img/t-image/file.svg); }
   .input__field {
     padding: 1.8rem 2rem;
     border: none;
@@ -35780,7 +36070,10 @@ textarea {
   .component--cards {
     width: 44.4rem;
     height: 28.4rem;
-    padding: 5.2rem; }
+    padding: 5.2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none; }
     .component--cards .title, .component--cards .doctor__item-info-title {
       width: 16.8rem;
       margin-bottom: 4.8rem; }
@@ -35788,6 +36081,190 @@ textarea {
       font-size: 4.8rem; }
     .component--cards .price p:nth-child(2) {
       font-size: 2.6rem; } }
+
+.component--questions-box {
+  background-color: #f8fafd; }
+  .component--questions-box .question-box {
+    padding: 4rem 4rem 3.2rem 4rem; }
+  .component--questions-box .answer-box {
+    padding: 7.7rem 4rem 4rem 4rem;
+    border-top: 1px solid #d8dde4; }
+  .component--questions-box .head.desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .component--questions-box .head.mob {
+    display: none; }
+  .component--questions-box .name .fio {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: #2f2f2f; }
+  .component--questions-box .doctors-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .component--questions-box .avatar {
+    width: 7.2rem;
+    height: 7.2rem;
+    border-radius: 50%;
+    border: 2px solid #36b4f1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 3rem; }
+    .component--questions-box .avatar > img {
+      width: 6.4rem;
+      height: 6.4rem;
+      border-radius: 50%; }
+  .component--questions-box .position {
+    font-family: MyriadPro;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(51, 51, 51, 0.5); }
+  .component--questions-box .date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.6rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: MyriadPro;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; }
+    .component--questions-box .date p:nth-child(1) {
+      color: rgba(51, 51, 51, 0.5); }
+    .component--questions-box .date p:nth-child(2) {
+      color: #fe7200; }
+  .component--questions-box .question-content {
+    margin-top: 3.2rem; }
+    .component--questions-box .question-content p:nth-child(1) {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: #36b4f1;
+      margin-bottom: 0.4rem; }
+    .component--questions-box .question-content p:nth-child(2) {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: #2f2f2f; }
+  .component--questions-box .answer-content {
+    margin-top: 3.2rem; }
+    .component--questions-box .answer-content p:nth-child(1) {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #36b4f1;
+      margin-bottom: 1.2rem; }
+    .component--questions-box .answer-content p:nth-child(2) {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: #2f2f2f; }
+
+@media (max-width: 48em) {
+  .component--questions-box {
+    background-color: #f8fafd; }
+    .component--questions-box .question-box {
+      padding: 4rem 4rem 6.4rem 4rem; }
+    .component--questions-box .answer-box {
+      padding: 5.6rem 4rem 4rem 4rem;
+      border-top: 1px solid #d8dde4; }
+    .component--questions-box .head.desc {
+      display: none; }
+    .component--questions-box .head.mob {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 2.4rem; }
+      .component--questions-box .head.mob div:nth-child(1) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .component--questions-box .head.mob div:nth-child(2) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+    .component--questions-box .name .fio {
+      font-size: 3.2rem; }
+    .component--questions-box .doctors-head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .component--questions-box .avatar {
+      width: 10rem;
+      height: 10rem;
+      margin-right: 3.2rem; }
+      .component--questions-box .avatar > img {
+        width: 9rem;
+        height: 9rem; }
+    .component--questions-box .position {
+      font-size: 2.6rem; }
+    .component--questions-box .date {
+      gap: 1.6rem;
+      font-size: 2.6rem; }
+    .component--questions-box .question-content {
+      margin-top: 4rem; }
+      .component--questions-box .question-content p:nth-child(1) {
+        font-size: 2.6rem;
+        font-weight: 600;
+        margin-bottom: 1.6rem; }
+      .component--questions-box .question-content p:nth-child(2) {
+        font-size: 2.6rem;
+        line-height: 120%; }
+    .component--questions-box .answer-content {
+      margin-top: 4rem; }
+      .component--questions-box .answer-content p:nth-child(1) {
+        font-size: 2.6rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem; }
+      .component--questions-box .answer-content p:nth-child(2) {
+        font-size: 2.6rem;
+        line-height: 120%; } }
 
 body::after {
   content: '';
@@ -36104,7 +36581,7 @@ body::after {
 
 .choose-patient-modal__text {
   margin-bottom: 4rem;
-  color: #2F2F2F; }
+  color: #2f2f2f; }
 
 .choose-patient-modal__actions {
   display: -webkit-box;
@@ -36281,7 +36758,7 @@ body::after {
 
 .done-application-modal__item-txt {
   line-height: 133.333%;
-  color: #2F2F2F; }
+  color: #2f2f2f; }
 
 .done-application-modal__btn {
   min-width: 24.5rem; }
@@ -36370,11 +36847,41 @@ body::after {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem; }
+  .registration-modal__fields.vacancy {
+    margin-bottom: 3rem; }
   .registration-modal__fields_m20 {
     margin-bottom: 2rem; }
 
+@media (max-width: 48rem) {
+  .registration-modal__fields.vacancy {
+    gap: 6rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 6rem; } }
+
+.registration-modal__input.vacancy-email {
+  margin-bottom: 3rem; }
+
+.registration-modal__input.vacancy-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 26.3rem;
+  border-radius: 3rem;
+  margin-bottom: 3rem; }
+
 .registration-modal__input_fc {
   grid-column: 1/2; }
+
+@media (max-width: 48em) {
+  .registration-modal__input.vacancy-email {
+    margin-bottom: 6rem; }
+  .registration-modal__input.vacancy-comment {
+    height: 18.8rem;
+    border-radius: 6rem;
+    margin-bottom: 6rem; } }
 
 .registration-modal__actions {
   display: -webkit-box;
@@ -36387,8 +36894,19 @@ body::after {
       -ms-flex-align: center;
           align-items: center; }
 
+@media (max-width: 48em) {
+  .registration-modal__actions.vacancy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
 .registration-modal__btn {
   min-width: 28.4rem; }
+
+@media (max-width: 48em) {
+  .registration-modal__btn.vacancy {
+    min-width: 100%; } }
 
 .registration-modal__verify {
   margin-bottom: 3.6rem; }
@@ -36699,6 +37217,74 @@ body::after {
     max-width: 101.4rem; }
   .appointment-modal .popup__content {
     max-width: 87rem; } }
+
+#input-file {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+.input_file {
+  padding-top: 2rem; }
+
+.input-file__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4.4rem; }
+
+.input-file__icon > svg {
+  width: 2.4rem;
+  height: 2.4rem; }
+
+.input-file__texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 3rem; }
+
+.input-file__text-load {
+  font-family: Golos;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #2f2f2f;
+  cursor: pointer; }
+
+.input-file__text-size {
+  font-family: MyriadPro;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: rgba(51, 51, 51, 0.5); }
+
+@media (max-width: 48em) {
+  .input-file__label {
+    gap: 2rem;
+    margin-bottom: 6.4rem; }
+  .input-file__icon > svg {
+    width: 5.6rem;
+    height: 8rem; }
+  .input-file__texts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem; }
+  .input-file__text-load {
+    font-size: 3.2rem; }
+  .input-file__text-size {
+    font-size: 2.8rem; } }
 
 .all-doctors {
   margin-bottom: 18rem; }
@@ -41089,6 +41675,34 @@ body::after {
     .vacancy__baner .baner__phone-box .phone-box__value p:nth-child(2) {
       font-size: 3.2rem; } }
 
+.blog-search__form.our-vacancies .blog-search__form-label {
+  height: 5rem; }
+
+.blog-search__form.our-vacancies input {
+  color: rgba(51, 51, 51, 0.5);
+  border-color: #d8dde4; }
+
+@media (max-width: 48em) {
+  .blog-search__form.our-vacancies {
+    padding: 0; }
+    .blog-search__form.our-vacancies .blog-search__form-label {
+      height: 8rem; }
+      .blog-search__form.our-vacancies .blog-search__form-label::before {
+        width: 4.5rem;
+        height: 4.5rem; }
+    .blog-search__form.our-vacancies input {
+      font-size: 2.6rem; } }
+
+.sort-dropdown.our-vacancies__sort .sort-dropdown__inner {
+  padding: 4rem 0; }
+
+@media (max-width: 48em) {
+  .sort-dropdown.our-vacancies__sort .sort-dropdown__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; } }
+
 .vacancy-details .finished-resume {
   background-color: #eef3f7; }
 
@@ -41414,6 +42028,47 @@ body::after {
     -ms-flex-item-align: start;
         align-self: flex-start; } }
 
+.symptoms.other-programs__head {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.symptoms__btn.mob {
+  display: none; }
+
+@media (max-width: 48em) {
+  .symptoms__btn.desc {
+    display: none; }
+  .symptoms__btn.mob {
+    margin-top: 6.4rem;
+    display: block;
+    width: 100%; } }
+
+.swiper-diseases-symptoms {
+  width: 94.7rem;
+  overflow: hidden; }
+
+@media (max-width: 48em) {
+  .swiper-diseases-symptoms {
+    width: 66.5rem; } }
+
+.swiper-symptoms-controls {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.swiper-symptoms-pagination {
+  position: static;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
 .questions-accordion {
   margin-bottom: 18rem; }
   .questions-accordion #accordion-questions {
@@ -41682,6 +42337,199 @@ body::after {
   .pages.pages-patients .pages__item-title {
     font-size: 5rem; } }
 
+.questions-answers {
+  background-color: #eef3f7;
+  padding-top: 10rem;
+  padding-bottom: 10rem; }
+  .questions-answers__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem; }
+  .questions-answers__content .content__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 5.2rem; }
+    .questions-answers__content .content__head p {
+      font-family: Montserrat;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      color: #2f2f2f; }
+  .questions-answers__content .content__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4rem; }
+  .questions-answers__aside {
+    width: 45.3rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    background-color: #f8fafd;
+    padding: 4rem 4.4rem; }
+    .questions-answers__aside-checkbox {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 2.5rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      position: relative; }
+      .questions-answers__aside-checkbox input[type='checkbox'] {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        display: block;
+        width: 0;
+        height: 0; }
+    .questions-answers__aside-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 2rem; }
+    .questions-answers__aside-custom-checkbox {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      border: 1px solid #999999;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .questions-answers__aside-custom-circle {
+      opacity: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background-color: #999999; }
+    .questions-answers__aside-title {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: #2f2f2f;
+      margin-bottom: 3.2rem; }
+    .questions-answers__aside-text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-top: 0.5rem;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0;
+              flex: 1 0;
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; }
+      .questions-answers__aside-text .text-diseases {
+        color: #2f2f2f; }
+      .questions-answers__aside-text .text-count {
+        color: rgba(51, 51, 51, 0.5); }
+  .questions-answers__selects {
+    display: none; }
+  input[type='checkbox']:checked ~ .questions-answers__aside-custom-checkbox .questions-answers__aside-custom-circle {
+    opacity: 1; }
+
+@media (max-width: 48em) {
+  .questions-answers__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .questions-answers__content .content__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 4rem; }
+    .questions-answers__content .content__head p {
+      font-size: 3.2rem; }
+    .questions-answers__content .content__head .btn {
+      width: 100%; }
+  .questions-answers__content .content__list {
+    gap: 3.2rem; }
+  .questions-answers__aside._desc {
+    display: none; }
+  .questions-answers__selects {
+    display: block; } }
+
+.stocks-slider {
+  margin-bottom: 18rem; }
+  .stocks-slider .swiper-stocks-controls {
+    display: none; }
+
+@media (max-width: 48em) {
+  .stocks-slider {
+    margin-bottom: 16rem; }
+    .stocks-slider .swiper-stocks-controls {
+      margin-top: 6.4rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .stocks-slider .swiper-stocks-controls .swiper-stocks-pagination {
+        position: static;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0); } }
+
+.similar-services.patients .similar-services__inner {
+  display: none; }
+
+@media (max-width: 48em) {
+  .similar-services.patients .similar-services__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .other-programs__head.preparation .other-programs__link {
+    display: none; } }
+
 .patients-preparation {
   margin-bottom: 17.5rem; }
   .patients-preparation .preparation__breadcrumbs {
@@ -41800,6 +42648,101 @@ body::after {
       .career-card.diseases .career-card__info p:nth-child(2) {
         font-size: 2.6rem; }
     .career-card.diseases .career-card__btn {
+      display: none; } }
+
+.specialities {
+  margin-bottom: 18rem; }
+  .specialities__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem; }
+  .specialities__page-navigation {
+    margin-top: 4rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+@media (max-width: 48em) {
+  .specialities {
+    margin-bottom: 16rem; }
+    .specialities__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.2rem; }
+    .specialities__page-navigation {
+      margin-top: 8rem;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+
+.career-card.specialities {
+  grid-template-columns: 24.2rem 1fr;
+  height: 25.6rem;
+  overflow: hidden;
+  margin-bottom: 0; }
+  .career-card.specialities .career-card__text-wrap {
+    padding: 4rem;
+    padding-left: 0; }
+  .career-card.specialities .career-card__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 4.5rem; }
+  .career-card.specialities .career-card__image-wrap {
+    height: 25.6rem; }
+  .career-card.specialities .career-card__image-doctors {
+    width: 13.2rem; }
+  .career-card.specialities .career-card__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.4rem; }
+    .career-card.specialities .career-card__info p:nth-child(1) {
+      font-family: MyriadPro;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: #36b4f1; }
+    .career-card.specialities .career-card__info p:nth-child(2) {
+      font-family: MyriadPro;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: rgba(51, 51, 51, 0.5); }
+
+@media (max-width: 48em) {
+  .career-card.specialities {
+    grid-template-columns: 1fr;
+    height: 100%; }
+    .career-card.specialities .career-card__heading {
+      font-size: 3.2rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem; }
+    .career-card.specialities .career-card__text {
+      margin-bottom: 4rem; }
+    .career-card.specialities .career-card__text-wrap {
+      padding: 0; }
+    .career-card.specialities .career-card__image-box {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 0; }
+    .career-card.specialities .career-card__image-doctors {
+      width: 21rem; }
+    .career-card.specialities .career-card__info {
+      gap: 1rem; }
+      .career-card.specialities .career-card__info p:nth-child(1) {
+        font-size: 2.6rem; }
+      .career-card.specialities .career-card__info p:nth-child(2) {
+        font-size: 2.6rem; }
+    .career-card.specialities .career-card__btn {
       display: none; } }
 
 .sl-reviews {
@@ -44888,6 +45831,67 @@ body::after {
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover; }
+  .d-center__image-m {
+    display: none; }
+
+@media (max-width: 48em) {
+  .d-center__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .d-center .container {
+    padding: 0; }
+  .d-center__links {
+    margin-bottom: 9rem; }
+    .d-center__links-link {
+      font-size: 2.6rem; }
+      .d-center__links-link::after {
+        top: 1.1rem;
+        bottom: 1.1rem; }
+    .d-center__links .nolink {
+      font-size: 2.6rem; }
+  .d-center__left {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 14.6rem; }
+  .d-center__title {
+    margin-bottom: 4rem; }
+    .d-center__title span {
+      display: none; }
+    .d-center__title strong {
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+  .d-center__text {
+    margin-left: 2rem;
+    font-size: 2.6rem;
+    line-height: 120%; }
+  .d-center__block {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .d-center__box {
+    margin-bottom: 7rem; }
+  .d-center__box:last-child {
+    margin-bottom: 0; }
+  .d-center__box-icon {
+    width: 8.4rem;
+    height: 8.4rem;
+    margin-right: 1.6rem; }
+    .d-center__box-icon svg {
+      width: 8.4rem;
+      height: 8.4rem; }
+  .d-center__box-text {
+    font-size: 2.6rem; }
+  .d-center__image {
+    height: 60.2rem; }
+  .d-center__image-d {
+    display: none; }
+  .d-center__image-m {
+    display: block; } }
 
 .get-there {
   margin-bottom: 18rem; }
@@ -44963,6 +45967,140 @@ body::after {
     line-height: 130%; }
   .get-there__box-inner-one {
     margin-bottom: 0.8rem; }
+
+@media (max-width: 48em) {
+  .get-there__title {
+    margin-bottom: 6.4rem; }
+    .get-there__title span {
+      display: block;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 1rem; }
+    .get-there__title strong {
+      display: block;
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+    .get-there__title .btn {
+      display: none; }
+  .get-there__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .get-there__box {
+    margin-bottom: 2.4rem; }
+  .get-there__box-icon {
+    width: 7.2rem;
+    height: 7.2rem;
+    margin-right: 1.7rem; }
+    .get-there__box-icon svg {
+      width: 7.2rem;
+      height: 7.2rem; }
+  .get-there__box-inner-one {
+    margin-bottom: 2.4rem;
+    max-width: 24rem; }
+    .get-there__box-inner-one strong {
+      font-size: 2.6rem;
+      line-height: normal; }
+  .get-there__box-inner span {
+    font-size: 2.4rem; } }
+
+.specialties-d {
+  margin-bottom: 18rem; }
+  .specialties-d__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0.8rem;
+    position: relative; }
+    .specialties-d__title span {
+      display: block;
+      color: #36B4F1;
+      font-family: 'Myriad Pro',sans-serif;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal; }
+    .specialties-d__title strong {
+      color: #2F2F2F;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: block; }
+    .specialties-d__title .link, .specialties-d__title .alphabet-filter__title {
+      position: absolute;
+      right: 0;
+      bottom: 1rem; }
+  .specialties-d__swiper {
+    padding: 6rem 0; }
+  .specialties-d .career-card {
+    width: 70rem;
+    background: #FFF;
+    -webkit-box-shadow: 0px 1rem 2rem 0px rgba(124, 148, 159, 0.1);
+            box-shadow: 0px 1rem 2rem 0px rgba(124, 148, 159, 0.1); }
+  .specialties-d__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative; }
+    .specialties-d__pagination .swiper-pagination-bullet {
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background: none;
+      margin-right: 2.6rem;
+      cursor: pointer;
+      background-color: transparent; }
+    .specialties-d__pagination .swiper-pagination-bullet-active {
+      border: 1px solid #FE7200;
+      background: #FE7200; }
+  .specialties-d__pagination-bullets {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .specialties-d__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%; }
+
+@media (max-width: 48em) {
+  .specialties-d__title {
+    margin-bottom: 4rem; }
+    .specialties-d__title span {
+      display: none; }
+    .specialties-d__title strong {
+      font-size: 5.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125.926%; }
+    .specialties-d__title .link, .specialties-d__title .alphabet-filter__title {
+      display: none; }
+  .specialties-d__pagination .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem; } }
 
 #ui-datepicker-div {
   display: block !important;
