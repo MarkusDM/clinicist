@@ -2,6 +2,8 @@
 
 $( document ).ready(function() {
 
+    $('.input_email input').inputmask('email');
+
     $('.js-toggle').on('click', function () {
       $('.js-toggle').removeClass('active')
       $(this).toggleClass('active')
