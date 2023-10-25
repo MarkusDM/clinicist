@@ -34498,7 +34498,7 @@ textarea {
     font-size: 3.2rem;
     line-height: 150%;
     max-width: 100%;
-    font-family: Myriad Pro, sans-serif; }
+    font-family: MyriadPro, sans-serif; }
   .article-card__text-wrap {
     padding: 4rem 4rem 6rem 4rem; }
   .link-item {
@@ -42889,6 +42889,7 @@ body::after {
   line-height: normal; }
 
 .news-descs__desc-list li {
+  font-family: Myriad Pro, sans-serif;
   position: relative;
   padding-left: 4.6rem;
   font-size: 1.8rem; }
@@ -43028,7 +43029,7 @@ body::after {
     row-gap: 0.5rem; }
   .blog-card__author-title {
     color: rgba(51, 51, 51, 0.5);
-    font-family: Myriad Pro, sans-serif;
+    font-family: MyriadPro, sans-serif;
     font-size: 1.8rem;
     line-height: normal; }
   .blog-card__author-img {
@@ -43048,7 +43049,7 @@ body::after {
       top: 0.5rem; }
   .blog-card__author-name {
     color: #2f2f2f;
-    font-family: Myriad Pro, sans-serif;
+    font-family: MyriadPro, sans-serif;
     font-size: 1.8rem;
     line-height: normal; }
   .blog-card__link {
@@ -43065,7 +43066,7 @@ body::after {
     top: -3.75rem; }
     .blog-card__image-bg p {
       color: #36b4f1;
-      font-family: Montserrat, sans-serif;
+      font-family: MyriadPro, sans-serif;
       font-size: 1.6rem;
       line-height: normal;
       padding: 2.2rem 0 0 3rem;
@@ -43114,6 +43115,7 @@ body::after {
       .blog-card__image-bg p {
         font-size: 3rem;
         line-height: 150%;
+        font-family: Montserrat, sans-serif;
         padding: 1.2rem 0 0 4rem; } }
 
 .rec-materials {
@@ -43288,7 +43290,7 @@ body::after {
       background: #FFF;
       padding-left: 4.5rem;
       color: #2f2f2f;
-      font-family: 'Myriad Pro', sans-serif;
+      font-family: 'MyriadPro', sans-serif;
       font-size: 1.6rem;
       font-style: normal;
       font-weight: 400;
@@ -43330,7 +43332,7 @@ body::after {
         display: none; }
       .blog-search__menu button {
         text-align: center;
-        font-family: Myriad Pro, sans-serif;
+        font-family: MyriadPro, sans-serif;
         font-size: 2.4rem;
         padding: 0.8rem 0.6rem;
         -ms-flex-negative: 0;
@@ -43516,13 +43518,17 @@ body::after {
 
 .blog-desc__list-txt {
   color: #2f2f2f;
-  font-family: Myriad Pro, sans-serif;
+  font-family: MyriadPro, sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 130%; }
 
 .blog-desc__text {
   margin-bottom: 4rem; }
+
+.blog-desc__text-bl {
+  font-family: MyriadPro, sans-serif;
+  font-weight: 600; }
 
 .blog-desc__text-2 {
   display: -webkit-box;
@@ -43732,7 +43738,7 @@ body::after {
     margin-bottom: 2.6rem; }
   .blog-comments__text {
     color: rgba(51, 51, 51, 0.5);
-    font-family: Myriad Pro, sans-serif;
+    font-family: MyriadPro, sans-serif;
     font-size: 1.8rem;
     line-height: 125%; }
   .blog-comments__descs {
