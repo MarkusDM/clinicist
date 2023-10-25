@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const programCards = document.querySelectorAll('.other-programs-card');
   const moveImage = () => {
     if (programCards.length) {
-      programCards.forEach(programCard => {
+      programCards.forEach((programCard) => {
         const image = programCard.querySelector(
           '.other-programs-card__image-wrap'
         );
@@ -553,7 +553,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // get spoilers with media queries
       let mdQueriesArray = dataMediaQueries(spoilersArray, 'spoilers');
       if (mdQueriesArray && mdQueriesArray.length) {
-        mdQueriesArray.forEach(mdQueriesItem => {
+        mdQueriesArray.forEach((mdQueriesItem) => {
           // event
           mdQueriesItem.matchMedia.addEventListener('change', function () {
             initSpoilers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -933,7 +933,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (originalSelect.multiple && originalSelect.hasAttribute('data-tags')) {
         selectTitleValue = this.getSelectedOptionsData(originalSelect)
           .elements.map(
-            option =>
+            (option) =>
               `<span role="button" data-select-id="${
                 selectItem.dataset.id
               }" data-value="${
@@ -1035,11 +1035,11 @@ document.addEventListener('DOMContentLoaded', function () {
         );
       }
       return {
-        elements: selectedOptions.map(option => option),
+        elements: selectedOptions.map((option) => option),
         values: selectedOptions
-          .filter(option => option.value)
-          .map(option => option.value),
-        html: selectedOptions.map(option =>
+          .filter((option) => option.value)
+          .map((option) => option.value),
+        html: selectedOptions.map((option) =>
           this.getSelectElementContent(option)
         ),
       };
@@ -1199,7 +1199,7 @@ document.addEventListener('DOMContentLoaded', function () {
       );
       const _this = this;
       selectInput.addEventListener('input', function () {
-        selectOptionsItems.forEach(selectOptionsItem => {
+        selectOptionsItems.forEach((selectOptionsItem) => {
           if (
             selectOptionsItem.textContent
               .toUpperCase()
@@ -1244,7 +1244,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let mdQueriesArray = dataMediaQueries(tabs, 'tabs');
       if (mdQueriesArray && mdQueriesArray.length) {
-        mdQueriesArray.forEach(mdQueriesItem => {
+        mdQueriesArray.forEach((mdQueriesItem) => {
           mdQueriesItem.matchMedia.addEventListener('change', function () {
             setTitlePosition(
               mdQueriesItem.itemsArray,
@@ -1369,7 +1369,7 @@ document.addEventListener('DOMContentLoaded', function () {
           );
           tabActiveTitle.length
             ? (tabActiveTitle = Array.from(tabActiveTitle).filter(
-                item => item.closest('[data-tabs]') === tabsBlock
+                (item) => item.closest('[data-tabs]') === tabsBlock
               ))
             : null;
           tabActiveTitle.length
@@ -1807,7 +1807,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // get objects with media queries
         mdQueriesArray = dataMediaQueries(showMoreBlocks, 'showmoreMedia');
         if (mdQueriesArray && mdQueriesArray.length) {
-          mdQueriesArray.forEach(mdQueriesItem => {
+          mdQueriesArray.forEach((mdQueriesItem) => {
             // event
             mdQueriesItem.matchMedia.addEventListener('change', function () {
               initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -2061,7 +2061,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function stickyBlockInit() {
       const stickyParents = document.querySelectorAll('[data-sticky]');
       if (stickyParents.length) {
-        stickyParents.forEach(stickyParent => {
+        stickyParents.forEach((stickyParent) => {
           let stickyConfig = {
             media: stickyParent.dataset.sticky
               ? parseInt(stickyParent.dataset.sticky)
@@ -2259,7 +2259,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (
       target.closest('#open-sort-dropdown') &&
       !sortDropdown.classList.contains('_slide') &&
+<<<<<<< HEAD
+      !sortDropdown.classList.contains('.our-vacancies__sort')
+=======
       !sortDropdown.classList.contains('our-vacancies__sort')
+>>>>>>> upstream/main
     ) {
       if (!document.documentElement.classList.contains('_sort-dropdown-open')) {
         document.documentElement.classList.add('_sort-dropdown-open');
