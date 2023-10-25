@@ -34,6 +34,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const md = window.matchMedia('(max-width: 768px)').matches;
 
+  // doctors tabs
+  const doctorsTabs = swiper => {
+    const activeIndex = swiper.activeIndex;
+    const tabs = swiper.el.parentElement.querySelectorAll('.doctor__item');
+    if (tabs.length) {
+      tabs.forEach(tab => {
+        if (swiper.slides[activeIndex].dataset.question) {
+          setActiveClass(swiper.slides[activeIndex], swiper.slides, 'active');
+          if (
+            tab.dataset.question === swiper.slides[activeIndex].dataset.question
+          ) {
+            tab.classList.add('active');
+          } else if (
+            tab.dataset.question !== swiper.slides[activeIndex].dataset.question
+          ) {
+            tab.classList.remove('active');
+          }
+        } else if (!swiper.slides[activeIndex].dataset.question) {
+          setActiveClass(
+            swiper.slides[swiper.slides.length - 2],
+            swiper.slides,
+            'active'
+          );
+          setActiveClass(tabs[tabs.length - 1], tabs, 'active');
+        }
+      });
+    }
+  };
+
   // sliders
   const initSliders = () => {
     let awardsSlider = null;
@@ -64,6 +93,15 @@ document.addEventListener('DOMContentLoaded', function () {
           spaceBetween: 25,
           slidesPerView: 'auto',
           speed: 1000,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
+          normalizeSlideIndex: false,
+          slideToClickedSlide: true,
+          on: {
+            slideChange: swiper => {
+              doctorsTabs(swiper);
+            },
+          },
         });
       } else if (!md && imgsSlider) {
         imgsSlider.destroy();
@@ -253,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // sort dropdown
   const sortDropdown = document.querySelector('.sort-dropdown');
-  if (sortDropdown) {
+  if (sortDropdown && !sortDropdown.classList.contains('our-vacancies__sort')) {
     _slideUp(sortDropdown);
   }
 
@@ -391,6 +429,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
   allReviewsModify();
+
+  // date mask
+  const dateInputs = document.querySelectorAll('[data-required="date"]');
+  if (dateInputs.length) {
+    dateInputs.forEach(dateInput => {
+      dateInput.addEventListener('keyup', function () {
+        const v = dateInput.value;
+        if (v.match(/^\d{2}$/) !== null) {
+          dateInput.value = v + '/';
+        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+          dateInput.value = v + '/';
+        }
+      });
+    });
+  }
 
   // ===========================================================================
 
@@ -2135,6 +2188,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
       currentFilter.classList.add('active');
+      document.documentElement.classList.remove('_dropdown-open');
+      document.documentElement.style.overflow = 'auto';
       dropdownTxt.innerHTML = `${
         currentFilter.querySelector('.centers-filter-list__item-text').innerHTML
       }`;
@@ -2204,7 +2259,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (
       target.closest('#open-sort-dropdown') &&
       !sortDropdown.classList.contains('_slide') &&
-      !sortDropdown.classList.contains('.our-vacancies__sort')
+      !sortDropdown.classList.contains('our-vacancies__sort')
     ) {
       if (!document.documentElement.classList.contains('_sort-dropdown-open')) {
         document.documentElement.classList.add('_sort-dropdown-open');

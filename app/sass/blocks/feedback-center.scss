@@ -1,0 +1,205 @@
+.feedback-center {
+    background: #EEF3F7;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    margin-bottom: 18rem;
+    &__title {
+        
+        margin-bottom: 6.8rem;
+
+        span {
+            display: block;
+            color:  #36B4F1;
+        
+            font-family: 'Myriad Pro',sans-serif;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        strong {
+            color:  #2F2F2F;
+          
+            font-family: 'Montserrat',sans-serif;
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: block;
+        }
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        border-radius: 1rem;
+        background:  #FFF;
+        box-shadow: 0px 20px 60px 0px rgba(124, 148, 159, 0.10);
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 4.7rem;
+        margin-bottom: 2rem;
+    }
+
+    &__block:last-child {
+        margin-bottom: 0;
+    }
+
+    &__block-left {
+        display: flex;
+        align-items:center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    &__block-image {
+        width: 6.8rem;
+        height: 6.8rem;
+        margin-right: 5rem;
+        svg {
+            width: 6.8rem;
+        height: 6.8rem;
+        }
+    }
+
+    &__block-title {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+            display: block;
+            color: #2F2F2F;
+            font-family: 'Montserrat',sans-serif;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%; 
+            max-width: 61.9rem;
+        }
+
+        .link {
+            margin-top: 1rem;
+        }
+    }
+
+    &__block-right {
+        border-left: 0.4rem solid rgba(216, 221, 228, 0.50);
+        padding-left: 5.3rem;
+        
+        display: flex;
+        height: 13rem;
+        min-width: 58.5rem;
+        align-items:center;
+
+    }
+
+    &__block-email {
+        color:  rgba(51, 51, 51, 0.50);
+        display: block;
+        font-family: 'Montserrat',sans-serif;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.5rem;
+        text-decoration-line: underline;
+    }
+}
+
+.contacts-center {
+    &__content {
+      width: 100%;
+      padding-top: 11rem;
+      margin-bottom: 2.6rem;
+      &-title {
+        margin-bottom: 3.7rem;
+      }
+      &-links {
+        margin-bottom: 9rem;
+        &-link {
+          font-size: 3rem;
+          &::after {
+            top: 1.1rem;
+            bottom: 1.1rem;
+          }
+        }
+        & .nolink {
+          font-size: 3rem;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 4.6rem;
+      span {
+        font-size: 3rem;
+        margin-bottom: 1.6rem;
+      }
+
+      strong {
+        font-size: 5.4rem;
+      }
+    }
+
+}
+
+@media (max-width: 48em) {
+    .feedback-center{
+   
+        &__title {
+          margin-bottom: 9rem;
+          span {
+            font-size: 3rem;
+            margin-bottom: 1.6rem;
+          }
+    
+          strong {
+            font-size: 5.4rem;
+          }
+        }
+
+        &__block {
+            flex-direction: column;
+            align-items:initial;
+            padding: 4rem;
+        }
+        &__block-left {
+            flex-direction: column;
+            align-items:initial;
+        }
+
+        &__block-image {
+            margin-right: 0;
+            width: 11.2rem;
+            height: 11.2rem;
+            margin-bottom: 4rem;
+            svg {
+                width: 11.2rem;
+                height: 11.2rem;
+            }
+        }
+
+        &__block-title {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; 
+        }
+
+        &__block-right {
+            min-width: auto;
+            border:none;
+            padding: 0;
+            height: auto;
+        }
+        &__block-email {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 156.25%; 
+        }
+    
+    }
+
+  
+}
