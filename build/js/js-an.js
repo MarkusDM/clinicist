@@ -8,14 +8,6 @@ const searchBtn = document.querySelector('.search-btn');
 const searchLabel = document.querySelector('.search__label');
 const btnMore = Array.from(document.querySelectorAll('.services-p__box-link'));
 const mapList = document.querySelectorAll('.services-p__box-inner');
-const rem = function (rem) {
-  if ($(window).width() > 768) {
-    return 0.005208335 * $(window).width() * rem
-  } else {
-    // где 375 это ширина моб версии макета
-    return (100 / 375) * (0.05 * $(window).width()) * rem
-  }
-}
 
 let tabIndex;
 if(historyItems) {
@@ -68,6 +60,33 @@ valuesTabs.forEach(e => {
   })
 })
 
+const aboutDoctors = new Swiper('.about-doctors__slider', {
+  slidesPerView: 3,
+  spaceBetween: 40,
+  touchMoveStopPropagation: true,
+  enabled: false,
+  freeMode: false,
+  navigation: {
+    nextEl: '.about-doctors__btn-next',
+    prevEl: '.about-doctors__btn-prev',
+  },
+  pagination: {
+    el: '.about-doctors__slider-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 40,
+      slidesPerView: 3,
+    },
+    120: {
+      spaceBetween: 40,
+      slidesPerView: 1,
+      enabled: true,
+    },
+  }
+})
 
 let historySlider;
 
@@ -78,21 +97,20 @@ function historyInit() {
 
   historySlider = new Swiper('.story-swiper', {
       slidesPerView: 5,
-      spaceBetween: rem(4),
+      spaceBetween: 4,
       speed: 1000,
       breakpoints: {
         768: {
           slidesPerView: 5,
-          spaceBetween: rem(4),
+          spaceBetween: 4,
         },
         200: {
           slidesPerView: 2,
-          spaceBetween: rem(8.8),
+          spaceBetween: 88,
         }
       },
   })
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
@@ -100,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     historyInit();
   } else if(width > 768) {
     historyInit();
+    aboutDoctors.update();
+    aboutDoctors.destroy(false, false);
     historySlider.destroy(false, false);
   }
 })
@@ -110,6 +130,8 @@ window.addEventListener('resize', () => {
     historyInit()
    } else if(width > 768) {
     historyInit()
+    aboutDoctors.update();
+    aboutDoctors.destroy(false, false);
     historySlider.destroy(false, false);
   }
 })
@@ -137,7 +159,7 @@ const aboutSlider = new Swiper('.about-swiper', {
     type: 'fraction',
   },
   slidesPerView: 1,
-  spaceBetween: rem(1),
+  spaceBetween: 10,
   speed: 1000,
   breakpoints: {
     768: {
@@ -164,10 +186,9 @@ const llSlider = new Swiper('.modal-licenzia__swiper', {
     nextEl: '.modal-licenzia-btn-next',
     prevEl: '.modal-licenzia-btn-prev',
   },
-  spaceBetween: rem(5),
+  spaceBetween: 50,
   speed: 1000,
 })
-
 
 const quoteSlider = new Swiper('.licenzia-swiper', {
   slidesPerGroup: 4,
@@ -182,17 +203,17 @@ const quoteSlider = new Swiper('.licenzia-swiper', {
     type: 'bullets',
     clickable: true,
   },
-  spaceBetween: rem(2.1),
+  spaceBetween: 21,
   speed: 1000,
   breakpoints: {
     768: {
-      spaceBetween: rem(2.1),
+      spaceBetween: 21,
       slidesPerGroup: 4,
       slidesPerView: 4,
       slidesPerColumn: 1,
     },
     120: {
-      spaceBetween: rem(4.2),
+      spaceBetween: 42,
       slidesPerGroup: 2,
       slidesPerView: 2,
       slidesPerColumn: 2,
@@ -221,8 +242,6 @@ document.addEventListener('click', (el) => {
     }
 })
 
-
-
 const valueThumbs = new Swiper('.thumbs-swiper', {
   slideToClickedSlide: true,
   slidesPerView: 'auto',
@@ -231,11 +250,10 @@ const valueThumbs = new Swiper('.thumbs-swiper', {
 
 const valueslider = new Swiper('.values-swiper', {
   slidesPerView: 1,
-  spaceBetween: rem(1),
+  spaceBetween: 10,
   effect: 'fade',
   fadeEffect: {
     crossFade: true
   },
   speed: 1000,
 })
-
