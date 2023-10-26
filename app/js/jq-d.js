@@ -1,4 +1,12 @@
 "use strict";
+const rem = function (rem) {
+  if ($(window).width() > 768) {
+    return 0.005208335 * $(window).width() * rem
+  } else {
+    // где 375 это ширина моб версии макета
+    return (100 / 375) * (0.05 * $(window).width()) * rem
+  }
+}
 
 $( document ).ready(function() {
     $('.header__top-form-down-block-data-item-link').each(function() {
@@ -336,6 +344,10 @@ const slReviews = new Swiper('.sl-reviews__swiper', {
 
 
 
+
+
+
+
 const similarServicesSwiper = new Swiper('.similar-services__swiper', {
   spaceBetween: rem(3.6),
   slidesPerView: 1,
@@ -360,3 +372,28 @@ const similarServicesSwiper = new Swiper('.similar-services__swiper', {
   
 });
 
+const sDSwiperSlider = new Swiper('.specialties-d__swiper', {
+  spaceBetween: rem(1),
+  slidesPerView: 1,
+ 
+  breakpoints: {
+		769: {
+			slidesPerView: 2,
+			spaceBetween: rem(4),
+		},
+		
+	},
+  speed: 1000,
+  navigation: {
+    nextEl: '.specialties-d__next',
+    prevEl: '.specialties-d__prev',
+  },
+
+  on: {
+    slideChange: function (sDSwiperSlider) {
+        $('.swiper-pagination-bullet').removeClass('swiper-pagination-bullet-active');
+        $('.swiper-pagination-bullet:nth-child('+ (sDSwiperSlider.realIndex % 4 + 1) +')').addClass('swiper-pagination-bullet-active');
+    }
+  },
+  
+});
