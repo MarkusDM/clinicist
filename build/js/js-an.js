@@ -210,10 +210,9 @@ const quoteSlider = new Swiper('.licenzia-swiper', {
       spaceBetween: 21,
       slidesPerGroup: 4,
       slidesPerView: 4,
-      slidesPerColumn: 1,
     },
     120: {
-      spaceBetween: 42,
+      spaceBetween: 21,
       slidesPerGroup: 2,
       slidesPerView: 2,
       slidesPerColumn: 2,
