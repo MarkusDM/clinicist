@@ -708,140 +708,482 @@
 </header>
 
     <main class="main">
-      <section class="profile profile-patients">
-        <div class="profile-chapter__container container">
-          <div class="profile-chapter__body">
-            <a href="#" class="profile-chapter__link link"
-              ><span>Вернуться назад</span></a
-            >
-            <div class="profile-chapter__body-inner">
-              <div class="profile-chapter__content">
-                <form data-dev action="#" class="profile-chapter__form form">
-                  <h1 class="profile-chapter__title title">
-                    Добавить пациента
-                  </h1>
-                  <div class="profile-chapter__options options">
-                    <div class="options__item">
-                      <input
-                        hidden
-                        id="o_1"
-                        class="options__input"
-                        checked
-                        type="radio"
-                        value="1"
-                        name="option" />
-                      <label for="o_1" class="options__label"
-                        ><span class="options__text">Мужчина</span></label
-                      >
-                    </div>
-                    <div class="options__item">
-                      <input
-                        hidden
-                        id="o_2"
-                        class="options__input"
-                        type="radio"
-                        value="2"
-                        name="option" />
-                      <label for="o_2" class="options__label"
-                        ><span class="options__text">Женщина</span></label
-                      >
-                    </div>
-                  </div>
-                  <div class="profile-chapter__fields">
-                    <div class="profile-chapter__input-wrap input input_user">
-                      <input
-                        data-validate
-                        data-required
-                        autocomplete="off"
-                        name="form[]"
-                        type="text"
-                        data-error="Заполните поле"
-                        placeholder="Имя"
-                        class="input__field" />
-                    </div>
-                    <div class="profile-chapter__input-wrap input input_user">
-                      <input
-                        data-validate
-                        data-required
-                        autocomplete="off"
-                        name="form[]"
-                        type="text"
-                        data-error="Заполните поле"
-                        placeholder="Фамилия"
-                        class="input__field" />
-                    </div>
-                    <div class="profile-chapter__input-wrap input input_user">
-                      <input
-                        data-validate
-                        data-required
-                        autocomplete="off"
-                        name="form[]"
-                        type="text"
-                        data-error="Заполните поле"
-                        placeholder="Отчество"
-                        class="input__field" />
-                    </div>
-                    <div class="profile-chapter__input-wrap input input_tel">
-                      <input
-                        data-validate
-                        data-required
-                        autocomplete="off"
-                        name="form[]"
-                        type="tel"
-                        data-error="Заполните поле"
-                        placeholder="Номер телефона"
-                        class="input__field tel-mask" />
-                    </div>
-                  </div>
-                  <button type="submit" class="profile-chapter__btn btn">
-                    <span class="btn__text">Сохранить</span>
-                  </button>
-                </form>
+      <section class="profile">
+        <div class="profile__container container">
+          <div class="profile__body">
+            <div
+              data-content-type="profile-data"
+              class="profile__content _active">
+              <h1 class="profile__title title">Персональные данные</h1>
+              <div class="profile__group group-profile-info">
+                <div class="group-profile-info__item">
+                  <h2 class="group-profile-info__heading">Имя:</h2>
+                  <p class="group-profile-info__text">Николай</p>
+                </div>
+                <div class="group-profile-info__item">
+                  <h2 class="group-profile-info__heading">Фамилия:</h2>
+                  <p class="group-profile-info__text">Тареченков</p>
+                </div>
+                <div class="group-profile-info__item">
+                  <h2 class="group-profile-info__heading">Отчество:</h2>
+                  <p class="group-profile-info__text">Васильевич</p>
+                </div>
+                <div class="group-profile-info__item">
+                  <h2 class="group-profile-info__heading">Телефон:</h2>
+                  <p class="group-profile-info__text">
+                    + 7 (912) 241 - 12 - 12
+                  </p>
+                </div>
               </div>
-              <div class="profile-chapter__services-box services-box">
-                <div class="services-box__item">
-                  <div class="services-box__icon-wrap icon">
-                    <img
-                      src="./img/a-image/icons/doctor.svg"
-                      alt=""
-                      class="icon__image" />
+              <button type="button" class="profile__btn btn">
+                <span class="btn__text">Изменить</span>
+              </button>
+            </div>
+            <div
+              data-content-type="profile-dates"
+              class="profile__content profile-dates">
+              <div class="profile-dates__head">
+                <span class="profile-dates__title title">Записи</span>
+                <a href="#" class="profile-dates__link link"
+                  >Подробнее об услуге</a
+                >
+              </div>
+              <div class="profile-dates__body">
+                <div class="profile-dates__item">
+                  <div class="profile-dates__content">
+                    <span class="profile-dates__heading heading"
+                      >Ангиография отделов аорты и её ветвей
+                    </span>
+                    <div class="profile-dates__group txt">
+                      <div
+                        class="profile-dates__group-item profile-dates__group-item_user">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none">
+                          <g clip-path="url(#clip0_4018_2752)">
+                            <path
+                              d="M11 11C12.0878 11 13.1512 10.6774 14.0556 10.0731C14.9601 9.46874 15.6651 8.60976 16.0813 7.60476C16.4976 6.59977 16.6065 5.4939 16.3943 4.42701C16.1821 3.36011 15.6583 2.3801 14.8891 1.61092C14.1199 0.841726 13.1399 0.317902 12.073 0.105683C11.0061 -0.106535 9.90023 0.00238307 8.89524 0.418665C7.89025 0.834947 7.03126 1.5399 6.42692 2.44437C5.82257 3.34884 5.5 4.41221 5.5 5.5C5.50146 6.95825 6.08139 8.35635 7.11252 9.38748C8.14366 10.4186 9.54176 10.9985 11 11ZM11 1.83334C11.7252 1.83334 12.4341 2.04838 13.0371 2.45128C13.6401 2.85418 14.11 3.42683 14.3876 4.09683C14.6651 4.76683 14.7377 5.50407 14.5962 6.21533C14.4547 6.9266 14.1055 7.57994 13.5927 8.09273C13.0799 8.60552 12.4266 8.95474 11.7153 9.09622C11.0041 9.23769 10.2668 9.16508 9.59683 8.88756C8.92683 8.61004 8.35418 8.14007 7.95128 7.53709C7.54838 6.93411 7.33333 6.2252 7.33333 5.5C7.33333 4.52754 7.71964 3.59491 8.40727 2.90728C9.09491 2.21964 10.0275 1.83334 11 1.83334Z"
+                              fill="#FE7200" />
+                            <path
+                              d="M11 12.832C8.81271 12.8345 6.7157 13.7044 5.16905 15.2511C3.6224 16.7977 2.75243 18.8947 2.75 21.082C2.75 21.3251 2.84658 21.5583 3.01849 21.7302C3.19039 21.9021 3.42355 21.9987 3.66667 21.9987C3.90978 21.9987 4.14294 21.9021 4.31485 21.7302C4.48676 21.5583 4.58333 21.3251 4.58333 21.082C4.58333 19.3802 5.25937 17.7481 6.46273 16.5448C7.66609 15.3414 9.29819 14.6654 11 14.6654C12.7018 14.6654 14.3339 15.3414 15.5373 16.5448C16.7406 17.7481 17.4167 19.3802 17.4167 21.082C17.4167 21.3251 17.5132 21.5583 17.6852 21.7302C17.8571 21.9021 18.0902 21.9987 18.3333 21.9987C18.5764 21.9987 18.8096 21.9021 18.9815 21.7302C19.1534 21.5583 19.25 21.3251 19.25 21.082C19.2476 18.8947 18.3776 16.7977 16.831 15.2511C15.2843 13.7044 13.1873 12.8345 11 12.832Z"
+                              fill="#FE7200" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4018_2752">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>до 18 лет</span>
+                      </div>
+                      <div class="profile-dates__group-item">
+                        Иван Иванов Иванович
+                      </div>
+                    </div>
+                    <div class="profile-dates__info txt">
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_place">
+                        Краснодар, ул. Калинина, 202
+                      </div>
+                      <a
+                        href="tel:88612073374"
+                        class="profile-dates__info-item profile-dates__info-item_tel"
+                        >8 (861) 207-33-74</a
+                      >
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_date">
+                        15 августа, 10:30
+                      </div>
+                    </div>
                   </div>
-                  <div class="services-box__text-wrap">
-                    <span class="services-box__heading">Доступные цены</span>
-                    <p class="services-box__text txt">
-                      Виды хирургов. Как и многие другие направления медицины
-                    </p>
-                  </div>
-                </div>
-                <div class="services-box__item">
-                  <div class="services-box__icon-wrap icon">
-                    <img
-                      src="./img/a-image/icons/syringe-white.svg"
-                      alt=""
-                      class="icon__image" />
-                  </div>
-                  <div class="services-box__text-wrap">
-                    <span class="services-box__heading"
-                      >Без накруток услуг</span
+                  <div class="profile-dates__aside">
+                    <div class="profile-dates__aside-group">
+                      <div class="profile-dates__image-wrap">
+                        <img
+                          src="./img/a-image/profile-dates.webp"
+                          alt=""
+                          class="profile-dates__image" />
+                      </div>
+                      <div class="profile-dates__aside-head">
+                        <span class="profile-dates__aside-heading"
+                          >Тареченков Н. М.</span
+                        >
+                        <span class="profile-dates__aside-txt txt"
+                          >Гланый ортопед</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="profile-dates__aside-link link"
+                      >Изменить запись</a
                     >
-                    <p class="services-box__text txt">
-                      Виды хирургов. Как и многие другие направления медицины
-                    </p>
                   </div>
                 </div>
-                <div class="services-box__item">
-                  <div class="services-box__icon-wrap icon">
-                    <img
-                      src="./img/a-image/icons/building.svg"
-                      alt=""
-                      class="icon__image" />
+                <div class="profile-dates__item">
+                  <div class="profile-dates__content">
+                    <span class="profile-dates__heading heading"
+                      >Ангиография отделов аорты и её ветвей
+                    </span>
+                    <div class="profile-dates__group txt">
+                      <div
+                        class="profile-dates__group-item profile-dates__group-item_user">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none">
+                          <g clip-path="url(#clip0_4018_2752)">
+                            <path
+                              d="M11 11C12.0878 11 13.1512 10.6774 14.0556 10.0731C14.9601 9.46874 15.6651 8.60976 16.0813 7.60476C16.4976 6.59977 16.6065 5.4939 16.3943 4.42701C16.1821 3.36011 15.6583 2.3801 14.8891 1.61092C14.1199 0.841726 13.1399 0.317902 12.073 0.105683C11.0061 -0.106535 9.90023 0.00238307 8.89524 0.418665C7.89025 0.834947 7.03126 1.5399 6.42692 2.44437C5.82257 3.34884 5.5 4.41221 5.5 5.5C5.50146 6.95825 6.08139 8.35635 7.11252 9.38748C8.14366 10.4186 9.54176 10.9985 11 11ZM11 1.83334C11.7252 1.83334 12.4341 2.04838 13.0371 2.45128C13.6401 2.85418 14.11 3.42683 14.3876 4.09683C14.6651 4.76683 14.7377 5.50407 14.5962 6.21533C14.4547 6.9266 14.1055 7.57994 13.5927 8.09273C13.0799 8.60552 12.4266 8.95474 11.7153 9.09622C11.0041 9.23769 10.2668 9.16508 9.59683 8.88756C8.92683 8.61004 8.35418 8.14007 7.95128 7.53709C7.54838 6.93411 7.33333 6.2252 7.33333 5.5C7.33333 4.52754 7.71964 3.59491 8.40727 2.90728C9.09491 2.21964 10.0275 1.83334 11 1.83334Z"
+                              fill="#FE7200" />
+                            <path
+                              d="M11 12.832C8.81271 12.8345 6.7157 13.7044 5.16905 15.2511C3.6224 16.7977 2.75243 18.8947 2.75 21.082C2.75 21.3251 2.84658 21.5583 3.01849 21.7302C3.19039 21.9021 3.42355 21.9987 3.66667 21.9987C3.90978 21.9987 4.14294 21.9021 4.31485 21.7302C4.48676 21.5583 4.58333 21.3251 4.58333 21.082C4.58333 19.3802 5.25937 17.7481 6.46273 16.5448C7.66609 15.3414 9.29819 14.6654 11 14.6654C12.7018 14.6654 14.3339 15.3414 15.5373 16.5448C16.7406 17.7481 17.4167 19.3802 17.4167 21.082C17.4167 21.3251 17.5132 21.5583 17.6852 21.7302C17.8571 21.9021 18.0902 21.9987 18.3333 21.9987C18.5764 21.9987 18.8096 21.9021 18.9815 21.7302C19.1534 21.5583 19.25 21.3251 19.25 21.082C19.2476 18.8947 18.3776 16.7977 16.831 15.2511C15.2843 13.7044 13.1873 12.8345 11 12.832Z"
+                              fill="#FE7200" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4018_2752">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>до 18 лет</span>
+                      </div>
+                      <div class="profile-dates__group-item">
+                        Иван Иванов Иванович
+                      </div>
+                    </div>
+                    <div class="profile-dates__info txt">
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_place">
+                        Краснодар, ул. Калинина, 202
+                      </div>
+                      <a
+                        href="tel:88612073374"
+                        class="profile-dates__info-item profile-dates__info-item_tel"
+                        >8 (861) 207-33-74</a
+                      >
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_date">
+                        15 августа, 10:30
+                      </div>
+                    </div>
                   </div>
-                  <div class="services-box__text-wrap">
-                    <span class="services-box__heading">Опыт</span>
-                    <p class="services-box__text txt">
-                      Виды хирургов. Как и многие другие направления медицины
-                    </p>
+                  <div class="profile-dates__aside">
+                    <div class="profile-dates__aside-group">
+                      <div class="profile-dates__image-wrap">
+                        <img
+                          src="./img/a-image/profile-dates.webp"
+                          alt=""
+                          class="profile-dates__image" />
+                      </div>
+                      <div class="profile-dates__aside-head">
+                        <span class="profile-dates__aside-heading"
+                          >Тареченков Н. М.</span
+                        >
+                        <span class="profile-dates__aside-txt txt"
+                          >Гланый ортопед</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="profile-dates__aside-link link"
+                      >Изменить запись</a
+                    >
                   </div>
+                </div>
+                <div class="profile-dates__item">
+                  <div class="profile-dates__content">
+                    <span class="profile-dates__heading heading"
+                      >Ангиография отделов аорты и её ветвей
+                    </span>
+                    <div class="profile-dates__group txt">
+                      <div
+                        class="profile-dates__group-item profile-dates__group-item_user">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none">
+                          <g clip-path="url(#clip0_4018_2752)">
+                            <path
+                              d="M11 11C12.0878 11 13.1512 10.6774 14.0556 10.0731C14.9601 9.46874 15.6651 8.60976 16.0813 7.60476C16.4976 6.59977 16.6065 5.4939 16.3943 4.42701C16.1821 3.36011 15.6583 2.3801 14.8891 1.61092C14.1199 0.841726 13.1399 0.317902 12.073 0.105683C11.0061 -0.106535 9.90023 0.00238307 8.89524 0.418665C7.89025 0.834947 7.03126 1.5399 6.42692 2.44437C5.82257 3.34884 5.5 4.41221 5.5 5.5C5.50146 6.95825 6.08139 8.35635 7.11252 9.38748C8.14366 10.4186 9.54176 10.9985 11 11ZM11 1.83334C11.7252 1.83334 12.4341 2.04838 13.0371 2.45128C13.6401 2.85418 14.11 3.42683 14.3876 4.09683C14.6651 4.76683 14.7377 5.50407 14.5962 6.21533C14.4547 6.9266 14.1055 7.57994 13.5927 8.09273C13.0799 8.60552 12.4266 8.95474 11.7153 9.09622C11.0041 9.23769 10.2668 9.16508 9.59683 8.88756C8.92683 8.61004 8.35418 8.14007 7.95128 7.53709C7.54838 6.93411 7.33333 6.2252 7.33333 5.5C7.33333 4.52754 7.71964 3.59491 8.40727 2.90728C9.09491 2.21964 10.0275 1.83334 11 1.83334Z"
+                              fill="#FE7200" />
+                            <path
+                              d="M11 12.832C8.81271 12.8345 6.7157 13.7044 5.16905 15.2511C3.6224 16.7977 2.75243 18.8947 2.75 21.082C2.75 21.3251 2.84658 21.5583 3.01849 21.7302C3.19039 21.9021 3.42355 21.9987 3.66667 21.9987C3.90978 21.9987 4.14294 21.9021 4.31485 21.7302C4.48676 21.5583 4.58333 21.3251 4.58333 21.082C4.58333 19.3802 5.25937 17.7481 6.46273 16.5448C7.66609 15.3414 9.29819 14.6654 11 14.6654C12.7018 14.6654 14.3339 15.3414 15.5373 16.5448C16.7406 17.7481 17.4167 19.3802 17.4167 21.082C17.4167 21.3251 17.5132 21.5583 17.6852 21.7302C17.8571 21.9021 18.0902 21.9987 18.3333 21.9987C18.5764 21.9987 18.8096 21.9021 18.9815 21.7302C19.1534 21.5583 19.25 21.3251 19.25 21.082C19.2476 18.8947 18.3776 16.7977 16.831 15.2511C15.2843 13.7044 13.1873 12.8345 11 12.832Z"
+                              fill="#FE7200" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4018_2752">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>до 18 лет</span>
+                      </div>
+                      <div class="profile-dates__group-item">
+                        Иван Иванов Иванович
+                      </div>
+                    </div>
+                    <div class="profile-dates__info txt">
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_place">
+                        Краснодар, ул. Калинина, 202
+                      </div>
+                      <a
+                        href="tel:88612073374"
+                        class="profile-dates__info-item profile-dates__info-item_tel"
+                        >8 (861) 207-33-74</a
+                      >
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_date">
+                        15 августа, 10:30
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-dates__aside">
+                    <div class="profile-dates__aside-group">
+                      <div class="profile-dates__image-wrap">
+                        <img
+                          src="./img/a-image/profile-dates.webp"
+                          alt=""
+                          class="profile-dates__image" />
+                      </div>
+                      <div class="profile-dates__aside-head">
+                        <span class="profile-dates__aside-heading"
+                          >Тареченков Н. М.</span
+                        >
+                        <span class="profile-dates__aside-txt txt"
+                          >Гланый ортопед</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="profile-dates__aside-link link"
+                      >Изменить запись</a
+                    >
+                  </div>
+                </div>
+                <div class="profile-dates__item">
+                  <div class="profile-dates__content">
+                    <span class="profile-dates__heading heading"
+                      >Ангиография отделов аорты и её ветвей
+                    </span>
+                    <div class="profile-dates__group txt">
+                      <div
+                        class="profile-dates__group-item profile-dates__group-item_user">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none">
+                          <g clip-path="url(#clip0_4018_2752)">
+                            <path
+                              d="M11 11C12.0878 11 13.1512 10.6774 14.0556 10.0731C14.9601 9.46874 15.6651 8.60976 16.0813 7.60476C16.4976 6.59977 16.6065 5.4939 16.3943 4.42701C16.1821 3.36011 15.6583 2.3801 14.8891 1.61092C14.1199 0.841726 13.1399 0.317902 12.073 0.105683C11.0061 -0.106535 9.90023 0.00238307 8.89524 0.418665C7.89025 0.834947 7.03126 1.5399 6.42692 2.44437C5.82257 3.34884 5.5 4.41221 5.5 5.5C5.50146 6.95825 6.08139 8.35635 7.11252 9.38748C8.14366 10.4186 9.54176 10.9985 11 11ZM11 1.83334C11.7252 1.83334 12.4341 2.04838 13.0371 2.45128C13.6401 2.85418 14.11 3.42683 14.3876 4.09683C14.6651 4.76683 14.7377 5.50407 14.5962 6.21533C14.4547 6.9266 14.1055 7.57994 13.5927 8.09273C13.0799 8.60552 12.4266 8.95474 11.7153 9.09622C11.0041 9.23769 10.2668 9.16508 9.59683 8.88756C8.92683 8.61004 8.35418 8.14007 7.95128 7.53709C7.54838 6.93411 7.33333 6.2252 7.33333 5.5C7.33333 4.52754 7.71964 3.59491 8.40727 2.90728C9.09491 2.21964 10.0275 1.83334 11 1.83334Z"
+                              fill="#FE7200" />
+                            <path
+                              d="M11 12.832C8.81271 12.8345 6.7157 13.7044 5.16905 15.2511C3.6224 16.7977 2.75243 18.8947 2.75 21.082C2.75 21.3251 2.84658 21.5583 3.01849 21.7302C3.19039 21.9021 3.42355 21.9987 3.66667 21.9987C3.90978 21.9987 4.14294 21.9021 4.31485 21.7302C4.48676 21.5583 4.58333 21.3251 4.58333 21.082C4.58333 19.3802 5.25937 17.7481 6.46273 16.5448C7.66609 15.3414 9.29819 14.6654 11 14.6654C12.7018 14.6654 14.3339 15.3414 15.5373 16.5448C16.7406 17.7481 17.4167 19.3802 17.4167 21.082C17.4167 21.3251 17.5132 21.5583 17.6852 21.7302C17.8571 21.9021 18.0902 21.9987 18.3333 21.9987C18.5764 21.9987 18.8096 21.9021 18.9815 21.7302C19.1534 21.5583 19.25 21.3251 19.25 21.082C19.2476 18.8947 18.3776 16.7977 16.831 15.2511C15.2843 13.7044 13.1873 12.8345 11 12.832Z"
+                              fill="#FE7200" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4018_2752">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>до 18 лет</span>
+                      </div>
+                      <div class="profile-dates__group-item">
+                        Иван Иванов Иванович
+                      </div>
+                    </div>
+                    <div class="profile-dates__info txt">
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_place">
+                        Краснодар, ул. Калинина, 202
+                      </div>
+                      <a
+                        href="tel:88612073374"
+                        class="profile-dates__info-item profile-dates__info-item_tel"
+                        >8 (861) 207-33-74</a
+                      >
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_date">
+                        15 августа, 10:30
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-dates__aside">
+                    <div class="profile-dates__aside-group">
+                      <div class="profile-dates__image-wrap">
+                        <img
+                          src="./img/a-image/profile-dates.webp"
+                          alt=""
+                          class="profile-dates__image" />
+                      </div>
+                      <div class="profile-dates__aside-head">
+                        <span class="profile-dates__aside-heading"
+                          >Тареченков Н. М.</span
+                        >
+                        <span class="profile-dates__aside-txt txt"
+                          >Гланый ортопед</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="profile-dates__aside-link link"
+                      >Изменить запись</a
+                    >
+                  </div>
+                </div>
+                <div class="profile-dates__item">
+                  <div class="profile-dates__content">
+                    <span class="profile-dates__heading heading"
+                      >Ангиография отделов аорты и её ветвей
+                    </span>
+                    <div class="profile-dates__group txt">
+                      <div
+                        class="profile-dates__group-item profile-dates__group-item_user">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none">
+                          <g clip-path="url(#clip0_4018_2752)">
+                            <path
+                              d="M11 11C12.0878 11 13.1512 10.6774 14.0556 10.0731C14.9601 9.46874 15.6651 8.60976 16.0813 7.60476C16.4976 6.59977 16.6065 5.4939 16.3943 4.42701C16.1821 3.36011 15.6583 2.3801 14.8891 1.61092C14.1199 0.841726 13.1399 0.317902 12.073 0.105683C11.0061 -0.106535 9.90023 0.00238307 8.89524 0.418665C7.89025 0.834947 7.03126 1.5399 6.42692 2.44437C5.82257 3.34884 5.5 4.41221 5.5 5.5C5.50146 6.95825 6.08139 8.35635 7.11252 9.38748C8.14366 10.4186 9.54176 10.9985 11 11ZM11 1.83334C11.7252 1.83334 12.4341 2.04838 13.0371 2.45128C13.6401 2.85418 14.11 3.42683 14.3876 4.09683C14.6651 4.76683 14.7377 5.50407 14.5962 6.21533C14.4547 6.9266 14.1055 7.57994 13.5927 8.09273C13.0799 8.60552 12.4266 8.95474 11.7153 9.09622C11.0041 9.23769 10.2668 9.16508 9.59683 8.88756C8.92683 8.61004 8.35418 8.14007 7.95128 7.53709C7.54838 6.93411 7.33333 6.2252 7.33333 5.5C7.33333 4.52754 7.71964 3.59491 8.40727 2.90728C9.09491 2.21964 10.0275 1.83334 11 1.83334Z"
+                              fill="#FE7200" />
+                            <path
+                              d="M11 12.832C8.81271 12.8345 6.7157 13.7044 5.16905 15.2511C3.6224 16.7977 2.75243 18.8947 2.75 21.082C2.75 21.3251 2.84658 21.5583 3.01849 21.7302C3.19039 21.9021 3.42355 21.9987 3.66667 21.9987C3.90978 21.9987 4.14294 21.9021 4.31485 21.7302C4.48676 21.5583 4.58333 21.3251 4.58333 21.082C4.58333 19.3802 5.25937 17.7481 6.46273 16.5448C7.66609 15.3414 9.29819 14.6654 11 14.6654C12.7018 14.6654 14.3339 15.3414 15.5373 16.5448C16.7406 17.7481 17.4167 19.3802 17.4167 21.082C17.4167 21.3251 17.5132 21.5583 17.6852 21.7302C17.8571 21.9021 18.0902 21.9987 18.3333 21.9987C18.5764 21.9987 18.8096 21.9021 18.9815 21.7302C19.1534 21.5583 19.25 21.3251 19.25 21.082C19.2476 18.8947 18.3776 16.7977 16.831 15.2511C15.2843 13.7044 13.1873 12.8345 11 12.832Z"
+                              fill="#FE7200" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_4018_2752">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>до 18 лет</span>
+                      </div>
+                      <div class="profile-dates__group-item">
+                        Иван Иванов Иванович
+                      </div>
+                    </div>
+                    <div class="profile-dates__info txt">
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_place">
+                        Краснодар, ул. Калинина, 202
+                      </div>
+                      <a
+                        href="tel:88612073374"
+                        class="profile-dates__info-item profile-dates__info-item_tel"
+                        >8 (861) 207-33-74</a
+                      >
+                      <div
+                        class="profile-dates__info-item profile-dates__info-item_date">
+                        15 августа, 10:30
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-dates__aside">
+                    <div class="profile-dates__aside-group">
+                      <div class="profile-dates__image-wrap">
+                        <img
+                          src="./img/a-image/profile-dates.webp"
+                          alt=""
+                          class="profile-dates__image" />
+                      </div>
+                      <div class="profile-dates__aside-head">
+                        <span class="profile-dates__aside-heading"
+                          >Тареченков Н. М.</span
+                        >
+                        <span class="profile-dates__aside-txt txt"
+                          >Гланый ортопед</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="profile-dates__aside-link link"
+                      >Изменить запись</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile__navigation-block navigation-block">
+              <div class="navigation-block__tabs swiper">
+                <div class="navigation-block__wrapper swiper-wrapper">
+                  <button
+                    data-type="profile-dates"
+                    type="button"
+                    class="navigation-block__tab swiper-slide">
+                    <span class="navigation-block__tab-title txt">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          d="M18 4H6C3.79086 4 2 5.79086 2 8V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V8C22 5.79086 20.2091 4 18 4Z"
+                          stroke="#D8DDE4"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M2 10H22M8 2V6V2ZM16 2V6V2Z"
+                          stroke="#D8DDE4"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" /></svg
+                      ><span>Мои записи</span></span
+                    >
+                  </button>
+                  <button
+                    data-type="profile-data"
+                    type="button"
+                    class="navigation-block__tab _active swiper-slide">
+                    <span class="navigation-block__tab-title txt">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="24"
+                        viewBox="0 0 19 24"
+                        fill="none">
+                        <path
+                          d="M17.035 3.12202L15.379 1.46402C14.9157 0.998332 14.3646 0.629159 13.7576 0.377864C13.1507 0.126569 12.4999 -0.00185599 11.843 2.02654e-05H5.5C4.17441 0.00160812 2.90356 0.528902 1.96622 1.46624C1.02888 2.40358 0.501588 3.67443 0.5 5.00002V19C0.501588 20.3256 1.02888 21.5965 1.96622 22.5338C2.90356 23.4711 4.17441 23.9984 5.5 24H13.5C14.8256 23.9984 16.0964 23.4711 17.0338 22.5338C17.9711 21.5965 18.4984 20.3256 18.5 19V6.65702C18.5016 6.0002 18.373 5.34959 18.1215 4.74281C17.87 4.13604 17.5007 3.58515 17.035 3.12202ZM15.621 4.53602C15.7628 4.67734 15.8898 4.83282 16 5.00002H13.5V2.50002C13.6669 2.61134 13.8227 2.7386 13.965 2.88002L15.621 4.53602ZM16.5 19C16.5 19.7957 16.1839 20.5587 15.6213 21.1213C15.0587 21.684 14.2956 22 13.5 22H5.5C4.70435 22 3.94129 21.684 3.37868 21.1213C2.81607 20.5587 2.5 19.7957 2.5 19V5.00002C2.5 4.20437 2.81607 3.44131 3.37868 2.8787C3.94129 2.31609 4.70435 2.00002 5.5 2.00002H11.5V5.00002C11.5 5.53045 11.7107 6.03916 12.0858 6.41423C12.4609 6.78931 12.9696 7.00002 13.5 7.00002H16.5V19ZM13.5 9.00002C13.7652 9.00002 14.0196 9.10538 14.2071 9.29291C14.3946 9.48045 14.5 9.7348 14.5 10C14.5 10.2652 14.3946 10.5196 14.2071 10.7071C14.0196 10.8947 13.7652 11 13.5 11H5.5C5.23478 11 4.98043 10.8947 4.79289 10.7071C4.60536 10.5196 4.5 10.2652 4.5 10C4.5 9.7348 4.60536 9.48045 4.79289 9.29291C4.98043 9.10538 5.23478 9.00002 5.5 9.00002H13.5ZM14.5 14C14.5 14.2652 14.3946 14.5196 14.2071 14.7071C14.0196 14.8947 13.7652 15 13.5 15H5.5C5.23478 15 4.98043 14.8947 4.79289 14.7071C4.60536 14.5196 4.5 14.2652 4.5 14C4.5 13.7348 4.60536 13.4804 4.79289 13.2929C4.98043 13.1054 5.23478 13 5.5 13H13.5C13.7652 13 14.0196 13.1054 14.2071 13.2929C14.3946 13.4804 14.5 13.7348 14.5 14ZM14.308 17.413C14.4634 17.6269 14.5279 17.8936 14.4872 18.1548C14.4466 18.416 14.3041 18.6505 14.091 18.807C13.0778 19.529 11.8778 19.9432 10.635 20C9.90888 19.9965 9.20482 19.7501 8.635 19.3C8.307 19.075 8.182 19 7.935 19C7.26643 19.1035 6.63562 19.3769 6.103 19.794C5.89175 19.9446 5.63024 20.0072 5.37369 19.9686C5.11715 19.93 4.88565 19.7932 4.72808 19.5871C4.57052 19.381 4.49922 19.1217 4.52925 18.864C4.55927 18.6063 4.68827 18.3704 4.889 18.206C5.77018 17.522 6.82828 17.1036 7.939 17C8.60513 17.0107 9.24912 17.2409 9.771 17.655C10.0089 17.869 10.3152 17.9913 10.635 18C11.4527 17.9388 12.239 17.6594 12.912 17.191C13.1266 17.0355 13.3942 16.9715 13.6559 17.0131C13.9177 17.0547 14.1522 17.1986 14.308 17.413Z"
+                          fill="#D8DDE4"></path></svg
+                      ><span>Персональные данные</span>
+                    </span>
+                  </button>
+                  <button
+                    data-type="profile-family"
+                    type="button"
+                    class="navigation-block__tab swiper-slide">
+                    <span class="navigation-block__tab-title txt">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none">
+                        <g clip-path="url(#clip0_4004_6857)">
+                          <path
+                            d="M11 11C12.0878 11 13.1512 10.6774 14.0556 10.0731C14.9601 9.46874 15.6651 8.60976 16.0813 7.60476C16.4976 6.59977 16.6065 5.4939 16.3943 4.42701C16.1821 3.36011 15.6583 2.3801 14.8891 1.61092C14.1199 0.841726 13.1399 0.317902 12.073 0.105683C11.0061 -0.106535 9.90023 0.00238307 8.89524 0.418665C7.89025 0.834947 7.03126 1.5399 6.42692 2.44437C5.82257 3.34884 5.5 4.41221 5.5 5.5C5.50146 6.95825 6.08139 8.35635 7.11252 9.38748C8.14366 10.4186 9.54176 10.9985 11 11ZM11 1.83334C11.7252 1.83334 12.4341 2.04838 13.0371 2.45128C13.6401 2.85418 14.11 3.42683 14.3876 4.09683C14.6651 4.76683 14.7377 5.50407 14.5962 6.21533C14.4547 6.9266 14.1055 7.57994 13.5927 8.09273C13.0799 8.60552 12.4266 8.95474 11.7153 9.09622C11.0041 9.23769 10.2668 9.16508 9.59683 8.88756C8.92683 8.61004 8.35418 8.14007 7.95128 7.53709C7.54838 6.93411 7.33333 6.2252 7.33333 5.5C7.33333 4.52754 7.71964 3.59491 8.40727 2.90728C9.09491 2.21964 10.0275 1.83334 11 1.83334Z"
+                            fill="#D8DDE4" />
+                          <path
+                            d="M11 12.832C8.81271 12.8345 6.7157 13.7044 5.16905 15.2511C3.6224 16.7977 2.75243 18.8947 2.75 21.082C2.75 21.3251 2.84658 21.5583 3.01849 21.7302C3.19039 21.9021 3.42355 21.9987 3.66667 21.9987C3.90978 21.9987 4.14294 21.9021 4.31485 21.7302C4.48676 21.5583 4.58333 21.3251 4.58333 21.082C4.58333 19.3802 5.25937 17.7481 6.46273 16.5448C7.66609 15.3414 9.29819 14.6654 11 14.6654C12.7018 14.6654 14.3339 15.3414 15.5373 16.5448C16.7406 17.7481 17.4167 19.3802 17.4167 21.082C17.4167 21.3251 17.5132 21.5583 17.6852 21.7302C17.8571 21.9021 18.0902 21.9987 18.3333 21.9987C18.5764 21.9987 18.8096 21.9021 18.9815 21.7302C19.1534 21.5583 19.25 21.3251 19.25 21.082C19.2476 18.8947 18.3776 16.7977 16.831 15.2511C15.2843 13.7044 13.1873 12.8345 11 12.832Z"
+                            fill="#D8DDE4" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4004_6857">
+                            <rect width="22" height="22" fill="white" />
+                          </clipPath>
+                        </defs></svg
+                      ><span>Моя семья</span></span
+                    >
+                  </button>
                 </div>
               </div>
             </div>

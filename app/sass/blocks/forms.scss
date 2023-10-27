@@ -299,6 +299,8 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border: none;
+  background-color: transparent;
 }
 textarea:focus,
 input:focus {
@@ -389,6 +391,12 @@ textarea {
   &_pass {
     &::before {
       background-image: url(../img/a-image/icons/lock-grey.svg);
+    }
+    @media (min-width: 48em) {
+      &._desk {
+        padding: 0 3rem;
+        grid-template-columns: 2rem 1fr 2rem;
+      }
     }
   }
 
@@ -743,9 +751,9 @@ textarea {
       font-size: 3.2rem;
       line-height: 150%;
     }
-		&_comment::before {
-			top: 3rem;
-		}
+    &_comment::before {
+      top: 3rem;
+    }
   }
   .checkbox {
     &_ellipse {

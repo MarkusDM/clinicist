@@ -97,9 +97,15 @@ document.addEventListener('DOMContentLoaded', function () {
           centeredSlidesBounds: true,
           normalizeSlideIndex: false,
           slideToClickedSlide: true,
+          allowTouchMove: true,
           on: {
             slideChange: swiper => {
               doctorsTabs(swiper);
+            },
+          },
+          breakpoints: {
+            768: {
+              allowTouchMove: false,
             },
           },
         });
@@ -2324,7 +2330,7 @@ document.addEventListener('DOMContentLoaded', function () {
       );
       setActiveClass(
         currentContentBlock,
-        document.querySelectorAll('.new-clinic__content'),
+        document.querySelectorAll('[data-content-type]'),
         '_active'
       );
     }

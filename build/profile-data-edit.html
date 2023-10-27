@@ -6,7 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="another website" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.css" />
     <link rel="stylesheet" href="./css/choices.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>ЛК</title>
@@ -708,7 +711,7 @@
 </header>
 
     <main class="main">
-      <section class="profile profile-patients">
+      <section class="profile profile-data-edit">
         <div class="profile-chapter__container container">
           <div class="profile-chapter__body">
             <a href="#" class="profile-chapter__link link"
@@ -717,44 +720,15 @@
             <div class="profile-chapter__body-inner">
               <div class="profile-chapter__content">
                 <form data-dev action="#" class="profile-chapter__form form">
-                  <h1 class="profile-chapter__title title">
-                    Добавить пациента
-                  </h1>
-                  <div class="profile-chapter__options options">
-                    <div class="options__item">
-                      <input
-                        hidden
-                        id="o_1"
-                        class="options__input"
-                        checked
-                        type="radio"
-                        value="1"
-                        name="option" />
-                      <label for="o_1" class="options__label"
-                        ><span class="options__text">Мужчина</span></label
-                      >
-                    </div>
-                    <div class="options__item">
-                      <input
-                        hidden
-                        id="o_2"
-                        class="options__input"
-                        type="radio"
-                        value="2"
-                        name="option" />
-                      <label for="o_2" class="options__label"
-                        ><span class="options__text">Женщина</span></label
-                      >
-                    </div>
-                  </div>
+                  <h1 class="profile-chapter__title title">Редактировать</h1>
                   <div class="profile-chapter__fields">
                     <div class="profile-chapter__input-wrap input input_user">
                       <input
                         data-validate
                         data-required
                         autocomplete="off"
-                        name="form[]"
                         type="text"
+                        name="form[]"
                         data-error="Заполните поле"
                         placeholder="Имя"
                         class="input__field" />
@@ -764,8 +738,8 @@
                         data-validate
                         data-required
                         autocomplete="off"
-                        name="form[]"
                         type="text"
+                        name="form[]"
                         data-error="Заполните поле"
                         placeholder="Фамилия"
                         class="input__field" />
@@ -775,8 +749,8 @@
                         data-validate
                         data-required
                         autocomplete="off"
-                        name="form[]"
                         type="text"
+                        name="form[]"
                         data-error="Заполните поле"
                         placeholder="Отчество"
                         class="input__field" />
@@ -786,15 +760,28 @@
                         data-validate
                         data-required
                         autocomplete="off"
-                        name="form[]"
                         type="tel"
+                        name="form[]"
                         data-error="Заполните поле"
                         placeholder="Номер телефона"
                         class="input__field tel-mask" />
                     </div>
                   </div>
+                  <div class="profile-chapter__checkbox checkbox">
+                    <input
+                      data-error
+                      class="checkbox__input"
+                      type="checkbox"
+                      value="1"
+                      name="form[]" />
+                    <label class="checkbox__label"
+                      ><span class="checkbox__text"
+                        >Я согласен на обработку моих персональных данных</span
+                      ></label
+                    >
+                  </div>
                   <button type="submit" class="profile-chapter__btn btn">
-                    <span class="btn__text">Сохранить</span>
+                    <span class="btn__text">Изменить данные</span>
                   </button>
                 </form>
               </div>
