@@ -21,13 +21,13 @@
               <nav
                 data-tabs-titles
                 class="profile-chapter__tabs tabs tabs_blue">
-                <button data-tabs-title type="button" class="tabs__btn">
-                  Вход
-                </button>
                 <button
                   data-tabs-title
                   type="button"
                   class="tabs__btn active _tab-active">
+                  Вход
+                </button>
+                <button data-tabs-title type="button" class="tabs__btn">
                   Регистрация
                 </button>
               </nav>
@@ -38,7 +38,7 @@
                     <div class="profile-chapter__content">
                       <div class="profile-chapter__head head">
                         <span class="head__title title">
-                          Вход в личный кабинет
+                          Восставновление пароля
                         </span>
                       </div>
                       <form
@@ -49,17 +49,22 @@
                         class="profile-chapter__form form">
                         <div
                           class="profile-chapter__fields profile-chapter__fields_mg">
-                          <div
-                            class="profile-chapter__input-wrap input input_tel">
+                          <div class="login-form__input input input_pass _desk">
                             <input
-                              data-validate
                               data-required
+                              data-validate
                               autocomplete="off"
-                              type="tel"
+                              type="password"
                               name="form[]"
                               data-error="Заполните поле"
-                              placeholder="Номер телефона"
-                              class="input__field tel-mask" />
+                              placeholder="Введите новый пароль"
+                              class="input__field" /><button
+                              class="input__viewpass"
+                              type="button">
+                              <img
+                                src="./img/a-image/icons/eye-grey.svg"
+                                alt="" />
+                            </button>
                           </div>
                           <div class="login-form__input input input_pass _desk">
                             <input
@@ -69,7 +74,7 @@
                               type="password"
                               name="form[]"
                               data-error="Заполните поле"
-                              placeholder="Введите пароль"
+                              placeholder="Повторите новый пароль"
                               class="input__field" /><button
                               class="input__viewpass"
                               type="button">
@@ -79,22 +84,12 @@
                             </button>
                           </div>
                         </div>
-                        <div
-                          class="profile-chapter__actions profile-chapter__actions_reversed">
-                          <button
-                            data-restore-pass
-                            type="button"
-                            class="profile-chapter__psw-link">
-                            Забыли пароль?
-                          </button>
-                          <button
-                            data-submit-btn
-                            disabled
-                            type="submit"
-                            class="profile-chapter__btn btn _al">
-                            <span class="btn__text">Вход</span>
-                          </button>
-                        </div>
+                        <button
+                          disabled
+                          type="submit"
+                          class="profile-chapter__btn btn _al">
+                          <span class="btn__text">Сохранить пароль</span>
+                        </button>
                       </form>
                     </div>
                   </div>
