@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.tabs__content2[data-question=' + data + ']').toggleClass('active');
   });
 
-  // $('.tabs__btn3').click(function () {
-  //   $('.tabs__btn3').removeClass('active')
-  //   $(this).toggleClass('active')
-  //   var data = $(this).data('question')
-  //   $('.tabs__content3').removeClass('active')
-  //   $('.tabs__content3[data-question=' + data + ']').toggleClass('active')
-  // })
+  $('.tabs__btn3').click(function () {
+    $('.tabs__btn3').removeClass('active');
+    $(this).toggleClass('active');
+    var data = $(this).data('question');
+    $('.tabs__content3').removeClass('active');
+    $('.tabs__content3[data-question=' + data + ']').toggleClass('active');
+  });
 
   $('.tabs__btn4').click(function () {
     $('.tabs__btn4').removeClass('active');
@@ -972,28 +972,61 @@ function formFieldsInit(options = { viewPass: true }) {
       targetElement.tagName === 'INPUT' ||
       targetElement.tagName === 'TEXTAREA'
     ) {
-      if (targetElement.dataset.placeholder) {
-        targetElement.placeholder = targetElement.dataset.placeholder;
+      if (targetElement.type !== 'checkbox') {
+        if (targetElement.dataset.placeholder) {
+          targetElement.placeholder = targetElement.dataset.placeholder;
+        }
+        if (!targetElement.hasAttribute('data-no-focus-classes')) {
+          targetElement.classList.remove('_form-focus');
+          targetElement.parentElement.classList.remove('_form-focus');
+        }
+        if (targetElement.hasAttribute('data-validate')) {
+          formValidate.validateInput(targetElement);
+        }
+        if (
+          !targetElement.parentElement.classList.contains('_form-error') &&
+          targetElement.value.length
+        ) {
+          targetElement.parentElement.classList.add('_filled');
+        } else if (
+          targetElement.parentElement.classList.contains('_form-error') ||
+          !targetElement.value.length
+        ) {
+          targetElement.parentElement.classList.remove('_filled');
+        }
       }
-      if (!targetElement.hasAttribute('data-no-focus-classes')) {
-        targetElement.classList.remove('_form-focus');
-        targetElement.parentElement.classList.remove('_form-focus');
-      }
-      if (targetElement.hasAttribute('data-validate')) {
-        formValidate.validateInput(targetElement);
-      }
-      console.log(targetElement.value.length);
-      if (
-        !targetElement.parentElement.classList.contains('_form-error') &&
-        targetElement.value.length
-      ) {
-        targetElement.parentElement.classList.add('_filled');
-      } else if (
-        targetElement.parentElement.classList.contains('_form-error') ||
-        !targetElement.value.length
-      ) {
-        targetElement.parentElement.classList.remove('_filled');
-      }
+      // const fields = Array.from(
+      //   targetElement.closest('form').querySelectorAll('.input')
+      // );
+      // const filled = fields.filter(a => a.classList.contains('_filled'));
+      // const btn = targetElement
+      //   .closest('form')
+      //   .querySelector('[data-submit-btn]');
+      // const checkboxes = Array.from(
+      //   targetElement.closest('form').querySelectorAll('.checkbox')
+      // );
+      // btn.setAttribute('disabled', '');
+      // if (btn && btn.hasAttribute('disabled')) {
+      //   if (checkboxes.length) {
+      //     const checked = checkboxes.filter(a => !a.checked);
+      //     console.log(fields.length, filled.length);
+      //     console.log(checkboxes.length, checked.length);
+      //     if (
+      //       fields.length === filled.length &&
+      //       checkboxes.length === checked.length
+      //     ) {
+      //       btn.removeAttribute('disabled');
+      //     } else {
+      //       btn.setAttribute('disabled', '');
+      //     }
+      //   } else {
+      //     if (fields.length === filled.length) {
+      //       btn.removeAttribute('disabled');
+      //     } else {
+      //       btn.setAttribute('disabled', '');
+      //     }
+      //   }
+      // }
     }
   });
 
@@ -1032,6 +1065,7 @@ let formValidate = {
   },
   validateInput(formRequiredItem) {
     let error = 0;
+
     if (formRequiredItem.dataset.required === 'email') {
       formRequiredItem.value = formRequiredItem.value.replace(' ', '');
       if (this.emailTest(formRequiredItem)) {
@@ -1077,6 +1111,18 @@ let formValidate = {
         formRequiredItem.parentElement.querySelector('.form__error')
       );
     }
+    // if (!formRequiredItem.closest('form').querySelector('._form-error')) {
+    //   console.log(
+    //     formRequiredItem.closest('form').querySelector('._form-error')
+    //   );
+    //   document
+    //     .querySelector('.profile-chapter__btn')
+    //     .removeAttribute('disabled');
+    // } else {
+    //   document
+    //     .querySelector('.profile-chapter__btn')
+    //     .setAttribute('disabled', '');
+    // }
   },
   formClean(form) {
     form.reset();
@@ -1117,6 +1163,8 @@ function formSubmit(options = { validate: true }) {
       form.addEventListener('reset', function (e) {
         const form = e.target;
         formValidate.formClean(form);
+
+        form.querySelector('[data-submit-btn]').setAttribute('disabled', '');
       });
     }
   }
@@ -1170,6 +1218,7 @@ function formSubmit(options = { validate: true }) {
       })
     );
     formValidate.formClean(form);
+    form.querySelector('[data-submit-btn]').setAttribute('disabled', '');
   }
 }
 
