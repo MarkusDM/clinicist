@@ -102,8 +102,12 @@
 @import './blocks/questions-accordion';
 @import './blocks/patients-cards-page';
 @import './blocks/patients-page';
+@import './blocks/questions-answers';
+@import './blocks/stocks-slider';
+@import './blocks/patients-preparation-detail-page';
 @import './blocks/patients-preparation';
 @import './blocks/diseases-card';
+@import './blocks/specialities-page';
 
 @import './blocks/sl-reviews';
 @import './blocks/services-parent';
@@ -130,6 +134,10 @@
 @import './blocks/leave-comment.scss';
 @import './blocks/diseases-doctors.scss';
 @import './blocks/contacts-center.scss';
+@import './blocks/feedback-center.scss';
+@import './blocks/d-center.scss';
+@import './blocks/get-there.scss';
+@import './blocks/specialties-d.scss';
 
 
 #ui-datepicker-div {

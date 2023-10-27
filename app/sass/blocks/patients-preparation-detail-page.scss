@@ -1,0 +1,32 @@
+.similar-services {
+  &.patients {
+    .similar-services {
+      &__inner {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .similar-services {
+    &.patients {
+      .similar-services {
+        &__inner {
+          display: flex;
+        }
+      }
+    }
+  }
+  .other-programs {
+    &__head {
+      &.preparation {
+        .other-programs {
+          &__link {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

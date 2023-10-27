@@ -416,6 +416,19 @@ textarea {
     }
   }
 
+  // .input_comment
+  &_comment {
+    &::before {
+      background-image: url(../img/t-image/comment.svg);
+    }
+  }
+
+  &_file {
+    &::before {
+      background-image: url(../img/t-image/file.svg);
+    }
+  }
+
   // .input__field
 
   &__field {

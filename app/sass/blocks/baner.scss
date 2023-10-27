@@ -5517,6 +5517,8 @@
     }
   }
 }
+
+
 @media (min-width: 48em) {
   .baner {
     &.baner-prices-programs {
@@ -5962,6 +5964,198 @@
       }
     }
   }
+  &-stocks-article {
+    height: 48.5rem;
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 72.4rem) 73.6rem;
+        position: relative;
+      }
+      &__image-wrap {
+        position: absolute;
+        right: -23.2rem;
+        bottom: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &__percent-box {
+        position: absolute;
+        top: 10rem;
+        left: 0%;
+        transform: translateX(-50%);
+        padding: 4.8rem 2.2rem 3rem;
+        background-color: #fff;
+        box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+        z-index: 10;
+        .text {
+          font-family: MyriadPro;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: rgba(51, 51, 51, 0.5);
+          margin-bottom: 0.8rem;
+        }
+        .percent {
+          font-family: Montserrat;
+          font-size: 3rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%;
+          color: #36b4f1;
+          text-align: center;
+        }
+        .percent-icon {
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 5.1rem;
+          height: 5.1rem;
+          .icon-percent {
+            & > svg {
+              width: 15rem;
+              height: 15rem;
+              position: absolute;
+              top: 82%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          .text-percent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: MyriadPro;
+            font-size: 2.4rem;
+            font-style: normal;
+            font-weight: 400;
+            color: #2f2f2f;
+          }
+        }
+      }
+      &__text {
+        align-items: center;
+        span {
+          &.baner-price {
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            color: #2f2f2f;
+            position: relative;
+            &::after {
+              content: '₽';
+              position: absolute;
+              top: 0;
+              left: 102%;
+              font-family: MyriadPro;
+              font-size: 1.8rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+              color: #2f2f2f;
+            }
+          }
+        }
+      }
+      &__image {
+        &.desc {
+          width: 78.7rem;
+          height: 48.4rem;
+        }
+        &.mob {
+          display: none;
+        }
+      }
+    }
+  }
+  &-specialities-details {
+    position: relative;
+    .baner {
+      &__container {
+        grid-template-columns: minmax(auto, 59.3rem) 73.6rem;
+      }
+      &__subtitle {
+        font-family: MyriadPro;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #36b4f1;
+        margin-bottom: 1.6rem;
+      }
+      &__image-wrap {
+        width: 78.3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &__image {
+        &.mob {
+          display: none;
+        }
+      }
+      &__specialities-box {
+        position: absolute;
+        top: 45%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        padding: 4rem 4.8rem 3.8rem 4rem;
+        background-color: #fff;
+        box-shadow: 0px 2rem 6rem 0px rgba(124, 148, 159, 0.1);
+        z-index: 10;
+        .specialities-box {
+          &__blocks {
+            display: flex;
+            flex-direction: column;
+          }
+          &__block {
+            width: 20.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            &:nth-child(1) {
+              padding-bottom: 3rem;
+              border-bottom: 1px solid #d8dde4;
+            }
+            &:nth-child(2) {
+              padding-top: 3rem;
+            }
+          }
+          &__number {
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            font-family: MyriadPro;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: #36b4f1;
+            background-color: #eef3f7;
+            flex: none;
+          }
+          &__text {
+            font-family: MyriadPro;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: rgba(51, 51, 51, 0.5);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -6079,7 +6273,7 @@
           &::before {
             width: 77.8rem;
             height: 77.8rem;
-            top: -15%;
+            top: 50%;
           }
         }
       }
@@ -6242,6 +6436,158 @@
           }
           &.img-mobile {
             display: block;
+          }
+        }
+      }
+    }
+    &-stocks-article {
+      min-height: 122.2rem;
+      .baner {
+        &__container {
+          grid-template-columns: 1fr;
+        }
+        &__image-wrap {
+          position: static;
+          transform: translateX(-4rem);
+        }
+        &__percent-box {
+          top: 0%;
+          left: 50rem;
+          transform: translateY(-50%);
+          padding: 8rem 4rem 3rem;
+          box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1);
+          .text {
+            font-size: 3rem;
+            margin-bottom: 0rem;
+          }
+          .percent {
+            font-size: 4.4rem;
+            font-weight: 700;
+          }
+          .percent-icon {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5.1rem;
+            height: 5.1rem;
+            .icon-percent {
+              & > svg {
+                width: 25rem;
+                height: 25rem;
+                position: absolute;
+                top: 105%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+            .text-percent {
+              font-size: 4rem;
+            }
+          }
+        }
+        &__text-wrap {
+          width: 71rem;
+        }
+        &__text {
+          span {
+            &.baner-price {
+              font-size: 3.2rem;
+              font-weight: 400;
+              line-height: 150%;
+              &::after {
+                content: '₽';
+                position: absolute;
+                top: 0;
+                left: 102%;
+                font-size: 3.2rem;
+                line-height: 150%;
+              }
+            }
+          }
+        }
+        &__image {
+          &.desc {
+            display: none;
+          }
+          &.mob {
+            display: block;
+            width: 75rem;
+          }
+        }
+      }
+    }
+    &-specialities {
+      .baner {
+        &__text-content {
+          margin-bottom: 12rem;
+        }
+        &__image-wrap {
+          &::before {
+            width: 77.8rem;
+            height: 77.8rem;
+            top: 80%;
+          }
+        }
+      }
+    }
+    &-specialities-details {
+      overflow: visible;
+      margin-bottom: 31rem;
+      .baner {
+        &__container {
+          grid-template-columns: 71rem;
+        }
+        &__subtitle {
+          font-size: 2.6rem;
+          margin-bottom: 0.8rem;
+        }
+        &__text {
+          max-width: 63.6rem;
+        }
+        &__image-wrap {
+          width: 75rem;
+          transform: translateX(-4rem);
+          position: relative;
+        }
+        &__text-content {
+          margin-bottom: 12.4rem;
+        }
+        &__image {
+          &.desc {
+            display: none;
+          }
+          &.mob {
+            display: block;
+          }
+        }
+        &__specialities-box {
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 4rem;
+          box-shadow: 0px 4rem 12rem 0px rgba(124, 148, 159, 0.1);
+          .specialities-box {
+            &__block {
+              width: 42.4rem;
+              gap: 2.4rem;
+              &:nth-child(1) {
+                padding-bottom: 2.4rem;
+                border-bottom: 1px solid #d8dde4;
+              }
+              &:nth-child(2) {
+                padding-top: 2.4rem;
+              }
+            }
+            &__number {
+              width: 9.6rem;
+              height: 9.6rem;
+              border-radius: 1.6rem;
+              font-size: 4.2rem;
+            }
+            &__text {
+              font-size: 2.8rem;
+            }
           }
         }
       }
