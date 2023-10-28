@@ -54,7 +54,7 @@
 
   &__author-title {
     color: $list;
-    font-family: Myriad Pro, sans-serif;
+    font-family: MyriadPro, sans-serif;
     font-size: 1.8rem;
     line-height: normal;
   }
@@ -77,7 +77,7 @@
 
   &__author-name {
     color: $fzAll;
-    font-family: Myriad Pro, sans-serif;
+    font-family: MyriadPro, sans-serif;
     font-size: 1.8rem;
     line-height: normal;
   }
@@ -97,7 +97,7 @@
 
     p {
       color: $blue;
-      font-family: Myriad Pro, sans-serif;
+      font-family: MyriadPro, sans-serif;
       font-size: 1.6rem;
       line-height: normal;
       padding: 2.2rem 0 0 3rem;
@@ -169,6 +169,7 @@
         p {
           font-size: 3rem;
           line-height: 150%;
+          font-family: Montserrat, sans-serif;
           padding: 1.2rem 0 0 4rem;
         }
       }

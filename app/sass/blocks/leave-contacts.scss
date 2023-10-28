@@ -466,9 +466,13 @@
           }
 
           &__input {
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             width: 100%;
             height: 10rem;
+
+						.input__field {
+							padding: 2.5rem 3.2rem 2rem 3.2rem;
+						}
           }
 
           &__form-label::before {
