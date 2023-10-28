@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="another website" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/choices.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ЛК</title>
+  </head>
+  <body>
+    @@include('./template/header.html')
+    <main class="main">
+      <section class="profile profile-login">
+        <div class="profile-chapter__container container">
+          <div class="profile-chapter__body">
+            <div data-tabs class="profile-chapter__tabs-wrap">
+              <nav
+                data-tabs-titles
+                class="profile-chapter__tabs tabs tabs_blue">
+                <button
+                  data-tabs-title
+                  type="button"
+                  class="tabs__btn active _tab-active">
+                  Вход
+                </button>
+                <button data-tabs-title type="button" class="tabs__btn">
+                  Регистрация
+                </button>
+              </nav>
+              <div data-tabs-body class="tabs__content">
+                <div class="tabs__body">
+                  <div
+                    class="tabs__body-inner profile-chapter__body-inner_login">
+                    <div class="profile-chapter__content">
+                      <div class="profile-chapter__head head">
+                        <h1 class="head__title title">Сброс пароля</h1>
+                      </div>
+                      <form
+                        id="login-form"
+                        data-dev
+                        action="#"
+                        class="profile-chapter__form form">
+                        <div class="profile-chapter__fields">
+                          <div
+                            class="profile-chapter__input-wrap input input_tel">
+                            <input
+                              data-validate
+                              data-required
+                              autocomplete="off"
+                              type="tel"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Номер телефона"
+                              class="input__field tel-mask" />
+                          </div>
+                          <div
+                            class="login-form__input input input_comment _desk">
+                            <input
+                              data-required
+                              data-validate
+                              autocomplete="off"
+                              type="text"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Код подтверждения"
+                              class="input__field" />
+                          </div>
+                          <div
+                            class="profile-chapter__timer-txt profile-chapter__timer-txt_rd">
+                            <h2 class="profile-chapter__txt-heading">
+                              Так и не получили код?
+                            </h2>
+                            <p class="profile-chapter__txt-content">
+                              Повторно код можно получить через
+                              <span id="codeTimer"></span>
+                            </p>
+                          </div>
+                          <p class="profile-chapter__timer-txt">
+                            Через несколько секунд вам придет SMS-сообщение с
+                            кодом подтверждения.
+                          </p>
+                        </div>
+
+                        <div class="profile-chapter__actions">
+                          <div class="profile-chapter__checkbox checkbox _desk">
+                            <input
+                              data-validate
+                              data-required
+                              data-error
+                              class="checkbox__input"
+                              type="checkbox"
+                              checked
+                              value="1"
+                              name="form[]" />
+                            <label class="checkbox__label"
+                              ><span class="checkbox__text"
+                                >Я согласен на обработку моих персональных
+                                данных</span
+                              ></label
+                            >
+                          </div>
+                          <button
+                            disabled
+                            type="submit"
+                            class="profile-chapter__btn btn btn_plain">
+                            <span class="btn__text">Войти</span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="tabs__body-inner">
+                    <div
+                      class="profile-chapter__content profile-chapter__content_reg">
+                      <div class="profile-chapter__head head">
+                        <span class="head__title title">Регистрация</span>
+                      </div>
+                      <form
+                        data-dev
+                        action="#"
+                        class="profile-chapter__form form">
+                        <div class="profile-chapter__options options">
+                          <div class="options__item">
+                            <input
+                              hidden
+                              class="options__input"
+                              checked
+                              type="radio"
+                              value="1"
+                              name="option" />
+                            <label class="options__label"
+                              ><span class="options__text">Мужчина</span></label
+                            >
+                          </div>
+                          <div class="options__item">
+                            <input
+                              hidden
+                              class="options__input"
+                              type="radio"
+                              value="2"
+                              name="option" />
+                            <label class="options__label"
+                              ><span class="options__text">Женщина</span></label
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="profile-chapter__fields profile-chapter__fields_reg">
+                          <div
+                            class="profile-chapter__input-wrap input input_user">
+                            <input
+                              data-validate
+                              data-required
+                              autocomplete="off"
+                              type="text"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Имя"
+                              class="input__field" />
+                          </div>
+                          <div
+                            class="profile-chapter__input-wrap input input_user">
+                            <input
+                              data-validate
+                              data-required
+                              autocomplete="off"
+                              type="text"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Фамилия"
+                              class="input__field" />
+                          </div>
+                          <div
+                            class="profile-chapter__input-wrap input input_user">
+                            <input
+                              data-validate
+                              data-required
+                              autocomplete="off"
+                              type="text"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Отчество"
+                              class="input__field" />
+                          </div>
+                          <div
+                            class="profile-chapter__input-wrap input input_date">
+                            <input
+                              data-validate
+                              data-required="date"
+                              maxlength="10"
+                              autocomplete="off"
+                              type="text"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Дата рождения"
+                              class="input__field" />
+                          </div>
+                          <div
+                            class="profile-chapter__input-wrap input input_tel">
+                            <input
+                              data-validate
+                              data-required
+                              autocomplete="off"
+                              type="tel"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Номер телефона"
+                              class="input__field tel-mask" />
+                          </div>
+                          <div class="login-form__input input input_pass _desk">
+                            <input
+                              data-required
+                              data-validate
+                              autocomplete="off"
+                              type="password"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Введите пароль"
+                              class="input__field" /><button
+                              class="input__viewpass"
+                              type="button">
+                              <img
+                                src="./img/a-image/icons/eye-grey.svg"
+                                alt="" />
+                            </button>
+                          </div>
+                          <div class="login-form__input input input_pass _desk">
+                            <input
+                              data-required
+                              data-validate
+                              autocomplete="off"
+                              type="password"
+                              name="form[]"
+                              data-error="Заполните поле"
+                              placeholder="Повторите пароль"
+                              class="input__field" /><button
+                              class="input__viewpass"
+                              type="button">
+                              <img
+                                src="./img/a-image/icons/eye-grey.svg"
+                                alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="profile-chapter__actions">
+                          <div class="profile-chapter__checkbox checkbox _desk">
+                            <input
+                              data-validate
+                              data-required
+                              data-error
+                              class="checkbox__input"
+                              type="checkbox"
+                              checked
+                              value="1"
+                              name="form[]" />
+                            <label class="checkbox__label"
+                              ><span class="checkbox__text"
+                                >Я согласен на обработку моих персональных
+                                данных</span
+                              ></label
+                            >
+                          </div>
+                          <button
+                            disabled
+                            type="submit"
+                            class="profile-chapter__btn btn btn_plain">
+                            <span class="btn__text">Зарегистрироваться</span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-chapter__services-box services-box">
+              <div class="services-box__item">
+                <div class="services-box__icon-wrap icon">
+                  <img
+                    src="./img/a-image/icons/doctor.svg"
+                    alt=""
+                    class="icon__image" />
+                </div>
+                <div class="services-box__text-wrap">
+                  <span class="services-box__heading">Доступные цены</span>
+                  <p class="services-box__text txt">
+                    Виды хирургов. Как и многие другие направления медицины
+                  </p>
+                </div>
+              </div>
+              <div class="services-box__item">
+                <div class="services-box__icon-wrap icon">
+                  <img
+                    src="./img/a-image/icons/syringe-white.svg"
+                    alt=""
+                    class="icon__image" />
+                </div>
+                <div class="services-box__text-wrap">
+                  <span class="services-box__heading">Без накруток услуг</span>
+                  <p class="services-box__text txt">
+                    Виды хирургов. Как и многие другие направления медицины
+                  </p>
+                </div>
+              </div>
+              <div class="services-box__item">
+                <div class="services-box__icon-wrap icon">
+                  <img
+                    src="./img/a-image/icons/building.svg"
+                    alt=""
+                    class="icon__image" />
+                </div>
+                <div class="services-box__text-wrap">
+                  <span class="services-box__heading">Опыт</span>
+                  <p class="services-box__text txt">
+                    Виды хирургов. Как и многие другие направления медицины
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./template/footer.html') @@include('./template/popups.html')
+  </body>
+</html>

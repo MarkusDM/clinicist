@@ -6,16 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="another website" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/choices.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Моя семья</title>
+    <title>ЛК</title>
   </head>
   <body>
+    @@include('./template/header.html')
     <main class="main">
-      <section class="profile">
+      <section class="profile profile-patients">
         <div class="profile-chapter__container container">
           <div class="profile-chapter__body">
-            <a href="#" class="profile-chapter__link"
-              ><span class="profile-chapter__link-txt">Вернуться назад</span></a
+            <a href="#" class="profile-chapter__link link"
+              ><span>Вернуться назад</span></a
             >
             <div class="profile-chapter__body-inner">
               <div class="profile-chapter__content">
@@ -60,7 +63,7 @@
                         type="text"
                         data-error="Заполните поле"
                         placeholder="Имя"
-                        class="input__inner" />
+                        class="input__field" />
                     </div>
                     <div class="profile-chapter__input-wrap input input_user">
                       <input
@@ -71,7 +74,7 @@
                         type="text"
                         data-error="Заполните поле"
                         placeholder="Фамилия"
-                        class="input__inner" />
+                        class="input__field" />
                     </div>
                     <div class="profile-chapter__input-wrap input input_user">
                       <input
@@ -82,7 +85,7 @@
                         type="text"
                         data-error="Заполните поле"
                         placeholder="Отчество"
-                        class="input__inner" />
+                        class="input__field" />
                     </div>
                     <div class="profile-chapter__input-wrap input input_tel">
                       <input
@@ -93,60 +96,57 @@
                         type="tel"
                         data-error="Заполните поле"
                         placeholder="Номер телефона"
-                        class="input__inner tel" />
+                        class="input__field tel-mask" />
                     </div>
                   </div>
                   <button type="submit" class="profile-chapter__btn btn">
-                    <span class="btn__text">Добавить пациента</span>
+                    <span class="btn__text">Сохранить</span>
                   </button>
                 </form>
               </div>
-              <div class="profile-chapter__side-info side-info">
-                <div class="side-info__items">
-                  <div class="side-info__item">
-                    <div class="side-info__icon-wrap">
-                      <img
-                        aria-hidden="true"
-                        src="./img/a-image/icons/doctor.svg"
-                        alt=""
-                        class="side-info__icon" />
-                    </div>
-                    <div class="side-info__text-wrap">
-                      <h2 class="side-info__heading">Доступные цены</h2>
-                      <p class="side-info__text">
-                        Виды хирургов. Как и многие другие направления медицины
-                      </p>
-                    </div>
+              <div class="profile-chapter__services-box services-box">
+                <div class="services-box__item">
+                  <div class="services-box__icon-wrap icon">
+                    <img
+                      src="./img/a-image/icons/doctor.svg"
+                      alt=""
+                      class="icon__image" />
                   </div>
-                  <div class="side-info__item">
-                    <div class="side-info__icon-wrap">
-                      <img
-                        aria-hidden="true"
-                        src="./img/a-image/icons/syringe.svg"
-                        alt=""
-                        class="side-info__icon" />
-                    </div>
-                    <div class="side-info__text-wrap">
-                      <h2 class="side-info__heading">Без накруток услуг</h2>
-                      <p class="side-info__text">
-                        Виды хирургов. Как и многие другие направления медицины
-                      </p>
-                    </div>
+                  <div class="services-box__text-wrap">
+                    <span class="services-box__heading">Доступные цены</span>
+                    <p class="services-box__text txt">
+                      Виды хирургов. Как и многие другие направления медицины
+                    </p>
                   </div>
-                  <div class="side-info__item">
-                    <div class="side-info__icon-wrap">
-                      <img
-                        aria-hidden="true"
-                        src="./img/a-image/icons/bank.svg"
-                        alt=""
-                        class="side-info__icon" />
-                    </div>
-                    <div class="side-info__text-wrap">
-                      <h2 class="side-info__heading">Опыт</h2>
-                      <p class="side-info__text">
-                        Виды хирургов. Как и многие другие направления медицины
-                      </p>
-                    </div>
+                </div>
+                <div class="services-box__item">
+                  <div class="services-box__icon-wrap icon">
+                    <img
+                      src="./img/a-image/icons/syringe-white.svg"
+                      alt=""
+                      class="icon__image" />
+                  </div>
+                  <div class="services-box__text-wrap">
+                    <span class="services-box__heading"
+                      >Без накруток услуг</span
+                    >
+                    <p class="services-box__text txt">
+                      Виды хирургов. Как и многие другие направления медицины
+                    </p>
+                  </div>
+                </div>
+                <div class="services-box__item">
+                  <div class="services-box__icon-wrap icon">
+                    <img
+                      src="./img/a-image/icons/building.svg"
+                      alt=""
+                      class="icon__image" />
+                  </div>
+                  <div class="services-box__text-wrap">
+                    <span class="services-box__heading">Опыт</span>
+                    <p class="services-box__text txt">
+                      Виды хирургов. Как и многие другие направления медицины
+                    </p>
                   </div>
                 </div>
               </div>
@@ -155,14 +155,6 @@
         </div>
       </section>
     </main>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/choices.min.js"></script>
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/jquery-ui_(1.13.2).min.js"></script>
-    <script src="./js/jquery.maskedinput.js"></script>
-    <script src="./js/inputmask.js"></script>
-    <script defer src="./js/main.js"></script>
+    @@include('./template/footer.html') @@include('./template/popups.html')
   </body>
 </html>

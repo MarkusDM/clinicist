@@ -14,6 +14,7 @@
       }
     }
   }
+
   // .profile__container
 
   &__container {
@@ -40,12 +41,31 @@
   // .profile__content
 
   &__content {
+    position: relative;
+    z-index: 5;
     padding: 5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 20px 90px 0px rgba(124, 148, 159, 0.1);
+    box-shadow: 0 2rem 9rem 0 rgba(124, 148, 159, 0.1);
+    &.profile-dates {
+      padding: 0;
+      box-shadow: none;
+      @media (max-width: 48em) {
+        padding: 0 4rem;
+      }
+    }
     @media (max-width: 48.98em) {
       padding-top: 5.6rem 4rem;
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+      }
     }
   }
 
@@ -71,11 +91,40 @@
       margin-bottom: 12.6rem;
     }
   }
+
+  // .profile__navigation-block
+
+  &__navigation-block {
+    @media (min-width: 48em) {
+      padding-top: 1rem;
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 6.2rem;
+      order: -1;
+      &::after {
+        z-index: -1;
+      }
+      .profile-dates-empty & {
+        margin-bottom: 10rem;
+      }
+      .navigation-block__wrapper {
+        display: flex;
+      }
+      .navigation-block__tab {
+        padding: 5rem 4rem 3rem 4rem;
+      }
+    }
+  }
 }
 
 // =============================================================================
 
 .profile-chapter {
+  margin-bottom: 16rem;
+  @media (min-width: 48em) {
+    margin-bottom: 18rem;
+  }
+
   // .profile-chapter__container
 
   &__container {
@@ -88,10 +137,13 @@
 
   &__body {
     padding-top: 6rem;
-    padding-bottom: 20rem;
-    @media (min-width: 48.98em) {
+    @media (min-width: 48em) {
       padding-top: 12.6rem;
-      padding-bottom: 20rem;
+      .profile-login & {
+        display: grid;
+        grid-template-columns: 1fr 44.5rem;
+        column-gap: 11.5rem;
+      }
     }
   }
 
@@ -104,6 +156,19 @@
     }
   }
 
+  // .profile-chapter__tabs
+
+  &__tabs {
+    margin-bottom: 6rem;
+    @media (max-width: 48em) {
+      width: 100%;
+      .tabs__btn {
+        flex: 1 1 auto;
+        min-width: 30rem;
+      }
+    }
+  }
+
   // .profile-chapter__psw-link
 
   &__psw-link {
@@ -112,7 +177,7 @@
     color: $orange;
     text-decoration: underline;
     @media (max-width: 48.98em) {
-      font-size: 2.4rem;
+      font-size: 3rem;
     }
   }
 
@@ -120,29 +185,10 @@
 
   &__link {
     margin-bottom: 3.8rem;
-    display: inline-flex;
-    align-items: center;
-    column-gap: 1.5rem;
-    &::after {
-      content: '';
-      width: 0.6rem;
-      height: 1.2rem;
-      background-image: url(../img/a-image/icons/sm-arrow-blue.svg);
-      background-size: 0.6rem;
-      background-repeat: no-repeat;
-    }
+    line-height: 157%;
     @media (max-width: 48.98em) {
       margin-bottom: 7rem;
     }
-  }
-
-  // .profile-chapter__link-txt
-
-  &__link-txt {
-    font-family: 'MyriadPro';
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    color: $blue;
   }
 
   // .profile-chapter__body-inner
@@ -151,7 +197,7 @@
     display: grid;
     @media (min-width: 48.98em) {
       grid-template-columns: 1fr 44.5rem;
-      column-gap: 4.2rem;
+      column-gap: 6.8rem;
       &_login {
         column-gap: 11.5rem;
       }
@@ -163,6 +209,9 @@
   &__content {
     @media (max-width: 48.98em) {
       margin-bottom: 20rem;
+      .profile-login & {
+        margin-bottom: 16rem;
+      }
     }
   }
 
@@ -177,6 +226,14 @@
 
   &__title {
     margin-bottom: 5rem;
+    @media (max-width: 48em) {
+      .profile-patients & {
+        margin-bottom: 8rem;
+      }
+      .profile-verify & {
+        margin-bottom: 8rem;
+      }
+    }
   }
 
   // .profile-chapter__head
@@ -195,20 +252,62 @@
       margin-bottom: 6rem;
       column-gap: 12rem;
     }
+    @media (min-width: 48em) {
+      .profile-data-edit & {
+        display: none;
+      }
+    }
   }
 
   // .profile-chapter__fields
 
   &__fields {
-    margin-bottom: 6rem;
+    margin-bottom: 3.2rem;
     display: grid;
     gap: 4rem;
+    .profile-patients & {
+      margin-bottom: 8rem;
+    }
     @media (min-width: 48.98em) {
+      .profile-chapter__body-inner_login &,
+      .profile-verify &,
+      .profile-patients & {
+        margin-bottom: 4rem;
+      }
       margin-bottom: 3rem;
+      gap: 3rem;
       &:not(&_one-col) {
         grid-template-columns: repeat(2, 1fr);
       }
-      gap: 3rem;
+      &_reg {
+        .input_pass {
+          grid-column: 1/2;
+        }
+        .input_pass:last-child {
+          grid-column: 2/3;
+        }
+        .profile-chapter__timer-txt {
+          &:last-child {
+            grid-row: 2/3;
+          }
+        }
+      }
+    }
+    @media (max-width: 48em) {
+      .profile-data-edit &,
+      .profile-login & {
+        .input_comment {
+          order: 1;
+        }
+      }
+      &_reg {
+        .profile-chapter__timer-txt {
+          grid-row: 2/3;
+        }
+      }
+      &_mg {
+        margin-bottom: 6.4rem;
+      }
     }
   }
 
@@ -229,6 +328,9 @@
     @media (max-width: 48.98em) {
       flex-direction: column;
       row-gap: 6rem;
+      .checkbox {
+        margin: 0;
+      }
       &_reversed {
         flex-direction: column-reverse;
       }
@@ -238,7 +340,13 @@
   // .profile-chapter__btn
 
   &__btn {
-    align-self: flex-end;
+    align-self: flex-start;
+    min-width: 22.5rem;
+    @media (min-width: 48em) {
+      &._al {
+        margin-left: auto;
+      }
+    }
   }
 
   // .profile-chapter__timer-txt
@@ -250,6 +358,17 @@
     @media (max-width: 48.98em) {
       font-size: 2.4rem;
       line-height: normal;
+      .profile-data-edit &,
+      .profile-login & {
+        &_mr,
+        &_rd {
+          order: 1;
+        }
+      }
+      &_mr,
+      &_mg {
+        margin-bottom: 5rem;
+      }
     }
   }
 
@@ -272,6 +391,421 @@
   // .profile-chapter__info
 
   &__info {
+  }
+
+  // .profile-chapter__services-box
+
+  &__services-box {
+    @media (min-width: 48em) {
+      margin-top: 12rem;
+      .profile-patients & {
+        margin-top: 4rem;
+      }
+      .profile-data-edit & {
+        margin-top: 5rem;
+      }
+    }
+    @media (max-width: 48em) {
+      .profile-verify & {
+        display: none;
+      }
+      &.services-box {
+        row-gap: 4.4rem;
+      }
+    }
+  }
+
+  // .profile-chapter__checkboxes
+
+  &__checkboxes {
+    margin-bottom: 6.2rem;
+    display: flex;
+    align-items: center;
+    column-gap: 8rem;
+    .checkbox {
+      margin: 0;
+    }
+    @media (min-width: 48em) {
+      display: none;
+    }
+  }
+
+  // .profile-chapter__checkbox
+
+  &__checkbox {
+    .checkbox__label {
+      &::before,
+      &::after {
+        align-self: center;
+      }
+    }
+    @media (min-width: 48em) {
+      &:not(&._desk) {
+        display: none;
+      }
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+      .profile-reg & {
+        margin: 0;
+      }
+    }
+  }
+
+  // .profile-chapter__pass
+
+  &__pass {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  // .profile-chapter__pass-heading
+
+  &__pass-heading {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.0274rem;
+  }
+
+  // .profile-chapter__pass-fields
+
+  &__pass-fields {
+    display: grid;
+    @media (min-width: 48em) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2.1rem;
+    }
+    @media (max-width: 48em) {
+      row-gap: 4rem;
+    }
+  }
+}
+
+// =============================================================================
+
+.profile-dates {
+  &_empty {
+    .profile-dates__body {
+      align-items: flex-start;
+    }
+    .profile-dates__title {
+      margin-bottom: 3.2rem;
+    }
+    .profile-dates__text {
+      margin-bottom: 6rem;
+      color: #2f2f2f;
+    }
+    .profile-dates__btn {
+      min-width: 25.5rem;
+    }
+  }
+  @media (max-width: 48em) {
+    &_empty {
+      .profile-dates__title {
+        margin-bottom: 4rem;
+      }
+      .profile-dates__text {
+        margin-bottom: 6.4rem;
+        font-size: 3.2rem;
+      }
+      .profile-dates__btn {
+        width: 100%;
+      }
+    }
+    &.profile__content {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 48em) {
+    &_empty {
+      .profile-dates__text {
+        max-width: 63.4rem;
+      }
+      .profile-dates__body {
+        padding-top: 2.5rem;
+      }
+    }
+  }
+
+  // .profile-dates__head
+
+  &__head {
+    margin-bottom: 3.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .profile-dates__title
+
+  &__title {
+    @media (max-width: 48em) {
+      font-size: 5rem;
+      font-weight: 400;
+      line-height: 125.926%;
+    }
+  }
+
+  // .profile-dates__link
+
+  &__link {
+  }
+
+  // .profile-dates__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    @media (max-width: 48em) {
+      row-gap: 3.2rem;
+    }
+  }
+
+  // .profile-dates__item
+
+  &__item {
+    display: grid;
+    width: 100%;
+    box-shadow: 0 2rem 90rem 0 rgba(124, 148, 159, 0.1);
+    @media (min-width: 48em) {
+      grid-template-columns: 1fr 27.6rem;
+    }
+  }
+
+  // .profile-dates__content
+
+  &__content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      padding: 2rem 3rem;
+      background-color: #ffffff;
+    }
+  }
+
+  // .profile-dates__heading
+
+  &__heading {
+    margin-bottom: 1.1rem;
+    font-family: MyriadPro;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 0.8rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+  }
+
+  // .profile-dates__group
+
+  &__group {
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3.5rem;
+    @media (max-width: 48em) {
+      margin-bottom: 4rem;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: 4rem;
+    }
+  }
+
+  // .profile-dates__group-item
+
+  &__group-item {
+    font-size: 1.6rem;
+    line-height: 150%;
+    @media (max-width: 48em) {
+      font-size: 3.2rem;
+    }
+
+    // .profile-dates__group-item_user
+
+    &_user {
+      display: flex;
+      align-items: center;
+      column-gap: 1.5rem;
+      color: $orange;
+      svg {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+      @media (max-width: 48em) {
+        column-gap: 2rem;
+        font-size: 2.4rem;
+        svg {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+
+  // .profile-dates__info
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    font-size: 1.6rem;
+    @media (max-width: 48em) {
+      padding-top: 4rem;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 3rem;
+      border-top: 1px solid #d8dde4;
+      font-size: 3rem;
+      color: #000000;
+    }
+  }
+
+  // .profile-dates__info-item
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    &::before {
+      content: '';
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 48em) {
+      column-gap: 2rem;
+      font-size: 3rem;
+      &::before {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    // .profile-dates__info-item_place
+
+    &_place {
+      &::before {
+        background-image: url(../img/a-image/icons/map-blue.svg);
+      }
+    }
+
+    // .profile-dates__info-item_tel
+
+    &_tel {
+      &::before {
+        background-image: url(../img/a-image/icons/tel-blue.svg);
+      }
+    }
+
+    // .profile-dates__info-item_date
+
+    &_date {
+      &::before {
+        background-image: url(../img/a-image/icons/calendar.svg);
+      }
+    }
+  }
+
+  // .profile-dates__aside
+
+  &__aside {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #eef3f7;
+    @media (max-width: 48em) {
+      padding: 4rem;
+    }
+  }
+
+  // .profile-dates__aside-group
+
+  &__aside-group {
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+      column-gap: 3rem;
+    }
+  }
+
+  // .profile-dates__image-wrap
+
+  &__image-wrap {
+    flex: 0 0 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    @media (max-width: 48em) {
+      flex: 0 0 10rem;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  // .profile-dates__image
+
+  &__image {
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  // .profile-dates__aside-head
+
+  &__aside-head {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+    @media (max-width: 48em) {
+      row-gap: 1.2rem;
+    }
+  }
+
+  // .profile-dates__aside-heading
+
+  &__aside-heading {
+    color: #2f2f2f;
+    font-family: MyriadPro;
+    font-size: 1.8rem;
+    line-height: 110%;
+    white-space: nowrap;
+    @media (max-width: 48em) {
+      font-size: 3.2rem;
+    }
+  }
+
+  // .profile-dates__aside-txt
+
+  &__aside-txt {
+    font-size: 1.6rem;
+    @media (max-width: 48em) {
+      font-size: 3.2rem;
+    }
+  }
+
+  // .profile-dates__aside-link
+
+  &__aside-link {
+    align-self: flex-start;
   }
 }
 
@@ -496,7 +1030,7 @@
     font-family: 'MyriadPro';
     font-size: 1.6rem;
     color: rgba(51, 51, 51, 0.5);
-    @media (max-width: 48.98) {
+    @media (max-width: 48.98em) {
       margin-bottom: 1.6rem;
       font-size: 2.4rem;
     }
