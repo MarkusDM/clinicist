@@ -37,6 +37,12 @@
             }
           }
         }
+        &:nth-child(4n + 3) {
+          background-color: #fafafa;
+        }
+        &:nth-child(4n + 4) {
+          background-color: #fafafa;
+        }
       }
       &__item-title {
         font-size: 2.5rem;

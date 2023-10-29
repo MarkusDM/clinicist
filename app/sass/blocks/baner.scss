@@ -5748,6 +5748,7 @@
 
 .baner {
   &-diseases {
+    margin-bottom: 6.2rem;
     .baner {
       &__image-wrap {
         &::before {
@@ -6161,6 +6162,7 @@
 @media (max-width: 48em) {
   .baner {
     &-diseases {
+      margin-bottom: 10rem;
       .baner {
         &__breadcrumbs {
           margin-bottom: 13.4rem;
@@ -6173,11 +6175,14 @@
         }
         &__image-wrap {
           &::before {
-            top: 8%;
-            width: 120vw;
-            height: 115vw;
-            transform: translate(-45%, 0);
+            top: 70%;
+            left: 42%;
+            width: 90rem;
+            height: 90rem;
           }
+        }
+        &__text {
+          font-size: 3.2rem;
         }
         &__image {
           object-fit: cover;
@@ -6188,6 +6193,7 @@
             display: block;
             width: 86rem;
             height: 72rem;
+            transform: translateX(-4rem);
           }
         }
       }
@@ -6337,6 +6343,9 @@
         &__text-wrap {
           margin-bottom: 10.4rem;
         }
+        &__text {
+          font-size: 3.2rem;
+        }
       }
     }
     &-vacancy-details {
@@ -6346,7 +6355,7 @@
           &::before {
             width: 79.6rem;
             height: 79.6rem;
-            top: -45%;
+            top: 65%;
             left: 32%;
           }
         }
@@ -6358,6 +6367,9 @@
               }
             }
           }
+        }
+        &__text {
+          font-size: 3.2rem;
         }
       }
     }
