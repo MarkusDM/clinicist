@@ -7549,12 +7549,13 @@ input[type='search']::-webkit-search-results-decoration {
   .baner--price-s .baner__inner::after {
     display: none; } }
 
-.baner-diseases .baner__image-wrap::before {
-  top: 80%;
-  border-color: #d8dde4; }
-
-.baner-diseases .baner__image.img-mobile {
-  display: none; }
+.baner-diseases {
+  margin-bottom: 6.2rem; }
+  .baner-diseases .baner__image-wrap::before {
+    top: 80%;
+    border-color: #d8dde4; }
+  .baner-diseases .baner__image.img-mobile {
+    display: none; }
 
 .baner-patients .baner__image-wrap {
   width: 62.2rem; }
@@ -7884,27 +7885,32 @@ input[type='search']::-webkit-search-results-decoration {
       color: rgba(51, 51, 51, 0.5); }
 
 @media (max-width: 48em) {
-  .baner-diseases .baner__breadcrumbs {
-    margin-bottom: 13.4rem; }
-  .baner-diseases .baner__text-content {
-    width: 63.6rem; }
-  .baner-diseases .baner__text-wrap {
-    margin-bottom: 3.9rem; }
-  .baner-diseases .baner__image-wrap::before {
-    top: 8%;
-    width: 120vw;
-    height: 115vw;
-    -webkit-transform: translate(-45%, 0);
-            transform: translate(-45%, 0); }
-  .baner-diseases .baner__image {
-    -o-object-fit: cover;
-       object-fit: cover; }
-    .baner-diseases .baner__image.img-desctop {
-      display: none; }
-    .baner-diseases .baner__image.img-mobile {
-      display: block;
-      width: 86rem;
-      height: 72rem; }
+  .baner-diseases {
+    margin-bottom: 10rem; }
+    .baner-diseases .baner__breadcrumbs {
+      margin-bottom: 13.4rem; }
+    .baner-diseases .baner__text-content {
+      width: 63.6rem; }
+    .baner-diseases .baner__text-wrap {
+      margin-bottom: 3.9rem; }
+    .baner-diseases .baner__image-wrap::before {
+      top: 70%;
+      left: 42%;
+      width: 90rem;
+      height: 90rem; }
+    .baner-diseases .baner__text {
+      font-size: 3.2rem; }
+    .baner-diseases .baner__image {
+      -o-object-fit: cover;
+         object-fit: cover; }
+      .baner-diseases .baner__image.img-desctop {
+        display: none; }
+      .baner-diseases .baner__image.img-mobile {
+        display: block;
+        width: 86rem;
+        height: 72rem;
+        -webkit-transform: translateX(-4rem);
+                transform: translateX(-4rem); }
   .baner-patients .baner__text-wrap {
     margin-bottom: 15rem; }
   .baner-patients .baner__text-content {
@@ -7999,15 +8005,19 @@ input[type='search']::-webkit-search-results-decoration {
       margin-bottom: 8.4rem; }
     .baner-vacancy .baner__text-wrap {
       margin-bottom: 10.4rem; }
+    .baner-vacancy .baner__text {
+      font-size: 3.2rem; }
   .baner-vacancy-details {
     height: 105rem; }
     .baner-vacancy-details .baner__image-wrap::before {
       width: 79.6rem;
       height: 79.6rem;
-      top: -45%;
+      top: 65%;
       left: 32%; }
     .baner-vacancy-details .baner__breadcrumbs .breadcrumbs__text span {
       display: none; }
+    .baner-vacancy-details .baner__text {
+      font-size: 3.2rem; }
   .baner-diseases-details {
     height: 139.2rem; }
     .baner-diseases-details .baner__article-value {
@@ -36495,7 +36505,8 @@ textarea {
     padding: 1.7rem 4.8rem;
     border-radius: 10rem;
     background-color: #36b4f1;
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    cursor: pointer; }
 
 @media (max-width: 48em) {
   .component--our-vacancies {
@@ -42432,7 +42443,8 @@ body::after {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      gap: 2.4rem; }
+      gap: 2.4rem;
+      cursor: pointer; }
     .information-for-applicants__call-box .call-box__icon.icon-phone > svg {
       width: 3rem;
       height: 3rem; }
@@ -42813,6 +42825,10 @@ body::after {
   .pages.pages-patients .pages__item-small-img.preparation {
     height: 32rem;
     right: 2.7rem; }
+  .pages.pages-patients .pages__item:nth-child(4n + 3) {
+    background-color: #fafafa; }
+  .pages.pages-patients .pages__item:nth-child(4n + 4) {
+    background-color: #fafafa; }
 
 .pages.pages-patients .pages__item-title {
   font-size: 2.5rem; }
