@@ -309,6 +309,11 @@
     &__list2 {
       &:not(:last-child) {
         margin-bottom: 6.2rem;
+        .footer__list-title {
+          &::before {
+            display: none;
+          }
+        }
       }
     }
     &__contacts {

@@ -842,7 +842,8 @@
 
          &__box-down {
             padding: 6rem 4rem;
-            background:#EEF3F7;
+            background:#fff;
+            box-shadow: 0px 20px 45px 0px rgba(124, 148, 159, 0.10);
             
          }
 
@@ -860,7 +861,16 @@
 
          &__box-down-title {
             font-size: 3.2rem;
+            line-height: normal;
          }
+
+        &__box-all {
+            font-size: 3.2rem;
+            padding-right: 3rem;
+            &::before {
+                width: 2rem;
+            }
+        }
 
         &-map {
             margin-bottom: 12rem;

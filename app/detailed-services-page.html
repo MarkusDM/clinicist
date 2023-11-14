@@ -135,7 +135,8 @@
                             </div>
                             <form action="" class="d-services__form">
                                 <div class="d-services__form-inner">
-                                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                                    <input autocomplete="off" type="tel" name="form[]" placeholder=""
+                                    class=" tel-mask" type="tel" placeholder="+7 (___) ___-__-__">
                                     <button class="btn">Записаться на услугу</button>
                                 </div>
                                 <a href="#" class="d-services__link link">Выбрать врача и время</a>
@@ -402,7 +403,8 @@
                 <div class="about-the-s__wrapper">
                     <div class="about-the-s__left">
                         <div class="about-the-s__title">Подробная информация об услуге</div>
-                        <ul class="about-the-s__sidebar">
+                        <div class="about-the-s__sidebar-wrapper">
+                          <ul class="about-the-s__sidebar">
                             <li class="about-the-s__item active" data-tab="1">
                                 Об услуге
                             </li>
@@ -430,6 +432,8 @@
                                 Противопоказания
                             </li>
                         </ul>
+                        </div>
+                       
                     </div>
                     <div class="about-the-s__right">
                         <div class="about-the-s__content active" data-tab="1">

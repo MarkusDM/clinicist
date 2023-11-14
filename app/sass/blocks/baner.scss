@@ -5734,6 +5734,11 @@
       }
     }
 
+
+    .baner__content-text {
+      font-size: 2.4rem;
+    }
+
     .btn {
       width: 96%;
     }
@@ -6604,6 +6609,66 @@
         }
       }
     }
+  }
+
+  .baner--services {
+    .baner__content-links {
+      flex-wrap: wrap;
+    }
+
+    .baner__content-links-link {
+      font-size: 2.6rem;
+    }
+
+    .baner__content-text {
+      font-size: 2.6rem;
+    }
+  }
+
+  .baner--s-direction {
+    .container {
+      padding: 0;
+    }
+
+    
+    .baner__content-links {
+      flex-wrap: wrap;
+    }
+
+    .baner__content-links-link {
+      font-size: 2.6rem;
+    }
+
+    .baner__content-text {
+      font-size: 2.6rem;
+    }
+
+    .baner__content {
+      
+      padding: 0 4rem;
+      padding-top: 4rem;
+    }
+
+    .baner__picture {
+      img {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+
+    .baner__picture::after {
+      position: absolute;
+      content: '';
+      top: 0rem;
+      left: 39%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 75.1rem;
+      height: 75.1rem;
+      border: 1px solid #d8dde4;
+      border-radius: 50%;
+  }
   }
 }
 

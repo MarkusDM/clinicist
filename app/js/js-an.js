@@ -292,7 +292,7 @@ document.addEventListener('click', (el) => {
         slider.classList.remove('active');
       }
     }
-})
+});
 
 const valueThumbs = new Swiper('.thumbs-swiper', {
   slideToClickedSlide: true,

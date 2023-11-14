@@ -30,3 +30,23 @@
         }
     }
 }
+
+
+@media (max-width: 48em) {
+
+    .d-services-prices {
+        &__title {
+            align-items: initial;
+            justify-content: initial;
+            margin-bottom: 6.4rem;
+            span {
+                font-size: 3rem;
+                text-align: left;
+            }
+
+            strong {
+                text-align: left;
+            }
+        }
+    }
+}
